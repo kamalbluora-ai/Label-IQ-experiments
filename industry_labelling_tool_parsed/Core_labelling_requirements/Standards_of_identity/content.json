@@ -1,0 +1,565 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/standards-identity",
+  "citation_title": "Standards of identity",
+  "sections": {
+    "Requirements": {
+      "title": "Requirements",
+      "content": [
+        "A standard of identity (or food compositional standard) sets out regulatory requirements (such as ingredients, strength, potency, purity and quality) that define a particular food, often with a prescribed common name [B.01.001(1), FDR]. These standards provide consumers with predictability of composition for specific foods.",
+        "Standards of identity (or food compositional standards) currently exist for over 500 foods under the Food and Drug Regulations (FDR) and the Safe Food for Canadians Regulations (SFCR). Food compositional standards under the FDR are incorporated by reference in the Canadian Food Compositional Standards (CFCS). Under the SFCR, standards of identity are incorporated by reference in the Canadian Standards of Identity document. These documents are prepared by the CFIA and may be amended from time to time as per the CFIA's Incorporation by Reference Policy .",
+        "Foods for which a standard is prescribed under the FDR and SFCR and that are imported into Canada or traded inter-provincially (across provinces and territories) are required to comply with prescribed standard requirements [6, FDA; 9, SFCR]. Foods that are traded intra-provincially (within the province) are not subject to the federal standard unless the requirements are referenced by the provinces or territories in their legislation.",
+        "The requirement to comply with prescribed standards also applies to foods that are likely to be mistaken for a standardized food [9, SFCR]. Foods with prescribed standards must include only the stated ingredients within the prescribed limits [B.01.042, FDR]. If the standard includes an ingredient to be used as a food additive, that additive must be used in accordance with the purpose and level provided by the FDR or the SFCR for that food [B.01.043, FDR; 10, SFCR].",
+        "When names for foods appear in bold face type, but not in italics, in the Canadian Standards of Identity document or the CFCS document, these names are the prescribed common names that must be used for foods meeting the compositional standard [B.01.001(1), FDR; 1, 201, SFCR]. For more information, please refer to the section Choosing an appropriate common name .",
+        "Canadian Food Compositional Standards (CFCS) document incorporated by reference into the FDR",
+        "The CFCS document is comprised of the following 19 volumes:",
+        "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+        "Note: words or expressions that are used in a specific volume of the CFCS, but are not defined in that volume, have the same meaning as in the FDR [B.01.001.2, FDR].",
+        "Canadian Standards of Identity incorporated by reference into the SFCR",
+        "The Canadian Standards of Identity document is comprised of the following 8 volumes:",
+        "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+        "Note: Words or expressions that are used in a specific volume of the Canadian Standards of Identity document, but are not defined in that volume, have the same meaning as in the SFCR [4, SFCR].",
+        "Unstandardized foods are those that do not have a standard of identity or that deviate from a prescribed standard.",
+        "A food that does not meet the requirements of a standard cannot use the prescribed name for that standardized food [201, SFCR]. A modified standardized common name or another name that accurately describes the food may be used. For more information, refer to the section Modified standardized common names ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Food and Drug Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+          "context_text": "Standards of identity (or food compositional standards) currently exist for over 500 foods under the Food and Drug Regulations (FDR) and the Safe Food for Canadians Regulations (SFCR). Food compositional standards under the FDR are incorporated by reference in the Canadian Food Compositional Standards (CFCS). Under the SFCR, standards of identity are incorporated by reference in the Canadian Standards of Identity document. These documents are prepared by the CFIA and may be amended from time to time as per the CFIA's Incorporation by Reference Policy .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Safe Food for Canadians Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+          "context_text": "Standards of identity (or food compositional standards) currently exist for over 500 foods under the Food and Drug Regulations (FDR) and the Safe Food for Canadians Regulations (SFCR). Food compositional standards under the FDR are incorporated by reference in the Canadian Food Compositional Standards (CFCS). Under the SFCR, standards of identity are incorporated by reference in the Canadian Standards of Identity document. These documents are prepared by the CFIA and may be amended from time to time as per the CFIA's Incorporation by Reference Policy .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "Standards of identity (or food compositional standards) currently exist for over 500 foods under the Food and Drug Regulations (FDR) and the Safe Food for Canadians Regulations (SFCR). Food compositional standards under the FDR are incorporated by reference in the Canadian Food Compositional Standards (CFCS). Under the SFCR, standards of identity are incorporated by reference in the Canadian Standards of Identity document. These documents are prepared by the CFIA and may be amended from time to time as per the CFIA's Incorporation by Reference Policy .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Canadian Standards of Identity",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference",
+          "context_text": "Standards of identity (or food compositional standards) currently exist for over 500 foods under the Food and Drug Regulations (FDR) and the Safe Food for Canadians Regulations (SFCR). Food compositional standards under the FDR are incorporated by reference in the Canadian Food Compositional Standards (CFCS). Under the SFCR, standards of identity are incorporated by reference in the Canadian Standards of Identity document. These documents are prepared by the CFIA and may be amended from time to time as per the CFIA's Incorporation by Reference Policy .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "CFIA's Incorporation by Reference Policy",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/incorporation-reference/cfia-incorporation-reference-policy",
+          "context_text": "Standards of identity (or food compositional standards) currently exist for over 500 foods under the Food and Drug Regulations (FDR) and the Safe Food for Canadians Regulations (SFCR). Food compositional standards under the FDR are incorporated by reference in the Canadian Food Compositional Standards (CFCS). Under the SFCR, standards of identity are incorporated by reference in the Canadian Standards of Identity document. These documents are prepared by the CFIA and may be amended from time to time as per the CFIA's Incorporation by Reference Policy .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Canadian Standards of Identity",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference",
+          "context_text": "When names for foods appear in bold face type, but not in italics, in the Canadian Standards of Identity document or the CFCS document, these names are the prescribed common names that must be used for foods meeting the compositional standard [B.01.001(1), FDR; 1, 201, SFCR]. For more information, please refer to the section Choosing an appropriate common name .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "Choosing an appropriate common name",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#a3",
+          "context_text": "When names for foods appear in bold face type, but not in italics, in the Canadian Standards of Identity document or the CFCS document, these names are the prescribed common names that must be used for foods meeting the compositional standard [B.01.001(1), FDR; 1, 201, SFCR]. For more information, please refer to the section Choosing an appropriate common name .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "Volume 1 – Miscellaneous",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a1",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 2 – Alcoholic Beverages",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a2",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 3 – Baking Powder",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a3",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 4 – Cocoa and Chocolate Products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a4",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 5 – Coffee",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a5",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 6 – Spices, Seasonings and Dressings for Salads",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a6",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 7 – Dairy Products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a7",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 8 – Fats and Oils",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a8",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 9 – Flavouring Preparations",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a9",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 10 – Fruits, Vegetables, Their Products and Substitutes",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a10",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 11 – Prepackaged Water",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a11",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 12 – Grain and Bakery Products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a12",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 13 – Meat, Its Preparations and Products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a13",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 14 – Salt",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a14",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 15 – Sweetening Agents",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a15",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 16 – Vinegar",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a16",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 17 – Tea",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a17",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 18 – Marine and Fresh Water Animal Products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a18",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a19",
+          "context_text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Volume 1, Dairy products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1",
+          "context_text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Volume 2, Processed egg products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2",
+          "context_text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Volume 3, Fish",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+          "context_text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Volume 4, Processed fruit or vegetable products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4",
+          "context_text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Volume 5, Honey",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-5",
+          "context_text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Volume 6, Maple products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-6",
+          "context_text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Volume 7, Meat products",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7",
+          "context_text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Volume 8, Icewine",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+          "context_text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Modified standardized common names",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#a3_5",
+          "context_text": "A food that does not meet the requirements of a standard cannot use the prescribed name for that standardized food [201, SFCR]. A modified standardized common name or another name that accurately describes the food may be used. For more information, refer to the section Modified standardized common names .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 15
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "A standard of identity (or food compositional standard) sets out regulatory requirements (such as ingredients, strength, potency, purity and quality) that define a particular food, often with a prescribed common name [B.01.001(1), FDR]. These standards provide consumers with predictability of composition for specific foods.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Standards of identity (or food compositional standards) currently exist for over 500 foods under the Food and Drug Regulations (FDR) and the Safe Food for Canadians Regulations (SFCR). Food compositional standards under the FDR are incorporated by reference in the Canadian Food Compositional Standards (CFCS). Under the SFCR, standards of identity are incorporated by reference in the Canadian Standards of Identity document. These documents are prepared by the CFIA and may be amended from time to time as per the CFIA's Incorporation by Reference Policy .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Food and Drug Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+              "is_external": false
+            },
+            {
+              "text": "Safe Food for Canadians Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+              "is_external": false
+            },
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            },
+            {
+              "text": "Canadian Standards of Identity",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference",
+              "is_external": false
+            },
+            {
+              "text": "CFIA's Incorporation by Reference Policy",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/incorporation-reference/cfia-incorporation-reference-policy",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Foods for which a standard is prescribed under the FDR and SFCR and that are imported into Canada or traded inter-provincially (across provinces and territories) are required to comply with prescribed standard requirements [6, FDA; 9, SFCR]. Foods that are traded intra-provincially (within the province) are not subject to the federal standard unless the requirements are referenced by the provinces or territories in their legislation.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The requirement to comply with prescribed standards also applies to foods that are likely to be mistaken for a standardized food [9, SFCR]. Foods with prescribed standards must include only the stated ingredients within the prescribed limits [B.01.042, FDR]. If the standard includes an ingredient to be used as a food additive, that additive must be used in accordance with the purpose and level provided by the FDR or the SFCR for that food [B.01.043, FDR; 10, SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When names for foods appear in bold face type, but not in italics, in the Canadian Standards of Identity document or the CFCS document, these names are the prescribed common names that must be used for foods meeting the compositional standard [B.01.001(1), FDR; 1, 201, SFCR]. For more information, please refer to the section Choosing an appropriate common name .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Standards of Identity",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference",
+              "is_external": false
+            },
+            {
+              "text": "Choosing an appropriate common name",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#a3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Canadian Food Compositional Standards (CFCS) document incorporated by reference into the FDR",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The CFCS document is comprised of the following 19 volumes:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Volume 1 – Miscellaneous Volume 2 – Alcoholic Beverages Volume 3 – Baking Powder Volume 4 – Cocoa and Chocolate Products Volume 5 – Coffee Volume 6 – Spices, Seasonings and Dressings for Salads Volume 7 – Dairy Products Volume 8 – Fats and Oils Volume 9 – Flavouring Preparations Volume 10 – Fruits, Vegetables, Their Products and Substitutes Volume 11 – Prepackaged Water Volume 12 – Grain and Bakery Products Volume 13 – Meat, Its Preparations and Products Volume 14 – Salt Volume 15 – Sweetening Agents Volume 16 – Vinegar Volume 17 – Tea Volume 18 – Marine and Fresh Water Animal Products Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Volume 1 – Miscellaneous",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a1",
+              "is_external": false
+            },
+            {
+              "text": "Volume 2 – Alcoholic Beverages",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a2",
+              "is_external": false
+            },
+            {
+              "text": "Volume 3 – Baking Powder",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a3",
+              "is_external": false
+            },
+            {
+              "text": "Volume 4 – Cocoa and Chocolate Products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a4",
+              "is_external": false
+            },
+            {
+              "text": "Volume 5 – Coffee",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a5",
+              "is_external": false
+            },
+            {
+              "text": "Volume 6 – Spices, Seasonings and Dressings for Salads",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a6",
+              "is_external": false
+            },
+            {
+              "text": "Volume 7 – Dairy Products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a7",
+              "is_external": false
+            },
+            {
+              "text": "Volume 8 – Fats and Oils",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a8",
+              "is_external": false
+            },
+            {
+              "text": "Volume 9 – Flavouring Preparations",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a9",
+              "is_external": false
+            },
+            {
+              "text": "Volume 10 – Fruits, Vegetables, Their Products and Substitutes",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a10",
+              "is_external": false
+            },
+            {
+              "text": "Volume 11 – Prepackaged Water",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a11",
+              "is_external": false
+            },
+            {
+              "text": "Volume 12 – Grain and Bakery Products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a12",
+              "is_external": false
+            },
+            {
+              "text": "Volume 13 – Meat, Its Preparations and Products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a13",
+              "is_external": false
+            },
+            {
+              "text": "Volume 14 – Salt",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a14",
+              "is_external": false
+            },
+            {
+              "text": "Volume 15 – Sweetening Agents",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a15",
+              "is_external": false
+            },
+            {
+              "text": "Volume 16 – Vinegar",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a16",
+              "is_external": false
+            },
+            {
+              "text": "Volume 17 – Tea",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a17",
+              "is_external": false
+            },
+            {
+              "text": "Volume 18 – Marine and Fresh Water Animal Products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a18",
+              "is_external": false
+            },
+            {
+              "text": "Volume 19 – Poultry, Poultry Meat, Their Preparations and Products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a19",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Note: words or expressions that are used in a specific volume of the CFCS, but are not defined in that volume, have the same meaning as in the FDR [B.01.001.2, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Canadian Standards of Identity incorporated by reference into the SFCR",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The Canadian Standards of Identity document is comprised of the following 8 volumes:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Volume 1, Dairy products Volume 2, Processed egg products Volume 3, Fish Volume 4, Processed fruit or vegetable products Volume 5, Honey Volume 6, Maple products Volume 7, Meat products Volume 8, Icewine",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Volume 1, Dairy products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1",
+              "is_external": false
+            },
+            {
+              "text": "Volume 2, Processed egg products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2",
+              "is_external": false
+            },
+            {
+              "text": "Volume 3, Fish",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+              "is_external": false
+            },
+            {
+              "text": "Volume 4, Processed fruit or vegetable products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4",
+              "is_external": false
+            },
+            {
+              "text": "Volume 5, Honey",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-5",
+              "is_external": false
+            },
+            {
+              "text": "Volume 6, Maple products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-6",
+              "is_external": false
+            },
+            {
+              "text": "Volume 7, Meat products",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7",
+              "is_external": false
+            },
+            {
+              "text": "Volume 8, Icewine",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Note: Words or expressions that are used in a specific volume of the Canadian Standards of Identity document, but are not defined in that volume, have the same meaning as in the SFCR [4, SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Unstandardized foods are those that do not have a standard of identity or that deviate from a prescribed standard.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "A food that does not meet the requirements of a standard cannot use the prescribed name for that standardized food [201, SFCR]. A modified standardized common name or another name that accurately describes the food may be used. For more information, refer to the section Modified standardized common names .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Modified standardized common names",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#a3_5",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

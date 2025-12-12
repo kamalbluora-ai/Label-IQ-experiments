@@ -1,0 +1,196 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/country-origin",
+  "citation_title": "Country of origin",
+  "sections": {
+    "Mandatory labelling": {
+      "title": "Mandatory labelling",
+      "content": [
+        "All prepackaged food products sold in Canada are required to be labelled with the name and principal place of business of the company responsible for the product, such as the importer or manufacturer.",
+        "When a food product is wholly manufactured outside of Canada, the label must show that the product is imported. This information can be provided in one of three ways:",
+        "the name and principal place of business of the foreign manufacturer the statement \"imported for\" / \" importé pour \" or \"imported by\" / \" importé par \" followed by the name and principal place of business of the Canadian company the name and principal place of business of the Canadian company with the country of origin of the product",
+        "For more information, refer to Name and principal place of business . In addition, it is mandatory to state the country of origin on some specific imported prepackaged products. The links below provide more information on the requirements for each food:",
+        "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+        "Generally, for the above foods, the words \"Product of [Name the country of origin]\" must appear on the label. For example, prepackaged cheese from the United States imported into Canada is required to be labelled \"Product of United States.\""
+      ],
+      "internal_links": [
+        {
+          "link_text": "Name and principal place of business",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/name-and-principal-place-business",
+          "context_text": "For more information, refer to Name and principal place of business . In addition, it is mandatory to state the country of origin on some specific imported prepackaged products. The links below provide more information on the requirements for each food:",
+          "section": "Mandatory labelling",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "wine and brandy",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "dairy products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/dairy",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "honey",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/honey",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "fish and fish products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "fresh fruits and vegetables",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fresh-fruits-vegetables",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "shell egg",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/shelled-eggs-products",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "processed egg",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/processed-egg-products",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "meat products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/meat-and-poultry-products",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "maple products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/maple-products",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "processed fruit and vegetable products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/processed-fruit-vegetable-products",
+          "context_text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "section": "Mandatory labelling",
+          "element_type": "ul",
+          "position_in_content": 5
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "All prepackaged food products sold in Canada are required to be labelled with the name and principal place of business of the company responsible for the product, such as the importer or manufacturer.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When a food product is wholly manufactured outside of Canada, the label must show that the product is imported. This information can be provided in one of three ways:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the name and principal place of business of the foreign manufacturer the statement \"imported for\" / \" importé pour \" or \"imported by\" / \" importé par \" followed by the name and principal place of business of the Canadian company the name and principal place of business of the Canadian company with the country of origin of the product",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "For more information, refer to Name and principal place of business . In addition, it is mandatory to state the country of origin on some specific imported prepackaged products. The links below provide more information on the requirements for each food:",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Name and principal place of business",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/name-and-principal-place-business",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "wine and brandy dairy products honey fish and fish products fresh fruits and vegetables shell egg processed egg meat products maple products processed fruit and vegetable products",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "wine and brandy",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages",
+              "is_external": false
+            },
+            {
+              "text": "dairy products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/dairy",
+              "is_external": false
+            },
+            {
+              "text": "honey",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/honey",
+              "is_external": false
+            },
+            {
+              "text": "fish and fish products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish",
+              "is_external": false
+            },
+            {
+              "text": "fresh fruits and vegetables",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fresh-fruits-vegetables",
+              "is_external": false
+            },
+            {
+              "text": "shell egg",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/shelled-eggs-products",
+              "is_external": false
+            },
+            {
+              "text": "processed egg",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/processed-egg-products",
+              "is_external": false
+            },
+            {
+              "text": "meat products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/meat-and-poultry-products",
+              "is_external": false
+            },
+            {
+              "text": "maple products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/maple-products",
+              "is_external": false
+            },
+            {
+              "text": "processed fruit and vegetable products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/processed-fruit-vegetable-products",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Generally, for the above foods, the words \"Product of [Name the country of origin]\" must appear on the label. For example, prepackaged cheese from the United States imported into Canada is required to be labelled \"Product of United States.\"",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    }
+  }
+}

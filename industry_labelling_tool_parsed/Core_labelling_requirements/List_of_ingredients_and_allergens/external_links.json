@@ -1,0 +1,55 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+  "citation_title": "List of ingredients and allergens",
+  "external_links": [
+    {
+      "text": "Vintage wine and application of enhanced allergen regulations",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-labelling/allergen-labelling/vintage-wine-application-enhanced-allergen-regulations.html",
+      "section": "Requirements",
+      "context": "Although standardized alcoholic beverages are not exempt from declaring allergens, Health Canada has developed a position on the labelling requirements for vintage wines. This position indicates that the allergen labelling regulations apply to all non-vintage wines and vintage wines with a year date of 2012 and later, and that vintage wines with a year date of 2011 or earlier can continue to be sold with their original labels. For more information on this subject, refer to Health Canada's position on Vintage wine and application of enhanced allergen regulations .",
+      "element_type": "p"
+    },
+    {
+      "text": "Health Canada's position on highly refined oils derived from food allergen sources",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-labelling/allergen-labelling/position-highly-refined-oils-derived-food-allergen-sources.html",
+      "section": "Requirements",
+      "context": "Based on a detailed assessment by Health Canada, highly refined (degummed, neutralized, bleached and deodorized) oils derived from food allergen sources are not subject to the enhanced labelling requirements as the refining process has been determined to remove the allergenic protein from the oil. Based on the available science, the very low levels of protein present within highly refined oils are not considered to pose a risk to the health of individuals with food allergies. For more information on this subject, refer to Health Canada's position on highly refined oils derived from food allergen sources .",
+      "element_type": "p"
+    },
+    {
+      "text": "Lists of Permitted Food Additives",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted.html",
+      "section": "Manner of declaring",
+      "context": "When vitamins, minerals and amino acids are added to foods for their food additive function, they should be declared in the list of ingredients by the names outlined in Health Canada's Lists of Permitted Food Additives or names in the Permitted synonyms for food additives table . For example, when ascorbic acid is added as a preservative, it must be named ascorbic acid, not 'Vitamin C'.",
+      "element_type": "p"
+    },
+    {
+      "text": "List of permitted supplemental ingredients",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/list-permitted-food-ingredients.html",
+      "section": "Manner of declaring",
+      "context": "Certain vitamins, minerals and amino acids may be added as supplemental ingredients, to supplemented foods, for non-nutritional purposes and at levels that may pose a risk to consumers if added in excess. They must be added and declared in accordance with the applicable conditions set out in the List of permitted supplemental ingredients . For more information on this subject, refer to Supplemented foods .",
+      "element_type": "p"
+    },
+    {
+      "text": "Health Canada – Common food allergens",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-allergies-intolerances/food-allergies.html",
+      "section": "Manner of declaring",
+      "context": "The prescribed source of a food allergen present in a prepackaged product must be declared as listed in the table below [B.01.010.1(6), FDR]. Refer to Health Canada – Common food allergens for other names of priority food allergens which must be declared by their prescribed source names.",
+      "element_type": "p"
+    },
+    {
+      "text": "available for order",
+      "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/design-templates-nutrition-facts-list-ingredients.html",
+      "section": "Legibility and location",
+      "context": "In addition to this page, detailed examples of the legibility requirements are presented in the Compendium of Templates for Nutrition Facts tables and list of ingredients, which is available for order on the Health Canada website.",
+      "element_type": "p"
+    },
+    {
+      "text": "List of dietary fibres reviewed and accepted by Health Canada's Food Directorate)",
+      "href": "https://www.canada.ca/en/health-canada/services/publications/food-nutrition/list-reviewed-accepted-dietary-fibres.html",
+      "section": "Annex 2: examples of ingredients for which grouping with sugars is not required",
+      "context": "Candied fruits Caramel Carob chips Chocolate (milk, white, dark) Chocolate chips Coconut flakes Compound coating Fibres (refer to the List of dietary fibres reviewed and accepted by Health Canada's Food Directorate) Fruit spreads Fruits (fresh/canned in water/ frozen/dried/freeze dried/filling) Glaze Jams, marmalades and jellies Maple flakes Maple/Yogurt clusters Maraschino cherries Marshmallow Vegetable juice Vegetable purée Vegetables (fresh/canned/ frozen/dried/freeze dried/filling) Yogurt coating, filling",
+      "element_type": "ul"
+    }
+  ]
+}

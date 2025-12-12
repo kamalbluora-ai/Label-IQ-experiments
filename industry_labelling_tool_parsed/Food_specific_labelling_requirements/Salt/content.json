@@ -1,0 +1,395 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/salt",
+  "citation_title": "Salt",
+  "sections": {
+    "Overview": {
+      "title": "Overview",
+      "content": [
+        "Salt (sodium chloride) plays a functional role in many food categories. It is essential for maintaining product structure, enzymatic, humidity and microbial control, texture, emulsification, pH stability, flavour, food safety, stabilizing and preserving.",
+        "Salt and salt substitutes sold in Canada are subject to the provisions of the Safe Food for Canadians Act (SFCA) and the Safe Food for Canadians Regulations (SFCR), as well as those of the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR).",
+        "When sold intraprovincially, salt and salt substitutes are subject to the labelling requirements under the FDA and FDR, as well as specific requirements of the SFCA and the SFCR that apply to prepackaged foods sold in Canada , regardless of the level of trade. Provincial regulations may also have labelling requirements that apply when these products are sold within that province.",
+        "Salt, other than crude rock salt, has a prescribed standard in section 14.1.1 of the Canadian Food Compositional Standards (CFCS), document incorporated by reference into the FDR. The requirements concerning the addition of potassium iodide are set out in Part B Division 17 of the FDR [B.17.003, B.17.004, FDR].",
+        "Salt substitutes do not have a prescribed standard and are generally a sodium reduced or sodium free alternative. Salt substitutes usually contain potassium chloride. Table salt substitutes, while not required to, are permitted to contain added iodine [D.03.002(1), item 17, FDR].",
+        "The labelling requirements detailed in the following section are specific to salt and salt substitutes. Refer to the Industry Labelling Tool for core labelling and voluntary claims and statements requirements that apply to all prepackaged foods."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Safe Food for Canadians Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?safefood",
+          "context_text": "Salt and salt substitutes sold in Canada are subject to the provisions of the Safe Food for Canadians Act (SFCA) and the Safe Food for Canadians Regulations (SFCR), as well as those of the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR).",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Safe Food for Canadians Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+          "context_text": "Salt and salt substitutes sold in Canada are subject to the provisions of the Safe Food for Canadians Act (SFCA) and the Safe Food for Canadians Regulations (SFCR), as well as those of the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR).",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Food and Drugs Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+          "context_text": "Salt and salt substitutes sold in Canada are subject to the provisions of the Safe Food for Canadians Act (SFCA) and the Safe Food for Canadians Regulations (SFCR), as well as those of the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR).",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Food and Drug Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+          "context_text": "Salt and salt substitutes sold in Canada are subject to the provisions of the Safe Food for Canadians Act (SFCA) and the Safe Food for Canadians Regulations (SFCR), as well as those of the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR).",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "Salt, other than crude rock salt, has a prescribed standard in section 14.1.1 of the Canadian Food Compositional Standards (CFCS), document incorporated by reference into the FDR. The requirements concerning the addition of potassium iodide are set out in Part B Division 17 of the FDR [B.17.003, B.17.004, FDR].",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Industry Labelling Tool",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+          "context_text": "The labelling requirements detailed in the following section are specific to salt and salt substitutes. Refer to the Industry Labelling Tool for core labelling and voluntary claims and statements requirements that apply to all prepackaged foods.",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 6
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Salt (sodium chloride) plays a functional role in many food categories. It is essential for maintaining product structure, enzymatic, humidity and microbial control, texture, emulsification, pH stability, flavour, food safety, stabilizing and preserving.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Salt and salt substitutes sold in Canada are subject to the provisions of the Safe Food for Canadians Act (SFCA) and the Safe Food for Canadians Regulations (SFCR), as well as those of the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR).",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Safe Food for Canadians Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?safefood",
+              "is_external": false
+            },
+            {
+              "text": "Safe Food for Canadians Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+              "is_external": false
+            },
+            {
+              "text": "Food and Drugs Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+              "is_external": false
+            },
+            {
+              "text": "Food and Drug Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "When sold intraprovincially, salt and salt substitutes are subject to the labelling requirements under the FDA and FDR, as well as specific requirements of the SFCA and the SFCR that apply to prepackaged foods sold in Canada , regardless of the level of trade. Provincial regulations may also have labelling requirements that apply when these products are sold within that province.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Salt, other than crude rock salt, has a prescribed standard in section 14.1.1 of the Canadian Food Compositional Standards (CFCS), document incorporated by reference into the FDR. The requirements concerning the addition of potassium iodide are set out in Part B Division 17 of the FDR [B.17.003, B.17.004, FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Salt substitutes do not have a prescribed standard and are generally a sodium reduced or sodium free alternative. Salt substitutes usually contain potassium chloride. Table salt substitutes, while not required to, are permitted to contain added iodine [D.03.002(1), item 17, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The labelling requirements detailed in the following section are specific to salt and salt substitutes. Refer to the Industry Labelling Tool for core labelling and voluntary claims and statements requirements that apply to all prepackaged foods.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Industry Labelling Tool",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Common name – salt and salt substitutes": {
+      "title": "Common name – salt and salt substitutes",
+      "content": [
+        "The addition of iodide to salt for table or general household use is required to help in the prevention of goiter [B.17.003(1), FDR]. If a salt product does not comply with B.17.003(1), such as a natural mineral rock salt that is 98.32% sodium chloride and does not contain 0.01% potassium iodide, it cannot be sold to consumers for general household or table use. A common name that indicates the use, such as \"salt for pickling\" would be acceptable. Alternatively, the product may be sold for further processing and called \"salt\".",
+        "The common name \"sea salt\" may be used to refer to processed salt from an existing sea and must meet the composition requirements prescribed under standard for salt. Salt from a mine cannot be labelled as \"sea salt\".",
+        "The common name \"sea salts\" (note the plural) refers to a mixture of sodium chloride and other mineral salts. Sea salts do not have to meet the standard for salt and as such, do not have to be iodized. Sea salts are made from sea water and not mining.",
+        "See Common name for more information."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Common name",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name",
+          "context_text": "See Common name for more information.",
+          "section": "Common name – salt and salt substitutes",
+          "element_type": "p",
+          "position_in_content": 4
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "The addition of iodide to salt for table or general household use is required to help in the prevention of goiter [B.17.003(1), FDR]. If a salt product does not comply with B.17.003(1), such as a natural mineral rock salt that is 98.32% sodium chloride and does not contain 0.01% potassium iodide, it cannot be sold to consumers for general household or table use. A common name that indicates the use, such as \"salt for pickling\" would be acceptable. Alternatively, the product may be sold for further processing and called \"salt\".",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The common name \"sea salt\" may be used to refer to processed salt from an existing sea and must meet the composition requirements prescribed under standard for salt. Salt from a mine cannot be labelled as \"sea salt\".",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The common name \"sea salts\" (note the plural) refers to a mixture of sodium chloride and other mineral salts. Sea salts do not have to meet the standard for salt and as such, do not have to be iodized. Sea salts are made from sea water and not mining.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See Common name for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Common name",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "List of ingredients – salt and salt substitutes": {
+      "title": "List of ingredients – salt and salt substitutes",
+      "content": [
+        "All ingredients, including iodide and dextrose [B.17.004, FDR], and their components must appear in the list of ingredients of table salt.",
+        "When used as an ingredient in the manufacture of a food product, the components of salt are not required to appear in the list of ingredients [B.01.009(1), item 20, FDR].",
+        "When sea salt (note the singular \"salt\") is used as an ingredient, the same component exemption provided under B.01.009(1), item 20, of the FDR for salt is applicable to sea salt.",
+        "The common name \"sea salts\" (note the plural \"salts\") is an acceptable common name for the ingredient list when referring to a mixture of sodium chloride and other mineral salts. A complete component listing is necessary, since it is not exempt under section B.01.009 of the FDR.",
+        "All ingredients and their components must appear in the list of ingredients of table salt substitutes. This includes the declaration of iodide if present.",
+        "When a salt substitute is used as an ingredient in another food, it must be declared by its common name in the list of ingredients. The term \"salt substitute\" on its own would not be acceptable. However, it would be acceptable to declare the additive's function in brackets after the common name, for example, \"potassium chloride (salt substitute)\".",
+        "See List of ingredients for more information."
+      ],
+      "internal_links": [
+        {
+          "link_text": "common name",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name",
+          "context_text": "When a salt substitute is used as an ingredient in another food, it must be declared by its common name in the list of ingredients. The term \"salt substitute\" on its own would not be acceptable. However, it would be acceptable to declare the additive's function in brackets after the common name, for example, \"potassium chloride (salt substitute)\".",
+          "section": "List of ingredients – salt and salt substitutes",
+          "element_type": "p",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "List of ingredients",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+          "context_text": "See List of ingredients for more information.",
+          "section": "List of ingredients – salt and salt substitutes",
+          "element_type": "p",
+          "position_in_content": 7
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "All ingredients, including iodide and dextrose [B.17.004, FDR], and their components must appear in the list of ingredients of table salt.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When used as an ingredient in the manufacture of a food product, the components of salt are not required to appear in the list of ingredients [B.01.009(1), item 20, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When sea salt (note the singular \"salt\") is used as an ingredient, the same component exemption provided under B.01.009(1), item 20, of the FDR for salt is applicable to sea salt.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The common name \"sea salts\" (note the plural \"salts\") is an acceptable common name for the ingredient list when referring to a mixture of sodium chloride and other mineral salts. A complete component listing is necessary, since it is not exempt under section B.01.009 of the FDR.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "All ingredients and their components must appear in the list of ingredients of table salt substitutes. This includes the declaration of iodide if present.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When a salt substitute is used as an ingredient in another food, it must be declared by its common name in the list of ingredients. The term \"salt substitute\" on its own would not be acceptable. However, it would be acceptable to declare the additive's function in brackets after the common name, for example, \"potassium chloride (salt substitute)\".",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "common name",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "See List of ingredients for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of ingredients",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Nutrition labelling – salt and salt substitutes": {
+      "title": "Nutrition labelling – salt and salt substitutes",
+      "content": [
+        "Salt for table or general household use containing added iodide that is declared on the principal display panel is not required to declare the iodide content in the Nutrition Facts table [B.01.402(6), FDR]. In addition, the declaration of the iodide content on the principal display panel does not require the salt to contain a minimum 5% of the daily value for iodide [D.02.002(1), FDR].",
+        "See Nutrition labelling for more information.",
+        "Most prepackaged foods sold in Canada are required to be labelled with a nutrition symbol when the amount of saturated fat, sugars and/or sodium is equal to or higher than the specified nutrient thresholds [B.01.350, FDR].",
+        "Salt for table or general household use (including table salt substitutes) are always exempt from the requirement to carry a nutrition symbol [B.01.350(5)(h), FDR].",
+        "See Foods exempt from the front-of-package (FOP) nutrition symbol requirements for details on the exemptions."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Nutrition labelling",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling",
+          "context_text": "See Nutrition labelling for more information.",
+          "section": "Nutrition labelling – salt and salt substitutes",
+          "element_type": "p",
+          "position_in_content": 2
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Salt for table or general household use containing added iodide that is declared on the principal display panel is not required to declare the iodide content in the Nutrition Facts table [B.01.402(6), FDR]. In addition, the declaration of the iodide content on the principal display panel does not require the salt to contain a minimum 5% of the daily value for iodide [D.02.002(1), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See Nutrition labelling for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Nutrition labelling",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Most prepackaged foods sold in Canada are required to be labelled with a nutrition symbol when the amount of saturated fat, sugars and/or sodium is equal to or higher than the specified nutrient thresholds [B.01.350, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Salt for table or general household use (including table salt substitutes) are always exempt from the requirement to carry a nutrition symbol [B.01.350(5)(h), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See Foods exempt from the front-of-package (FOP) nutrition symbol requirements for details on the exemptions.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Foods exempt from the front-of-package (FOP) nutrition symbol requirements",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific labelling requirements": {
+      "title": "Product specific labelling requirements",
+      "content": [
+        "Salt and sea salt sold for table or general household use are required to contain 0.01% potassium iodide and the presence of iodide is required to be shown on the principal display panel [B.17.003(2), FDR]. Salt and sea salt which has not been iodized is permitted as an ingredient of a food.",
+        "The presence of iodide in a salt substitute is not required to be shown on the principal display panel."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "Salt and sea salt sold for table or general household use are required to contain 0.01% potassium iodide and the presence of iodide is required to be shown on the principal display panel [B.17.003(2), FDR]. Salt and sea salt which has not been iodized is permitted as an ingredient of a food.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The presence of iodide in a salt substitute is not required to be shown on the principal display panel.",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Voluntary claims and statements": {
+      "title": "Voluntary claims and statements",
+      "content": [
+        "A salt substitute that meets the compositional and labelling criteria for a free of sodium or salt claim or for a low in sodium or salt claim may be represented as a food for special dietary use, such as \"for salt-free diets\" or \"for salt-reduced diets\" [B.24.003(1.1), FDR].",
+        "Refer to table D. Sodium/Salt Related Statements and Claims of the Table of Permitted Nutrient Content Statements and Claims for more information.",
+        "A salt product represented as \"reduced in sodium\" is required to be formulated so that it contains at least 25% less sodium than regular table salt. Such a product must be labelled with the difference in the amount of sodium by percentage, fraction or milligrams per serving (for example, 50% less sodium than table salt, ½ the sodium of table salt, 275 mg less sodium per ¼ tsp).",
+        "Refer to Sodium (salt) claims and table D. Sodium/Salt Related Statements and Claims of the Table of Permitted Nutrient Content Statements and Claims for more information."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Sodium (salt) claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/specific-requirements#a9",
+          "context_text": "Refer to Sodium (salt) claims and table D. Sodium/Salt Related Statements and Claims of the Table of Permitted Nutrient Content Statements and Claims for more information.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 4
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "A salt substitute that meets the compositional and labelling criteria for a free of sodium or salt claim or for a low in sodium or salt claim may be represented as a food for special dietary use, such as \"for salt-free diets\" or \"for salt-reduced diets\" [B.24.003(1.1), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Refer to table D. Sodium/Salt Related Statements and Claims of the Table of Permitted Nutrient Content Statements and Claims for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "D. Sodium/Salt Related Statements and Claims",
+              "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/table-permitted-nutrient-content-statements-claims/table-document.html#a4",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "A salt product represented as \"reduced in sodium\" is required to be formulated so that it contains at least 25% less sodium than regular table salt. Such a product must be labelled with the difference in the amount of sodium by percentage, fraction or milligrams per serving (for example, 50% less sodium than table salt, ½ the sodium of table salt, 275 mg less sodium per ¼ tsp).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Refer to Sodium (salt) claims and table D. Sodium/Salt Related Statements and Claims of the Table of Permitted Nutrient Content Statements and Claims for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Sodium (salt) claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/specific-requirements#a9",
+              "is_external": false
+            },
+            {
+              "text": "D. Sodium/Salt Related Statements and Claims",
+              "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/table-permitted-nutrient-content-statements-claims/table-document.html#a4",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

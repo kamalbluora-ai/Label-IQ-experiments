@@ -1,0 +1,808 @@
+{
+  "title": "Date markings",
+  "rules": [
+    {
+      "id": "sha1:4cb58f8e55f1",
+      "text": "is a \"packaged on\" date required? (durable life of 90 days or less and packaged where sold at retail, unless the food is exempt from a \"packaged on\" date )",
+      "citations": [
+        {
+          "text": "\"packaged on\" date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s3c1"
+        },
+        {
+          "text": "exempt from a \"packaged on\" date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s5c1"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:2e111ceca9b8",
+      "text": "if so, is it present?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:4a167d8d80ff",
+      "text": "is the correct wording \"packaged on\" / \" empaqueté le \" used (or in one language if exempt from bilingual labelling)?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:3259c87336b8",
+      "text": "is the wording grouped with the date or does it clearly explain the date if located elsewhere on the label?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:d73727642aaa",
+      "text": "is the presentation correct as described above?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:039f2e68ebef",
+      "text": "is location of the date acceptable as described above?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:39a7abd2b21b",
+      "text": "is an \"expiration date \" required? (food for special dietary use and infant formula foods)",
+      "citations": [
+        {
+          "text": "\"expiration date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s15c4"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:2e111ceca9b8",
+      "text": "if so, is it present?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:08ce37b93ed3",
+      "text": "is the location of the date acceptable (anywhere on the label, including the bottom if a reference is made elsewhere on the label indicating the date is present on the bottom)?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:f8f565a6bf33",
+      "text": "is the NFt:",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:22e90ae84563",
+      "text": "on the outer package? (except for alternate methods of presentation)",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:47c40b0168bf",
+      "text": "not destroyed when product is opened? (except for single-serving containers)",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:04ebdcd181ec",
+      "text": "on one continuous surface of the ADS?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:444642e890a4",
+      "text": "placed so that product will not leak or be damaged in order to view the NFt?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:3792275283b9",
+      "text": "is the serving size aligned with the regulated reference amount (RA)? Is it expressed using a household measure (HM) first, followed by the corresponding metric measure (MM) in parentheses, based on the food as sold?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:08735946c480",
+      "text": "if single-serving container, does the package contains less than 200% of the RA for that food, or can the quantity of food in the package be reasonably eaten by one person at a single eating occasion?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:ca58ff205282",
+      "text": "are energy and the 12 core nutrients declared, unless conditions for use of simplified format and single-serving simplified format have been satisfied? ( Note: Small packages with ADS of less than 100 cm 2 that have lost their NFt exemption are only required to declare certain nutrients).",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:d15b552e4e16",
+      "text": "are any non-permitted nutrients declared?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:6847ce2fc060",
+      "text": "are triggered nutrients declared?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:ce05283a964a",
+      "text": "have the correct units and % DV (percent Daily Value) been used, when permitted/required?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:d469d31f4177",
+      "text": "have amounts (absolute amounts and % DV) been rounded as per the rounding rules set out in the Regulations?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:e735d65e78c5",
+      "text": "is the % Daily Value interpretative statement included in the NFt (when required in the applicable NFt figure used)?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:e927fc1d3b0b",
+      "text": "is an FOP nutrition symbol present?",
+      "citations": [
+        {
+          "text": "prohibited",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a3"
+        },
+        {
+          "text": "exempt",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5"
+        },
+        {
+          "text": "specified nutrient thresholds",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a4"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:b5e4d92343c8",
+      "text": "if not, is the product prohibited or exempt from displaying a nutrition symbol?",
+      "citations": [
+        {
+          "text": "prohibited",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a3"
+        },
+        {
+          "text": "exempt",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:73d881db0613",
+      "text": "if not, are the amounts of saturated fat, sugars and/or sodium in the product less than the specified nutrient thresholds ?",
+      "citations": [
+        {
+          "text": "specified nutrient thresholds",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a4"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:3589567c2681",
+      "text": "does the nutrition symbol meet the requirements for legibility, language and orientation? Refer to section 6.2 of the Front-of-package nutrition symbol labelling guide for industry .",
+      "citations": [
+        {
+          "text": "section 6.2",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a6.2"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:ade33d6dbe28",
+      "text": "does the nutrition symbol meet the required technical specifications?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:0cf0b5c0fd02",
+      "text": "Refer to Nutrition labelling – Directory of nutrition symbol specifications .",
+      "citations": [
+        {
+          "text": "Nutrition labelling – Directory of nutrition symbol specifications",
+          "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/nutrition-symbol-specifications/nutrition-labelling.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:f739abbc6271",
+      "text": "is the nutrition symbol proportional to the PDS?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:9ea585d8f4da",
+      "text": "if not, does the product have a PDS > 250 cm 2 and is only sold in the retail establishment where it is packaged and labelled by means of a sticker?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:62b00a9407c3",
+      "text": "is the product an assortment or a multi-pack where one or more of the foods require a nutrition symbol?",
+      "citations": [
+        {
+          "text": "section 7",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a7"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    },
+    {
+      "id": "sha1:511943c65529",
+      "text": "if so, is the nutrition symbol applied as directed in section 7 of the Front-of-package nutrition symbol labelling guide for industry ?",
+      "citations": [
+        {
+          "text": "section 7",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a7"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings"
+      ]
+    }
+  ],
+  "subsections": [
+    {
+      "title": "\"Best before\" date",
+      "rules": [
+        {
+          "id": "sha1:ad0efd1f4a0e",
+          "text": "is a \"best before\" date required? (durable life of 90 days or less, unless the food is exempt from a \"best before\" date or is packaged where sold at retail)",
+          "citations": [
+            {
+              "text": "\"best before\" date",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s1c1"
+            },
+            {
+              "text": "exempt from a \"best before\" date",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s5c1"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:6ce45c6aa4a4",
+          "text": "if so, is it present?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:856e4ea49df8",
+          "text": "is the correct wording \"best before\" / \" meilleur avant \" used in English and French (or in one language if exempt from bilingual labelling)?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:9364910f38bb",
+          "text": "is the wording grouped with the date or does it clearly explain the date if located elsewhere on the label?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:1c9e8633b018",
+          "text": "is the presentation of the date acceptable (order of info (year, month, day), use of bilingual symbols for months)? - For example, MA 26.",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:61d991826c6c",
+          "text": "is the location of the date acceptable (anywhere on the label, including the bottom if a reference is made elsewhere on the label indicating the date is present on the bottom)?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "\"Best before\" date"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings",
+        "\"Best before\" date"
+      ]
+    },
+    {
+      "title": "Storage instructions",
+      "rules": [
+        {
+          "id": "sha1:90f09f936f45",
+          "text": "are storage instructions required? (required if storage conditions differ from normal room temperature)",
+          "citations": [
+            {
+              "text": "storage instructions",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c5"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Storage instructions"
+          ]
+        },
+        {
+          "id": "sha1:153ed4ddb7a2",
+          "text": "if so, are they present and complete?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Storage instructions"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings",
+        "Storage instructions"
+      ]
+    },
+    {
+      "title": "Legibility and availability",
+      "rules": [
+        {
+          "id": "sha1:449a1da532e2",
+          "text": "is all of the above information readily discernible?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Legibility and availability"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings",
+        "Legibility and availability"
+      ]
+    },
+    {
+      "title": "Nutrition Facts table (NFt)",
+      "rules": [
+        {
+          "id": "sha1:3034896a2ab4",
+          "text": "is an NFt present?",
+          "citations": [
+            {
+              "text": "NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling"
+            },
+            {
+              "text": "prohibited from using a NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/prohibitions"
+            },
+            {
+              "text": "exempt from NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Nutrition Facts table (NFt)"
+          ]
+        },
+        {
+          "id": "sha1:5dd3e8d8f2d3",
+          "text": "if not, is the product prohibited from using a NFt or exempt from NFt ? (or has an NFt been triggered?)",
+          "citations": [
+            {
+              "text": "prohibited from using a NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/prohibitions"
+            },
+            {
+              "text": "exempt from NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Nutrition Facts table (NFt)"
+          ]
+        },
+        {
+          "id": "sha1:b75f2f0772e9",
+          "text": "if not, does the label have an available display surface (ADS) of less than 15 cm 2 , therefore being exempt from the need to carry an NFt?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Nutrition Facts table (NFt)"
+          ]
+        },
+        {
+          "id": "sha1:34148e2470d1",
+          "text": "if not, does the product qualify for the small package (ADS of less than 100 cm 2 ) exemption? (postal address or toll-free number)",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Nutrition Facts table (NFt)"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings",
+        "Nutrition Facts table (NFt)"
+      ]
+    },
+    {
+      "title": "Format",
+      "rules": [
+        {
+          "id": "sha1:c390029ded8c",
+          "text": "is the appropriate format family used?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:eb62f2829933",
+          "text": "standard format: all foods and certain assortments",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:54a4a69b4f08",
+          "text": "simplified format: 6 or more of calories and core nutrients = 0",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:10ee0c0bbd68",
+          "text": "simplified format - single-serving prepackaged products",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:dca3cce39f61",
+          "text": "dual format: foods requiring preparation/different amounts",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:cf9439f13583",
+          "text": "aggregate format: different kinds/different amounts",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:348014cfd120",
+          "text": "infants 6 months of age or older but less than 1 year of age",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:28fe0bf95cc0",
+          "text": "is an appropriate format version (size) chosen within a \"family\" of formats?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Format"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings",
+        "Format"
+      ]
+    },
+    {
+      "title": "Graphical and technical requirements",
+      "rules": [
+        {
+          "id": "sha1:6741d5f70da2",
+          "text": "colour: is the table background and print in the appropriate colours?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:769def575475",
+          "text": "is the font and type:",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:c5d16a3b5f71",
+          "text": "sans serif?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:e3222c21c25c",
+          "text": "regular or bold as required?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:b66240772646",
+          "text": "upper case / lower case as required?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:739f3750fc8a",
+          "text": "with no crowding of characters?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:24b8fe749410",
+          "text": "is the information in the correct order?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:6f06a4a0bf0a",
+          "text": "are the correct indenting and leading used?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Graphical and technical requirements"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings",
+        "Graphical and technical requirements"
+      ]
+    },
+    {
+      "title": "Location",
+      "rules": [
+        {
+          "id": "sha1:ce213e6cf184",
+          "text": "is the nutrition symbol located on the PDP of the product?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:43dc5e28af6d",
+          "text": "if not:",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:d64fa567e4c9",
+          "text": "is it a scale-labelled product where the nutrition symbol is permitted on the PDS?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:b784f9a6dee5",
+          "text": "is it an ornamental container where the nutrition symbol is permitted on the bottom of the container?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Date markings",
+            "Location"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Date markings",
+        "Location"
+      ]
+    }
+  ],
+  "path": [
+    "Labelling requirements",
+    "Date markings"
+  ]
+}

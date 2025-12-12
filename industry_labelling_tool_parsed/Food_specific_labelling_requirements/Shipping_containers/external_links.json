@@ -1,0 +1,20 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/shipping-containers",
+  "citation_title": "Shipping containers",
+  "external_links": [
+    {
+      "text": "Measurement Canada",
+      "href": "http://www.ic.gc.ca/eic/site/mc-mc.nsf/eng/Home",
+      "section": "Overview",
+      "context": "The Weights and Measures Act (WMA) and the Weights and Measures Regulations (WMR) also apply at all levels of trade, and include a requirement for a net quantity declaration on shipping containers. However, the WMA and WMR are not enforced by the CFIA. Refer to Measurement Canada for more information.",
+      "element_type": "p"
+    },
+    {
+      "text": "Foods exempt from the front-of-package (FOP) nutrition symbol requirements",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5",
+      "section": "Labelling requirements",
+      "context": "When a shipping container and its contents are sold as a one unit prepackaged product to a consumer at retail, the shipping container is subject to the FOP nutrition symbol requirements. For more information, refer to Foods exempt from the front-of-package (FOP) nutrition symbol requirements .",
+      "element_type": "p"
+    }
+  ]
+}

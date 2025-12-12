@@ -1,0 +1,81 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content",
+  "citation_title": "Nutrient content",
+  "sections": {
+    "Language selection": {
+      "title": "Language selection",
+      "content": [
+        "Françaisfr"
+      ],
+      "internal_links": [
+        {
+          "text": "Françaisfr",
+          "href": "https://inspection.canada.ca/fr/etiquetage-aliment/etiquetage/industrie/teneur-nutritive"
+        }
+      ]
+    },
+    "Menu": {
+      "title": "Menu",
+      "content": [
+        "HomeNewPlant and Animal Health StrategyPlant and Animal Health StrategyPlant and Animal Health StrategyPlant and Animal Health Strategy"
+      ],
+      "internal_links": [
+        {
+          "text": "Home",
+          "href": "https://inspection.canada.ca/en"
+        },
+        {
+          "text": "New",
+          "href": "https://inspection.canada.ca/node/6ad83115-3710-4a81-ae95-91100d50e7b5"
+        },
+        {
+          "text": "Plant and Animal Health Strategy",
+          "href": "https://inspection.canada.ca/node/05e50019-ed62-446c-a5fe-bcce7fffce5e"
+        },
+        {
+          "text": "Plant and Animal Health Strategy",
+          "href": "https://inspection.canada.ca/node/6d61c7ee-70c2-4506-88b8-dcd990192a09"
+        },
+        {
+          "text": "Plant and Animal Health Strategy",
+          "href": "https://inspection.canada.ca/node/b1600af0-7d24-4041-89c9-fc59ffb3be61"
+        },
+        {
+          "text": "Plant and Animal Health Strategy",
+          "href": "https://inspection.canada.ca/node/0c3598ed-7e7c-4283-84bc-00273459ecbc"
+        }
+      ]
+    },
+    "You are here": {
+      "title": "You are here",
+      "content": [
+        "Canada.caCanadian Food Inspection AgencyFood labelsLabellingIndustry"
+      ],
+      "internal_links": [
+        {
+          "text": "Canadian Food Inspection Agency",
+          "href": "https://inspection.canada.ca/en"
+        },
+        {
+          "text": "Food labels",
+          "href": "https://inspection.canada.ca/en/food-labels"
+        },
+        {
+          "text": "Labelling",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling"
+        },
+        {
+          "text": "Industry",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry"
+        }
+      ]
+    },
+    "About this site": {
+      "title": "About this site",
+      "content": [
+        "Social mediaMobile applicationsAbout Canada.caTerms and conditionsPrivacy"
+      ],
+      "internal_links": []
+    }
+  }
+}

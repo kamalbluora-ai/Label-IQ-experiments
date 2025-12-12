@@ -1,0 +1,137 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/fortification",
+  "citation_title": "Fortification",
+  "sections": {
+    "Requirements": {
+      "title": "Requirements",
+      "content": [
+        "For some foods, fortification is mandatory. Many provisions in Part B of the FDR prohibit the sale of specific foods unless these contain a specific amount of certain vitamins, minerals and/or amino acids, and thus require the foods to be fortified. For example, section B.08.005 of the FDR requires the addition of vitamin A and vitamin D, including the acceptable amounts, to specific dairy products for which a standard is set out in volume 7 of the Canadian Food Compositional Standards (CFCS) document, such as skim milk and partly skimmed milk for which the level of vitamin D is set to 2 µg/100 ml.",
+        "Information on mandatory fortification requirements for some foods is summarized in the table Foods to which vitamins, mineral nutrients and amino acids may or must be added as outlined in section D.03.002 of the regulations.",
+        "Voluntary fortification is permitted in the regulations for some foods as outlined in section D.03.002 of the FDR. For more information, refer to the table Foods to which vitamins, mineral nutrients and amino acids may or must be added .",
+        "Section D.03.003 of the regulations allows for the fortification of gluten-free foods in specific cases, as well as certain categories of foods for special dietary use (that is, those represented for protein-restricted diets and those represented for low (naming the amino acid) diets). These fortification provisions apply if no standard is prescribed for those foods in the CFCS, and the food is not advertised.",
+        "In addition, Temporary Marketing Authorization Letters (TMALs) have been issued by Health Canada to permit the addition of vitamins and minerals to certain foods. TMALs authorize the sale of a food that does not meet one or more of the compositional, packaging, labelling or advertising requirements under the Food and Drugs Act and Regulations. For further information, refer to Health Canada's General guidance document for Temporary Marketing Authorization for Foods . A list of foods that have received Temporary Marketing Authorization Letters is also available on Health Canada's website.",
+        "On June 5, 2024, Health Canada published a marketing authorization (MA) to permit the voluntary vitamin D fortification of yogurt (including drinkable yogurt) and kefir made from dairy products."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "For some foods, fortification is mandatory. Many provisions in Part B of the FDR prohibit the sale of specific foods unless these contain a specific amount of certain vitamins, minerals and/or amino acids, and thus require the foods to be fortified. For example, section B.08.005 of the FDR requires the addition of vitamin A and vitamin D, including the acceptable amounts, to specific dairy products for which a standard is set out in volume 7 of the Canadian Food Compositional Standards (CFCS) document, such as skim milk and partly skimmed milk for which the level of vitamin D is set to 2 µg/100 ml.",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Foods to which vitamins, mineral nutrients and amino acids may or must be added",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/claims-reference-information#c1",
+          "context_text": "Information on mandatory fortification requirements for some foods is summarized in the table Foods to which vitamins, mineral nutrients and amino acids may or must be added as outlined in section D.03.002 of the regulations.",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Foods to which vitamins, mineral nutrients and amino acids may or must be added",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/claims-reference-information#c1",
+          "context_text": "Voluntary fortification is permitted in the regulations for some foods as outlined in section D.03.002 of the FDR. For more information, refer to the table Foods to which vitamins, mineral nutrients and amino acids may or must be added .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "fortification of gluten-free foods",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/allergens-and-gluten#c3",
+          "context_text": "Section D.03.003 of the regulations allows for the fortification of gluten-free foods in specific cases, as well as certain categories of foods for special dietary use (that is, those represented for protein-restricted diets and those represented for low (naming the amino acid) diets). These fortification provisions apply if no standard is prescribed for those foods in the CFCS, and the food is not advertised.",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "foods for special dietary use",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/foods-special-dietary-use#s27c16",
+          "context_text": "Section D.03.003 of the regulations allows for the fortification of gluten-free foods in specific cases, as well as certain categories of foods for special dietary use (that is, those represented for protein-restricted diets and those represented for low (naming the amino acid) diets). These fortification provisions apply if no standard is prescribed for those foods in the CFCS, and the food is not advertised.",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 4
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "For some foods, fortification is mandatory. Many provisions in Part B of the FDR prohibit the sale of specific foods unless these contain a specific amount of certain vitamins, minerals and/or amino acids, and thus require the foods to be fortified. For example, section B.08.005 of the FDR requires the addition of vitamin A and vitamin D, including the acceptable amounts, to specific dairy products for which a standard is set out in volume 7 of the Canadian Food Compositional Standards (CFCS) document, such as skim milk and partly skimmed milk for which the level of vitamin D is set to 2 µg/100 ml.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Information on mandatory fortification requirements for some foods is summarized in the table Foods to which vitamins, mineral nutrients and amino acids may or must be added as outlined in section D.03.002 of the regulations.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Foods to which vitamins, mineral nutrients and amino acids may or must be added",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/claims-reference-information#c1",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Voluntary fortification is permitted in the regulations for some foods as outlined in section D.03.002 of the FDR. For more information, refer to the table Foods to which vitamins, mineral nutrients and amino acids may or must be added .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Foods to which vitamins, mineral nutrients and amino acids may or must be added",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/claims-reference-information#c1",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Section D.03.003 of the regulations allows for the fortification of gluten-free foods in specific cases, as well as certain categories of foods for special dietary use (that is, those represented for protein-restricted diets and those represented for low (naming the amino acid) diets). These fortification provisions apply if no standard is prescribed for those foods in the CFCS, and the food is not advertised.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "fortification of gluten-free foods",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/allergens-and-gluten#c3",
+              "is_external": false
+            },
+            {
+              "text": "foods for special dietary use",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/foods-special-dietary-use#s27c16",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "In addition, Temporary Marketing Authorization Letters (TMALs) have been issued by Health Canada to permit the addition of vitamins and minerals to certain foods. TMALs authorize the sale of a food that does not meet one or more of the compositional, packaging, labelling or advertising requirements under the Food and Drugs Act and Regulations. For further information, refer to Health Canada's General guidance document for Temporary Marketing Authorization for Foods . A list of foods that have received Temporary Marketing Authorization Letters is also available on Health Canada's website.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "General guidance document for Temporary Marketing Authorization for Foods",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/general-guidance-document-temporary-marketing-authorization-foods-2012.html",
+              "is_external": true
+            },
+            {
+              "text": "list of foods that have received Temporary Marketing Authorization Letters",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/acts-regulations/lists-foods-that-have-received-temporary-marketing-authorization-letters.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "On June 5, 2024, Health Canada published a marketing authorization (MA) to permit the voluntary vitamin D fortification of yogurt (including drinkable yogurt) and kefir made from dairy products.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "marketing authorization (MA)",
+              "href": "https://canadagazette.gc.ca/rp-pr/p2/2024/2024-06-05/html/sor-dors88-eng.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

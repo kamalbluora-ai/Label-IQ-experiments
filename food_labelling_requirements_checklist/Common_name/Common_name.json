@@ -1,0 +1,148 @@
+{
+  "title": "Common name",
+  "rules": [
+    {
+      "id": "sha1:4e1b93a10d39",
+      "text": "is a common name present?",
+      "citations": [
+        {
+          "text": "common name",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name"
+        },
+        {
+          "text": "exempt from common name",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#a1_2"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:c20cfb1e7fdf",
+      "text": "if not, is the product exempt from common name ?",
+      "citations": [
+        {
+          "text": "exempt from common name",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#a1_2"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:83c8e4a7093c",
+      "text": "is the common name on the principal display panel (PDP)?",
+      "citations": [
+        {
+          "text": "principal display panel",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s14c3"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:858b303922e8",
+      "text": "is the common name in letters of 1.6 mm or greater?",
+      "citations": [
+        {
+          "text": "principal display surface",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s15c3"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:f00c531f323c",
+      "text": "or, if the area of the principal display surface (PDS) is 10 cm 2 (1.55 inches 2 ) or less, is the common name shown in characters with a minimum type height of 0.8 mm (1/32 inch)?",
+      "citations": [
+        {
+          "text": "principal display surface",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s15c3"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:c6287136bf6e",
+      "text": "is it an appropriate common name?",
+      "citations": [
+        {
+          "text": "Canadian Standards of Identity",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference"
+        },
+        {
+          "text": "true nature",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/true-nature"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:066ba186767c",
+      "text": "as printed in bold face type, but not in italics, in the FDR or in the Canadian Standards of Identity documents incorporated by reference (IbR) in the SFCR",
+      "citations": [
+        {
+          "text": "Canadian Standards of Identity",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:15e066fd11d3",
+      "text": "as prescribed by any other regulation",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:b7d3432f46d3",
+      "text": "the name by which the food is generally known or a name that is not generic and that describes the food, if the name is not so printed or prescribed, or",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    },
+    {
+      "id": "sha1:5a34dc2408ac",
+      "text": "if the food is likely to be mistaken for another food, the common name must include words that describe the food's true nature with respect to its condition",
+      "citations": [
+        {
+          "text": "true nature",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/true-nature"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Common name"
+      ]
+    }
+  ],
+  "subsections": [],
+  "path": [
+    "Labelling requirements",
+    "Common name"
+  ]
+}
