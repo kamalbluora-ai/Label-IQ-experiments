@@ -1,0 +1,109 @@
+{
+  "title": "Country of origin",
+  "rules": [
+    {
+      "id": "sha1:43b615ec7a07",
+      "text": "is the product one of the following?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:91f0189365c0",
+      "text": "wine and brandy",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:2e380c26861c",
+      "text": "dairy products",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:154c30740526",
+      "text": "honey",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:3360f6749943",
+      "text": "fish and fish products",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:03643247f894",
+      "text": "fresh fruits or vegetables",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:cd86cee604c3",
+      "text": "shell egg and processed egg products",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:2901c13e869e",
+      "text": "meat and poultry products",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:ded7e5a82baa",
+      "text": "maple products",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:4003f0f979e3",
+      "text": "processed fruit or vegetable products",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    },
+    {
+      "id": "sha1:b54032a50632",
+      "text": "If so, check the food-specific labelling requirements, as for some imported prepackaged products it is mandatory to state the country of origin. When required use the country of origin declaration \"Product of [Name the country of origin]\".",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Country of origin"
+      ]
+    }
+  ],
+  "subsections": [],
+  "path": [
+    "Labelling requirements",
+    "Country of origin"
+  ]
+}

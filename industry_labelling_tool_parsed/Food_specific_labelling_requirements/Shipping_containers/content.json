@@ -1,0 +1,421 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/shipping-containers",
+  "citation_title": "Shipping containers",
+  "sections": {
+    "Overview": {
+      "title": "Overview",
+      "content": [
+        "For the purposes of this information, foods in shipping containers are considered to be prepackaged foods and include those that are packaged in any outer receptacle in which foods are sold or distributed at levels of trade other than to consumers at the retail level (that is to say, not consumer prepackaged ). The foods inside shipping containers may be in bulk (meaning not further packaged inside the shipping container) or they may be further packaged into smaller units. Shipping containers may be destined for:",
+        "further industrial processing catering use use by a commercial enterprise or an institution such as a restaurant, hospital, school, etc. repackaging from bulk into consumer prepackaged food resale directly from bulk container into consumer-sized portions, with the packaging done either by a clerk at the time of sale or by the consumer retailers who will remove units of consumer prepackaged foods from shipping containers to display them for sale",
+        "In the Safe Food for Canadians Regulations (SFCR), shipping containers must meet the requirements that apply to prepackaged foods, as well as those that apply to \"prepackaged other than consumer prepackaged\" foods. For more information on the terminology used in the SFCR, refer to Definition of \"prepackaged\" and \"consumer prepackaged\" .",
+        "As mentioned in the labelling legislative framework , the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR), as well as the Safe Food for Canadians Act (SFCA) and the SFCR apply to foods at all levels of trade (retail and non-retail), which includes foods in shipping containers.",
+        "The Weights and Measures Act (WMA) and the Weights and Measures Regulations (WMR) also apply at all levels of trade, and include a requirement for a net quantity declaration on shipping containers. However, the WMA and WMR are not enforced by the CFIA. Refer to Measurement Canada for more information."
+      ],
+      "internal_links": [
+        {
+          "link_text": "prepackaged",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/shipping-containers#s8c4",
+          "context_text": "For the purposes of this information, foods in shipping containers are considered to be prepackaged foods and include those that are packaged in any outer receptacle in which foods are sold or distributed at levels of trade other than to consumers at the retail level (that is to say, not consumer prepackaged ). The foods inside shipping containers may be in bulk (meaning not further packaged inside the shipping container) or they may be further packaged into smaller units. Shipping containers may be destined for:",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "consumer prepackaged",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/shipping-containers#s6c4",
+          "context_text": "For the purposes of this information, foods in shipping containers are considered to be prepackaged foods and include those that are packaged in any outer receptacle in which foods are sold or distributed at levels of trade other than to consumers at the retail level (that is to say, not consumer prepackaged ). The foods inside shipping containers may be in bulk (meaning not further packaged inside the shipping container) or they may be further packaged into smaller units. Shipping containers may be destined for:",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Safe Food for Canadians Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+          "context_text": "In the Safe Food for Canadians Regulations (SFCR), shipping containers must meet the requirements that apply to prepackaged foods, as well as those that apply to \"prepackaged other than consumer prepackaged\" foods. For more information on the terminology used in the SFCR, refer to Definition of \"prepackaged\" and \"consumer prepackaged\" .",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "Definition of \"prepackaged\" and \"consumer prepackaged\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/prepackaged-and-consumer-prepackaged",
+          "context_text": "In the Safe Food for Canadians Regulations (SFCR), shipping containers must meet the requirements that apply to prepackaged foods, as well as those that apply to \"prepackaged other than consumer prepackaged\" foods. For more information on the terminology used in the SFCR, refer to Definition of \"prepackaged\" and \"consumer prepackaged\" .",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "labelling legislative framework",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/labelling-legislative-framework",
+          "context_text": "As mentioned in the labelling legislative framework , the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR), as well as the Safe Food for Canadians Act (SFCA) and the SFCR apply to foods at all levels of trade (retail and non-retail), which includes foods in shipping containers.",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 4
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "For the purposes of this information, foods in shipping containers are considered to be prepackaged foods and include those that are packaged in any outer receptacle in which foods are sold or distributed at levels of trade other than to consumers at the retail level (that is to say, not consumer prepackaged ). The foods inside shipping containers may be in bulk (meaning not further packaged inside the shipping container) or they may be further packaged into smaller units. Shipping containers may be destined for:",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "prepackaged",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/shipping-containers#s8c4",
+              "is_external": false
+            },
+            {
+              "text": "consumer prepackaged",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/shipping-containers#s6c4",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "further industrial processing catering use use by a commercial enterprise or an institution such as a restaurant, hospital, school, etc. repackaging from bulk into consumer prepackaged food resale directly from bulk container into consumer-sized portions, with the packaging done either by a clerk at the time of sale or by the consumer retailers who will remove units of consumer prepackaged foods from shipping containers to display them for sale",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "In the Safe Food for Canadians Regulations (SFCR), shipping containers must meet the requirements that apply to prepackaged foods, as well as those that apply to \"prepackaged other than consumer prepackaged\" foods. For more information on the terminology used in the SFCR, refer to Definition of \"prepackaged\" and \"consumer prepackaged\" .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Safe Food for Canadians Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+              "is_external": false
+            },
+            {
+              "text": "Definition of \"prepackaged\" and \"consumer prepackaged\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/prepackaged-and-consumer-prepackaged",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "As mentioned in the labelling legislative framework , the Food and Drugs Act (FDA) and the Food and Drug Regulations (FDR), as well as the Safe Food for Canadians Act (SFCA) and the SFCR apply to foods at all levels of trade (retail and non-retail), which includes foods in shipping containers.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "labelling legislative framework",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/labelling-legislative-framework",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The Weights and Measures Act (WMA) and the Weights and Measures Regulations (WMR) also apply at all levels of trade, and include a requirement for a net quantity declaration on shipping containers. However, the WMA and WMR are not enforced by the CFIA. Refer to Measurement Canada for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Measurement Canada",
+              "href": "http://www.ic.gc.ca/eic/site/mc-mc.nsf/eng/Home",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Labelling requirements": {
+      "title": "Labelling requirements",
+      "content": [
+        "The following mandatory labelling requirements apply to prepackaged other than consumer prepackaged foods, including shipping containers. For further information on each requirement, refer to the Industry Labelling Tool .",
+        "common name list of ingredients and allergen labelling name and principal place of business net quantity nutrition labelling other mandatory information as required for the product (for example, labelling of irradiated foods, previously frozen declaration, cautionary labelling on supplemented food if triggered)",
+        "The contents of a shipping container and their intended use will dictate the type of nutrition labelling required on the shipping container. These are:",
+        "prepackaged products destined for the consumer (refer to general nutrition labelling requirements ) supplemented foods foods for use in manufacturing other foods foods for a commercial or industrial enterprise or an institution",
+        "Foods in shipping containers that are imported or interprovincially traded are often destined for further preparation. When labelled with the expression \"For Further Preparation Only\" or \" pour conditionnement ultérieur seulement \", foods are permitted to be non-compliant with the certain requirements of the SFCA and SFCR, provided they are brought into compliance by a licence holder within a set period of time [18, SFCR].",
+        "Some exceptions apply. For more information, refer to the Exceptions and non-applications section of the guidance on Regulatory requirement: Trade .",
+        "Shipping containers are generally exempt from date marking, bilingual labelling and front-of-package nutrition symbol labelling requirements.",
+        "Date marking: A durable life date is generally not required on shipping containers, even if the products have a durable life of 90 days or less. However, if the container were to be sold to consumers at the retail level (as in some warehouse outlets), durable life date labelling would be required. For more information, refer to Date markings and storage instructions .",
+        "Bilingual labelling: Labelling information required by the FDR and SFCR on shipping containers destined for a commercial or industrial enterprise or an institution can generally be shown in only 1 official language, unless the shipping container and its contents are resold as a one unit prepackaged product to a consumer at the retail level. Certain exceptions may apply [B.01.012(11), FDR; 205, SFCR]. For more information, refer to Bilingual labelling .",
+        "Front-of-package (FOP) nutrition symbol labelling: Shipping containers are always exempt from the FOP nutrition symbol labelling requirements, if the container and its contents are not sold as a single unit prepackaged product to a consumer at retail [B.01.350(5)(a), FDR].",
+        "The following are not required to be labelled with an FOP nutrition symbol:",
+        "shipping containers destined for retailers whether the products inside are fully labelled consumer prepackaged or in bulk shipping container destined for a restaurant or a commercial institution shipping container destined to another establishment for further processing",
+        "When a shipping container and its contents are sold as a one unit prepackaged product to a consumer at retail, the shipping container is subject to the FOP nutrition symbol requirements. For more information, refer to Foods exempt from the front-of-package (FOP) nutrition symbol requirements ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Industry Labelling Tool",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+          "context_text": "The following mandatory labelling requirements apply to prepackaged other than consumer prepackaged foods, including shipping containers. For further information on each requirement, refer to the Industry Labelling Tool .",
+          "section": "Labelling requirements",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "general nutrition labelling requirements",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/general-requirements",
+          "context_text": "prepackaged products destined for the consumer (refer to general nutrition labelling requirements ) supplemented foods foods for use in manufacturing other foods foods for a commercial or industrial enterprise or an institution",
+          "section": "Labelling requirements",
+          "element_type": "ul",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "supplemented foods",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/supplemented-foods",
+          "context_text": "prepackaged products destined for the consumer (refer to general nutrition labelling requirements ) supplemented foods foods for use in manufacturing other foods foods for a commercial or industrial enterprise or an institution",
+          "section": "Labelling requirements",
+          "element_type": "ul",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "foods for use in manufacturing other foods",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/specific-foods#c2",
+          "context_text": "prepackaged products destined for the consumer (refer to general nutrition labelling requirements ) supplemented foods foods for use in manufacturing other foods foods for a commercial or industrial enterprise or an institution",
+          "section": "Labelling requirements",
+          "element_type": "ul",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "foods for a commercial or industrial enterprise or an institution",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/specific-foods#c3",
+          "context_text": "prepackaged products destined for the consumer (refer to general nutrition labelling requirements ) supplemented foods foods for use in manufacturing other foods foods for a commercial or industrial enterprise or an institution",
+          "section": "Labelling requirements",
+          "element_type": "ul",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Exceptions and non-applications",
+          "href": "https://inspection.canada.ca/en/food-licences/trade#a6_0",
+          "context_text": "Some exceptions apply. For more information, refer to the Exceptions and non-applications section of the guidance on Regulatory requirement: Trade .",
+          "section": "Labelling requirements",
+          "element_type": "p",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "durable life date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s21c7",
+          "context_text": "Date marking: A durable life date is generally not required on shipping containers, even if the products have a durable life of 90 days or less. However, if the container were to be sold to consumers at the retail level (as in some warehouse outlets), durable life date labelling would be required. For more information, refer to Date markings and storage instructions .",
+          "section": "Labelling requirements",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Date markings and storage instructions",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions",
+          "context_text": "Date marking: A durable life date is generally not required on shipping containers, even if the products have a durable life of 90 days or less. However, if the container were to be sold to consumers at the retail level (as in some warehouse outlets), durable life date labelling would be required. For more information, refer to Date markings and storage instructions .",
+          "section": "Labelling requirements",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Bilingual labelling",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling",
+          "context_text": "Bilingual labelling: Labelling information required by the FDR and SFCR on shipping containers destined for a commercial or industrial enterprise or an institution can generally be shown in only 1 official language, unless the shipping container and its contents are resold as a one unit prepackaged product to a consumer at the retail level. Certain exceptions may apply [B.01.012(11), FDR; 205, SFCR]. For more information, refer to Bilingual labelling .",
+          "section": "Labelling requirements",
+          "element_type": "p",
+          "position_in_content": 9
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "The following mandatory labelling requirements apply to prepackaged other than consumer prepackaged foods, including shipping containers. For further information on each requirement, refer to the Industry Labelling Tool .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Industry Labelling Tool",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "common name list of ingredients and allergen labelling name and principal place of business net quantity nutrition labelling other mandatory information as required for the product (for example, labelling of irradiated foods, previously frozen declaration, cautionary labelling on supplemented food if triggered)",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "The contents of a shipping container and their intended use will dictate the type of nutrition labelling required on the shipping container. These are:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "prepackaged products destined for the consumer (refer to general nutrition labelling requirements ) supplemented foods foods for use in manufacturing other foods foods for a commercial or industrial enterprise or an institution",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "general nutrition labelling requirements",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/general-requirements",
+              "is_external": false
+            },
+            {
+              "text": "supplemented foods",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/supplemented-foods",
+              "is_external": false
+            },
+            {
+              "text": "foods for use in manufacturing other foods",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/specific-foods#c2",
+              "is_external": false
+            },
+            {
+              "text": "foods for a commercial or industrial enterprise or an institution",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/specific-foods#c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Foods in shipping containers that are imported or interprovincially traded are often destined for further preparation. When labelled with the expression \"For Further Preparation Only\" or \" pour conditionnement ultérieur seulement \", foods are permitted to be non-compliant with the certain requirements of the SFCA and SFCR, provided they are brought into compliance by a licence holder within a set period of time [18, SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Some exceptions apply. For more information, refer to the Exceptions and non-applications section of the guidance on Regulatory requirement: Trade .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Exceptions and non-applications",
+              "href": "https://inspection.canada.ca/en/food-licences/trade#a6_0",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Shipping containers are generally exempt from date marking, bilingual labelling and front-of-package nutrition symbol labelling requirements.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Date marking: A durable life date is generally not required on shipping containers, even if the products have a durable life of 90 days or less. However, if the container were to be sold to consumers at the retail level (as in some warehouse outlets), durable life date labelling would be required. For more information, refer to Date markings and storage instructions .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "durable life date",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s21c7",
+              "is_external": false
+            },
+            {
+              "text": "Date markings and storage instructions",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Bilingual labelling: Labelling information required by the FDR and SFCR on shipping containers destined for a commercial or industrial enterprise or an institution can generally be shown in only 1 official language, unless the shipping container and its contents are resold as a one unit prepackaged product to a consumer at the retail level. Certain exceptions may apply [B.01.012(11), FDR; 205, SFCR]. For more information, refer to Bilingual labelling .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Bilingual labelling",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Front-of-package (FOP) nutrition symbol labelling: Shipping containers are always exempt from the FOP nutrition symbol labelling requirements, if the container and its contents are not sold as a single unit prepackaged product to a consumer at retail [B.01.350(5)(a), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The following are not required to be labelled with an FOP nutrition symbol:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "shipping containers destined for retailers whether the products inside are fully labelled consumer prepackaged or in bulk shipping container destined for a restaurant or a commercial institution shipping container destined to another establishment for further processing",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "When a shipping container and its contents are sold as a one unit prepackaged product to a consumer at retail, the shipping container is subject to the FOP nutrition symbol requirements. For more information, refer to Foods exempt from the front-of-package (FOP) nutrition symbol requirements .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Foods exempt from the front-of-package (FOP) nutrition symbol requirements",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific labelling requirements": {
+      "title": "Product specific labelling requirements",
+      "content": [
+        "Shipping containers of irradiated foods have specific requirements beyond those for irradiated consumer prepackaged foods.",
+        "the label attached to a shipping container containing irradiated foods must carry the following statements [B.01.035(7), FDR]: \"irradiated\", \"treated with radiation\", \"treated by irradiation\" or a written statement with the same meaning, and in the case of shipping containers of foods that have been subjected to the maximum permitted irradiation dose for that food, the statement \"Do not irradiate again\"",
+        "Shipping containers do not require the symbol that indicates the irradiated food [B.01.035(8), FDR].",
+        "For more information, refer to Irradiated foods .",
+        "Certain food commodities have specific requirements with respect to shipping containers. These can be found on the Food-specific labelling requirements pages of the Industry Labelling Tool and are those that apply to prepackaged foods, as well as prepackaged other than consumer prepackaged foods.",
+        "Any claims or representations made on or with respect to food in a shipping container are subject to the same provisions outlined in the Claims and statements section of the Industry Labelling Tool ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Irradiated foods",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/irradiated-foods",
+          "context_text": "For more information, refer to Irradiated foods .",
+          "section": "Product specific labelling requirements",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Industry Labelling Tool",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+          "context_text": "Certain food commodities have specific requirements with respect to shipping containers. These can be found on the Food-specific labelling requirements pages of the Industry Labelling Tool and are those that apply to prepackaged foods, as well as prepackaged other than consumer prepackaged foods.",
+          "section": "Product specific labelling requirements",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "Industry Labelling Tool",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+          "context_text": "Any claims or representations made on or with respect to food in a shipping container are subject to the same provisions outlined in the Claims and statements section of the Industry Labelling Tool .",
+          "section": "Product specific labelling requirements",
+          "element_type": "p",
+          "position_in_content": 6
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Shipping containers of irradiated foods have specific requirements beyond those for irradiated consumer prepackaged foods.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the label attached to a shipping container containing irradiated foods must carry the following statements [B.01.035(7), FDR]: \"irradiated\", \"treated with radiation\", \"treated by irradiation\" or a written statement with the same meaning, and in the case of shipping containers of foods that have been subjected to the maximum permitted irradiation dose for that food, the statement \"Do not irradiate again\"",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "Shipping containers do not require the symbol that indicates the irradiated food [B.01.035(8), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For more information, refer to Irradiated foods .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Irradiated foods",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/irradiated-foods",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Certain food commodities have specific requirements with respect to shipping containers. These can be found on the Food-specific labelling requirements pages of the Industry Labelling Tool and are those that apply to prepackaged foods, as well as prepackaged other than consumer prepackaged foods.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Industry Labelling Tool",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Any claims or representations made on or with respect to food in a shipping container are subject to the same provisions outlined in the Claims and statements section of the Industry Labelling Tool .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Industry Labelling Tool",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

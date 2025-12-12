@@ -1,0 +1,175 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/irradiated-foods",
+  "citation_title": "Irradiated foods",
+  "sections": {
+    "Requirements": {
+      "title": "Requirements",
+      "content": [
+        "There are two aspects of food irradiation which are subject to federal controls: safety and labelling. Division 26 of the FDR recognizes food irradiation as a food process.",
+        "From a safety perspective, Health Canada is responsible for regulations specifying which foods may be irradiated and the treatment levels permitted.",
+        "See the table below for the foods which may be irradiated and sold in Canada [B.26.003, FDR ].",
+        "For additional information on irradiation of these specific foods and the treatment levels permitted, please see Health Canada's page on Food irradiation .",
+        "It is important to note that Division 26 does not apply to foods exposed to ionizing radiation from a measuring instrument used to determine weight, estimate bulk solids, measure the total solids in liquids or perform other inspection procedures [B.26.002, FDR ].",
+        "Regulations for the labelling of irradiated foods are administered by the CFIA and apply equally to all domestic and imported foods sold in Canada. The labelling regulations as outlined in the FDR require the identification of wholly irradiated foods on the labels of prepackaged products, as well as signs on accompanying bulk displays of irradiated foods. The label or sign must clearly reveal that the food has been irradiated with both a written statement and the following international symbol [B.01.035, FDR ]:",
+        "Acceptable written statements to accompany this symbol include \"irradiated\", \"treated with radiation\" or \"treated by irradiation\" as these statements clearly reveal that the food has been irradiated.",
+        "Irradiated ingredients that constitute 10 percent or more of the final food must be identified in the list of ingredients as \"irradiated\" [B.01.035(6), FDR ]. Shipping containers also require the identification of wholly irradiated foods with a written statement such as \"irradiated\", \"treated with radiation\" or \"treated by irradiation\" but do not require the international symbol [B.01.035(7), (8), FDR ]. Advertisements for irradiated foods must clearly reveal that the food has been irradiated [B.01.035(9), FDR ].",
+        "The written statement required on irradiated foods must meet the legibility requirements under the Food and Drugs Act. Additional information on these requirements can be found in the Legibility and location of labelling information .",
+        "In the case of a prepackaged irradiated product, the international symbol for irradiation must be applied to the principal display panel of the package [B.01.035(1), FDR]. The international symbol must have an outer diameter that is equal to or greater than the height of the numerical quantity prescribed by paragraph 229(1)(a) and subsection 229(2) of the Safe Food for Canadians Regulations for the declaration of net quantity of the package [B.01.035(5), FDR ].",
+        "Irradiated products offered for sale which are not prepackaged must display a sign that carries the international symbol immediately next to the food [B.01.035(2), FDR ]. The international symbol must have an outer diameter of not less than 5 cm [B.01.035(5), FDR ].",
+        "In addition, the international symbol for irradiation must appear in close proximity on the principal display panel or on the sign to the written statement that clearly reveals that the food has been irradiated such as \"irradiated\" or \"treated with radiation\" or \"treated by irradiation\" [B.01.035(3), FDR ].",
+        "The written statement that clearly reveals that the food has been irradiated shall be in both official languages [B.01.035(10), FDR ]. Refer to Bilingual labelling for more information on language requirements."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Legibility and location of labelling information",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location",
+          "context_text": "The written statement required on irradiated foods must meet the legibility requirements under the Food and Drugs Act. Additional information on these requirements can be found in the Legibility and location of labelling information .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 9
+        },
+        {
+          "link_text": "declaration of net quantity",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/net-quantity",
+          "context_text": "In the case of a prepackaged irradiated product, the international symbol for irradiation must be applied to the principal display panel of the package [B.01.035(1), FDR]. The international symbol must have an outer diameter that is equal to or greater than the height of the numerical quantity prescribed by paragraph 229(1)(a) and subsection 229(2) of the Safe Food for Canadians Regulations for the declaration of net quantity of the package [B.01.035(5), FDR ].",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 10
+        },
+        {
+          "link_text": "Bilingual labelling",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling",
+          "context_text": "The written statement that clearly reveals that the food has been irradiated shall be in both official languages [B.01.035(10), FDR ]. Refer to Bilingual labelling for more information on language requirements.",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 13
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "There are two aspects of food irradiation which are subject to federal controls: safety and labelling. Division 26 of the FDR recognizes food irradiation as a food process.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "From a safety perspective, Health Canada is responsible for regulations specifying which foods may be irradiated and the treatment levels permitted.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See the table below for the foods which may be irradiated and sold in Canada [B.26.003, FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For additional information on irradiation of these specific foods and the treatment levels permitted, please see Health Canada's page on Food irradiation .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Food irradiation",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-irradiation.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "It is important to note that Division 26 does not apply to foods exposed to ionizing radiation from a measuring instrument used to determine weight, estimate bulk solids, measure the total solids in liquids or perform other inspection procedures [B.26.002, FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Regulations for the labelling of irradiated foods are administered by the CFIA and apply equally to all domestic and imported foods sold in Canada. The labelling regulations as outlined in the FDR require the identification of wholly irradiated foods on the labels of prepackaged products, as well as signs on accompanying bulk displays of irradiated foods. The label or sign must clearly reveal that the food has been irradiated with both a written statement and the following international symbol [B.01.035, FDR ]:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Acceptable written statements to accompany this symbol include \"irradiated\", \"treated with radiation\" or \"treated by irradiation\" as these statements clearly reveal that the food has been irradiated.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Irradiated ingredients that constitute 10 percent or more of the final food must be identified in the list of ingredients as \"irradiated\" [B.01.035(6), FDR ]. Shipping containers also require the identification of wholly irradiated foods with a written statement such as \"irradiated\", \"treated with radiation\" or \"treated by irradiation\" but do not require the international symbol [B.01.035(7), (8), FDR ]. Advertisements for irradiated foods must clearly reveal that the food has been irradiated [B.01.035(9), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The written statement required on irradiated foods must meet the legibility requirements under the Food and Drugs Act. Additional information on these requirements can be found in the Legibility and location of labelling information .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Legibility and location of labelling information",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "In the case of a prepackaged irradiated product, the international symbol for irradiation must be applied to the principal display panel of the package [B.01.035(1), FDR]. The international symbol must have an outer diameter that is equal to or greater than the height of the numerical quantity prescribed by paragraph 229(1)(a) and subsection 229(2) of the Safe Food for Canadians Regulations for the declaration of net quantity of the package [B.01.035(5), FDR ].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "declaration of net quantity",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/net-quantity",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Irradiated products offered for sale which are not prepackaged must display a sign that carries the international symbol immediately next to the food [B.01.035(2), FDR ]. The international symbol must have an outer diameter of not less than 5 cm [B.01.035(5), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In addition, the international symbol for irradiation must appear in close proximity on the principal display panel or on the sign to the written statement that clearly reveals that the food has been irradiated such as \"irradiated\" or \"treated with radiation\" or \"treated by irradiation\" [B.01.035(3), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The written statement that clearly reveals that the food has been irradiated shall be in both official languages [B.01.035(10), FDR ]. Refer to Bilingual labelling for more information on language requirements.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Bilingual labelling",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Additional information": {
+      "title": "Additional information",
+      "content": [
+        "Consumer fact sheet Health Canada - Food safety aspects of food irradiation"
+      ],
+      "internal_links": [
+        {
+          "link_text": "Consumer fact sheet",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/consumers/irradiation",
+          "context_text": "Consumer fact sheet Health Canada - Food safety aspects of food irradiation",
+          "section": "Additional information",
+          "element_type": "ul",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Consumer fact sheet Health Canada - Food safety aspects of food irradiation",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Consumer fact sheet",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/consumers/irradiation",
+              "is_external": false
+            },
+            {
+              "text": "Health Canada - Food safety aspects of food irradiation",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-irradiation.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

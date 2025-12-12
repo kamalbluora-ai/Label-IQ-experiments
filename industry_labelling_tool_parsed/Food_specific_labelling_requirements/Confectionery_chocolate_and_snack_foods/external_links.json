@@ -1,0 +1,20 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/confectionery-chocolate-and-snacks",
+  "citation_title": "Confectionery, chocolate and snack foods",
+  "external_links": [
+    {
+      "text": "List of permitted supplemented food categories",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/technical-documents/list-permitted-food-categories.html",
+      "section": "Exemptions",
+      "context": "One bite confections sold individually are not permitted to contain supplemental ingredients, as they are excluded from the List of permitted supplemented food categories .",
+      "element_type": "p"
+    },
+    {
+      "text": "List of Permitted Acidity Regulators and Acid-Reacting Materials",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted/10-adjusting-agents.html",
+      "section": "List of ingredients",
+      "context": "Cocoa requires a list of ingredients, and the ingredient list must state whether the cocoa has been processed with one of the alkaline processing agents listed in Heath Canada's List of Permitted Acidity Regulators and Acid-Reacting Materials . It does not have to be described, for example, as \"dutch\", \"dutched\", \"dutch processed\" or \"processed with alkali\", although no objection would be taken to the use of such descriptive terms.",
+      "element_type": "p"
+    }
+  ]
+}

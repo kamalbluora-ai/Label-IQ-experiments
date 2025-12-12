@@ -1,0 +1,210 @@
+{
+  "title": "Front-of-package (FOP) nutrition symbol",
+  "rules": [
+    {
+      "id": "sha1:2e1e6da9eeab",
+      "text": "is an FOP nutrition symbol present?",
+      "citations": [
+        {
+          "text": "prohibited",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a3"
+        },
+        {
+          "text": "exempt",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5"
+        },
+        {
+          "text": "specified nutrient thresholds",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a4"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:9a7fc40e114d",
+      "text": "if not, is the product prohibited or exempt from displaying a nutrition symbol?",
+      "citations": [
+        {
+          "text": "prohibited",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a3"
+        },
+        {
+          "text": "exempt",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:ca7ecdda5c9c",
+      "text": "if not, are the amounts of saturated fat, sugars and/or sodium in the product less than the specified nutrient thresholds ?",
+      "citations": [
+        {
+          "text": "specified nutrient thresholds",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a4"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:b6793a578477",
+      "text": "does the nutrition symbol meet the requirements for legibility, language and orientation? Refer to section 6.2 of the Front-of-package nutrition symbol labelling guide for industry .",
+      "citations": [
+        {
+          "text": "section 6.2",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a6.2"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:65ce7f18c6cf",
+      "text": "does the nutrition symbol meet the required technical specifications?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:9bdd8a3ca103",
+      "text": "Refer to Nutrition labelling – Directory of nutrition symbol specifications .",
+      "citations": [
+        {
+          "text": "Nutrition labelling – Directory of nutrition symbol specifications",
+          "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/nutrition-symbol-specifications/nutrition-labelling.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:a59d3cd94401",
+      "text": "is the nutrition symbol proportional to the PDS?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:795a5d92c11c",
+      "text": "if not, does the product have a PDS > 250 cm 2 and is only sold in the retail establishment where it is packaged and labelled by means of a sticker?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:a0eebaaf9e72",
+      "text": "is the product an assortment or a multi-pack where one or more of the foods require a nutrition symbol?",
+      "citations": [
+        {
+          "text": "section 7",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a7"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    },
+    {
+      "id": "sha1:66a150c7b76f",
+      "text": "if so, is the nutrition symbol applied as directed in section 7 of the Front-of-package nutrition symbol labelling guide for industry ?",
+      "citations": [
+        {
+          "text": "section 7",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a7"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol"
+      ]
+    }
+  ],
+  "subsections": [
+    {
+      "title": "Location",
+      "rules": [
+        {
+          "id": "sha1:1f462ecf8fb3",
+          "text": "is the nutrition symbol located on the PDP of the product?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Front-of-package (FOP) nutrition symbol",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:852a1fc910e6",
+          "text": "if not:",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Front-of-package (FOP) nutrition symbol",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:596912546436",
+          "text": "is it a scale-labelled product where the nutrition symbol is permitted on the PDS?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Front-of-package (FOP) nutrition symbol",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:36e1adb31ceb",
+          "text": "is it an ornamental container where the nutrition symbol is permitted on the bottom of the container?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Front-of-package (FOP) nutrition symbol",
+            "Location"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Front-of-package (FOP) nutrition symbol",
+        "Location"
+      ]
+    }
+  ],
+  "path": [
+    "Labelling requirements",
+    "Front-of-package (FOP) nutrition symbol"
+  ]
+}

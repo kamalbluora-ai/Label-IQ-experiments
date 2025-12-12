@@ -1,0 +1,48 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/dairy",
+  "citation_title": "Dairy",
+  "external_links": [
+    {
+      "text": "List of permitted food enzymes",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted/5-enzymes.html",
+      "section": "Common name",
+      "context": "The food enzyme lactase is added to some dairy products to eliminate or reduce the presence of lactose, or for other functional purposes. Health Canada's List of permitted food enzymes permits the addition of lactase in some standardized dairy products, whereas do not for others.",
+      "element_type": "p"
+    },
+    {
+      "text": "Foods exempt from the front-of-package (FOP) nutrition symbol requirements",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5",
+      "section": "Nutrition labelling",
+      "context": "See Foods exempt from the front-of-package (FOP) nutrition symbol requirements for details on the exemptions and reasons for loss of exemption.",
+      "element_type": "p"
+    },
+    {
+      "text": "Table of Reference Amounts for Food",
+      "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/table-reference-amounts-food.html",
+      "section": "Nutrition labelling",
+      "context": "The serving size is based on the edible portion of the food as sold and is closely aligned with the regulated reference amount. The Table of Reference Amounts for Food provides reference amounts for a variety of categories of food, including \"Dairy products and substitutes\". It also gives instructions on how to determine and express the serving size in the Nutrition Facts table for multiple-serving prepackaged products.",
+      "element_type": "p"
+    },
+    {
+      "text": "Table of Reference Amounts for Food",
+      "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/table-reference-amounts-food.html",
+      "section": "Nutrition labelling",
+      "context": "Wedge or piece of cheese: The reference amount for cheese, including cream cheese and cheese spread, except those listed as a separate item in column 1 of the Table of reference amounts for food, is 30 g. The serving size is expressed by first declaring the household measure [dimensions of the piece of cheese (# cm cube or # cm slice) that is closest in weight in grams to the 30 gram reference amount], followed by the metric measure (which corresponds to the 30 gram reference amount) [for example, \"Per 3 cm cube (30 g)\" or \"Per 1.5 cm slice (30 g)\"] [Item D.1, Dairy products and substitutes, Table of Reference Amounts for Food ].",
+      "element_type": "p"
+    },
+    {
+      "text": "Table of Reference Amounts for Food",
+      "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/table-reference-amounts-food.html",
+      "section": "Nutrition labelling",
+      "context": "Soft spreadable cheese: The reference amount for soft spreadable cheese is also 30 g. The serving size is expressed by first declaring the household measure (number of tablespoons that is closest in weight in grams to the 30 gram reference amount), followed by the metric measure (which corresponds to the 30 gram reference amount) [for example, \"Per 2 tbsp (30 g)\"] [Item D.1, Dairy products and substitutes, Table of Reference Amounts for Food ].",
+      "element_type": "p"
+    },
+    {
+      "text": "Voluntary guidance on improving the safety of soft and semi-soft cheese made from unpasteurized milk",
+      "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/voluntary-guidance-improving-safety-soft-semi-soft-cheese-made-unpasteurized-milk-2015.html",
+      "section": "Voluntary claims and statements",
+      "context": "Health Canada has provided Voluntary guidance on improving the safety of soft and semi-soft cheese made from unpasteurized milk . As part of this guidance, it is recommended that manufacturers label their products with the words \"made from raw or unpasteurized milk\" on the principal display panel of the product and/or declare the raw or unpasteurized milk in the list of ingredients. The purpose of this labelling is to assist consumers in making informed choices about the consumption of products containing unpasteurized milk, particularly for vulnerable populations who may be at greater risk of developing foodborne illness.",
+      "element_type": "p"
+    }
+  ]
+}

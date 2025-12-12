@@ -1,0 +1,1627 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish",
+  "citation_title": "Fish and fish products",
+  "sections": {
+    "Overview": {
+      "title": "Overview",
+      "content": [
+        "For the purposes of this web page, \"fish\" means any marine animal, including shellfish and crustaceans, and any of their parts, products and by-products [1, SFCR].",
+        "This section summarizes the labelling requirements that apply to imported fish and fish products, as well as those that are manufactured, processed, treated, preserved, graded, packaged or labelled in Canada for interprovincial trade and for export. In some cases, the labelling requirements would also apply when these are intraprovincially traded.",
+        "Fish and fish products are subject to the provisions of the:",
+        "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+        "When sold intraprovincially, these products are subject to the labelling requirements under the FDA and FDR, as well as specific requirements of the SFCA and SFCR that apply to prepackaged foods sold in Canada , regardless of the level of trade. Provincial regulations may also have labelling requirements that apply when these products are sold within that province.",
+        "The labelling requirements detailed in the following section are specific to fish and fish products. Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Safe Food for Canadians Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?safefood",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Safe Food for Canadians Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Food and Drugs Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Food and Drug Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Industry Labelling Tool",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+          "context_text": "The labelling requirements detailed in the following section are specific to fish and fish products. Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods.",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 6
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "For the purposes of this web page, \"fish\" means any marine animal, including shellfish and crustaceans, and any of their parts, products and by-products [1, SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "This section summarizes the labelling requirements that apply to imported fish and fish products, as well as those that are manufactured, processed, treated, preserved, graded, packaged or labelled in Canada for interprovincial trade and for export. In some cases, the labelling requirements would also apply when these are intraprovincially traded.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Fish and fish products are subject to the provisions of the:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Safe Food for Canadians Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?safefood",
+              "is_external": false
+            },
+            {
+              "text": "Safe Food for Canadians Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+              "is_external": false
+            },
+            {
+              "text": "Food and Drugs Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+              "is_external": false
+            },
+            {
+              "text": "Food and Drug Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "When sold intraprovincially, these products are subject to the labelling requirements under the FDA and FDR, as well as specific requirements of the SFCA and SFCR that apply to prepackaged foods sold in Canada , regardless of the level of trade. Provincial regulations may also have labelling requirements that apply when these products are sold within that province.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The labelling requirements detailed in the following section are specific to fish and fish products. Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Industry Labelling Tool",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Common name": {
+      "title": "Common name",
+      "content": [
+        "The common name must appear on the principal display panel of prepackaged fish and fish products [B.01.006(1), FDR; 218(1)(a), SFCR].",
+        "The common name of a fish product is:",
+        "the name of the food printed in boldface type, but not in italics, in the Canadian Standards of Identity, Volume 3 - Fish , incorporated by reference into the SFCR the name of the food printed in boldface type, but not in italics, in volume 18 of the Canadian Food Compositional Standards (CFCS) document, incorporated by reference into the FDR in any other case, the name by which the food is generally known or a name that is not generic and that describes the food [B.01.001(1), FDR; 1, SFCR]",
+        "For more information, refer to Common name and Legibility and location pages of the Industry Labelling Tool.",
+        "The CFIA Fish List provides guidance regarding the common names for fish. The names on the CFIA Fish List are considered acceptable common names and the use of these names is recommended. The use of common names that are not on the CFIA Fish List can be assessed against the requirement that no person shall package or label fish in a manner that is false, misleading or deceptive [5(1), FDA; 6(1), SFCA].",
+        "The CFIA Fish List also provides a Taxonomic Serial Number (TSN) for each species, along with any associated hazards. Scientific names for fish species are verified with the Integrated Taxonomic Information System (ITIS).",
+        "To submit an amendment (deletion or addition) to the CFIA Fish List, refer to section 5 of the Guidance on determining the common names for fish sold or processed in Canada . The CFIA will only consider complete requests. Incomplete requests will be returned to the applicant.",
+        "Unless outlined in the Canadian Standards of Identity, Volume 3 - Fish , the use of generic names such as \"fish fillets\" or \"fish portions\" is not permitted when the product contains a single fish species. The name of the species must be incorporated into the common name, for example \"haddock fillets\", \"cod portions\".",
+        "If the product contains more than 1 species of fish, in most cases a generic name \"fish\" can be used in the common name provided that the species are indicated in the list of ingredients.",
+        "The name \"pacific salmon\" is not included as an acceptable common name in the CFIA Fish List due to the different market values of species of Pacific salmon. As described above, the common name should always include the name of the species, for example \"chum salmon fillets\" or \"sockeye salmon portions\". The statement \"pacific salmon\" is permitted on the label only as additional information, but may not replace the common name.",
+        "For a seafood mix product to be labelled as \"fruits de mer\" in French, 100% of the mix should be small edible marine invertebrates with a shell at the time of harvest, that is to say crustaceans, echinoderms and molluscs of the classes Bivalvia and Gastropoda . Species from the Cephalopoda class do not have a protective shell and therefore are not included in the definition of \"fruits de mer\". Examples of \"fruits de mer\" include, but are not limited to, clams, oysters, mussels, scallops, whelks, shrimp, sea urchins, lobster and crab.",
+        "A seafood mix which also contains other marine products (for example, fish, squid, octopus, cuttlefish) could be labelled as \"produits de la mer\" or \"produits de la pêche\" in French.",
+        "\"Seafood\" is an acceptable translation in English for the French terms \"fruits de mer\", \"produits de la mer\" and \"produits de la pêche\".",
+        "Fish products that are made from surimi (a paste made from highly refined minced fish) must use the name by which the food is generally known, as there is no prescribed common name in the Canadian Standards of Identity, Volume 3 - Fish or identified in boldface type, but not in italics, in volume 18 of the Canadian Food Compositional Standards document . Therefore, such products may use the term \"surimi\" in the common name, and should include additional descriptors as appropriate (for example, surimi roll, surimi cakes) [B.01.001(1), FDR; 1, SFCR].",
+        "In some instances, surimi-based products closely resemble more expensive seafood products, such as crab legs, shrimps, or scallops through flavouring and shaping. Surimi-based products that resemble these foods should be labelled and/or advertised to clearly show that they are imitations.",
+        "For example:",
+        "the common name identifies the term \"artificial\" or \"simulated\" or \"imitation\" (such as \"artificial crab legs\" and \"imitation lobster meat\"), or the common name identifies the name of the species used in the product (such as \"crab flavoured Alaskan pollock\" and \"lobster flavoured seafood made from whiting\"), or if various species were used, the common name refers to a generic name (such as \"crab flavoured seafood\" and \"lobster flavoured kamaboko\")",
+        "If the oil has been extracted from a single species of fish or marine animal, the common name of the product should be the common name of the species, such as \"salmon oil\" or \"seal oil\".",
+        "If the oil is a mixture of oils extracted from various species, the name of the product must include all the common names of the species, such as \"salmon, sardine and seal oil\", and the common names of the species must be repeated in the list of ingredients. The common names must be declared in the ingredients list in descending order of their proportion by weight in the product.",
+        "or",
+        "If the oil has been extracted from multiple marine animal species, and not from fish species, a common name \"marine oil\" can be used. The common names of the marine species must be included in the list of ingredients in descending order of their proportion by weight in the product.",
+        "or",
+        "If the oil has been extracted from multiple fish species, but not from other marine animals such as seals, a common name \"fish oil\" can be used, and common names of the fish species must be included in the list of ingredients in descending order of their proportion by weight in the product."
+      ],
+      "internal_links": [
+        {
+          "link_text": "principal display panel",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_10",
+          "context_text": "The common name must appear on the principal display panel of prepackaged fish and fish products [B.01.006(1), FDR; 218(1)(a), SFCR].",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "prepackaged",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_9",
+          "context_text": "The common name must appear on the principal display panel of prepackaged fish and fish products [B.01.006(1), FDR; 218(1)(a), SFCR].",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Canadian Standards of Identity, Volume 3 - Fish",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+          "context_text": "the name of the food printed in boldface type, but not in italics, in the Canadian Standards of Identity, Volume 3 - Fish , incorporated by reference into the SFCR the name of the food printed in boldface type, but not in italics, in volume 18 of the Canadian Food Compositional Standards (CFCS) document, incorporated by reference into the FDR in any other case, the name by which the food is generally known or a name that is not generic and that describes the food [B.01.001(1), FDR; 1, SFCR]",
+          "section": "Common name",
+          "element_type": "ul",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "the name of the food printed in boldface type, but not in italics, in the Canadian Standards of Identity, Volume 3 - Fish , incorporated by reference into the SFCR the name of the food printed in boldface type, but not in italics, in volume 18 of the Canadian Food Compositional Standards (CFCS) document, incorporated by reference into the FDR in any other case, the name by which the food is generally known or a name that is not generic and that describes the food [B.01.001(1), FDR; 1, SFCR]",
+          "section": "Common name",
+          "element_type": "ul",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "Common name",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name",
+          "context_text": "For more information, refer to Common name and Legibility and location pages of the Industry Labelling Tool.",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Legibility and location",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location",
+          "context_text": "For more information, refer to Common name and Legibility and location pages of the Industry Labelling Tool.",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "CFIA Fish List",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish/list",
+          "context_text": "The CFIA Fish List provides guidance regarding the common names for fish. The names on the CFIA Fish List are considered acceptable common names and the use of these names is recommended. The use of common names that are not on the CFIA Fish List can be assessed against the requirement that no person shall package or label fish in a manner that is false, misleading or deceptive [5(1), FDA; 6(1), SFCA].",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "section 5",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish/common-names#a5",
+          "context_text": "To submit an amendment (deletion or addition) to the CFIA Fish List, refer to section 5 of the Guidance on determining the common names for fish sold or processed in Canada . The CFIA will only consider complete requests. Incomplete requests will be returned to the applicant.",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Guidance on determining the common names for fish sold or processed in Canada",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish/common-names",
+          "context_text": "To submit an amendment (deletion or addition) to the CFIA Fish List, refer to section 5 of the Guidance on determining the common names for fish sold or processed in Canada . The CFIA will only consider complete requests. Incomplete requests will be returned to the applicant.",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Canadian Standards of Identity, Volume 3 - Fish",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+          "context_text": "Unless outlined in the Canadian Standards of Identity, Volume 3 - Fish , the use of generic names such as \"fish fillets\" or \"fish portions\" is not permitted when the product contains a single fish species. The name of the species must be incorporated into the common name, for example \"haddock fillets\", \"cod portions\".",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Canadian Standards of Identity, Volume 3 - Fish",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+          "context_text": "Fish products that are made from surimi (a paste made from highly refined minced fish) must use the name by which the food is generally known, as there is no prescribed common name in the Canadian Standards of Identity, Volume 3 - Fish or identified in boldface type, but not in italics, in volume 18 of the Canadian Food Compositional Standards document . Therefore, such products may use the term \"surimi\" in the common name, and should include additional descriptors as appropriate (for example, surimi roll, surimi cakes) [B.01.001(1), FDR; 1, SFCR].",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 14
+        },
+        {
+          "link_text": "volume 18 of the Canadian Food Compositional Standards document",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a18",
+          "context_text": "Fish products that are made from surimi (a paste made from highly refined minced fish) must use the name by which the food is generally known, as there is no prescribed common name in the Canadian Standards of Identity, Volume 3 - Fish or identified in boldface type, but not in italics, in volume 18 of the Canadian Food Compositional Standards document . Therefore, such products may use the term \"surimi\" in the common name, and should include additional descriptors as appropriate (for example, surimi roll, surimi cakes) [B.01.001(1), FDR; 1, SFCR].",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 14
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "The common name must appear on the principal display panel of prepackaged fish and fish products [B.01.006(1), FDR; 218(1)(a), SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "principal display panel",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_10",
+              "is_external": false
+            },
+            {
+              "text": "prepackaged",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_9",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The common name of a fish product is:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the name of the food printed in boldface type, but not in italics, in the Canadian Standards of Identity, Volume 3 - Fish , incorporated by reference into the SFCR the name of the food printed in boldface type, but not in italics, in volume 18 of the Canadian Food Compositional Standards (CFCS) document, incorporated by reference into the FDR in any other case, the name by which the food is generally known or a name that is not generic and that describes the food [B.01.001(1), FDR; 1, SFCR]",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Canadian Standards of Identity, Volume 3 - Fish",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+              "is_external": false
+            },
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For more information, refer to Common name and Legibility and location pages of the Industry Labelling Tool.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Common name",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name",
+              "is_external": false
+            },
+            {
+              "text": "Legibility and location",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The CFIA Fish List provides guidance regarding the common names for fish. The names on the CFIA Fish List are considered acceptable common names and the use of these names is recommended. The use of common names that are not on the CFIA Fish List can be assessed against the requirement that no person shall package or label fish in a manner that is false, misleading or deceptive [5(1), FDA; 6(1), SFCA].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "CFIA Fish List",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish/list",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The CFIA Fish List also provides a Taxonomic Serial Number (TSN) for each species, along with any associated hazards. Scientific names for fish species are verified with the Integrated Taxonomic Information System (ITIS).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "To submit an amendment (deletion or addition) to the CFIA Fish List, refer to section 5 of the Guidance on determining the common names for fish sold or processed in Canada . The CFIA will only consider complete requests. Incomplete requests will be returned to the applicant.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "section 5",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish/common-names#a5",
+              "is_external": false
+            },
+            {
+              "text": "Guidance on determining the common names for fish sold or processed in Canada",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish/common-names",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Unless outlined in the Canadian Standards of Identity, Volume 3 - Fish , the use of generic names such as \"fish fillets\" or \"fish portions\" is not permitted when the product contains a single fish species. The name of the species must be incorporated into the common name, for example \"haddock fillets\", \"cod portions\".",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Standards of Identity, Volume 3 - Fish",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "If the product contains more than 1 species of fish, in most cases a generic name \"fish\" can be used in the common name provided that the species are indicated in the list of ingredients.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The name \"pacific salmon\" is not included as an acceptable common name in the CFIA Fish List due to the different market values of species of Pacific salmon. As described above, the common name should always include the name of the species, for example \"chum salmon fillets\" or \"sockeye salmon portions\". The statement \"pacific salmon\" is permitted on the label only as additional information, but may not replace the common name.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For a seafood mix product to be labelled as \"fruits de mer\" in French, 100% of the mix should be small edible marine invertebrates with a shell at the time of harvest, that is to say crustaceans, echinoderms and molluscs of the classes Bivalvia and Gastropoda . Species from the Cephalopoda class do not have a protective shell and therefore are not included in the definition of \"fruits de mer\". Examples of \"fruits de mer\" include, but are not limited to, clams, oysters, mussels, scallops, whelks, shrimp, sea urchins, lobster and crab.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "A seafood mix which also contains other marine products (for example, fish, squid, octopus, cuttlefish) could be labelled as \"produits de la mer\" or \"produits de la pêche\" in French.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "\"Seafood\" is an acceptable translation in English for the French terms \"fruits de mer\", \"produits de la mer\" and \"produits de la pêche\".",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Fish products that are made from surimi (a paste made from highly refined minced fish) must use the name by which the food is generally known, as there is no prescribed common name in the Canadian Standards of Identity, Volume 3 - Fish or identified in boldface type, but not in italics, in volume 18 of the Canadian Food Compositional Standards document . Therefore, such products may use the term \"surimi\" in the common name, and should include additional descriptors as appropriate (for example, surimi roll, surimi cakes) [B.01.001(1), FDR; 1, SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Standards of Identity, Volume 3 - Fish",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+              "is_external": false
+            },
+            {
+              "text": "volume 18 of the Canadian Food Compositional Standards document",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0#a18",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "In some instances, surimi-based products closely resemble more expensive seafood products, such as crab legs, shrimps, or scallops through flavouring and shaping. Surimi-based products that resemble these foods should be labelled and/or advertised to clearly show that they are imitations.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For example:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the common name identifies the term \"artificial\" or \"simulated\" or \"imitation\" (such as \"artificial crab legs\" and \"imitation lobster meat\"), or the common name identifies the name of the species used in the product (such as \"crab flavoured Alaskan pollock\" and \"lobster flavoured seafood made from whiting\"), or if various species were used, the common name refers to a generic name (such as \"crab flavoured seafood\" and \"lobster flavoured kamaboko\")",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "If the oil has been extracted from a single species of fish or marine animal, the common name of the product should be the common name of the species, such as \"salmon oil\" or \"seal oil\".",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If the oil is a mixture of oils extracted from various species, the name of the product must include all the common names of the species, such as \"salmon, sardine and seal oil\", and the common names of the species must be repeated in the list of ingredients. The common names must be declared in the ingredients list in descending order of their proportion by weight in the product.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "or",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If the oil has been extracted from multiple marine animal species, and not from fish species, a common name \"marine oil\" can be used. The common names of the marine species must be included in the list of ingredients in descending order of their proportion by weight in the product.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "or",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If the oil has been extracted from multiple fish species, but not from other marine animals such as seals, a common name \"fish oil\" can be used, and common names of the fish species must be included in the list of ingredients in descending order of their proportion by weight in the product.",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Additional terms": {
+      "title": "Additional terms",
+      "content": [
+        "Certain descriptive terms are required on prepackaged fish products that are imported to Canada, exported from Canada or that are interprovincially traded. Unless otherwise indicated, these descriptive terms must be shown on any part of the label other than solely on the bottom of the container, and for consumer prepackaged fish products, in characters of at least 1.6 mm (1/16 inch) in height [210, 245(2) and (3), SFCR]. For more information, refer to the Legibility and location page of the Industry Labelling Tool for requirements that apply to all foods.",
+        "The labels on all packages of hermetically sealed tuna must indicate the colour of the fish flesh [262(1)(b), SFCR]. The descriptors intended for use, and conditions that must be met, are listed in Table 3 of the document Descriptive Words, Expressions and Identification Names for Specific Foods :",
+        "\"White meat tuna\" / \" chair de thon blanc \" or \"white tuna\" / \"thon blanc\" (only tuna of the species Thunnus alalunga ) \"Light meat tuna\" / \" chair pâle de thon \" or \"light tuna\" / \"thon pâle\" \"Dark meat tuna\" / \" chair foncée de thon \" or \"dark tuna\" / \" thon foncé \"",
+        "In the case of prepackaged salted fish , if the label bears one of the expressions to describe the salt and moisture content of the fish in Table 4 of the document entitled Descriptive words, expressions and identification names for specific foods , the condition indicated for that expression must be met [262(2), SFCR]:",
+        "\"Slack salted fish\" / \" poisson faiblement salé \", when salt is ≤ 25% dry weight \"Light salted fish\" / \" poisson légèrement salé \", when salt is ˃ 25% but ≤ 33% dry weight \"Dried heavy salted fish\" / \" poisson fortement salé séché \", when salt is > 33% and moisture is ≤ 54% \"Green heavy salted fish\" / \" poisson fortement salé en vert \", when salt is > 33% and moisture is between 54% and 65%",
+        "The label for bivalve molluscs in the shell and not in a hermetically sealed package must be correctly and legibly marked to show the date of processing and have an expression, code or identifier that indicates the location from which the bivalve molluscs were harvested [262(1)(a), SFCR].",
+        "The harvest location of the bivalve molluscs is the most precise identification as practical, such as the name of geographic area, lease number, harvest area identifier and/or sub-area if applicable. For any other activities listed below the location from which live bivalve molluscs were harvested is considered to be:",
+        "Relay:",
+        "the relay site",
+        "Nearshore wet storage:",
+        "if bivalve molluscs are wet stored for less than 14 days, the original harvest location prior to wet storage if bivalve molluscs are wet stored for 14 days or greater, the harvest location of the nearshore site",
+        "Onshore wet storage:",
+        "if bivalve molluscs are wet stored in an untreated flow through system for less than 14 days, the original harvest location if bivalve molluscs are wet stored in an untreated flow through system for 14 days or greater, the harvest location of the source water if bivalve molluscs are wet stored in a system with treated water or synthetic water, the original harvest location regardless of the duration of storage",
+        "Wet storage after relay:",
+        "nearshore or onshore criteria above applies except the original harvest location becomes the relay site",
+        "Land based aquaculture:",
+        "if bivalve molluscs are grown in a land based aquaculture facility using treated or synthetic water, the harvest location is identified as the licence number issued by the authority permitting this activity",
+        "For policies and criteria that apply to the harvesting of bivalve molluscs, refer to the Canadian shellfish sanitation program manual .",
+        "Additional descriptive words that tell about the true nature of prepackaged fish and fish products must be shown on the principal display panel when their omission will likely result in the food being mistaken for another food. This includes, but is not limited to, description of the various forms or styles of the food (such as split, fillet, minced, flaked), its packaging medium (such as packed in water, brine or oil, or dry pack) or its condition (such as salted, dried, smoked) [B.01.006.1, FDR].",
+        "For example, breaded fish portions may be made from slices of fish or from minced fish. Descriptive terms to indicate when such a product is made from minced fish must be shown on the principal display panel of the label.",
+        "Similarly prepackaged shellfish, such as mussels, may be sold with or without the shell. When the shell is included with the product and is not visible to consumers at the point of sale, the information concerning the presence of shells must be indicated on the principal display panel.",
+        "When fish is processed using filtered smoke, a statement that indicates the presence or use of the filtered smoke for colour retention purposes must be shown on the principal display panel to avoid misleading the consumer or purchaser about the true nature of the food.",
+        "Fish products that have received some heat treatment but are not ready-to-eat (RTE) products (such as frozen blanched crab legs, frozen \"flash fried\" breaded fish portions) may be perceived as being RTE. To prevent such a product being mistaken for a RTE product, words indicating that the product is raw and must be properly cooked prior to use must be shown on the principal display panel.",
+        "For more information on this requirement, refer to True nature ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "exported",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-products#s2c1",
+          "context_text": "Certain descriptive terms are required on prepackaged fish products that are imported to Canada, exported from Canada or that are interprovincially traded. Unless otherwise indicated, these descriptive terms must be shown on any part of the label other than solely on the bottom of the container, and for consumer prepackaged fish products, in characters of at least 1.6 mm (1/16 inch) in height [210, 245(2) and (3), SFCR]. For more information, refer to the Legibility and location page of the Industry Labelling Tool for requirements that apply to all foods.",
+          "section": "Additional terms",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Legibility and location",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location",
+          "context_text": "Certain descriptive terms are required on prepackaged fish products that are imported to Canada, exported from Canada or that are interprovincially traded. Unless otherwise indicated, these descriptive terms must be shown on any part of the label other than solely on the bottom of the container, and for consumer prepackaged fish products, in characters of at least 1.6 mm (1/16 inch) in height [210, 245(2) and (3), SFCR]. For more information, refer to the Legibility and location page of the Industry Labelling Tool for requirements that apply to all foods.",
+          "section": "Additional terms",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Descriptive Words, Expressions and Identification Names for Specific Foods",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/descriptive-words-expressions-and-identification-names-specific-foods",
+          "context_text": "The labels on all packages of hermetically sealed tuna must indicate the colour of the fish flesh [262(1)(b), SFCR]. The descriptors intended for use, and conditions that must be met, are listed in Table 3 of the document Descriptive Words, Expressions and Identification Names for Specific Foods :",
+          "section": "Additional terms",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "salted fish",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_12",
+          "context_text": "In the case of prepackaged salted fish , if the label bears one of the expressions to describe the salt and moisture content of the fish in Table 4 of the document entitled Descriptive words, expressions and identification names for specific foods , the condition indicated for that expression must be met [262(2), SFCR]:",
+          "section": "Additional terms",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Descriptive words, expressions and identification names for specific foods",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/descriptive-words-expressions-and-identification-names-specific-foods",
+          "context_text": "In the case of prepackaged salted fish , if the label bears one of the expressions to describe the salt and moisture content of the fish in Table 4 of the document entitled Descriptive words, expressions and identification names for specific foods , the condition indicated for that expression must be met [262(2), SFCR]:",
+          "section": "Additional terms",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Canadian shellfish sanitation program manual",
+          "href": "https://inspection.canada.ca/en/food-guidance-commodity/fish/canadian-shellfish-sanitation-program",
+          "context_text": "For policies and criteria that apply to the harvesting of bivalve molluscs, refer to the Canadian shellfish sanitation program manual .",
+          "section": "Additional terms",
+          "element_type": "p",
+          "position_in_content": 18
+        },
+        {
+          "link_text": "prepackaged",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_9",
+          "context_text": "Additional descriptive words that tell about the true nature of prepackaged fish and fish products must be shown on the principal display panel when their omission will likely result in the food being mistaken for another food. This includes, but is not limited to, description of the various forms or styles of the food (such as split, fillet, minced, flaked), its packaging medium (such as packed in water, brine or oil, or dry pack) or its condition (such as salted, dried, smoked) [B.01.006.1, FDR].",
+          "section": "Additional terms",
+          "element_type": "p",
+          "position_in_content": 19
+        },
+        {
+          "link_text": "True nature",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/true-nature",
+          "context_text": "For more information on this requirement, refer to True nature .",
+          "section": "Additional terms",
+          "element_type": "p",
+          "position_in_content": 24
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Certain descriptive terms are required on prepackaged fish products that are imported to Canada, exported from Canada or that are interprovincially traded. Unless otherwise indicated, these descriptive terms must be shown on any part of the label other than solely on the bottom of the container, and for consumer prepackaged fish products, in characters of at least 1.6 mm (1/16 inch) in height [210, 245(2) and (3), SFCR]. For more information, refer to the Legibility and location page of the Industry Labelling Tool for requirements that apply to all foods.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "exported",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-products#s2c1",
+              "is_external": false
+            },
+            {
+              "text": "Legibility and location",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The labels on all packages of hermetically sealed tuna must indicate the colour of the fish flesh [262(1)(b), SFCR]. The descriptors intended for use, and conditions that must be met, are listed in Table 3 of the document Descriptive Words, Expressions and Identification Names for Specific Foods :",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Descriptive Words, Expressions and Identification Names for Specific Foods",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/descriptive-words-expressions-and-identification-names-specific-foods",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "\"White meat tuna\" / \" chair de thon blanc \" or \"white tuna\" / \"thon blanc\" (only tuna of the species Thunnus alalunga ) \"Light meat tuna\" / \" chair pâle de thon \" or \"light tuna\" / \"thon pâle\" \"Dark meat tuna\" / \" chair foncée de thon \" or \"dark tuna\" / \" thon foncé \"",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "In the case of prepackaged salted fish , if the label bears one of the expressions to describe the salt and moisture content of the fish in Table 4 of the document entitled Descriptive words, expressions and identification names for specific foods , the condition indicated for that expression must be met [262(2), SFCR]:",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "salted fish",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_12",
+              "is_external": false
+            },
+            {
+              "text": "Descriptive words, expressions and identification names for specific foods",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/descriptive-words-expressions-and-identification-names-specific-foods",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "\"Slack salted fish\" / \" poisson faiblement salé \", when salt is ≤ 25% dry weight \"Light salted fish\" / \" poisson légèrement salé \", when salt is ˃ 25% but ≤ 33% dry weight \"Dried heavy salted fish\" / \" poisson fortement salé séché \", when salt is > 33% and moisture is ≤ 54% \"Green heavy salted fish\" / \" poisson fortement salé en vert \", when salt is > 33% and moisture is between 54% and 65%",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "The label for bivalve molluscs in the shell and not in a hermetically sealed package must be correctly and legibly marked to show the date of processing and have an expression, code or identifier that indicates the location from which the bivalve molluscs were harvested [262(1)(a), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The harvest location of the bivalve molluscs is the most precise identification as practical, such as the name of geographic area, lease number, harvest area identifier and/or sub-area if applicable. For any other activities listed below the location from which live bivalve molluscs were harvested is considered to be:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Relay:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the relay site",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "Nearshore wet storage:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "if bivalve molluscs are wet stored for less than 14 days, the original harvest location prior to wet storage if bivalve molluscs are wet stored for 14 days or greater, the harvest location of the nearshore site",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "Onshore wet storage:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "if bivalve molluscs are wet stored in an untreated flow through system for less than 14 days, the original harvest location if bivalve molluscs are wet stored in an untreated flow through system for 14 days or greater, the harvest location of the source water if bivalve molluscs are wet stored in a system with treated water or synthetic water, the original harvest location regardless of the duration of storage",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "Wet storage after relay:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "nearshore or onshore criteria above applies except the original harvest location becomes the relay site",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "Land based aquaculture:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "if bivalve molluscs are grown in a land based aquaculture facility using treated or synthetic water, the harvest location is identified as the licence number issued by the authority permitting this activity",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "For policies and criteria that apply to the harvesting of bivalve molluscs, refer to the Canadian shellfish sanitation program manual .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian shellfish sanitation program manual",
+              "href": "https://inspection.canada.ca/en/food-guidance-commodity/fish/canadian-shellfish-sanitation-program",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Additional descriptive words that tell about the true nature of prepackaged fish and fish products must be shown on the principal display panel when their omission will likely result in the food being mistaken for another food. This includes, but is not limited to, description of the various forms or styles of the food (such as split, fillet, minced, flaked), its packaging medium (such as packed in water, brine or oil, or dry pack) or its condition (such as salted, dried, smoked) [B.01.006.1, FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "prepackaged",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_9",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For example, breaded fish portions may be made from slices of fish or from minced fish. Descriptive terms to indicate when such a product is made from minced fish must be shown on the principal display panel of the label.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Similarly prepackaged shellfish, such as mussels, may be sold with or without the shell. When the shell is included with the product and is not visible to consumers at the point of sale, the information concerning the presence of shells must be indicated on the principal display panel.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When fish is processed using filtered smoke, a statement that indicates the presence or use of the filtered smoke for colour retention purposes must be shown on the principal display panel to avoid misleading the consumer or purchaser about the true nature of the food.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Fish products that have received some heat treatment but are not ready-to-eat (RTE) products (such as frozen blanched crab legs, frozen \"flash fried\" breaded fish portions) may be perceived as being RTE. To prevent such a product being mistaken for a RTE product, words indicating that the product is raw and must be properly cooked prior to use must be shown on the principal display panel.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For more information on this requirement, refer to True nature .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "True nature",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/true-nature",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Net quantity": {
+      "title": "Net quantity",
+      "content": [
+        "For most consumer prepackaged fish products, a net quantity declaration is required on the principal display panel in metric units [221, 232, SFCR].",
+        "For prepackaged other than consumer prepackaged fish, a net quantity declaration is required, which must generally be expressed in metric units and be shown on any part of the label except solely on the bottom of the container [243, 244.1(c), 244.2, 245, SFCR]. Refer to Fish in hermetically sealed containers for exception.",
+        "If properly labelled prepackaged fish is placed inside a second container and the resulting product is prepackaged fish, other than consumer prepackaged fish, the second container is not required to be labelled with the declaration of net quantity [263, SFCR].",
+        "The net quantity declaration of prepackaged fish products must be shown by volume, weight or numerical count in accordance with the document incorporated by reference, Units of measurement for the net quantity declaration of certain foods [231(a), 244, SFCR].",
+        "The words \"net weight\" or \"drained weight\" can be used only on fish products that contain only edible parts. If the product also contains inedible parts such as shells (for example, a package of cooked mussels in the shell), the word \"weight\" alone must be used.",
+        "Weight declarations such as \"made from X lb\" (for example, for peeled shrimp) or \"net weight when packed\" (for example, for live mussels) are unacceptable.",
+        "Refer to the Net quantity page for more information, including minimum type size requirements.",
+        "Shrimp cocktail must always have its net quantity declared in units of weight. The declaration must be accompanied by either a statement indicating the total weight of the shrimp inside the container or by an indication of the percentage of the weight of the shrimp in the edible contents of the container [item 52, Table 1, Units of measurement for the net quantity declaration of certain foods ].",
+        "Consumer prepackaged oysters that are sold in the shell, other than those in hermetically sealed packages, must declare their net quantity by bushels or pecks, if the net quantity is shown in Canadian units by volume [237(1) and (2), SFCR].",
+        "When mackerel or mackerel fillets in hermetically sealed containers are prepared without adding water, brine or vinegar solution, the drained weight of the product must be specified on the label, in addition to the declaration of net quantity, if the drained weight corresponds to less than 80% of the net quantity [item 53, Table 1, Units of measurement for the net quantity declaration of certain foods ].",
+        "The net quantity declaration must appear on the principal display panel anytime a prepackaged fish is packaged in a hermetically sealed and commercially sterile container (for example, canned fish) [244.4(b), SFCR]."
+      ],
+      "internal_links": [
+        {
+          "link_text": "consumer prepackaged",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_1",
+          "context_text": "For most consumer prepackaged fish products, a net quantity declaration is required on the principal display panel in metric units [221, 232, SFCR].",
+          "section": "Net quantity",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "prepackaged",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_9",
+          "context_text": "For prepackaged other than consumer prepackaged fish, a net quantity declaration is required, which must generally be expressed in metric units and be shown on any part of the label except solely on the bottom of the container [243, 244.1(c), 244.2, 245, SFCR]. Refer to Fish in hermetically sealed containers for exception.",
+          "section": "Net quantity",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Fish in hermetically sealed containers",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a4_4",
+          "context_text": "For prepackaged other than consumer prepackaged fish, a net quantity declaration is required, which must generally be expressed in metric units and be shown on any part of the label except solely on the bottom of the container [243, 244.1(c), 244.2, 245, SFCR]. Refer to Fish in hermetically sealed containers for exception.",
+          "section": "Net quantity",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Units of measurement for the net quantity declaration of certain foods",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/units-measurement-net-quantity-declaration-certain-foods",
+          "context_text": "The net quantity declaration of prepackaged fish products must be shown by volume, weight or numerical count in accordance with the document incorporated by reference, Units of measurement for the net quantity declaration of certain foods [231(a), 244, SFCR].",
+          "section": "Net quantity",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Net quantity",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/net-quantity",
+          "context_text": "Refer to the Net quantity page for more information, including minimum type size requirements.",
+          "section": "Net quantity",
+          "element_type": "p",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Units of measurement for the net quantity declaration of certain foods",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/units-measurement-net-quantity-declaration-certain-foods",
+          "context_text": "Shrimp cocktail must always have its net quantity declared in units of weight. The declaration must be accompanied by either a statement indicating the total weight of the shrimp inside the container or by an indication of the percentage of the weight of the shrimp in the edible contents of the container [item 52, Table 1, Units of measurement for the net quantity declaration of certain foods ].",
+          "section": "Net quantity",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Units of measurement for the net quantity declaration of certain foods",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/units-measurement-net-quantity-declaration-certain-foods",
+          "context_text": "When mackerel or mackerel fillets in hermetically sealed containers are prepared without adding water, brine or vinegar solution, the drained weight of the product must be specified on the label, in addition to the declaration of net quantity, if the drained weight corresponds to less than 80% of the net quantity [item 53, Table 1, Units of measurement for the net quantity declaration of certain foods ].",
+          "section": "Net quantity",
+          "element_type": "p",
+          "position_in_content": 10
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "For most consumer prepackaged fish products, a net quantity declaration is required on the principal display panel in metric units [221, 232, SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "consumer prepackaged",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_1",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For prepackaged other than consumer prepackaged fish, a net quantity declaration is required, which must generally be expressed in metric units and be shown on any part of the label except solely on the bottom of the container [243, 244.1(c), 244.2, 245, SFCR]. Refer to Fish in hermetically sealed containers for exception.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "prepackaged",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_9",
+              "is_external": false
+            },
+            {
+              "text": "Fish in hermetically sealed containers",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a4_4",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "If properly labelled prepackaged fish is placed inside a second container and the resulting product is prepackaged fish, other than consumer prepackaged fish, the second container is not required to be labelled with the declaration of net quantity [263, SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The net quantity declaration of prepackaged fish products must be shown by volume, weight or numerical count in accordance with the document incorporated by reference, Units of measurement for the net quantity declaration of certain foods [231(a), 244, SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Units of measurement for the net quantity declaration of certain foods",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/units-measurement-net-quantity-declaration-certain-foods",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The words \"net weight\" or \"drained weight\" can be used only on fish products that contain only edible parts. If the product also contains inedible parts such as shells (for example, a package of cooked mussels in the shell), the word \"weight\" alone must be used.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Weight declarations such as \"made from X lb\" (for example, for peeled shrimp) or \"net weight when packed\" (for example, for live mussels) are unacceptable.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Refer to the Net quantity page for more information, including minimum type size requirements.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Net quantity",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/net-quantity",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Shrimp cocktail must always have its net quantity declared in units of weight. The declaration must be accompanied by either a statement indicating the total weight of the shrimp inside the container or by an indication of the percentage of the weight of the shrimp in the edible contents of the container [item 52, Table 1, Units of measurement for the net quantity declaration of certain foods ].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Units of measurement for the net quantity declaration of certain foods",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/units-measurement-net-quantity-declaration-certain-foods",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Consumer prepackaged oysters that are sold in the shell, other than those in hermetically sealed packages, must declare their net quantity by bushels or pecks, if the net quantity is shown in Canadian units by volume [237(1) and (2), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When mackerel or mackerel fillets in hermetically sealed containers are prepared without adding water, brine or vinegar solution, the drained weight of the product must be specified on the label, in addition to the declaration of net quantity, if the drained weight corresponds to less than 80% of the net quantity [item 53, Table 1, Units of measurement for the net quantity declaration of certain foods ].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Units of measurement for the net quantity declaration of certain foods",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/units-measurement-net-quantity-declaration-certain-foods",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The net quantity declaration must appear on the principal display panel anytime a prepackaged fish is packaged in a hermetically sealed and commercially sterile container (for example, canned fish) [244.4(b), SFCR].",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Date marking, storage and handling instructions": {
+      "title": "Date marking, storage and handling instructions",
+      "content": [
+        "Many fish and fish products have a durable life of 90 days or less. The same requirements for date markings and storage instructions that apply to other prepackaged foods also apply to fish and fish products. For more information, including manner of declaring, see the Date markings and storage instructions page.",
+        "Fish which is packed to exclude air and which has been smoked or to which liquid smoke or liquid smoke flavour concentrate has been added and which:",
+        "contains less than 9% salt [item 34, Table of Chemical, Physical and Nutritional Characteristics of Food ] has not been heat processed after sealing at a temperature and for a time sufficient to destroy all spores of the species Clostridium botulinum , or is not customarily cooked prior to use",
+        "requires the statement \"Keep Frozen Prior to Use\" / \"Garder congelé jusqu'à utilisation\" on the principal display panel in letter size equal to the letters used in the common name [B.21.025, FDR].",
+        "Note: Smoked fish packed with oxygen permeable screens Footnote 1 needs no freezing and can be stored under refrigeration conditions. The statement \"Keep Frozen Prior to Use\" is not required, however the statement \"Keep Refrigerated\" must be present, and the shelf life indicated on the label cannot exceed 14 days. The information on oxygen permeability of the packaging material must be available to an inspector up to retail level.",
+        "Any fish [18.1.1, CFCS] or the meat of any marine or fresh water animal [18.1.2, CFCS] that has been frozen and thawed prior to sale must declare the words \"previously frozen\" on their principal display panel or on a sign displayed close to the food in letters that are easily legible (meaning, readily discernible ) and conspicuous (meaning, clear and prominent ) to a prospective buyer. This includes both prepackaged and non-prepackaged products. When declared on the principal display panel, these words must either be close to the common name of the food in letters that are at least as legible and conspicuous as those used for the common name or anywhere on the principal display panel in letters that are at least 6.4 mm (1/4 inch) in height [B.01.080, FDR].",
+        "If part of one of these foods has been frozen and thawed prior to sale, the words \"Made from fresh and frozen portions\" or \"Made from fresh and frozen (naming the food)\" must be declared instead and in the manner described above [B.01.080(3), FDR].",
+        "As per the FDR, \"frozen\" means preserved by freezing temperature and does not include any surface freezing that may occur during holding and transportation [B.01.080(1), FDR]."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Date markings and storage instructions",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions",
+          "context_text": "Many fish and fish products have a durable life of 90 days or less. The same requirements for date markings and storage instructions that apply to other prepackaged foods also apply to fish and fish products. For more information, including manner of declaring, see the Date markings and storage instructions page.",
+          "section": "Date marking, storage and handling instructions",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Footnote 1",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#fn1",
+          "context_text": "Note: Smoked fish packed with oxygen permeable screens Footnote 1 needs no freezing and can be stored under refrigeration conditions. The statement \"Keep Frozen Prior to Use\" is not required, however the statement \"Keep Refrigerated\" must be present, and the shelf life indicated on the label cannot exceed 14 days. The information on oxygen permeability of the packaging material must be available to an inspector up to retail level.",
+          "section": "Date marking, storage and handling instructions",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "readily discernible",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s16c3",
+          "context_text": "Any fish [18.1.1, CFCS] or the meat of any marine or fresh water animal [18.1.2, CFCS] that has been frozen and thawed prior to sale must declare the words \"previously frozen\" on their principal display panel or on a sign displayed close to the food in letters that are easily legible (meaning, readily discernible ) and conspicuous (meaning, clear and prominent ) to a prospective buyer. This includes both prepackaged and non-prepackaged products. When declared on the principal display panel, these words must either be close to the common name of the food in letters that are at least as legible and conspicuous as those used for the common name or anywhere on the principal display panel in letters that are at least 6.4 mm (1/4 inch) in height [B.01.080, FDR].",
+          "section": "Date marking, storage and handling instructions",
+          "element_type": "p",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "clear and prominent",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s8c3",
+          "context_text": "Any fish [18.1.1, CFCS] or the meat of any marine or fresh water animal [18.1.2, CFCS] that has been frozen and thawed prior to sale must declare the words \"previously frozen\" on their principal display panel or on a sign displayed close to the food in letters that are easily legible (meaning, readily discernible ) and conspicuous (meaning, clear and prominent ) to a prospective buyer. This includes both prepackaged and non-prepackaged products. When declared on the principal display panel, these words must either be close to the common name of the food in letters that are at least as legible and conspicuous as those used for the common name or anywhere on the principal display panel in letters that are at least 6.4 mm (1/4 inch) in height [B.01.080, FDR].",
+          "section": "Date marking, storage and handling instructions",
+          "element_type": "p",
+          "position_in_content": 6
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Many fish and fish products have a durable life of 90 days or less. The same requirements for date markings and storage instructions that apply to other prepackaged foods also apply to fish and fish products. For more information, including manner of declaring, see the Date markings and storage instructions page.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Date markings and storage instructions",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Fish which is packed to exclude air and which has been smoked or to which liquid smoke or liquid smoke flavour concentrate has been added and which:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "contains less than 9% salt [item 34, Table of Chemical, Physical and Nutritional Characteristics of Food ] has not been heat processed after sealing at a temperature and for a time sufficient to destroy all spores of the species Clostridium botulinum , or is not customarily cooked prior to use",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Table of Chemical, Physical and Nutritional Characteristics of Food",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/acts-regulations/incorporation-reference/table-chemical-physical-nutritional-characteristics-food.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "requires the statement \"Keep Frozen Prior to Use\" / \"Garder congelé jusqu'à utilisation\" on the principal display panel in letter size equal to the letters used in the common name [B.21.025, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Note: Smoked fish packed with oxygen permeable screens Footnote 1 needs no freezing and can be stored under refrigeration conditions. The statement \"Keep Frozen Prior to Use\" is not required, however the statement \"Keep Refrigerated\" must be present, and the shelf life indicated on the label cannot exceed 14 days. The information on oxygen permeability of the packaging material must be available to an inspector up to retail level.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Footnote 1",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#fn1",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Any fish [18.1.1, CFCS] or the meat of any marine or fresh water animal [18.1.2, CFCS] that has been frozen and thawed prior to sale must declare the words \"previously frozen\" on their principal display panel or on a sign displayed close to the food in letters that are easily legible (meaning, readily discernible ) and conspicuous (meaning, clear and prominent ) to a prospective buyer. This includes both prepackaged and non-prepackaged products. When declared on the principal display panel, these words must either be close to the common name of the food in letters that are at least as legible and conspicuous as those used for the common name or anywhere on the principal display panel in letters that are at least 6.4 mm (1/4 inch) in height [B.01.080, FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "readily discernible",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s16c3",
+              "is_external": false
+            },
+            {
+              "text": "clear and prominent",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s8c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "If part of one of these foods has been frozen and thawed prior to sale, the words \"Made from fresh and frozen portions\" or \"Made from fresh and frozen (naming the food)\" must be declared instead and in the manner described above [B.01.080(3), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "As per the FDR, \"frozen\" means preserved by freezing temperature and does not include any surface freezing that may occur during holding and transportation [B.01.080(1), FDR].",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Nutrition labelling": {
+      "title": "Nutrition labelling",
+      "content": [
+        "Raw, single ingredient marine or freshwater animal products (in fresh or frozen form) are usually exempt from carrying a Nutrition Facts table . This includes fish, crustaceans and combinations of raw, single ingredient marine or fresh water animal products (for example, a mixture of raw single ingredient shrimp and scallops) [B.01.401(2)(b)(iv), FDR].",
+        "Smoked fish is not a single-ingredient food since smoke must be declared and salt is added; therefore, it is not exempt from carrying a Nutrition Facts table (NFt).",
+        "Raw, single ingredient marine or freshwater animal products, when not required to carry an NFt, are exempt from the front-of-package nutrition symbol requirements [B.01.350(13)(c), FDR]. However, a prepackaged fish product loses its exemption from the nutrition symbol requirements when it must carry an NFt.",
+        "See Foods exempt from the front-of-package (FOP) nutrition symbol requirements for details on the exemptions.",
+        "If a processor custom-processes sport-caught fish, charges a fee for the service of processing the fish for personal consumption by the fisher, and the fish is returned in a package, then no sale is involved and an NFt is not required [B.01.004(2), FDR]."
+      ],
+      "internal_links": [
+        {
+          "link_text": "usually exempt from carrying a Nutrition Facts table",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions#c2",
+          "context_text": "Raw, single ingredient marine or freshwater animal products (in fresh or frozen form) are usually exempt from carrying a Nutrition Facts table . This includes fish, crustaceans and combinations of raw, single ingredient marine or fresh water animal products (for example, a mixture of raw single ingredient shrimp and scallops) [B.01.401(2)(b)(iv), FDR].",
+          "section": "Nutrition labelling",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Raw, single ingredient marine or freshwater animal products (in fresh or frozen form) are usually exempt from carrying a Nutrition Facts table . This includes fish, crustaceans and combinations of raw, single ingredient marine or fresh water animal products (for example, a mixture of raw single ingredient shrimp and scallops) [B.01.401(2)(b)(iv), FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "usually exempt from carrying a Nutrition Facts table",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions#c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Smoked fish is not a single-ingredient food since smoke must be declared and salt is added; therefore, it is not exempt from carrying a Nutrition Facts table (NFt).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Raw, single ingredient marine or freshwater animal products, when not required to carry an NFt, are exempt from the front-of-package nutrition symbol requirements [B.01.350(13)(c), FDR]. However, a prepackaged fish product loses its exemption from the nutrition symbol requirements when it must carry an NFt.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See Foods exempt from the front-of-package (FOP) nutrition symbol requirements for details on the exemptions.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Foods exempt from the front-of-package (FOP) nutrition symbol requirements",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "If a processor custom-processes sport-caught fish, charges a fee for the service of processing the fish for personal consumption by the fisher, and the fish is returned in a package, then no sale is involved and an NFt is not required [B.01.004(2), FDR].",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Name and principal place of business": {
+      "title": "Name and principal place of business",
+      "content": [
+        "The label of prepackaged fish or fish products must include the name and principal place of business of the person by or for whom the food was manufactured, prepared, produced, stored, packaged or labelled. This information must appear on any part of the label other than solely on the bottom of the container [B.01.007(1.1)(a), FDR; 218(1)(b), 218(2), SFCR].",
+        "For more information, including manner of declaring, refer to the Name and principal place of business page."
+      ],
+      "internal_links": [
+        {
+          "link_text": "prepackaged",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_9",
+          "context_text": "The label of prepackaged fish or fish products must include the name and principal place of business of the person by or for whom the food was manufactured, prepared, produced, stored, packaged or labelled. This information must appear on any part of the label other than solely on the bottom of the container [B.01.007(1.1)(a), FDR; 218(1)(b), 218(2), SFCR].",
+          "section": "Name and principal place of business",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Name and principal place of business",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/name-and-principal-place-business",
+          "context_text": "For more information, including manner of declaring, refer to the Name and principal place of business page.",
+          "section": "Name and principal place of business",
+          "element_type": "p",
+          "position_in_content": 2
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "The label of prepackaged fish or fish products must include the name and principal place of business of the person by or for whom the food was manufactured, prepared, produced, stored, packaged or labelled. This information must appear on any part of the label other than solely on the bottom of the container [B.01.007(1.1)(a), FDR; 218(1)(b), 218(2), SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "prepackaged",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_9",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For more information, including manner of declaring, refer to the Name and principal place of business page.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Name and principal place of business",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/name-and-principal-place-business",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Country of origin": {
+      "title": "Country of origin",
+      "content": [
+        "For prepackaged fish imported into Canada, the name of the country of origin must be clearly identified on the label [266, SFCR]. The country of origin is the country where the last substantial transformation occurred. The wording \"product of\" / \"produit de\" is recommended to help clearly identify the name of the country of origin.",
+        "The above information must be shown on any part of the label other than solely on the bottom of the container, and for consumer prepackaged fish, in characters of at least 1.6 mm (1/16 inch) in height [210, 245(2) and (3), SFCR].",
+        "The geographic location where fish have been harvested may be indicated on the label, including as part of the common name.",
+        "Note: in the SFCR, country of origin is referred to as foreign state of origin."
+      ],
+      "internal_links": [
+        {
+          "link_text": "fish",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_3",
+          "context_text": "For prepackaged fish imported into Canada, the name of the country of origin must be clearly identified on the label [266, SFCR]. The country of origin is the country where the last substantial transformation occurred. The wording \"product of\" / \"produit de\" is recommended to help clearly identify the name of the country of origin.",
+          "section": "Country of origin",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "foreign state",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_5",
+          "context_text": "Note: in the SFCR, country of origin is referred to as foreign state of origin.",
+          "section": "Country of origin",
+          "element_type": "p",
+          "position_in_content": 4
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "For prepackaged fish imported into Canada, the name of the country of origin must be clearly identified on the label [266, SFCR]. The country of origin is the country where the last substantial transformation occurred. The wording \"product of\" / \"produit de\" is recommended to help clearly identify the name of the country of origin.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "fish",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The above information must be shown on any part of the label other than solely on the bottom of the container, and for consumer prepackaged fish, in characters of at least 1.6 mm (1/16 inch) in height [210, 245(2) and (3), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The geographic location where fish have been harvested may be indicated on the label, including as part of the common name.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Note: in the SFCR, country of origin is referred to as foreign state of origin.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "foreign state",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_5",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Grade name, class name and size designation": {
+      "title": "Grade name, class name and size designation",
+      "content": [
+        "Please note that all references to the \"Compendium\" in this section refer to the Canadian Grade Compendium.",
+        "The grade names and grade requirements for fish are set out in Volume 8 of the Compendium, while those for imported fish are set out in Volume 9 . Unlike other commodities, import grade names for fish are identical to Canadian grade names.",
+        "All fish, except frozen gutted Pacific salmon, for which grades are prescribed by the SFCR and that are interprovincially traded, imported or exported must be graded, must meet grade requirements set out in the Compendium and must also be labelled with the applicable grade name [306(1), 306(2)(a), SFCR].",
+        "Grading is optional for frozen gutted Pacific salmon. However, when graded and labelled with the applicable grade name, the grade requirements must be adhered to [307(a), SFCR].",
+        "The grade name on prepackaged fish, including consumer prepackaged fish, is only required in 1 official language [205(1), 206(3), SFCR].",
+        "For consumer prepackaged fish, the grade name must be shown on the principal display panel in characters of [312, 319, Schedule 6, SFCR]:",
+        "at least 3.2 mm in height, if the net quantity of the product is 900 g or less at least the minimum character height set out in the following table, which varies according to area of the principal display surface , if the net quantity of the product is more than 900 g.",
+        "Table 1: type height for grade name on consumer prepackaged fish (when net quantity > 900 g) Item Area of principal display surface Minimum character height 1 ≤ 32 cm 2 (5 inches 2 ) 1.6 mm (1/16 inch) 2 > 32 cm 2 (5 inches 2 ) but ≤ 258 cm 2 (40 inches 2 ) 3.2 mm (1/8 inch) 3 > 258 cm 2 (40 inches 2 ) but ≤ 645 cm 2 (100 inches 2 ) 6.4 mm (1/4 inch) 4 > 645 cm 2 (100 inches 2 ) but ≤ 2 580 cm 2 (400 inches 2 ) 9.5 mm (3/8 inch) 5 > 2 580 cm 2 (400 inches 2 ) 12.7 mm (1/2 inch)",
+        "For prepackaged other than consumer prepackaged fish, the grade name must be clearly and prominently shown and readily discernible under customary conditions of purchase and use. When the net quantity of the product is 900 g or less, the grade name must meet a minimum character height of 3.2 mm, similarly to consumer prepackaged fish [208, 319, SFCR].",
+        "When a labelled consumer prepackaged fish is placed inside a second container and results in consumer prepackaged fish, the product is not required to bear the grade name on the second container [318, SFCR].",
+        "Some prepackaged fish interprovincially traded, imported or exported must show a class name or size designation on the label in close proximity to the grade name, when required by Volume 8 of the Compendium. Class name and size designation must be presented in a minimum type height of at least 3.2 mm [317, SFCR].",
+        "Volume 8 of the Compendium indicates that prepackaged fish outlined in the table below must provide the following information:",
+        "Table 2: Required grade, class and size information for prepackaged fish Fish product Required information Pickled split herring Grade name, class name and size designation Pickled fish other than pickled split herring Grade name and size designation Bloaters Grade name Bloater fillets Grade name Frozen Atlantic smelts Grade name Atlantic oysters in the shell Grade name Dried squid Grade name Pacific salmon Grade name Whitefish Grade name"
+      ],
+      "internal_links": [
+        {
+          "link_text": "grade names",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_6",
+          "context_text": "The grade names and grade requirements for fish are set out in Volume 8 of the Compendium, while those for imported fish are set out in Volume 9 . Unlike other commodities, import grade names for fish are identical to Canadian grade names.",
+          "section": "Grade name, class name and size designation",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "fish",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_3",
+          "context_text": "The grade names and grade requirements for fish are set out in Volume 8 of the Compendium, while those for imported fish are set out in Volume 9 . Unlike other commodities, import grade names for fish are identical to Canadian grade names.",
+          "section": "Grade name, class name and size designation",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Volume 8",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-8",
+          "context_text": "The grade names and grade requirements for fish are set out in Volume 8 of the Compendium, while those for imported fish are set out in Volume 9 . Unlike other commodities, import grade names for fish are identical to Canadian grade names.",
+          "section": "Grade name, class name and size designation",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Volume 9",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-9",
+          "context_text": "The grade names and grade requirements for fish are set out in Volume 8 of the Compendium, while those for imported fish are set out in Volume 9 . Unlike other commodities, import grade names for fish are identical to Canadian grade names.",
+          "section": "Grade name, class name and size designation",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Compendium",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-8",
+          "context_text": "All fish, except frozen gutted Pacific salmon, for which grades are prescribed by the SFCR and that are interprovincially traded, imported or exported must be graded, must meet grade requirements set out in the Compendium and must also be labelled with the applicable grade name [306(1), 306(2)(a), SFCR].",
+          "section": "Grade name, class name and size designation",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "principal display panel",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_10",
+          "context_text": "For consumer prepackaged fish, the grade name must be shown on the principal display panel in characters of [312, 319, Schedule 6, SFCR]:",
+          "section": "Grade name, class name and size designation",
+          "element_type": "p",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "principal display surface",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_11",
+          "context_text": "at least 3.2 mm in height, if the net quantity of the product is 900 g or less at least the minimum character height set out in the following table, which varies according to area of the principal display surface , if the net quantity of the product is more than 900 g.",
+          "section": "Grade name, class name and size designation",
+          "element_type": "ul",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Volume 8",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-8",
+          "context_text": "Some prepackaged fish interprovincially traded, imported or exported must show a class name or size designation on the label in close proximity to the grade name, when required by Volume 8 of the Compendium. Class name and size designation must be presented in a minimum type height of at least 3.2 mm [317, SFCR].",
+          "section": "Grade name, class name and size designation",
+          "element_type": "p",
+          "position_in_content": 11
+        },
+        {
+          "link_text": "Volume 8",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-8",
+          "context_text": "Volume 8 of the Compendium indicates that prepackaged fish outlined in the table below must provide the following information:",
+          "section": "Grade name, class name and size designation",
+          "element_type": "p",
+          "position_in_content": 12
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Please note that all references to the \"Compendium\" in this section refer to the Canadian Grade Compendium.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The grade names and grade requirements for fish are set out in Volume 8 of the Compendium, while those for imported fish are set out in Volume 9 . Unlike other commodities, import grade names for fish are identical to Canadian grade names.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "grade names",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_6",
+              "is_external": false
+            },
+            {
+              "text": "fish",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_3",
+              "is_external": false
+            },
+            {
+              "text": "Volume 8",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-8",
+              "is_external": false
+            },
+            {
+              "text": "Volume 9",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-9",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "All fish, except frozen gutted Pacific salmon, for which grades are prescribed by the SFCR and that are interprovincially traded, imported or exported must be graded, must meet grade requirements set out in the Compendium and must also be labelled with the applicable grade name [306(1), 306(2)(a), SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Compendium",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Grading is optional for frozen gutted Pacific salmon. However, when graded and labelled with the applicable grade name, the grade requirements must be adhered to [307(a), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The grade name on prepackaged fish, including consumer prepackaged fish, is only required in 1 official language [205(1), 206(3), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For consumer prepackaged fish, the grade name must be shown on the principal display panel in characters of [312, 319, Schedule 6, SFCR]:",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "principal display panel",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_10",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "at least 3.2 mm in height, if the net quantity of the product is 900 g or less at least the minimum character height set out in the following table, which varies according to area of the principal display surface , if the net quantity of the product is more than 900 g.",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "principal display surface",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_11",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Table 1: type height for grade name on consumer prepackaged fish (when net quantity > 900 g) Item Area of principal display surface Minimum character height 1 ≤ 32 cm 2 (5 inches 2 ) 1.6 mm (1/16 inch) 2 > 32 cm 2 (5 inches 2 ) but ≤ 258 cm 2 (40 inches 2 ) 3.2 mm (1/8 inch) 3 > 258 cm 2 (40 inches 2 ) but ≤ 645 cm 2 (100 inches 2 ) 6.4 mm (1/4 inch) 4 > 645 cm 2 (100 inches 2 ) but ≤ 2 580 cm 2 (400 inches 2 ) 9.5 mm (3/8 inch) 5 > 2 580 cm 2 (400 inches 2 ) 12.7 mm (1/2 inch)",
+          "element_type": "div",
+          "links": []
+        },
+        {
+          "text": "For prepackaged other than consumer prepackaged fish, the grade name must be clearly and prominently shown and readily discernible under customary conditions of purchase and use. When the net quantity of the product is 900 g or less, the grade name must meet a minimum character height of 3.2 mm, similarly to consumer prepackaged fish [208, 319, SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When a labelled consumer prepackaged fish is placed inside a second container and results in consumer prepackaged fish, the product is not required to bear the grade name on the second container [318, SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Some prepackaged fish interprovincially traded, imported or exported must show a class name or size designation on the label in close proximity to the grade name, when required by Volume 8 of the Compendium. Class name and size designation must be presented in a minimum type height of at least 3.2 mm [317, SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Volume 8",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Volume 8 of the Compendium indicates that prepackaged fish outlined in the table below must provide the following information:",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Volume 8",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-grade-compendium-volume-8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Table 2: Required grade, class and size information for prepackaged fish Fish product Required information Pickled split herring Grade name, class name and size designation Pickled fish other than pickled split herring Grade name and size designation Bloaters Grade name Bloater fillets Grade name Frozen Atlantic smelts Grade name Atlantic oysters in the shell Grade name Dried squid Grade name Pacific salmon Grade name Whitefish Grade name",
+          "element_type": "div",
+          "links": []
+        }
+      ]
+    },
+    "Lot code": {
+      "title": "Lot code",
+      "content": [
+        "For information on the requirement for a lot code or other unique identifier for traceability purposes, consult Traceability-specific labelling requirements .",
+        "Please note that recommendations have been made regarding the use of potentially misleading lot codes. For additional information, please refer to the Lot code section on the Date markings and storage instructions page.",
+        "As well, refer to Legibility requirements for other specific labelling topics for information on the legibility requirements that are applicable to lot codes."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Traceability-specific labelling requirements",
+          "href": "https://inspection.canada.ca/en/food-safety-industry/traceability/traceability#a40",
+          "context_text": "For information on the requirement for a lot code or other unique identifier for traceability purposes, consult Traceability-specific labelling requirements .",
+          "section": "Lot code",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Lot code",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s10c2",
+          "context_text": "Please note that recommendations have been made regarding the use of potentially misleading lot codes. For additional information, please refer to the Lot code section on the Date markings and storage instructions page.",
+          "section": "Lot code",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Legibility requirements for other specific labelling topics",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s3c1",
+          "context_text": "As well, refer to Legibility requirements for other specific labelling topics for information on the legibility requirements that are applicable to lot codes.",
+          "section": "Lot code",
+          "element_type": "p",
+          "position_in_content": 3
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "For information on the requirement for a lot code or other unique identifier for traceability purposes, consult Traceability-specific labelling requirements .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Traceability-specific labelling requirements",
+              "href": "https://inspection.canada.ca/en/food-safety-industry/traceability/traceability#a40",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Please note that recommendations have been made regarding the use of potentially misleading lot codes. For additional information, please refer to the Lot code section on the Date markings and storage instructions page.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Lot code",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s10c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "As well, refer to Legibility requirements for other specific labelling topics for information on the legibility requirements that are applicable to lot codes.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Legibility requirements for other specific labelling topics",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s3c1",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Voluntary claims and statements": {
+      "title": "Voluntary claims and statements",
+      "content": [
+        "The term \"light salted\" with respect to fish is specifically permitted in the FDR [B.01.502(2)(k), FDR]. Using this term does not trigger the Nutrition Facts table on exempted foods. Refer to Composition and quality claims for more information on \"light\" claims that are specifically permitted under B.01.502(2) of the FDR.",
+        "Refer to Nutrient content claims for more information on \"light\" claims. For more information on salted fish, refer to the Additional terms section.",
+        "Fish products may bear the claim \"boneless\" provided that deboning has been completed, including the removal of pin bones.",
+        "The following tolerances reflect international guidance documents in this area (for example, Codex Alimentarius) and therefore, when adhered to, would be considered to substantiate a \"boneless\" claim:",
+        "not more than 1 bone ≥ 10 mm in length per kg of product, or not more than 1 bone ≥ 1 mm in diameter per kg of product, or not more than 1 bone ≥ 5 mm in length and its diameter is < 2 mm per kg of product",
+        "The presence of a foot of a bone (where it has been attached to the vertebra) is not counted in the above limits if its width is ≤ 2 mm, or if it can easily be stripped off with a fingernail.",
+        "Adherence to stricter standards with respect to deboning than those outlined above would also be considered to substantiate a \"boneless\" claim.",
+        "Refer to Preventive control plan (PCP) content for consumer protection for examples of measures and supporting documents to substantiate the validity of claims on food labels and ensure they are truthful and not misleading.",
+        "Claims concerning the method of production of fish and fish products are permissible provided they meet the criteria detailed on the Method of production claims page.",
+        "A licence holder is permitted to voluntarily apply to prepackaged fish that is interprovincially traded or exported from Canada the inspection legend set out in Figure 1 or 2 of Schedule 2 of the SFCR, provided the conditions set out in section 182 of the SFCR are met, including the standards set out in the Canadian Standards of Identity, Volume 3 - Fish . Refer to Inspection marks for more information on inspection legends.",
+        "When the inspection legends are used, it is the responsibility of the regulated party to accurately reproduce these. Refer to Legibility requirements for the inspection legend for an image of Figures 1 and 2 of Schedule 2 of the SFCR and for information on minimum type size and other legibility requirements."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Composition and quality claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/composition-and-quality",
+          "context_text": "The term \"light salted\" with respect to fish is specifically permitted in the FDR [B.01.502(2)(k), FDR]. Using this term does not trigger the Nutrition Facts table on exempted foods. Refer to Composition and quality claims for more information on \"light\" claims that are specifically permitted under B.01.502(2) of the FDR.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Nutrient content claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content",
+          "context_text": "Refer to Nutrient content claims for more information on \"light\" claims. For more information on salted fish, refer to the Additional terms section.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Additional terms",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a3",
+          "context_text": "Refer to Nutrient content claims for more information on \"light\" claims. For more information on salted fish, refer to the Additional terms section.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Preventive control plan (PCP) content for consumer protection",
+          "href": "https://inspection.canada.ca/en/food-safety-industry/preventive-control-plans/regulatory-requirements-0#a3",
+          "context_text": "Refer to Preventive control plan (PCP) content for consumer protection for examples of measures and supporting documents to substantiate the validity of claims on food labels and ensure they are truthful and not misleading.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Method of production claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/method-production-claims",
+          "context_text": "Claims concerning the method of production of fish and fish products are permissible provided they meet the criteria detailed on the Method of production claims page.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 9
+        },
+        {
+          "link_text": "fish",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_3",
+          "context_text": "A licence holder is permitted to voluntarily apply to prepackaged fish that is interprovincially traded or exported from Canada the inspection legend set out in Figure 1 or 2 of Schedule 2 of the SFCR, provided the conditions set out in section 182 of the SFCR are met, including the standards set out in the Canadian Standards of Identity, Volume 3 - Fish . Refer to Inspection marks for more information on inspection legends.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 10
+        },
+        {
+          "link_text": "Canadian Standards of Identity, Volume 3 - Fish",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+          "context_text": "A licence holder is permitted to voluntarily apply to prepackaged fish that is interprovincially traded or exported from Canada the inspection legend set out in Figure 1 or 2 of Schedule 2 of the SFCR, provided the conditions set out in section 182 of the SFCR are met, including the standards set out in the Canadian Standards of Identity, Volume 3 - Fish . Refer to Inspection marks for more information on inspection legends.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 10
+        },
+        {
+          "link_text": "Inspection marks",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/pictures-vignettes-logos-and-trademarks-food#s6c3",
+          "context_text": "A licence holder is permitted to voluntarily apply to prepackaged fish that is interprovincially traded or exported from Canada the inspection legend set out in Figure 1 or 2 of Schedule 2 of the SFCR, provided the conditions set out in section 182 of the SFCR are met, including the standards set out in the Canadian Standards of Identity, Volume 3 - Fish . Refer to Inspection marks for more information on inspection legends.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 10
+        },
+        {
+          "link_text": "Legibility requirements for the inspection legend",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s3c1",
+          "context_text": "When the inspection legends are used, it is the responsibility of the regulated party to accurately reproduce these. Refer to Legibility requirements for the inspection legend for an image of Figures 1 and 2 of Schedule 2 of the SFCR and for information on minimum type size and other legibility requirements.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 11
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "The term \"light salted\" with respect to fish is specifically permitted in the FDR [B.01.502(2)(k), FDR]. Using this term does not trigger the Nutrition Facts table on exempted foods. Refer to Composition and quality claims for more information on \"light\" claims that are specifically permitted under B.01.502(2) of the FDR.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Composition and quality claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/composition-and-quality",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Refer to Nutrient content claims for more information on \"light\" claims. For more information on salted fish, refer to the Additional terms section.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Nutrient content claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content",
+              "is_external": false
+            },
+            {
+              "text": "Additional terms",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Fish products may bear the claim \"boneless\" provided that deboning has been completed, including the removal of pin bones.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The following tolerances reflect international guidance documents in this area (for example, Codex Alimentarius) and therefore, when adhered to, would be considered to substantiate a \"boneless\" claim:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "not more than 1 bone ≥ 10 mm in length per kg of product, or not more than 1 bone ≥ 1 mm in diameter per kg of product, or not more than 1 bone ≥ 5 mm in length and its diameter is < 2 mm per kg of product",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "The presence of a foot of a bone (where it has been attached to the vertebra) is not counted in the above limits if its width is ≤ 2 mm, or if it can easily be stripped off with a fingernail.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Adherence to stricter standards with respect to deboning than those outlined above would also be considered to substantiate a \"boneless\" claim.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Refer to Preventive control plan (PCP) content for consumer protection for examples of measures and supporting documents to substantiate the validity of claims on food labels and ensure they are truthful and not misleading.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Preventive control plan (PCP) content for consumer protection",
+              "href": "https://inspection.canada.ca/en/food-safety-industry/preventive-control-plans/regulatory-requirements-0#a3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Claims concerning the method of production of fish and fish products are permissible provided they meet the criteria detailed on the Method of production claims page.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Method of production claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/method-production-claims",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "A licence holder is permitted to voluntarily apply to prepackaged fish that is interprovincially traded or exported from Canada the inspection legend set out in Figure 1 or 2 of Schedule 2 of the SFCR, provided the conditions set out in section 182 of the SFCR are met, including the standards set out in the Canadian Standards of Identity, Volume 3 - Fish . Refer to Inspection marks for more information on inspection legends.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "fish",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish#a12_3",
+              "is_external": false
+            },
+            {
+              "text": "Canadian Standards of Identity, Volume 3 - Fish",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3",
+              "is_external": false
+            },
+            {
+              "text": "Inspection marks",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/pictures-vignettes-logos-and-trademarks-food#s6c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "When the inspection legends are used, it is the responsibility of the regulated party to accurately reproduce these. Refer to Legibility requirements for the inspection legend for an image of Figures 1 and 2 of Schedule 2 of the SFCR and for information on minimum type size and other legibility requirements.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Legibility requirements for the inspection legend",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s3c1",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
