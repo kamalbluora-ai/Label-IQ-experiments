@@ -1,0 +1,768 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions",
+  "citation_title": "Date markings and storage instructions",
+  "sections": {
+    "Requirements": {
+      "title": "Requirements",
+      "content": [
+        "The Food and Drugs Regulations (FDR) require prepackaged products with a durable life of 90 days or less to be labelled with date markings and storage instructions (where applicable) [B.01.007, FDR ]. For foods with a durable life greater than 90 days, refer to Voluntary declaration .",
+        "Prepackaged food with a durable life of 90 days or less and packaged at a place other than the retail premises from which it will be sold must be labelled with [B.01.007(1.1)(b), FDR ]:",
+        "a durable life date (known as \"best before\" date), and storage instructions (if they differ from normal room temperature)",
+        "Prepackaged food with a durable life of 90 days or less and packaged on the retail premises from which it is sold may be labelled with either:",
+        "the packaging date (known as \"packaged on\" date), and the durable life of the food on the label or on a poster next to the food [B.01.007(1.1)(c), FDR ]",
+        "or",
+        "a durable life date (known as \"best before\" date), and storage instructions (if they differ from normal room temperature)",
+        "The above flexibility for food packed at retail reflects the intent of the \"packaged on\" date requirement, which is to give retailers an alternative, but equally effective, method to express the \"best before\" date on foods the retailer may not have manufactured. It should be noted that consumers sometimes contact the CFIA seeking \"packaged on\" date information when a durable life date is used at retail. In these situations, consumers will be referred to the retailer to provide this information.",
+        "Note: the FDR specify the manner in which date markings must be declared. Refer to Manner of declaring for more information.",
+        "It is the responsibility of the regulated party to determine if the product has a durable life of 90 days or less and the specific durable life information for the products they sell. The durable life of products or categories is not prescribed in regulation.",
+        "Any changes made to the durable life information that result in false or misleading information on the label are prohibited by subsection 5(1) of the Food and Drugs Act (FDA).",
+        "Note: all foods sold in Canada must be safe for consumption [4(1), FDA]. A durable life date is not an indicator of food safety, neither before nor after the date. It applies to unopened products only; once opened, the shelf life of a food may change. Products may be found for sale after the \"best before\" date has passed as the date is based on freshness and quality, rather than safety. When this date has passed, the food may lose some of its freshness and flavour, or its texture may have changed. Some of its nutritional value, such as vitamin C content, may also be lost.",
+        "The following foods are exempt from the requirement to be labelled with a durable life date or packaging date [B.01.007(3), FDR ]:",
+        "prepackaged fresh fruits and vegetables (including prepackaged, chopped or shredded fresh fruit and vegetables) prepackaged individual portions of food served by restaurants, airlines or other commercial enterprises with meals or snacks (such as milk, cheese packets) as they are intended for immediate consumption prepackaged individual servings of food prepared by a commissary Footnote 1 and sold in automatic vending machines or mobile canteens (for example, sandwiches), and prepackaged donuts",
+        "Foods with a shelf life greater than 90 days (for example, cereals, semi-dry cured or dry cured sausage, etc. ) are not required to be labelled with a \"best before\" date and storage instructions or a packaging date and durable life information. If manufacturers and retailers choose to provide customers with this information, they must follow the required manner of declaring [B.01.007(6), FDR ]."
+      ],
+      "internal_links": [
+        {
+          "link_text": "prepackaged products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s27c7",
+          "context_text": "The Food and Drugs Regulations (FDR) require prepackaged products with a durable life of 90 days or less to be labelled with date markings and storage instructions (where applicable) [B.01.007, FDR ]. For foods with a durable life greater than 90 days, refer to Voluntary declaration .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "durable life",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s20c7",
+          "context_text": "The Food and Drugs Regulations (FDR) require prepackaged products with a durable life of 90 days or less to be labelled with date markings and storage instructions (where applicable) [B.01.007, FDR ]. For foods with a durable life greater than 90 days, refer to Voluntary declaration .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Voluntary declaration",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s6c1",
+          "context_text": "The Food and Drugs Regulations (FDR) require prepackaged products with a durable life of 90 days or less to be labelled with date markings and storage instructions (where applicable) [B.01.007, FDR ]. For foods with a durable life greater than 90 days, refer to Voluntary declaration .",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "durable life date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s21c7",
+          "context_text": "a durable life date (known as \"best before\" date), and storage instructions (if they differ from normal room temperature)",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "storage instructions",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c5",
+          "context_text": "a durable life date (known as \"best before\" date), and storage instructions (if they differ from normal room temperature)",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "packaging date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s24c7",
+          "context_text": "the packaging date (known as \"packaged on\" date), and the durable life of the food on the label or on a poster next to the food [B.01.007(1.1)(c), FDR ]",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "storage instructions",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c5",
+          "context_text": "a durable life date (known as \"best before\" date), and storage instructions (if they differ from normal room temperature)",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Manner of declaring",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+          "context_text": "Note: the FDR specify the manner in which date markings must be declared. Refer to Manner of declaring for more information.",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 9
+        },
+        {
+          "link_text": "Footnote 1",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#fn1",
+          "context_text": "prepackaged fresh fruits and vegetables (including prepackaged, chopped or shredded fresh fruit and vegetables) prepackaged individual portions of food served by restaurants, airlines or other commercial enterprises with meals or snacks (such as milk, cheese packets) as they are intended for immediate consumption prepackaged individual servings of food prepared by a commissary Footnote 1 and sold in automatic vending machines or mobile canteens (for example, sandwiches), and prepackaged donuts",
+          "section": "Requirements",
+          "element_type": "ul",
+          "position_in_content": 14
+        },
+        {
+          "link_text": "manner of declaring",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+          "context_text": "Foods with a shelf life greater than 90 days (for example, cereals, semi-dry cured or dry cured sausage, etc. ) are not required to be labelled with a \"best before\" date and storage instructions or a packaging date and durable life information. If manufacturers and retailers choose to provide customers with this information, they must follow the required manner of declaring [B.01.007(6), FDR ].",
+          "section": "Requirements",
+          "element_type": "p",
+          "position_in_content": 15
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "The Food and Drugs Regulations (FDR) require prepackaged products with a durable life of 90 days or less to be labelled with date markings and storage instructions (where applicable) [B.01.007, FDR ]. For foods with a durable life greater than 90 days, refer to Voluntary declaration .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "prepackaged products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s27c7",
+              "is_external": false
+            },
+            {
+              "text": "durable life",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s20c7",
+              "is_external": false
+            },
+            {
+              "text": "Voluntary declaration",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s6c1",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Prepackaged food with a durable life of 90 days or less and packaged at a place other than the retail premises from which it will be sold must be labelled with [B.01.007(1.1)(b), FDR ]:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "a durable life date (known as \"best before\" date), and storage instructions (if they differ from normal room temperature)",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "durable life date",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s21c7",
+              "is_external": false
+            },
+            {
+              "text": "storage instructions",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c5",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Prepackaged food with a durable life of 90 days or less and packaged on the retail premises from which it is sold may be labelled with either:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the packaging date (known as \"packaged on\" date), and the durable life of the food on the label or on a poster next to the food [B.01.007(1.1)(c), FDR ]",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "packaging date",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s24c7",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "or",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "a durable life date (known as \"best before\" date), and storage instructions (if they differ from normal room temperature)",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "storage instructions",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c5",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The above flexibility for food packed at retail reflects the intent of the \"packaged on\" date requirement, which is to give retailers an alternative, but equally effective, method to express the \"best before\" date on foods the retailer may not have manufactured. It should be noted that consumers sometimes contact the CFIA seeking \"packaged on\" date information when a durable life date is used at retail. In these situations, consumers will be referred to the retailer to provide this information.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Note: the FDR specify the manner in which date markings must be declared. Refer to Manner of declaring for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Manner of declaring",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "It is the responsibility of the regulated party to determine if the product has a durable life of 90 days or less and the specific durable life information for the products they sell. The durable life of products or categories is not prescribed in regulation.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Any changes made to the durable life information that result in false or misleading information on the label are prohibited by subsection 5(1) of the Food and Drugs Act (FDA).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Note: all foods sold in Canada must be safe for consumption [4(1), FDA]. A durable life date is not an indicator of food safety, neither before nor after the date. It applies to unopened products only; once opened, the shelf life of a food may change. Products may be found for sale after the \"best before\" date has passed as the date is based on freshness and quality, rather than safety. When this date has passed, the food may lose some of its freshness and flavour, or its texture may have changed. Some of its nutritional value, such as vitamin C content, may also be lost.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The following foods are exempt from the requirement to be labelled with a durable life date or packaging date [B.01.007(3), FDR ]:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "prepackaged fresh fruits and vegetables (including prepackaged, chopped or shredded fresh fruit and vegetables) prepackaged individual portions of food served by restaurants, airlines or other commercial enterprises with meals or snacks (such as milk, cheese packets) as they are intended for immediate consumption prepackaged individual servings of food prepared by a commissary Footnote 1 and sold in automatic vending machines or mobile canteens (for example, sandwiches), and prepackaged donuts",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Footnote 1",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#fn1",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Foods with a shelf life greater than 90 days (for example, cereals, semi-dry cured or dry cured sausage, etc. ) are not required to be labelled with a \"best before\" date and storage instructions or a packaging date and durable life information. If manufacturers and retailers choose to provide customers with this information, they must follow the required manner of declaring [B.01.007(6), FDR ].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "manner of declaring",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Manner of declaring": {
+      "title": "Manner of declaring",
+      "content": [
+        "Durable life dates must be identified using the words \"best before\" and \" meilleur avant \". The words and symbols associated with the packaging date are the same as those prescribed for the durable life date except that the words \"packaged on\" and \" empaqueté le \" replace \"best before\" and \" meilleur avant \" [B.01.007(1.2), FDR ].",
+        "In displaying the actual date, the year is shown first. Showing the year is only mandatory when its declaration is needed for the sake of clarity (for example, when the durable life goes into the next year). In this case, it is expressed by at least the last 2 numbers of the year [B.01.007(4)(b), FDR ].",
+        "The month shall be shown in words after the year (if the year is shown). The month must be in both French and English on consumer packages or indicated by using the specified bilingual symbols [B.01.007(4)(c), FDR ].",
+        "The bilingual symbols for the months in the durable life date are as follows [B.01.007(5), FDR ]:",
+        "JA for January FE for February MR for March AL for April MA for May JN for June JL for July AU for August SE for September OC for October NO for November DE for December",
+        "The day of the month is required to be shown after the month, expressed in numbers [B.01.007(4)(d), FDR ].",
+        "\"Best before\" dates and storage instructions (where applicable) or \"packaged on\" dates and durable life information must be bilingual on consumer packages (unless the product qualifies for an exemption from bilingual labelling ). Durable life information on a poster next to the food may be unilingual provided the mandatory information is bilingual on the label.",
+        "Durable life information must meet the general legibility requirements under the FDA. Refer to Legibility and location of food labelling information for additional information on these requirements.",
+        "The words associated with the durable life date (\"best before\" and \" meilleur avant \") or the packaging date (\"packaged on\" and \" empaqueté le \") must be grouped together with the durable life date or packaging date, as applicable, unless a clear explanation of the significance of the date appears elsewhere on the label (for example, \"Best if consumed by the date indicated on the lid\") [B.01.007(1.2) and (4)(a), FDR].",
+        "The durable life date may be shown on any part of the label, including that part, if any, that is applied to the bottom of the container provided a reference to its location on the bottom is shown elsewhere on the label (for example, \"Best before: see date on bottom\") [B.01.005(4), FDR].",
+        "The packaging date must not be shown on that part of the label, if any, that is applied to the bottom of the container [B.01.005(1), FDR ].",
+        "Neither the durable life date, packaging date, their associated terms, the clear explanation of the significance of these dates or the reference to location of the durable life date on the bottom of the container must be grouped with the list of ingredients [B.01.008(1)(a)].",
+        "The table below outlines the manner of declaring and location for each requirement. Some requirements have more than 1 way in which they may be declared, see Examples of acceptable declarations .",
+        "Note: the requirements in the above table, when on the label, are not required to be grouped with the list of ingredients [B.01.008(1)(a), FDR ].",
+        "Some product labels include lot codes, which represent information related to the manufacturing of the product. It is not recommended to use the letters \"BB/MA\" as part of the lot code, because this has the potential to be mistaken by consumers as indicating a best before date.",
+        "If the durable life date of a prepackaged product is dually used as the lot code, it must be shown in the prescribed manner of declaring .",
+        "For information on the requirement for a lot code or other unique identifier for traceability purposes, consult Traceability-specific labelling requirements and What to consider when selecting a lot code .",
+        "Best before 17 JN 28 Meilleur avant",
+        "or if the year is not needed for clarity",
+        "Best before June 28 juin Meilleur avant",
+        "If storage instructions are needed:",
+        "Best before/ Meilleur avant JN 28 Keep refrigerated/ Garder réfrigéré",
+        "Packaged on/ Empaqueté le 17 JN 28 Best if consumed within 5 days after the packaging date appearing on the label/ Meilleur si consommé dans les 5 jours suivant la date d'emballage sur l'étiquette.",
+        "or",
+        "Packaged on/ Empaqueté le June 28 juin Best before/ meilleur avant July 3 juillet"
+      ],
+      "internal_links": [
+        {
+          "link_text": "bilingual labelling",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling",
+          "context_text": "\"Best before\" dates and storage instructions (where applicable) or \"packaged on\" dates and durable life information must be bilingual on consumer packages (unless the product qualifies for an exemption from bilingual labelling ). Durable life information on a poster next to the food may be unilingual provided the mandatory information is bilingual on the label.",
+          "section": "Manner of declaring",
+          "element_type": "p",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Legibility and location of food labelling information",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location",
+          "context_text": "Durable life information must meet the general legibility requirements under the FDA. Refer to Legibility and location of food labelling information for additional information on these requirements.",
+          "section": "Manner of declaring",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "Examples of acceptable declarations",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s11c2",
+          "context_text": "The table below outlines the manner of declaring and location for each requirement. Some requirements have more than 1 way in which they may be declared, see Examples of acceptable declarations .",
+          "section": "Manner of declaring",
+          "element_type": "p",
+          "position_in_content": 13
+        },
+        {
+          "link_text": "manner of declaring",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+          "context_text": "If the durable life date of a prepackaged product is dually used as the lot code, it must be shown in the prescribed manner of declaring .",
+          "section": "Manner of declaring",
+          "element_type": "p",
+          "position_in_content": 16
+        },
+        {
+          "link_text": "Traceability-specific labelling requirements",
+          "href": "https://inspection.canada.ca/en/food-safety-industry/traceability/traceability#a40",
+          "context_text": "For information on the requirement for a lot code or other unique identifier for traceability purposes, consult Traceability-specific labelling requirements and What to consider when selecting a lot code .",
+          "section": "Manner of declaring",
+          "element_type": "p",
+          "position_in_content": 17
+        },
+        {
+          "link_text": "What to consider when selecting a lot code",
+          "href": "https://inspection.canada.ca/en/food-safety-industry/traceability/lot-code",
+          "context_text": "For information on the requirement for a lot code or other unique identifier for traceability purposes, consult Traceability-specific labelling requirements and What to consider when selecting a lot code .",
+          "section": "Manner of declaring",
+          "element_type": "p",
+          "position_in_content": 17
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Durable life dates must be identified using the words \"best before\" and \" meilleur avant \". The words and symbols associated with the packaging date are the same as those prescribed for the durable life date except that the words \"packaged on\" and \" empaqueté le \" replace \"best before\" and \" meilleur avant \" [B.01.007(1.2), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In displaying the actual date, the year is shown first. Showing the year is only mandatory when its declaration is needed for the sake of clarity (for example, when the durable life goes into the next year). In this case, it is expressed by at least the last 2 numbers of the year [B.01.007(4)(b), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The month shall be shown in words after the year (if the year is shown). The month must be in both French and English on consumer packages or indicated by using the specified bilingual symbols [B.01.007(4)(c), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The bilingual symbols for the months in the durable life date are as follows [B.01.007(5), FDR ]:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "JA for January FE for February MR for March AL for April MA for May JN for June JL for July AU for August SE for September OC for October NO for November DE for December",
+          "element_type": "div",
+          "links": []
+        },
+        {
+          "text": "The day of the month is required to be shown after the month, expressed in numbers [B.01.007(4)(d), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "\"Best before\" dates and storage instructions (where applicable) or \"packaged on\" dates and durable life information must be bilingual on consumer packages (unless the product qualifies for an exemption from bilingual labelling ). Durable life information on a poster next to the food may be unilingual provided the mandatory information is bilingual on the label.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "bilingual labelling",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Durable life information must meet the general legibility requirements under the FDA. Refer to Legibility and location of food labelling information for additional information on these requirements.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Legibility and location of food labelling information",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The words associated with the durable life date (\"best before\" and \" meilleur avant \") or the packaging date (\"packaged on\" and \" empaqueté le \") must be grouped together with the durable life date or packaging date, as applicable, unless a clear explanation of the significance of the date appears elsewhere on the label (for example, \"Best if consumed by the date indicated on the lid\") [B.01.007(1.2) and (4)(a), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The durable life date may be shown on any part of the label, including that part, if any, that is applied to the bottom of the container provided a reference to its location on the bottom is shown elsewhere on the label (for example, \"Best before: see date on bottom\") [B.01.005(4), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The packaging date must not be shown on that part of the label, if any, that is applied to the bottom of the container [B.01.005(1), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Neither the durable life date, packaging date, their associated terms, the clear explanation of the significance of these dates or the reference to location of the durable life date on the bottom of the container must be grouped with the list of ingredients [B.01.008(1)(a)].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The table below outlines the manner of declaring and location for each requirement. Some requirements have more than 1 way in which they may be declared, see Examples of acceptable declarations .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Examples of acceptable declarations",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s11c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Note: the requirements in the above table, when on the label, are not required to be grouped with the list of ingredients [B.01.008(1)(a), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Some product labels include lot codes, which represent information related to the manufacturing of the product. It is not recommended to use the letters \"BB/MA\" as part of the lot code, because this has the potential to be mistaken by consumers as indicating a best before date.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If the durable life date of a prepackaged product is dually used as the lot code, it must be shown in the prescribed manner of declaring .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "manner of declaring",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For information on the requirement for a lot code or other unique identifier for traceability purposes, consult Traceability-specific labelling requirements and What to consider when selecting a lot code .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Traceability-specific labelling requirements",
+              "href": "https://inspection.canada.ca/en/food-safety-industry/traceability/traceability#a40",
+              "is_external": false
+            },
+            {
+              "text": "What to consider when selecting a lot code",
+              "href": "https://inspection.canada.ca/en/food-safety-industry/traceability/lot-code",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Best before 17 JN 28 Meilleur avant",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "or if the year is not needed for clarity",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Best before June 28 juin Meilleur avant",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If storage instructions are needed:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Best before/ Meilleur avant JN 28 Keep refrigerated/ Garder réfrigéré",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Packaged on/ Empaqueté le 17 JN 28 Best if consumed within 5 days after the packaging date appearing on the label/ Meilleur si consommé dans les 5 jours suivant la date d'emballage sur l'étiquette.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "or",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Packaged on/ Empaqueté le June 28 juin Best before/ meilleur avant July 3 juillet",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Date marking information on specific products": {
+      "title": "Date marking information on specific products",
+      "content": [
+        "Foods that bear a packaging date and are repackaged by a retailer must maintain the original packaging date applied when the product was first packed or weighed as per B.01.007(1) of the FDR . This applies even when alterations that do not prolong the durable life of the product occur, such as trimming, deboning, muscle separation and grinding.",
+        "If the product is removed from the display and significant processing has occurred to prolong the durable life of the product, for example, it is combined with other ingredients to create a new product, or is cooked or cured, then the original packaging date is rendered meaningless. In this circumstance, a new date would be used. The retailer must consider the age and condition of the product when deciding the appropriate durable life information.",
+        "Foods that are thawed at retail prior to sale without being repackaged are not required to bear a durable life date or a packaging date. The requirement to apply date markings is related to the time that the product is being packaged. If a product is in a frozen state at the time that it is being packaged, then a best before date or packaging date need not be applied because the product is deemed to have a durable life date of greater than 90 days. In the case of single ingredient meat, poultry, marine or fresh water animal that are thawed prior to sale, the words \"previously frozen\" must appear on the label. Refer to \"Previously frozen meat and poultry products\" on the Meat and poultry products page or Previously frozen fish and fish products for more information.",
+        "In the case of durable life requirements, the definition for durable life specifies \"when a prepackaged product is packaged for retail sale\". Therefore, the intent of the durable life regulations applies to products that will be sold at the retail level and not to shipping containers. A durable life date is not mandatory on shipping containers unless these are to be sold at the retail level of trade.",
+        "In addition, subsection B.01.007(6) of the FDR (which specifies that if a durable life date is declared it must follow the required manner of declaring ) would not apply to a date marking on a shipping container that is not offered for sale at retail as it is not considered a \"durable life date\" marking system. However, if a shipping container is sold at retail, the durable life date marking requirements, as set out under B.01.007 of the FDR , apply.",
+        "Modified atmosphere packaging (MAP) is a technique that alters the proportion of gases within a package in order to improve the shelf life of fresh or minimally processed foods. As the purpose of MAP is to extend the shelf life of a food, if the product is removed from a modified atmosphere package at retail, the durable life of that product may change and this must be factored into the establishment of appropriate durable life information.",
+        "If a manufacturer uses MAP , durable life information must be provided in one of the following manners when sold at retail:",
+        "product in a modified atmosphere package when packaged by manufacturer and sold in original packaging manufacturer is required to apply durable life date and storage instructions (if appropriate) on label product removed from the modified atmosphere package and re-packaged and/or processed further by retailer retailer is required to apply either a \"packaged on\" date on the label with durable life information on the label or on a poster next to the food, or the durable life date and storage instructions on the label prepackaged product removed from a modified atmosphere package without being re-packaged when the retailer removes the product from the modified atmosphere package and offers it for sale, this may affect the durable life of the food. Therefore, the retailer becomes responsible to ensure that accurate and truthful durable life information is provided for the food. This may be accomplished by applying a \"packaged on\" date, reflecting the date the product was removed from MAP, and associated durable life information"
+      ],
+      "internal_links": [
+        {
+          "link_text": "Meat and poultry products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/meat-and-poultry-products",
+          "context_text": "Foods that are thawed at retail prior to sale without being repackaged are not required to bear a durable life date or a packaging date. The requirement to apply date markings is related to the time that the product is being packaged. If a product is in a frozen state at the time that it is being packaged, then a best before date or packaging date need not be applied because the product is deemed to have a durable life date of greater than 90 days. In the case of single ingredient meat, poultry, marine or fresh water animal that are thawed prior to sale, the words \"previously frozen\" must appear on the label. Refer to \"Previously frozen meat and poultry products\" on the Meat and poultry products page or Previously frozen fish and fish products for more information.",
+          "section": "Date marking information on specific products",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "Previously frozen fish and fish products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish",
+          "context_text": "Foods that are thawed at retail prior to sale without being repackaged are not required to bear a durable life date or a packaging date. The requirement to apply date markings is related to the time that the product is being packaged. If a product is in a frozen state at the time that it is being packaged, then a best before date or packaging date need not be applied because the product is deemed to have a durable life date of greater than 90 days. In the case of single ingredient meat, poultry, marine or fresh water animal that are thawed prior to sale, the words \"previously frozen\" must appear on the label. Refer to \"Previously frozen meat and poultry products\" on the Meat and poultry products page or Previously frozen fish and fish products for more information.",
+          "section": "Date marking information on specific products",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "manner of declaring",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+          "context_text": "In addition, subsection B.01.007(6) of the FDR (which specifies that if a durable life date is declared it must follow the required manner of declaring ) would not apply to a date marking on a shipping container that is not offered for sale at retail as it is not considered a \"durable life date\" marking system. However, if a shipping container is sold at retail, the durable life date marking requirements, as set out under B.01.007 of the FDR , apply.",
+          "section": "Date marking information on specific products",
+          "element_type": "p",
+          "position_in_content": 5
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Foods that bear a packaging date and are repackaged by a retailer must maintain the original packaging date applied when the product was first packed or weighed as per B.01.007(1) of the FDR . This applies even when alterations that do not prolong the durable life of the product occur, such as trimming, deboning, muscle separation and grinding.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If the product is removed from the display and significant processing has occurred to prolong the durable life of the product, for example, it is combined with other ingredients to create a new product, or is cooked or cured, then the original packaging date is rendered meaningless. In this circumstance, a new date would be used. The retailer must consider the age and condition of the product when deciding the appropriate durable life information.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Foods that are thawed at retail prior to sale without being repackaged are not required to bear a durable life date or a packaging date. The requirement to apply date markings is related to the time that the product is being packaged. If a product is in a frozen state at the time that it is being packaged, then a best before date or packaging date need not be applied because the product is deemed to have a durable life date of greater than 90 days. In the case of single ingredient meat, poultry, marine or fresh water animal that are thawed prior to sale, the words \"previously frozen\" must appear on the label. Refer to \"Previously frozen meat and poultry products\" on the Meat and poultry products page or Previously frozen fish and fish products for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Meat and poultry products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/meat-and-poultry-products",
+              "is_external": false
+            },
+            {
+              "text": "Previously frozen fish and fish products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/fish",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "In the case of durable life requirements, the definition for durable life specifies \"when a prepackaged product is packaged for retail sale\". Therefore, the intent of the durable life regulations applies to products that will be sold at the retail level and not to shipping containers. A durable life date is not mandatory on shipping containers unless these are to be sold at the retail level of trade.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In addition, subsection B.01.007(6) of the FDR (which specifies that if a durable life date is declared it must follow the required manner of declaring ) would not apply to a date marking on a shipping container that is not offered for sale at retail as it is not considered a \"durable life date\" marking system. However, if a shipping container is sold at retail, the durable life date marking requirements, as set out under B.01.007 of the FDR , apply.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "manner of declaring",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Modified atmosphere packaging (MAP) is a technique that alters the proportion of gases within a package in order to improve the shelf life of fresh or minimally processed foods. As the purpose of MAP is to extend the shelf life of a food, if the product is removed from a modified atmosphere package at retail, the durable life of that product may change and this must be factored into the establishment of appropriate durable life information.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If a manufacturer uses MAP , durable life information must be provided in one of the following manners when sold at retail:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "product in a modified atmosphere package when packaged by manufacturer and sold in original packaging manufacturer is required to apply durable life date and storage instructions (if appropriate) on label product removed from the modified atmosphere package and re-packaged and/or processed further by retailer retailer is required to apply either a \"packaged on\" date on the label with durable life information on the label or on a poster next to the food, or the durable life date and storage instructions on the label prepackaged product removed from a modified atmosphere package without being re-packaged when the retailer removes the product from the modified atmosphere package and offers it for sale, this may affect the durable life of the food. Therefore, the retailer becomes responsible to ensure that accurate and truthful durable life information is provided for the food. This may be accomplished by applying a \"packaged on\" date, reflecting the date the product was removed from MAP, and associated durable life information",
+          "element_type": "ul",
+          "links": []
+        }
+      ]
+    },
+    "Other date marking systems": {
+      "title": "Other date marking systems",
+      "content": [
+        "\"Expiration date\" means the date after which the manufacturer does not recommend that the product be consumed, and up to which it maintains its microbiological and physical stability and nutrient content declared on the label [B.24.001, B.25.001, FDR].",
+        "Expiration dates are not required on all foods, but only on foods for special dietary use, infant formula foods and human milk fortifiers. A food for special dietary use means food that has been specially processed or formulated to meet the particular requirements of a person [B.24.001, FDR ].",
+        "The FDR requires that expiration dates be shown on the label of the following foods:",
+        "formulated liquid diets (a nutritionally complete diet for persons using oral or tube feeding methods) [B.24.103(g), FDR] foods represented for use in a very low-energy diet (foods sold only by a pharmacist and only with a written order from a physician) [B.24.304(h), FDR] meal replacements (a formulated food that, by itself, can replace 1 or more daily meals) [B.24.202(d), FDR] nutritional supplements (a food sold or represented as a supplement to a diet that may be inadequate in energy and essential nutrients) [B.24.202(d), FDR] infant formula and foods represented as containing infant formula [B.25.057(1)(f) and (2)(f), FDR] human milk fortifiers [B.25.020(1)(h) and (3), FDR]",
+        "These foods should not be eaten if the expiration date has passed as they have strict compositional and nutritional specifications which might not be met after the date. For this reason, it is prohibited to sell any one of these foods after the expiration date declared on the label has passed. It is also prohibited to sell it as an unpackaged food or to use it as an ingredient in another food [216.1, SFCR].",
+        "The expiration date may be shown on any part of the label, including that part, if any, that is applied to the bottom of the container provided a reference to its location on the bottom is shown elsewhere on the label. The reference is not required to be grouped with the list of ingredients [B.01.005(4), B.01.008(1)(a), FDR ]. There are no prescribed expressions for \"expiration date\" although the term \"Exp.\" is often used.",
+        "The FDR state the terms \"use by\" and \" employez avant \" may replace \"best before\" for pre-packaged fresh yeast only . It must be presented in the same form and manner as the \"best before\" date [B.01.007(7), FDR ].",
+        "Other date marking systems such as \"prepared on\" dates, \"freeze by\" dates and \"manufactured on\" dates may be of value to the consumer or the manufacturer (for example, lot codes) and therefore are not prohibited on food products, provided they are not misleading and the label meets appropriate requirements. However, they do not replace the requirements for \"best before\" dates and any dating system that has the same intent as durable life information must follow the prescribed manner of declaring .",
+        "It is acceptable to declare a \"freeze by\" date in addition to, and that is the same as, the \"best before\" date in a clear statement indicating that the product can be frozen if not consumed by the \"best before\" date.",
+        "For example: Best before / Meilleur avant or Freeze by / Congelez avant June 28 juin"
+      ],
+      "internal_links": [
+        {
+          "link_text": "manner of declaring",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+          "context_text": "Other date marking systems such as \"prepared on\" dates, \"freeze by\" dates and \"manufactured on\" dates may be of value to the consumer or the manufacturer (for example, lot codes) and therefore are not prohibited on food products, provided they are not misleading and the label meets appropriate requirements. However, they do not replace the requirements for \"best before\" dates and any dating system that has the same intent as durable life information must follow the prescribed manner of declaring .",
+          "section": "Other date marking systems",
+          "element_type": "p",
+          "position_in_content": 8
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "\"Expiration date\" means the date after which the manufacturer does not recommend that the product be consumed, and up to which it maintains its microbiological and physical stability and nutrient content declared on the label [B.24.001, B.25.001, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Expiration dates are not required on all foods, but only on foods for special dietary use, infant formula foods and human milk fortifiers. A food for special dietary use means food that has been specially processed or formulated to meet the particular requirements of a person [B.24.001, FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The FDR requires that expiration dates be shown on the label of the following foods:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "formulated liquid diets (a nutritionally complete diet for persons using oral or tube feeding methods) [B.24.103(g), FDR] foods represented for use in a very low-energy diet (foods sold only by a pharmacist and only with a written order from a physician) [B.24.304(h), FDR] meal replacements (a formulated food that, by itself, can replace 1 or more daily meals) [B.24.202(d), FDR] nutritional supplements (a food sold or represented as a supplement to a diet that may be inadequate in energy and essential nutrients) [B.24.202(d), FDR] infant formula and foods represented as containing infant formula [B.25.057(1)(f) and (2)(f), FDR] human milk fortifiers [B.25.020(1)(h) and (3), FDR]",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "These foods should not be eaten if the expiration date has passed as they have strict compositional and nutritional specifications which might not be met after the date. For this reason, it is prohibited to sell any one of these foods after the expiration date declared on the label has passed. It is also prohibited to sell it as an unpackaged food or to use it as an ingredient in another food [216.1, SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The expiration date may be shown on any part of the label, including that part, if any, that is applied to the bottom of the container provided a reference to its location on the bottom is shown elsewhere on the label. The reference is not required to be grouped with the list of ingredients [B.01.005(4), B.01.008(1)(a), FDR ]. There are no prescribed expressions for \"expiration date\" although the term \"Exp.\" is often used.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The FDR state the terms \"use by\" and \" employez avant \" may replace \"best before\" for pre-packaged fresh yeast only . It must be presented in the same form and manner as the \"best before\" date [B.01.007(7), FDR ].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Other date marking systems such as \"prepared on\" dates, \"freeze by\" dates and \"manufactured on\" dates may be of value to the consumer or the manufacturer (for example, lot codes) and therefore are not prohibited on food products, provided they are not misleading and the label meets appropriate requirements. However, they do not replace the requirements for \"best before\" dates and any dating system that has the same intent as durable life information must follow the prescribed manner of declaring .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "manner of declaring",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "It is acceptable to declare a \"freeze by\" date in addition to, and that is the same as, the \"best before\" date in a clear statement indicating that the product can be frozen if not consumed by the \"best before\" date.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For example: Best before / Meilleur avant or Freeze by / Congelez avant June 28 juin",
+          "element_type": "div",
+          "links": []
+        }
+      ]
+    },
+    "Storage instructions": {
+      "title": "Storage instructions",
+      "content": [
+        "Storage instructions refer to such elements as temperature, light and humidity. Storage instructions provide information to the consumer on storage conditions that differ from normal room temperature. Examples include phrases such as \"Keep Refrigerated\" and \"store in a cool, dry place\". Storage instructions are mandatory on foods that require a \"best before\" date and where the storage conditions differ from normal room temperature. In some cases, certain products may have additional storage instruction requirements. Refer to the appropriate commodity listed under the Food-specific labelling requirements section of the Industry labelling tool for more information.",
+        "Low-acid food packaged in hermetically sealed containers must be commercially sterile [B.27.002(1), FDR ]. This does not apply to low-acid foods packaged in hermetically sealed containers if:",
+        "low-acid food is kept under refrigeration and the statement \"Keep Refrigerated\" / \" Garder réfrigéré \" is carried on the principal display panel of the label of its container and of the label of the shipping container [B.27.002(2)(a), FDR; 48(2), SFCR], or the low-acid food is kept frozen and the statement \"Keep Frozen\" / \" Garder congelé \" is carried on the principal display panel of the label of its container and of the label of the shipping container [B.27.002(2)(a), FDR; 48(2), SFCR]",
+        "Additionally, the commercial sterility requirement does not apply to tomatoes or tomato products packaged in hermetically sealed containers where the tomatoes or tomato products have a pH of 4.7 or less after processing [B.27.002(3), FDR ]."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Industry labelling tool",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+          "context_text": "Storage instructions refer to such elements as temperature, light and humidity. Storage instructions provide information to the consumer on storage conditions that differ from normal room temperature. Examples include phrases such as \"Keep Refrigerated\" and \"store in a cool, dry place\". Storage instructions are mandatory on foods that require a \"best before\" date and where the storage conditions differ from normal room temperature. In some cases, certain products may have additional storage instruction requirements. Refer to the appropriate commodity listed under the Food-specific labelling requirements section of the Industry labelling tool for more information.",
+          "section": "Storage instructions",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Low-acid food",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s23c7",
+          "context_text": "Low-acid food packaged in hermetically sealed containers must be commercially sterile [B.27.002(1), FDR ]. This does not apply to low-acid foods packaged in hermetically sealed containers if:",
+          "section": "Storage instructions",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "hermetically sealed containers",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s22c7",
+          "context_text": "Low-acid food packaged in hermetically sealed containers must be commercially sterile [B.27.002(1), FDR ]. This does not apply to low-acid foods packaged in hermetically sealed containers if:",
+          "section": "Storage instructions",
+          "element_type": "p",
+          "position_in_content": 2
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Storage instructions refer to such elements as temperature, light and humidity. Storage instructions provide information to the consumer on storage conditions that differ from normal room temperature. Examples include phrases such as \"Keep Refrigerated\" and \"store in a cool, dry place\". Storage instructions are mandatory on foods that require a \"best before\" date and where the storage conditions differ from normal room temperature. In some cases, certain products may have additional storage instruction requirements. Refer to the appropriate commodity listed under the Food-specific labelling requirements section of the Industry labelling tool for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Industry labelling tool",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Low-acid food packaged in hermetically sealed containers must be commercially sterile [B.27.002(1), FDR ]. This does not apply to low-acid foods packaged in hermetically sealed containers if:",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Low-acid food",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s23c7",
+              "is_external": false
+            },
+            {
+              "text": "hermetically sealed containers",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s22c7",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "low-acid food is kept under refrigeration and the statement \"Keep Refrigerated\" / \" Garder réfrigéré \" is carried on the principal display panel of the label of its container and of the label of the shipping container [B.27.002(2)(a), FDR; 48(2), SFCR], or the low-acid food is kept frozen and the statement \"Keep Frozen\" / \" Garder congelé \" is carried on the principal display panel of the label of its container and of the label of the shipping container [B.27.002(2)(a), FDR; 48(2), SFCR]",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "Additionally, the commercial sterility requirement does not apply to tomatoes or tomato products packaged in hermetically sealed containers where the tomatoes or tomato products have a pH of 4.7 or less after processing [B.27.002(3), FDR ].",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Related information": {
+      "title": "Related information",
+      "content": [
+        "Consumer fact sheet, Date labelling on pre-packaged foods"
+      ],
+      "internal_links": [
+        {
+          "link_text": "Date labelling on pre-packaged foods",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/consumers/understanding-date-labels-your-food",
+          "context_text": "Consumer fact sheet, Date labelling on pre-packaged foods",
+          "section": "Related information",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Consumer fact sheet, Date labelling on pre-packaged foods",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Date labelling on pre-packaged foods",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/consumers/understanding-date-labels-your-food",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,920 @@
+{
+  "title": "Name and principal place of business",
+  "rules": [
+    {
+      "id": "sha1:3921ae23d440",
+      "text": "is a name and principal place of business present, to the level of detail required?",
+      "citations": [
+        {
+          "text": "name and principal place of business",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/name-and-principal-place-business"
+        },
+        {
+          "text": "exempt from declaring name and principal place of business",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/name-and-principal-place-business#s2c1"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:ed54462f7425",
+      "text": "if not, is the product exempt from declaring name and principal place of business ?",
+      "citations": [
+        {
+          "text": "exempt from declaring name and principal place of business",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/name-and-principal-place-business#s2c1"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:2b1fe4757411",
+      "text": "is a \"packaged on\" date required? (durable life of 90 days or less and packaged where sold at retail, unless the food is exempt from a \"packaged on\" date )",
+      "citations": [
+        {
+          "text": "\"packaged on\" date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s3c1"
+        },
+        {
+          "text": "exempt from a \"packaged on\" date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s5c1"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:742261cd2dfc",
+      "text": "if so, is it present?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:8e2696477121",
+      "text": "is the correct wording \"packaged on\" / \" empaqueté le \" used (or in one language if exempt from bilingual labelling)?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:8999bc44ba0b",
+      "text": "is the wording grouped with the date or does it clearly explain the date if located elsewhere on the label?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:6f893767b24c",
+      "text": "is the presentation correct as described above?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:ff1259d1268f",
+      "text": "is location of the date acceptable as described above?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:e873b220e012",
+      "text": "is an \"expiration date \" required? (food for special dietary use and infant formula foods)",
+      "citations": [
+        {
+          "text": "\"expiration date",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s15c4"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:742261cd2dfc",
+      "text": "if so, is it present?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:5e722cc92743",
+      "text": "is the location of the date acceptable (anywhere on the label, including the bottom if a reference is made elsewhere on the label indicating the date is present on the bottom)?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:900a08710c0a",
+      "text": "is the NFt:",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:1b2cb00a8595",
+      "text": "on the outer package? (except for alternate methods of presentation)",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:dddc7ebd86f4",
+      "text": "not destroyed when product is opened? (except for single-serving containers)",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:b669f900c04c",
+      "text": "on one continuous surface of the ADS?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:58623c5cddd8",
+      "text": "placed so that product will not leak or be damaged in order to view the NFt?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:82c9c4ffff9c",
+      "text": "is the serving size aligned with the regulated reference amount (RA)? Is it expressed using a household measure (HM) first, followed by the corresponding metric measure (MM) in parentheses, based on the food as sold?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:1fa4376f84d2",
+      "text": "if single-serving container, does the package contains less than 200% of the RA for that food, or can the quantity of food in the package be reasonably eaten by one person at a single eating occasion?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:d40ad317ca02",
+      "text": "are energy and the 12 core nutrients declared, unless conditions for use of simplified format and single-serving simplified format have been satisfied? ( Note: Small packages with ADS of less than 100 cm 2 that have lost their NFt exemption are only required to declare certain nutrients).",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:bb18a0fa4da6",
+      "text": "are any non-permitted nutrients declared?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:e0c16996c963",
+      "text": "are triggered nutrients declared?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:975eaf115fb1",
+      "text": "have the correct units and % DV (percent Daily Value) been used, when permitted/required?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:7179d40996a3",
+      "text": "have amounts (absolute amounts and % DV) been rounded as per the rounding rules set out in the Regulations?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:3d01c732483b",
+      "text": "is the % Daily Value interpretative statement included in the NFt (when required in the applicable NFt figure used)?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:66b62228de95",
+      "text": "is an FOP nutrition symbol present?",
+      "citations": [
+        {
+          "text": "prohibited",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a3"
+        },
+        {
+          "text": "exempt",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5"
+        },
+        {
+          "text": "specified nutrient thresholds",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a4"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:fec0cd928a33",
+      "text": "if not, is the product prohibited or exempt from displaying a nutrition symbol?",
+      "citations": [
+        {
+          "text": "prohibited",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a3"
+        },
+        {
+          "text": "exempt",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:c7570e9afe6d",
+      "text": "if not, are the amounts of saturated fat, sugars and/or sodium in the product less than the specified nutrient thresholds ?",
+      "citations": [
+        {
+          "text": "specified nutrient thresholds",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a4"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:7f0ed937043f",
+      "text": "does the nutrition symbol meet the requirements for legibility, language and orientation? Refer to section 6.2 of the Front-of-package nutrition symbol labelling guide for industry .",
+      "citations": [
+        {
+          "text": "section 6.2",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a6.2"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:87c0c0d5ea04",
+      "text": "does the nutrition symbol meet the required technical specifications?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:c2612e4d4752",
+      "text": "Refer to Nutrition labelling – Directory of nutrition symbol specifications .",
+      "citations": [
+        {
+          "text": "Nutrition labelling – Directory of nutrition symbol specifications",
+          "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/nutrition-symbol-specifications/nutrition-labelling.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:90e35be2c876",
+      "text": "is the nutrition symbol proportional to the PDS?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:0e5d5ff51f1d",
+      "text": "if not, does the product have a PDS > 250 cm 2 and is only sold in the retail establishment where it is packaged and labelled by means of a sticker?",
+      "citations": [],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:e968d84a9f76",
+      "text": "is the product an assortment or a multi-pack where one or more of the foods require a nutrition symbol?",
+      "citations": [
+        {
+          "text": "section 7",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a7"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    },
+    {
+      "id": "sha1:ba712216ca97",
+      "text": "if so, is the nutrition symbol applied as directed in section 7 of the Front-of-package nutrition symbol labelling guide for industry ?",
+      "citations": [
+        {
+          "text": "section 7",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a7"
+        },
+        {
+          "text": "Front-of-package nutrition symbol labelling guide for industry",
+          "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business"
+      ]
+    }
+  ],
+  "subsections": [
+    {
+      "title": "Imported product",
+      "rules": [
+        {
+          "id": "sha1:19d61c426f8a",
+          "text": "Canadian name and principal place of business, grouped with the geographic origin, or preceded by the expressions \"Imported by / importé par \" or \"Imported for / importé pour \"?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Imported product"
+          ]
+        },
+        {
+          "id": "sha1:bb14188f7bfc",
+          "text": "or, foreign name and principal place of business is identified?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Imported product"
+          ]
+        },
+        {
+          "id": "sha1:55f9025389b8",
+          "text": "is the information on any label panel except solely on the bottom (except ornamental containers)?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Imported product"
+          ]
+        },
+        {
+          "id": "sha1:c65d6a56c0d7",
+          "text": "are type height requirements of 1.6 mm (1/16 inch) or greater are met?",
+          "citations": [
+            {
+              "text": "principal display surface",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s15c3"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Imported product"
+          ]
+        },
+        {
+          "id": "sha1:c8d1ebe264ee",
+          "text": "or, if the area of the principal display surface (PDS) is 10 cm 2 (1.55 inches 2 ) or less, is the minimum type height 0.8 mm (1/32 inch)?",
+          "citations": [
+            {
+              "text": "principal display surface",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s15c3"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Imported product"
+          ]
+        },
+        {
+          "id": "sha1:e68ef7b8fb4d",
+          "text": "is it in English or French?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Imported product"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business",
+        "Imported product"
+      ]
+    },
+    {
+      "title": "\"Best before\" date",
+      "rules": [
+        {
+          "id": "sha1:89a89ef15950",
+          "text": "is a \"best before\" date required? (durable life of 90 days or less, unless the food is exempt from a \"best before\" date or is packaged where sold at retail)",
+          "citations": [
+            {
+              "text": "\"best before\" date",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s1c1"
+            },
+            {
+              "text": "exempt from a \"best before\" date",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#s5c1"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:8bbd4cb7938d",
+          "text": "if so, is it present?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:d0e7b2969320",
+          "text": "is the correct wording \"best before\" / \" meilleur avant \" used in English and French (or in one language if exempt from bilingual labelling)?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:2c2f0c461081",
+          "text": "is the wording grouped with the date or does it clearly explain the date if located elsewhere on the label?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:8d3b6a595ef3",
+          "text": "is the presentation of the date acceptable (order of info (year, month, day), use of bilingual symbols for months)? - For example, MA 26.",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "\"Best before\" date"
+          ]
+        },
+        {
+          "id": "sha1:f60222353e40",
+          "text": "is the location of the date acceptable (anywhere on the label, including the bottom if a reference is made elsewhere on the label indicating the date is present on the bottom)?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "\"Best before\" date"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business",
+        "\"Best before\" date"
+      ]
+    },
+    {
+      "title": "Storage instructions",
+      "rules": [
+        {
+          "id": "sha1:9e12d3541fb1",
+          "text": "are storage instructions required? (required if storage conditions differ from normal room temperature)",
+          "citations": [
+            {
+              "text": "storage instructions",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/date-markings-and-storage-instructions#c5"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Storage instructions"
+          ]
+        },
+        {
+          "id": "sha1:99091e09a167",
+          "text": "if so, are they present and complete?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Storage instructions"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business",
+        "Storage instructions"
+      ]
+    },
+    {
+      "title": "Legibility and availability",
+      "rules": [
+        {
+          "id": "sha1:9d941a234acd",
+          "text": "is all of the above information readily discernible?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Legibility and availability"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business",
+        "Legibility and availability"
+      ]
+    },
+    {
+      "title": "Nutrition Facts table (NFt)",
+      "rules": [
+        {
+          "id": "sha1:db82bc29285a",
+          "text": "is an NFt present?",
+          "citations": [
+            {
+              "text": "NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling"
+            },
+            {
+              "text": "prohibited from using a NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/prohibitions"
+            },
+            {
+              "text": "exempt from NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Nutrition Facts table (NFt)"
+          ]
+        },
+        {
+          "id": "sha1:7c502934e02b",
+          "text": "if not, is the product prohibited from using a NFt or exempt from NFt ? (or has an NFt been triggered?)",
+          "citations": [
+            {
+              "text": "prohibited from using a NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/prohibitions"
+            },
+            {
+              "text": "exempt from NFt",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions"
+            }
+          ],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Nutrition Facts table (NFt)"
+          ]
+        },
+        {
+          "id": "sha1:c650d2175b49",
+          "text": "if not, does the label have an available display surface (ADS) of less than 15 cm 2 , therefore being exempt from the need to carry an NFt?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Nutrition Facts table (NFt)"
+          ]
+        },
+        {
+          "id": "sha1:ce02e5d17116",
+          "text": "if not, does the product qualify for the small package (ADS of less than 100 cm 2 ) exemption? (postal address or toll-free number)",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Nutrition Facts table (NFt)"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business",
+        "Nutrition Facts table (NFt)"
+      ]
+    },
+    {
+      "title": "Format",
+      "rules": [
+        {
+          "id": "sha1:644ad357cff3",
+          "text": "is the appropriate format family used?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:6d898b183922",
+          "text": "standard format: all foods and certain assortments",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:cabf1ee0f0d0",
+          "text": "simplified format: 6 or more of calories and core nutrients = 0",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:78f2cdbd83b1",
+          "text": "simplified format - single-serving prepackaged products",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:e595686e7401",
+          "text": "dual format: foods requiring preparation/different amounts",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:193a5e2bc994",
+          "text": "aggregate format: different kinds/different amounts",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:18ee608d728a",
+          "text": "infants 6 months of age or older but less than 1 year of age",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Format"
+          ]
+        },
+        {
+          "id": "sha1:47bfef439742",
+          "text": "is an appropriate format version (size) chosen within a \"family\" of formats?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Format"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business",
+        "Format"
+      ]
+    },
+    {
+      "title": "Graphical and technical requirements",
+      "rules": [
+        {
+          "id": "sha1:bc4400514192",
+          "text": "colour: is the table background and print in the appropriate colours?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:1c2091cbd9d8",
+          "text": "is the font and type:",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:2cf81e2ff10a",
+          "text": "sans serif?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:b745ea067c53",
+          "text": "regular or bold as required?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:dbf988073864",
+          "text": "upper case / lower case as required?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:d3f7e857c039",
+          "text": "with no crowding of characters?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:ae9203ead685",
+          "text": "is the information in the correct order?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Graphical and technical requirements"
+          ]
+        },
+        {
+          "id": "sha1:da17e602d788",
+          "text": "are the correct indenting and leading used?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Graphical and technical requirements"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business",
+        "Graphical and technical requirements"
+      ]
+    },
+    {
+      "title": "Location",
+      "rules": [
+        {
+          "id": "sha1:c37888cb95ed",
+          "text": "is the nutrition symbol located on the PDP of the product?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:e129138458ac",
+          "text": "if not:",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:60e1580bea03",
+          "text": "is it a scale-labelled product where the nutrition symbol is permitted on the PDS?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Location"
+          ]
+        },
+        {
+          "id": "sha1:662cf740a2d4",
+          "text": "is it an ornamental container where the nutrition symbol is permitted on the bottom of the container?",
+          "citations": [],
+          "path": [
+            "Labelling requirements",
+            "Name and principal place of business",
+            "Location"
+          ]
+        }
+      ],
+      "path": [
+        "Labelling requirements",
+        "Name and principal place of business",
+        "Location"
+      ]
+    }
+  ],
+  "path": [
+    "Labelling requirements",
+    "Name and principal place of business"
+  ]
+}

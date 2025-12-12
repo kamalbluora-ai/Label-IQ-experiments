@@ -1,0 +1,27 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/net-quantity",
+  "citation_title": "Net quantity",
+  "external_links": [
+    {
+      "text": "Measurement Canada",
+      "href": "https://ised-isde.canada.ca/site/measurement-canada/en",
+      "section": "Requirements",
+      "context": "In addition to the requirements in the SFCR, a net quantity declaration is required, under section 9 of the Weights and Measures Act (WMA), for prepackaged foods other than consumer prepackaged, such as shipping containers and foods for institutional use. The Canadian Food Inspection Agency (CFIA) does not administer or enforce the Weights and Measures Act . Refer to Measurement Canada for more information.",
+      "element_type": "p"
+    },
+    {
+      "text": "Canada Consumer Product Safety Act",
+      "href": "https://laws-lois.justice.gc.ca/eng/acts/C-1.68",
+      "section": "Manner of declaring",
+      "context": "Although Canadian (previously named \"Imperial\") units of measure are not required on labels, they are permitted to be used in addition to the required metric units. When the net quantity is shown in both metric units and Canadian units , the metric units should be declared first and the 2 units of measure must be grouped together on the label with no intervening material, other than symbols or pictograms shown in accordance with the Canada Consumer Product Safety Act [236, SFCR].",
+      "element_type": "p"
+    },
+    {
+      "text": "Quality Assurance Guide – Application: Average System of Net Quantity Determination",
+      "href": "https://competition-bureau.canada.ca/quality-assurance-guide-application-average-system-net-quantity-determination",
+      "section": "Related information",
+      "context": "Additional information about the Average System of Net Quantity Determinations can be found in the Quality Assurance Guide – Application: Average System of Net Quantity Determination on the Competition Bureau's page.",
+      "element_type": "p"
+    }
+  ]
+}

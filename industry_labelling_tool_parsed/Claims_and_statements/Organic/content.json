@@ -1,0 +1,630 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims",
+  "citation_title": "Organic",
+  "sections": {
+    "Overview": {
+      "title": "Overview",
+      "content": [
+        "An organic product is an agriculture or aquaculture product that has been certified as organic under part 13 of the Safe Food for Canadians Regulations (SFCR).",
+        "Part 13 of the SFCR is designed to protect consumers against false or misleading organic claims and to govern the use of the organic logo. All aspects of food labels and advertising contribute to the overall impression a food product makes. Therefore, foods making organic claims must also comply with the general principles for labelling and advertising .",
+        "The SFCR applies to interprovincially and internationally traded organic products. For information on organic products sold only within a province, refer to Organic products sold intraprovincially ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Safe Food for Canadians Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+          "context_text": "An organic product is an agriculture or aquaculture product that has been certified as organic under part 13 of the Safe Food for Canadians Regulations (SFCR).",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "general principles for labelling and advertising",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/general-principles",
+          "context_text": "Part 13 of the SFCR is designed to protect consumers against false or misleading organic claims and to govern the use of the organic logo. All aspects of food labels and advertising contribute to the overall impression a food product makes. Therefore, foods making organic claims must also comply with the general principles for labelling and advertising .",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Organic products sold intraprovincially",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#c7",
+          "context_text": "The SFCR applies to interprovincially and internationally traded organic products. For information on organic products sold only within a province, refer to Organic products sold intraprovincially .",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 3
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "An organic product is an agriculture or aquaculture product that has been certified as organic under part 13 of the Safe Food for Canadians Regulations (SFCR).",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Safe Food for Canadians Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Part 13 of the SFCR is designed to protect consumers against false or misleading organic claims and to govern the use of the organic logo. All aspects of food labels and advertising contribute to the overall impression a food product makes. Therefore, foods making organic claims must also comply with the general principles for labelling and advertising .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "general principles for labelling and advertising",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/general-principles",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The SFCR applies to interprovincially and internationally traded organic products. For information on organic products sold only within a province, refer to Organic products sold intraprovincially .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Organic products sold intraprovincially",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#c7",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Canada Organic Regime": {
+      "title": "Canada Organic Regime",
+      "content": [
+        "Imported or interprovincially traded products making an organic claim must be certified under the Canada Organic Regime .",
+        "This includes products that:",
+        "are labelled as \"organic\" bear the Canada organic logo or declare \"contains x% organic ingredients\"",
+        "To be certified, operators must have their products certified by a CFIA-accredited certification body [part 13, division 4, SFCR] and develop an organic production system based on the Canadian Organic Standards, as applicable.",
+        "CAN/CGSB 32.310 CAN/CGSB 32.311 CAN/CGSB 32.312",
+        "For more information on the Canada Organic Regime or to find the list of CFIA-accredited certification bodies, please refer to the information on the Canada Organic Regime .",
+        "Organic agriculture products imported from countries with whom Canada has established an equivalency arrangement must be certified to the terms of the arrangement. These products must be certified by a certification body accredited by that foreign country and recognized by Canada under the arrangement. These products may bear the Canada organic logo. Like all other food products, imported organic products must meet Canadian labelling requirements, including those of part 13 of the SFCR.",
+        "Organic aquaculture products must either:",
+        "Be certified to the Organic Aquaculture Standard CAN/CGSB-32.312 Organic Production Systems – Aquaculture – General principles, management standards and permitted substances lists by a CFIA accredited certification body Be included within the scope of an equivalency arrangement in order to be imported into Canada",
+        "Equivalency arrangements which include aquaculture products include:",
+        "Canada Taiwan Organic Equivalency Arrangement (CTOEA)",
+        "The future inclusion of aquaculture products for other equivalency arrangements may be considered through assessments and negotiations.",
+        "For more information, refer to the information on Equivalency arrangements ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Canada Organic Regime",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#s9c9",
+          "context_text": "Imported or interprovincially traded products making an organic claim must be certified under the Canada Organic Regime .",
+          "section": "Canada Organic Regime",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Canada Organic Regime",
+          "href": "https://inspection.canada.ca/en/food-labels/organic-products/regulating",
+          "context_text": "For more information on the Canada Organic Regime or to find the list of CFIA-accredited certification bodies, please refer to the information on the Canada Organic Regime .",
+          "section": "Canada Organic Regime",
+          "element_type": "p",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "aquaculture products",
+          "href": "https://inspection.canada.ca/en/food-labels/organic-products/aquaculture-products",
+          "context_text": "Organic aquaculture products must either:",
+          "section": "Canada Organic Regime",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "equivalency arrangement",
+          "href": "https://inspection.canada.ca/en/food-labels/organic-products/equivalence-arrangements",
+          "context_text": "Be certified to the Organic Aquaculture Standard CAN/CGSB-32.312 Organic Production Systems – Aquaculture – General principles, management standards and permitted substances lists by a CFIA accredited certification body Be included within the scope of an equivalency arrangement in order to be imported into Canada",
+          "section": "Canada Organic Regime",
+          "element_type": "ul",
+          "position_in_content": 9
+        },
+        {
+          "link_text": "Canada Taiwan Organic Equivalency Arrangement (CTOEA)",
+          "href": "https://inspection.canada.ca/en/food-labels/organic-products/equivalence-arrangements/taiwan-overview",
+          "context_text": "Canada Taiwan Organic Equivalency Arrangement (CTOEA)",
+          "section": "Canada Organic Regime",
+          "element_type": "ul",
+          "position_in_content": 11
+        },
+        {
+          "link_text": "Equivalency arrangements",
+          "href": "https://inspection.canada.ca/en/food-labels/organic-products/equivalence-arrangements",
+          "context_text": "For more information, refer to the information on Equivalency arrangements .",
+          "section": "Canada Organic Regime",
+          "element_type": "p",
+          "position_in_content": 13
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Imported or interprovincially traded products making an organic claim must be certified under the Canada Organic Regime .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canada Organic Regime",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#s9c9",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "This includes products that:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "are labelled as \"organic\" bear the Canada organic logo or declare \"contains x% organic ingredients\"",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "To be certified, operators must have their products certified by a CFIA-accredited certification body [part 13, division 4, SFCR] and develop an organic production system based on the Canadian Organic Standards, as applicable.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "CAN/CGSB 32.310 CAN/CGSB 32.311 CAN/CGSB 32.312",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "CAN/CGSB 32.310",
+              "href": "https://publications.gc.ca/site/eng/9.894375/publication.html",
+              "is_external": true
+            },
+            {
+              "text": "CAN/CGSB 32.311",
+              "href": "https://publications.gc.ca/site/eng/9.894398/publication.html",
+              "is_external": true
+            },
+            {
+              "text": "CAN/CGSB 32.312",
+              "href": "https://publications.gc.ca/site/eng/9.919789/publication.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "For more information on the Canada Organic Regime or to find the list of CFIA-accredited certification bodies, please refer to the information on the Canada Organic Regime .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canada Organic Regime",
+              "href": "https://inspection.canada.ca/en/food-labels/organic-products/regulating",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Organic agriculture products imported from countries with whom Canada has established an equivalency arrangement must be certified to the terms of the arrangement. These products must be certified by a certification body accredited by that foreign country and recognized by Canada under the arrangement. These products may bear the Canada organic logo. Like all other food products, imported organic products must meet Canadian labelling requirements, including those of part 13 of the SFCR.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Organic aquaculture products must either:",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "aquaculture products",
+              "href": "https://inspection.canada.ca/en/food-labels/organic-products/aquaculture-products",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Be certified to the Organic Aquaculture Standard CAN/CGSB-32.312 Organic Production Systems – Aquaculture – General principles, management standards and permitted substances lists by a CFIA accredited certification body Be included within the scope of an equivalency arrangement in order to be imported into Canada",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "CAN/CGSB-32.312 Organic Production Systems – Aquaculture – General principles, management standards and permitted substances lists",
+              "href": "https://publications.gc.ca/site/eng/9.919789/publication.html",
+              "is_external": true
+            },
+            {
+              "text": "equivalency arrangement",
+              "href": "https://inspection.canada.ca/en/food-labels/organic-products/equivalence-arrangements",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Equivalency arrangements which include aquaculture products include:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Canada Taiwan Organic Equivalency Arrangement (CTOEA)",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Canada Taiwan Organic Equivalency Arrangement (CTOEA)",
+              "href": "https://inspection.canada.ca/en/food-labels/organic-products/equivalence-arrangements/taiwan-overview",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The future inclusion of aquaculture products for other equivalency arrangements may be considered through assessments and negotiations.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For more information, refer to the information on Equivalency arrangements .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Equivalency arrangements",
+              "href": "https://inspection.canada.ca/en/food-labels/organic-products/equivalence-arrangements",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Permitted claims": {
+      "title": "Permitted claims",
+      "content": [
+        "Only products with organic content that is greater than or equal to 95% may be labelled or advertised as \"organic\" or bear the organic logo. This includes the presence of the word \"organic\" in the name of the person who is responsible for the product. Terms such as \"organically grown\", \"organically raised, \"organically produced\", or similar words, abbreviations of, symbols for and phonetic renderings of these words are considered the same as \"organic\" claims and must meet the same requirements [353(1), SFCR].",
+        "For multi-ingredient products, the organic contents must be identified as organic in the list of ingredients [354 (c), SFCR].",
+        "The label of an organic product subject to the SFCR must bear the name of the certification body that has certified the product as organic [354 (a) to (b), SFCR].",
+        "Claims indicating \"X% organic ingredients\" where X is anywhere from 95% to 100% are permitted. However, the claim \"organic\" is encouraged as all products with 95% and over organic content may use this claim.",
+        "These products may use the declaration \"contains x% organic ingredients\" on the label or in advertising, specifying the percentage of organic ingredients. These products may not use the organic logo or the claim \"organic\" [353 (2) (a), 359 (1) (b), SFCR] .",
+        "If the declaration \"contains x% organic ingredients\" is used:",
+        "the words \"organic ingredients\" must be of the same size and prominence as the preceding words, numbers, signs or symbols that indicate the applicable percentage [353 (2) (b), SFCR] the organic contents must be identified as organic in the list of ingredients [354 (c), SFCR] the label of an organic product subject to the SFCR must bear the name of the certification body that has certified the product as organic [354 (a) and (b), SFCR]",
+        "These products may identify organic ingredients in the list of ingredients as organic. These products may not use the organic logo nor the claims \"organic\" or \"contains x% organic ingredients\" [353(3), SFCR].",
+        "When the name of the certification body that certified the product as organic is required, the abbreviation could be acceptable provided it gives enough information to identify the certification body. For example, it is acceptable when the acronym appears along with the name in the list of CFIA accredited certification bodies.",
+        "The logo of the certification body can be used in certain cases. The name of the certification body, or its abbreviation as described above, must be present within the logo, and must be readily discernible and legible to the purchaser. If this is not met, the logo may voluntarily be displayed, but the name should be present elsewhere on the label.",
+        "Statements made in connection with the requirement to declare the name of the certification body, including but not limited to \"certified by\", \"certified organic by\", \"certified organic\" and \"organic certified\", are acceptable provided they are immediately followed by the name of the certification body, or included as part of the certification body logo. As the purpose is to communicate who certified the product, these statements should not be displayed more prominently than the name of the certification body.",
+        "\"Certified organic\" and other similar claims are not acceptable and are considered misleading if they are used without being in connection to the name of the certification body, as it implies that products without this claim are not certified. For example, such claims should not be made in association with the product name (such as \"certified organic apples\").",
+        "When used, the \"organic\" and the \"% organic ingredients\" claims or statements must appear on the label in both French and English, unless the food commodity is a feed , seed , or a bilingual labelling exemption applies to the product [355, SFCR].",
+        "In general, voluntary claims and statements on food labels are not subject to bilingual requirements at the federal level. For example, a statement \"certified by\" does not need to appear in both official languages, although manufacturers and importers are encouraged to present such information bilingually. The name of the certification body does not need to appear in both official languages. Refer to Bilingual labelling of voluntary information for additional information.",
+        "If an organic claim is made on a label accompanying a bulk product, such as on a tag or sticker, then the name of the certification body must also appear on this label. Example: this applies to the use of organic claims and the organic logo on a Price Look-Up (PLU) sticker.",
+        "If the Canada organic logo is on the accompanying label of an imported product, the statement \"Product of\" immediately preceding the country of origin, or the word \"Imported\" must be in close proximity to the logo."
+      ],
+      "internal_links": [
+        {
+          "link_text": "person",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#s13c9",
+          "context_text": "Only products with organic content that is greater than or equal to 95% may be labelled or advertised as \"organic\" or bear the organic logo. This includes the presence of the word \"organic\" in the name of the person who is responsible for the product. Terms such as \"organically grown\", \"organically raised, \"organically produced\", or similar words, abbreviations of, symbols for and phonetic renderings of these words are considered the same as \"organic\" claims and must meet the same requirements [353(1), SFCR].",
+          "section": "Permitted claims",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "feed",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#s10c9",
+          "context_text": "When used, the \"organic\" and the \"% organic ingredients\" claims or statements must appear on the label in both French and English, unless the food commodity is a feed , seed , or a bilingual labelling exemption applies to the product [355, SFCR].",
+          "section": "Permitted claims",
+          "element_type": "p",
+          "position_in_content": 13
+        },
+        {
+          "link_text": "seed",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#s12c9",
+          "context_text": "When used, the \"organic\" and the \"% organic ingredients\" claims or statements must appear on the label in both French and English, unless the food commodity is a feed , seed , or a bilingual labelling exemption applies to the product [355, SFCR].",
+          "section": "Permitted claims",
+          "element_type": "p",
+          "position_in_content": 13
+        },
+        {
+          "link_text": "bilingual labelling exemption",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling#s2c1",
+          "context_text": "When used, the \"organic\" and the \"% organic ingredients\" claims or statements must appear on the label in both French and English, unless the food commodity is a feed , seed , or a bilingual labelling exemption applies to the product [355, SFCR].",
+          "section": "Permitted claims",
+          "element_type": "p",
+          "position_in_content": 13
+        },
+        {
+          "link_text": "Bilingual labelling of voluntary information",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling#s5c3",
+          "context_text": "In general, voluntary claims and statements on food labels are not subject to bilingual requirements at the federal level. For example, a statement \"certified by\" does not need to appear in both official languages, although manufacturers and importers are encouraged to present such information bilingually. The name of the certification body does not need to appear in both official languages. Refer to Bilingual labelling of voluntary information for additional information.",
+          "section": "Permitted claims",
+          "element_type": "p",
+          "position_in_content": 14
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Only products with organic content that is greater than or equal to 95% may be labelled or advertised as \"organic\" or bear the organic logo. This includes the presence of the word \"organic\" in the name of the person who is responsible for the product. Terms such as \"organically grown\", \"organically raised, \"organically produced\", or similar words, abbreviations of, symbols for and phonetic renderings of these words are considered the same as \"organic\" claims and must meet the same requirements [353(1), SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "person",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#s13c9",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For multi-ingredient products, the organic contents must be identified as organic in the list of ingredients [354 (c), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The label of an organic product subject to the SFCR must bear the name of the certification body that has certified the product as organic [354 (a) to (b), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Claims indicating \"X% organic ingredients\" where X is anywhere from 95% to 100% are permitted. However, the claim \"organic\" is encouraged as all products with 95% and over organic content may use this claim.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "These products may use the declaration \"contains x% organic ingredients\" on the label or in advertising, specifying the percentage of organic ingredients. These products may not use the organic logo or the claim \"organic\" [353 (2) (a), 359 (1) (b), SFCR] .",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If the declaration \"contains x% organic ingredients\" is used:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the words \"organic ingredients\" must be of the same size and prominence as the preceding words, numbers, signs or symbols that indicate the applicable percentage [353 (2) (b), SFCR] the organic contents must be identified as organic in the list of ingredients [354 (c), SFCR] the label of an organic product subject to the SFCR must bear the name of the certification body that has certified the product as organic [354 (a) and (b), SFCR]",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "These products may identify organic ingredients in the list of ingredients as organic. These products may not use the organic logo nor the claims \"organic\" or \"contains x% organic ingredients\" [353(3), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When the name of the certification body that certified the product as organic is required, the abbreviation could be acceptable provided it gives enough information to identify the certification body. For example, it is acceptable when the acronym appears along with the name in the list of CFIA accredited certification bodies.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The logo of the certification body can be used in certain cases. The name of the certification body, or its abbreviation as described above, must be present within the logo, and must be readily discernible and legible to the purchaser. If this is not met, the logo may voluntarily be displayed, but the name should be present elsewhere on the label.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Statements made in connection with the requirement to declare the name of the certification body, including but not limited to \"certified by\", \"certified organic by\", \"certified organic\" and \"organic certified\", are acceptable provided they are immediately followed by the name of the certification body, or included as part of the certification body logo. As the purpose is to communicate who certified the product, these statements should not be displayed more prominently than the name of the certification body.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "\"Certified organic\" and other similar claims are not acceptable and are considered misleading if they are used without being in connection to the name of the certification body, as it implies that products without this claim are not certified. For example, such claims should not be made in association with the product name (such as \"certified organic apples\").",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When used, the \"organic\" and the \"% organic ingredients\" claims or statements must appear on the label in both French and English, unless the food commodity is a feed , seed , or a bilingual labelling exemption applies to the product [355, SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "feed",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#s10c9",
+              "is_external": false
+            },
+            {
+              "text": "seed",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/organic-claims#s12c9",
+              "is_external": false
+            },
+            {
+              "text": "bilingual labelling exemption",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling#s2c1",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "In general, voluntary claims and statements on food labels are not subject to bilingual requirements at the federal level. For example, a statement \"certified by\" does not need to appear in both official languages, although manufacturers and importers are encouraged to present such information bilingually. The name of the certification body does not need to appear in both official languages. Refer to Bilingual labelling of voluntary information for additional information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Bilingual labelling of voluntary information",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/bilingual-food-labelling#s5c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "If an organic claim is made on a label accompanying a bulk product, such as on a tag or sticker, then the name of the certification body must also appear on this label. Example: this applies to the use of organic claims and the organic logo on a Price Look-Up (PLU) sticker.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If the Canada organic logo is on the accompanying label of an imported product, the statement \"Product of\" immediately preceding the country of origin, or the word \"Imported\" must be in close proximity to the logo.",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Non permitted claims": {
+      "title": "Non permitted claims",
+      "content": [
+        "The \"100% organic (product name)\" claim is not permitted in Canada. All products with an organic content of 95% or greater are considered organic and may be labelled with the word \"organic\".",
+        "The claims \"made with organic ingredients\" or \"made with organic (naming the ingredient)\" are not acceptable as it is not clear how much of the product is made with organic ingredients. Products with 70% to 95% organic content must declare the percentage of organic content on their label. Products with less than 70% organic content may only indicate which ingredients are organic in the ingredients list."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "The \"100% organic (product name)\" claim is not permitted in Canada. All products with an organic content of 95% or greater are considered organic and may be labelled with the word \"organic\".",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The claims \"made with organic ingredients\" or \"made with organic (naming the ingredient)\" are not acceptable as it is not clear how much of the product is made with organic ingredients. Products with 70% to 95% organic content must declare the percentage of organic content on their label. Products with less than 70% organic content may only indicate which ingredients are organic in the ingredients list.",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Use of the organic logo on organic products": {
+      "title": "Use of the organic logo on organic products",
+      "content": [
+        "The CFIA regulates the use of the Canada organic logo below (Figure 1). The use of the organic logo is only permitted on products that have an organic content that is greater than or equal to 95% and have been certified according to the requirements of the Canada Organic Regime. The use of the organic logo is voluntary but when used it is subject to the requirements of the SFCR [359 (1), SFCR].",
+        "Imported products must meet the requirements of the Canada Organic Regime. Imported products that bear the logo must include:",
+        "the statement \"Product of\", immediately preceding the name of the country of origin, or the word \"Imported\", in close proximity to the logo",
+        "These must appear on the label in both French and English, unless a bilingual labelling exemption applies [354 (d), 355 (1), SFCR].",
+        "The Canada organic logo is available to organic operators through Canadian Food Inspection Agency accredited certification bodies.",
+        "Available online is the list of certification bodies that have either been accredited by the CFIA to certify organic products; or recognized under an organic equivalency arrangement with a foreign competent authority under the regulations."
+      ],
+      "internal_links": [
+        {
+          "link_text": "list of certification bodies",
+          "href": "https://inspection.canada.ca/en/food-labels/organic-products/certification-bodies",
+          "context_text": "Available online is the list of certification bodies that have either been accredited by the CFIA to certify organic products; or recognized under an organic equivalency arrangement with a foreign competent authority under the regulations.",
+          "section": "Use of the organic logo on organic products",
+          "element_type": "p",
+          "position_in_content": 6
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "The CFIA regulates the use of the Canada organic logo below (Figure 1). The use of the organic logo is only permitted on products that have an organic content that is greater than or equal to 95% and have been certified according to the requirements of the Canada Organic Regime. The use of the organic logo is voluntary but when used it is subject to the requirements of the SFCR [359 (1), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Imported products must meet the requirements of the Canada Organic Regime. Imported products that bear the logo must include:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the statement \"Product of\", immediately preceding the name of the country of origin, or the word \"Imported\", in close proximity to the logo",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "These must appear on the label in both French and English, unless a bilingual labelling exemption applies [354 (d), 355 (1), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The Canada organic logo is available to organic operators through Canadian Food Inspection Agency accredited certification bodies.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Available online is the list of certification bodies that have either been accredited by the CFIA to certify organic products; or recognized under an organic equivalency arrangement with a foreign competent authority under the regulations.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "list of certification bodies",
+              "href": "https://inspection.canada.ca/en/food-labels/organic-products/certification-bodies",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Use of organic logo for information purposes": {
+      "title": "Use of organic logo for information purposes",
+      "content": [
+        "It is permitted for the organic logo to be used without request for advertisement or information purposes (for example, advertising certification services or explaining the Canada Organic Regime), provided the advertisement is not used to sell a food, feed or seed product [359 (3), SFCR].",
+        "Note that the use of the logo in contravention to the SFCR could be an offence under the Safe Food for Canadians Act (SFCA).",
+        "For more information on prescribed inspection marks, refer to Inspection marks ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Inspection marks",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/pictures-vignettes-logos-and-trademarks-food#s6c3",
+          "context_text": "For more information on prescribed inspection marks, refer to Inspection marks .",
+          "section": "Use of organic logo for information purposes",
+          "element_type": "p",
+          "position_in_content": 3
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "It is permitted for the organic logo to be used without request for advertisement or information purposes (for example, advertising certification services or explaining the Canada Organic Regime), provided the advertisement is not used to sell a food, feed or seed product [359 (3), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Note that the use of the logo in contravention to the SFCR could be an offence under the Safe Food for Canadians Act (SFCA).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For more information on prescribed inspection marks, refer to Inspection marks .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Inspection marks",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/pictures-vignettes-logos-and-trademarks-food#s6c3",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Organic products sold intraprovincially": {
+      "title": "Organic products sold intraprovincially",
+      "content": [
+        "Organic products sold within the province of origin are not within the scope of part 13 of the SFCR unless the product bears the Canada organic logo. At the federal level, these are subject to the Food and Drugs Act and the SFCA, which prohibit false or misleading claims in labelling and advertising. Producers of intraprovincially traded products bearing organic claims are expected to be able to demonstrate that the product is organic.",
+        "All organic products bearing the Canada organic logo, including those sold intraprovincially, must comply with part 13 of the SFCR.",
+        "Provincial organic regulations also exist in some provinces. Quebec, New Brunswick, Nova Scotia, Manitoba and British Columbia currently have organic certification systems in place."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Food and Drugs Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+          "context_text": "Organic products sold within the province of origin are not within the scope of part 13 of the SFCR unless the product bears the Canada organic logo. At the federal level, these are subject to the Food and Drugs Act and the SFCA, which prohibit false or misleading claims in labelling and advertising. Producers of intraprovincially traded products bearing organic claims are expected to be able to demonstrate that the product is organic.",
+          "section": "Organic products sold intraprovincially",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Organic products sold within the province of origin are not within the scope of part 13 of the SFCR unless the product bears the Canada organic logo. At the federal level, these are subject to the Food and Drugs Act and the SFCA, which prohibit false or misleading claims in labelling and advertising. Producers of intraprovincially traded products bearing organic claims are expected to be able to demonstrate that the product is organic.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Food and Drugs Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "All organic products bearing the Canada organic logo, including those sold intraprovincially, must comply with part 13 of the SFCR.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Provincial organic regulations also exist in some provinces. Quebec, New Brunswick, Nova Scotia, Manitoba and British Columbia currently have organic certification systems in place.",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Organic aquaculture": {
+      "title": "Organic aquaculture",
+      "content": [
+        "See the Organic aquaculture products page for more information on requirements for these products."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Organic aquaculture products",
+          "href": "https://inspection.canada.ca/en/food-labels/organic-products/aquaculture-products",
+          "context_text": "See the Organic aquaculture products page for more information on requirements for these products.",
+          "section": "Organic aquaculture",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "See the Organic aquaculture products page for more information on requirements for these products.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Organic aquaculture products",
+              "href": "https://inspection.canada.ca/en/food-labels/organic-products/aquaculture-products",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

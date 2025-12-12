@@ -1,0 +1,705 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives",
+  "citation_title": "Food additives",
+  "sections": {
+    "Overview": {
+      "title": "Overview",
+      "content": [
+        "A food additive is any substance that, when added to a food, becomes part of that food or affects its characteristics.",
+        "Food additives do not include:",
+        "any nutritive material that is used, recognized or commonly sold as an article of food or an ingredient of food vitamins, mineral nutrients and amino acids, except those listed in the Lists of permitted food additives supplemental ingredients spices, seasonings and flavouring preparations agricultural chemicals, other than those substances set out in the Lists of permitted food additives food packaging materials and their components drugs recommended for administration to animals that may be consumed as food [B.01.001(1), Food and Drug Regulations (FDR); 1, Safe Food for Canadians Regulations (SFCR)]"
+      ],
+      "internal_links": [
+        {
+          "link_text": "food additive",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives#s5c11",
+          "context_text": "A food additive is any substance that, when added to a food, becomes part of that food or affects its characteristics.",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "flavouring preparations",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s20c9",
+          "context_text": "any nutritive material that is used, recognized or commonly sold as an article of food or an ingredient of food vitamins, mineral nutrients and amino acids, except those listed in the Lists of permitted food additives supplemental ingredients spices, seasonings and flavouring preparations agricultural chemicals, other than those substances set out in the Lists of permitted food additives food packaging materials and their components drugs recommended for administration to animals that may be consumed as food [B.01.001(1), Food and Drug Regulations (FDR); 1, Safe Food for Canadians Regulations (SFCR)]",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 3
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "A food additive is any substance that, when added to a food, becomes part of that food or affects its characteristics.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "food additive",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives#s5c11",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Food additives do not include:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "any nutritive material that is used, recognized or commonly sold as an article of food or an ingredient of food vitamins, mineral nutrients and amino acids, except those listed in the Lists of permitted food additives supplemental ingredients spices, seasonings and flavouring preparations agricultural chemicals, other than those substances set out in the Lists of permitted food additives food packaging materials and their components drugs recommended for administration to animals that may be consumed as food [B.01.001(1), Food and Drug Regulations (FDR); 1, Safe Food for Canadians Regulations (SFCR)]",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Lists of permitted food additives",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted.html",
+              "is_external": true
+            },
+            {
+              "text": "flavouring preparations",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s20c9",
+              "is_external": false
+            },
+            {
+              "text": "Lists of permitted food additives",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "General requirements": {
+      "title": "General requirements",
+      "content": [
+        "Food additives or classes of food additives can only be used in certain foods. Health Canada's 15 Lists of permitted food additives indicate which standardized and unstandardized foods can contain a given food additive."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "Food additives or classes of food additives can only be used in certain foods. Health Canada's 15 Lists of permitted food additives indicate which standardized and unstandardized foods can contain a given food additive.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Lists of permitted food additives",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "How food additives are regulated": {
+      "title": "How food additives are regulated",
+      "content": [
+        "Health Canada regulates food additive use under the FDR . The CFIA is responsible for the enforcement of these regulations.",
+        "Anyone can submit a request to Health Canada for a new use of a food additive. The request is made by filing the Online Application Form for Pre-Market Submissions to the Food and Nutrition Directorate . For additional information, refer to Health Canada's Guide for the preparation of submissions on food additives ."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "Health Canada regulates food additive use under the FDR . The CFIA is responsible for the enforcement of these regulations.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Anyone can submit a request to Health Canada for a new use of a food additive. The request is made by filing the Online Application Form for Pre-Market Submissions to the Food and Nutrition Directorate . For additional information, refer to Health Canada's Guide for the preparation of submissions on food additives .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Online Application Form for Pre-Market Submissions to the Food and Nutrition Directorate",
+              "href": "https://health.canada.ca/apps/radar/FD-DA-0001.08.html",
+              "is_external": true
+            },
+            {
+              "text": "Guide for the preparation of submissions on food additives",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/reports-publications/guide-preparation-submissions-food-additives.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Manner of declaring in the list of ingredients": {
+      "title": "Manner of declaring in the list of ingredients",
+      "content": [
+        "As indicated in the section on manner of declaring ingredients , food additives must be declared by an acceptable common name in the list of ingredients of a prepackaged product. However, as per B.01.008.2(4)(d) of the FDR , they may be listed at the end of the list of ingredients in any order.",
+        "For all requirements and information related to the list of ingredients, refer to the List of ingredients and allergens page.",
+        "The FDR allows for the use of collective/class names to classify a group of similar food additives in the list of ingredients, without having to list each ingredient individually.",
+        "For example, any combination of disodium phosphate, monosodium phosphate, sodium hexametaphosphate, sodium tripolyphosphate, tetrasodium pyrophosphate and sodium acid pyrophosphate can be listed as \"sodium phosphate\" or \"sodium phosphates\" as shown under item 8 of Table 2 of the Common Names for Ingredients and Components document [B.01.010(3)(b), FDR].",
+        "Similarly, when potassium bisulphite, potassium metabisulphite, sodium bisulphite, sodium metabisulphite, sodium sulphite, sodium dithionite, sulphur dioxide and/or sulphurous acid are used together as preservatives, they can be listed as \"sulphiting agents\", \"sulfiting agents\", \"sulphites\" or \"sulfites\" as shown under item 21 of Table 2 of the Common Names for Ingredients and Components document [B.01.010(3)(b), FDR].",
+        "Note: Sulphites have been identified as one of the priority allergens in Canada. Please refer to the Food allergens, gluten and added sulphite declaration section regarding the regulatory requirements for declaration of sulphites in the list of ingredients.",
+        "When food additives are used in preparations or mixtures and have a function or effect on the food to which they are added, they are required to be declared in the list of ingredients as if they were ingredients added directly to the food.",
+        "For example, glycerol ester of wood rosin and sucrose acetate isobutyrate are additives that are permitted solely in flavours for use in citrus-flavoured and spruce-flavoured beverages. These additives are density adjusting agents and will have an effect on the final beverage. As these additives keep the flavour preparation in suspension and prevent the formation of an oil ring at the surface of the beverage, they must be declared by their common name in the list of ingredients of the food to which they are added as if they were ingredients of the food [B.01.009(3)(f), FDR ].",
+        "For food additives, the names in Health Canada's Lists of permitted food additives are always acceptable common names.",
+        "The CFIA reviews and assesses synonyms requests for use as common names in the list of ingredients. Acceptable synonyms are listed in the Permitted synonyms for food additives table .",
+        "The Codex Alimentarius International Numbering System (INS) for food additives or the numbering system used by the European Union (for example, E 102) are not acceptable alone as the common name declaration for the food additive in Canada. They may be declared as supplementary information, when the food additive is already declared in the list of ingredients by its required common name or acceptable synonym.",
+        "In some cases, abbreviations for food additives may be acceptable for use as common names in the list of ingredients.",
+        "For example, TBHQ is an acceptable synonym for tertiary butylhydroquinone. Acceptable abbreviations are also listed in the Permitted synonyms for food additives table ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "manner of declaring ingredients",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s4c2",
+          "context_text": "As indicated in the section on manner of declaring ingredients , food additives must be declared by an acceptable common name in the list of ingredients of a prepackaged product. However, as per B.01.008.2(4)(d) of the FDR , they may be listed at the end of the list of ingredients in any order.",
+          "section": "Manner of declaring in the list of ingredients",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "List of ingredients and allergens",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+          "context_text": "For all requirements and information related to the list of ingredients, refer to the List of ingredients and allergens page.",
+          "section": "Manner of declaring in the list of ingredients",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Common Names for Ingredients and Components",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/common-names-ingredients-and-components",
+          "context_text": "For example, any combination of disodium phosphate, monosodium phosphate, sodium hexametaphosphate, sodium tripolyphosphate, tetrasodium pyrophosphate and sodium acid pyrophosphate can be listed as \"sodium phosphate\" or \"sodium phosphates\" as shown under item 8 of Table 2 of the Common Names for Ingredients and Components document [B.01.010(3)(b), FDR].",
+          "section": "Manner of declaring in the list of ingredients",
+          "element_type": "div",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Common Names for Ingredients and Components",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/common-names-ingredients-and-components",
+          "context_text": "Similarly, when potassium bisulphite, potassium metabisulphite, sodium bisulphite, sodium metabisulphite, sodium sulphite, sodium dithionite, sulphur dioxide and/or sulphurous acid are used together as preservatives, they can be listed as \"sulphiting agents\", \"sulfiting agents\", \"sulphites\" or \"sulfites\" as shown under item 21 of Table 2 of the Common Names for Ingredients and Components document [B.01.010(3)(b), FDR].",
+          "section": "Manner of declaring in the list of ingredients",
+          "element_type": "div",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "Food allergens, gluten and added sulphite declaration",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s8c2",
+          "context_text": "Note: Sulphites have been identified as one of the priority allergens in Canada. Please refer to the Food allergens, gluten and added sulphite declaration section regarding the regulatory requirements for declaration of sulphites in the list of ingredients.",
+          "section": "Manner of declaring in the list of ingredients",
+          "element_type": "p",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "Permitted synonyms for food additives table",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives/permitted-synonyms",
+          "context_text": "The CFIA reviews and assesses synonyms requests for use as common names in the list of ingredients. Acceptable synonyms are listed in the Permitted synonyms for food additives table .",
+          "section": "Manner of declaring in the list of ingredients",
+          "element_type": "p",
+          "position_in_content": 10
+        },
+        {
+          "link_text": "Permitted synonyms for food additives table",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives/permitted-synonyms",
+          "context_text": "For example, TBHQ is an acceptable synonym for tertiary butylhydroquinone. Acceptable abbreviations are also listed in the Permitted synonyms for food additives table .",
+          "section": "Manner of declaring in the list of ingredients",
+          "element_type": "div",
+          "position_in_content": 13
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "As indicated in the section on manner of declaring ingredients , food additives must be declared by an acceptable common name in the list of ingredients of a prepackaged product. However, as per B.01.008.2(4)(d) of the FDR , they may be listed at the end of the list of ingredients in any order.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "manner of declaring ingredients",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s4c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For all requirements and information related to the list of ingredients, refer to the List of ingredients and allergens page.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of ingredients and allergens",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The FDR allows for the use of collective/class names to classify a group of similar food additives in the list of ingredients, without having to list each ingredient individually.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For example, any combination of disodium phosphate, monosodium phosphate, sodium hexametaphosphate, sodium tripolyphosphate, tetrasodium pyrophosphate and sodium acid pyrophosphate can be listed as \"sodium phosphate\" or \"sodium phosphates\" as shown under item 8 of Table 2 of the Common Names for Ingredients and Components document [B.01.010(3)(b), FDR].",
+          "element_type": "div",
+          "links": [
+            {
+              "text": "Common Names for Ingredients and Components",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/common-names-ingredients-and-components",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Similarly, when potassium bisulphite, potassium metabisulphite, sodium bisulphite, sodium metabisulphite, sodium sulphite, sodium dithionite, sulphur dioxide and/or sulphurous acid are used together as preservatives, they can be listed as \"sulphiting agents\", \"sulfiting agents\", \"sulphites\" or \"sulfites\" as shown under item 21 of Table 2 of the Common Names for Ingredients and Components document [B.01.010(3)(b), FDR].",
+          "element_type": "div",
+          "links": [
+            {
+              "text": "Common Names for Ingredients and Components",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/common-names-ingredients-and-components",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Note: Sulphites have been identified as one of the priority allergens in Canada. Please refer to the Food allergens, gluten and added sulphite declaration section regarding the regulatory requirements for declaration of sulphites in the list of ingredients.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Food allergens, gluten and added sulphite declaration",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s8c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "When food additives are used in preparations or mixtures and have a function or effect on the food to which they are added, they are required to be declared in the list of ingredients as if they were ingredients added directly to the food.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For example, glycerol ester of wood rosin and sucrose acetate isobutyrate are additives that are permitted solely in flavours for use in citrus-flavoured and spruce-flavoured beverages. These additives are density adjusting agents and will have an effect on the final beverage. As these additives keep the flavour preparation in suspension and prevent the formation of an oil ring at the surface of the beverage, they must be declared by their common name in the list of ingredients of the food to which they are added as if they were ingredients of the food [B.01.009(3)(f), FDR ].",
+          "element_type": "div",
+          "links": []
+        },
+        {
+          "text": "For food additives, the names in Health Canada's Lists of permitted food additives are always acceptable common names.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Lists of permitted food additives",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "The CFIA reviews and assesses synonyms requests for use as common names in the list of ingredients. Acceptable synonyms are listed in the Permitted synonyms for food additives table .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Permitted synonyms for food additives table",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives/permitted-synonyms",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The Codex Alimentarius International Numbering System (INS) for food additives or the numbering system used by the European Union (for example, E 102) are not acceptable alone as the common name declaration for the food additive in Canada. They may be declared as supplementary information, when the food additive is already declared in the list of ingredients by its required common name or acceptable synonym.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In some cases, abbreviations for food additives may be acceptable for use as common names in the list of ingredients.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For example, TBHQ is an acceptable synonym for tertiary butylhydroquinone. Acceptable abbreviations are also listed in the Permitted synonyms for food additives table .",
+          "element_type": "div",
+          "links": [
+            {
+              "text": "Permitted synonyms for food additives table",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives/permitted-synonyms",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Food additive preparations": {
+      "title": "Food additive preparations",
+      "content": [
+        "Food additive preparations must include the following information grouped together with the list of ingredients:",
+        "either a quantitative statement of the amount of each additive present, or directions for use which, if followed, will produce a food that does not contain additives above the maximum levels prescribed in the Lists of permitted food additives [B.16.013, FDR]"
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "Food additive preparations must include the following information grouped together with the list of ingredients:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "either a quantitative statement of the amount of each additive present, or directions for use which, if followed, will produce a food that does not contain additives above the maximum levels prescribed in the Lists of permitted food additives [B.16.013, FDR]",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Lists of permitted food additives",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Pre-mixes": {
+      "title": "Pre-mixes",
+      "content": [
+        "This section refers only to pre-mixes under section B.16.004 of the FDR. It does not apply to pre-mixes that are intended for sale directly to consumers at the retail level such as cakes mixes, soup mixes, pancake mixes or beverage mixes.",
+        "A pre-mix is a mixture of one or more food additives with other non-additive ingredients, where at least one of the food additives is intended to function or has an effect strictly in the final food, not in the pre-mix itself. Food additives used in pre-mix must meet all requirements for the purpose of use for which it is intended in the final food as listed in the Lists of permitted food additives [B.16.004(d), FDR].",
+        "A pre-mix is solely for use as an ingredient in:",
+        "the manufacture of another food that is intended for sale to a consumer at the retail level, or the preparation of another food by an industry or an institution",
+        "A pre-mix must include the following information, grouped together with the list of ingredients:",
+        "a quantitative statement of the amount of each additive present that is intended to function or has an effect in the food made with the pre-mix, and; directions for use which, if followed, will produce a food that does not contain the food additive(s) above the maximum levels prescribed in the Lists of permitted food additives [B.16.014, FDR]",
+        "The list of ingredients and other required information may be shown on the label of the pre-mix or in documentation provided by the seller to the pre-mix purchaser.",
+        "The food additives and other ingredients of the pre-mix that are intended to serve a purpose in the final food must be declared as ingredients of the final food, not as components.",
+        "For example, a prepared meat manufacturer may use a pre-mix that contains an additive and a seasoning mixture in a product. Even if they are being added together as a single pre-mix product, the additive added and the seasoning mixture must be declared as separate ingredients of the prepared meat product. The additive added in the prepared meat product functions as if it were directly added on its own. Consequently, this added additive is not be exempt from being declared in the list of ingredients of the prepared meat product as it is the case for certain components of seasonings."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "This section refers only to pre-mixes under section B.16.004 of the FDR. It does not apply to pre-mixes that are intended for sale directly to consumers at the retail level such as cakes mixes, soup mixes, pancake mixes or beverage mixes.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "A pre-mix is a mixture of one or more food additives with other non-additive ingredients, where at least one of the food additives is intended to function or has an effect strictly in the final food, not in the pre-mix itself. Food additives used in pre-mix must meet all requirements for the purpose of use for which it is intended in the final food as listed in the Lists of permitted food additives [B.16.004(d), FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Lists of permitted food additives",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "A pre-mix is solely for use as an ingredient in:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "the manufacture of another food that is intended for sale to a consumer at the retail level, or the preparation of another food by an industry or an institution",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "A pre-mix must include the following information, grouped together with the list of ingredients:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "a quantitative statement of the amount of each additive present that is intended to function or has an effect in the food made with the pre-mix, and; directions for use which, if followed, will produce a food that does not contain the food additive(s) above the maximum levels prescribed in the Lists of permitted food additives [B.16.014, FDR]",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Lists of permitted food additives",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "The list of ingredients and other required information may be shown on the label of the pre-mix or in documentation provided by the seller to the pre-mix purchaser.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The food additives and other ingredients of the pre-mix that are intended to serve a purpose in the final food must be declared as ingredients of the final food, not as components.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For example, a prepared meat manufacturer may use a pre-mix that contains an additive and a seasoning mixture in a product. Even if they are being added together as a single pre-mix product, the additive added and the seasoning mixture must be declared as separate ingredients of the prepared meat product. The additive added in the prepared meat product functions as if it were directly added on its own. Consequently, this added additive is not be exempt from being declared in the list of ingredients of the prepared meat product as it is the case for certain components of seasonings.",
+          "element_type": "div",
+          "links": []
+        }
+      ]
+    },
+    "Caffeine as a food additive": {
+      "title": "Caffeine as a food additive",
+      "content": [
+        "List of permitted food additives with other purposes of use allows for the use of caffeine and caffeine citrate as food additives in cola type beverages and \"non-alcoholic carbonated water-based flavoured sweetened beverages\" (this includes carbonated soft drinks). Additionally, Health Canada has provided preliminary guidance for industry on the labelling of caffeine content in prepackaged foods . While Health Canada's guidance reflects a best practice, it is currently a voluntary approach.",
+        "Caffeine is a permitted supplemental ingredient which may be added to specific supplemented foods such as caffeinated energy drinks, protein-isolate and cereal-based bars, and chewing gums under specific conditions and amounts and is not considered a food additive in these products. For more details, consult Supplemented foods ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Supplemented foods",
+          "href": "https://inspection.canada.ca/node/6294",
+          "context_text": "Caffeine is a permitted supplemental ingredient which may be added to specific supplemented foods such as caffeinated energy drinks, protein-isolate and cereal-based bars, and chewing gums under specific conditions and amounts and is not considered a food additive in these products. For more details, consult Supplemented foods .",
+          "section": "Caffeine as a food additive",
+          "element_type": "p",
+          "position_in_content": 2
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "List of permitted food additives with other purposes of use allows for the use of caffeine and caffeine citrate as food additives in cola type beverages and \"non-alcoholic carbonated water-based flavoured sweetened beverages\" (this includes carbonated soft drinks). Additionally, Health Canada has provided preliminary guidance for industry on the labelling of caffeine content in prepackaged foods . While Health Canada's guidance reflects a best practice, it is currently a voluntary approach.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of permitted food additives with other purposes of use",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/public-involvement-partnerships/notice-proposal-modernize-lists-permitted-food-additives/draft-other-purposes-use.html",
+              "is_external": true
+            },
+            {
+              "text": "preliminary guidance for industry on the labelling of caffeine content in prepackaged foods",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/preliminary-guidance-industry-labelling-caffeine-content-prepackaged-foods-march-2010.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Caffeine is a permitted supplemental ingredient which may be added to specific supplemented foods such as caffeinated energy drinks, protein-isolate and cereal-based bars, and chewing gums under specific conditions and amounts and is not considered a food additive in these products. For more details, consult Supplemented foods .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Supplemented foods",
+              "href": "https://inspection.canada.ca/node/6294",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Food colours": {
+      "title": "Food colours",
+      "content": [
+        "Colours that are acceptable for use as food additives are listed in the List of permitted food colours .",
+        "Most food colours must meet the specifications set out in the Food Chemical Codex (FCC) or the specifications of the Joint FAO / WHO Expert Committee on Food Additives (JECFA). The 2 food colours Ponceau SX and Citrus Red No. 2 must meet the specifications set out in the Table of Food Additive Specifications in B.16.011 of the Food and Drug Regulations (FDR).",
+        "Food colours must be declared by their specific common names in the list of ingredients of a prepackaged product (for example, \"allura red\"). This requirement to declare food colours by their specific common name in the list of ingredients also applies to food colours that are components of ingredients not exempt from component declaration.",
+        "Similarly to other food additives, the names in Health Canada's List of permitted food colours are acceptable common names. Other common names that may be used are listed in the Permitted synonyms for food additives table , if any. For more information, refer to Use of synonyms .",
+        "With the repeal of the \"colour\" class name, the term \"colour\" may not be used in the list of ingredients to declare the presence of 1 or more food colours. As well, the specific common names of 1 or more food colours may not be grouped and listed within parentheses after the term \"colour\", as this is not in compliance with the manner in which ingredients and components must be declared.",
+        "Manufacturers may voluntarily choose to include a function descriptor within parentheses following the specific common name of a food colour (for example, \"iron oxide (a food colour)\", \"iron oxide (a colouring agent)\", \"iron oxide (for colour)\" or simply \"iron oxide (colour)\"). This statement of a colour's function would be additional information only and is not mandatory.",
+        "The lake of a water-soluble synthetic colour is an oil dispersible version of the colour. Although lake versions are not included in Health Canada's List of permitted food colours , if a specific food colour is permitted, use of the corresponding lake version is also permitted. The common name to be used for the lake version of a colour may simply be the common name of the colour (for example, \"tartrazine\") or alternatively \"(naming the colour) lake\" (for example, tartrazine lake).",
+        "A preparation of colours, containing one or more synthetic colours, for household use in or on a food must carry the words \"Food Colour Preparation\" on its principal display panel [B.16.015(a), FDR ].",
+        "A food colour preparation is exempt from declaring its components when used as an ingredient in another food [B.01.009(2), FDR]. However, since the colours perform a function in, or have an effect on the food, any colours it contains must be shown in the list of ingredients of the food to which the preparation is added. The colour must be declared by their specific common names, as if they are ingredients of that food [B.01.009(3)(f), FDR]. Note that this requirement does not apply if the food colour preparation is a component of an ingredient exempt from component declaration, as per B.01.009(1) of the FDR.",
+        "Refer to List of ingredients and allergens for more information on requirements pertaining to list of ingredients."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Permitted synonyms for food additives table",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives/permitted-synonyms",
+          "context_text": "Similarly to other food additives, the names in Health Canada's List of permitted food colours are acceptable common names. Other common names that may be used are listed in the Permitted synonyms for food additives table , if any. For more information, refer to Use of synonyms .",
+          "section": "Food colours",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Use of synonyms",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives#s3c4",
+          "context_text": "Similarly to other food additives, the names in Health Canada's List of permitted food colours are acceptable common names. Other common names that may be used are listed in the Permitted synonyms for food additives table , if any. For more information, refer to Use of synonyms .",
+          "section": "Food colours",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "principal display panel",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s13c3",
+          "context_text": "A preparation of colours, containing one or more synthetic colours, for household use in or on a food must carry the words \"Food Colour Preparation\" on its principal display panel [B.16.015(a), FDR ].",
+          "section": "Food colours",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "List of ingredients and allergens",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+          "context_text": "Refer to List of ingredients and allergens for more information on requirements pertaining to list of ingredients.",
+          "section": "Food colours",
+          "element_type": "p",
+          "position_in_content": 10
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Colours that are acceptable for use as food additives are listed in the List of permitted food colours .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of permitted food colours",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted/3-colouring-agents.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Most food colours must meet the specifications set out in the Food Chemical Codex (FCC) or the specifications of the Joint FAO / WHO Expert Committee on Food Additives (JECFA). The 2 food colours Ponceau SX and Citrus Red No. 2 must meet the specifications set out in the Table of Food Additive Specifications in B.16.011 of the Food and Drug Regulations (FDR).",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Table of Food Additive Specifications",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/acts-regulations/incorporation-reference/table-food-additive-specifications.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Food colours must be declared by their specific common names in the list of ingredients of a prepackaged product (for example, \"allura red\"). This requirement to declare food colours by their specific common name in the list of ingredients also applies to food colours that are components of ingredients not exempt from component declaration.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Similarly to other food additives, the names in Health Canada's List of permitted food colours are acceptable common names. Other common names that may be used are listed in the Permitted synonyms for food additives table , if any. For more information, refer to Use of synonyms .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of permitted food colours",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted/3-colouring-agents.html",
+              "is_external": true
+            },
+            {
+              "text": "Permitted synonyms for food additives table",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives/permitted-synonyms",
+              "is_external": false
+            },
+            {
+              "text": "Use of synonyms",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives#s3c4",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "With the repeal of the \"colour\" class name, the term \"colour\" may not be used in the list of ingredients to declare the presence of 1 or more food colours. As well, the specific common names of 1 or more food colours may not be grouped and listed within parentheses after the term \"colour\", as this is not in compliance with the manner in which ingredients and components must be declared.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Manufacturers may voluntarily choose to include a function descriptor within parentheses following the specific common name of a food colour (for example, \"iron oxide (a food colour)\", \"iron oxide (a colouring agent)\", \"iron oxide (for colour)\" or simply \"iron oxide (colour)\"). This statement of a colour's function would be additional information only and is not mandatory.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The lake of a water-soluble synthetic colour is an oil dispersible version of the colour. Although lake versions are not included in Health Canada's List of permitted food colours , if a specific food colour is permitted, use of the corresponding lake version is also permitted. The common name to be used for the lake version of a colour may simply be the common name of the colour (for example, \"tartrazine\") or alternatively \"(naming the colour) lake\" (for example, tartrazine lake).",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of permitted food colours",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted/3-colouring-agents.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "A preparation of colours, containing one or more synthetic colours, for household use in or on a food must carry the words \"Food Colour Preparation\" on its principal display panel [B.16.015(a), FDR ].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "principal display panel",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s13c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "A food colour preparation is exempt from declaring its components when used as an ingredient in another food [B.01.009(2), FDR]. However, since the colours perform a function in, or have an effect on the food, any colours it contains must be shown in the list of ingredients of the food to which the preparation is added. The colour must be declared by their specific common names, as if they are ingredients of that food [B.01.009(3)(f), FDR]. Note that this requirement does not apply if the food colour preparation is a component of an ingredient exempt from component declaration, as per B.01.009(1) of the FDR.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Refer to List of ingredients and allergens for more information on requirements pertaining to list of ingredients.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of ingredients and allergens",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Sweeteners": {
+      "title": "Sweeteners",
+      "content": [
+        "Certain food additives in the List of permitted sweeteners have specific labelling requirements when used in prepackaged foods. Refer to labelling requirements for sweeteners and foods that contain sweeteners for more information."
+      ],
+      "internal_links": [
+        {
+          "link_text": "labelling requirements for sweeteners and foods that contain sweeteners",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/sweeteners",
+          "context_text": "Certain food additives in the List of permitted sweeteners have specific labelling requirements when used in prepackaged foods. Refer to labelling requirements for sweeteners and foods that contain sweeteners for more information.",
+          "section": "Sweeteners",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Certain food additives in the List of permitted sweeteners have specific labelling requirements when used in prepackaged foods. Refer to labelling requirements for sweeteners and foods that contain sweeteners for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of permitted sweeteners",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/lists-permitted/9-sweeteners.html",
+              "is_external": true
+            },
+            {
+              "text": "labelling requirements for sweeteners and foods that contain sweeteners",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/sweeteners",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Processing aids": {
+      "title": "Processing aids",
+      "content": [
+        "In Canada, there is no regulatory definition for processing aids. However, the Food Directorate of Health Canada has defined a processing aid as a substance that:",
+        "is used for a technical effect in food processing or manufacture when used, does not affect the intrinsic characteristics of the food, and when used, results in no or negligible residues of the substance or its by-products in or on the finished food",
+        "Food additives are not processing aids. Unlike food additives, processing aids are not considered to be ingredients, and are therefore not required to be declared on prepackaged food labels under FDR . Food additives carried over from one food to another as a component (such as a food additive present as a second or third generation of ingredients) remain ingredients and cannot be considered as processing aids. Although there are no regulatory requirements for the preclearance of processing aids as there are for food additives, using processing aids is controlled by subsection 4(1) of the Food and Drugs Act .",
+        "Health Canada has developed a Policy for Differentiating Food Additives and Processing Aids . This policy provides guidance to determine whether or not a substance is a food additive or a processing aid.",
+        "The following table is a list of substances that are added to food during processing for a \"processing aid\" function, and are not required to be declared in the list of ingredients (because they are not considered food ingredients) .",
+        "Hydrogen for hydrogenation purposes, currently exempt under B.01.008, FDR Cleansers and sanitizers Head space flushing gases and packaging gases Footnote 1 Contact freezing and cooling agents Washing and peeling agents Clarifying or filtering agents used in the processing of fruit juice, oil, vinegar, beer, wine and cider (The latter three categories of standardized alcoholic beverages are currently exempt from ingredient listing.) Catalysts that are essential to the manufacturing process and without which, the final food product would not exist, for example, nickel, copper, etc. Ion exchange resins, membranes and molecular sieves that are involved in physical separation and that are not incorporated into the food Desiccating agents or oxygen scavengers that are not incorporated into the food Water treatment chemicals for steam production"
+      ],
+      "internal_links": [
+        {
+          "link_text": "Footnote 1",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives#fn1",
+          "context_text": "Hydrogen for hydrogenation purposes, currently exempt under B.01.008, FDR Cleansers and sanitizers Head space flushing gases and packaging gases Footnote 1 Contact freezing and cooling agents Washing and peeling agents Clarifying or filtering agents used in the processing of fruit juice, oil, vinegar, beer, wine and cider (The latter three categories of standardized alcoholic beverages are currently exempt from ingredient listing.) Catalysts that are essential to the manufacturing process and without which, the final food product would not exist, for example, nickel, copper, etc. Ion exchange resins, membranes and molecular sieves that are involved in physical separation and that are not incorporated into the food Desiccating agents or oxygen scavengers that are not incorporated into the food Water treatment chemicals for steam production",
+          "section": "Processing aids",
+          "element_type": "ol",
+          "position_in_content": 6
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "In Canada, there is no regulatory definition for processing aids. However, the Food Directorate of Health Canada has defined a processing aid as a substance that:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "is used for a technical effect in food processing or manufacture when used, does not affect the intrinsic characteristics of the food, and when used, results in no or negligible residues of the substance or its by-products in or on the finished food",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "Food additives are not processing aids. Unlike food additives, processing aids are not considered to be ingredients, and are therefore not required to be declared on prepackaged food labels under FDR . Food additives carried over from one food to another as a component (such as a food additive present as a second or third generation of ingredients) remain ingredients and cannot be considered as processing aids. Although there are no regulatory requirements for the preclearance of processing aids as there are for food additives, using processing aids is controlled by subsection 4(1) of the Food and Drugs Act .",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Health Canada has developed a Policy for Differentiating Food Additives and Processing Aids . This policy provides guidance to determine whether or not a substance is a food additive or a processing aid.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Policy for Differentiating Food Additives and Processing Aids",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/reports-publications/policy-differentiating-food-additives-processing-aids-2008.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "The following table is a list of substances that are added to food during processing for a \"processing aid\" function, and are not required to be declared in the list of ingredients (because they are not considered food ingredients) .",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Hydrogen for hydrogenation purposes, currently exempt under B.01.008, FDR Cleansers and sanitizers Head space flushing gases and packaging gases Footnote 1 Contact freezing and cooling agents Washing and peeling agents Clarifying or filtering agents used in the processing of fruit juice, oil, vinegar, beer, wine and cider (The latter three categories of standardized alcoholic beverages are currently exempt from ingredient listing.) Catalysts that are essential to the manufacturing process and without which, the final food product would not exist, for example, nickel, copper, etc. Ion exchange resins, membranes and molecular sieves that are involved in physical separation and that are not incorporated into the food Desiccating agents or oxygen scavengers that are not incorporated into the food Water treatment chemicals for steam production",
+          "element_type": "ol",
+          "links": [
+            {
+              "text": "Footnote 1",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/food-additives#fn1",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

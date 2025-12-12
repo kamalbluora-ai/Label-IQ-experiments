@@ -1,0 +1,2100 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages",
+  "citation_title": "Alcohol",
+  "sections": {
+    "Overview": {
+      "title": "Overview",
+      "content": [
+        "Alcoholic beverages sold in Canada are subject to the provisions of:",
+        "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+        "When sold intraprovincially, alcoholic beverages are subject to the labelling requirements under the FDA and FDR, as well as specific requirements of the SFCA and the SFCR that apply to prepackaged foods sold in Canada , regardless of the level of trade. Depending on the type of alcoholic beverage, other federal acts or regulations not enforced by the Canadian Food Inspection Agency (CFIA) may also apply, such as the Spirit Drinks Trade Act . Provincial regulations may also have labelling requirements that apply when these products are sold within that province.",
+        "Alcoholic beverages with prescribed standards in volume 2 of the Canadian Food Compositional Standards (CFCS) document, incorporated by reference into the FDR include whisky, rum, gin, brandy, liqueur and spirituous cordials, vodka, wine, cider and beer. Some requirements are set up for tequila and mezcal in the FDR [B.02.090, B.02.091, FDR]. In addition, the prescribed standard for icewine is included in volume 8 of the Canadian Standards of Identity document, which is incorporated by reference (IbR) into the SFCR.",
+        "The labelling requirements detailed in the following section are specific to alcoholic beverages, both with and without prescribed standards. Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Safe Food for Canadians Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?safefood",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Safe Food for Canadians Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Food and Drugs Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Food and Drug Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "Alcoholic beverages with prescribed standards in volume 2 of the Canadian Food Compositional Standards (CFCS) document, incorporated by reference into the FDR include whisky, rum, gin, brandy, liqueur and spirituous cordials, vodka, wine, cider and beer. Some requirements are set up for tequila and mezcal in the FDR [B.02.090, B.02.091, FDR]. In addition, the prescribed standard for icewine is included in volume 8 of the Canadian Standards of Identity document, which is incorporated by reference (IbR) into the SFCR.",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "volume 8 of the Canadian Standards of Identity",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+          "context_text": "Alcoholic beverages with prescribed standards in volume 2 of the Canadian Food Compositional Standards (CFCS) document, incorporated by reference into the FDR include whisky, rum, gin, brandy, liqueur and spirituous cordials, vodka, wine, cider and beer. Some requirements are set up for tequila and mezcal in the FDR [B.02.090, B.02.091, FDR]. In addition, the prescribed standard for icewine is included in volume 8 of the Canadian Standards of Identity document, which is incorporated by reference (IbR) into the SFCR.",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Industry Labelling Tool",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+          "context_text": "The labelling requirements detailed in the following section are specific to alcoholic beverages, both with and without prescribed standards. Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods.",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 5
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Alcoholic beverages sold in Canada are subject to the provisions of:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Safe Food for Canadians Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?safefood",
+              "is_external": false
+            },
+            {
+              "text": "Safe Food for Canadians Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+              "is_external": false
+            },
+            {
+              "text": "Food and Drugs Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+              "is_external": false
+            },
+            {
+              "text": "Food and Drug Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "When sold intraprovincially, alcoholic beverages are subject to the labelling requirements under the FDA and FDR, as well as specific requirements of the SFCA and the SFCR that apply to prepackaged foods sold in Canada , regardless of the level of trade. Depending on the type of alcoholic beverage, other federal acts or regulations not enforced by the Canadian Food Inspection Agency (CFIA) may also apply, such as the Spirit Drinks Trade Act . Provincial regulations may also have labelling requirements that apply when these products are sold within that province.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Spirit Drinks Trade Act",
+              "href": "https://laws-lois.justice.gc.ca/eng/acts/S-15.6/page-1.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Alcoholic beverages with prescribed standards in volume 2 of the Canadian Food Compositional Standards (CFCS) document, incorporated by reference into the FDR include whisky, rum, gin, brandy, liqueur and spirituous cordials, vodka, wine, cider and beer. Some requirements are set up for tequila and mezcal in the FDR [B.02.090, B.02.091, FDR]. In addition, the prescribed standard for icewine is included in volume 8 of the Canadian Standards of Identity document, which is incorporated by reference (IbR) into the SFCR.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            },
+            {
+              "text": "volume 8 of the Canadian Standards of Identity",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The labelling requirements detailed in the following section are specific to alcoholic beverages, both with and without prescribed standards. Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Industry Labelling Tool",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Common name": {
+      "title": "Common name",
+      "content": [
+        "Many alcoholic beverages have a standard of identity or composition prescribed in volume 2 of the Canadian Food Compositional Standards document. For beverages meeting 1 of these standards, the common name appearing in bold face type, but not in italics, in the CFCS document must be used if that beverage has been imported or is intended for interprovincial trade. With respect to icewine for which a standard of identity is prescribed in volume 8 of the Canadian Standards of Identity document, the common name requirement applies to icewine that is imported, interprovincially traded or exported, as well as prepackaged icewine sold to consumers [9, 201, 202, SFCR].",
+        "The common name for an alcoholic beverage without a prescribed standard is the name by which the food is generally known or a name that is not generic and that describes the product.",
+        "Generic terms such as \"beverage\", \"drink\", \"cooler\", \"spirit\", \"liquor\", as appropriate, are accepted within the common name of unstandardized beverages with an alcohol content.",
+        "Example: \"alcoholic malt beverage\" is an acceptable common name for an unstandardized beverage made from malted cereal grains, which has not been subjected to distillation; \"sugar cane spirit\" is acceptable as a common name for an unstandardized product made from the distillation of fermented sugar cane juice; \"maple syrup liquor\" is an acceptable common name for a product made from fruit spirit and maple syrup. Alternatively, this product could be called \"fruit spirit with maple syrup\".",
+        "For more information on common names for specific types of alcoholic beverages, consult:",
+        "Common name for beer Common name for flavoured purified alcohol Common name for wine",
+        "For further information, including manner of declaring, refer to Common name .",
+        "For information on the use of geographical indications in the common name, refer to Geographical indications under Distinctive common names .",
+        "Under the terms of the Agreement between Canada and the European community on trade in wines and spirit drinks , Canada agreed to restrict the use of certain spirit drink names to spirit drinks originating from specific countries only. Protection of these spirit drink names is provided for in Canada in the Spirit Drinks Trade Act (SDTA), which is administered by Agriculture and Agri-Food Canada (AAFC). For further information, please consult AAFC's Spirit Drinks Trade Act Compliance and Enforcement Policy .",
+        "The common name must appear on food labels in English and French [B.01.012(2), FDR; 206(1), SFCR]. The following alcoholic beverage common names are considered bilingual common names under section B.01.012(10) of the FDR:",
+        "Advocaat or Advokaat Akvavit Americano Anisette Apricot Brandy Liqueur Aquavit Armagnac Bourbon Brandy Calvados Campari Chartreuse Cherry Brandy Liqueur Crème de Banane Crème de Bleuets Crème de Cacao Crème de Cassis Crème de Menthe Crème de Noyau Curaçao Orange Dry Gin Fior d'Alpe Grappa Highland Whisky Irish Whisky Kirsch Kummel Liqueur de Fraise Mandarinette Manhattan Marc Martini Mezcal Ouzo Pastis Peach Brandy Liqueur Poire William Prunelle de Bourgogne Rye Whisky Sake or Saki Scotch Whisky Slivovitz Sloe Gin Strega Tennessee Whisky Tequila Triple Sec"
+      ],
+      "internal_links": [
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "Many alcoholic beverages have a standard of identity or composition prescribed in volume 2 of the Canadian Food Compositional Standards document. For beverages meeting 1 of these standards, the common name appearing in bold face type, but not in italics, in the CFCS document must be used if that beverage has been imported or is intended for interprovincial trade. With respect to icewine for which a standard of identity is prescribed in volume 8 of the Canadian Standards of Identity document, the common name requirement applies to icewine that is imported, interprovincially traded or exported, as well as prepackaged icewine sold to consumers [9, 201, 202, SFCR].",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "volume 8 of the Canadian Standards of Identity",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+          "context_text": "Many alcoholic beverages have a standard of identity or composition prescribed in volume 2 of the Canadian Food Compositional Standards document. For beverages meeting 1 of these standards, the common name appearing in bold face type, but not in italics, in the CFCS document must be used if that beverage has been imported or is intended for interprovincial trade. With respect to icewine for which a standard of identity is prescribed in volume 8 of the Canadian Standards of Identity document, the common name requirement applies to icewine that is imported, interprovincially traded or exported, as well as prepackaged icewine sold to consumers [9, 201, 202, SFCR].",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Common name for beer",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s13c9",
+          "context_text": "Common name for beer Common name for flavoured purified alcohol Common name for wine",
+          "section": "Common name",
+          "element_type": "ul",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "Common name for flavoured purified alcohol",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s19c11",
+          "context_text": "Common name for beer Common name for flavoured purified alcohol Common name for wine",
+          "section": "Common name",
+          "element_type": "ul",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "Common name for wine",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s39c17",
+          "context_text": "Common name for beer Common name for flavoured purified alcohol Common name for wine",
+          "section": "Common name",
+          "element_type": "ul",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "Common name",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#s10c8",
+          "context_text": "For further information, including manner of declaring, refer to Common name .",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Distinctive common names",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#s10c8",
+          "context_text": "For information on the use of geographical indications in the common name, refer to Geographical indications under Distinctive common names .",
+          "section": "Common name",
+          "element_type": "p",
+          "position_in_content": 8
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Many alcoholic beverages have a standard of identity or composition prescribed in volume 2 of the Canadian Food Compositional Standards document. For beverages meeting 1 of these standards, the common name appearing in bold face type, but not in italics, in the CFCS document must be used if that beverage has been imported or is intended for interprovincial trade. With respect to icewine for which a standard of identity is prescribed in volume 8 of the Canadian Standards of Identity document, the common name requirement applies to icewine that is imported, interprovincially traded or exported, as well as prepackaged icewine sold to consumers [9, 201, 202, SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            },
+            {
+              "text": "volume 8 of the Canadian Standards of Identity",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The common name for an alcoholic beverage without a prescribed standard is the name by which the food is generally known or a name that is not generic and that describes the product.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Generic terms such as \"beverage\", \"drink\", \"cooler\", \"spirit\", \"liquor\", as appropriate, are accepted within the common name of unstandardized beverages with an alcohol content.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Example: \"alcoholic malt beverage\" is an acceptable common name for an unstandardized beverage made from malted cereal grains, which has not been subjected to distillation; \"sugar cane spirit\" is acceptable as a common name for an unstandardized product made from the distillation of fermented sugar cane juice; \"maple syrup liquor\" is an acceptable common name for a product made from fruit spirit and maple syrup. Alternatively, this product could be called \"fruit spirit with maple syrup\".",
+          "element_type": "div",
+          "links": []
+        },
+        {
+          "text": "For more information on common names for specific types of alcoholic beverages, consult:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Common name for beer Common name for flavoured purified alcohol Common name for wine",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Common name for beer",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s13c9",
+              "is_external": false
+            },
+            {
+              "text": "Common name for flavoured purified alcohol",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s19c11",
+              "is_external": false
+            },
+            {
+              "text": "Common name for wine",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s39c17",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For further information, including manner of declaring, refer to Common name .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Common name",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#s10c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For information on the use of geographical indications in the common name, refer to Geographical indications under Distinctive common names .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Distinctive common names",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/common-name#s10c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Under the terms of the Agreement between Canada and the European community on trade in wines and spirit drinks , Canada agreed to restrict the use of certain spirit drink names to spirit drinks originating from specific countries only. Protection of these spirit drink names is provided for in Canada in the Spirit Drinks Trade Act (SDTA), which is administered by Agriculture and Agri-Food Canada (AAFC). For further information, please consult AAFC's Spirit Drinks Trade Act Compliance and Enforcement Policy .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Agreement between Canada and the European community on trade in wines and spirit drinks",
+              "href": "https://www.treaty-accord.gc.ca/text-texte.aspx?id=104976",
+              "is_external": true
+            },
+            {
+              "text": "Spirit Drinks Trade Act",
+              "href": "https://laws-lois.justice.gc.ca/eng/acts/S-15.6/page-1.html",
+              "is_external": true
+            },
+            {
+              "text": "Agriculture and Agri-Food Canada",
+              "href": "https://agriculture.canada.ca/en",
+              "is_external": true
+            },
+            {
+              "text": "Spirit Drinks Trade Act Compliance and Enforcement Policy",
+              "href": "https://agriculture.canada.ca/en/canadas-agriculture-sectors/food-processing-industry/processed-food-and-beverages/spirit-drinks-trade-act-compliance-and-enforcement-policy",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "The common name must appear on food labels in English and French [B.01.012(2), FDR; 206(1), SFCR]. The following alcoholic beverage common names are considered bilingual common names under section B.01.012(10) of the FDR:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Advocaat or Advokaat Akvavit Americano Anisette Apricot Brandy Liqueur Aquavit Armagnac Bourbon Brandy Calvados Campari Chartreuse Cherry Brandy Liqueur Crème de Banane Crème de Bleuets Crème de Cacao Crème de Cassis Crème de Menthe Crème de Noyau Curaçao Orange Dry Gin Fior d'Alpe Grappa Highland Whisky Irish Whisky Kirsch Kummel Liqueur de Fraise Mandarinette Manhattan Marc Martini Mezcal Ouzo Pastis Peach Brandy Liqueur Poire William Prunelle de Bourgogne Rye Whisky Sake or Saki Scotch Whisky Slivovitz Sloe Gin Strega Tennessee Whisky Tequila Triple Sec",
+          "element_type": "ul",
+          "links": []
+        }
+      ]
+    },
+    "List of ingredients": {
+      "title": "List of ingredients",
+      "content": [
+        "Standardized alcoholic beverages (those with compositional standards in volume 2 of the Canadian Food Compositional Standards , such as beer, wine and rum) are exempt from the requirement to show a list of ingredients on the label [B.01.008(2)(f), FDR]. This exemption also applies to icewine which, in addition to meeting the prescribed standard in volume 8 of the Canadian Standards of Identity document, also needs to meet the wine standard in volume 2 of the CFCS document.",
+        "The following unstandardized alcoholic beverages (for which there is no standard in volume 2 of the CFCS document) are also exempt from declaring a list of ingredients: Scotch whisky, Irish whisky, Armagnac brandy, Cognac brandy, bourbon whisky, Tennessee whisky, tequila and mezcal [B.01.008 (2)(f.1), FDR]. All other products (such as sake, cocktails like martinis or mojitos, pernod, ouzo) require a complete list of ingredients and their components [B.01.008(1)(b), FDR].",
+        "For more information on declaring the list of ingredients when required, refer to List of ingredients and allergens .",
+        "For information specific to beer, see List of ingredients and food allergen, gluten and added sulphite labelling for beer ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "Standardized alcoholic beverages (those with compositional standards in volume 2 of the Canadian Food Compositional Standards , such as beer, wine and rum) are exempt from the requirement to show a list of ingredients on the label [B.01.008(2)(f), FDR]. This exemption also applies to icewine which, in addition to meeting the prescribed standard in volume 8 of the Canadian Standards of Identity document, also needs to meet the wine standard in volume 2 of the CFCS document.",
+          "section": "List of ingredients",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "volume 8 of the Canadian Standards of Identity",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+          "context_text": "Standardized alcoholic beverages (those with compositional standards in volume 2 of the Canadian Food Compositional Standards , such as beer, wine and rum) are exempt from the requirement to show a list of ingredients on the label [B.01.008(2)(f), FDR]. This exemption also applies to icewine which, in addition to meeting the prescribed standard in volume 8 of the Canadian Standards of Identity document, also needs to meet the wine standard in volume 2 of the CFCS document.",
+          "section": "List of ingredients",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "List of ingredients and allergens",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+          "context_text": "For more information on declaring the list of ingredients when required, refer to List of ingredients and allergens .",
+          "section": "List of ingredients",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "List of ingredients and food allergen, gluten and added sulphite labelling for beer",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s14c9",
+          "context_text": "For information specific to beer, see List of ingredients and food allergen, gluten and added sulphite labelling for beer .",
+          "section": "List of ingredients",
+          "element_type": "p",
+          "position_in_content": 4
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Standardized alcoholic beverages (those with compositional standards in volume 2 of the Canadian Food Compositional Standards , such as beer, wine and rum) are exempt from the requirement to show a list of ingredients on the label [B.01.008(2)(f), FDR]. This exemption also applies to icewine which, in addition to meeting the prescribed standard in volume 8 of the Canadian Standards of Identity document, also needs to meet the wine standard in volume 2 of the CFCS document.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            },
+            {
+              "text": "volume 8 of the Canadian Standards of Identity",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The following unstandardized alcoholic beverages (for which there is no standard in volume 2 of the CFCS document) are also exempt from declaring a list of ingredients: Scotch whisky, Irish whisky, Armagnac brandy, Cognac brandy, bourbon whisky, Tennessee whisky, tequila and mezcal [B.01.008 (2)(f.1), FDR]. All other products (such as sake, cocktails like martinis or mojitos, pernod, ouzo) require a complete list of ingredients and their components [B.01.008(1)(b), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "For more information on declaring the list of ingredients when required, refer to List of ingredients and allergens .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of ingredients and allergens",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For information specific to beer, see List of ingredients and food allergen, gluten and added sulphite labelling for beer .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of ingredients and food allergen, gluten and added sulphite labelling for beer",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s14c9",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Food allergens, gluten and added sulphite labelling": {
+      "title": "Food allergens, gluten and added sulphite labelling",
+      "content": [
+        "Source of food allergens or gluten, and added sulphites at a level of 10 ppm or more, must be declared when present in alcoholic beverages [B.01.010.1(2), FDR]. This requirement applies to all standardized and unstandardized alcoholic beverages, even if certain of these products are exempt from declaring a list of ingredients [B.01.008(2)(f), FDR]. For more information, refer to List of ingredients and allergens ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "List of ingredients and allergens",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+          "context_text": "Source of food allergens or gluten, and added sulphites at a level of 10 ppm or more, must be declared when present in alcoholic beverages [B.01.010.1(2), FDR]. This requirement applies to all standardized and unstandardized alcoholic beverages, even if certain of these products are exempt from declaring a list of ingredients [B.01.008(2)(f), FDR]. For more information, refer to List of ingredients and allergens .",
+          "section": "Food allergens, gluten and added sulphite labelling",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Source of food allergens or gluten, and added sulphites at a level of 10 ppm or more, must be declared when present in alcoholic beverages [B.01.010.1(2), FDR]. This requirement applies to all standardized and unstandardized alcoholic beverages, even if certain of these products are exempt from declaring a list of ingredients [B.01.008(2)(f), FDR]. For more information, refer to List of ingredients and allergens .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of ingredients and allergens",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Nutrition labelling": {
+      "title": "Nutrition labelling",
+      "content": [
+        "Beverages with an alcohol content of more than 0.5% are usually exempt from carrying a Nutrition Facts table [B.01.401(2)(b)(i), FDR].",
+        "This exemption may be lost in certain situations, for example when a nutrient content claim is made [B.01.401(3), FDR]. For more information, refer to Reasons for losing the exemption .",
+        "The alcohol by volume declaration is not considered to be a nutrient content claim and therefore does not trigger nutrition labelling [B.01.502(2)(j), FDR].",
+        "If regulated parties choose to voluntarily display an NFt on an otherwise exempt product, the NFt must be displayed in accordance with Canadian regulatory requirements.",
+        "Most prepackaged foods sold in Canada are required to be labelled with an FOP nutrition symbol when the amount of saturated fat, sugars and/or sodium is equal to or higher than the specified nutrient thresholds [B.01.350, FDR].",
+        "Alcoholic beverages with an alcohol content greater than 0.5% are conditionally exempt from the FOP nutrition symbol requirements, when not required to declare an NFt [B.01.350(13)(a), FDR]. The product will be subject to the nutrition symbol labelling requirements if required to carry an NFt, for example, when a nutrient content claim is made.",
+        "If regulated parties choose to voluntarily display an NFt on an otherwise exempt product, the product still maintains its conditional exemption from the nutrition symbol requirements.",
+        "See Foods exempt from the front-of-package (FOP) nutrition symbol requirements for details on the exemptions.",
+        "For more information, refer to Nutrition labelling ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "usually exempt from carrying a Nutrition Facts table",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions#c2",
+          "context_text": "Beverages with an alcohol content of more than 0.5% are usually exempt from carrying a Nutrition Facts table [B.01.401(2)(b)(i), FDR].",
+          "section": "Nutrition labelling",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Reasons for losing the exemption",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions#c3",
+          "context_text": "This exemption may be lost in certain situations, for example when a nutrient content claim is made [B.01.401(3), FDR]. For more information, refer to Reasons for losing the exemption .",
+          "section": "Nutrition labelling",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "alcohol by volume declaration",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#c6",
+          "context_text": "The alcohol by volume declaration is not considered to be a nutrient content claim and therefore does not trigger nutrition labelling [B.01.502(2)(j), FDR].",
+          "section": "Nutrition labelling",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "nutrition symbol",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s54c19",
+          "context_text": "Most prepackaged foods sold in Canada are required to be labelled with an FOP nutrition symbol when the amount of saturated fat, sugars and/or sodium is equal to or higher than the specified nutrient thresholds [B.01.350, FDR].",
+          "section": "Nutrition labelling",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "Nutrition labelling",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling",
+          "context_text": "For more information, refer to Nutrition labelling .",
+          "section": "Nutrition labelling",
+          "element_type": "p",
+          "position_in_content": 9
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Beverages with an alcohol content of more than 0.5% are usually exempt from carrying a Nutrition Facts table [B.01.401(2)(b)(i), FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "usually exempt from carrying a Nutrition Facts table",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions#c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "This exemption may be lost in certain situations, for example when a nutrient content claim is made [B.01.401(3), FDR]. For more information, refer to Reasons for losing the exemption .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Reasons for losing the exemption",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions#c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The alcohol by volume declaration is not considered to be a nutrient content claim and therefore does not trigger nutrition labelling [B.01.502(2)(j), FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "alcohol by volume declaration",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#c6",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "If regulated parties choose to voluntarily display an NFt on an otherwise exempt product, the NFt must be displayed in accordance with Canadian regulatory requirements.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Most prepackaged foods sold in Canada are required to be labelled with an FOP nutrition symbol when the amount of saturated fat, sugars and/or sodium is equal to or higher than the specified nutrient thresholds [B.01.350, FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "nutrition symbol",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s54c19",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Alcoholic beverages with an alcohol content greater than 0.5% are conditionally exempt from the FOP nutrition symbol requirements, when not required to declare an NFt [B.01.350(13)(a), FDR]. The product will be subject to the nutrition symbol labelling requirements if required to carry an NFt, for example, when a nutrient content claim is made.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If regulated parties choose to voluntarily display an NFt on an otherwise exempt product, the product still maintains its conditional exemption from the nutrition symbol requirements.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See Foods exempt from the front-of-package (FOP) nutrition symbol requirements for details on the exemptions.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Foods exempt from the front-of-package (FOP) nutrition symbol requirements",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html#a5",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "For more information, refer to Nutrition labelling .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Nutrition labelling",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Alcohol by volume declaration": {
+      "title": "Alcohol by volume declaration",
+      "content": [
+        "All alcoholic beverages containing 1.1% or more alcohol by volume must declare the percentage by volume of alcohol contained in the product [B.02.003, FDR].",
+        "The alcohol by volume declaration must be that of the product as sold.",
+        "Example: if a product is sold in a multiple serving bottle with 2 compartments, containing 2 different liquors with different contents of alcohol by volume and the product is intended to be poured in such a manner as to form a layered drink of the 2 liquors, it is not acceptable to declare on the main panel the single alcohol content of the final beverage, when poured according to instructions, and to declare the individual alcohol content of the 2 different liquors on the back label. Due to the variability of proportions that could occur when the beverage is poured, the separate alcohol by volume declarations are required as the main panel declaration. The intended combined declaration may be shown voluntarily elsewhere on the label.",
+        "The percentage by volume of alcohol must be shown as \"X % alcohol by volume\" or be abbreviated \"X % alc./vol.\" or \"X% alc/vol\". Alternatively, the percentage may be in the middle of the declaration and shown preceded by the abbreviation \"alc.\" or \"alc\" and followed by the abbreviation \"vol.\" or \"vol\" (for example: \"alc X% vol\" or \"alc. X% vol.\") [B.02.003, FDR].",
+        "The alcohol by volume declaration must be shown on the principal display panel [B.02.003, FDR]. For wine containers, the principal display surface includes any area, excluding its top and bottom, that can be seen without having to turn the container, as per paragraph (g) of the principal display surface definition [B.01.001(1), FDR; 1, SFCR].",
+        "The alcohol by volume declaration must be shown in both English and French [B.01.012(2), FDR]. The French translation is \"X % d'alcool par volume \". When abbreviated, the statements \"X % alc./vol.\", \"X% alc/vol\", \"alc X% vol\" and \"alc. X% vol.\" are fully bilingual."
+      ],
+      "internal_links": [
+        {
+          "link_text": "principal display panel",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s14c3",
+          "context_text": "The alcohol by volume declaration must be shown on the principal display panel [B.02.003, FDR]. For wine containers, the principal display surface includes any area, excluding its top and bottom, that can be seen without having to turn the container, as per paragraph (g) of the principal display surface definition [B.01.001(1), FDR; 1, SFCR].",
+          "section": "Alcohol by volume declaration",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "principal display surface",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s15c3",
+          "context_text": "The alcohol by volume declaration must be shown on the principal display panel [B.02.003, FDR]. For wine containers, the principal display surface includes any area, excluding its top and bottom, that can be seen without having to turn the container, as per paragraph (g) of the principal display surface definition [B.01.001(1), FDR; 1, SFCR].",
+          "section": "Alcohol by volume declaration",
+          "element_type": "p",
+          "position_in_content": 5
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "All alcoholic beverages containing 1.1% or more alcohol by volume must declare the percentage by volume of alcohol contained in the product [B.02.003, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The alcohol by volume declaration must be that of the product as sold.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Example: if a product is sold in a multiple serving bottle with 2 compartments, containing 2 different liquors with different contents of alcohol by volume and the product is intended to be poured in such a manner as to form a layered drink of the 2 liquors, it is not acceptable to declare on the main panel the single alcohol content of the final beverage, when poured according to instructions, and to declare the individual alcohol content of the 2 different liquors on the back label. Due to the variability of proportions that could occur when the beverage is poured, the separate alcohol by volume declarations are required as the main panel declaration. The intended combined declaration may be shown voluntarily elsewhere on the label.",
+          "element_type": "div",
+          "links": []
+        },
+        {
+          "text": "The percentage by volume of alcohol must be shown as \"X % alcohol by volume\" or be abbreviated \"X % alc./vol.\" or \"X% alc/vol\". Alternatively, the percentage may be in the middle of the declaration and shown preceded by the abbreviation \"alc.\" or \"alc\" and followed by the abbreviation \"vol.\" or \"vol\" (for example: \"alc X% vol\" or \"alc. X% vol.\") [B.02.003, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The alcohol by volume declaration must be shown on the principal display panel [B.02.003, FDR]. For wine containers, the principal display surface includes any area, excluding its top and bottom, that can be seen without having to turn the container, as per paragraph (g) of the principal display surface definition [B.01.001(1), FDR; 1, SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "principal display panel",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s14c3",
+              "is_external": false
+            },
+            {
+              "text": "principal display surface",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s15c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The alcohol by volume declaration must be shown in both English and French [B.01.012(2), FDR]. The French translation is \"X % d'alcool par volume \". When abbreviated, the statements \"X % alc./vol.\", \"X% alc/vol\", \"alc X% vol\" and \"alc. X% vol.\" are fully bilingual.",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Advertising": {
+      "title": "Advertising",
+      "content": [
+        "Radio and television advertising for alcoholic beverages is regulated under the Radio Regulations and Television Broadcasting Regulations , under the Broadcasting Act . Broadcasters must adhere to the Code for Broadcast Advertising of Alcoholic Beverages to maintain a Canadian Radio-Television and Telecommunication Commission (CRTC) license. In response to a request from the alcoholic beverage advertisers and the broadcasters, Advertising Standards Canada (ASC) has established the Alcoholic Beverage Advertising Clearance section to review and assign a clearance approval number to advertising copy."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "Radio and television advertising for alcoholic beverages is regulated under the Radio Regulations and Television Broadcasting Regulations , under the Broadcasting Act . Broadcasters must adhere to the Code for Broadcast Advertising of Alcoholic Beverages to maintain a Canadian Radio-Television and Telecommunication Commission (CRTC) license. In response to a request from the alcoholic beverage advertisers and the broadcasters, Advertising Standards Canada (ASC) has established the Alcoholic Beverage Advertising Clearance section to review and assign a clearance approval number to advertising copy.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Radio Regulations",
+              "href": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-86-982/index.html",
+              "is_external": true
+            },
+            {
+              "text": "Television Broadcasting Regulations",
+              "href": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-87-49/index.html",
+              "is_external": true
+            },
+            {
+              "text": "Broadcasting Act",
+              "href": "https://laws-lois.justice.gc.ca/eng/acts/b-9.01/",
+              "is_external": true
+            },
+            {
+              "text": "Code for Broadcast Advertising of Alcoholic Beverages",
+              "href": "https://crtc.gc.ca/eng/television/publicit/codesalco.htm",
+              "is_external": true
+            },
+            {
+              "text": "Canadian Radio-Television and Telecommunication Commission",
+              "href": "http://www.crtc.gc.ca/eng/home-accueil.htm",
+              "is_external": true
+            },
+            {
+              "text": "Advertising Standards Canada",
+              "href": "https://adstandards.ca/",
+              "is_external": true
+            },
+            {
+              "text": "Alcoholic Beverage Advertising Clearance section",
+              "href": "https://adstandards.ca/preclearance/advertising-preclearance/alcoholic-beverages/",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Voluntary claims and statements": {
+      "title": "Voluntary claims and statements",
+      "content": [
+        "\"Light\" may be used to describe the following alcoholic beverages which contain the alcohol levels indicated in the following table:",
+        "In the case of the above alcoholic beverages, it is assumed that through long-established practice, most consumers understand \"light\" to be a reference to lower alcohol content. No further qualification of \"light\" is required on labels and in advertisements of these products provided that the declaration of the percentage of alcohol by volume appears prominently on the principal display panel of the label, and that \"light\" is not used to refer to some other aspect or characteristic of these products.",
+        "If \"light\" is used to describe a reduction in some constituent other than alcohol, then it must satisfy the conditions established by the regulations for light as a sensory characteristic or light as a reference to the reduction in fat or energy as listed in table G. Light (in energy or fat) and lean related statements and claims in the Table of permitted nutrient content statements and claims [B.01.502, B.01.503(1), FDR]. In addition, any impression created by the use of a \"light\" claim must not be misleading as per subsection 5(1) of the FDA and subsection 6(1) of the SFCA.",
+        "For beer, subsection 2.9.1(3) of the Canadian Food Compositional Standards document requires the use of specific terms, such as \"extra light\" and \"light\", based on the alcohol content. See Common name for beer for more information on the use of the term \"light\" in reference to these products.",
+        "\"Low alcohol\" is an acceptable claim for a product with less than 1.1% alcohol by volume. \"Contains less than (naming the percentage alcohol)\" is also acceptable on low alcohol products.",
+        "In line with the true nature requirements, the term \"dealcoholized\" may be used to describe a product whose alcohol level has been reduced to a level less than 1.1%, as part of the common name (for example, dealcoholized wine).",
+        "In line with true nature requirements, the term \"non-alcoholic\" or \"alcohol-free\" may be used to describe a product whose alcohol level has been reduced to a level less than 0.05%, as part of the common name (for example, non-alcoholic beer).",
+        "Alcoholic beverages to which artificial flavouring preparations have been added to simulate the \"taste\" or sensory experience of vodka, but do not contain vodka, are considered acceptable, provided that it is clearly and prominently communicated to consumers that \"vodka flavoured\" is referring to an artificial flavouring preparation rather than the addition of vodka as an ingredient. As with all products, the label and advertising cannot be false or misleading, or create an erroneous impression regarding the composition of the product.",
+        "It is recognized that aging plays a key role in the traditional brewing process. If increasing the time taken for the manufacturing process results in definite taste characteristics, certain claims relating to this aging process may be acceptable.",
+        "When materials introduced during processing contribute detectable characteristics to the final product, references to taste may also be made (for example, Beechwood aged taste). The following sections provide more details on the use of age claims for specific products:",
+        "Age claims for brandy Age claims for gin Age claims for rum Age claims for whisky",
+        "Foreign certificates of age and authenticity for alcoholic beverages are accepted when they have been issued by a foreign government. Similar treatment is given to certificates issued by third parties that are recognized as valid by government officials of the issuing country. Certificates may be questioned when such acceptance is not evident.",
+        "In the case of alcoholic beverages, the term \"dry\" is not regarded as a sugar content claim and does not trigger the application of the Nutrition Facts table, providing no other statements or claims are made about the sugar content. The following sections provide more details on the use of \"dry\" claims for specific products:",
+        "Use of the term \"dry\" for gin Use of the term \"dry\" for liqueur Use of the term \"dry\" for rum Use of the term \"dry\" for whisky Use of the term \"dry\" for vodka Use of the term \"dry\" for wine",
+        "The following statement is acceptable in Canada. It is currently required in the United States (U.S.) on the labels of alcoholic beverages.",
+        "\" Government warning: according to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery and may cause health problems.\""
+      ],
+      "internal_links": [
+        {
+          "link_text": "light as a sensory characteristic",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/composition-and-quality#s15c5",
+          "context_text": "If \"light\" is used to describe a reduction in some constituent other than alcohol, then it must satisfy the conditions established by the regulations for light as a sensory characteristic or light as a reference to the reduction in fat or energy as listed in table G. Light (in energy or fat) and lean related statements and claims in the Table of permitted nutrient content statements and claims [B.01.502, B.01.503(1), FDR]. In addition, any impression created by the use of a \"light\" claim must not be misleading as per subsection 5(1) of the FDA and subsection 6(1) of the SFCA.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "light",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/specific-requirements#a14",
+          "context_text": "If \"light\" is used to describe a reduction in some constituent other than alcohol, then it must satisfy the conditions established by the regulations for light as a sensory characteristic or light as a reference to the reduction in fat or energy as listed in table G. Light (in energy or fat) and lean related statements and claims in the Table of permitted nutrient content statements and claims [B.01.502, B.01.503(1), FDR]. In addition, any impression created by the use of a \"light\" claim must not be misleading as per subsection 5(1) of the FDA and subsection 6(1) of the SFCA.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "For beer, subsection 2.9.1(3) of the Canadian Food Compositional Standards document requires the use of specific terms, such as \"extra light\" and \"light\", based on the alcohol content. See Common name for beer for more information on the use of the term \"light\" in reference to these products.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Common name for beer",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s13c9",
+          "context_text": "For beer, subsection 2.9.1(3) of the Canadian Food Compositional Standards document requires the use of specific terms, such as \"extra light\" and \"light\", based on the alcohol content. See Common name for beer for more information on the use of the term \"light\" in reference to these products.",
+          "section": "Voluntary claims and statements",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Age claims for brandy",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s18c10",
+          "context_text": "Age claims for brandy Age claims for gin Age claims for rum Age claims for whisky",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 11
+        },
+        {
+          "link_text": "Age claims for gin",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s20c12",
+          "context_text": "Age claims for brandy Age claims for gin Age claims for rum Age claims for whisky",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 11
+        },
+        {
+          "link_text": "Age claims for rum",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s28c14",
+          "context_text": "Age claims for brandy Age claims for gin Age claims for rum Age claims for whisky",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 11
+        },
+        {
+          "link_text": "Age claims for whisky",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s36c16",
+          "context_text": "Age claims for brandy Age claims for gin Age claims for rum Age claims for whisky",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 11
+        },
+        {
+          "link_text": "Use of the term \"dry\" for gin",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s21c12",
+          "context_text": "Use of the term \"dry\" for gin Use of the term \"dry\" for liqueur Use of the term \"dry\" for rum Use of the term \"dry\" for whisky Use of the term \"dry\" for vodka Use of the term \"dry\" for wine",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 14
+        },
+        {
+          "link_text": "Use of the term \"dry\" for liqueur",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s23c13",
+          "context_text": "Use of the term \"dry\" for gin Use of the term \"dry\" for liqueur Use of the term \"dry\" for rum Use of the term \"dry\" for whisky Use of the term \"dry\" for vodka Use of the term \"dry\" for wine",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 14
+        },
+        {
+          "link_text": "Use of the term \"dry\" for rum",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s29c14",
+          "context_text": "Use of the term \"dry\" for gin Use of the term \"dry\" for liqueur Use of the term \"dry\" for rum Use of the term \"dry\" for whisky Use of the term \"dry\" for vodka Use of the term \"dry\" for wine",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 14
+        },
+        {
+          "link_text": "Use of the term \"dry\" for whisky",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s37c16",
+          "context_text": "Use of the term \"dry\" for gin Use of the term \"dry\" for liqueur Use of the term \"dry\" for rum Use of the term \"dry\" for whisky Use of the term \"dry\" for vodka Use of the term \"dry\" for wine",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 14
+        },
+        {
+          "link_text": "Use of the term \"dry\" for vodka",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s34c15",
+          "context_text": "Use of the term \"dry\" for gin Use of the term \"dry\" for liqueur Use of the term \"dry\" for rum Use of the term \"dry\" for whisky Use of the term \"dry\" for vodka Use of the term \"dry\" for wine",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 14
+        },
+        {
+          "link_text": "Use of the term \"dry\" for wine",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s44c17",
+          "context_text": "Use of the term \"dry\" for gin Use of the term \"dry\" for liqueur Use of the term \"dry\" for rum Use of the term \"dry\" for whisky Use of the term \"dry\" for vodka Use of the term \"dry\" for wine",
+          "section": "Voluntary claims and statements",
+          "element_type": "ul",
+          "position_in_content": 14
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "\"Light\" may be used to describe the following alcoholic beverages which contain the alcohol levels indicated in the following table:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In the case of the above alcoholic beverages, it is assumed that through long-established practice, most consumers understand \"light\" to be a reference to lower alcohol content. No further qualification of \"light\" is required on labels and in advertisements of these products provided that the declaration of the percentage of alcohol by volume appears prominently on the principal display panel of the label, and that \"light\" is not used to refer to some other aspect or characteristic of these products.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "If \"light\" is used to describe a reduction in some constituent other than alcohol, then it must satisfy the conditions established by the regulations for light as a sensory characteristic or light as a reference to the reduction in fat or energy as listed in table G. Light (in energy or fat) and lean related statements and claims in the Table of permitted nutrient content statements and claims [B.01.502, B.01.503(1), FDR]. In addition, any impression created by the use of a \"light\" claim must not be misleading as per subsection 5(1) of the FDA and subsection 6(1) of the SFCA.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "light as a sensory characteristic",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/composition-and-quality#s15c5",
+              "is_external": false
+            },
+            {
+              "text": "light",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/specific-requirements#a14",
+              "is_external": false
+            },
+            {
+              "text": "G. Light (in energy or fat) and lean related statements and claims",
+              "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/table-permitted-nutrient-content-statements-claims/table-document.html#a7",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "For beer, subsection 2.9.1(3) of the Canadian Food Compositional Standards document requires the use of specific terms, such as \"extra light\" and \"light\", based on the alcohol content. See Common name for beer for more information on the use of the term \"light\" in reference to these products.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            },
+            {
+              "text": "Common name for beer",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s13c9",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "\"Low alcohol\" is an acceptable claim for a product with less than 1.1% alcohol by volume. \"Contains less than (naming the percentage alcohol)\" is also acceptable on low alcohol products.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In line with the true nature requirements, the term \"dealcoholized\" may be used to describe a product whose alcohol level has been reduced to a level less than 1.1%, as part of the common name (for example, dealcoholized wine).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In line with true nature requirements, the term \"non-alcoholic\" or \"alcohol-free\" may be used to describe a product whose alcohol level has been reduced to a level less than 0.05%, as part of the common name (for example, non-alcoholic beer).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Alcoholic beverages to which artificial flavouring preparations have been added to simulate the \"taste\" or sensory experience of vodka, but do not contain vodka, are considered acceptable, provided that it is clearly and prominently communicated to consumers that \"vodka flavoured\" is referring to an artificial flavouring preparation rather than the addition of vodka as an ingredient. As with all products, the label and advertising cannot be false or misleading, or create an erroneous impression regarding the composition of the product.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "It is recognized that aging plays a key role in the traditional brewing process. If increasing the time taken for the manufacturing process results in definite taste characteristics, certain claims relating to this aging process may be acceptable.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When materials introduced during processing contribute detectable characteristics to the final product, references to taste may also be made (for example, Beechwood aged taste). The following sections provide more details on the use of age claims for specific products:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Age claims for brandy Age claims for gin Age claims for rum Age claims for whisky",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Age claims for brandy",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s18c10",
+              "is_external": false
+            },
+            {
+              "text": "Age claims for gin",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s20c12",
+              "is_external": false
+            },
+            {
+              "text": "Age claims for rum",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s28c14",
+              "is_external": false
+            },
+            {
+              "text": "Age claims for whisky",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s36c16",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Foreign certificates of age and authenticity for alcoholic beverages are accepted when they have been issued by a foreign government. Similar treatment is given to certificates issued by third parties that are recognized as valid by government officials of the issuing country. Certificates may be questioned when such acceptance is not evident.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In the case of alcoholic beverages, the term \"dry\" is not regarded as a sugar content claim and does not trigger the application of the Nutrition Facts table, providing no other statements or claims are made about the sugar content. The following sections provide more details on the use of \"dry\" claims for specific products:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Use of the term \"dry\" for gin Use of the term \"dry\" for liqueur Use of the term \"dry\" for rum Use of the term \"dry\" for whisky Use of the term \"dry\" for vodka Use of the term \"dry\" for wine",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Use of the term \"dry\" for gin",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s21c12",
+              "is_external": false
+            },
+            {
+              "text": "Use of the term \"dry\" for liqueur",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s23c13",
+              "is_external": false
+            },
+            {
+              "text": "Use of the term \"dry\" for rum",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s29c14",
+              "is_external": false
+            },
+            {
+              "text": "Use of the term \"dry\" for whisky",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s37c16",
+              "is_external": false
+            },
+            {
+              "text": "Use of the term \"dry\" for vodka",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s34c15",
+              "is_external": false
+            },
+            {
+              "text": "Use of the term \"dry\" for wine",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s44c17",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The following statement is acceptable in Canada. It is currently required in the United States (U.S.) on the labels of alcoholic beverages.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "\" Government warning: according to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery and may cause health problems.\"",
+          "element_type": "p",
+          "links": []
+        }
+      ]
+    },
+    "Product specific information for beer": {
+      "title": "Product specific information for beer",
+      "content": [
+        "Subsection 2.9.1(3) of the Canadian Food Compositional Standards document establishes mandatory common names or qualified common names as outlined below for beer based upon alcohol content.",
+        "Beers, including beers made with flavouring preparations, are exempted from the requirement to declare a list of ingredients on the label [B.01.008(2)(f), FDR]. However, prepackaged beers are required to declare food allergen sources (such as wheat), gluten sources (such as barley) and added sulphites (such as sulphurous acid) [ B.01.010.1(2) , B.01.010.2(3) , FDR]. If ingredients on the label of a beer are voluntarily declared, then food allergen sources, gluten sources or added sulphites could be declared as part of that list. If not, then a \"Contains\" statement is required.",
+        "See List of ingredients and allergens for more information.",
+        "For information, refer to Common name for beer and Use of the term \"light\" .",
+        "For information, refer to Gluten-free beer ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "Subsection 2.9.1(3) of the Canadian Food Compositional Standards document establishes mandatory common names or qualified common names as outlined below for beer based upon alcohol content.",
+          "section": "Product specific information for beer",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "List of ingredients and allergens",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+          "context_text": "See List of ingredients and allergens for more information.",
+          "section": "Product specific information for beer",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "Common name for beer",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s13c9",
+          "context_text": "For information, refer to Common name for beer and Use of the term \"light\" .",
+          "section": "Product specific information for beer",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Use of the term \"light\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s7c8",
+          "context_text": "For information, refer to Common name for beer and Use of the term \"light\" .",
+          "section": "Product specific information for beer",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Gluten-free beer",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/allergens-and-gluten#s6c2",
+          "context_text": "For information, refer to Gluten-free beer .",
+          "section": "Product specific information for beer",
+          "element_type": "p",
+          "position_in_content": 5
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Subsection 2.9.1(3) of the Canadian Food Compositional Standards document establishes mandatory common names or qualified common names as outlined below for beer based upon alcohol content.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Beers, including beers made with flavouring preparations, are exempted from the requirement to declare a list of ingredients on the label [B.01.008(2)(f), FDR]. However, prepackaged beers are required to declare food allergen sources (such as wheat), gluten sources (such as barley) and added sulphites (such as sulphurous acid) [ B.01.010.1(2) , B.01.010.2(3) , FDR]. If ingredients on the label of a beer are voluntarily declared, then food allergen sources, gluten sources or added sulphites could be declared as part of that list. If not, then a \"Contains\" statement is required.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See List of ingredients and allergens for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of ingredients and allergens",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For information, refer to Common name for beer and Use of the term \"light\" .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Common name for beer",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s13c9",
+              "is_external": false
+            },
+            {
+              "text": "Use of the term \"light\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s7c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For information, refer to Gluten-free beer .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Gluten-free beer",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/allergens-and-gluten#s6c2",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific information for brandy": {
+      "title": "Product specific information for brandy",
+      "content": [
+        "Brandy that is wholly distilled in a country other than Canada requires a country of origin declaration on the label [B.02.060, FDR]. This declaration must be shown in both English and French [B.01.012(2), FDR]. A minimum type height of 1.6 mm based on the lowercase \"o\" is considered to meet the legibility requirements of the FDR [A.01.016, FDR]. The declaration may be shown on any part of the label, other than that applied to the bottom of the container [B.01.005(1), FDR].",
+        "Where another law restricts the use of the name of certain products to their region of origin, it is not necessary to indicate the country of origin. For example, Armagnac and Cognac may bear this name only if they are produced in the Armagnac or Cognac region of France. Refer to \" Name of spirits - distinctive products \".",
+        "Claims regarding the age of brandy are limited to the time the brandy was stored in small wood, defined as wood casks or barrels of not greater than 700 litre capacity [B.02.002, FDR], or in other wooden containers. Brandy, other than Armagnac brandy, Canadian brandy, Cognac brandy, dried fruit brandy, fruit brandy, grappa, Lees brandy, and pomace or marc, including any domestic or imported spirit added as flavouring, must be aged and held in small wood for at least 6 months or in wooden containers for at least 1 year [B.02.061, FDR].",
+        "See also Age claims for general information, including on foreign certificates of age and authenticity."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Name of spirits - distinctive products",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s2c2",
+          "context_text": "Where another law restricts the use of the name of certain products to their region of origin, it is not necessary to indicate the country of origin. For example, Armagnac and Cognac may bear this name only if they are produced in the Armagnac or Cognac region of France. Refer to \" Name of spirits - distinctive products \".",
+          "section": "Product specific information for brandy",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Age claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s10c8",
+          "context_text": "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+          "section": "Product specific information for brandy",
+          "element_type": "p",
+          "position_in_content": 4
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Brandy that is wholly distilled in a country other than Canada requires a country of origin declaration on the label [B.02.060, FDR]. This declaration must be shown in both English and French [B.01.012(2), FDR]. A minimum type height of 1.6 mm based on the lowercase \"o\" is considered to meet the legibility requirements of the FDR [A.01.016, FDR]. The declaration may be shown on any part of the label, other than that applied to the bottom of the container [B.01.005(1), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Where another law restricts the use of the name of certain products to their region of origin, it is not necessary to indicate the country of origin. For example, Armagnac and Cognac may bear this name only if they are produced in the Armagnac or Cognac region of France. Refer to \" Name of spirits - distinctive products \".",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Name of spirits - distinctive products",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s2c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Claims regarding the age of brandy are limited to the time the brandy was stored in small wood, defined as wood casks or barrels of not greater than 700 litre capacity [B.02.002, FDR], or in other wooden containers. Brandy, other than Armagnac brandy, Canadian brandy, Cognac brandy, dried fruit brandy, fruit brandy, grappa, Lees brandy, and pomace or marc, including any domestic or imported spirit added as flavouring, must be aged and held in small wood for at least 6 months or in wooden containers for at least 1 year [B.02.061, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Age claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s10c8",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific information for flavoured purified alcohol": {
+      "title": "Product specific information for flavoured purified alcohol",
+      "content": [
+        "Common names that have been associated with flavoured purified alcohol include \"flavoured alcohol beverage,\" and \"flavoured malt beverage.\"",
+        "The labels of these products may include the names of standardized beverages (for example, vodka, gin) if the beverage is identified as a mix. An example is flavoured malt beverage and vodka mix. For additional information, refer to Health Canada's Guidance on the regulations respecting flavoured purified alcohol ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "flavoured purified alcohol",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s48c19",
+          "context_text": "Common names that have been associated with flavoured purified alcohol include \"flavoured alcohol beverage,\" and \"flavoured malt beverage.\"",
+          "section": "Product specific information for flavoured purified alcohol",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Common names that have been associated with flavoured purified alcohol include \"flavoured alcohol beverage,\" and \"flavoured malt beverage.\"",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "flavoured purified alcohol",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s48c19",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The labels of these products may include the names of standardized beverages (for example, vodka, gin) if the beverage is identified as a mix. An example is flavoured malt beverage and vodka mix. For additional information, refer to Health Canada's Guidance on the regulations respecting flavoured purified alcohol .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Guidance on the regulations respecting flavoured purified alcohol",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/flavoured-purified-alcohol.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific information for gin": {
+      "title": "Product specific information for gin",
+      "content": [
+        "Claims regarding the age of gin are prohibited with the exception that gin that has been held in suitable containers may bear a label declaration to that effect [B.02.043, FDR].",
+        "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+        "Gin may be labelled or advertised as \"dry gin\" or \"London dry gin\" if sweetening agents have not been added [2.3.2(c), CFCS]. The standard for \"gin\" provides for the addition of a sweetening agent [2.3.2(b)(ii), CFCS].",
+        "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Age claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s10c8",
+          "context_text": "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+          "section": "Product specific information for gin",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Use of the term \"dry\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+          "context_text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "section": "Product specific information for gin",
+          "element_type": "p",
+          "position_in_content": 4
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Claims regarding the age of gin are prohibited with the exception that gin that has been held in suitable containers may bear a label declaration to that effect [B.02.043, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Age claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s10c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Gin may be labelled or advertised as \"dry gin\" or \"London dry gin\" if sweetening agents have not been added [2.3.2(c), CFCS]. The standard for \"gin\" provides for the addition of a sweetening agent [2.3.2(b)(ii), CFCS].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"dry\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific information for liqueur": {
+      "title": "Product specific information for liqueur",
+      "content": [
+        "When the flavour is shown on the label of a liqueur , the flavour designation becomes part of the common name and therefore should be grouped with the word \" liqueur \". When there is no indication of the flavour, the word \" liqueur \" suffices as the common name.",
+        "The minimum sugar content required for liqueurs is 2.5% [2.5.1(b), CFCS]. Although the level in many liqueurs is often well beyond this minimum, it is questionable whether the term \"dry\" is a meaningful description.",
+        "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+        "The FDR permits representations that characterize the amount of alcohol in beverages [B.01.502(2)(j), FDR].",
+        "When making a comparative claim for the reduction in percent alcohol on the label of a light liqueur , the base point of 23% alcohol could be used, as this is the minimum level required by the standard for liqueurs [2.5.1(c), CFCS]. A comparative statement to the effect that the product \"contains at least (X)% less alcohol than regular/standard liqueurs \" would then be accurate. If, however, comparison is made to a specific brand, then the actual alcohol content of that brand should be used for comparison. The percentage difference stated in the comparative claim must be accurate and not misleading.",
+        "See also Comparative claims on the Composition and quality page for additional information.",
+        "A liqueur that differs from the standard in that it is sweetened with a non-nutritive sweetener such as sucralose may be described as a \"light liqueur\". Such products must meet the requirements for the nutrient content claim \"light\" by meeting the conditions for a \"reduced in energy\" claim as per item 45 in table G. Light (in Energy or Fat) and Lean Related Statements and Claims in the Table of permitted nutrient content statements and claims. For more information, refer to \"Light\" claims .",
+        "This claim causes a loss of exemption from the NFt requirement for the product [B.01.401(3)(e)(ii), FDR].",
+        "The following requirements apply in this case, in addition to the basic labelling requirements for alcoholic beverages:",
+        "an accurate common name must be used. If the term liqueur is used in the common name, it must be qualified to indicate how it differs from the standard for liqueur [2.5.1, CFCS], for example, \"light liqueur sweetened with sucralose\". the label must comply with the labelling requirements for foods containing a sweetener a list of ingredients is required since this product loses the exemption for standardized alcoholic beverages. See List of ingredients – alcoholic beverages ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Use of the term \"dry\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+          "context_text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "section": "Product specific information for liqueur",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "Comparative claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/composition-and-quality#c6",
+          "context_text": "See also Comparative claims on the Composition and quality page for additional information.",
+          "section": "Product specific information for liqueur",
+          "element_type": "p",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "\"Light\" claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/specific-requirements#a14",
+          "context_text": "A liqueur that differs from the standard in that it is sweetened with a non-nutritive sweetener such as sucralose may be described as a \"light liqueur\". Such products must meet the requirements for the nutrient content claim \"light\" by meeting the conditions for a \"reduced in energy\" claim as per item 45 in table G. Light (in Energy or Fat) and Lean Related Statements and Claims in the Table of permitted nutrient content statements and claims. For more information, refer to \"Light\" claims .",
+          "section": "Product specific information for liqueur",
+          "element_type": "p",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "loss of exemption",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions#c3",
+          "context_text": "This claim causes a loss of exemption from the NFt requirement for the product [B.01.401(3)(e)(ii), FDR].",
+          "section": "Product specific information for liqueur",
+          "element_type": "p",
+          "position_in_content": 8
+        },
+        {
+          "link_text": "labelling requirements for foods containing a sweetener",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/sweeteners",
+          "context_text": "an accurate common name must be used. If the term liqueur is used in the common name, it must be qualified to indicate how it differs from the standard for liqueur [2.5.1, CFCS], for example, \"light liqueur sweetened with sucralose\". the label must comply with the labelling requirements for foods containing a sweetener a list of ingredients is required since this product loses the exemption for standardized alcoholic beverages. See List of ingredients – alcoholic beverages .",
+          "section": "Product specific information for liqueur",
+          "element_type": "ul",
+          "position_in_content": 10
+        },
+        {
+          "link_text": "List of ingredients – alcoholic beverages",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#c3",
+          "context_text": "an accurate common name must be used. If the term liqueur is used in the common name, it must be qualified to indicate how it differs from the standard for liqueur [2.5.1, CFCS], for example, \"light liqueur sweetened with sucralose\". the label must comply with the labelling requirements for foods containing a sweetener a list of ingredients is required since this product loses the exemption for standardized alcoholic beverages. See List of ingredients – alcoholic beverages .",
+          "section": "Product specific information for liqueur",
+          "element_type": "ul",
+          "position_in_content": 10
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "When the flavour is shown on the label of a liqueur , the flavour designation becomes part of the common name and therefore should be grouped with the word \" liqueur \". When there is no indication of the flavour, the word \" liqueur \" suffices as the common name.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The minimum sugar content required for liqueurs is 2.5% [2.5.1(b), CFCS]. Although the level in many liqueurs is often well beyond this minimum, it is questionable whether the term \"dry\" is a meaningful description.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"dry\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The FDR permits representations that characterize the amount of alcohol in beverages [B.01.502(2)(j), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When making a comparative claim for the reduction in percent alcohol on the label of a light liqueur , the base point of 23% alcohol could be used, as this is the minimum level required by the standard for liqueurs [2.5.1(c), CFCS]. A comparative statement to the effect that the product \"contains at least (X)% less alcohol than regular/standard liqueurs \" would then be accurate. If, however, comparison is made to a specific brand, then the actual alcohol content of that brand should be used for comparison. The percentage difference stated in the comparative claim must be accurate and not misleading.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Comparative claims on the Composition and quality page for additional information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Comparative claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/composition-and-quality#c6",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "A liqueur that differs from the standard in that it is sweetened with a non-nutritive sweetener such as sucralose may be described as a \"light liqueur\". Such products must meet the requirements for the nutrient content claim \"light\" by meeting the conditions for a \"reduced in energy\" claim as per item 45 in table G. Light (in Energy or Fat) and Lean Related Statements and Claims in the Table of permitted nutrient content statements and claims. For more information, refer to \"Light\" claims .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "G. Light (in Energy or Fat) and Lean Related Statements and Claims",
+              "href": "https://www.canada.ca/en/health-canada/services/technical-documents-labelling-requirements/table-permitted-nutrient-content-statements-claims/table-document.html#a1",
+              "is_external": true
+            },
+            {
+              "text": "\"Light\" claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrient-content/specific-requirements#a14",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "This claim causes a loss of exemption from the NFt requirement for the product [B.01.401(3)(e)(ii), FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "loss of exemption",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/exemptions#c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The following requirements apply in this case, in addition to the basic labelling requirements for alcoholic beverages:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "an accurate common name must be used. If the term liqueur is used in the common name, it must be qualified to indicate how it differs from the standard for liqueur [2.5.1, CFCS], for example, \"light liqueur sweetened with sucralose\". the label must comply with the labelling requirements for foods containing a sweetener a list of ingredients is required since this product loses the exemption for standardized alcoholic beverages. See List of ingredients – alcoholic beverages .",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "labelling requirements for foods containing a sweetener",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/sweeteners",
+              "is_external": false
+            },
+            {
+              "text": "List of ingredients – alcoholic beverages",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#c3",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific information for rum": {
+      "title": "Product specific information for rum",
+      "content": [
+        "Flavouring preparations added to rum do not trigger the requirement for a list of ingredients. For example, the addition of a guarana extract to rum does not trigger the requirement for a list of ingredients on the product. As the guarana extract is added to the rum as a flavouring preparation, it is deemed to be acceptable under the standard for rum [2.2.1, CFCS] and therefore a list of ingredients is not required.",
+        "The SFCR require a declaration of \"geographic origin\" which is less specific than a \"country of origin\". The declaration \"Imported from the Caribbean\" is therefore acceptable.",
+        "Claims for the age of rum are restricted to the time the rum was stored in small wood. Rum, including any domestic or imported spirit added as flavouring, must be aged in small wood for not less than 1 year [B.02.031(1), FDR].",
+        "Younger rum can be blended with an older rum, for example 12 year old rum, and under certain conditions retain that age claim. Subparagraph 2.2.1(b)(ii) of the Canadian Food Compositional Standards document provides for rum to contain \"flavouring\" as authorized under the Excise Act [B.02.002, FDR]. The Excise Act permits up to 9.09% of the total quantity of absolute ethyl alcohol in the product (which equates to 10% by weight) flavouring in the rum. Subsection B.02.031(1) of the FDR requires the rum to be aged a minimum of 1 year in small wood and subsection B.02.031(2) also requires the flavouring portion to be aged at least 1 year in small wood. The Canada Revenue Agency has interpreted this and their regulations (Circular 203-1) to mean, a 12 year old rum can contain flavouring up to 9.09% that is aged less than 12 years but at least 1 year, and it is still considered to be 12 year old rum. If more than 9.09% of younger rum is added, the claim 12 year old rum would no longer be acceptable.",
+        "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+        "In rum, where sugar could be added indirectly as part of the flavouring, the range of residual sugar content is very small and not readily detectable [2.2.1, CFCS]. Thus, the use of the term \"dry\" could be misleading and should not be used.",
+        "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+        "Historically, the term \"light\", in relation to a rum, is recognized as a description of the colour and/or flavour of the product, and therefore need not be further qualified when used in this way. The claim \"light\" on rum does not trigger a Nutrition Facts table [B.01.513(2), FDR]. The alcoholic beverages section Use of the term \"light\" provides additional information."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "Younger rum can be blended with an older rum, for example 12 year old rum, and under certain conditions retain that age claim. Subparagraph 2.2.1(b)(ii) of the Canadian Food Compositional Standards document provides for rum to contain \"flavouring\" as authorized under the Excise Act [B.02.002, FDR]. The Excise Act permits up to 9.09% of the total quantity of absolute ethyl alcohol in the product (which equates to 10% by weight) flavouring in the rum. Subsection B.02.031(1) of the FDR requires the rum to be aged a minimum of 1 year in small wood and subsection B.02.031(2) also requires the flavouring portion to be aged at least 1 year in small wood. The Canada Revenue Agency has interpreted this and their regulations (Circular 203-1) to mean, a 12 year old rum can contain flavouring up to 9.09% that is aged less than 12 years but at least 1 year, and it is still considered to be 12 year old rum. If more than 9.09% of younger rum is added, the claim 12 year old rum would no longer be acceptable.",
+          "section": "Product specific information for rum",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Age claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s10c8",
+          "context_text": "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+          "section": "Product specific information for rum",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "Use of the term \"dry\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+          "context_text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "section": "Product specific information for rum",
+          "element_type": "p",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Use of the term \"light\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s7c8",
+          "context_text": "Historically, the term \"light\", in relation to a rum, is recognized as a description of the colour and/or flavour of the product, and therefore need not be further qualified when used in this way. The claim \"light\" on rum does not trigger a Nutrition Facts table [B.01.513(2), FDR]. The alcoholic beverages section Use of the term \"light\" provides additional information.",
+          "section": "Product specific information for rum",
+          "element_type": "p",
+          "position_in_content": 8
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Flavouring preparations added to rum do not trigger the requirement for a list of ingredients. For example, the addition of a guarana extract to rum does not trigger the requirement for a list of ingredients on the product. As the guarana extract is added to the rum as a flavouring preparation, it is deemed to be acceptable under the standard for rum [2.2.1, CFCS] and therefore a list of ingredients is not required.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The SFCR require a declaration of \"geographic origin\" which is less specific than a \"country of origin\". The declaration \"Imported from the Caribbean\" is therefore acceptable.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Claims for the age of rum are restricted to the time the rum was stored in small wood. Rum, including any domestic or imported spirit added as flavouring, must be aged in small wood for not less than 1 year [B.02.031(1), FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Younger rum can be blended with an older rum, for example 12 year old rum, and under certain conditions retain that age claim. Subparagraph 2.2.1(b)(ii) of the Canadian Food Compositional Standards document provides for rum to contain \"flavouring\" as authorized under the Excise Act [B.02.002, FDR]. The Excise Act permits up to 9.09% of the total quantity of absolute ethyl alcohol in the product (which equates to 10% by weight) flavouring in the rum. Subsection B.02.031(1) of the FDR requires the rum to be aged a minimum of 1 year in small wood and subsection B.02.031(2) also requires the flavouring portion to be aged at least 1 year in small wood. The Canada Revenue Agency has interpreted this and their regulations (Circular 203-1) to mean, a 12 year old rum can contain flavouring up to 9.09% that is aged less than 12 years but at least 1 year, and it is still considered to be 12 year old rum. If more than 9.09% of younger rum is added, the claim 12 year old rum would no longer be acceptable.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            },
+            {
+              "text": "Canada Revenue Agency",
+              "href": "https://www.canada.ca/en/revenue-agency.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Age claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s10c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "In rum, where sugar could be added indirectly as part of the flavouring, the range of residual sugar content is very small and not readily detectable [2.2.1, CFCS]. Thus, the use of the term \"dry\" could be misleading and should not be used.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"dry\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Historically, the term \"light\", in relation to a rum, is recognized as a description of the colour and/or flavour of the product, and therefore need not be further qualified when used in this way. The claim \"light\" on rum does not trigger a Nutrition Facts table [B.01.513(2), FDR]. The alcoholic beverages section Use of the term \"light\" provides additional information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"light\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s7c8",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific information for vodka": {
+      "title": "Product specific information for vodka",
+      "content": [
+        "Vodka has a prescribed compositional standard in section 2.6.1 of the Canadian Food Compositional Standards document.",
+        "Vodka can be produced from potatoes, cereal grains and any other material of agricultural origin ; the distillate must be treated with charcoal or subject to other material or process so that the vodka is without distinctive character, aroma or taste.",
+        "Vodka requires additional labelling when produced, in whole or in part, from material of agricultural origin other than potatoes or cereal grain. The statement \"produced from\" followed by the name of all material of agricultural origin used is required to be in close proximity to the common name [2.6.1(3), CFCS]. For example, if vodka is produced from potatoes and apples, it shall carry the statement \"Produced from potatoes and apples\" in close proximity to the common name \"vodka\"; if vodka is produced solely from potatoes, no such statement is required.",
+        "Manufacturers making allergen-free claims such as \"(naming the food allergen)-free\" and \"contains no (naming the food allergen)\", must ensure there is absolutely no amount of the named food allergen source present in the product, whether through intentional or inadvertent means. Any representation (statement, image or advertising) that states, suggests or implies that a food allergen source is not present when it is present would be considered false and misleading information under subsections 5(1) of the FDA and 6(1) of the SFCA.",
+        "For information about gluten-free claims for vodka, please see Gluten-free and vodka .",
+        "Flavoured vodka may not qualify for allergen-free claims, as flavouring preparations and other ingredients added after distillation may contain allergens.",
+        "Added sulphites at a level of 10 ppm or more must be declared when present in vodka, and may be shown in a \"food allergen source, gluten source and added sulphites statement\" [B.01.010(2), FDR].",
+        "The standard for vodka does not provide for the addition of sugar or other sweetening agents [2.6.1, CFCS]. For this reason, the description \"dry\" is potentially misleading and should not be used.",
+        "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+        "See Vodka-flavoured claims for general information on vodka-flavoured claims for all alcoholic beverages."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "Vodka has a prescribed compositional standard in section 2.6.1 of the Canadian Food Compositional Standards document.",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "material of agricultural origin",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s50c19",
+          "context_text": "Vodka can be produced from potatoes, cereal grains and any other material of agricultural origin ; the distillate must be treated with charcoal or subject to other material or process so that the vodka is without distinctive character, aroma or taste.",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "material of agricultural origin",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s50c19",
+          "context_text": "Vodka requires additional labelling when produced, in whole or in part, from material of agricultural origin other than potatoes or cereal grain. The statement \"produced from\" followed by the name of all material of agricultural origin used is required to be in close proximity to the common name [2.6.1(3), CFCS]. For example, if vodka is produced from potatoes and apples, it shall carry the statement \"Produced from potatoes and apples\" in close proximity to the common name \"vodka\"; if vodka is produced solely from potatoes, no such statement is required.",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "close proximity",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s47c19",
+          "context_text": "Vodka requires additional labelling when produced, in whole or in part, from material of agricultural origin other than potatoes or cereal grain. The statement \"produced from\" followed by the name of all material of agricultural origin used is required to be in close proximity to the common name [2.6.1(3), CFCS]. For example, if vodka is produced from potatoes and apples, it shall carry the statement \"Produced from potatoes and apples\" in close proximity to the common name \"vodka\"; if vodka is produced solely from potatoes, no such statement is required.",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 3
+        },
+        {
+          "link_text": "allergen-free claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/allergens-and-gluten#c5",
+          "context_text": "Manufacturers making allergen-free claims such as \"(naming the food allergen)-free\" and \"contains no (naming the food allergen)\", must ensure there is absolutely no amount of the named food allergen source present in the product, whether through intentional or inadvertent means. Any representation (statement, image or advertising) that states, suggests or implies that a food allergen source is not present when it is present would be considered false and misleading information under subsections 5(1) of the FDA and 6(1) of the SFCA.",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Gluten-free and vodka",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/allergens-and-gluten#s7c2",
+          "context_text": "For information about gluten-free claims for vodka, please see Gluten-free and vodka .",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 5
+        },
+        {
+          "link_text": "\"food allergen source, gluten source and added sulphites statement\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s22c9",
+          "context_text": "Added sulphites at a level of 10 ppm or more must be declared when present in vodka, and may be shown in a \"food allergen source, gluten source and added sulphites statement\" [B.01.010(2), FDR].",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 7
+        },
+        {
+          "link_text": "Use of the term \"dry\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+          "context_text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 9
+        },
+        {
+          "link_text": "Vodka-flavoured claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s9c8",
+          "context_text": "See Vodka-flavoured claims for general information on vodka-flavoured claims for all alcoholic beverages.",
+          "section": "Product specific information for vodka",
+          "element_type": "p",
+          "position_in_content": 10
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Vodka has a prescribed compositional standard in section 2.6.1 of the Canadian Food Compositional Standards document.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Vodka can be produced from potatoes, cereal grains and any other material of agricultural origin ; the distillate must be treated with charcoal or subject to other material or process so that the vodka is without distinctive character, aroma or taste.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "material of agricultural origin",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s50c19",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Vodka requires additional labelling when produced, in whole or in part, from material of agricultural origin other than potatoes or cereal grain. The statement \"produced from\" followed by the name of all material of agricultural origin used is required to be in close proximity to the common name [2.6.1(3), CFCS]. For example, if vodka is produced from potatoes and apples, it shall carry the statement \"Produced from potatoes and apples\" in close proximity to the common name \"vodka\"; if vodka is produced solely from potatoes, no such statement is required.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "material of agricultural origin",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s50c19",
+              "is_external": false
+            },
+            {
+              "text": "close proximity",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s47c19",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Manufacturers making allergen-free claims such as \"(naming the food allergen)-free\" and \"contains no (naming the food allergen)\", must ensure there is absolutely no amount of the named food allergen source present in the product, whether through intentional or inadvertent means. Any representation (statement, image or advertising) that states, suggests or implies that a food allergen source is not present when it is present would be considered false and misleading information under subsections 5(1) of the FDA and 6(1) of the SFCA.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "allergen-free claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/allergens-and-gluten#c5",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For information about gluten-free claims for vodka, please see Gluten-free and vodka .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Gluten-free and vodka",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/allergens-and-gluten#s7c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Flavoured vodka may not qualify for allergen-free claims, as flavouring preparations and other ingredients added after distillation may contain allergens.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Added sulphites at a level of 10 ppm or more must be declared when present in vodka, and may be shown in a \"food allergen source, gluten source and added sulphites statement\" [B.01.010(2), FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "\"food allergen source, gluten source and added sulphites statement\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s22c9",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The standard for vodka does not provide for the addition of sugar or other sweetening agents [2.6.1, CFCS]. For this reason, the description \"dry\" is potentially misleading and should not be used.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"dry\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "See Vodka-flavoured claims for general information on vodka-flavoured claims for all alcoholic beverages.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Vodka-flavoured claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s9c8",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific information for whisky": {
+      "title": "Product specific information for whisky",
+      "content": [
+        "Claims for the age of whisky are restricted to the period during which the whisky was stored in small wood. Whisky, other than Bourbon whisky or Tennessee whisky, must be aged at least 3 years in small wood, except that any domestic or imported spirit added as flavouring need only be aged for 2 years [B.02.023, FDR]. Where Canadian whisky has been aged in small wood for at least 3 years, any period not exceeding 6 months during which that whisky was held in other containers may be claimed with respect to the age [B.02.020(3), FDR]. For example, Canadian whisky aged 3.5 years in small wood and 8 months in glass containers may claim an age of 4 years.",
+        "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+        "In whisky where sugar could be added indirectly as part of the flavouring [2.1.1, CFCS], the range of residual sugar content is very small and not readily detectable. Thus, the use of the term \"dry\" could be misleading and should not be used.",
+        "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+        "For information on the claim \"light\", including as a reference to the alcohol content of whisky, refer to Use of the term \"light\" ."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Age claims",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s10c8",
+          "context_text": "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+          "section": "Product specific information for whisky",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Use of the term \"dry\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+          "context_text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "section": "Product specific information for whisky",
+          "element_type": "p",
+          "position_in_content": 4
+        },
+        {
+          "link_text": "Use of the term \"light\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s7c8",
+          "context_text": "For information on the claim \"light\", including as a reference to the alcohol content of whisky, refer to Use of the term \"light\" .",
+          "section": "Product specific information for whisky",
+          "element_type": "p",
+          "position_in_content": 5
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Claims for the age of whisky are restricted to the period during which the whisky was stored in small wood. Whisky, other than Bourbon whisky or Tennessee whisky, must be aged at least 3 years in small wood, except that any domestic or imported spirit added as flavouring need only be aged for 2 years [B.02.023, FDR]. Where Canadian whisky has been aged in small wood for at least 3 years, any period not exceeding 6 months during which that whisky was held in other containers may be claimed with respect to the age [B.02.020(3), FDR]. For example, Canadian whisky aged 3.5 years in small wood and 8 months in glass containers may claim an age of 4 years.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Age claims for general information, including on foreign certificates of age and authenticity.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Age claims",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s10c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "In whisky where sugar could be added indirectly as part of the flavouring [2.1.1, CFCS], the range of residual sugar content is very small and not readily detectable. Thus, the use of the term \"dry\" could be misleading and should not be used.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"dry\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For information on the claim \"light\", including as a reference to the alcohol content of whisky, refer to Use of the term \"light\" .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"light\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s7c8",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Product specific information for wine": {
+      "title": "Product specific information for wine",
+      "content": [
+        "Wine that is displayed for sale to consumers and packaged in a 750 mL container that is no taller than 360 mm in height may declare the net quantity in letters of at least 3.3 mm in height [229(3), SFCR]. This is an exception to the type height requirements for the net quantity, and means that 750 mL containers of wine (no taller than 360 mm) with a principal display surface of more than 258 cm 2 are allowed to have a smaller type for declaring net quantity, of at least 3.3 mm instead of 6.4 mm (or instead of 9.5 mm or 12.7 mm, depending on the principal display surface). Use of this exception is optional; wine that is packaged in this way may also declare the net quantity using the type height described in the Legibility and location section of the Net quantity page.",
+        "For wine containers, the principal display surface includes any area, excluding its top and bottom, that can be seen without having to turn the container, as per paragraph (g) of the principal display surface definition [B.01.001(1), FDR; 1, SFCR]. This has the effect of allowing labelling information that is required to be located on the principal display panel of wine, including net quantity, country of origin, common name and alcohol by volume, to be presented in a single field of vision.",
+        "Consumer prepackaged wine may only be interprovincially traded or imported into Canada in a container of a size that corresponds to a net quantity by volume of 50, 100, 200, 250, 375, 500, or 750 millilitres or 1, 1.5, 2, 3 or 4 litres [187, 188(1), SFCR].",
+        "This container size requirement does not apply to consumer prepackaged wine that is [188(3), SFCR]:",
+        "manufactured, prepared, produced, packaged or labelled for use by commercial or industrial enterprises or institutions without being sold by them as a consumer prepackaged food manufactured, prepared, produced, packaged or labelled only for sale to or by a duty free shop, or distributed to 1 or more persons for no consideration (such as free samples distributed without exchange of money or other compensation)",
+        "A clear indication of the country of origin is required on all standardized wine products described in sections 2.7.1 to 2.7.8 of the Canadian Food Compositional Standards document. This declaration must be shown in English and French [B.01.012(2), FDR] and must appear on the principal display panel [B.02.108, FDR].",
+        "For wines from the U.S., a statement such as \"Blush Merlot of California\" would fulfill the requirement for a country of origin declaration on the label of a wine as the requirements do not specify the wording of the country of origin statement, and it is unlikely that anyone would be misled regarding the origin of the product (knowing that California is part of the U.S.).",
+        "Wines which are blended in Canada from domestic and imported wines may list the countries in order of proportion or alternatively be labelled as:",
+        "\"International blend from imported and domestic wines\" or \"International blend from domestic and imported wines\"",
+        "\"Imported\" is listed first when the imported wine makes up the largest proportion of the product. \"Domestic\" is listed first when the domestic wine makes up the largest proportion of the product.",
+        "In relation to wines, the term \"dry\" refers to a low residual sugar content in the wine, meaning that most of the sugar has been fermented into alcohol. The term \"dry\" therefore means the product has little or no sugar. There is however a large measurable range in the sugar content of wines. The actual sugar content of what would be perceived and described as a \"dry\" wine varies with the specific type of wine. For example, a dry sherry wine would have more residual sugar than a dry table wine.",
+        "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+        "For information, refer to Use of the term \"light\" .",
+        "The icewine standard set out in volume 8 of the Canadian Standards of Identity document specifies that the terms icewine, ice wine or ice-wine may only be used for wine that is made exclusively from grapes naturally frozen on the vine. In addition, any words that are similar to, abbreviations of, symbols for or phonetic renderings of icewine may only be used in reference to wine that meets the icewine standard. This applies to both domestically produced and imported icewine. For domestically produced icewine, an entity acting under the authority of the law of the province in which the product was made must also determine that the product meets the standard [202, SFCR]."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Legibility and location",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/net-quantity#s5c2",
+          "context_text": "Wine that is displayed for sale to consumers and packaged in a 750 mL container that is no taller than 360 mm in height may declare the net quantity in letters of at least 3.3 mm in height [229(3), SFCR]. This is an exception to the type height requirements for the net quantity, and means that 750 mL containers of wine (no taller than 360 mm) with a principal display surface of more than 258 cm 2 are allowed to have a smaller type for declaring net quantity, of at least 3.3 mm instead of 6.4 mm (or instead of 9.5 mm or 12.7 mm, depending on the principal display surface). Use of this exception is optional; wine that is packaged in this way may also declare the net quantity using the type height described in the Legibility and location section of the Net quantity page.",
+          "section": "Product specific information for wine",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "principal display surface",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s15c3",
+          "context_text": "For wine containers, the principal display surface includes any area, excluding its top and bottom, that can be seen without having to turn the container, as per paragraph (g) of the principal display surface definition [B.01.001(1), FDR; 1, SFCR]. This has the effect of allowing labelling information that is required to be located on the principal display panel of wine, including net quantity, country of origin, common name and alcohol by volume, to be presented in a single field of vision.",
+          "section": "Product specific information for wine",
+          "element_type": "p",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Canadian Food Compositional Standards",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+          "context_text": "A clear indication of the country of origin is required on all standardized wine products described in sections 2.7.1 to 2.7.8 of the Canadian Food Compositional Standards document. This declaration must be shown in English and French [B.01.012(2), FDR] and must appear on the principal display panel [B.02.108, FDR].",
+          "section": "Product specific information for wine",
+          "element_type": "p",
+          "position_in_content": 6
+        },
+        {
+          "link_text": "Use of the term \"dry\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+          "context_text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "section": "Product specific information for wine",
+          "element_type": "p",
+          "position_in_content": 12
+        },
+        {
+          "link_text": "Use of the term \"light\"",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s7c8",
+          "context_text": "For information, refer to Use of the term \"light\" .",
+          "section": "Product specific information for wine",
+          "element_type": "p",
+          "position_in_content": 13
+        },
+        {
+          "link_text": "volume 8 of the Canadian Standards of Identity",
+          "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+          "context_text": "The icewine standard set out in volume 8 of the Canadian Standards of Identity document specifies that the terms icewine, ice wine or ice-wine may only be used for wine that is made exclusively from grapes naturally frozen on the vine. In addition, any words that are similar to, abbreviations of, symbols for or phonetic renderings of icewine may only be used in reference to wine that meets the icewine standard. This applies to both domestically produced and imported icewine. For domestically produced icewine, an entity acting under the authority of the law of the province in which the product was made must also determine that the product meets the standard [202, SFCR].",
+          "section": "Product specific information for wine",
+          "element_type": "p",
+          "position_in_content": 14
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Wine that is displayed for sale to consumers and packaged in a 750 mL container that is no taller than 360 mm in height may declare the net quantity in letters of at least 3.3 mm in height [229(3), SFCR]. This is an exception to the type height requirements for the net quantity, and means that 750 mL containers of wine (no taller than 360 mm) with a principal display surface of more than 258 cm 2 are allowed to have a smaller type for declaring net quantity, of at least 3.3 mm instead of 6.4 mm (or instead of 9.5 mm or 12.7 mm, depending on the principal display surface). Use of this exception is optional; wine that is packaged in this way may also declare the net quantity using the type height described in the Legibility and location section of the Net quantity page.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Legibility and location",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/net-quantity#s5c2",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For wine containers, the principal display surface includes any area, excluding its top and bottom, that can be seen without having to turn the container, as per paragraph (g) of the principal display surface definition [B.01.001(1), FDR; 1, SFCR]. This has the effect of allowing labelling information that is required to be located on the principal display panel of wine, including net quantity, country of origin, common name and alcohol by volume, to be presented in a single field of vision.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "principal display surface",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/legibility-and-location#s15c3",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Consumer prepackaged wine may only be interprovincially traded or imported into Canada in a container of a size that corresponds to a net quantity by volume of 50, 100, 200, 250, 375, 500, or 750 millilitres or 1, 1.5, 2, 3 or 4 litres [187, 188(1), SFCR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "This container size requirement does not apply to consumer prepackaged wine that is [188(3), SFCR]:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "manufactured, prepared, produced, packaged or labelled for use by commercial or industrial enterprises or institutions without being sold by them as a consumer prepackaged food manufactured, prepared, produced, packaged or labelled only for sale to or by a duty free shop, or distributed to 1 or more persons for no consideration (such as free samples distributed without exchange of money or other compensation)",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "A clear indication of the country of origin is required on all standardized wine products described in sections 2.7.1 to 2.7.8 of the Canadian Food Compositional Standards document. This declaration must be shown in English and French [B.01.012(2), FDR] and must appear on the principal display panel [B.02.108, FDR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Canadian Food Compositional Standards",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For wines from the U.S., a statement such as \"Blush Merlot of California\" would fulfill the requirement for a country of origin declaration on the label of a wine as the requirements do not specify the wording of the country of origin statement, and it is unlikely that anyone would be misled regarding the origin of the product (knowing that California is part of the U.S.).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Wines which are blended in Canada from domestic and imported wines may list the countries in order of proportion or alternatively be labelled as:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "\"International blend from imported and domestic wines\" or \"International blend from domestic and imported wines\"",
+          "element_type": "ul",
+          "links": []
+        },
+        {
+          "text": "\"Imported\" is listed first when the imported wine makes up the largest proportion of the product. \"Domestic\" is listed first when the domestic wine makes up the largest proportion of the product.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "In relation to wines, the term \"dry\" refers to a low residual sugar content in the wine, meaning that most of the sugar has been fermented into alcohol. The term \"dry\" therefore means the product has little or no sugar. There is however a large measurable range in the sugar content of wines. The actual sugar content of what would be perceived and described as a \"dry\" wine varies with the specific type of wine. For example, a dry sherry wine would have more residual sugar than a dry table wine.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "See also Use of the term \"dry\" for general information on dry claims for all alcoholic beverages.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"dry\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s11c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "For information, refer to Use of the term \"light\" .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Use of the term \"light\"",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/alcoholic-beverages#s7c8",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The icewine standard set out in volume 8 of the Canadian Standards of Identity document specifies that the terms icewine, ice wine or ice-wine may only be used for wine that is made exclusively from grapes naturally frozen on the vine. In addition, any words that are similar to, abbreviations of, symbols for or phonetic renderings of icewine may only be used in reference to wine that meets the icewine standard. This applies to both domestically produced and imported icewine. For domestically produced icewine, an entity acting under the authority of the law of the province in which the product was made must also determine that the product meets the standard [202, SFCR].",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "volume 8 of the Canadian Standards of Identity",
+              "href": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "Provincial and territorial liquor boards": {
+      "title": "Provincial and territorial liquor boards",
+      "content": [
+        "Alcoholic beverages sold within certain provinces and territories may have to meet specific requirements. Consult the provincial and territorial liquor boards links provided below for more information.",
+        "Note: the information on the websites available through the links in this section may not be available in both English and French.",
+        "Alberta Gaming and Liquor Commission British Columbia Liquor Distribution Branch Liquor Control Board of Ontario Manitoba Liquor and Lotteries Corporation New Brunswick Liquor Corporation Newfoundland Labrador Liquor Corporation Northwest Territories Liquor Commission Nova Scotia Liquor Corporation Nunavut Liquor Commission Prince Edward Island Liquor Control Commission Saskatchewan Liquor and Gaming Authority Société des alcools du Québec Yukon Liquor Corporation"
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "Alcoholic beverages sold within certain provinces and territories may have to meet specific requirements. Consult the provincial and territorial liquor boards links provided below for more information.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Note: the information on the websites available through the links in this section may not be available in both English and French.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Alberta Gaming and Liquor Commission British Columbia Liquor Distribution Branch Liquor Control Board of Ontario Manitoba Liquor and Lotteries Corporation New Brunswick Liquor Corporation Newfoundland Labrador Liquor Corporation Northwest Territories Liquor Commission Nova Scotia Liquor Corporation Nunavut Liquor Commission Prince Edward Island Liquor Control Commission Saskatchewan Liquor and Gaming Authority Société des alcools du Québec Yukon Liquor Corporation",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Alberta Gaming and Liquor Commission",
+              "href": "https://aglc.ca/",
+              "is_external": true
+            },
+            {
+              "text": "British Columbia Liquor Distribution Branch",
+              "href": "http://www.bcldb.com",
+              "is_external": true
+            },
+            {
+              "text": "Liquor Control Board of Ontario",
+              "href": "https://www.lcbo.com/content/lcbo/en.html",
+              "is_external": true
+            },
+            {
+              "text": "Manitoba Liquor and Lotteries Corporation",
+              "href": "https://www.liquormarts.ca/",
+              "is_external": true
+            },
+            {
+              "text": "New Brunswick Liquor Corporation",
+              "href": "https://www.anbl.com/",
+              "is_external": true
+            },
+            {
+              "text": "Newfoundland Labrador Liquor Corporation",
+              "href": "https://nlliquor.com/",
+              "is_external": true
+            },
+            {
+              "text": "Northwest Territories Liquor Commission",
+              "href": "https://www.fin.gov.nt.ca/en/services?combine=&field_service_category_tid=401&field_program_type_tid=All",
+              "is_external": true
+            },
+            {
+              "text": "Nova Scotia Liquor Corporation",
+              "href": "https://www.mynslc.com/",
+              "is_external": true
+            },
+            {
+              "text": "Nunavut Liquor Commission",
+              "href": "https://www.gov.nu.ca/finance/information/nunavut-liquor-commission",
+              "is_external": true
+            },
+            {
+              "text": "Prince Edward Island Liquor Control Commission",
+              "href": "https://liquorpei.com/",
+              "is_external": true
+            },
+            {
+              "text": "Saskatchewan Liquor and Gaming Authority",
+              "href": "https://www.slga.com",
+              "is_external": true
+            },
+            {
+              "text": "Société des alcools du Québec",
+              "href": "https://www.saq.com/content/SAQ/en.html",
+              "is_external": true
+            },
+            {
+              "text": "Yukon Liquor Corporation",
+              "href": "http://www.ylc.yk.ca",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

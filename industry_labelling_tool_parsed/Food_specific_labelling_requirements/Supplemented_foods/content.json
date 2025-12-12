@@ -1,0 +1,556 @@
+{
+  "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/supplemented-foods",
+  "citation_title": "Supplemented foods",
+  "sections": {
+    "Overview": {
+      "title": "Overview",
+      "content": [
+        "Supplemented foods (SFs) are prepackaged foods with one or more added supplemental ingredients (SIs). Supplemented foods sold in Canada are subject to the provisions of the:",
+        "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+        "The specific requirements and conditions of sales for SFs are set out in Division 29 of the FDR and in 4 documents incorporated by reference (IbR) into the FDR. Additional requirements are also specified in Division 1 and in Part D of the FDR.",
+        "When sold intraprovincially, SFs are subject to the labelling requirements under the FDA and FDR, as well as specific requirements of the SFCA and the SFCR that apply to prepackaged foods sold in Canada, regardless of the level of trade. Provincial regulations may also have labelling requirements that apply when these products are sold within that province.",
+        "The SF regulations permit the addition of specific vitamins, mineral nutrients, amino acids and other substances to prepackaged products; but this is not regarded as fortification. The SF regulations outline specific rules for SFs in terms of food categories which can be supplemented, composition, labelling and representations. The 4 following documents incorporated by reference in the FDR outline requirements related to labelling requirements for SFs, specific food categories, and SIs and their conditions of use:",
+        "Directory of supplemented food caution identifier specifications formatting specifications for the supplemented food caution identifier (SFCI), including acceptable versions for use on SFs Directory of supplemented food facts table formats listing of Supplemented Food Facts table (SFFt) formats, including acceptable versions for use on SFs List of permitted supplemented food categories lists all food categories permitted to be supplemented List of permitted supplemental ingredients lists all SIs permitted for addition to SFs, along with their conditions of use",
+        "Health Canada has prepared a Guidance document: Supplemented Foods Regulations , which elaborates on further details related to SFs. References to relevant sections of Health Canada's guidance document are included on this page.",
+        "Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Supplemented foods",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/supplemented-foods#s1c10",
+          "context_text": "Supplemented foods (SFs) are prepackaged foods with one or more added supplemental ingredients (SIs). Supplemented foods sold in Canada are subject to the provisions of the:",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "Safe Food for Canadians Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?safefood",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Safe Food for Canadians Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Food and Drugs Act",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Food and Drug Regulations",
+          "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+          "context_text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "section": "Overview",
+          "element_type": "ul",
+          "position_in_content": 2
+        },
+        {
+          "link_text": "Industry Labelling Tool",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+          "context_text": "Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods.",
+          "section": "Overview",
+          "element_type": "p",
+          "position_in_content": 8
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "Supplemented foods (SFs) are prepackaged foods with one or more added supplemental ingredients (SIs). Supplemented foods sold in Canada are subject to the provisions of the:",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Supplemented foods",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/supplemented-foods#s1c10",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Safe Food for Canadians Act (SFCA) Safe Food for Canadians Regulations (SFCR) Food and Drugs Act (FDA) Food and Drug Regulations (FDR)",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Safe Food for Canadians Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?safefood",
+              "is_external": false
+            },
+            {
+              "text": "Safe Food for Canadians Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?sfcrrsac",
+              "is_external": false
+            },
+            {
+              "text": "Food and Drugs Act",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drga",
+              "is_external": false
+            },
+            {
+              "text": "Food and Drug Regulations",
+              "href": "https://inspection.canada.ca/english/reg/jredirect2.shtml?drgr",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "The specific requirements and conditions of sales for SFs are set out in Division 29 of the FDR and in 4 documents incorporated by reference (IbR) into the FDR. Additional requirements are also specified in Division 1 and in Part D of the FDR.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "When sold intraprovincially, SFs are subject to the labelling requirements under the FDA and FDR, as well as specific requirements of the SFCA and the SFCR that apply to prepackaged foods sold in Canada, regardless of the level of trade. Provincial regulations may also have labelling requirements that apply when these products are sold within that province.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "The SF regulations permit the addition of specific vitamins, mineral nutrients, amino acids and other substances to prepackaged products; but this is not regarded as fortification. The SF regulations outline specific rules for SFs in terms of food categories which can be supplemented, composition, labelling and representations. The 4 following documents incorporated by reference in the FDR outline requirements related to labelling requirements for SFs, specific food categories, and SIs and their conditions of use:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Directory of supplemented food caution identifier specifications formatting specifications for the supplemented food caution identifier (SFCI), including acceptable versions for use on SFs Directory of supplemented food facts table formats listing of Supplemented Food Facts table (SFFt) formats, including acceptable versions for use on SFs List of permitted supplemented food categories lists all food categories permitted to be supplemented List of permitted supplemental ingredients lists all SIs permitted for addition to SFs, along with their conditions of use",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Directory of supplemented food caution identifier specifications",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/technical-documents/directory-supplemented-food-caution-identifier-specifications.html",
+              "is_external": true
+            },
+            {
+              "text": "Directory of supplemented food facts table formats",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/technical-documents/directory-supplemented-food-facts-table-formats.html",
+              "is_external": true
+            },
+            {
+              "text": "List of permitted supplemented food categories",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/technical-documents/list-permitted-food-categories.html",
+              "is_external": true
+            },
+            {
+              "text": "List of permitted supplemental ingredients",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/technical-documents/list-permitted-food-ingredients.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Health Canada has prepared a Guidance document: Supplemented Foods Regulations , which elaborates on further details related to SFs. References to relevant sections of Health Canada's guidance document are included on this page.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Guidance document: Supplemented Foods Regulations",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Refer to the Industry Labelling Tool for additional core labelling and voluntary claims and statements requirements that apply to all prepackaged foods.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Industry Labelling Tool",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry",
+              "is_external": false
+            }
+          ]
+        }
+      ]
+    },
+    "List of ingredients": {
+      "title": "List of ingredients",
+      "content": [
+        "The requirements of the FDR with respect to declaration of ingredients (including SIs), components and allergens apply to the labels of SFs. Refer to the List of ingredients and allergens on food labels for further information.",
+        "When a SF is used as an ingredient in another SF, the SIs in the first food are also SIs in the second food and not components [B.01.001(4), FDR]. The addition of the SIs to the second food must comply with the conditions set out in the List of permitted supplemental ingredients document incorporated by reference into the FDR. Refer to Direct or indirect addition of supplemental ingredients in the Health Canada Guidance document: Supplemented Foods Regulations for more information.",
+        "For example: For a supplemented cereal bar that contains supplemented chocolate (supplemented with magnesium and vitamin B12) as one of the ingredients, the SIs in the chocolate and any other SIs added to the bar must be declared at the end of the ingredient list in any order: Ingredients : Oats, Dried Cranberries, Pistachios, Chocolate (sugar, cocoa powder, cocoa butter, lecithin), Honey, Coconut, Magnesium, Vitamin B12",
+        "The List of permitted supplemental ingredients includes all SIs permitted for addition to SFs, along with their conditions of use.",
+        "Certain ingredients are not permitted for addition to SFs at any level and further restrictions with respect to the addition of certain SIs may apply. Refer to the following sections of Health Canada's Guidance document: Supplemented Food Regulations:",
+        "Amino acids not permitted for addition to supplemented foods Vitamins and mineral nutrients not permitted for addition to supplemented foods",
+        "For further information and examples on SIs and their conditions of use, refer to Supplemental ingredients and their conditions of use in the Health Canada Guidance document: Supplemented Foods Regulations."
+      ],
+      "internal_links": [
+        {
+          "link_text": "List of ingredients and allergens on food labels",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+          "context_text": "The requirements of the FDR with respect to declaration of ingredients (including SIs), components and allergens apply to the labels of SFs. Refer to the List of ingredients and allergens on food labels for further information.",
+          "section": "List of ingredients",
+          "element_type": "p",
+          "position_in_content": 1
+        },
+        {
+          "link_text": "components",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s19c9",
+          "context_text": "When a SF is used as an ingredient in another SF, the SIs in the first food are also SIs in the second food and not components [B.01.001(4), FDR]. The addition of the SIs to the second food must comply with the conditions set out in the List of permitted supplemental ingredients document incorporated by reference into the FDR. Refer to Direct or indirect addition of supplemental ingredients in the Health Canada Guidance document: Supplemented Foods Regulations for more information.",
+          "section": "List of ingredients",
+          "element_type": "p",
+          "position_in_content": 2
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "The requirements of the FDR with respect to declaration of ingredients (including SIs), components and allergens apply to the labels of SFs. Refer to the List of ingredients and allergens on food labels for further information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of ingredients and allergens on food labels",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "When a SF is used as an ingredient in another SF, the SIs in the first food are also SIs in the second food and not components [B.01.001(4), FDR]. The addition of the SIs to the second food must comply with the conditions set out in the List of permitted supplemental ingredients document incorporated by reference into the FDR. Refer to Direct or indirect addition of supplemental ingredients in the Health Canada Guidance document: Supplemented Foods Regulations for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "components",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/list-ingredients-and-allergens#s19c9",
+              "is_external": false
+            },
+            {
+              "text": "Direct or indirect addition of supplemental ingredients",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.2.7",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "For example: For a supplemented cereal bar that contains supplemented chocolate (supplemented with magnesium and vitamin B12) as one of the ingredients, the SIs in the chocolate and any other SIs added to the bar must be declared at the end of the ingredient list in any order: Ingredients : Oats, Dried Cranberries, Pistachios, Chocolate (sugar, cocoa powder, cocoa butter, lecithin), Honey, Coconut, Magnesium, Vitamin B12",
+          "element_type": "div",
+          "links": []
+        },
+        {
+          "text": "The List of permitted supplemental ingredients includes all SIs permitted for addition to SFs, along with their conditions of use.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of permitted supplemental ingredients",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/technical-documents/list-permitted-food-ingredients.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Certain ingredients are not permitted for addition to SFs at any level and further restrictions with respect to the addition of certain SIs may apply. Refer to the following sections of Health Canada's Guidance document: Supplemented Food Regulations:",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Amino acids not permitted for addition to supplemented foods Vitamins and mineral nutrients not permitted for addition to supplemented foods",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Amino acids not permitted for addition to supplemented foods",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.2.11",
+              "is_external": true
+            },
+            {
+              "text": "Vitamins and mineral nutrients not permitted for addition to supplemented foods",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.2.10",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "For further information and examples on SIs and their conditions of use, refer to Supplemental ingredients and their conditions of use in the Health Canada Guidance document: Supplemented Foods Regulations.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Supplemental ingredients and their conditions of use",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.2:~:text=referrer-,4.2%20Supplemental%20ingredients%20and%20their%20conditions%20of%20use,-The%20SIs%20permitted",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Supplemented Food Facts table (SFFt)": {
+      "title": "Supplemented Food Facts table (SFFt)",
+      "content": [
+        "Supplemented foods are required to carry a standardized SFFt. The required information, units and manner of expression are found in section B.29.002 and the table to section B.29.002 of the FDR. Supplemented Food Facts table in the Health Canada Guidance document: Supplemented Foods Regulations has more information on the elements within the SFFt.",
+        "Refer to Health Canada's Directory of supplemented food facts table formats for acceptable SFFt formats including graphical requirements."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "Supplemented foods are required to carry a standardized SFFt. The required information, units and manner of expression are found in section B.29.002 and the table to section B.29.002 of the FDR. Supplemented Food Facts table in the Health Canada Guidance document: Supplemented Foods Regulations has more information on the elements within the SFFt.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Supplemented Food Facts table",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#:~:text=4.3.1.1%20Supplemented%20Food%20Facts%20table",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Refer to Health Canada's Directory of supplemented food facts table formats for acceptable SFFt formats including graphical requirements.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Directory of supplemented food facts table formats",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/technical-documents/directory-supplemented-food-facts-table-formats.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Small packages": {
+      "title": "Small packages",
+      "content": [
+        "With some exceptions, SFs that have an available display surface of under 100 cm 2 are not required to carry a SFFt, but the label must contain an indication of how the consumer may obtain the information that would otherwise be shown in the SFFt.",
+        "Refer to Small package exemption in the Health Canada Guidance document: Supplemented Foods Regulations for more information as well as the exceptions to this exemption."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "With some exceptions, SFs that have an available display surface of under 100 cm 2 are not required to carry a SFFt, but the label must contain an indication of how the consumer may obtain the information that would otherwise be shown in the SFFt.",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Refer to Small package exemption in the Health Canada Guidance document: Supplemented Foods Regulations for more information as well as the exceptions to this exemption.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Small package exemption",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#:~:text=e)%20Small%20package%20exemption",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Front-of-package nutrition labelling": {
+      "title": "Front-of-package nutrition labelling",
+      "content": [
+        "A front-of-package (FOP) nutrition symbol is mandatory for prepackaged foods that meet or exceed set levels for sodium, sugars or saturated fat [B.01.350, FDR]. Refer to Front-of-package (FOP) nutrition symbol .",
+        "Supplemented foods are subject to the same requirements and exemptions for the FOP symbol as other prepackaged foods. This includes a conditional exemption when they are sold in small packages [B.01.350(13.1), FDR]. Refer to Front-of-package nutrition labelling in the Health Canada Guidance document: Supplemented Foods Regulations for more information."
+      ],
+      "internal_links": [
+        {
+          "link_text": "Front-of-package (FOP) nutrition symbol",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/fop-nutrition-symbol",
+          "context_text": "A front-of-package (FOP) nutrition symbol is mandatory for prepackaged foods that meet or exceed set levels for sodium, sugars or saturated fat [B.01.350, FDR]. Refer to Front-of-package (FOP) nutrition symbol .",
+          "section": "Front-of-package nutrition labelling",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "A front-of-package (FOP) nutrition symbol is mandatory for prepackaged foods that meet or exceed set levels for sodium, sugars or saturated fat [B.01.350, FDR]. Refer to Front-of-package (FOP) nutrition symbol .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Front-of-package (FOP) nutrition symbol",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/industry/nutrition-labelling/fop-nutrition-symbol",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Supplemented foods are subject to the same requirements and exemptions for the FOP symbol as other prepackaged foods. This includes a conditional exemption when they are sold in small packages [B.01.350(13.1), FDR]. Refer to Front-of-package nutrition labelling in the Health Canada Guidance document: Supplemented Foods Regulations for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Front-of-package nutrition labelling",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.3.2",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Cautionary statements": {
+      "title": "Cautionary statements",
+      "content": [
+        "Cautionary statements are required on the labels of SFs when they contain certain SIs at any level (such as zinc), or when the SIs they contain are declared above a threshold amount (for example, more than 58 mg of calcium per serving).",
+        "Refer to Cautionary statements for supplemental ingredients in the Health Canada Guidance document: Supplemented Foods Regulations for more information on cautionary statements including how to calculate the maximum number of servings when required, and the use and grouping of cautionary statements advising against use by certain population groups.",
+        "Certain SIs, such as vitamin A (retinol), zinc, and L-asparagine, among others, are required to carry cautionary statement(s) at any amount declared. For more information, including the specific cautionary statement(s) required, refer to the respective line item in the List of permitted supplemental ingredients ."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "Cautionary statements are required on the labels of SFs when they contain certain SIs at any level (such as zinc), or when the SIs they contain are declared above a threshold amount (for example, more than 58 mg of calcium per serving).",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Refer to Cautionary statements for supplemental ingredients in the Health Canada Guidance document: Supplemented Foods Regulations for more information on cautionary statements including how to calculate the maximum number of servings when required, and the use and grouping of cautionary statements advising against use by certain population groups.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Cautionary statements for supplemental ingredients",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#:~:text=(amino%20acids).-,4.2.4%20Cautionary%20statements%20for%20supplemental%20ingredients,-The%20declaration%20of",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Certain SIs, such as vitamin A (retinol), zinc, and L-asparagine, among others, are required to carry cautionary statement(s) at any amount declared. For more information, including the specific cautionary statement(s) required, refer to the respective line item in the List of permitted supplemental ingredients .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of permitted supplemental ingredients",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/list-permitted-food-ingredients.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Supplemented food caution identifier": {
+      "title": "Supplemented food caution identifier",
+      "content": [
+        "SFs must carry a Supplemented food caution identifier (SFCI) on their principal display panel when the SF requires one or more cautionary statements on its label [B.29.021, FDR]. Prepackaged products that do not have a list of cautionary statements are prohibited from carrying a SFCI [B.29.024, FDR].",
+        "Refer to Supplemented Food Caution Identifier in the Health Canada Guidance document: Supplemented Foods Regulations for more information."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "SFs must carry a Supplemented food caution identifier (SFCI) on their principal display panel when the SF requires one or more cautionary statements on its label [B.29.021, FDR]. Prepackaged products that do not have a list of cautionary statements are prohibited from carrying a SFCI [B.29.024, FDR].",
+          "element_type": "p",
+          "links": []
+        },
+        {
+          "text": "Refer to Supplemented Food Caution Identifier in the Health Canada Guidance document: Supplemented Foods Regulations for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Supplemented Food Caution Identifier",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.3.1.3",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Claims and representations": {
+      "title": "Claims and representations",
+      "content": [
+        "There are restrictions related to claims for specific SFs when they contain SIs with associated cautionary statements. This includes unique requirements for the use of general nutrient function claims, restriction of certain claims on SFs when the cautionary statement recommends against consumption by a certain age group, and claims on SFs with \"high caffeine content\" statement. Refer to Claims not permitted for supplemental ingredients with an associated cautionary statement, Claims not permitted on supplemented foods that are not to be consumed by a certain age group , and Claims not permitted on supplemented foods with the \"High caffeine content\" statement in the Health Canada Guidance document: Supplemented Foods Regulations for more information.",
+        "Additional representation exclusions for SFs containing certain SIs can be found in the List of permitted supplemental ingredients . For example, the use of caffeine as a SIs in some categories of SFs excludes those represented for physical performance.",
+        "There are size restrictions to be aware of on representations, such as claims, when a SF carries a SFCI. Refer to Restrictions on size of acceptable claims for supplemented foods with a supplemented food caution identifier in the Health Canada Guidance document: Supplemented Foods Regulations for more information."
+      ],
+      "internal_links": [],
+      "content_with_links": [
+        {
+          "text": "There are restrictions related to claims for specific SFs when they contain SIs with associated cautionary statements. This includes unique requirements for the use of general nutrient function claims, restriction of certain claims on SFs when the cautionary statement recommends against consumption by a certain age group, and claims on SFs with \"high caffeine content\" statement. Refer to Claims not permitted for supplemental ingredients with an associated cautionary statement, Claims not permitted on supplemented foods that are not to be consumed by a certain age group , and Claims not permitted on supplemented foods with the \"High caffeine content\" statement in the Health Canada Guidance document: Supplemented Foods Regulations for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Claims not permitted for supplemental ingredients with an associated cautionary statement,",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.4.7.1",
+              "is_external": true
+            },
+            {
+              "text": "Claims not permitted on supplemented foods that are not to be consumed by a certain age group",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.4.7.2",
+              "is_external": true
+            },
+            {
+              "text": "Claims not permitted on supplemented foods with the \"High caffeine content\" statement",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.4.7.3",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "Additional representation exclusions for SFs containing certain SIs can be found in the List of permitted supplemental ingredients . For example, the use of caffeine as a SIs in some categories of SFs excludes those represented for physical performance.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "List of permitted supplemental ingredients",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods/list-permitted-food-ingredients.html",
+              "is_external": true
+            }
+          ]
+        },
+        {
+          "text": "There are size restrictions to be aware of on representations, such as claims, when a SF carries a SFCI. Refer to Restrictions on size of acceptable claims for supplemented foods with a supplemented food caution identifier in the Health Canada Guidance document: Supplemented Foods Regulations for more information.",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Restrictions on size of acceptable claims for supplemented foods with a supplemented food caution identifier",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html#a4.4.7.4",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    },
+    "Additional information": {
+      "title": "Additional information",
+      "content": [
+        "For more information on the compliance test for SIs, please see Implementation plan for amendments to the Food and Drug Regulations (Supplemented Foods) .",
+        "Guidance document: Supplemented Foods Regulations Guidance document: Pre-market submission process for supplemented foods Supplemented foods: Overview How to tell different types of foods and health products apart Caffeine in Foods"
+      ],
+      "internal_links": [
+        {
+          "link_text": "Implementation plan for amendments to the Food and Drug Regulations (Supplemented Foods)",
+          "href": "https://inspection.canada.ca/en/food-labels/labelling/implementation-plan-0",
+          "context_text": "For more information on the compliance test for SIs, please see Implementation plan for amendments to the Food and Drug Regulations (Supplemented Foods) .",
+          "section": "Additional information",
+          "element_type": "p",
+          "position_in_content": 1
+        }
+      ],
+      "content_with_links": [
+        {
+          "text": "For more information on the compliance test for SIs, please see Implementation plan for amendments to the Food and Drug Regulations (Supplemented Foods) .",
+          "element_type": "p",
+          "links": [
+            {
+              "text": "Implementation plan for amendments to the Food and Drug Regulations (Supplemented Foods)",
+              "href": "https://inspection.canada.ca/en/food-labels/labelling/implementation-plan-0",
+              "is_external": false
+            }
+          ]
+        },
+        {
+          "text": "Guidance document: Supplemented Foods Regulations Guidance document: Pre-market submission process for supplemented foods Supplemented foods: Overview How to tell different types of foods and health products apart Caffeine in Foods",
+          "element_type": "ul",
+          "links": [
+            {
+              "text": "Guidance document: Supplemented Foods Regulations",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/supplemented-foods-regulations.html",
+              "is_external": true
+            },
+            {
+              "text": "Guidance document: Pre-market submission process for supplemented foods",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/pre-market-submission-process-supplemented-foods.html",
+              "is_external": true
+            },
+            {
+              "text": "Supplemented foods: Overview",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/supplemented-foods.html",
+              "is_external": true
+            },
+            {
+              "text": "How to tell different types of foods and health products apart",
+              "href": "https://www.canada.ca/en/health-canada/services/publications/food-nutrition/how-tell-different-types-foods-health-products-apart.html",
+              "is_external": true
+            },
+            {
+              "text": "Caffeine in Foods",
+              "href": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives/caffeine-foods.html",
+              "is_external": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
