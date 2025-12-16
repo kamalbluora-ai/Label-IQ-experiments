@@ -165,7 +165,7 @@ common_name|definition|volume|tag"""
             print(f"  {item['common_name']} | {item['volume']}")
             
         # Insert into database
-        db_file = Path("ilt_requirements.db")
+        db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
         conn = sqlite3.connect(db_file)
         cursor = conn.cursor()
         

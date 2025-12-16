@@ -13,7 +13,7 @@ client = OpenAI(api_key=config.OPENAI_API_KEY)
 def process_related_urls():
     """Process related URLs from common_name_all table and create concise summaries"""
     
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent.parent / "data" / "ilt_requirements.db"
     
     # Connect to SQLite database
     if not db_file.exists():
@@ -332,7 +332,7 @@ def create_concatenated_summary(url_summaries):
 def view_processing_results():
     """View detailed processing results"""
     
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent.parent / "data" / "ilt_requirements.db"
     
     if not db_file.exists():
         print("Database not found.")

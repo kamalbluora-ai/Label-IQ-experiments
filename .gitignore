@@ -17,6 +17,7 @@ downloads/
 eggs/
 .eggs/
 lib/
+!frontend/client/src/lib/
 lib64/
 parts/
 sdist/
@@ -38,3 +39,4 @@ Thumbs.db
 
 # Logs
 *.log
+WARP.md

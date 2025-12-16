@@ -9,7 +9,7 @@ def create_external_links_table():
     
     # Paths
     base_dir = Path("industry_labelling_tool_parsed")
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     # Connect to SQLite database
     if not db_file.exists():
@@ -184,7 +184,7 @@ def create_external_links_table():
 
 def view_external_links_stats():
     """Optional: View statistics about the external_links table"""
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     if not db_file.exists():
         print("Database not found.")

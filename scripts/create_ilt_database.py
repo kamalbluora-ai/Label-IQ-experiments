@@ -17,7 +17,7 @@ def create_database_from_ilt():
     
     # Paths
     json_file = Path("ILT/industry_labelling_tool.json")
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     # Load JSON data
     try:
@@ -143,7 +143,7 @@ def create_database_from_ilt():
 
 def view_database_content():
     """Optional: View the content of created database"""
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     if not db_file.exists():
         print("Database not found. Run create_database_from_ilt() first.")

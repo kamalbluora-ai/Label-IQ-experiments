@@ -19,12 +19,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # Import rule methods
 import sys
-sys.path.append('common_name_solution_1')
+sys.path.append(str(Path(__file__).parent.parent / 'rules'))
 
 class MultiImageLabelEvaluator:
     """Comprehensive system for OCR multiple product images and evaluating common name rules"""
     
-    def __init__(self, db_path="ilt_requirements.db", api_key=config.OPENAI_API_KEY, 
+    def __init__(self, db_path=str(Path(__file__).parent.parent.parent / 'data' / 'ilt_requirements.db'), api_key=config.OPENAI_API_KEY, 
                  google_credentials_path='google-credentials.json'):
         self.db_path = Path(db_path)
         self.client = OpenAI(api_key=api_key)

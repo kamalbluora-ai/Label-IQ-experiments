@@ -40,7 +40,7 @@ class CFCSOrchestrator:
     def __init__(self, verbose=False):
         self.verbose = verbose
         self.url = "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0"
-        self.db_file = Path("ilt_requirements.db")
+        self.db_file = Path(__file__).parent.parent.parent / "data" / "ilt_requirements.db"
         self.client = None
         self.setup_openai()
         

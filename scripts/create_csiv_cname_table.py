@@ -25,7 +25,7 @@ def create_csiv_cname_table():
         {"num": 8, "url": base_url.format("8")}
     ]
     
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     # OpenAI Client
     try:
@@ -445,7 +445,7 @@ def validate_csi_coverage(db_file):
 
 def view_csiv_cname_stats():
     """Optional: View statistics about the csiv_cname table"""
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     if not db_file.exists():
         print("Database not found.")

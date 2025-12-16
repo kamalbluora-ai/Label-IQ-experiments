@@ -1,6 +1,6 @@
 // API client that connects to the FastAPI backend
-// API base URL - FastAPI runs on port 8001
-const API_BASE = "http://localhost:8001/api";
+// API base URL - FastAPI runs on port 8000
+const API_BASE = "http://localhost:8000/api";
 
 // Types matching the backend models
 export interface User {

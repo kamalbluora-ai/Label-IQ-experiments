@@ -18,7 +18,7 @@ def create_common_name_all_table():
         print("Please set your OpenAI API key in the script or environment variable")
         return
     
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     # Connect to SQLite database
     if not db_file.exists():
@@ -611,7 +611,7 @@ def get_common_name_compliance_context(label_data=None, food_type=None, package_
     Returns:
         Dictionary with relevant compliance information
     """
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     conn = sqlite3.connect(db_file)
     cursor = conn.cursor()
     

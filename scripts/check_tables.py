@@ -1,6 +1,6 @@
 import sqlite3
-
-conn = sqlite3.connect('ilt_requirements.db')
+from pathlib import Path
+conn = sqlite3.connect(Path(__file__).parent.parent / 'data' / 'ilt_requirements.db')
 cursor = conn.cursor()
 
 # Get all table names

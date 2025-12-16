@@ -8,7 +8,7 @@ def create_requirements_checklist_table():
     
     # Paths
     json_file = Path("food_labelling_requirements_checklist/cfia_rules.json")
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent.parent / "data" / "ilt_requirements.db"
     
     # Load JSON data
     try:
@@ -142,7 +142,7 @@ def create_requirements_checklist_table():
 
 def view_requirements_checklist_stats():
     """Optional: View statistics about the requirements_checklist table"""
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent.parent / "data" / "ilt_requirements.db"
     
     if not db_file.exists():
         print("Database not found.")

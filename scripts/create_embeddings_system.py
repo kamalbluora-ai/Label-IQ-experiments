@@ -18,7 +18,7 @@ client = OpenAI(api_key=config.OPENAI_API_KEY)
 class CommonNameEmbeddingSystem:
     """System for creating and using embeddings from common_name_all table for rule evaluation"""
     
-    def __init__(self, db_path: str = "ilt_requirements.db"):
+    def __init__(self, db_path: str = str(Path(__file__).parent.parent / "data" / "ilt_requirements.db")):
         self.db_path = Path(db_path)
         self.embeddings_cache = {}
         self.knowledge_base = []

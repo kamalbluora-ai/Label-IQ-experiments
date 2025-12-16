@@ -9,12 +9,12 @@ def get_common_name_compliance_context(label_data=None, food_type=None, package_
     Args:
         label_data: Dictionary containing label information
         food_type: Type of food (e.g., 'dairy', 'meat', 'beverage') 
-        package_size: Package size in cm² for text size requirements
+        package_size: Package size in cmÂ² for text size requirements
     
     Returns:
         Dictionary with relevant compliance information
     """
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent.parent / "data" / "ilt_requirements.db"
     conn = sqlite3.connect(db_file)
     cursor = conn.cursor()
     

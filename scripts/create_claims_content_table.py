@@ -4,12 +4,12 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-def create_food_specific_content_table():
-    """Create and populate food_specific_labelling_requirements_content table from all Food-specific requirements content.json files"""
+def create_claims_content_table():
+    """Create and populate claims_and_statements_content table from all Claims and statements content.json files"""
     
     # Paths
-    food_specific_dir = Path("industry_labelling_tool_parsed/Food_specific_labelling_requirements")
-    db_file = Path("ilt_requirements.db")
+    claims_dir = Path("industry_labelling_tool_parsed/Claims_and_statements")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     # Connect to SQLite database
     if not db_file.exists():
@@ -20,11 +20,11 @@ def create_food_specific_content_table():
     conn = sqlite3.connect(db_file)
     cursor = conn.cursor()
     
-    print(f"Creating food_specific_labelling_requirements_content table in: {db_file}")
+    print(f"Creating claims_and_statements_content table in: {db_file}")
     
-    # Create food_specific_labelling_requirements_content table
+    # Create claims_and_statements_content table
     create_table_sql = """
-    CREATE TABLE IF NOT EXISTS food_specific_labelling_requirements_content (
+    CREATE TABLE IF NOT EXISTS claims_and_statements_content (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         requirement_id INTEGER,
         requirement_name TEXT NOT NULL,
@@ -34,37 +34,37 @@ def create_food_specific_content_table():
         external_links TEXT,
         source_url TEXT,
         created_date DATETIME NOT NULL,
-        FOREIGN KEY (requirement_id) REFERENCES food_specific_labelling_requirements(id)
+        FOREIGN KEY (requirement_id) REFERENCES claims_and_statements(id)
     )
     """
     
     cursor.execute(create_table_sql)
-    print("Table 'food_specific_labelling_requirements_content' created/verified")
+    print("Table 'claims_and_statements_content' created/verified")
     
     # Check if external_links column exists, if not add it
-    cursor.execute("PRAGMA table_info(food_specific_labelling_requirements_content)")
+    cursor.execute("PRAGMA table_info(claims_and_statements_content)")
     columns = [column[1] for column in cursor.fetchall()]
     
     if 'external_links' not in columns:
-        print("Adding external_links column to food_specific_labelling_requirements_content")
-        cursor.execute("ALTER TABLE food_specific_labelling_requirements_content ADD COLUMN external_links TEXT")
+        print("Adding external_links column to claims_and_statements_content")
+        cursor.execute("ALTER TABLE claims_and_statements_content ADD COLUMN external_links TEXT")
     
     if 'source_url' not in columns:
-        print("Adding source_url column to food_specific_labelling_requirements_content")
-        cursor.execute("ALTER TABLE food_specific_labelling_requirements_content ADD COLUMN source_url TEXT")
+        print("Adding source_url column to claims_and_statements_content")
+        cursor.execute("ALTER TABLE claims_and_statements_content ADD COLUMN source_url TEXT")
     
     # Clear existing data and reset sequence
-    cursor.execute("DELETE FROM food_specific_labelling_requirements_content")
-    cursor.execute("DELETE FROM sqlite_sequence WHERE name='food_specific_labelling_requirements_content'")
+    cursor.execute("DELETE FROM claims_and_statements_content")
+    cursor.execute("DELETE FROM sqlite_sequence WHERE name='claims_and_statements_content'")
     conn.commit()
     print("Existing data cleared and sequence reset")
     
-    # Get all requirement names from food_specific_labelling_requirements table
-    cursor.execute("SELECT id, requirement FROM food_specific_labelling_requirements ORDER BY id")
+    # Get all requirement names from claims_and_statements table
+    cursor.execute("SELECT id, requirement FROM claims_and_statements ORDER BY id")
     requirements = cursor.fetchall()
     
     if not requirements:
-        print("Error: No requirements found in food_specific_labelling_requirements table")
+        print("Error: No requirements found in claims_and_statements table")
         conn.close()
         return
     
@@ -80,9 +80,9 @@ def create_food_specific_content_table():
         print(f"\nProcessing requirement: {requirement_name}")
         
         # Construct path to content.json file
-        requirement_folder = requirement_name.replace(' ', '_').replace('/', '_').replace('(', '').replace(')', '').replace(',', '').replace('-', '_')
-        content_json_file = food_specific_dir / requirement_folder / "content.json"
-        external_links_json_file = food_specific_dir / requirement_folder / "external_links.json"
+        requirement_folder = requirement_name.replace(' ', '_').replace('/', '_').replace('(', '').replace(')', '').replace('-', '_')
+        content_json_file = claims_dir / requirement_folder / "content.json"
+        external_links_json_file = claims_dir / requirement_folder / "external_links.json"
         
         print(f"Looking for: {content_json_file}")
         
@@ -142,7 +142,7 @@ def create_food_specific_content_table():
             
             # Insert record
             insert_sql = """
-            INSERT INTO food_specific_labelling_requirements_content 
+            INSERT INTO claims_and_statements_content 
             (requirement_id, requirement_name, section, content, internal_links, external_links, source_url, created_date) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             """
@@ -175,14 +175,14 @@ def create_food_specific_content_table():
     print("TABLE SUMMARY")
     print(f"{'='*60}")
     
-    cursor.execute("SELECT COUNT(*) FROM food_specific_labelling_requirements_content")
+    cursor.execute("SELECT COUNT(*) FROM claims_and_statements_content")
     total_records = cursor.fetchone()[0]
-    print(f"Total records in food_specific_labelling_requirements_content: {total_records}")
+    print(f"Total records in claims_and_statements_content: {total_records}")
     
     # Summary by requirement
     cursor.execute("""
     SELECT requirement_name, COUNT(*) as section_count
-    FROM food_specific_labelling_requirements_content 
+    FROM claims_and_statements_content 
     GROUP BY requirement_name 
     ORDER BY requirement_id
     """)
@@ -202,7 +202,7 @@ def create_food_specific_content_table():
            SUBSTR(internal_links, 1, 60) as internal_links_preview,
            SUBSTR(external_links, 1, 60) as external_links_preview,
            source_url
-    FROM food_specific_labelling_requirements_content 
+    FROM claims_and_statements_content 
     ORDER BY id
     LIMIT 10
     """)
@@ -221,9 +221,9 @@ def create_food_specific_content_table():
     conn.close()
     print(f"\nDatabase updated successfully!")
 
-def view_food_specific_content_stats():
-    """Optional: View statistics about the food_specific_labelling_requirements_content table"""
-    db_file = Path("ilt_requirements.db")
+def view_claims_content_stats():
+    """Optional: View statistics about the claims_and_statements_content table"""
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     if not db_file.exists():
         print("Database not found.")
@@ -233,14 +233,14 @@ def view_food_specific_content_stats():
     cursor = conn.cursor()
     
     # Check if table exists
-    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='food_specific_labelling_requirements_content'")
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='claims_and_statements_content'")
     if not cursor.fetchone():
-        print("Table 'food_specific_labelling_requirements_content' does not exist.")
+        print("Table 'claims_and_statements_content' does not exist.")
         conn.close()
         return
     
     # Content statistics by requirement
-    print("\nFOOD-SPECIFIC CONTENT STATISTICS BY REQUIREMENT:")
+    print("\nCLAIMS AND STATEMENTS CONTENT STATISTICS BY REQUIREMENT:")
     cursor.execute("""
     SELECT 
         requirement_name,
@@ -248,7 +248,7 @@ def view_food_specific_content_stats():
         AVG(LENGTH(content)) as avg_content_length,
         SUM(CASE WHEN internal_links IS NOT NULL THEN 1 ELSE 0 END) as sections_with_internal_links,
         SUM(CASE WHEN external_links IS NOT NULL THEN 1 ELSE 0 END) as sections_with_external_links
-    FROM food_specific_labelling_requirements_content 
+    FROM claims_and_statements_content 
     GROUP BY requirement_name, requirement_id
     ORDER BY requirement_id
     """)
@@ -270,11 +270,11 @@ def view_food_specific_content_stats():
         AVG(LENGTH(content)) as avg_content_length,
         SUM(CASE WHEN internal_links IS NOT NULL THEN 1 ELSE 0 END) as sections_with_internal_links,
         SUM(CASE WHEN external_links IS NOT NULL THEN 1 ELSE 0 END) as sections_with_external_links
-    FROM food_specific_labelling_requirements_content
+    FROM claims_and_statements_content
     """)
     
     stats = cursor.fetchone()
-    print(f"OVERALL FOOD-SPECIFIC STATISTICS:")
+    print(f"OVERALL CLAIMS AND STATEMENTS STATISTICS:")
     print(f"  Total requirements processed: {stats[0]}")
     print(f"  Total sections: {stats[1]}")
     print(f"  Average content length: {stats[2]:.0f} chars")
@@ -284,8 +284,8 @@ def view_food_specific_content_stats():
     conn.close()
 
 if __name__ == "__main__":
-    create_food_specific_content_table()
+    create_claims_content_table()
     print("\n" + "="*60)
     print("Want to view statistics? Uncomment the line below:")
-    print("# view_food_specific_content_stats()")
-    # view_food_specific_content_stats()
+    print("# view_claims_content_stats()")
+    # view_claims_content_stats()

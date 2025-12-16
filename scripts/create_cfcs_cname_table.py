@@ -12,7 +12,7 @@ def create_cfcs_cname_table():
     
     # URL to scrape
     url = "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0"
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     # OpenAI Client - Replace with your API key
     try:
@@ -737,7 +737,7 @@ common_name|definition|volume|tag"""
 
 def view_cfcs_cname_stats():
     """Optional: View statistics about the cfcs_cname table"""
-    db_file = Path("ilt_requirements.db")
+    db_file = Path(__file__).parent.parent / "data" / "ilt_requirements.db"
     
     if not db_file.exists():
         print("Database not found.")
