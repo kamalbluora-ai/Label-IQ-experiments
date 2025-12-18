@@ -373,6 +373,14 @@ class Storage:
                         }
                         rule_num = int(rule_key.replace("origin_rule_", ""))
                         rule_name = origin_rule_names.get(rule_num, rule_key)
+                    # Handle dealer rules (dealer_rule_1, etc.)
+                    elif rule_key.startswith("dealer_rule_"):
+                        dealer_rule_names = {
+                            1: "dealer_present", 2: "dealer_address", 3: "dealer_imported",
+                            4: "dealer_type_height", 5: "dealer_location", 6: "dealer_legibility"
+                        }
+                        rule_num = int(rule_key.replace("dealer_rule_", ""))
+                        rule_name = dealer_rule_names.get(rule_num, rule_key)
                     # Handle net quantity rules (net_qty_rule_1, etc.)
                     elif rule_key.startswith("net_qty_rule_"):
                         rule_num = int(rule_key.replace("net_qty_rule_", ""))

@@ -224,9 +224,11 @@ def generate_compliance_report(
     # Create table header
     table_data = [["Rule", "Status", "Confidence", "Finding"]]
     
-    # Sort keys: common name (0), bilingual (1), net qty (2), ingredients (3), nutrition (4), date (5), origin (6)
+    # Sort keys: common name (0), bilingual (1), net qty (2), ingredients (3), nutrition (4), date (5), origin (6), dealer (7)
     def sort_key(x):
-        if x.startswith('origin_rule_'):
+        if x.startswith('dealer_rule_'):
+            return (7, int(x.replace('dealer_rule_', '')))
+        elif x.startswith('origin_rule_'):
             return (6, int(x.replace('origin_rule_', '')))
         elif x.startswith('date_rule_'):
             return (5, int(x.replace('date_rule_', '')))
@@ -306,10 +308,24 @@ def generate_compliance_report(
             5: "Origin Legibility"
         }
         
+        # Dealer rules mapping
+        dealer_rule_names = {
+            1: "Dealer Present",
+            2: "Dealer Address",
+            3: "Imported Declaration",
+            4: "Type Height",
+            5: "Dealer Location",
+            6: "Dealer Legibility"
+        }
+        
         if rule_key.startswith('origin_rule_'):
             rule_num = int(rule_key.replace('origin_rule_', ''))
             rule_name = origin_rule_names.get(rule_num, f"Origin Rule {rule_num}")
             display_num = f"O{rule_num}"
+        elif rule_key.startswith('dealer_rule_'):
+            rule_num = int(rule_key.replace('dealer_rule_', ''))
+            rule_name = dealer_rule_names.get(rule_num, f"Dealer Rule {rule_num}")
+            display_num = f"DL{rule_num}"
         elif rule_key.startswith('date_rule_'):
             rule_num = int(rule_key.replace('date_rule_', ''))
             rule_name = date_rule_names.get(rule_num, f"Date Rule {rule_num}")
@@ -431,6 +447,10 @@ def generate_compliance_report(
                 rule_num = int(rule_key.replace('origin_rule_', ''))
                 rule_name = origin_rule_names.get(rule_num, f"Origin Rule {rule_num}")
                 display = f"Origin Rule {rule_num}: {rule_name}"
+            elif rule_key.startswith('dealer_rule_'):
+                rule_num = int(rule_key.replace('dealer_rule_', ''))
+                rule_name = dealer_rule_names.get(rule_num, f"Dealer Rule {rule_num}")
+                display = f"Dealer Rule {rule_num}: {rule_name}"
             elif rule_key.startswith('bilingual_rule_'):
                 rule_num = int(rule_key.replace('bilingual_rule_', ''))
                 rule_name = bilingual_rule_names.get(rule_num, f"Bilingual Rule {rule_num}")
