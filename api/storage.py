@@ -338,15 +338,41 @@ class Storage:
                     15: "fop_location"
                 }
                 
+                # Date marking rules names
+                date_rule_names = {
+                    1: "best_before_present",
+                    2: "best_before_wording",
+                    3: "best_before_format",
+                    4: "best_before_location",
+                    5: "packaged_on_present",
+                    6: "packaged_on_wording",
+                    7: "expiration_date",
+                    8: "storage_instructions",
+                    9: "date_grouped",
+                    10: "date_legibility"
+                }
+                
                 for rule_key, evaluation in rule_evaluations.items():
+                    # Handle date marking rules (date_rule_1, etc.)
+                    if rule_key.startswith("date_rule_"):
+                        rule_num = int(rule_key.replace("date_rule_", ""))
+                        rule_name = date_rule_names.get(rule_num, rule_key)
                     # Handle nutrition rules (nutrition_rule_1, etc.)
-                    if rule_key.startswith("nutrition_rule_"):
+                    elif rule_key.startswith("nutrition_rule_"):
                         rule_num = int(rule_key.replace("nutrition_rule_", ""))
                         rule_name = nutrition_rule_names.get(rule_num, rule_key)
                     # Handle ingredients rules (ingredients_rule_1, etc.)
                     elif rule_key.startswith("ingredients_rule_"):
                         rule_num = int(rule_key.replace("ingredients_rule_", ""))
                         rule_name = ingredients_rule_names.get(rule_num, rule_key)
+                    # Handle origin rules (origin_rule_1, etc.)
+                    elif rule_key.startswith("origin_rule_"):
+                        origin_rule_names = {
+                            1: "origin_required", 2: "origin_present", 3: "origin_format",
+                            4: "origin_bilingual", 5: "origin_legibility"
+                        }
+                        rule_num = int(rule_key.replace("origin_rule_", ""))
+                        rule_name = origin_rule_names.get(rule_num, rule_key)
                     # Handle net quantity rules (net_qty_rule_1, etc.)
                     elif rule_key.startswith("net_qty_rule_"):
                         rule_num = int(rule_key.replace("net_qty_rule_", ""))

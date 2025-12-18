@@ -224,9 +224,13 @@ def generate_compliance_report(
     # Create table header
     table_data = [["Rule", "Status", "Confidence", "Finding"]]
     
-    # Sort keys: common name (0), bilingual (1), net qty (2), ingredients (3), nutrition (4)
+    # Sort keys: common name (0), bilingual (1), net qty (2), ingredients (3), nutrition (4), date (5), origin (6)
     def sort_key(x):
-        if x.startswith('nutrition_rule_'):
+        if x.startswith('origin_rule_'):
+            return (6, int(x.replace('origin_rule_', '')))
+        elif x.startswith('date_rule_'):
+            return (5, int(x.replace('date_rule_', '')))
+        elif x.startswith('nutrition_rule_'):
             return (4, int(x.replace('nutrition_rule_', '')))
         elif x.startswith('ingredients_rule_'):
             return (3, int(x.replace('ingredients_rule_', '')))
@@ -278,8 +282,39 @@ def generate_compliance_report(
     for rule_key in sorted(rule_evaluations.keys(), key=sort_key):
         eval_data = rule_evaluations[rule_key]
         
+        # Date marking rules mapping
+        date_rule_names = {
+            1: "Best Before Present",
+            2: "Best Before Wording",
+            3: "Date Format",
+            4: "Date Location",
+            5: "Packaged On Present",
+            6: "Packaged On Wording",
+            7: "Expiration Date",
+            8: "Storage Instructions",
+            9: "Date Grouped",
+            10: "Date Legibility"
+        }
+        
         # Determine rule name based on type
-        if rule_key.startswith('nutrition_rule_'):
+        # Origin rules mapping
+        origin_rule_names = {
+            1: "Origin Required",
+            2: "Origin Present",
+            3: "Origin Format",
+            4: "Origin Bilingual",
+            5: "Origin Legibility"
+        }
+        
+        if rule_key.startswith('origin_rule_'):
+            rule_num = int(rule_key.replace('origin_rule_', ''))
+            rule_name = origin_rule_names.get(rule_num, f"Origin Rule {rule_num}")
+            display_num = f"O{rule_num}"
+        elif rule_key.startswith('date_rule_'):
+            rule_num = int(rule_key.replace('date_rule_', ''))
+            rule_name = date_rule_names.get(rule_num, f"Date Rule {rule_num}")
+            display_num = f"D{rule_num}"
+        elif rule_key.startswith('nutrition_rule_'):
             rule_num = int(rule_key.replace('nutrition_rule_', ''))
             rule_name = nutrition_rule_names.get(rule_num, f"Nutrition Rule {rule_num}")
             display_num = f"NL{rule_num}"
@@ -376,7 +411,11 @@ def generate_compliance_report(
         
         for rule_key, eval_data in failed_rules:
             # Determine rule name based on type
-            if rule_key.startswith('nutrition_rule_'):
+            if rule_key.startswith('date_rule_'):
+                rule_num = int(rule_key.replace('date_rule_', ''))
+                rule_name = date_rule_names.get(rule_num, f"Date Rule {rule_num}")
+                display = f"Date Rule {rule_num}: {rule_name}"
+            elif rule_key.startswith('nutrition_rule_'):
                 rule_num = int(rule_key.replace('nutrition_rule_', ''))
                 rule_name = nutrition_rule_names.get(rule_num, f"Nutrition Rule {rule_num}")
                 display = f"Nutrition Rule {rule_num}: {rule_name}"
@@ -388,6 +427,10 @@ def generate_compliance_report(
                 rule_num = int(rule_key.replace('net_qty_rule_', ''))
                 rule_name = net_qty_rule_names.get(rule_num, f"Net Qty Rule {rule_num}")
                 display = f"Net Qty Rule {rule_num}: {rule_name}"
+            elif rule_key.startswith('origin_rule_'):
+                rule_num = int(rule_key.replace('origin_rule_', ''))
+                rule_name = origin_rule_names.get(rule_num, f"Origin Rule {rule_num}")
+                display = f"Origin Rule {rule_num}: {rule_name}"
             elif rule_key.startswith('bilingual_rule_'):
                 rule_num = int(rule_key.replace('bilingual_rule_', ''))
                 rule_name = bilingual_rule_names.get(rule_num, f"Bilingual Rule {rule_num}")
