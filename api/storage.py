@@ -390,6 +390,14 @@ class Storage:
                         }
                         rule_num = int(rule_key.replace("fop_rule_", ""))
                         rule_name = fop_rule_names.get(rule_num, rule_key)
+                    # Handle irradiation rules (irrad_rule_1, etc.)
+                    elif rule_key.startswith("irrad_rule_"):
+                        irrad_rule_names = {
+                            1: "irrad_permitted", 2: "irrad_statement", 3: "irrad_discernible",
+                            4: "irrad_symbol_pdp", 5: "irrad_symbol_size", 6: "irrad_ingredients"
+                        }
+                        rule_num = int(rule_key.replace("irrad_rule_", ""))
+                        rule_name = irrad_rule_names.get(rule_num, rule_key)
                     # Handle net quantity rules (net_qty_rule_1, etc.)
                     elif rule_key.startswith("net_qty_rule_"):
                         rule_num = int(rule_key.replace("net_qty_rule_", ""))
