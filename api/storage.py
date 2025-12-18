@@ -381,6 +381,15 @@ class Storage:
                         }
                         rule_num = int(rule_key.replace("dealer_rule_", ""))
                         rule_name = dealer_rule_names.get(rule_num, rule_key)
+                    # Handle FOP rules (fop_rule_1, etc.)
+                    elif rule_key.startswith("fop_rule_"):
+                        fop_rule_names = {
+                            1: "fop_present", 2: "fop_exempt", 3: "fop_thresholds",
+                            4: "fop_legibility", 5: "fop_specifications", 6: "fop_proportional",
+                            7: "fop_location", 8: "fop_multipack"
+                        }
+                        rule_num = int(rule_key.replace("fop_rule_", ""))
+                        rule_name = fop_rule_names.get(rule_num, rule_key)
                     # Handle net quantity rules (net_qty_rule_1, etc.)
                     elif rule_key.startswith("net_qty_rule_"):
                         rule_num = int(rule_key.replace("net_qty_rule_", ""))

@@ -224,9 +224,11 @@ def generate_compliance_report(
     # Create table header
     table_data = [["Rule", "Status", "Confidence", "Finding"]]
     
-    # Sort keys: common name (0), bilingual (1), net qty (2), ingredients (3), nutrition (4), date (5), origin (6), dealer (7)
+    # Sort keys: common name (0), bilingual (1), net qty (2), ingredients (3), nutrition (4), date (5), origin (6), dealer (7), fop (8)
     def sort_key(x):
-        if x.startswith('dealer_rule_'):
+        if x.startswith('fop_rule_'):
+            return (8, int(x.replace('fop_rule_', '')))
+        elif x.startswith('dealer_rule_'):
             return (7, int(x.replace('dealer_rule_', '')))
         elif x.startswith('origin_rule_'):
             return (6, int(x.replace('origin_rule_', '')))
@@ -338,6 +340,16 @@ def generate_compliance_report(
             rule_num = int(rule_key.replace('ingredients_rule_', ''))
             rule_name = ingredients_rule_names.get(rule_num, f"Ingredients Rule {rule_num}")
             display_num = f"I{rule_num}"
+        # FOP rules mapping
+        elif rule_key.startswith('fop_rule_'):
+            fop_rule_names = {
+                1: "FOP Present", 2: "FOP Exempt", 3: "FOP Thresholds",
+                4: "FOP Legibility", 5: "FOP Specifications", 6: "FOP Proportional",
+                7: "FOP Location", 8: "FOP Multi-pack"
+            }
+            rule_num = int(rule_key.replace('fop_rule_', ''))
+            rule_name = fop_rule_names.get(rule_num, f"FOP Rule {rule_num}")
+            display_num = f"F{rule_num}"
         elif rule_key.startswith('net_qty_rule_'):
             rule_num = int(rule_key.replace('net_qty_rule_', ''))
             rule_name = net_qty_rule_names.get(rule_num, f"Net Qty Rule {rule_num}")
@@ -451,6 +463,10 @@ def generate_compliance_report(
                 rule_num = int(rule_key.replace('dealer_rule_', ''))
                 rule_name = dealer_rule_names.get(rule_num, f"Dealer Rule {rule_num}")
                 display = f"Dealer Rule {rule_num}: {rule_name}"
+            elif rule_key.startswith('fop_rule_'):
+                rule_num = int(rule_key.replace('fop_rule_', ''))
+                rule_name = fop_rule_names.get(rule_num, f"FOP Rule {rule_num}")
+                display = f"FOP Rule {rule_num}: {rule_name}"
             elif rule_key.startswith('bilingual_rule_'):
                 rule_num = int(rule_key.replace('bilingual_rule_', ''))
                 rule_name = bilingual_rule_names.get(rule_num, f"Bilingual Rule {rule_num}")
