@@ -108,7 +108,43 @@ class MultiImageLabelEvaluator:
         bilingual_evaluations = self.evaluate_bilingual_requirements(label_data)
         rule_evaluations.update(bilingual_evaluations)
         
-        # Step 5: Create comprehensive report
+        # Step 5: Evaluate net quantity declaration
+        net_qty_evaluations = self.evaluate_net_quantity_requirements(label_data)
+        rule_evaluations.update(net_qty_evaluations)
+        
+        # Step 6: Evaluate ingredients and allergen labelling
+        ingredients_evaluations = self.evaluate_ingredients_allergen_requirements(label_data)
+        rule_evaluations.update(ingredients_evaluations)
+        
+        # Step 7: Evaluate nutrition labelling
+        nutrition_evaluations = self.evaluate_nutrition_labelling_requirements(label_data)
+        rule_evaluations.update(nutrition_evaluations)
+        
+        # Step 8: Evaluate date markings
+        date_evaluations = self.evaluate_date_marking_requirements(label_data)
+        rule_evaluations.update(date_evaluations)
+        
+        # Step 9: Evaluate country of origin
+        origin_evaluations = self.evaluate_country_origin_requirements(label_data)
+        rule_evaluations.update(origin_evaluations)
+        
+        # Step 10: Evaluate dealer name and business
+        dealer_evaluations = self.evaluate_dealer_business_requirements(label_data)
+        rule_evaluations.update(dealer_evaluations)
+        
+        # Step 11: Evaluate FOP nutrition symbol
+        fop_evaluations = self.evaluate_fop_symbol_requirements(label_data)
+        rule_evaluations.update(fop_evaluations)
+        
+        # Step 12: Evaluate irradiation
+        irrad_evaluations = self.evaluate_irradiation_requirements(label_data)
+        rule_evaluations.update(irrad_evaluations)
+        
+        # Step 13: Evaluate sweeteners
+        sweet_evaluations = self.evaluate_sweetener_requirements(label_data)
+        rule_evaluations.update(sweet_evaluations)
+        
+        # Step 14: Create comprehensive report
         evaluation_report = {
             'product_info': product_info or {},
             'images_processed': len(image_paths),
@@ -952,6 +988,375 @@ Return only the JSON evaluation object with no additional text."""
                     "compliant": None,
                     "confidence": 0.0,
                     "finding": f"Bilingual evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_net_quantity_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate net quantity declaration requirements"""
+        
+        print(f"\nEvaluating net quantity declaration requirements...")
+        
+        try:
+            from net_quantity_rules import evaluate_all_net_quantity_rules
+            
+            net_qty_results = evaluate_all_net_quantity_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in net_qty_results.items():
+                if key == 'net_qty_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:60]
+                print(f"  {status} Net Qty Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"net_qty_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Net quantity rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Net quantity evaluation error: {e}")
+            return {
+                "net_qty_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Net quantity evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_ingredients_allergen_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate ingredients and allergen labelling requirements"""
+        
+        print(f"\nEvaluating ingredients and allergen labelling requirements...")
+        
+        try:
+            from ingredients_allergen_rules import evaluate_all_ingredients_allergen_rules
+            
+            results = evaluate_all_ingredients_allergen_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in results.items():
+                if key == 'ingredients_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:55]
+                print(f"  {status} Ingredients Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"ingredients_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Ingredients rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Ingredients evaluation error: {e}")
+            return {
+                "ingredients_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Ingredients evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_nutrition_labelling_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate nutrition labelling requirements"""
+        
+        print(f"\nEvaluating nutrition labelling requirements...")
+        
+        try:
+            from nutrition_labelling_rules import evaluate_all_nutrition_rules
+            
+            results = evaluate_all_nutrition_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in results.items():
+                if key == 'nutrition_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:55]
+                print(f"  {status} Nutrition Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"nutrition_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Nutrition rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Nutrition evaluation error: {e}")
+            return {
+                "nutrition_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Nutrition evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_date_marking_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate date marking requirements"""
+        
+        print(f"\nEvaluating date marking requirements...")
+        
+        try:
+            from date_marking_rules import evaluate_all_date_marking_rules
+            
+            results = evaluate_all_date_marking_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in results.items():
+                if key == 'date_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:55]
+                print(f"  {status} Date Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"date_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Date marking rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Date marking evaluation error: {e}")
+            return {
+                "date_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Date marking evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_country_origin_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate country of origin requirements"""
+        
+        print(f"\nEvaluating country of origin requirements...")
+        
+        try:
+            from country_origin_rules import evaluate_all_origin_rules
+            
+            results = evaluate_all_origin_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in results.items():
+                if key == 'origin_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:55]
+                print(f"  {status} Origin Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"origin_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Country origin rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Country origin evaluation error: {e}")
+            return {
+                "origin_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Origin evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_dealer_business_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate dealer name and principal place of business requirements"""
+        
+        print(f"\nEvaluating dealer name and business requirements...")
+        
+        try:
+            from dealer_business_rules import evaluate_all_dealer_rules
+            
+            results = evaluate_all_dealer_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in results.items():
+                if key == 'dealer_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:55]
+                print(f"  {status} Dealer Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"dealer_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Dealer rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Dealer evaluation error: {e}")
+            return {
+                "dealer_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Dealer evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_fop_symbol_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate front-of-package nutrition symbol requirements"""
+        
+        print(f"\nEvaluating FOP nutrition symbol requirements...")
+        
+        try:
+            from fop_symbol_rules import evaluate_all_fop_rules
+            
+            results = evaluate_all_fop_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in results.items():
+                if key == 'fop_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:55]
+                print(f"  {status} FOP Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"fop_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ FOP rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ FOP evaluation error: {e}")
+            return {
+                "fop_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"FOP evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_irradiation_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate irradiation labeling requirements"""
+        
+        print(f"\nEvaluating irradiation requirements...")
+        
+        try:
+            from irradiation_rules import evaluate_all_irradiation_rules
+            
+            results = evaluate_all_irradiation_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in results.items():
+                if key == 'irrad_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:55]
+                print(f"  {status} Irrad Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"irrad_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Irradiation rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Irradiation evaluation error: {e}")
+            return {
+                "irrad_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Irradiation evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
+    
+    def evaluate_sweetener_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate sweetener labeling requirements"""
+        
+        print(f"\nEvaluating sweetener requirements...")
+        
+        try:
+            from sweeteners_rules import evaluate_all_sweetener_rules
+            
+            results = evaluate_all_sweetener_rules(label_data, self.client)
+            
+            rule_evaluations = {}
+            
+            for key, result in results.items():
+                if key == 'sweet_overall':
+                    continue
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗" if result.get('compliant') is False else "?"
+                confidence = result.get('confidence', 0.0)
+                finding = result.get('finding', 'No finding')[:55]
+                print(f"  {status} Sweet Rule {rule_num}: {finding}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"sweet_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Sweeteners rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Sweetener evaluation error: {e}")
+            return {
+                "sweet_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Sweetener evaluation failed: {str(e)}",
                     "error": str(e)
                 }
             }
