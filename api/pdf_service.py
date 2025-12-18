@@ -226,7 +226,9 @@ def generate_compliance_report(
     
     # Sort keys: common name (0), bilingual (1), net qty (2), ingredients (3), nutrition (4), date (5), origin (6), dealer (7), fop (8)
     def sort_key(x):
-        if x.startswith('irrad_rule_'):
+        if x.startswith('sweet_rule_'):
+            return (10, int(x.replace('sweet_rule_', '')))
+        elif x.startswith('irrad_rule_'):
             return (9, int(x.replace('irrad_rule_', '')))
         elif x.startswith('fop_rule_'):
             return (8, int(x.replace('fop_rule_', '')))
@@ -361,6 +363,15 @@ def generate_compliance_report(
             rule_num = int(rule_key.replace('irrad_rule_', ''))
             rule_name = irrad_rule_names.get(rule_num, f"Irrad Rule {rule_num}")
             display_num = f"IR{rule_num}"
+        # Sweeteners rules mapping
+        elif rule_key.startswith('sweet_rule_'):
+            sweet_rule_names = {
+                1: "Aspartame Present", 2: "Phenylalanine Statement", 3: "Statement Location",
+                4: "Statement Bold", 5: "Table-top Sweetener", 6: "Sweetness Equivalence"
+            }
+            rule_num = int(rule_key.replace('sweet_rule_', ''))
+            rule_name = sweet_rule_names.get(rule_num, f"Sweet Rule {rule_num}")
+            display_num = f"SW{rule_num}"
         elif rule_key.startswith('net_qty_rule_'):
             rule_num = int(rule_key.replace('net_qty_rule_', ''))
             rule_name = net_qty_rule_names.get(rule_num, f"Net Qty Rule {rule_num}")
@@ -482,6 +493,10 @@ def generate_compliance_report(
                 rule_num = int(rule_key.replace('irrad_rule_', ''))
                 rule_name = irrad_rule_names.get(rule_num, f"Irrad Rule {rule_num}")
                 display = f"Irrad Rule {rule_num}: {rule_name}"
+            elif rule_key.startswith('sweet_rule_'):
+                rule_num = int(rule_key.replace('sweet_rule_', ''))
+                rule_name = sweet_rule_names.get(rule_num, f"Sweet Rule {rule_num}")
+                display = f"Sweet Rule {rule_num}: {rule_name}"
             elif rule_key.startswith('bilingual_rule_'):
                 rule_num = int(rule_key.replace('bilingual_rule_', ''))
                 rule_name = bilingual_rule_names.get(rule_num, f"Bilingual Rule {rule_num}")

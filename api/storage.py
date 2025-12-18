@@ -398,6 +398,14 @@ class Storage:
                         }
                         rule_num = int(rule_key.replace("irrad_rule_", ""))
                         rule_name = irrad_rule_names.get(rule_num, rule_key)
+                    # Handle sweeteners rules (sweet_rule_1, etc.)
+                    elif rule_key.startswith("sweet_rule_"):
+                        sweet_rule_names = {
+                            1: "sweet_aspartame", 2: "sweet_phenylalanine", 3: "sweet_statement_location",
+                            4: "sweet_statement_bold", 5: "sweet_tabletop", 6: "sweet_equivalence"
+                        }
+                        rule_num = int(rule_key.replace("sweet_rule_", ""))
+                        rule_name = sweet_rule_names.get(rule_num, rule_key)
                     # Handle net quantity rules (net_qty_rule_1, etc.)
                     elif rule_key.startswith("net_qty_rule_"):
                         rule_num = int(rule_key.replace("net_qty_rule_", ""))
