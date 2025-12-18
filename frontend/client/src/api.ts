@@ -1,6 +1,6 @@
 // API client that connects to the FastAPI backend
 // API base URL - FastAPI runs on port 8000
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = "http://127.0.0.1:8000/api";
 
 // Types matching the backend models
 export interface User {
@@ -131,6 +131,12 @@ export const api = {
             });
             if (!res.ok) throw new Error("Failed to start analysis");
             return res.json();
+        },
+
+        downloadReport: async (analysisId: string): Promise<Blob> => {
+            const res = await fetch(`${API_BASE}/analyses/${analysisId}/report`);
+            if (!res.ok) throw new Error("Failed to download report");
+            return res.blob();
         },
     },
 };

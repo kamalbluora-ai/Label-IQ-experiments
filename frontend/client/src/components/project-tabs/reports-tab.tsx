@@ -84,9 +84,20 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                   <Printer className="w-4 h-4 mr-2" />
                   Print
                 </Button>
-                <Button variant="outline" size="sm" onClick={() => {
-                  // Trigger print dialog - user can select "Save as PDF" option
-                  window.print();
+                <Button variant="outline" size="sm" onClick={async () => {
+                  try {
+                    const blob = await api.analysis.downloadReport(selectedAnalysisId!);
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `CFIA_Report_${project.name.replace(/\s+/g, '_')}.pdf`;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                  } catch (error) {
+                    console.error('Failed to download PDF:', error);
+                  }
                 }}>
                   <Download className="w-4 h-4 mr-2" />
                   PDF
@@ -131,11 +142,13 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                         </p>
                         {analysis.details && (
                           <div className="mt-3 text-xs font-mono text-slate-500 grid grid-cols-2 gap-2">
-                            {Object.entries(analysis.details).map(([k, v]) => (
-                              <div key={k}>
-                                <span className="uppercase">{k.replace('_', ' ')}:</span> {v}
-                              </div>
-                            ))}
+                            {Object.entries(analysis.details)
+                              .filter(([k, v]) => !k.startsWith('_') && typeof v === 'string')
+                              .map(([k, v]) => (
+                                <div key={k}>
+                                  <span className="uppercase">{k.replace('_', ' ')}:</span> {v}
+                                </div>
+                              ))}
                           </div>
                         )}
                       </div>
