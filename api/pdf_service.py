@@ -1,0 +1,319 @@
+"""
+PDF Report Generation Service for Label-IQ
+Generates professional CFIA compliance reports with rule evaluations
+"""
+
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import letter
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import inch
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image
+from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_RIGHT
+from io import BytesIO
+from datetime import datetime
+from typing import Dict, Any, Optional
+
+
+def generate_compliance_report(
+    project_name: str,
+    analysis_name: str,
+    analysis_date: str,
+    overall_compliance: Dict[str, Any],
+    rule_evaluations: Dict[str, Any],
+    critical_issues: list,
+    extracted_label_data: Optional[Dict[str, Any]] = None
+) -> BytesIO:
+    """
+    Generate a PDF compliance report.
+    
+    Returns a BytesIO buffer containing the PDF.
+    """
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(
+        buffer,
+        pagesize=letter,
+        rightMargin=0.75*inch,
+        leftMargin=0.75*inch,
+        topMargin=0.75*inch,
+        bottomMargin=0.75*inch
+    )
+    
+    # Styles
+    styles = getSampleStyleSheet()
+    
+    # Custom styles
+    title_style = ParagraphStyle(
+        'CustomTitle',
+        parent=styles['Heading1'],
+        fontSize=24,
+        spaceAfter=20,
+        textColor=colors.HexColor('#1a1a2e'),
+        alignment=TA_CENTER
+    )
+    
+    heading_style = ParagraphStyle(
+        'CustomHeading',
+        parent=styles['Heading2'],
+        fontSize=14,
+        spaceBefore=20,
+        spaceAfter=10,
+        textColor=colors.HexColor('#16213e')
+    )
+    
+    subheading_style = ParagraphStyle(
+        'CustomSubheading',
+        parent=styles['Heading3'],
+        fontSize=12,
+        spaceBefore=15,
+        spaceAfter=8,
+        textColor=colors.HexColor('#0f3460')
+    )
+    
+    body_style = ParagraphStyle(
+        'CustomBody',
+        parent=styles['Normal'],
+        fontSize=10,
+        spaceAfter=6,
+        leading=14
+    )
+    
+    small_style = ParagraphStyle(
+        'CustomSmall',
+        parent=styles['Normal'],
+        fontSize=8,
+        textColor=colors.gray,
+        alignment=TA_CENTER
+    )
+    
+    # Build document content
+    story = []
+    
+    # Title
+    story.append(Paragraph("CFIA Food Labelling Compliance Report", title_style))
+    story.append(Spacer(1, 10))
+    
+    # Header info table
+    header_data = [
+        ["Project:", project_name, "Analysis:", analysis_name],
+        ["Generated:", datetime.now().strftime("%Y-%m-%d %H:%M"), "Analysis Date:", analysis_date[:10] if analysis_date else "N/A"]
+    ]
+    header_table = Table(header_data, colWidths=[1*inch, 2.5*inch, 1*inch, 2.5*inch])
+    header_table.setStyle(TableStyle([
+        ('FONTNAME', (0, 0), (-1, -1), 'Helvetica'),
+        ('FONTSIZE', (0, 0), (-1, -1), 9),
+        ('FONTNAME', (0, 0), (0, -1), 'Helvetica-Bold'),
+        ('FONTNAME', (2, 0), (2, -1), 'Helvetica-Bold'),
+        ('TEXTCOLOR', (0, 0), (0, -1), colors.gray),
+        ('TEXTCOLOR', (2, 0), (2, -1), colors.gray),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+    ]))
+    story.append(header_table)
+    story.append(Spacer(1, 20))
+    
+    # Overall Compliance Status
+    story.append(Paragraph("Executive Summary", heading_style))
+    
+    status = overall_compliance.get('status', 'Unknown')
+    compliance_rate = overall_compliance.get('compliance_rate', 0)
+    compliant_rules = overall_compliance.get('compliant_rules', 0)
+    total_rules = overall_compliance.get('total_rules', 11)
+    
+    # Status color
+    if compliance_rate >= 0.9:
+        status_color = colors.HexColor('#10b981')  # Green
+        status_text = "COMPLIANT"
+    elif compliance_rate >= 0.7:
+        status_color = colors.HexColor('#f59e0b')  # Amber
+        status_text = "MOSTLY COMPLIANT"
+    else:
+        status_color = colors.HexColor('#ef4444')  # Red
+        status_text = "NON-COMPLIANT"
+    
+    summary_data = [
+        ["Overall Status", status_text],
+        ["Compliance Rate", f"{compliance_rate*100:.1f}%"],
+        ["Rules Passed", f"{compliant_rules} / {total_rules}"]
+    ]
+    summary_table = Table(summary_data, colWidths=[2*inch, 2*inch])
+    summary_table.setStyle(TableStyle([
+        ('FONTNAME', (0, 0), (-1, -1), 'Helvetica'),
+        ('FONTSIZE', (0, 0), (-1, -1), 11),
+        ('FONTNAME', (0, 0), (0, -1), 'Helvetica-Bold'),
+        ('BACKGROUND', (1, 0), (1, 0), status_color),
+        ('TEXTCOLOR', (1, 0), (1, 0), colors.white),
+        ('ALIGN', (1, 0), (1, -1), 'CENTER'),
+        ('BOX', (0, 0), (-1, -1), 1, colors.HexColor('#e5e7eb')),
+        ('INNERGRID', (0, 0), (-1, -1), 0.5, colors.HexColor('#e5e7eb')),
+        ('TOPPADDING', (0, 0), (-1, -1), 8),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
+        ('LEFTPADDING', (0, 0), (-1, -1), 10),
+    ]))
+    story.append(summary_table)
+    story.append(Spacer(1, 5))
+    
+    # Summary text
+    summary_text = overall_compliance.get('summary', 'Analysis completed.')
+    story.append(Paragraph(summary_text, body_style))
+    
+    # Critical Issues
+    if critical_issues:
+        story.append(Spacer(1, 10))
+        story.append(Paragraph("⚠️ Critical Issues", subheading_style))
+        for issue in critical_issues[:5]:
+            # Clean up the issue text
+            issue_text = str(issue).replace("CRITICAL: ", "• ")
+            story.append(Paragraph(issue_text, body_style))
+    
+    # Extracted Label Data (if available)
+    if extracted_label_data:
+        story.append(Spacer(1, 10))
+        story.append(Paragraph("Extracted Label Information", heading_style))
+        
+        label_items = [
+            ("Common Name", extracted_label_data.get('common_name', 'N/A')),
+            ("Product Type", extracted_label_data.get('product_type', 'N/A')),
+            ("Brand", extracted_label_data.get('brand_name', 'N/A')),
+            ("Net Quantity", extracted_label_data.get('net_quantity', 'N/A')),
+            ("Bilingual", "Yes" if extracted_label_data.get('bilingual_compliance') else "No"),
+        ]
+        
+        for label, value in label_items:
+            story.append(Paragraph(f"<b>{label}:</b> {value}", body_style))
+    
+    # Rule Evaluations
+    story.append(Spacer(1, 15))
+    story.append(Paragraph("Detailed Rule Evaluations", heading_style))
+    
+    # Rule names mapping
+    rule_names = {
+        1: "Common Name Present",
+        2: "Common Name Exemption",
+        3: "Common Name on PDP",
+        4: "Common Name Text Size",
+        5: "Small Package Text Size",
+        6: "Appropriate Common Name",
+        7: "Standards Compliance",
+        8: "Regulation Compliance",
+        9: "Descriptive Name",
+        10: "True Nature Description",
+        11: "Bilingual Requirements"
+    }
+    
+    # Create table header
+    table_data = [["Rule", "Status", "Confidence", "Finding"]]
+    
+    for rule_key in sorted(rule_evaluations.keys(), key=lambda x: int(x.replace('rule_', ''))):
+        eval_data = rule_evaluations[rule_key]
+        rule_num = int(rule_key.replace('rule_', ''))
+        rule_name = rule_names.get(rule_num, f"Rule {rule_num}")
+        
+        compliant = eval_data.get('compliant')
+        if compliant is True:
+            status = "✓ Pass"
+        elif compliant is False:
+            status = "✗ Fail"
+        else:
+            status = "? Unknown"
+        
+        confidence = eval_data.get('confidence', 0)
+        confidence_str = f"{confidence*100:.0f}%"
+        
+        finding = eval_data.get('finding', 'No finding available')
+        # Truncate long findings for table
+        if len(finding) > 80:
+            finding = finding[:77] + "..."
+        
+        table_data.append([
+            f"{rule_num}. {rule_name}",
+            status,
+            confidence_str,
+            finding
+        ])
+    
+    # Create table
+    rule_table = Table(table_data, colWidths=[1.8*inch, 0.7*inch, 0.8*inch, 3.7*inch])
+    
+    # Table styling
+    table_style = [
+        # Header
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#1a1a2e')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 9),
+        ('ALIGN', (0, 0), (-1, 0), 'CENTER'),
+        
+        # Body
+        ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
+        ('FONTSIZE', (0, 1), (-1, -1), 8),
+        ('ALIGN', (1, 1), (2, -1), 'CENTER'),
+        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+        
+        # Borders
+        ('BOX', (0, 0), (-1, -1), 1, colors.HexColor('#e5e7eb')),
+        ('INNERGRID', (0, 0), (-1, -1), 0.5, colors.HexColor('#e5e7eb')),
+        
+        # Padding
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('LEFTPADDING', (0, 0), (-1, -1), 6),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 6),
+    ]
+    
+    # Color code rows based on status
+    for i, row in enumerate(table_data[1:], start=1):
+        if "✓" in row[1]:
+            table_style.append(('BACKGROUND', (1, i), (1, i), colors.HexColor('#d1fae5')))
+            table_style.append(('TEXTCOLOR', (1, i), (1, i), colors.HexColor('#065f46')))
+        elif "✗" in row[1]:
+            table_style.append(('BACKGROUND', (1, i), (1, i), colors.HexColor('#fee2e2')))
+            table_style.append(('TEXTCOLOR', (1, i), (1, i), colors.HexColor('#991b1b')))
+        # Alternate row colors
+        if i % 2 == 0:
+            table_style.append(('BACKGROUND', (0, i), (0, i), colors.HexColor('#f9fafb')))
+            table_style.append(('BACKGROUND', (2, i), (-1, i), colors.HexColor('#f9fafb')))
+    
+    rule_table.setStyle(TableStyle(table_style))
+    story.append(rule_table)
+    
+    # Detailed findings for failed rules
+    failed_rules = [(k, v) for k, v in rule_evaluations.items() if v.get('compliant') is False]
+    if failed_rules:
+        story.append(Spacer(1, 20))
+        story.append(Paragraph("Recommendations for Non-Compliant Rules", heading_style))
+        
+        for rule_key, eval_data in failed_rules:
+            rule_num = int(rule_key.replace('rule_', ''))
+            rule_name = rule_names.get(rule_num, f"Rule {rule_num}")
+            
+            story.append(Paragraph(f"<b>Rule {rule_num}: {rule_name}</b>", subheading_style))
+            
+            # Full finding
+            finding = eval_data.get('finding', 'No finding available')
+            story.append(Paragraph(f"<b>Finding:</b> {finding}", body_style))
+            
+            # Reasoning
+            reasoning = eval_data.get('reasoning', '')
+            if reasoning:
+                story.append(Paragraph(f"<b>Reasoning:</b> {reasoning}", body_style))
+            
+            # Recommendations
+            recommendations = eval_data.get('recommendations', [])
+            if recommendations:
+                story.append(Paragraph("<b>Recommendations:</b>", body_style))
+                for rec in recommendations:
+                    story.append(Paragraph(f"  • {rec}", body_style))
+            
+            story.append(Spacer(1, 10))
+    
+    # Footer
+    story.append(Spacer(1, 30))
+    story.append(Paragraph("─" * 80, small_style))
+    story.append(Paragraph(
+        f"Generated by Bluora CFIA.AI Platform • {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} • Confidential",
+        small_style
+    ))
+    
+    # Build PDF
+    doc.build(story)
+    buffer.seek(0)
+    return buffer

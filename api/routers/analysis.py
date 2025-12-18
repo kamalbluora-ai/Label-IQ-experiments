@@ -23,7 +23,8 @@ async def run_analysis(project_id: str, data: AnalysisCreate, background_tasks: 
         name=data.name
     )
     
-    # Start background task to simulate progress
-    background_tasks.add_task(storage.simulate_analysis_progress, analysis.id)
+    # Start background task to run real AI-powered analysis
+    background_tasks.add_task(storage.run_real_analysis, analysis.id)
     
     return analysis
+

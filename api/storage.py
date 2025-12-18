@@ -5,7 +5,17 @@ from typing import Dict, List, Optional
 from datetime import datetime, timedelta
 import asyncio
 import random
+import base64
+import tempfile
+import os
+import sys
+from pathlib import Path
 from models import Project, ProjectFile, Analysis, User
+
+# Add core module to path for evaluator import
+sys.path.insert(0, str(Path(__file__).parent.parent / 'core' / 'evaluator'))
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 
 
 class Storage:
@@ -152,29 +162,191 @@ class Storage:
         self.analyses[analysis.id] = analysis
         return analysis
 
-    async def simulate_analysis_progress(self, analysis_id: str):
-        """Simulate analysis progress in the background."""
+    async def run_real_analysis(self, analysis_id: str):
+        """Run actual AI-powered label analysis using MultiImageLabelEvaluator."""
+        print(f"[DEBUG] Starting analysis for ID: {analysis_id}")
         analysis = self.analyses.get(analysis_id)
         if not analysis:
+            print(f"[DEBUG] Analysis not found: {analysis_id}")
             return
         
-        # Simulate progress over ~10 seconds
-        for i in range(10):
-            await asyncio.sleep(1)
-            if analysis_id not in self.analyses:
-                return  # Analysis was deleted
-            analysis.progress = min(100, (i + 1) * 10)
-            if analysis.progress >= 100:
-                analysis.status = "completed"
-                analysis.resultSummary = "Analysis completed successfully. All labelling requirements verified."
-                analysis.details = {
-                    "bilingual_compliance": "Pass",
-                    "net_quantity": "Pass",
-                    "ingredients_list": "Pass",
-                    "nutrition_facts": "Pass",
-                    "country_of_origin": "Pass"
+        try:
+            # Update progress: starting
+            analysis.progress = 10
+            analysis.status = "running"
+            print(f"[DEBUG] Analysis running for project: {analysis.projectId}")
+            
+            # Get project files
+            project_files = self.list_files(analysis.projectId)
+            image_files = [f for f in project_files if f.type == "image"]
+            print(f"[DEBUG] Found {len(image_files)} image files")
+            
+            if not image_files:
+                analysis.status = "failed"
+                analysis.resultSummary = "No images found in project. Please upload label images first."
+                analysis.progress = 100
+                return
+            
+            analysis.progress = 20
+            
+            # Save images to temp files for evaluator (it needs file paths)
+            temp_dir = tempfile.mkdtemp(prefix="labeliq_")
+            temp_image_paths = []
+            
+            for i, pf in enumerate(image_files):
+                try:
+                    print(f"[DEBUG] Processing image {i}: {pf.name}, URL starts with: {pf.url[:50]}...")
+                    # Handle data URLs (base64 encoded images)
+                    if pf.url.startswith("data:"):
+                        # Extract base64 data
+                        header, b64_data = pf.url.split(",", 1)
+                        image_data = base64.b64decode(b64_data)
+                        
+                        # Determine extension from content type
+                        ext = ".jpg"
+                        if "png" in header:
+                            ext = ".png"
+                        elif "gif" in header:
+                            ext = ".gif"
+                        elif "webp" in header:
+                            ext = ".webp"
+                        
+                        temp_path = os.path.join(temp_dir, f"image_{i}{ext}")
+                        with open(temp_path, "wb") as f:
+                            f.write(image_data)
+                        temp_image_paths.append(temp_path)
+                        print(f"[DEBUG] Saved data URL image to {temp_path}")
+                    else:
+                        print(f"[DEBUG] Skipping non-data URL: {pf.url[:50]}...")
+                except Exception as e:
+                    print(f"Error saving temp image {pf.name}: {e}")
+                    continue
+            
+            if not temp_image_paths:
+                analysis.status = "failed"
+                analysis.resultSummary = "Could not process uploaded images."
+                analysis.progress = 100
+                return
+            
+            analysis.progress = 30
+            print(f"[DEBUG] Saved {len(temp_image_paths)} temp images to {temp_dir}")
+            
+            # Import and run the evaluator
+            try:
+                print("[DEBUG] Importing MultiImageLabelEvaluator...")
+                from multi_image_evaluator import MultiImageLabelEvaluator
+                print("[DEBUG] Import successful, creating evaluator...")
+                
+                analysis.progress = 40
+                
+                # Run evaluation in a thread to not block async
+                import concurrent.futures
+                
+                def run_evaluation():
+                    print("[DEBUG] Creating evaluator instance...")
+                    evaluator = MultiImageLabelEvaluator()
+                    print("[DEBUG] Starting image processing...")
+                    return evaluator.process_product_images(temp_image_paths)
+                
+                # Run in executor
+                print("[DEBUG] Running evaluation in executor...")
+                loop = asyncio.get_event_loop()
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    evaluation_result = await loop.run_in_executor(executor, run_evaluation)
+                
+                print("[DEBUG] Evaluation completed successfully")
+                analysis.progress = 90
+                
+                # Map evaluator results to frontend format
+                rule_evaluations = evaluation_result.get("rule_evaluations", {})
+                overall = evaluation_result.get("overall_compliance", {})
+                critical_issues = evaluation_result.get("critical_issues", [])
+                
+                # Build details dict for frontend
+                details = {}
+                rule_names = {
+                    1: "common_name_present",
+                    2: "common_name_exempt",
+                    3: "common_name_on_pdp",
+                    4: "common_name_text_size",
+                    5: "small_package_text_size",
+                    6: "appropriate_common_name",
+                    7: "standards_compliance",
+                    8: "regulation_compliance",
+                    9: "descriptive_name",
+                    10: "true_nature_description",
+                    11: "bilingual_requirements"
                 }
+                
+                for rule_key, evaluation in rule_evaluations.items():
+                    rule_num = int(rule_key.replace("rule_", ""))
+                    rule_name = rule_names.get(rule_num, f"rule_{rule_num}")
+                    
+                    if evaluation.get("compliant") is True:
+                        details[rule_name] = "Pass"
+                    elif evaluation.get("compliant") is False:
+                        details[rule_name] = "Fail"
+                    else:
+                        details[rule_name] = "Unknown"
+                
+                # Build summary
+                status = overall.get("status", "Unknown")
+                summary_text = overall.get("summary", "Analysis completed.")
+                
+                if critical_issues:
+                    summary_text += f" Critical issues: {'; '.join(critical_issues[:3])}"
+                
+                analysis.resultSummary = summary_text
+                analysis.details = details
+                
+                # Store full evaluation data for PDF report generation
+                analysis.details['_fullEvaluationData'] = {
+                    'rule_evaluations': rule_evaluations,
+                    'overall_compliance': overall,
+                    'critical_issues': critical_issues,
+                    'extracted_label_data': evaluation_result.get('extracted_label_data', {})
+                }
+                
+                analysis.status = "completed"
+                analysis.progress = 100
+                
+            except ImportError as e:
+                print(f"Evaluator import error: {e}")
+                # Fallback to basic analysis if evaluator not available
+                analysis.status = "completed"
+                analysis.resultSummary = f"Basic analysis completed. Full AI evaluation unavailable: {str(e)}"
+                analysis.details = {"status": "Evaluator unavailable"}
+                analysis.progress = 100
+                
+            except Exception as e:
+                print(f"Evaluation error: {e}")
+                import traceback
+                traceback.print_exc()
+                analysis.status = "failed"
+                analysis.resultSummary = f"Analysis failed: {str(e)}"
+                analysis.progress = 100
+            
+            finally:
+                # Cleanup temp files
+                for temp_path in temp_image_paths:
+                    try:
+                        os.remove(temp_path)
+                    except:
+                        pass
+                try:
+                    os.rmdir(temp_dir)
+                except:
+                    pass
+                    
+        except Exception as e:
+            print(f"Analysis error: {e}")
+            import traceback
+            traceback.print_exc()
+            analysis.status = "failed"
+            analysis.resultSummary = f"Analysis error: {str(e)}"
+            analysis.progress = 100
 
 
 # Global storage instance
 storage = Storage()
+
