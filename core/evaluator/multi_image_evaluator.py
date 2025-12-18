@@ -25,11 +25,13 @@ class MultiImageLabelEvaluator:
     """Comprehensive system for OCR multiple product images and evaluating common name rules"""
     
     def __init__(self, db_path=str(Path(__file__).parent.parent.parent / 'data' / 'ilt_requirements.db'), api_key=config.OPENAI_API_KEY, 
-                 google_credentials_path='google-credentials.json'):
+                 google_credentials_path=None):
         self.db_path = Path(db_path)
         self.client = OpenAI(api_key=api_key)
         
-        # Initialize Google Vision
+        # Initialize Google Vision - use config, then fallback to default path
+        if google_credentials_path is None:
+            google_credentials_path = config.GOOGLE_CREDENTIALS or str(Path(__file__).parent.parent.parent / 'google-credentials.json')
         if google_credentials_path:
             os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = google_credentials_path
         self.vision_client = vision.ImageAnnotatorClient()
@@ -89,7 +91,7 @@ class MultiImageLabelEvaluator:
     
     def process_product_images(self, image_paths: List[str], 
                               product_info: Dict = None) -> Dict[str, Any]:
-        """Process multiple product images and evaluate common name compliance"""
+        """Process multiple product images and evaluate common name and bilingual compliance"""
         
         print(f"Processing {len(image_paths)} product images...")
         
@@ -99,10 +101,14 @@ class MultiImageLabelEvaluator:
         # Step 2: Extract label data from OCR results
         label_data = self.extract_label_data(ocr_results, product_info)
         
-        # Step 3: Evaluate against common name rules
+        # Step 3: Evaluate against common name rules (1-11)
         rule_evaluations = self.evaluate_common_name_rules(label_data)
         
-        # Step 4: Create comprehensive report
+        # Step 4: Evaluate bilingual requirements
+        bilingual_evaluations = self.evaluate_bilingual_requirements(label_data)
+        rule_evaluations.update(bilingual_evaluations)
+        
+        # Step 5: Create comprehensive report
         evaluation_report = {
             'product_info': product_info or {},
             'images_processed': len(image_paths),
@@ -906,6 +912,49 @@ Return only the JSON evaluation object with no additional text."""
                 "exemption_applicable": "unknown"
             }
         }
+    
+    def evaluate_bilingual_requirements(self, label_data: Dict) -> Dict[str, Any]:
+        """Evaluate bilingual requirements using dedicated bilingual rules module"""
+        
+        print(f"\nEvaluating bilingual requirements...")
+        
+        try:
+            # Import bilingual rules module
+            from bilingual_rules import evaluate_all_bilingual_rules
+            
+            # Run bilingual evaluation
+            bilingual_results = evaluate_all_bilingual_rules(label_data, self.client)
+            
+            # Convert to standard rule format
+            rule_evaluations = {}
+            
+            for key, result in bilingual_results.items():
+                if key == 'bilingual_overall':
+                    continue  # Skip summary
+                
+                rule_num = result.get('rule_number', 0)
+                status = "✓" if result.get('compliant') else "✗"
+                confidence = result.get('confidence', 0.0)
+                print(f"  {status} Bilingual Rule {rule_num}: {result.get('finding', 'No finding')[:60]}... (confidence: {confidence:.2f})")
+                
+                rule_evaluations[f"bilingual_rule_{rule_num}"] = result
+            
+            return rule_evaluations
+            
+        except ImportError as e:
+            print(f"  ✗ Bilingual rules module not available: {e}")
+            return {}
+            
+        except Exception as e:
+            print(f"  ✗ Bilingual evaluation error: {e}")
+            return {
+                "bilingual_rule_1": {
+                    "compliant": None,
+                    "confidence": 0.0,
+                    "finding": f"Bilingual evaluation failed: {str(e)}",
+                    "error": str(e)
+                }
+            }
     
     def create_fallback_rule_evaluation(self, rule_number: int, error_msg: str) -> Dict[str, Any]:
         """Create fallback evaluation when AI fails"""

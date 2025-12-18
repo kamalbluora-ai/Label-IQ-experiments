@@ -275,12 +275,24 @@ class Storage:
                     8: "regulation_compliance",
                     9: "descriptive_name",
                     10: "true_nature_description",
-                    11: "bilingual_requirements"
+                    11: "bilingual_common_name"
+                }
+                
+                # Bilingual rules names
+                bilingual_rule_names = {
+                    1: "bilingual_all_mandatory",
+                    2: "bilingual_exemption"
                 }
                 
                 for rule_key, evaluation in rule_evaluations.items():
-                    rule_num = int(rule_key.replace("rule_", ""))
-                    rule_name = rule_names.get(rule_num, f"rule_{rule_num}")
+                    # Handle bilingual rules (bilingual_rule_1, bilingual_rule_2)
+                    if rule_key.startswith("bilingual_rule_"):
+                        rule_num = int(rule_key.replace("bilingual_rule_", ""))
+                        rule_name = bilingual_rule_names.get(rule_num, rule_key)
+                    else:
+                        # Handle common name rules (rule_1, rule_2, etc.)
+                        rule_num = int(rule_key.replace("rule_", ""))
+                        rule_name = rule_names.get(rule_num, f"rule_{rule_num}")
                     
                     if evaluation.get("compliant") is True:
                         details[rule_name] = "Pass"

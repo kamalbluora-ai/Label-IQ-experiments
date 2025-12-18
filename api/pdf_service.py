@@ -184,7 +184,7 @@ def generate_compliance_report(
     story.append(Spacer(1, 15))
     story.append(Paragraph("Detailed Rule Evaluations", heading_style))
     
-    # Rule names mapping
+    # Rule names mapping - Common Name Rules
     rule_names = {
         1: "Common Name Present",
         2: "Common Name Exemption",
@@ -196,16 +196,37 @@ def generate_compliance_report(
         8: "Regulation Compliance",
         9: "Descriptive Name",
         10: "True Nature Description",
-        11: "Bilingual Requirements"
+        11: "Bilingual (Common Name)"
+    }
+    
+    # Bilingual Rules mapping
+    bilingual_rule_names = {
+        1: "All Mandatory Info Bilingual",
+        2: "Bilingual Exemption Check"
     }
     
     # Create table header
     table_data = [["Rule", "Status", "Confidence", "Finding"]]
     
-    for rule_key in sorted(rule_evaluations.keys(), key=lambda x: int(x.replace('rule_', ''))):
+    # Sort keys to show common name rules first, then bilingual rules
+    def sort_key(x):
+        if x.startswith('bilingual_rule_'):
+            return (1, int(x.replace('bilingual_rule_', '')))
+        else:
+            return (0, int(x.replace('rule_', '')))
+    
+    for rule_key in sorted(rule_evaluations.keys(), key=sort_key):
         eval_data = rule_evaluations[rule_key]
-        rule_num = int(rule_key.replace('rule_', ''))
-        rule_name = rule_names.get(rule_num, f"Rule {rule_num}")
+        
+        # Determine rule name based on type
+        if rule_key.startswith('bilingual_rule_'):
+            rule_num = int(rule_key.replace('bilingual_rule_', ''))
+            rule_name = bilingual_rule_names.get(rule_num, f"Bilingual Rule {rule_num}")
+            display_num = f"B{rule_num}"
+        else:
+            rule_num = int(rule_key.replace('rule_', ''))
+            rule_name = rule_names.get(rule_num, f"Rule {rule_num}")
+            display_num = str(rule_num)
         
         compliant = eval_data.get('compliant')
         if compliant is True:
@@ -224,7 +245,7 @@ def generate_compliance_report(
             finding = finding[:77] + "..."
         
         table_data.append([
-            f"{rule_num}. {rule_name}",
+            f"{display_num}. {rule_name}",
             status,
             confidence_str,
             finding
@@ -282,10 +303,17 @@ def generate_compliance_report(
         story.append(Paragraph("Recommendations for Non-Compliant Rules", heading_style))
         
         for rule_key, eval_data in failed_rules:
-            rule_num = int(rule_key.replace('rule_', ''))
-            rule_name = rule_names.get(rule_num, f"Rule {rule_num}")
+            # Determine rule name based on type
+            if rule_key.startswith('bilingual_rule_'):
+                rule_num = int(rule_key.replace('bilingual_rule_', ''))
+                rule_name = bilingual_rule_names.get(rule_num, f"Bilingual Rule {rule_num}")
+                display = f"Bilingual Rule {rule_num}: {rule_name}"
+            else:
+                rule_num = int(rule_key.replace('rule_', ''))
+                rule_name = rule_names.get(rule_num, f"Rule {rule_num}")
+                display = f"Rule {rule_num}: {rule_name}"
             
-            story.append(Paragraph(f"<b>Rule {rule_num}: {rule_name}</b>", subheading_style))
+            story.append(Paragraph(f"<b>{display}</b>", subheading_style))
             
             # Full finding
             finding = eval_data.get('finding', 'No finding available')

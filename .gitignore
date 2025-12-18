@@ -4,6 +4,9 @@ env/
 .env
 .venv
 
+# Google Credentials
+google-credentials.json
+
 # Python
 __pycache__/
 *.py[cod]
@@ -39,4 +42,3 @@ Thumbs.db
 
 # Logs
 *.log
-WARP.md
