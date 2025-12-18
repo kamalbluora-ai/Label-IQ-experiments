@@ -300,9 +300,55 @@ class Storage:
                     12: "net_qty_us_units"
                 }
                 
+                # Ingredients/allergen rules names
+                ingredients_rule_names = {
+                    1: "ingredients_present",
+                    2: "ingredients_exempt",
+                    3: "ingredients_order",
+                    4: "ingredients_common_names",
+                    5: "components_declared",
+                    6: "sugars_grouped",
+                    7: "allergens_declared",
+                    8: "contains_statement",
+                    9: "cross_contamination",
+                    10: "statements_position",
+                    11: "phenylalanine",
+                    12: "statements_order",
+                    13: "bilingual_match",
+                    14: "formatting_legibility",
+                    15: "location_requirements"
+                }
+                
+                # Nutrition rules names
+                nutrition_rule_names = {
+                    1: "nft_present",
+                    2: "nft_exempt",
+                    3: "nft_location",
+                    4: "serving_size",
+                    5: "core_nutrients",
+                    6: "units_dv",
+                    7: "dv_statement",
+                    8: "format_appropriate",
+                    9: "format_version",
+                    10: "graphical_colours",
+                    11: "graphical_font",
+                    12: "fop_present",
+                    13: "fop_thresholds",
+                    14: "fop_specs",
+                    15: "fop_location"
+                }
+                
                 for rule_key, evaluation in rule_evaluations.items():
+                    # Handle nutrition rules (nutrition_rule_1, etc.)
+                    if rule_key.startswith("nutrition_rule_"):
+                        rule_num = int(rule_key.replace("nutrition_rule_", ""))
+                        rule_name = nutrition_rule_names.get(rule_num, rule_key)
+                    # Handle ingredients rules (ingredients_rule_1, etc.)
+                    elif rule_key.startswith("ingredients_rule_"):
+                        rule_num = int(rule_key.replace("ingredients_rule_", ""))
+                        rule_name = ingredients_rule_names.get(rule_num, rule_key)
                     # Handle net quantity rules (net_qty_rule_1, etc.)
-                    if rule_key.startswith("net_qty_rule_"):
+                    elif rule_key.startswith("net_qty_rule_"):
                         rule_num = int(rule_key.replace("net_qty_rule_", ""))
                         rule_name = net_qty_rule_names.get(rule_num, rule_key)
                     # Handle bilingual rules (bilingual_rule_1, bilingual_rule_2)

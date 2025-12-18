@@ -224,20 +224,70 @@ def generate_compliance_report(
     # Create table header
     table_data = [["Rule", "Status", "Confidence", "Finding"]]
     
-    # Sort keys: common name (0), bilingual (1), net qty (2)
+    # Sort keys: common name (0), bilingual (1), net qty (2), ingredients (3), nutrition (4)
     def sort_key(x):
-        if x.startswith('net_qty_rule_'):
+        if x.startswith('nutrition_rule_'):
+            return (4, int(x.replace('nutrition_rule_', '')))
+        elif x.startswith('ingredients_rule_'):
+            return (3, int(x.replace('ingredients_rule_', '')))
+        elif x.startswith('net_qty_rule_'):
             return (2, int(x.replace('net_qty_rule_', '')))
         elif x.startswith('bilingual_rule_'):
             return (1, int(x.replace('bilingual_rule_', '')))
         else:
             return (0, int(x.replace('rule_', '')))
     
+    # Ingredients Rules mapping
+    ingredients_rule_names = {
+        1: "Ingredients Present",
+        2: "Ingredients Exemption",
+        3: "Descending Order",
+        4: "Common Names Used",
+        5: "Components Declared",
+        6: "Sugars Grouped",
+        7: "Allergens Declared",
+        8: "Contains Statement",
+        9: "Cross-Contamination",
+        10: "Statements Position",
+        11: "Phenylalanine (Aspartame)",
+        12: "Statements Order",
+        13: "Bilingual Match",
+        14: "Formatting/Legibility",
+        15: "Location Requirements"
+    }
+    
+    # Nutrition Rules mapping
+    nutrition_rule_names = {
+        1: "NFt Present",
+        2: "NFt Exempt/Prohibited",
+        3: "NFt Location",
+        4: "Serving Size",
+        5: "Core Nutrients",
+        6: "Units & %DV",
+        7: "%DV Statement",
+        8: "Format Appropriate",
+        9: "Format Version/Size",
+        10: "Colours/Contrast",
+        11: "Font Requirements",
+        12: "FOP Symbol Present",
+        13: "FOP Thresholds",
+        14: "FOP Specifications",
+        15: "FOP Location"
+    }
+    
     for rule_key in sorted(rule_evaluations.keys(), key=sort_key):
         eval_data = rule_evaluations[rule_key]
         
         # Determine rule name based on type
-        if rule_key.startswith('net_qty_rule_'):
+        if rule_key.startswith('nutrition_rule_'):
+            rule_num = int(rule_key.replace('nutrition_rule_', ''))
+            rule_name = nutrition_rule_names.get(rule_num, f"Nutrition Rule {rule_num}")
+            display_num = f"NL{rule_num}"
+        elif rule_key.startswith('ingredients_rule_'):
+            rule_num = int(rule_key.replace('ingredients_rule_', ''))
+            rule_name = ingredients_rule_names.get(rule_num, f"Ingredients Rule {rule_num}")
+            display_num = f"I{rule_num}"
+        elif rule_key.startswith('net_qty_rule_'):
             rule_num = int(rule_key.replace('net_qty_rule_', ''))
             rule_name = net_qty_rule_names.get(rule_num, f"Net Qty Rule {rule_num}")
             display_num = f"N{rule_num}"
@@ -326,7 +376,15 @@ def generate_compliance_report(
         
         for rule_key, eval_data in failed_rules:
             # Determine rule name based on type
-            if rule_key.startswith('net_qty_rule_'):
+            if rule_key.startswith('nutrition_rule_'):
+                rule_num = int(rule_key.replace('nutrition_rule_', ''))
+                rule_name = nutrition_rule_names.get(rule_num, f"Nutrition Rule {rule_num}")
+                display = f"Nutrition Rule {rule_num}: {rule_name}"
+            elif rule_key.startswith('ingredients_rule_'):
+                rule_num = int(rule_key.replace('ingredients_rule_', ''))
+                rule_name = ingredients_rule_names.get(rule_num, f"Ingredients Rule {rule_num}")
+                display = f"Ingredients Rule {rule_num}: {rule_name}"
+            elif rule_key.startswith('net_qty_rule_'):
                 rule_num = int(rule_key.replace('net_qty_rule_', ''))
                 rule_name = net_qty_rule_names.get(rule_num, f"Net Qty Rule {rule_num}")
                 display = f"Net Qty Rule {rule_num}: {rule_name}"
