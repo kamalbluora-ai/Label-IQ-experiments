@@ -284,9 +284,29 @@ class Storage:
                     2: "bilingual_exemption"
                 }
                 
+                # Net quantity rules names
+                net_qty_rule_names = {
+                    1: "net_qty_present",
+                    2: "net_qty_exempt",
+                    3: "net_qty_on_pdp",
+                    4: "net_qty_metric",
+                    5: "net_qty_retail_bulk",
+                    6: "net_qty_manner",
+                    7: "net_qty_rounding",
+                    8: "net_qty_symbols",
+                    9: "net_qty_written_units",
+                    10: "net_qty_type_height",
+                    11: "net_qty_canadian_units",
+                    12: "net_qty_us_units"
+                }
+                
                 for rule_key, evaluation in rule_evaluations.items():
+                    # Handle net quantity rules (net_qty_rule_1, etc.)
+                    if rule_key.startswith("net_qty_rule_"):
+                        rule_num = int(rule_key.replace("net_qty_rule_", ""))
+                        rule_name = net_qty_rule_names.get(rule_num, rule_key)
                     # Handle bilingual rules (bilingual_rule_1, bilingual_rule_2)
-                    if rule_key.startswith("bilingual_rule_"):
+                    elif rule_key.startswith("bilingual_rule_"):
                         rule_num = int(rule_key.replace("bilingual_rule_", ""))
                         rule_name = bilingual_rule_names.get(rule_num, rule_key)
                     else:

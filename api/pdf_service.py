@@ -205,12 +205,30 @@ def generate_compliance_report(
         2: "Bilingual Exemption Check"
     }
     
+    # Net Quantity Rules mapping
+    net_qty_rule_names = {
+        1: "Net Qty Present",
+        2: "Net Qty Exemption",
+        3: "Net Qty on PDP",
+        4: "Metric Units",
+        5: "Retail Bulk Units",
+        6: "Measurement Manner",
+        7: "Rounding (3 figures)",
+        8: "Bilingual Symbols",
+        9: "Written Units Bilingual",
+        10: "Type Height/Bold",
+        11: "Canadian Units",
+        12: "US Units"
+    }
+    
     # Create table header
     table_data = [["Rule", "Status", "Confidence", "Finding"]]
     
-    # Sort keys to show common name rules first, then bilingual rules
+    # Sort keys: common name (0), bilingual (1), net qty (2)
     def sort_key(x):
-        if x.startswith('bilingual_rule_'):
+        if x.startswith('net_qty_rule_'):
+            return (2, int(x.replace('net_qty_rule_', '')))
+        elif x.startswith('bilingual_rule_'):
             return (1, int(x.replace('bilingual_rule_', '')))
         else:
             return (0, int(x.replace('rule_', '')))
@@ -219,7 +237,11 @@ def generate_compliance_report(
         eval_data = rule_evaluations[rule_key]
         
         # Determine rule name based on type
-        if rule_key.startswith('bilingual_rule_'):
+        if rule_key.startswith('net_qty_rule_'):
+            rule_num = int(rule_key.replace('net_qty_rule_', ''))
+            rule_name = net_qty_rule_names.get(rule_num, f"Net Qty Rule {rule_num}")
+            display_num = f"N{rule_num}"
+        elif rule_key.startswith('bilingual_rule_'):
             rule_num = int(rule_key.replace('bilingual_rule_', ''))
             rule_name = bilingual_rule_names.get(rule_num, f"Bilingual Rule {rule_num}")
             display_num = f"B{rule_num}"
@@ -304,7 +326,11 @@ def generate_compliance_report(
         
         for rule_key, eval_data in failed_rules:
             # Determine rule name based on type
-            if rule_key.startswith('bilingual_rule_'):
+            if rule_key.startswith('net_qty_rule_'):
+                rule_num = int(rule_key.replace('net_qty_rule_', ''))
+                rule_name = net_qty_rule_names.get(rule_num, f"Net Qty Rule {rule_num}")
+                display = f"Net Qty Rule {rule_num}: {rule_name}"
+            elif rule_key.startswith('bilingual_rule_'):
                 rule_num = int(rule_key.replace('bilingual_rule_', ''))
                 rule_name = bilingual_rule_names.get(rule_num, f"Bilingual Rule {rule_num}")
                 display = f"Bilingual Rule {rule_num}: {rule_name}"
