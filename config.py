@@ -8,6 +8,7 @@ project_root = Path(__file__).parent
 load_dotenv(project_root / '.env')
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Handle GOOGLE_CREDENTIALS - convert relative path to absolute
 _google_creds = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
