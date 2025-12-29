@@ -20,6 +20,7 @@ if _google_creds:
     GOOGLE_CREDENTIALS = str(creds_path.resolve())
     # Update the environment variable to use absolute path
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_CREDENTIALS
+
 else:
     # Fallback: look for google-credentials.json in project root
     default_path = project_root / 'google-credentials.json'
