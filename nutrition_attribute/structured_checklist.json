@@ -1,0 +1,107 @@
+{
+  "source_file": "C:\\Users\\subsc\\Bluorai\\Label-IQ-experiments\\nutrition_attribute\\nutrition_cleaned_data.json",
+  "model": "gpt-4o-mini",
+  "total_rules": 10,
+  "rules": [
+    {
+      "rule_id": "fop_prohibited_foods",
+      "nutrient": null,
+      "threshold": null,
+      "unit": null,
+      "condition": null,
+      "action": "prohibited from displaying FOP symbol",
+      "source_text": "The following foods are prohibited from carrying the symbol on their label: Products intended solely for infants six months of age or older but less than one year of age, Human milk fortifiers, Human milk substitutes (infant formula), Foods represented as containing a human milk substitute, Formulated liquid diets as defined in section B.24.001 of the Food and Drug Regulations (FDR), Meal replacements, Nutritional supplements, Foods represented for protein-restricted diets, Foods represented for low (naming the amino acid) diets, Foods represented for use in a very low energy diet as defined in section B.24.001 of the FDR.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_nutrient_thresholds_default",
+      "nutrient": "saturated_fat",
+      "threshold": 15,
+      "unit": "percent_dv",
+      "condition": "reference amount > 30g or 30mL, not main dish",
+      "action": "show_fop_symbol",
+      "source_text": "A symbol must appear on the label when the amount of saturated fat, sugars and/or sodium is ≥ 15% of the applicable DV.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_nutrient_thresholds_small",
+      "nutrient": "saturated_fat",
+      "threshold": 10,
+      "unit": "percent_dv",
+      "condition": "reference amount ≤ 30g or 30mL",
+      "action": "show_fop_symbol",
+      "source_text": "The symbol must appear when the amount of saturated fat, sugars and/or sodium is ≥ 10% of the applicable DV.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_nutrient_thresholds_main_dish",
+      "nutrient": "saturated_fat",
+      "threshold": 30,
+      "unit": "percent_dv",
+      "condition": "reference amount ≥ 200g (children/adults) or ≥ 170g (children 1-4 years)",
+      "action": "show_fop_symbol",
+      "source_text": "The symbol must appear when the amount of saturated fat, sugars and/or sodium is ≥ 30% of the applicable DV.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_nutrient_assessment_quantity",
+      "nutrient": null,
+      "threshold": null,
+      "unit": null,
+      "condition": null,
+      "action": "assess against applicable % DV threshold",
+      "source_text": "The amount of saturated fat, sugars and/or sodium in a specific quantity of a food must be assessed against the applicable % DV threshold.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_exempt_foods_full",
+      "nutrient": null,
+      "threshold": null,
+      "unit": null,
+      "condition": null,
+      "action": "exempt from FOP requirements",
+      "source_text": "The products in the following list are always exempt from the FOP requirement.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_exempt_foods_conditional",
+      "nutrient": null,
+      "threshold": null,
+      "unit": null,
+      "condition": null,
+      "action": "conditional exemption from FOP requirements",
+      "source_text": "Some products have a conditional exemption from the nutrition symbol requirements.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_exempt_foods_health_protection",
+      "nutrient": null,
+      "threshold": null,
+      "unit": null,
+      "condition": null,
+      "action": "conditionally exempt from FOP requirements",
+      "source_text": "The types of prepackaged products in the following list are conditionally exempt from the symbol requirements.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_exempt_foods_calcium",
+      "nutrient": null,
+      "threshold": null,
+      "unit": null,
+      "condition": null,
+      "action": "conditionally exempt from FOP requirements",
+      "source_text": "The prepackaged products in this list are conditionally exempt from the symbol requirements for saturated fat and sugars.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    },
+    {
+      "rule_id": "fop_exempt_fats_oils_full",
+      "nutrient": null,
+      "threshold": null,
+      "unit": null,
+      "condition": null,
+      "action": "full exemption applies",
+      "source_text": "A full exemption applies to fats and oils referred to in Division 9 of the FDR, fish and other marine fats and oils, butter, ghee and margarine and other similar substitutes for butter when they are packaged and sold as such.",
+      "source_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/legislation-guidelines/guidance-documents/front-package-nutrition-symbol-labelling-industry.html"
+    }
+  ]
+}
