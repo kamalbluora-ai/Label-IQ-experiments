@@ -36,9 +36,9 @@ export default function FilesTab({ project }: FilesTabProps) {
       const tags = [...selectedTags];
       if (customTag) tags.push(customTag);
 
-      // Upload sequentially for mock purposes
-      for (const file of uploadQueue) {
-        await api.files.upload(project.id, file, tags);
+      // Upload all files as a single batch (one job)
+      if (uploadQueue.length > 0) {
+        await api.files.upload(project.id, uploadQueue, tags);
       }
     },
     onSuccess: () => {

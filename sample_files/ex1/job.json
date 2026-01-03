@@ -1,0 +1,12 @@
+{
+  "job_id": "33d86888-2a65-4660-86ab-3020c6858c4f",
+  "mode": "AS_IS",
+  "product_metadata": {
+    "bilingual_exempt": false,
+    "nft_required": true
+  },
+  "images": [
+    "incoming/33d86888-2a65-4660-86ab-3020c6858c4f/front.png",
+    "incoming/33d86888-2a65-4660-86ab-3020c6858c4f/back.png"
+  ]
+}

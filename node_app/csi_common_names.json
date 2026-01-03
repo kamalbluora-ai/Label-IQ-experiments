@@ -1,0 +1,634 @@
+[
+  {
+    "common_name_with_def": "2. Sterilized Milk is the food that meets the standard set out in section 7.1.5 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "3. Condensed Milk or Sweetened Condensed Milk is milk from which water has been removed, to which sugar, dextrose, glucose, glucose solids, lactose or any combination of them has been added and that\n(a) contains at least 28% milk solids and 8% milk fat; and\n(b) may contain added vitamin D.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "4. Evaporated Milk or Concentrated Milk is milk from which water has been removed and that meets the requirements set out in section 7.1.7 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "5. Evaporated Skim Milk or Concentrated Skim Milk is the food that meets the standard set out in section 7.1.8 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "6. Evaporated Partly Skimmed Milk or Concentrated Partly Skimmed Milk is the food that meets the standard set out in section 7.1.9 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "7. Milk Powder, Whole Milk Powder, Dry Whole Milk or Powdered Whole Milk is the food that meets the standard set out in section 7.1.10 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "8. Skim Milk Powder or Dry Skim Milk is the food that meets the standard set out in section 7.1.11 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "9. Malted Milk and Malted Milk Powder are the foods that meet the standard set out in section 7.1.17 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "10. (Naming the flavour) Malted Milk and (naming the flavour) Malted Milk Powder are the foods that meet the standard set out in section 7.1.18 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "11. (1) (Naming the variety) Cheese is the food that meets the standard set out in section 7.4.2 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "12. Cheddar Cheese is the food that meets the standard set out in section 7.4.3 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "13. Cream Cheese is the food that meets the standard set out in section 7.4.7 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "14. Cream Cheese with (naming the added ingredients) is the food that meets the standard set out in section 7.4.8 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "15. Cream Cheese Spread is the food that meets the standard set out in section 7.4.9 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "16. Cream Cheese Spread with (naming the added ingredients) is the food that meets the standard set out in section 7.4.10 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "17. Whey Cheese and (naming the variety) Whey Cheese are the foods that meet the standard set out in section 7.4.4 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "18. Processed (naming the variety) Cheese is the food that meets the standard set out in section 7.4.11 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "19. Processed (naming the variety) Cheese with (naming the added ingredients) is the food that meets the standard set out in section 7.4.12 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "20. Processed Cheese Food is the food that meets the standard set out in section 7.4.13 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "21. Processed Cheese Food with (naming the added ingredients) is the food that meets the standard set out in section 7.4.14 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "22. Processed Cheese Spread is the food that meets the standard set out in section 7.4.15 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "23. Processed Cheese Spread with (naming the added ingredients) is the food that meets the standard set out in section 7.4.16 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "24. Cold-pack (naming the variety) Cheese is the food that meets the standard set out in section 7.4.17 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "25. Cold-pack (naming the variety) Cheese with (naming the added ingredients) is the food that meets the standard set out in section 7.4.18 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "26. Cold-pack Cheese Food is the food that meets the standard set out in section 7.4.19 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "27. Cold-pack Cheese Food with (naming the added ingredients) is the food that meets the standard set out in section 7.4.20 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "28. Cottage Cheese is the food that meets the standard set out in section 7.4.5 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "29. Creamed Cottage Cheese is the food that meets the standard set out in section 7.4.6 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "31. Butter is the food that meets the standard set out in section 7.3.1 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "32. Whey Butter is the food that meets the standard set out in section 7.3.2 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "33. Light Butter or Lite Butter is the food that is prepared from milk or milk products or a combination of them. It must contain at least 39% milk fat and not more than 60% milk fat and may contain\n(a) milk solids;\n(b) bacterial culture;\n(c) salt; and\n(d) food colour.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "34. Calorie-reduced Butter is the food that is prepared from milk or milk products or a combination of them. It must contain at least 39% milk fat and not more than 50% of the calories that would normally be present in butter and may contain\n(a) milk solids;\n(b) bacterial culture;\n(c) salt;\n(d) food colour;\n(e) emulsifying and stabilizing agents;\n(f) preservatives; and\n(g) not more than 1% added edible casein, edible caseinates or any combination of them.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "35. Dairy Spread is the food that is prepared from milk or milk products or a combination of them. It must contain at least 39% milk fat and not more than 80% milk fat and may contain\n(a) milk solids;\n(b) bacterial culture;\n(c) salt;\n(d) food colour;\n(e) emulsifying and stabilizing agents;\n(f) preservatives; and\n(g) not more than 1% added edible casein, edible caseinates or any combination of them.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "37. Butter with (naming the seasoning or flavour) or (naming the seasoning or flavour) Butter is butter to which a seasoning or a flavour other than that of butter, or both, has been added. It must contain at least 80% milk fat.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "38. Butter with (naming the fruit, vegetable or relish) is butter to which any fruit, vegetable or relish, or any combination of them, has been added. It may contain less than 80% milk fat if the percentage of milk fat is reduced by the amount of the product added, but the resulting milk fat content must be at least 75%.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "39. Butter Oil or Clarified Butter is the food that is prepared from butter or cream, or both, by removing most of the water and solids-not-fat content so that it contains at least 99.3% milk fat and not more than 0.5% water.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "40. Anhydrous Butter Oil is the food that is prepared from butter or cream, or both, by removing water and the solids-not-fat content so that it contains at least 99.8% milk fat and not more than 0.1% water.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "41. Ice Cream Mix is the food that meets the standard set out in section 7.5.1 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "42. Light Ice Cream Mix is the unfrozen, pasteurized food composed of cream, milk or other milk products, or any combination of them, that is sweetened with sugar, liquid sugar, invert sugar, honey, dextrose, glucose, corn syrup, corn syrup solids or any combination of them. It\n(a) must contain at least 33% total solids and 5% milk fat;\n(b) must contain not more than 7.5% milk fat or, if cocoa or chocolate syrup has been added, not more than 6% milk fat; and\n(c) may contain\n\n(i) egg;\n(ii) a flavouring preparation;\n(iii) cocoa or chocolate syrup or both;\n(iv) food additives permitted in ice cream mix; and\n(v) salt.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "43. Frozen Dairy Dessert Mix is the unfrozen, pasteurized food composed of milk, cream or other milk products, or any combination of them, that is sweetened with sweetening agents.\n(a) It may contain\n\n(i) egg;\n(ii) a flavouring preparation;\n(iii) cocoa or chocolate syrup or both;\n(iv) food additives;\n(v) salt;\n(vi) not more than 1% added edible casein, edible caseinates or any combination of them; and\n(vii) fruit juice.\n\n(b) It must contain not more than\n\n(i) 100,000 bacteria per gram; and\n(ii) 10 coliform organisms per gram.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "44. Milk Shake Mix is the unfrozen, pasteurized food composed of milk, cream or other milk products, or any combination of them, that is sweetened with sweetening agents. It\n(a) must contain at least 23% total solids and 3% milk fat; and\n(b) may contain\n\n(i) egg;\n(ii) a flavouring preparation;\n(iii) cocoa or chocolate syrup or both;\n(iv) food additives; and\n(v) not more than 1% added edible casein, edible caseinates or any combination of them.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "45. Ice Milk Mix is the food that meets the standard set out in section 7.5.2 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "46. Ice Cream is the food that meets the standard set out in section 7.6.1 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "47. Light Ice Cream is the frozen food obtained by freezing a light ice cream mix, with or without the incorporation of air. It\n(a) must contain at least\n\n(i) 33% total solids;\n(ii) 5% milk fat; and\n(iii) 160 g/L total solids of which at least 25 g must be milk fat;\n\n(b) must contain not more than\n\n(i) 7.5% milk fat or, if cocoa, chocolate syrup, fruits, nuts or confections have been added, 6% milk fat;\n(ii) 37.5 g/L solids from milk fat;\n(iii) 100,000 bacteria per gram; and\n(iv) 10 coliform organisms per gram;\n\n(c) may contain cocoa, chocolate syrup, fruits, nuts, confections or any combination of them.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "48. Frozen Dairy Dessert is the frozen food obtained by freezing a frozen dairy dessert mix, with or without the incorporation of air. It\n(a) may contain\n\n(i) cocoa, chocolate syrup, fruits, nuts, confections or any combination of them; and\n(ii) fruit juice.\n\n(b) must not contain more than\n\n(i) 100,000 bacteria per gram; and\n(ii) 10 coliform organisms per gram.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "49. Ice Milk is the food that contains not more than 25 g/L solids from milk fat and that meets the standard set out in section 7.6.2 of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "50. Sherbet is the frozen food, other than ice cream, light ice cream, ice milk or frozen dairy dessert, that is made from a milk product and that meets the requirements set out in paragraph 7.6.3(a) of Volume 7 of the FCSD. It may also contain the ingredients set out in paragraph 7.6.3(b) of Volume 7 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-1"
+  },
+  {
+    "common_name_with_def": "2. Liquid Whole Egg, Dried Whole Egg and Frozen Whole Egg are the foods that meet the standard set out in section 19.4.1 of Volume 19 of the FCSD and\n(a) in the case of liquid whole egg and frozen whole egg, contain at least 23.5% egg solids by weight;\n(b) in the case of dried whole egg, contain not more than 5% water; and\n(c) contain not more than\n\n(i) 50,000 viable bacteria per gram; and\n(ii) 10 coliform organisms per gram.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2"
+  },
+  {
+    "common_name_with_def": "3. Liquid Yolk, Dried Yolk and Frozen Yolk are the foods that meet the standard set out in section 19.4.2 of Volume 19 of the FCSD and\n(a) in the case of liquid yolk and frozen yolk, contain at least 43% egg solids by weight; and\n(b) in the case of dried yolk, contain not more than\n\n(i) 5% water;\n(ii) 50,000 viable bacteria per gram; and\n(iii) 10 coliform organisms per gram.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2"
+  },
+  {
+    "common_name_with_def": "4. Liquid Egg White or Liquid Albumen, Dried Egg White or Dried Albumen and Frozen Egg White or Frozen Albumen are the foods that meet the standard set out in section 19.4.3 of Volume 19 of the FCSD and that\n(a) in the case of dried egg white or dried albumen, contain not more than\n\n(i) 8% water, if it has been dried by spray-drying;\n(ii) 16% water if it has been dried by pan-drying;\n\n(b) in the case of liquid albumen, dried albumen and frozen albumen, contain not more than\n\n(i) 10,000 viable bacteria per gram; and\n(ii) 10 coliform organisms per gram.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2"
+  },
+  {
+    "common_name_with_def": "5. Liquid Whole Egg Mix, Dried Whole Egg Mix, Frozen Whole Egg Mix, Liquid Yolk Mix, Dried Yolk Mix and Frozen Yolk Mix are the foods that meet the standard set out in section 19.4.4 of Volume 19 of the FCSD and\n(a) in the case of liquid whole egg mix, frozen whole egg mix, liquid yolk mix and frozen yolk mix, contain salt or a sweetening agent, or both, in an amount not more than 12% of the mix by weight;\n(b) contain not more than\n\n(i) 50,000 viable bacteria per gram; and\n(ii) 10 coliform organisms per gram;\n\n(c) in the case of dried whole egg mix, contain salt or a sweetening agent, or both, in an amount not more than 32% of the mix by weight and water in an amount not more than 5% of the mix by weight; and\n(d) in the case of dried yolk mix, contain salt or a sweetening agent, or both, in an amount not more than 22% of the mix by weight and water in an amount not more than 5% of the mix by weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2"
+  },
+  {
+    "common_name_with_def": "6. (1) A Liquid Egg Product is liquid food for which no standard is set out elsewhere in this Volume or in Volume 19 of the FCSD and that contains at least 50% by weight of one or more of the foods for which a standard is set out in any of sections 2 to 5.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2"
+  },
+  {
+    "common_name_with_def": "(2) A Dried Egg Product is dried food for which no standard is set out elsewhere in this Volume or in Volume 19 of the FCSD and that contains at least 50% by weight of one or more of the foods for which a standard is set out in any of sections 2 to 5.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2"
+  },
+  {
+    "common_name_with_def": "(3) A Frozen Egg Product is frozen food for which no standard is set out elsewhere in this Volume or in Volume 19 of the FCSD and that contains at least 50% by weight of one or more of the foods for which a standard is set out in any of sections 2 to 5.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-2"
+  },
+  {
+    "common_name_with_def": "4. Lobster Cocktail in a hermetically sealed package must\n(a) be prepared from clean, sound lobster meat that is free from inedible parts, in combination with fresh, well-washed cod, haddock, hake, cusk or any combination of them; and\n(b) contain more than 50% lobster meat by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3"
+  },
+  {
+    "common_name_with_def": "5. Tomalley must be prepared from clean, sound lobster liver and may contain clean, sound lobster meat and lobster roe. It must be free from inedible parts and not be ground to a smooth consistency.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3"
+  },
+  {
+    "common_name_with_def": "6. Lobster Paste in a hermetically sealed package\n(a) must be prepared from clean, sound lobster liver;\n(b) may contain clean, sound lobster meat and roe;\n(c) must be free from inedible parts;\n(d) must be ground to a smooth consistency and be uniform in colour; and\n(e) may contain spices and not more than 2% filler by weight of the finished paste.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3"
+  },
+  {
+    "common_name_with_def": "14. Shrimp cocktail must be prepared from sound, cooked, peeled shrimp meat and contain sauce, spices, seasonings, flavouring preparations or any combination thereof.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-3"
+  },
+  {
+    "common_name_with_def": "3. (1) (Naming the fruit) and mixed fruits are the foods that are prepared by heat processing one or more types of fresh fruit. They must be packaged in a liquid and may contain ascorbic acid, citric acid, sucralose and a flavouring preparation.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "4. Sliced Apples is the food that consists of segments of apples that are cut longitudinally and radially from the core. It may contain a firming agent.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "5. (1) Maraschino Cherries, Crème de Menthe Cherries and Cocktail Cherries are the foods that consist of cherries of the sweet varietal group that are artificially coloured and flavoured during preparation. They may contain a preservative.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "6. (1) Fruit Cocktail is the food that contains\n(a) at least 30% and not more than 50% diced peaches by drained weight;\n(b) at least 25% and not more than 45% diced pears by drained weight;\n(c) at least 6% and not more than 16% pineapple segments by drained weight; and\n(d) at least 2% and not more than 20% whole or halved cherries or whole grapes, or both, by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "7. (1) Fruits for Salad is the food that contains\n(a) at least 24% and not more than 40% sliced or quartered peaches by drained weight;\n(b) at least 21% and not more than 35% sliced or quartered pears by drained weight;\n(c) at least 18% and not more than 30% halved or quartered apricots by drained weight;\n(d) at least 8% and not more than 16% pineapple segments by drained weight; and\n(e) at least 3% and not more than 8% whole cherries or whole grapes, or both, by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "8. (1) Fruit Salad is the food that consists of a mixture of two or more types of diced, halved, quartered or sliced fruit. No one type of fruit may exceed 60% of the food by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "9. Plums and Prune Plums are the foods that consist of fresh ripened plums that have been stemmed and washed and that are packaged whole, unpeeled and unpitted.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "10. (1) Apple Sauce is the food that is prepared by heat processing clean, sound, mature apples that have been washed, peeled, cored, trimmed, chopped and pulped. It may contain\n(a) water;\n(b) salt;\n(c) spices;\n(d) malic acid;\n(e) citric acid;\n(f) a sweetening ingredient;\n(g) ascorbic acid; and\n(h) concentrated apple juice.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "12. (1) (Naming the vegetable or vegetables) and mixed vegetables are the foods that are prepared by heat processing one or more types of fresh vegetables in water. They may contain\n(a) a sweetening ingredient;\n(b) salt;\n(c) a firming agent; and\n(d) a pH adjusting agent.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "15. Asparagus is the food that is prepared from clean, sound asparagus.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "16. (1) Whole Corn or Cut Kernel Corn is the food that is prepared from clean, sound, succulent kernels of sweet corn that have been removed from the cob by cutting and that is packed in liquid, packed in brine or vacuum packed.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "17. Cream Style Corn is the food that is prepared from clean, sound, succulent kernels of sweet corn. It must have a uniformly creamy consistency and may contain starch.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "18. Onions is the food that is prepared from clean, sound, fresh onions. It may contain seasoning and spices.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "19. Peas is the food that is prepared from clean, sound, succulent, shelled peas of smooth skinned or late maturing sweet wrinkled varieties. It may contain\n(a) seasoning and spices; and\n(b) one or more vegetable garnishes in an amount not more than 15% of the drained weight of the food.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "20. (1) Peas and Carrots is the food that contains at least 52% and not more than 75% peas by drained weight and at least 25% and not more than 48% diced carrots by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "(2) Carrots and Peas is the food that contains at least 52% and not more than 75% diced carrots by drained weight and at least 25% and not more than 48% peas by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "21. Sweet Potatoes is the food that consists of sweet potatoes that are packaged in water or a syrup or that are vacuum packed without any liquid packaging medium.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "22. Green Beans with Seasoning and Wax Beans with Seasoning are the foods that are prepared from green or wax beans. They must contain at least 85% green or wax beans by weight and may contain\n(a) dill seeds;\n(b) dill flavourings;\n(c) vinegar;\n(d) pieces of green and red peppers;\n(e) tomatoes;\n(f) onions;\n(g) garlic; and\n(h) a natural flavouring ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "23. Hominy Corn is the food that is prepared by heat processing yellow or white dried mature corn and that is packaged in water. It may be processed with a bleaching agent and may contain\n(a) a sweetening ingredient;\n(b) salt;\n(c) seasoning and spices;\n(d) citric acid; and\n(e) ascorbic acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "24. Mushrooms, Whole Mushrooms, Button Mushrooms, Sliced Button Mushrooms and Sliced Mushrooms are the foods that are prepared by heat processing clean, sound, fresh, cultivated mushrooms in water. They may contain\n(a) salt;\n(b) ascorbic acid; and\n(c) citric acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "25. (1) Mushrooms, Stems and Pieces and Mushrooms, Pieces and Stems are the foods that are prepared by heat processing clean, sound, cut stems and broken cap portions of cultivated mushrooms in water. They may contain\n(a) salt;\n(b) ascorbic acid; and\n(c) citric acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "26. (1) Creamed Mushrooms is the food that is prepared by heat processing whole, sliced or chopped portions of cultivated mushrooms to which is added a cream sauce. The food must contain at least 35% whole, sliced or chopped portions of cultivated mushrooms by weight and at least 3% refined vegetable or animal fat by weight and may contain citric acid and ascorbic acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "27. Pumpkin is the food that is prepared from clean, sound, ripe common field pumpkins of golden-fleshed varieties of the genus Cucurbita L. by stemming, cutting, steaming and reducing the pumpkins to a pulp through a fine mesh sieve. It must contain at least 51% pumpkin by weight and may contain\n(a) a pH adjusting agent;\n(b) an acid ingredient; and\n(c) squash.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "28. Squash is the food that is prepared from clean, sound, ripe common field squash of varieties of the genus Cucurbita L. by stemming, cutting, steaming and reducing the squash to a pulp through a fine mesh sieve. It must contain at least 51% squash by weight and may contain\n(a) a pH adjusting agent;\n(b) an acid ingredient; and\n(c) pumpkin.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "29. (1) Sauerkraut is the food that results from the fermentation, obtained naturally or through the addition of bacterial culture, of shredded cabbage that is heat processed and to which salt is added. It must contain at least 1% acid expressed as lactic acid and may contain natural flavouring ingredients.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "30. (1) Sauerkraut with Preservative is the food that results from the fermentation, obtained naturally or through the addition of bacterial culture, of shredded cabbage that is not heat processed and to which salt and benzoic, sorbic or sulphurous acid, or one of their salts, are added.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "31. (1) Tomatoes is the food that is prepared by heat processing clean, sound, ripe tomatoes of red or reddish varieties that are peeled and cored and that are packaged whole, almost whole, in large pieces or in wedges or are packaged sliced, diced or chopped. It may contain\n(a) the liquid obtained from them during or after peeling or coring;\n(b) the liquid obtained from other sound, ripe tomatoes;\n(c) a sweetening ingredient, in dry form;\n(d) salt;\n(e) citric acid;\n(f) spices;\n(g) natural flavouring ingredients; and\n(h) calcium chloride, calcium sulphate, calcium citrate or monocalcium phosphate, in an amount not more than\n\n(i) 0.045% total calcium ion in the food, if the tomatoes are whole, almost whole or in large pieces; or\n(ii) 0.080% total calcium ion in the food, if the tomatoes are in wedges or are sliced, diced or chopped.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "32. Stewed Tomatoes is the food that meets the standard set out in section 31, except that the tomatoes must be trimmed and the food may contain\n(a) despite paragraph 31(1)(h), any firming agent in an amount not more than 0.026% calculated as calcium; and\n(b) onions, celery and red or green peppers.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "34. Tomato Puree is the food that meets the standard set out in section 10.2.8 of Volume 10 of the FCSD and that contains at least 12% tomato solids.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "35. Tomato Pulp is the food that meets the standard set out in section 10.2.7 of Volume 10 of the FCSD and that contains at least 12% tomato solids.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "36. Tomato Paste is the food that meets the standard set out in section 10.2.5 of Volume 10 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "37. Concentrated Tomato Paste is the food that meets the standard set out in section 10.2.6 of Volume 10 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "38. Tomato Catsup, Catsup, Tomato Ketchup or Ketchup is the food that meets the standard set out in section 10.2.9 of Volume 10 of the FCSD, except that it may contain\n(a) tomato paste;\n(b) water; and\n(c) a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "39. Tomato Chili Sauce is the food that is prepared by heat processing clean, sound, well-ripened, whole tomatoes that have been chopped or crushed, with peelings screened out in a manner that allows a substantial portion of the seeds to remain in the food. It must contain vinegar, salt, seasoning and a sweetening ingredient. It may contain any other natural vegetable flavouring ingredient in a quantity that does not materially alter the appearance of the food with respect to the predominance of the tomato ingredients.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "41. Bean Sprouts is the food that is prepared by heat processing clean, sound sprouts of the mung bean. It may contain\n(a) a sweetening ingredient;\n(b) salt;\n(c) citric acid; and\n(d) ascorbic acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "43. Beans with Pork or Beans and Pork is the food that is prepared by heat processing dried beans and pork in water. It may contain\n(a) sauce;\n(b) salt;\n(c) seasoning and spices;\n(d) a sweetening ingredient;\n(e) sodium bicarbonate;\n(f) disodium phosphate;\n(g) calcium chloride;\n(h) citric acid;\n(i) calcium disodium ethylenediaminetetraacetate (calcium disodium EDTA) and disodium ethylenediaminetetraacetate (disodium EDTA); and\n(j) ascorbic acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "44. Beans or Vegetarian Beans is the food that is prepared by heat processing dried beans in water. It may contain\n(a) sauce;\n(b) seasoning and spices;\n(c) a sweetening ingredient;\n(d) calcium chloride;\n(e) citric acid;\n(f) calcium disodium ethylenediaminetetraacetate (calcium disodium EDTA) and disodium ethylenediaminetetraacetate (disodium EDTA); and\n(g) ascorbic acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "45. Ripe Peas, Dried Soaked Peas, Dry Peas and Cooked Dry Peas are the foods that are prepared by heat processing ripe or dried peas in water. They may contain\n(a) sauce;\n(b) seasoning and spices;\n(c) a sweetening ingredient;\n(d) citric acid;\n(e) ascorbic acid; and\n(f) calcium chloride.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "46. Ripe Lima Beans, Dried Soaked Lima Beans, Dry Lima Beans and Cooked Dry Lima Beans are the foods that are prepared by heat processing ripe or dried lima beans in water. They may contain\n(a) sauce;\n(b) seasoning and spices;\n(c) a sweetening ingredient;\n(d) calcium chloride;\n(e) citric acid;\n(f) calcium disodium ethylenediaminetetraacetate (calcium disodium EDTA) and disodium ethylenediaminetetraacetate (disodium EDTA); and\n(g) ascorbic acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "47. (1) Frozen (Naming the fruit or fruits) and frozen mixed fruits are the foods that are prepared by freezing one or more types of fresh fruit. They may contain\n(a) a sweetening ingredient;\n(b) one or more fruit juices, including juice made from concentrate;\n(c) a syrup consisting of a sweetening ingredient and one or more of the following:\n\n(i) water;\n(ii) one or more fruit juices; and\n(iii) one or more fruit juices made from concentrate; and\n\n(d) citric, malic, ascorbic and erythorbic acids; and\n(e) flavouring preparations if the food is not subject to the grade requirements set out in the Compendium.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "48. Frozen Sliced Apples is the food that consists of segments of apples that have been cut longitudinally and radially from the core. It may contain salt.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "49. (1) Frozen Fruit Cocktail is the food that contains\n(a) at least 30% and not more than 50% diced peaches by drained weight;\n(b) at least 25% and not more than 45% diced pears by drained weight;\n(c) at least 6% and not more than 16% pineapple segments by drained weight; and\n(d) at least 2% and not more than 20% whole or halved cherries or whole grapes, or both, by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "50. (1) Frozen Fruits for Salad is the food that contains\n(a) at least 24% and not more than 40% sliced or quartered peaches by drained weight;\n(b) at least 21% and not more than 35% sliced or quartered pears by drained weight;\n(c) at least 18% and not more than 30% halved or quartered apricots by drained weight;\n(d) at least 8% and not more than 16% pineapple segments by drained weight; and\n(e) at least 3% and not more than 8% whole cherries or whole grapes, or both, by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "51. (1) Frozen Fruit Salad is the food that contains a mixture of two or more types of diced, halved, quartered or sliced fruit. No one type of fruit may exceed 60% of the food by drained weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "52. (1) Frozen (Naming the vegetable or vegetables) and frozen mixed vegetables are the foods that are prepared by blanching and freezing one or more types of fresh vegetables. They may contain\n(a) salt;\n(b) citric acid; and\n(c) natural flavouring ingredients.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "53. (1) Frozen Peas and Carrots is the food that consists of at least 52% and not more than 75% peas by weight and at least 25% and not more than 48% diced, sliced or whole carrots by weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "(2) Frozen Carrots and Peas is the food that consists of at least 52% and not more than 75% diced, sliced or whole carrots by weight and at least 25% and not more than 48% peas by weight.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "54. Frozen Mushrooms is the food that meets the standard set out in section 10.1.3 of Volume 10 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "55. Frozen Onions is the food that is prepared by freezing clean, sound, fresh onions that have been sliced, chopped or diced. It may contain\n(a) salt;\n(b) seasoning and spices;\n(c) ascorbic acid; and\n(d) citric acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "56. Frozen French Fried Potatoes is the food that is prepared by freezing mature, sound potatoes that have been cleaned, sorted, trimmed, cut into strips, blanched and processed in vegetable oil. It may contain\n(a) sodium acid pyrophosphate;\n(b) dextrose;\n(c) ascorbic acid;\n(d) food colours; and\n(e) asparaginase.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "57. Frozen Cooked Squash is the food that is prepared by freezing clean, sound, ripe common field squash of varieties of the genus Cucurbita L. that have been stemmed, cut, steamed and reduced to a pulp through a fine mesh sieve.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "58. Frozen Uncooked Squash is the food that is prepared by freezing clean, sound, ripe common field squash of varieties of the genus Cucurbita L. that have been stemmed, cut and blanched.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "60. (1) (Naming the fruit) Juice and mixed fruit juice are the unfermented liquids that are obtained from one or more types of sound, clean, ripe fresh fruit. They may contain\n(a) a sweetening ingredient in dry form;\n(b) potassium sorbate; and\n(c) sorbic acid.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "61. (1) Apple Juice is the food that consists of unfermented liquid that is obtained from the first pressing of sound, clean, mature, fresh apples or apple parts and that is prepared without any concentration or dilution. It may contain\n(a) natural apple esters;\n(b) anti-oxidants;\n(c) vitamin C in an amount that will provide at least 35 mg of biologically active ascorbic acid per 100 mL of apple juice during the 12-month period following the day of packaging; and\n(d) carbon dioxide, if the juice is labelled with the words\n\n(i) \"Sparkling\" and \"pétillant\", \"mousseux\" or \"gazéifié\"; or\n(ii) \"Carbonated\" and \"carbonaté\", \"mousseux\" or \"gazéifié\".",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "62. Concentrated Apple Juice or Apple Juice Concentrate is the food that is prepared from apple juice that is concentrated to at least 68% soluble solids.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "63. Frozen Concentrated Apple Juice is the food that is prepared by freezing apple juice that is concentrated to at least one-half its original volume.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "64. Apple Juice from Concentrate is the food that is obtained by adding water to concentrated apple juice. It may contain\n(a) apple juice;\n(b) natural apple esters;\n(c) vitamin C;\n(d) carbon dioxide, if the juice is labelled with the words\n\n(i) \"Sparkling\" and \"pétillant\", \"mousseux\" or \"gazéifié\"; or\n(ii) \"Carbonated\" and \"carbonaté\", \"mousseux\" or \"gazéifié\"; and\n\n(e) sodium benzoate, in an amount not more than 1 000 p.p.m., if the apple juice from concentrate is packaged cold in non-hermetically sealed packages.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "65. (1) Grape Juice is the food that consists of unfermented liquid that is obtained from sound, clean, ripe grapes. It must be prepared without any concentration or dilution and must contain\n(a) if it is obtained from white grapes, at least 14% soluble grape solids by weight as determined by a refractometer at 20°C, uncorrected for acidity; and\n(b) in any other case, at least 15% soluble grape solids by weight as determined by the method referred to in paragraph (a).",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "66. (1) Concentrated Grape Juice or Grape Juice Concentrate is the food that is prepared from grape juice that is concentrated to contain at least 30% soluble grape solids by weight as determined by a refractometer at 20°C, uncorrected for acidity.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "67. (1) Grape Juice from Concentrate is the food that is prepared by adding water to concentrated grape juice or by adding concentrated grape juice to grape juice. It must contain\n(a) if it is obtained from white grapes, at least 15% soluble grape solids by weight as determined by a refractometer at 20°C, uncorrected for acidity; and\n(b) in any other case, at least 16% soluble grape solids by weight as determined by the method referred to in paragraph (a).",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "68. (1) Frozen Concentrated Orange Juice is the food that is prepared by freezing concentrated orange juice that is prepared from\n(a) unfermented orange juice that is obtained from clean, sound, mature oranges, that is concentrated to at least one-half of its original volume and that contains soluble solids\n\n(i) at least 85% of which are obtained from oranges of the species Citrus sinensis;\n(ii) not more than 10% of which are obtained from oranges of the species Citrus reticulata or from hybrids of any species of orange; and\n(iii) not more than 5% of which are obtained from oranges of the species Citrus aurantium;\n\n(b) unfermented orange juice that is obtained from clean, sound, mature oranges, from which the pulp may be removed and to which the water extract of that pulp may be added prior to concentration; or\n(c) a mixture of the concentrated juices referred to in paragraphs (a) and (b).",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "69. (1) Sweetened Frozen Concentrated Orange Juice is the food that consists of frozen concentrated orange juice that contains a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "70. (1) (Naming the vegetable) Juice and mixed vegetable juice are the pasteurized liquids that are obtained from one or more types of sound, clean, fresh vegetables. They may contain\n(a) salt;\n(b) a sweetening ingredient in dry form; and\n(c) a preservative.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "71. Tomato juice is the food that meets the standard set out in section 10.3.1 of Volume 10 of the FCSD, except that it may contain a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "72. Concentrated Tomato Juice or Tomato Juice Concentrate is the food that consists of tomato juice that is concentrated to contain at least 21% but less than 25% salt-free tomato solids. It may contain\n(a) salt; and\n(b) a sweetening ingredient in dry form.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "74. (Naming the fruit or fruits) Jam is the food that meets the standard set out in section 10.4.1 of Volume 10 of the FCSD, except that it\n(a) must not be obtained by processing fruit pulp that is preserved in sulphur dioxide; and\n(b) may contain a sweetening ingredient and concentrated juice.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "75. (Naming the fruit or fruits) Jam with Pectin is the food that meets the standard set out in section 10.4.2 of Volume 10 of the FCSD except that it may contain a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "76. Apple and (naming the fruit or fruits) Jam and Rhubarb and (naming the fruit or fruits) Jam are the foods that meet the standard set out in section 10.4.3 of Volume 10 of the FCSD except that it may contain a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "77. (Naming the fruit or fruits) Jelly is the food that meets the standard set out in section 10.4.9 of Volume 10 of the FCSD, except that it\n(a) must not be obtained by processing fruit juice or concentrated fruit juice that contains sulphurous acid; and\n(b) may contain a preservative, a sweetening ingredient and concentrated juice.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "78. (Naming the fruit or fruits) Jelly with Pectin is the food that meets the standard set out in section 10.4.10 of Volume 10 of the FCSD except that it may contain a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "80. (Naming the citrus fruit or citrus fruits) Marmalade is the food that meets the standard set out in section 10.4.4 of Volume 10 of the FCSD, except that it may contain a preservative, a sweetening ingredient and concentrated juice.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "81. (Naming the citrus fruit or citrus fruits) Marmalade with Pectin is the food that meets the standard set out in section 10.4.5 of Volume 10 of the FCSD except that it may contain a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "82. (Naming the fruit or fruits) Preserve or (Naming the fruit or fruits) Conserve is the food that meets the standard set out in section 10.4.8 of Volume 10 of the FCSD, except that it may be processed with water and contains a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "83. Cranberry Jelly or Jellied Cranberries is the food that is prepared by boiling the juice and pulp of cranberries with water and a sweetening ingredient until it acquires a gelatinous consistency. It must contain at least 40% soluble solids, as determined by a refractometer, and may contain\n(a) food colours; and\n(b) a preservative.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "84. Cranberries or Cranberry Sauce is the food that is prepared by heat processing cranberries with water and a sweetening ingredient. It must contain at least 40% soluble solids, as determined by a refractometer, and may contain\n(a) food colours; and\n(b) a preservative.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "85. Glace Fruit or Cut Mixed Fruit is the food that is prepared by impregnating and glazing whole or cut mixed fruits with a sweetening ingredient. It must contain at least 68% soluble solids, as determined by a refractometer, and may contain\n(a) artificial flavouring;\n(b) a preservative; and\n(c) an acid ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "86. Fruit Peel or Cut Mixed Peel is the food that is prepared by impregnating and glazing the outer rinds of clean, sound fruits with a sweetening ingredient. It must contain at least 68% soluble solids, as determined by a refractometer, and may contain\n(a) artificial flavouring;\n(b) a preservative; and\n(c) an acid ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "87. Mincemeat, Mince Meat, Mince or Fruit Mince is the food that meets the standard set out in section 10.5.3 of Volume 10 of the FCSD.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "88. Pie Filler or Pie Filling is the food that is prepared by processing clean, sound, ripe fruits with a sweetening ingredient. It must contain at least 30% soluble solids – or, in the case of apple or pumpkin pie filler or pie filling, at least 20% soluble solids – as determined by a refractometer. It may contain\n(a) a thickener;\n(b) an acid ingredient;\n(c) spices;\n(d) artificial flavouring;\n(e) food colours;\n(f) ascorbic acid;\n(g) sodium citrate; and\n(h) salt.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "89. Pie fruits is the food that is prepared from clean, sound, ripe fruits that have been heat processed so as to allow the fruits to pack more closely. It may contain a sweetening ingredient.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "90. Olives is the food that meets the standard set out in section 10.5.1 of Volume 10 of the FCSD, except that the food may contain\n(a) vegetable oil;\n(b) water; and\n(c) flavouring preparations.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "92. Chutney is the food that is prepared from clean, sound, fresh fruits or vegetables, with salt. It may contain\n(a) vinegar;\n(b) spices;\n(c) seasonings;\n(d) a sweetening ingredient;\n(e) sucralose;\n(f) food colours;\n(g) a preservative;\n(h) a firming agent;\n(i) polyoxyethylene (20) sorbitan monooleate, in an amount not more than 0.05%;\n(j) lactic acid;\n(k) vegetable oils;\n(l) flavouring preparations;\n(m) bacterial culture;\n(n) water;\n(o) thickeners;\n(p) stabilizing agents;\n(q) pH adjusting agents; and\n(r) dried fruits.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "93. Apricot Nectar, Peach Nectar and Pear Nectar are the foods that meet the standard set out in section 10.3.16 of Volume 10 of the FCSD except that they may contain a sweetening ingredient. They must not contain mould filaments in more than 25% of the microscopic fields.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "94. Prune Nectar is the food that is prepared by adding water to a concentrated water extract of dried prunes and that contains at least 18.5% soluble solids by weight as determined by a refractometer at 20°C, uncorrected for acidity. It may contain\n(a) citric acid;\n(b) lemon juice;\n(c) vitamin C; and\n(d) prune juice, concentrated prune juice or both.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-4"
+  },
+  {
+    "common_name_with_def": "1. Honey is the food that meets the standard set out in subsection 15.1.16(1) of Volume 15 of the Food Compositional Standards Document and",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-5"
+  },
+  {
+    "common_name_with_def": "1. Maple Syrup is syrup obtained exclusively by the concentration of maple sap or by the dilution or solution of a maple product in potable water.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-6"
+  },
+  {
+    "common_name_with_def": "7. (1) Chicken is a carcass of the species Gallus domesticus that has flexible cartilage at the posterior end of the breast bone or keel bone, tender meat and soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "8. Chicken Capon is a carcass of a male of the species Gallus domesticus whose testes were surgically removed before it was six weeks old, that has flexible cartilage at the posterior end of the breast bone or keel bone, tender meat and soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "9. Rock Cornish Hen is a carcass, weighing not more than 900 g, of the female of the species Gallus domesticus that has flexible cartilage at the posterior end of the breast bone or keel bone, tender meat and soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "10. Mature Chicken is a carcass of a female of the species Gallus domesticus that does not have flexible cartilage at the posterior end of the breast bone or keel bone, tender meat or soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "11. Old Rooster is a carcass of the male of the species Gallus domesticus that does not have flexible cartilage at the posterior end of the breast bone or keel bone, tender meat or soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "12. Young Duck is a carcass of a duck that has flexible cartilage at the posterior end of the breast bone or keel bone, tender meat and soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "13. Mature Duck is a carcass of a duck that does not have flexible cartilage at the posterior end of the breast bone or keel bone, tender meat or soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "14. Young Guinea is a carcass of a guinea fowl that has flexible cartilage at the posterior end of the breast bone or keel bone, tender meat and soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "15. Mature Guinea is a carcass of a guinea fowl that does not have flexible cartilage at the posterior end of the breast bone or keel bone, tender meat or soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "16. Young Goose is a carcass of a goose that has flexible cartilage at the posterior end of the breast bone or keel bone, tender meat and soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "17. Mature Goose is a carcass of a goose that does not have flexible cartilage at the posterior end of the breast bone or keel bone, tender meat or soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "18. Young Turkey is a carcass of a turkey that has flexible cartilage at the posterior end of the breast bone or keel bone, tender meat and soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "19. Mature Turkey is a carcass of a turkey that does not have flexible cartilage at the posterior end of the breast bone or keel bone, tender meat or soft skin of smooth texture.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-7"
+  },
+  {
+    "common_name_with_def": "1. Icewine, ice wine or ice-wine is wine that is made exclusively from grapes naturally frozen on the vine and that, if made in Canada, has been determined by an entity acting under the authority of the law of the province in which it was made to have been made exclusively from such grapes.",
+    "source": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-standards-identity-volume-8"
+  }
+]

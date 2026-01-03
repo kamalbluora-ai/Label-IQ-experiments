@@ -1,17 +1,11 @@
 import { createContext, useContext, useState, ReactNode } from "react";
-
-interface User {
-    id: string;
-    email: string;
-    name: string;
-}
+import { api, User } from "@/api";
 
 interface AuthContextType {
     user: User | null;
-    login: () => Promise<void>;
-    logout: () => void;
-    isAuthenticated: boolean;
     isLoading: boolean;
+    login: () => void;
+    logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -20,24 +14,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<User | null>(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const login = async (): Promise<void> => {
+    const login = () => {
         setIsLoading(true);
-        try {
-            // Call backend mock login API
-            const response = await fetch("http://127.0.0.1:8000/api/auth/login", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-            });
-
-            if (response.ok) {
-                const userData = await response.json();
-                setUser(userData);
-            }
-        } catch (error) {
-            console.error("Login failed:", error);
-        } finally {
+        // Simulate a brief loading state, then set mock user
+        setTimeout(() => {
+            setUser(api.auth.getMockUser());
             setIsLoading(false);
-        }
+        }, 500);
     };
 
     const logout = () => {
@@ -45,15 +28,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     return (
-        <AuthContext.Provider
-            value={{
-                user,
-                login,
-                logout,
-                isAuthenticated: !!user,
-                isLoading,
-            }}
-        >
+        <AuthContext.Provider value={{ user, isLoading, login, logout }}>
             {children}
         </AuthContext.Provider>
     );

@@ -1,0 +1,128 @@
+{
+  "text": "Rolled Oats\nLino\nBars\nDIPPED\nBARRES PLONG\u00c9ES\nCOCONUT FLAVOR\nSAVEUR DE NOIX DE COCO\n10g Og\nWHOLE TRANSFAT\nGRAIN OATS\nNATURALLY FLAVORED\nThe Product is Enlarged to Show Texture\n5\nGRANOLA BARS\nBARRES TENDRES\n150\nCALORIES\nPER SERVING\nPAR PORTION\n",
+  "fields": {
+    "common_name_en": {
+      "text": "DIPPED Bars",
+      "confidence": 0.0708596482872963,
+      "bbox": null
+    },
+    "common_name_fr": {
+      "text": "BARRES PLONG\u00c9ES",
+      "confidence": 0.9991645216941833,
+      "bbox": null
+    },
+    "dealer_name": {
+      "text": "Lino",
+      "confidence": 0.9990823864936829,
+      "bbox": null
+    },
+    "fop_symbol_text_en": {
+      "text": "150\nCALORIES\nPER SERVING",
+      "confidence": 0.7547943592071533,
+      "bbox": null
+    },
+    "fop_symbol_text_fr": {
+      "text": "PAR PORTION",
+      "confidence": 0.646752119064331,
+      "bbox": null
+    },
+    "net_quantity_full_text": {
+      "text": "5\nGRANOLA BARS",
+      "confidence": 0.9680537581443787,
+      "bbox": null
+    },
+    "net_quantity_unit_words_en": {
+      "text": "GRANOLA BARS",
+      "confidence": 0.9861353039741516,
+      "bbox": null
+    },
+    "net_quantity_unit_words_fr": {
+      "text": "BARRES TENDRES",
+      "confidence": 0.999988317489624,
+      "bbox": null
+    },
+    "net_quantity_value": {
+      "text": "5",
+      "confidence": 0.9999938011169434,
+      "bbox": null
+    }
+  },
+  "fields_all": {
+    "common_name_en": [
+      {
+        "text": "DIPPED Bars",
+        "confidence": 0.0708596482872963,
+        "bbox": null
+      }
+    ],
+    "common_name_fr": [
+      {
+        "text": "BARRES PLONG\u00c9ES",
+        "confidence": 0.9991645216941833,
+        "bbox": null
+      }
+    ],
+    "dealer_name": [
+      {
+        "text": "Lino",
+        "confidence": 0.9990823864936829,
+        "bbox": null
+      }
+    ],
+    "fop_symbol_text_en": [
+      {
+        "text": "150\nCALORIES\nPER SERVING",
+        "confidence": 0.7547943592071533,
+        "bbox": null
+      }
+    ],
+    "fop_symbol_text_fr": [
+      {
+        "text": "PAR PORTION",
+        "confidence": 0.646752119064331,
+        "bbox": null
+      }
+    ],
+    "net_quantity_full_text": [
+      {
+        "text": "5\nGRANOLA BARS",
+        "confidence": 0.9680537581443787,
+        "bbox": null
+      },
+      {
+        "text": "5 BARRES TENDRES",
+        "confidence": 0.875715434551239,
+        "bbox": null
+      }
+    ],
+    "net_quantity_unit_words_en": [
+      {
+        "text": "GRANOLA BARS",
+        "confidence": 0.9861353039741516,
+        "bbox": null
+      }
+    ],
+    "net_quantity_unit_words_fr": [
+      {
+        "text": "BARRES TENDRES",
+        "confidence": 0.999988317489624,
+        "bbox": null
+      }
+    ],
+    "net_quantity_value": [
+      {
+        "text": "5",
+        "confidence": 0.9999938011169434,
+        "bbox": null
+      }
+    ]
+  },
+  "panels": {
+    "panel_pdp": {
+      "text": "Rolled Oats Lino Bars DIPPED BARRES PLONG\u00c9ES COCONUT FLAVOR SAVEUR DE NOIX DE COCO 10g Og WHOLE TRANSFAT GRAIN OATS NATURALLY FLAVORED The Product is Enlarged to Show Texture 5 GRANOLA BARS BARRES TENDRES 150 CALORIES PER SERVING PAR PORTION",
+      "confidence": 0.6307660937309265,
+      "bbox": null
+    }
+  },
+  "translated": {}
+}
