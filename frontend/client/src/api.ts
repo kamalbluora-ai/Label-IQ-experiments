@@ -33,6 +33,10 @@ export interface ComplianceReport {
             references: unknown[];
         }>;
         mode: string;
+        compliance_score: number;
+        checks_passed: number;
+        checks_total: number;
+        check_results: Record<string, string>;
         relabel_plan?: Record<string, unknown>;
     };
     cfia_evidence: Record<string, unknown>;

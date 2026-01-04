@@ -28,7 +28,14 @@ export default function ReportsTab({ project }: ReportsTabProps) {
   const handleGenerateReport = async () => {
     if (selectedAnalysisId) {
       try {
-        const report = await api.jobs.getReport(selectedAnalysisId);
+        // Find the selected analysis to get its backend jobId
+        const selectedAnalysis = completedAnalyses.find(a => a.id === selectedAnalysisId);
+        if (!selectedAnalysis) {
+          console.error("Selected analysis not found");
+          return;
+        }
+        // Use the backend jobId, not the frontend analysis.id
+        const report = await api.jobs.getReport(selectedAnalysis.jobId);
         setReportData(report);
         setGeneratedReport(true);
       } catch (e) {
@@ -37,17 +44,7 @@ export default function ReportsTab({ project }: ReportsTabProps) {
     }
   };
 
-  const calculateScore = (issues: any[]) => {
-    // Basic scoring: Start at 100.
-    // Critical (FAIL) = -20
-    // Warning (NEEDS_REVIEW) = -5
-    let score = 100;
-    issues.forEach(i => {
-      if (i.severity === "fail" || i.severity === "FAIL") score -= 20;
-      else if (i.severity === "needs_review" || i.severity === "NEEDS_REVIEW") score -= 5;
-    });
-    return Math.max(0, score);
-  };
+  // Score is now calculated by backend: reportData.results.compliance_score
 
   const downloadPDF = () => {
     if (!reportData) return;
@@ -64,8 +61,8 @@ export default function ReportsTab({ project }: ReportsTabProps) {
     doc.text(`Date: ${new Date().toLocaleDateString()}`, 14, 35);
     doc.text(`Analysis ID: ${reportData.job_id}`, 14, 40);
 
-    // Score Visualization (Donut Chart)
-    const score = calculateScore(reportData.results.issues);
+    // Score Visualization (Donut Chart) - Uses backend-calculated score
+    const score = reportData.results.compliance_score;
     const compliantColor = [74, 222, 128]; // Green
     const nonCompliantColor = [248, 113, 113]; // Red
 
@@ -368,11 +365,11 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                       <div
                         className="absolute inset-0 rounded-full"
                         style={{
-                          background: `conic-gradient(#4ade80 ${calculateScore(reportData.results.issues)}%, #f87171 0)`
+                          background: `conic-gradient(#4ade80 ${reportData.results.compliance_score}%, #f87171 0)`
                         }}
                       />
                       <div className="absolute inset-4 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-2xl font-bold">{calculateScore(reportData.results.issues)}%</span>
+                        <span className="text-2xl font-bold">{reportData.results.compliance_score}%</span>
                       </div>
                     </div>
                     <div className="space-y-2 text-sm">

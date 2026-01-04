@@ -107,6 +107,20 @@ async def upload_and_create_job(
         content_type="application/json"
     )
     
+    # Write initial job status to OUT_BUCKET immediately (prevents 404 during polling)
+    out_bucket = storage_client.bucket(OUT_BUCKET)
+    initial_status = {
+        "job_id": job_id,
+        "status": "QUEUED",
+        "created_at": manifest["created_at"],
+        "images": image_paths,
+        "product_metadata": metadata,
+    }
+    out_bucket.blob(f"jobs/{job_id}.json").upload_from_string(
+        json.dumps(initial_status, indent=2),
+        content_type="application/json"
+    )
+    
     return {"job_id": job_id, "status": "QUEUED", "images": len(image_paths)}
 
 
