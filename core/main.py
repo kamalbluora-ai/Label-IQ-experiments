@@ -17,6 +17,13 @@ from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+import sys
+from pathlib import Path
+
+core_dir = Path(__file__).parent
+if str(core_dir) not in sys.path:
+    sys.path.insert(0, str(core_dir))
+
 from orchestrator import (
     process_manifest,
     get_storage_client,
