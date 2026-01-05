@@ -191,10 +191,18 @@ def run_checks(label_facts: Dict[str, Any], cfia_evidence: Dict[str, Any], produ
     else:
         check_results["fop_symbol"] = "pass"
 
-    # --- Calculate Compliance Score ---
+    # --- Calculate Compliance Score (based on field confidence) ---
+    # Average confidence of all extracted fields
+    confidences = []
+    for field_value in fields.values():
+        if isinstance(field_value, dict) and "confidence" in field_value:
+            confidences.append(field_value["confidence"])
+    
+    compliance_score = round((sum(confidences) / len(confidences)) * 100) if confidences else 0
+    
+    # Keep checks info for reference
     total_checks = len(check_results)
     passed_checks = sum(1 for result in check_results.values() if result == "pass")
-    compliance_score = round((passed_checks / total_checks) * 100) if total_checks > 0 else 0
 
     # --- Verdict ---
     verdict = _verdict(issues)
