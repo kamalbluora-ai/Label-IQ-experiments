@@ -19,6 +19,12 @@ from typing import Any, Dict, Optional
 
 from google.cloud import storage
 
+import sys
+from pathlib import Path
+core_dir = Path(__file__).parent
+if str(core_dir) not in sys.path:
+    sys.path.insert(0, str(core_dir))
+
 from processor import preprocess_image_bytes, run_docai_custom_extractor
 from vertex_search import cfia_retrieve_snippets
 from checks import run_checks
