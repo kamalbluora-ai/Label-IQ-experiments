@@ -48,6 +48,9 @@ python -m venv env
 # Install dependencies
 pip install -r requirements.txt
 
+# Setup for crawl4ai
+crawl4ai-setup
+
 # Configure Environment
 # Copy .env.example to .env and fill in your GCP credentials/bucket info
 cp .env.example .env
@@ -85,3 +88,18 @@ Ensure your `core/.env` file has the following:
 3.  **Upload**: Go to the **Files** tab and upload label images.
 4.  **Analyze**: The system automatically starts processing upon upload.
 5.  **Report**: Once complete, go to the **Final Reports** tab to view the detailed analysis and download the PDF.
+
+
+# Testing commands
+# Redeployment of docker file to gcloud 
+gcloud run deploy label-compliance --source . --region us-central1 --project foodlabel-477006
+
+# In case you see the traffic route not to 100% with the above command, use the following: 
+gcloud run deploy label-compliance --source . --region us-central1 --project foodlabel-477006 --clear-base-image
+
+# Run the backend
+uvicorn core.main:app --reload
+
+# Run the frontend
+cd frontend
+npm run dev:client

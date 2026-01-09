@@ -1,6 +1,9 @@
 # Runs the retrieve evidence based on the env variable CFIA_EVIDENCE_PROVIDER
+import os
+import sys
+import json
 
-import json, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from core.orchestrator import process_manifest
 manifest = json.load(open("sample_files/ex1/job.json"))
 report = process_manifest(bucket=os.environ["IN_BUCKET"], manifest=manifest)

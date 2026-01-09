@@ -1,0 +1,111 @@
+{
+  "compliance_score": 69.23,
+  "checks_passed": 9,
+  "checks_total": 13,
+  "check_results": [
+    {
+      "question_id": "CN-1",
+      "question": "is a common name present? - if not, is the product exempt from common name?",
+      "result": "pass",
+      "selected_value": "DIPPED GRANOLA BARS",
+      "rationale": "The extracted data includes 'DIPPED GRANOLA BARS' as a common name in English and 'BARRES PLONGÉES BARRES TENDRES' in French. These names are present and indicate the type of product, which is a granola bar. Therefore, a common name is present, and the product is not exempt from having a common name.",
+      "section": "Common Name"
+    },
+    {
+      "question_id": "CN-2",
+      "question": "is the common name on the principal display panel (PDP)?",
+      "result": "pass",
+      "selected_value": "DIPPED GRANOLA BARS",
+      "rationale": "The common name 'DIPPED GRANOLA BARS' appears on the principal display panel (PDP) as indicated in the 'panel_pdp' text. The presence of this name on the PDP satisfies the requirement for the common name to be displayed prominently.",
+      "section": "Common Name"
+    },
+    {
+      "question_id": "CN-3",
+      "question": "is the common name in letters of 1.6 mm or greater? - or, if the area of the principal display surface (PDS) is 10 cm2 (1.55 inches2) or less, is the common name shown in characters with a minimum type height of 0.8 mm (1/32 inch)?",
+      "result": "needs_review",
+      "selected_value": "DIPPED GRANOLA BARS",
+      "rationale": "The data provided does not include measurements of the text size or the principal display surface (PDS) area. Therefore, it is not possible to determine if the common name meets the size requirements without physical inspection or additional information.",
+      "section": "Common Name"
+    },
+    {
+      "question_id": "CN-4",
+      "question": "is it an appropriate common name? - as printed in bold face type, but not in italics, in the FDR or in the Canadian Standards of Identity documents incorporated by reference (IbR) in the SFCR - as prescribed by any other regulation - the name by which the food is generally known or a name that is not generic and that describes the food, if the name is not so printed or prescribed, or - if the food is likely to be mistaken for another food, the common name must include words that describe the food's true nature with respect to its condition",
+      "result": "pass",
+      "selected_value": "DIPPED GRANOLA BARS",
+      "rationale": "The common name 'DIPPED GRANOLA BARS' is appropriate as it describes the product accurately and is the name by which such products are generally known. It is not likely to be mistaken for another food, and it describes the true nature of the product, which is a granola bar with a dipped coating. This meets the criteria for an appropriate common name.",
+      "section": "Common Name"
+    },
+    {
+      "question_id": "NQ-1",
+      "question": "is a net quantity declaration present? - if not, is the product exempt from net quantity?",
+      "result": "pass",
+      "selected_value": "5 GRANOLA BARS",
+      "rationale": "The net quantity declaration '5 GRANOLA BARS' is present on the Principal Display Panel (PDP), indicating the count of the product. This satisfies the requirement for a net quantity declaration.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-2",
+      "question": "is the net quantity declared on the PDP?",
+      "result": "pass",
+      "selected_value": "5 GRANOLA BARS",
+      "rationale": "The net quantity '5 GRANOLA BARS' is clearly stated on the Principal Display Panel (PDP) as part of the product description.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-3",
+      "question": "is it in metric units? - or, in metric or Canadian units if it is a consumer prepackaged food that is packaged from bulk at retail, other than an individually measured food?",
+      "result": "fail",
+      "selected_value": "5 GRANOLA BARS",
+      "rationale": "The net quantity is declared as a count ('5 GRANOLA BARS') without any metric units. While count is acceptable for certain products, metric units are required unless exempt. No metric units are present.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-4",
+      "question": "is the appropriate manner (volume, weight, count) for the product used?",
+      "result": "pass",
+      "selected_value": "5 GRANOLA BARS",
+      "rationale": "The product is a ready-to-eat granola bar, and it is appropriate to declare the net quantity by count ('5 GRANOLA BARS').",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-5",
+      "question": "is it rounded to 3 figures, unless below 100?",
+      "result": "pass",
+      "selected_value": "5",
+      "rationale": "The net quantity is a count of 5, which is below 100, so it does not require rounding to 3 significant figures.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-6",
+      "question": "are the correct bilingual symbols used? (for example, ml, mL, mℓ, L, l, ℓ for liquids; g, kg for solids) - if not, and the units are written out (for example, kilograms), are the units declared in both languages (unless exempt from bilingual labelling)?",
+      "result": "needs_review",
+      "selected_value": "5 GRANOLA BARS",
+      "rationale": "The net quantity is declared as a count, which does not require metric symbols. However, the absence of metric units means this cannot be fully evaluated for compliance with bilingual symbol requirements.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-7",
+      "question": "does the size of the numerical portion meet the minimum type height requirements (based on size of PDS)? Is it in bold face type? Are the units in letters of 1.6 mm or greater (based on lowercase 'o')?",
+      "result": "needs_review",
+      "selected_value": "5 GRANOLA BARS",
+      "rationale": "The evaluation of type height and bold face type requires physical inspection of the packaging, which is not possible with the provided data.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-8",
+      "question": "if optional Canadian units are also present, are they declared properly?",
+      "result": "pass",
+      "selected_value": "5 GRANOLA BARS",
+      "rationale": "No optional Canadian units are present, so this requirement is not applicable.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-9",
+      "question": "if optional U.S. gallons and quarts are also present, are they identified properly? (fl oz optional)",
+      "result": "pass",
+      "selected_value": "5 GRANOLA BARS",
+      "rationale": "No optional U.S. gallons, quarts, or fluid ounces are present, so this requirement is not applicable.",
+      "section": "Net Quantity Declaration"
+    }
+  ]
+}

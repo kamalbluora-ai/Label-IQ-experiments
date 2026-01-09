@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Loader2, Trash2, FileImage, Tag as TagIcon } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -24,6 +25,7 @@ export default function FilesTab({ project }: FilesTabProps) {
   const [uploadQueue, setUploadQueue] = useState<File[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [customTag, setCustomTag] = useState("");
+  const [foodType, setFoodType] = useState<string>("ready-to-eat");
   const [isUploadDialogOpen, setIsUploadDialogOpen] = useState(false);
 
   const { data: files, isLoading } = useQuery({
@@ -38,7 +40,9 @@ export default function FilesTab({ project }: FilesTabProps) {
 
       // Upload all files as a single batch (one job)
       if (uploadQueue.length > 0) {
-        await api.files.upload(project.id, uploadQueue, tags);
+        // Pass food_type in metadata to backend
+        const metadata = { food_type: foodType };
+        await api.files.upload(project.id, uploadQueue, tags, metadata);
       }
     },
     onSuccess: () => {
@@ -47,6 +51,7 @@ export default function FilesTab({ project }: FilesTabProps) {
       setUploadQueue([]);
       setSelectedTags([]);
       setCustomTag("");
+      setFoodType("ready-to-eat");
       setIsUploadDialogOpen(false);
     },
   });
@@ -164,6 +169,19 @@ export default function FilesTab({ project }: FilesTabProps) {
                   onChange={(e) => setCustomTag(e.target.value)}
                 />
               </div>
+            </div>
+
+            <div className="space-y-2">
+              <Label>Food Type</Label>
+              <Select value={foodType} onValueChange={setFoodType}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select food type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="ready-to-eat">Ready to Eat</SelectItem>
+                  <SelectItem value="to-be-cooked">To Be Cooked</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           </div>
 

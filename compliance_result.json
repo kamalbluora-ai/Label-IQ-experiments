@@ -1,0 +1,315 @@
+{
+  "verdict": "FAIL",
+  "issues": [
+    {
+      "code": "COMMON_NAME_FAIL",
+      "message": "Common Name: Q1: Common name 'BARRES PLONGÉES' detected but did not meet confidence/matching criteria. (Confidence: 100%); Q3: Common name 'BARRES PLONGÉES' may not be appropriate. The common name \"BARRES PLONGÉES\" is not descriptive enough to indicate the true nature of the food product, especially since the first ingredient is unknown. It does not clearly describe the food or distinguish it from other similar products.",
+      "severity": "fail",
+      "references": [],
+      "gpt_details": [
+        {
+          "question_id": 1,
+          "answer": "fail",
+          "reason": "Common name 'BARRES PLONGÉES' detected but did not meet confidence/matching criteria. (Confidence: 100%)"
+        },
+        {
+          "question_id": 2,
+          "answer": "pass",
+          "reason": "Common name 'BARRES PLONGÉES' found on the principal display panel"
+        },
+        {
+          "question_id": 3,
+          "answer": "fail",
+          "reason": "Common name 'BARRES PLONGÉES' may not be appropriate. The common name \"BARRES PLONGÉES\" is not descriptive enough to indicate the true nature of the food product, especially since the first ingredient is unknown. It does not clearly describe the food or distinguish it from other similar products."
+        }
+      ]
+    },
+    {
+      "code": "NET_QUANTITY_REVIEW",
+      "message": "Net Quantity: Q5: No unit detected. If count-based, symbols may not apply.",
+      "severity": "needs_review",
+      "references": [],
+      "gpt_details": [
+        {
+          "question_id": 1,
+          "answer": "pass",
+          "reason": "Net quantity '5' is present (confidence: 100%)"
+        },
+        {
+          "question_id": 2,
+          "answer": "pass",
+          "reason": "Net quantity '5' found on the principal display panel"
+        },
+        {
+          "question_id": 3,
+          "answer": "pass",
+          "reason": "Net quantity uses 'count' manner (unit: count)"
+        },
+        {
+          "question_id": 4,
+          "answer": "pass",
+          "reason": "Value 5.0 is below 100 - no 3-figure rounding requirement"
+        },
+        {
+          "question_id": 5,
+          "answer": "needs_review",
+          "reason": "No unit detected. If count-based, symbols may not apply."
+        }
+      ]
+    },
+    {
+      "code": "LIST_OF_INGREDIENTS_FAIL",
+      "message": "List Of Ingredients: Q1: The list of ingredients is missing and there is no information provided to determine if the product is exempt or a single ingredient food.; Q2: The list of ingredients is missing, so it cannot be determined if they are in descending order by weight.; Q3: The list of ingredients is missing, so it cannot be determined if common names are used.",
+      "severity": "fail",
+      "references": [],
+      "gpt_details": [
+        {
+          "question_id": 1,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing and there is no information provided to determine if the product is exempt or a single ingredient food."
+        },
+        {
+          "question_id": 2,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if they are in descending order by weight."
+        },
+        {
+          "question_id": 3,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if common names are used."
+        },
+        {
+          "question_id": 4,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if components are properly declared."
+        },
+        {
+          "question_id": 5,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if sugars-based ingredients are properly declared."
+        },
+        {
+          "question_id": 6,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if priority allergens, gluten, and added sulphites are declared."
+        },
+        {
+          "question_id": 7,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if cross-contamination allergens are listed."
+        },
+        {
+          "question_id": 8,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if the 'contains' statement is at the end."
+        },
+        {
+          "question_id": 9,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if the phenylalanine statement is present."
+        },
+        {
+          "question_id": 10,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if statements are in the proper order."
+        },
+        {
+          "question_id": 11,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if English and French declarations are the same."
+        },
+        {
+          "question_id": 12,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if it is displayed on the correct panel."
+        },
+        {
+          "question_id": 13,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if the print, background, and border are in appropriate colors and contrast."
+        },
+        {
+          "question_id": 14,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if the font and type are correct."
+        },
+        {
+          "question_id": 15,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if characters appear in the correct case."
+        },
+        {
+          "question_id": 16,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if entries are separated correctly."
+        }
+      ]
+    }
+  ],
+  "mode": "AS_IS",
+  "compliance_score": 0,
+  "checks_passed": 0,
+  "checks_total": 3,
+  "check_results": {
+    "common_name": "fail",
+    "net_quantity": "needs_review",
+    "list_of_ingredients": "fail"
+  },
+  "evaluation_method": "gpt+hardcoded",
+  "gpt_results": {
+    "common_name": {
+      "attribute": "common_name",
+      "extracted_value": "BARRES PLONGÉES",
+      "extraction_confidence": 0.997230589389801,
+      "flagged": "fail",
+      "results": [
+        {
+          "question_id": 1,
+          "answer": "fail",
+          "reason": "Common name 'BARRES PLONGÉES' detected but did not meet confidence/matching criteria. (Confidence: 100%)"
+        },
+        {
+          "question_id": 2,
+          "answer": "pass",
+          "reason": "Common name 'BARRES PLONGÉES' found on the principal display panel"
+        },
+        {
+          "question_id": 3,
+          "answer": "fail",
+          "reason": "Common name 'BARRES PLONGÉES' may not be appropriate. The common name \"BARRES PLONGÉES\" is not descriptive enough to indicate the true nature of the food product, especially since the first ingredient is unknown. It does not clearly describe the food or distinguish it from other similar products."
+        }
+      ],
+      "overall_status": "fail",
+      "questions_count": 3
+    },
+    "net_quantity": {
+      "attribute": "net_quantity",
+      "extracted_value": "5",
+      "extraction_confidence": 0.9999282360076904,
+      "parsed": {
+        "value": 5.0,
+        "unit": "",
+        "manner": "count",
+        "raw_text": "5"
+      },
+      "results": [
+        {
+          "question_id": 1,
+          "answer": "pass",
+          "reason": "Net quantity '5' is present (confidence: 100%)"
+        },
+        {
+          "question_id": 2,
+          "answer": "pass",
+          "reason": "Net quantity '5' found on the principal display panel"
+        },
+        {
+          "question_id": 3,
+          "answer": "pass",
+          "reason": "Net quantity uses 'count' manner (unit: count)"
+        },
+        {
+          "question_id": 4,
+          "answer": "pass",
+          "reason": "Value 5.0 is below 100 - no 3-figure rounding requirement"
+        },
+        {
+          "question_id": 5,
+          "answer": "needs_review",
+          "reason": "No unit detected. If count-based, symbols may not apply."
+        }
+      ],
+      "overall_status": "needs_review",
+      "questions_count": 5
+    },
+    "list_of_ingredients": {
+      "attribute": "list_of_ingredients",
+      "extracted_value": "",
+      "results": [
+        {
+          "question_id": 1,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing and there is no information provided to determine if the product is exempt or a single ingredient food."
+        },
+        {
+          "question_id": 2,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if they are in descending order by weight."
+        },
+        {
+          "question_id": 3,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if common names are used."
+        },
+        {
+          "question_id": 4,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if components are properly declared."
+        },
+        {
+          "question_id": 5,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if sugars-based ingredients are properly declared."
+        },
+        {
+          "question_id": 6,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if priority allergens, gluten, and added sulphites are declared."
+        },
+        {
+          "question_id": 7,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if cross-contamination allergens are listed."
+        },
+        {
+          "question_id": 8,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if the 'contains' statement is at the end."
+        },
+        {
+          "question_id": 9,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if the phenylalanine statement is present."
+        },
+        {
+          "question_id": 10,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if statements are in the proper order."
+        },
+        {
+          "question_id": 11,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if English and French declarations are the same."
+        },
+        {
+          "question_id": 12,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if it is displayed on the correct panel."
+        },
+        {
+          "question_id": 13,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if the print, background, and border are in appropriate colors and contrast."
+        },
+        {
+          "question_id": 14,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if the font and type are correct."
+        },
+        {
+          "question_id": 15,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if characters appear in the correct case."
+        },
+        {
+          "question_id": 16,
+          "answer": "fail",
+          "reason": "The list of ingredients is missing, so it cannot be determined if entries are separated correctly."
+        }
+      ],
+      "overall_status": "fail",
+      "questions_count": 16,
+      "error": null
+    }
+  }
+}

@@ -9,11 +9,13 @@ import json
 import uuid
 from datetime import datetime
 from typing import Dict
+from dotenv import load_dotenv
 
-# Ensure app package is importable
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from app.chatgpt_search import execute_queries, format_results_text, format_results_json, get_allowed_sources_env
+# Load environment variables
+load_dotenv()
+from core.chatgpt_search import execute_queries, format_results_text, format_results_json, get_allowed_sources_env
 
 
 DEFAULT_QUERIES: Dict[str, str] = {

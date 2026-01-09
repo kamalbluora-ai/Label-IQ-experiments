@@ -13,7 +13,7 @@ import uuid
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
-from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Form
+from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Form, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -31,6 +31,9 @@ from orchestrator import (
     IN_BUCKET,
     OUT_BUCKET,
 )
+
+# Cloud Run detection - for local testing vs production
+IS_CLOUD_RUN = os.environ.get("K_SERVICE") is not None
 
 
 app = FastAPI(title="CFIA Label Compliance API", version="0.1.0")
@@ -68,11 +71,14 @@ def healthz():
 async def upload_and_create_job(
     files: List[UploadFile] = File(...),
     product_metadata: Optional[str] = Form(default=None),
+    tags: Optional[str] = Form(default=None),
+    background_tasks: BackgroundTasks = None,  # For local testing
 ):
     """
     Upload images and create a compliance job.
     
     - Accepts multiple image files
+    - Accepts tags (JSON array as string, e.g., '["front", "back"]')
     - Uploads to GCS IN_BUCKET
     - Creates job.json manifest
     - Returns job_id for status polling
@@ -99,11 +105,20 @@ async def upload_and_create_job(
         except json.JSONDecodeError:
             pass
     
+    # Parse tags if provided
+    parsed_tags = []
+    if tags:
+        try:
+            parsed_tags = json.loads(tags)
+        except json.JSONDecodeError:
+            pass
+    
     # Create manifest (mode=None triggers auto-detection)
     manifest = {
         "job_id": job_id,
         "images": image_paths,
         "product_metadata": metadata,
+        "tags": parsed_tags,
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
     
@@ -122,12 +137,22 @@ async def upload_and_create_job(
         "created_at": manifest["created_at"],
         "images": image_paths,
         "product_metadata": metadata,
+        "tags": parsed_tags,
     }
     out_bucket.blob(f"jobs/{job_id}.json").upload_from_string(
         json.dumps(initial_status, indent=2),
         content_type="application/json"
     )
     
+    # Trigger processing in background (only for local dev)
+    # Note: Agents run sequentially inside process_manifest()
+    if not IS_CLOUD_RUN and background_tasks:
+        background_tasks.add_task(
+            process_manifest,
+            bucket=IN_BUCKET,
+            manifest=manifest
+        )
+
     return {"job_id": job_id, "status": "QUEUED", "images": len(image_paths)}
 
 

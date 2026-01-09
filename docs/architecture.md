@@ -7,49 +7,45 @@ Label-IQ is a **CFIA (Canadian Food Inspection Agency) Food Label Compliance Che
 ## High-Level Pipeline
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌──────────────┐     ┌────────────────┐
-│   Frontend  │────▶│  FastAPI    │────▶│  GCS Bucket  │────▶│  Orchestrator  │
-│  (Upload)   │     │  /v1/jobs   │     │  (IN_BUCKET) │     │  (Processing)  │
-└─────────────┘     └─────────────┘     └──────────────┘     └────────────────┘
-                                                                      │
-                    ┌─────────────────────────────────────────────────┘
-                    ▼
-        ┌───────────────────────────────────────────────────────────────┐
-        │                     PROCESSING PIPELINE                        │
-        │  ┌────────────┐   ┌────────────┐   ┌─────────────────────────┐│
-        │  │ Preprocess │──▶│  Doc AI    │──▶│ Mode Detection          ││
-        │  │ (Denoise/  │   │ Extraction │   │ (AS_IS vs RELABEL)      ││
-        │  │  Deskew)   │   │            │   │                         ││
-        │  └────────────┘   └────────────┘   └─────────────────────────┘│
-        │                                              │                 │
-        │         ┌────────────────────────────────────┴───────┐        │
-        │         ▼                                            ▼        │
-        │  ┌──────────────┐                         ┌──────────────────┐│
-        │  │ AS_IS Mode   │                         │ RELABEL Mode     ││
-        │  │ (No transl.) │                         │ (Translation)    ││
-        │  └──────────────┘                         └──────────────────┘│
-        │         │                                            │        │
-        │         └────────────────────┬───────────────────────┘        │
-        │                              ▼                                │
-        │                   ┌─────────────────────┐                     │
-        │                   │  Evidence Retrieval │                     │
-        │                   │  (Vertex AI Search  │                     │
-        │                   │   or ChatGPT Web)   │                     │
-        │                   └─────────────────────┘                     │
-        │                              │                                │
-        │                              ▼                                │
-        │                   ┌─────────────────────┐                     │
-        │                   │  Compliance Checks  │                     │
-        │                   │  (CFIA Checklist)   │                     │
-        │                   └─────────────────────┘                     │
-        │                              │                                │
-        └──────────────────────────────┼────────────────────────────────┘
-                                       ▼
-                            ┌─────────────────────┐
-                            │  GCS OUT_BUCKET     │
-                            │  - jobs/{id}.json   │
-                            │  - reports/{id}.json│
-                            └─────────────────────┘
+┌─────────────┐     ┌─────────────┐     ┌──────────────┐
+│  Frontend   │────▶  FastAPI    │────▶ GCS IN_BUCKET│
+│  (Upload)   │     │  /v1/jobs   │     │ (raw images) │
+└─────────────┘     └─────────────┘     └──────────────┘
+                                               │
+                                               ▼
+                              ┌─────────────────────────────┐
+                              │        PROCESSING           │
+                              ├─────────────────────────────┤
+                              │ 1. Preprocess (denoise)     │
+                              │ 2. DocAI (OCR + extraction) │
+                              │ 3. Mode Detection           │
+                              │    AS_IS | RELABEL (Translation not implemented yet)
+                              └─────────────────────────────┘
+                                               │
+                    ┌──────────────────────────┴───────────────────────────┐
+                    ▼                                                      ▼
+          ┌─────────────────────┐                            ┌─────────────────────────┐
+          │    vertex_search    │                            │ chatgpt_search          │
+          │    (GCP - N/A)      │                            │ (currently using)       │
+          ├─────────────────────┤                            ├─────────────────────────┤
+          │ - Retrieves CFIA    │                            │ 1. Build questions from │
+          │   docs from index   │                            │    CFIA checklist URL   │
+          │ - Hardcoded checks  │                            │ 2. Store questions in
+          │   in checks.py      │                            │    JSON files.          │
+          └─────────────────────┘                            │ 3. For each attribute:  │
+                    │                                        │    questions + DocAI    │
+                    │                                        │    value → GPT prompt   │
+                    │                                        │ 4. GPT returns:         │
+                    │                                        │    pass/fail/needs_rev  │
+                    │                                        └─────────────────────────┘
+                    │                                                      │
+                    └──────────────────────────┬───────────────────────────┘
+                                               ▼
+                              ┌─────────────────────────────┐
+                              │      GCS OUT_BUCKET         │
+                              │  - jobs/{id}.json           │
+                              │  - reports/{id}.json        │
+                              └─────────────────────────────┘
 ```
 
 ---
@@ -177,17 +173,22 @@ nft_text_block_foreign     → nft_text_block
 
 **Purpose:** Run CFIA checklist validation against extracted label facts.
 
-**Check Categories:**
-| Category | Check Codes |
-|----------|-------------|
-| Common Name | `COMMON_NAME_MISSING`, `COMMON_NAME_BILINGUAL` |
-| Net Quantity | `NET_QUANTITY_MISSING`, `NET_QUANTITY_UNIT_WORDS_BILINGUAL` |
-| Ingredients | `INGREDIENTS_LIST_MISSING`, `INGREDIENTS_BILINGUAL` |
-| Allergens | `CONTAINS_BILINGUAL`, `CROSS_CONTAM_BILINGUAL` |
-| Dealer Info | `DEALER_INFO_MISSING`, `IMPORTED_BY_MISSING` |
-| Dates | `BEST_BEFORE_MISSING`, `BEST_BEFORE_BILINGUAL` |
-| Nutrition Facts | `NFT_MISSING`, `NFT_NOT_DETECTED` |
-| FOP Symbol | `FOP_NOT_EVALUATED` |
+**Two Modes (currently using chatgpt_search):**
+- **GCP Vertex Search Mode:** Uses `vertex_search.py` to evaluate against CFIA checklist questions from JSON files
+- **GPT Mode (default):** Uses `gpt_compliance.py` to evaluate against CFIA checklist questions from JSON files
+
+**GPT-Based Flow:**
+1. Load questions from `checklist_questions/*.json`
+2. Send extracted field + questions to GPT (temperature=0)
+3. GPT returns: pass / fail / needs_review per question
+4. Aggregate results into compliance score
+
+**Supported Attributes:**
+| Attribute | JSON File |
+|-----------|-----------|
+| common_name | `checklist_questions/common_name.json` |
+| net_quantity | `checklist_questions/net_quantity_declaration.json` |
+| list_of_ingredients | `checklist_questions/list_of_ingredients.json` |
 
 **Severity Levels:** `fail`, `needs_review`, `pass`
 
@@ -195,6 +196,11 @@ nft_text_block_foreign     → nft_text_block
 ```python
 {
     "verdict": "PASS" | "FAIL" | "NEEDS_REVIEW",
+    "evaluation_method": "gpt" | "legacy",
+    "compliance_score": 67,
+    "checks_passed": 2,
+    "checks_total": 3,
+    "check_results": {"common_name": "pass", "net_quantity": "fail", ...},
     "issues": [...],
     "mode": "AS_IS" | "RELABEL",
     "relabel_plan": {...}  # Only for RELABEL mode
@@ -203,9 +209,9 @@ nft_text_block_foreign     → nft_text_block
 
 ---
 
-### 6. Evidence Retrieval Modules
+### 6. Evidence Retrieval & Compliance Modules
 
-**`vertex_search.py`** - Vertex AI Search / Discovery Engine
+**`vertex_search.py`** - Vertex AI Search / Discovery Engine (GCP - N/A)
 - Queries CFIA datastore with checklist-specific queries
 - Returns snippets with source URLs
 
@@ -213,6 +219,16 @@ nft_text_block_foreign     → nft_text_block
 - Uses OpenAI GPT-4 with web search capability
 - Queries official CFIA sources for compliance rules
 - Returns structured rules with citations
+
+**`gpt_compliance.py`** - GPT-Based Compliance Evaluation (NEW)
+- Loads checklist questions from JSON files
+- Builds prompts: DocAI values + questions
+- Calls GPT (temperature=0) for pass/fail/needs_review
+
+**`scraper.py`** - CFIA Checklist Scraper (NEW)
+- Fetches raw content from CFIA requirements URL
+- Extracts section text with bullet structure preserved
+- Used to build the JSON question files
 
 ---
 

@@ -1,5 +1,7 @@
-// API client that connects to the FastAPI backend (core/main.py)
-// API base URL - FastAPI runs on port 8000
+// API connects to cloud run instance
+// const API_BASE = "https://label-compliance-262932924895.us-central1.run.app";
+
+// LOCAL TESTING - uncomment for local development:
 const API_BASE = "http://127.0.0.1:8000";
 
 // Types matching the new GCS-based backend
@@ -25,19 +27,17 @@ export interface ComplianceReport {
     source_images: string[];
     label_facts: Record<string, unknown>;
     results: {
-        verdict: "PASS" | "FAIL" | "NEEDS_REVIEW";
-        issues: Array<{
-            code: string;
-            message: string;
-            severity: string;
-            references: unknown[];
-        }>;
-        mode: string;
         compliance_score: number;
         checks_passed: number;
         checks_total: number;
-        check_results: Record<string, string>;
-        relabel_plan?: Record<string, unknown>;
+        check_results: Array<{
+            question_id: string;
+            question: string;
+            result: "pass" | "fail" | "needs_review";
+            selected_value?: string;
+            rationale: string;
+            section: string;
+        }>;
     };
     cfia_evidence: Record<string, unknown>;
 }
@@ -119,12 +119,12 @@ export const api = {
             });
             return files;
         },
-        upload: async (projectId: string, files: File[], tags: string[]): Promise<ProjectFile[]> => {
+        upload: async (projectId: string, files: File[], tags: string[], metadata?: Record<string, unknown>): Promise<ProjectFile[]> => {
             // "Upload" now implies starting a job/analysis immediately
             // because the backend combines upload and processing.
 
-            // 1. Create Job (Uploads to GCS)
-            const jobResponse = await api.jobs.create(files);
+            // 1. Create Job (Uploads to GCS) - pass tags and metadata to backend
+            const jobResponse = await api.jobs.create(files, metadata, tags);
 
             // 2. Create Analysis record linked to Job
             const objectUrls = files.map(f => URL.createObjectURL(f)); // For local preview only
@@ -172,13 +172,16 @@ export const api = {
          * Upload images and create a new compliance job.
          * Mode is auto-detected based on language in the images.
          */
-        create: async (files: File[], metadata?: Record<string, unknown>): Promise<JobCreateResponse> => {
+        create: async (files: File[], metadata?: Record<string, unknown>, tags?: string[]): Promise<JobCreateResponse> => {
             const formData = new FormData();
             files.forEach((file) => {
                 formData.append("files", file);
             });
             if (metadata) {
                 formData.append("product_metadata", JSON.stringify(metadata));
+            }
+            if (tags && tags.length > 0) {
+                formData.append("tags", JSON.stringify(tags));
             }
 
             const res = await fetch(`${API_BASE}/v1/jobs`, {
@@ -308,11 +311,12 @@ export const api = {
                             ...analysis,
                             status: "completed",
                             progress: 100,
-                            resultSummary: `Verdict: ${report.results.verdict}. Found ${report.results.issues.length} issues.`,
+                            resultSummary: `Score: ${report.results.compliance_score}%. Passed ${report.results.checks_passed}/${report.results.checks_total} checks.`,
                             details: {
-                                verdict: report.results.verdict,
-                                mode: report.results.mode,
-                                issues_count: report.results.issues.length,
+                                compliance_score: report.results.compliance_score,
+                                checks_passed: report.results.checks_passed,
+                                checks_total: report.results.checks_total,
+                                mode: report.mode,
                                 created_at: report.created_at
                             }
                         };

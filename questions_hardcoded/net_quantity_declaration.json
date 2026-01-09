@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "source_url": "https://inspection.canada.ca/en/food-labels/labelling/industry/requirements-checklist",
+    "section": "Net Quantity Declaration",
+    "extracted_at": "2026-01-06T06:57:46.476323",
+    "raw_text_length": 1154
+  },
+  "questions": [
+    {
+      "question_text": "is a net quantity declaration present?",
+      "sub_questions": [
+        "if not, is the product exempt from net quantity ?"
+      ]
+    },
+    {
+      "question_text": "is the net quantity declared on the PDP?",
+      "sub_questions": []
+    },
+    {
+      "question_text": "is it in metric units?",
+      "sub_questions": [
+        "or, in metric or Canadian units if it is a consumer prepackaged food that is packaged from bulk at retail, other than an individually measured food?"
+      ]
+    },
+    {
+      "question_text": "is the appropriate manner (volume, weight, count) for the product used?",
+      "sub_questions": []
+    },
+    {
+      "question_text": "is it rounded to 3 figures, unless below 100?",
+      "sub_questions": []
+    },
+    {
+      "question_text": "are the correct bilingual symbols used? (for example, ml, mL, mℓ, L, l, ℓ for liquids; g, kg for solids)",
+      "sub_questions": [
+        "if not, and the units are written out (for example, kilograms), are the units declared in both languages (unless exempt from bilingual labelling)?"
+      ]
+    },
+    {
+      "question_text": "does the size of the numerical portion meet the minimum type height requirements (based on size of PDS)? Is it in bold face type? Are the units in letters of 1.6 mm or greater (based on lowercase \"o\")?",
+      "sub_questions": []
+    },
+    {
+      "question_text": "if optional Canadian units are also present, are they declared properly?",
+      "sub_questions": []
+    },
+    {
+      "question_text": "if optional U.S. gallons and quarts are also present, are they identified properly? (fl oz optional)",
+      "sub_questions": []
+    }
+  ],
+  "raw_scraped_text": "• is a net quantity declaration present?\n  ◦ if not, is the product exempt from net quantity ?\n• is the net quantity declared on the PDP?\n• is it in metric units?\n  ◦ or, in metric or Canadian units if it is a consumer prepackaged food that is packaged from bulk at retail, other than an individually measured food?\n• is the appropriate manner (volume, weight, count) for the product used?\n• is it rounded to 3 figures, unless below 100?\n• are the correct bilingual symbols used? (for example, ml, mL, mℓ, L, l, ℓ for liquids; g, kg for solids)\n  ◦ if not, and the units are written out (for example, kilograms), are the units declared in both languages (unless exempt from bilingual labelling)?\n• does the size of the numerical portion meet the minimum type height requirements (based on size of PDS)? Is it in bold face type? Are the units in letters of 1.6 mm or greater (based on lowercase \"o\")?\n• if optional Canadian units are also present, are they declared properly?\n• if optional U.S. gallons and quarts are also present, are they identified properly? (fl oz optional)\nRefer to the Industry Labelling Tool for further information onNet quantity.",
+  "error": null
+}

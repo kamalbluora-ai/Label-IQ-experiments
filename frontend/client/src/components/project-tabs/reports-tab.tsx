@@ -13,6 +13,15 @@ interface ReportsTabProps {
   project: Project;
 }
 
+// Helper to compute verdict from check_results
+const computeVerdict = (results: ComplianceReport["results"]) => {
+  const hasFail = results.check_results.some(r => r.result === "fail");
+  const hasReview = results.check_results.some(r => r.result === "needs_review");
+  if (hasFail) return "FAIL";
+  if (hasReview) return "NEEDS_REVIEW";
+  return "PASS";
+};
+
 export default function ReportsTab({ project }: ReportsTabProps) {
   const [selectedAnalysisId, setSelectedAnalysisId] = useState<string | null>(null);
   const [generatedReport, setGeneratedReport] = useState<boolean>(false);
@@ -163,19 +172,21 @@ export default function ReportsTab({ project }: ReportsTabProps) {
     doc.rect(chartX + radius + 15, chartY + 5, 4, 4, "F");
     doc.text("Non-Compliant / Review", chartX + radius + 22, chartY + 8);
 
-    // Issues Table
-    const tableBody = reportData.results.issues.map(issue => [
-      issue.code,
-      issue.severity.toUpperCase().replace("_", " "),
-      issue.message
+    // Check Results Table
+    const tableBody = reportData.results.check_results.map(check => [
+      check.question_id,
+      check.result.toUpperCase(),
+      check.question,
+      check.rationale.substring(0, 100) + (check.rationale.length > 100 ? "..." : "")
     ]);
 
     autoTable(doc, {
       startY: 120, // Moved down to avoid chart overlap
-      head: [['Code', 'Severity', 'Description']],
+      head: [['Question ID', 'Result', 'Question', 'Rationale']],
       body: tableBody,
       styles: { fontSize: 8 },
       headStyles: { fillColor: [41, 37, 36] },
+      columnStyles: { 3: { cellWidth: 'auto' } },
     });
 
     // CFIA Evidence (References)
@@ -347,10 +358,10 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                     <div>
                       <span className="block font-semibold text-slate-900">Overall Verdict</span>
                       <Badge className={
-                        reportData.results.verdict === "PASS" ? "bg-green-600" :
-                          reportData.results.verdict === "FAIL" ? "bg-red-600" : "bg-yellow-600"
+                        computeVerdict(reportData.results) === "PASS" ? "bg-green-600" :
+                          computeVerdict(reportData.results) === "FAIL" ? "bg-red-600" : "bg-yellow-600"
                       }>
-                        {reportData.results.verdict}
+                        {computeVerdict(reportData.results)}
                       </Badge>
                     </div>
                   </div>
@@ -389,44 +400,39 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                 <div className="space-y-6">
                   <h2 className="text-xl font-bold text-slate-900">Detailed Findings</h2>
 
-                  {reportData.results.issues.length === 0 ? (
+                  {reportData.results.check_results.filter(c => c.result !== "pass").length === 0 ? (
                     <div className="p-4 bg-green-50 border border-green-200 rounded-lg flex gap-3 text-green-800">
                       <CheckCircle className="w-5 h-5 shrink-0" />
-                      <p>No compliance issues detected.</p>
+                      <p>All compliance checks passed!</p>
                     </div>
                   ) : (
                     <div className="grid gap-4">
-                      {reportData.results.issues.map((issue, idx) => (
-                        <div key={idx} className={`p-4 rounded-lg border flex gap-4 ${issue.severity === "fail" || issue.severity === "FAIL"
-                          ? "bg-red-50 border-red-200"
-                          : "bg-yellow-50 border-yellow-200"
-                          }`}>
-                          {issue.severity === "fail" || issue.severity === "FAIL" ? (
-                            <XCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
-                          ) : (
-                            <AlertTriangle className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
-                          )}
-
-                          <div className="space-y-1">
-                            <h3 className={`font-semibold ${issue.severity === "fail" || issue.severity === "FAIL" ? "text-red-900" : "text-yellow-900"
-                              }`}>
-                              {issue.code}
-                            </h3>
-                            <p className="text-slate-700 text-sm">{issue.message}</p>
-
-                            {issue.references && issue.references.length > 0 && (
-                              <div className="mt-2 pt-2 border-t border-slate-200/50">
-                                <p className="text-xs font-semibold text-slate-500 mb-1">Regulatory Reference:</p>
-                                <ul className="text-xs text-slate-600 list-disc pl-4 space-y-0.5">
-                                  {issue.references.map((ref: any, rIdx: number) => (
-                                    <li key={rIdx}>{ref.title || ref.content?.substring(0, 100)}...</li>
-                                  ))}
-                                </ul>
-                              </div>
+                      {reportData.results.check_results
+                        .filter(check => check.result !== "pass")
+                        .map((check, idx) => (
+                          <div key={idx} className={`p-4 rounded-lg border flex gap-4 ${check.result === "fail"
+                              ? "bg-red-50 border-red-200"
+                              : "bg-yellow-50 border-yellow-200"
+                            }`}>
+                            {check.result === "fail" ? (
+                              <XCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
+                            ) : (
+                              <AlertTriangle className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
                             )}
+
+                            <div className="space-y-1">
+                              <h3 className={`font-semibold ${check.result === "fail" ? "text-red-900" : "text-yellow-900"
+                                }`}>
+                                [{check.section}] {check.question_id}
+                              </h3>
+                              <p className="text-slate-700 text-sm font-medium">Q: {check.question}</p>
+                              {check.selected_value && (
+                                <p className="text-slate-600 text-xs">Value: {check.selected_value}</p>
+                              )}
+                              <p className="text-slate-700 text-sm mt-2">{check.rationale}</p>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
                     </div>
                   )}
                 </div>

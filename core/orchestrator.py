@@ -30,6 +30,7 @@ from vertex_search import cfia_retrieve_snippets
 from checks import run_checks
 from translate_fields import translate_foreign_fields
 from chatgpt_search import cfia_search_chatgpt_agent
+from compliance.agents_orchestrator import ComplianceOrchestrator
 
 # Environment configuration (use .get() to allow import without full config)
 IN_BUCKET = os.environ.get("IN_BUCKET", "")
@@ -134,6 +135,7 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     job_id = manifest.get("job_id") or str(uuid.uuid4())
     manifest_mode = manifest.get("mode")  # May be None for auto-detection
     product_metadata = (manifest.get("product_metadata") or {}) or {}
+    tags = manifest.get("tags") or []  # Tags from frontend (e.g., ["front", "back"])
 
     images = manifest.get("images") or []
     if not images:
@@ -145,15 +147,16 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
         "product_metadata": product_metadata,
         "manifest_path": f"gs://{bucket}/incoming/{job_id}/job.json",
         "images": images,
+        "tags": tags,
     })
 
     # Extract each image and merge
     all_facts = []
     for obj_name in images:
         img_bytes = storage_client.bucket(bucket).blob(obj_name).download_as_bytes()
-        pre_bytes = preprocess_image_bytes(img_bytes)
-        with open("temp_img.jpg", "wb") as f:
-            f.write(pre_bytes)
+       # pre_bytes = preprocess_image_bytes(img_bytes)
+        # with open("temp_img.jpg", "wb") as f:
+        #    f.write(pre_bytes)
 
         facts = run_docai_custom_extractor(
             project_id=DOCAI_PROJECT,
@@ -184,12 +187,23 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
             glossary_id=TRANSLATE_GLOSSARY_ID,
         )
 
-    evidence = get_evidence(
-        label_facts=merged_facts,
-        product_metadata=product_metadata,
-    )
+    # OLD PIPELINE - Commented out for agents orchestrator integration
+    # evidence = get_evidence(
+    #     label_facts=merged_facts,
+    #     product_metadata=product_metadata,
+    # )
+    # compliance = run_checks(
+    #     label_facts=merged_facts, 
+    #     cfia_evidence=evidence, 
+    #     product_metadata=product_metadata,
+    #     use_gpt=True, 
+    #     tags=tags
+    # )
 
-    compliance = run_checks(label_facts=merged_facts, cfia_evidence=evidence, product_metadata=product_metadata)
+    # NEW PIPELINE - Multi-agent compliance evaluation
+    orchestrator = ComplianceOrchestrator()
+    user_context = {"food_type": product_metadata.get("food_type", "unknown")}
+    compliance = orchestrator.evaluate_sync(merged_facts)
 
     report = {
         "job_id": job_id,
@@ -198,7 +212,7 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
         "source_images": [f"gs://{bucket}/{p}" for p in images],
         "label_facts": merged_facts,
         "results": compliance,
-        "cfia_evidence": evidence,
+        "cfia_evidence": {},  # Placeholder for frontend compatibility
     }
 
     report_path = f"reports/{job_id}.json"
