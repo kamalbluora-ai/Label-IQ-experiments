@@ -15,16 +15,12 @@ from core.processor import run_docai_custom_extractor
 from core.orchestrator import merge_label_facts
 
 
-# ==============================================================================
-# USER CONTEXT - Add your tags here for testing
-# ==============================================================================
 USER_CONTEXT = {
     "food_type": "ready-to-eat",  # Options: "ready-to-eat", "needs-cooking"
     # Add more context as needed:
     # "is_imported": True,
     # "contains_sweeteners": False,
 }
-# ==============================================================================
 
 
 async def main():

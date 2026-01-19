@@ -149,7 +149,7 @@ For each question, respond with:
             
             # Call LLM
             response = self.client.chat.completions.create(
-                model="gpt-4o",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": self.system_prompt},
                     {"role": "user", "content": user_prompt}
@@ -181,3 +181,5 @@ For each question, respond with:
                     for q in questions
                 ]
             }
+
+

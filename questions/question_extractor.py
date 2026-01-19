@@ -37,6 +37,7 @@ INSTRUCTIONS:
 3. Preserve the hierarchy (main questions and their sub-questions)
 4. Include the exact question text as it appears
 5. Use snake_case for section keys
+6. CLASSIFY each question as "deterministic" or "llm" based on complexity
 
 OUTPUT FORMAT (JSON):
 {
@@ -55,7 +56,29 @@ OUTPUT FORMAT (JSON):
           "text": "is a common name present?",
           "sub_questions": [
             "if not, is the product exempt from common name?"
-          ]
+          ],
+          "check_type": "deterministic",
+          "field": "common_name_en",
+          "logic": "field_exists"
+        },
+        {
+          "id": "CN-2",
+          "text": "is the common name on the principal display panel (PDP)?",
+          "check_type": "deterministic",
+          "field": "common_name_en",
+          "panel": "panel_pdp",
+          "logic": "in_panel"
+        },
+        {
+          "id": "CN-3",
+          "text": "is the common name in letters of 1.6 mm or greater?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "CN-4",
+          "text": "is it an appropriate common name?",
+          "check_type": "llm"
         }
       ]
     },
@@ -75,11 +98,39 @@ OUTPUT FORMAT (JSON):
   }
 }
 
+CLASSIFICATION RULES:
+- "deterministic": Simple checks that can be done with Python code
+  * Presence checks: "is X present?" → field_exists
+  * Location checks: "is X on the PDP?" → in_panel
+  * Format checks: "is it in metric units?" → regex (if pattern is simple)
+  * Visual checks: "is it 1.6mm or greater?" → always_needs_review
+  
+- "llm": Complex checks requiring semantic understanding
+  * Appropriateness: "is it an appropriate name?"
+  * Order validation: "are ingredients in descending order?"
+  * Domain knowledge: "allergen declarations", "cross-contamination"
+  * Judgment calls: "is the format acceptable?"
+
+LOGIC TYPES (for deterministic only):
+- "field_exists": Check if DocAI field has a value (include "field" key)
+- "in_panel": Check if value appears in panel text (include "field" and "panel" keys)
+- "regex": Pattern matching (include "field" and "pattern" keys)
+- "always_needs_review": Visual/physical inspection required (no additional keys)
+
+DOCAI FIELD NAMES (common ones):
+- common_name_en, common_name_fr
+- net_quantity_full_text, net_quantity_value, net_quantity_unit_words_en
+- ingredients_en, ingredients_fr
+- name_and_address
+- best_before_date, packaged_on_date
+
 IMPORTANT:
 - Extract EVERY question, do not summarize or skip any
 - Keep sub-questions nested under their parent question
 - Use lowercase for question text
 - Generate unique IDs (CN-1, CN-2, NQ-1, etc.)
+- Add check_type to EVERY question
+- For deterministic questions, include appropriate metadata (field, logic, etc.)
 
 CFIA CHECKLIST CONTENT:
 """

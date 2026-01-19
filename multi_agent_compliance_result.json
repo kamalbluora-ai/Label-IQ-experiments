@@ -1,111 +1,160 @@
 {
-  "compliance_score": 69.23,
-  "checks_passed": 9,
-  "checks_total": 13,
+  "compliance_score": 20.0,
+  "checks_passed": 4,
+  "checks_total": 20,
   "check_results": [
     {
       "question_id": "CN-1",
-      "question": "is a common name present? - if not, is the product exempt from common name?",
+      "question": "is a common name present?",
       "result": "pass",
-      "selected_value": "DIPPED GRANOLA BARS",
-      "rationale": "The extracted data includes 'DIPPED GRANOLA BARS' as a common name in English and 'BARRES PLONGÉES BARRES TENDRES' in French. These names are present and indicate the type of product, which is a granola bar. Therefore, a common name is present, and the product is not exempt from having a common name.",
+      "selected_value": "Bars",
+      "rationale": "Field 'common_name_en' found in extracted data.",
       "section": "Common Name"
     },
     {
       "question_id": "CN-2",
       "question": "is the common name on the principal display panel (PDP)?",
-      "result": "pass",
-      "selected_value": "DIPPED GRANOLA BARS",
-      "rationale": "The common name 'DIPPED GRANOLA BARS' appears on the principal display panel (PDP) as indicated in the 'panel_pdp' text. The presence of this name on the PDP satisfies the requirement for the common name to be displayed prominently.",
+      "result": "fail",
+      "selected_value": "Bars",
+      "rationale": "'Bars' not found in panel_pdp.",
       "section": "Common Name"
     },
     {
       "question_id": "CN-3",
-      "question": "is the common name in letters of 1.6 mm or greater? - or, if the area of the principal display surface (PDS) is 10 cm2 (1.55 inches2) or less, is the common name shown in characters with a minimum type height of 0.8 mm (1/32 inch)?",
+      "question": "is the common name in letters of 1.6 mm or greater?",
       "result": "needs_review",
-      "selected_value": "DIPPED GRANOLA BARS",
-      "rationale": "The data provided does not include measurements of the text size or the principal display surface (PDS) area. Therefore, it is not possible to determine if the common name meets the size requirements without physical inspection or additional information.",
+      "rationale": "Requires physical inspection or visual verification.",
       "section": "Common Name"
     },
     {
       "question_id": "CN-4",
-      "question": "is it an appropriate common name? - as printed in bold face type, but not in italics, in the FDR or in the Canadian Standards of Identity documents incorporated by reference (IbR) in the SFCR - as prescribed by any other regulation - the name by which the food is generally known or a name that is not generic and that describes the food, if the name is not so printed or prescribed, or - if the food is likely to be mistaken for another food, the common name must include words that describe the food's true nature with respect to its condition",
+      "question": "Is it an appropriate common name?",
       "result": "pass",
-      "selected_value": "DIPPED GRANOLA BARS",
-      "rationale": "The common name 'DIPPED GRANOLA BARS' is appropriate as it describes the product accurately and is the name by which such products are generally known. It is not likely to be mistaken for another food, and it describes the true nature of the product, which is a granola bar with a dipped coating. This meets the criteria for an appropriate common name.",
+      "selected_value": "Bars",
+      "rationale": "The common name 'Bars' is appropriate for the product as it is a general term that describes the nature of the food, which is a ready-to-eat item. The term 'Rolled Oats' is also relevant, but 'Bars' is more fitting as it likely refers to the final product form. The French common name 'BARRES PLONGÉES' also aligns with the English common name and is appropriate. Both names are commonly understood and do not mislead consumers regarding the product's nature.",
       "section": "Common Name"
     },
     {
       "question_id": "NQ-1",
-      "question": "is a net quantity declaration present? - if not, is the product exempt from net quantity?",
-      "result": "pass",
-      "selected_value": "5 GRANOLA BARS",
-      "rationale": "The net quantity declaration '5 GRANOLA BARS' is present on the Principal Display Panel (PDP), indicating the count of the product. This satisfies the requirement for a net quantity declaration.",
+      "question": "is a net quantity declaration present?",
+      "result": "fail",
+      "selected_value": "Not found",
+      "rationale": "Field 'net_quantity_full_text' not found in extracted data.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-2",
       "question": "is the net quantity declared on the PDP?",
-      "result": "pass",
-      "selected_value": "5 GRANOLA BARS",
-      "rationale": "The net quantity '5 GRANOLA BARS' is clearly stated on the Principal Display Panel (PDP) as part of the product description.",
+      "result": "fail",
+      "rationale": "Field 'net_quantity_full_text' not found in extracted data.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-3",
-      "question": "is it in metric units? - or, in metric or Canadian units if it is a consumer prepackaged food that is packaged from bulk at retail, other than an individually measured food?",
+      "question": "is it in metric units?",
       "result": "fail",
-      "selected_value": "5 GRANOLA BARS",
-      "rationale": "The net quantity is declared as a count ('5 GRANOLA BARS') without any metric units. While count is acceptable for certain products, metric units are required unless exempt. No metric units are present.",
-      "section": "Net Quantity Declaration"
-    },
-    {
-      "question_id": "NQ-4",
-      "question": "is the appropriate manner (volume, weight, count) for the product used?",
-      "result": "pass",
-      "selected_value": "5 GRANOLA BARS",
-      "rationale": "The product is a ready-to-eat granola bar, and it is appropriate to declare the net quantity by count ('5 GRANOLA BARS').",
-      "section": "Net Quantity Declaration"
-    },
-    {
-      "question_id": "NQ-5",
-      "question": "is it rounded to 3 figures, unless below 100?",
-      "result": "pass",
-      "selected_value": "5",
-      "rationale": "The net quantity is a count of 5, which is below 100, so it does not require rounding to 3 significant figures.",
+      "rationale": "Field 'net_quantity_unit_words_en' not found.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-6",
-      "question": "are the correct bilingual symbols used? (for example, ml, mL, mℓ, L, l, ℓ for liquids; g, kg for solids) - if not, and the units are written out (for example, kilograms), are the units declared in both languages (unless exempt from bilingual labelling)?",
+      "question": "are the correct bilingual symbols used?",
       "result": "needs_review",
-      "selected_value": "5 GRANOLA BARS",
-      "rationale": "The net quantity is declared as a count, which does not require metric symbols. However, the absence of metric units means this cannot be fully evaluated for compliance with bilingual symbol requirements.",
+      "rationale": "Requires physical inspection or visual verification.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-7",
-      "question": "does the size of the numerical portion meet the minimum type height requirements (based on size of PDS)? Is it in bold face type? Are the units in letters of 1.6 mm or greater (based on lowercase 'o')?",
+      "question": "does the size of the numerical portion meet the minimum type height requirements?",
       "result": "needs_review",
-      "selected_value": "5 GRANOLA BARS",
-      "rationale": "The evaluation of type height and bold face type requires physical inspection of the packaging, which is not possible with the provided data.",
+      "rationale": "Requires physical inspection or visual verification.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-4",
+      "question": "Is the appropriate manner (volume, weight, count) for the product used?",
+      "result": "fail",
+      "selected_value": null,
+      "rationale": "There are no net quantity declarations provided in the input data. Since the product is classified as 'ready-to-eat', it typically requires a net quantity declaration in weight (grams or kilograms) or count (e.g., number of servings). The absence of any net quantity information means that the requirement for appropriate manner is not met.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-5",
+      "question": "Is it rounded to 3 figures, unless below 100?",
+      "result": "fail",
+      "selected_value": null,
+      "rationale": "There are no net quantity values provided in the input data. Without any numeric values to evaluate, it is impossible to determine if they are rounded to 3 significant figures or if they meet the requirement for values below 100. Therefore, this requirement is not met.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-8",
-      "question": "if optional Canadian units are also present, are they declared properly?",
-      "result": "pass",
-      "selected_value": "5 GRANOLA BARS",
-      "rationale": "No optional Canadian units are present, so this requirement is not applicable.",
+      "question": "If optional Canadian units are also present, are they declared properly?",
+      "result": "fail",
+      "selected_value": null,
+      "rationale": "There are no net quantity unit words provided in the input data. Since there are no Canadian units present, the requirement for proper declaration of optional Canadian units is not met.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-9",
-      "question": "if optional U.S. gallons and quarts are also present, are they identified properly? (fl oz optional)",
-      "result": "pass",
-      "selected_value": "5 GRANOLA BARS",
-      "rationale": "No optional U.S. gallons, quarts, or fluid ounces are present, so this requirement is not applicable.",
+      "question": "If optional U.S. gallons and quarts are also present, are they identified properly?",
+      "result": "fail",
+      "selected_value": null,
+      "rationale": "There are no net quantity unit words provided in the input data. Since there are no U.S. units present, the requirement for proper identification of optional U.S. gallons and quarts is not met.",
       "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NF-1",
+      "question": "is an NFt present?",
+      "result": "pass",
+      "selected_value": "Nutrition Facts Per Bar (31 g) Calories 150\n%Daily Value* Fat / Lipides 8 g\n10%\nSaturated / Saturés 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Protéines 1 g\nCholesterol / Cholestérol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+      "rationale": "Field 'nft_table_en' found in extracted data.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-2",
+      "question": "is the NFt on the outer package?",
+      "result": "needs_review",
+      "rationale": "Requires physical inspection or visual verification.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-7",
+      "question": "is the table background and print in the appropriate colours?",
+      "result": "needs_review",
+      "rationale": "Requires physical inspection or visual verification.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-3",
+      "question": "Is the appropriate format family used?",
+      "result": "fail",
+      "selected_value": "Standard format",
+      "rationale": "The NFt provided appears to be in a standard format, but it is not clear if it meets the requirements for a ready-to-eat food product. The format should be verified against the specific requirements for this food type.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-4",
+      "question": "Is the serving size aligned with the regulated reference amount?",
+      "result": "pass",
+      "selected_value": "Per Bar (31 g)",
+      "rationale": "The serving size of 'Per Bar (31 g)' is aligned with the regulated reference amount for this type of product.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-5",
+      "question": "Are energy and the 12 core nutrients declared?",
+      "result": "fail",
+      "selected_value": "Energy and some core nutrients are declared",
+      "rationale": "While energy (calories) and several core nutrients are declared, not all 12 core nutrients are included in the NFt. Specifically, vitamins and minerals should be fully listed.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-6",
+      "question": "Is the % Daily Value interpretative statement included in the NFt?",
+      "result": "fail",
+      "selected_value": "No interpretative statement present",
+      "rationale": "The NFt does not include a clear % Daily Value interpretative statement for the nutrients listed, which is required for compliance.",
+      "section": "Nutrition Facts Table (NFt)"
     }
   ]
 }
