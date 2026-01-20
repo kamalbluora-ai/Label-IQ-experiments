@@ -1,160 +1,527 @@
 {
-  "compliance_score": 20.0,
-  "checks_passed": 4,
-  "checks_total": 20,
+  "compliance_score": 24.62,
+  "checks_passed": 16,
+  "checks_total": 65,
   "check_results": [
     {
       "question_id": "CN-1",
       "question": "is a common name present?",
       "result": "pass",
-      "selected_value": "Bars",
-      "rationale": "Field 'common_name_en' found in extracted data.",
+      "selected_value": "Bars / BARRES PLONGÉES",
+      "rationale": "Common name candidates have been identified in both English ('Bars', 'Rolled Oats') and French ('BARRES PLONGÉES'). The product is not exempt from the requirement to have a common name.",
       "section": "Common Name"
     },
     {
       "question_id": "CN-2",
       "question": "is the common name on the principal display panel (PDP)?",
       "result": "fail",
-      "selected_value": "Bars",
-      "rationale": "'Bars' not found in panel_pdp.",
+      "selected_value": "Bars / BARRES PLONGÉES",
+      "rationale": "The provided text for the principal display panel (panel_pdp) appears to be a generic definition of a PDP rather than the actual text from the product label. Consequently, the identified common name candidates ('Bars', 'BARRES PLONGÉES') are not found within the provided PDP text.",
       "section": "Common Name"
     },
     {
       "question_id": "CN-3",
       "question": "is the common name in letters of 1.6 mm or greater?",
       "result": "needs_review",
-      "rationale": "Requires physical inspection or visual verification.",
+      "selected_value": "Bars / BARRES PLONGÉES",
+      "rationale": "The provided data does not include font size measurements or the Principal Display Surface (PDS) area. Physical measurement is required to confirm the text meets the 1.6 mm minimum height requirement (or 0.8 mm if the PDS is 10 cm² or less).",
       "section": "Common Name"
     },
     {
       "question_id": "CN-4",
-      "question": "Is it an appropriate common name?",
-      "result": "pass",
-      "selected_value": "Bars",
-      "rationale": "The common name 'Bars' is appropriate for the product as it is a general term that describes the nature of the food, which is a ready-to-eat item. The term 'Rolled Oats' is also relevant, but 'Bars' is more fitting as it likely refers to the final product form. The French common name 'BARRES PLONGÉES' also aligns with the English common name and is appropriate. Both names are commonly understood and do not mislead consumers regarding the product's nature.",
+      "question": "is it an appropriate common name?",
+      "result": "needs_review",
+      "selected_value": "Bars / BARRES PLONGÉES",
+      "rationale": "The term 'Bars' is highly generic and may not be an appropriate common name on its own under CFIA guidelines, as it may not describe the true nature of the food (e.g., 'Granola Bars' or 'Protein Bars' would be more descriptive). 'Rolled Oats' is a standard name, but it is unclear if it refers to the whole product. 'BARRES PLONGÉES' (Dipped Bars) is more descriptive but still requires verification against the product's actual composition to ensure it is not misleading.",
       "section": "Common Name"
     },
     {
       "question_id": "NQ-1",
       "question": "is a net quantity declaration present?",
       "result": "fail",
-      "selected_value": "Not found",
-      "rationale": "Field 'net_quantity_full_text' not found in extracted data.",
+      "selected_value": null,
+      "rationale": "The net_quantity_full_text list is empty. Ready-to-eat food products are generally required to have a net quantity declaration under the Safe Food for Canadians Regulations (SFCR) and are not exempt based on the provided food_type.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-2",
       "question": "is the net quantity declared on the PDP?",
       "result": "fail",
-      "rationale": "Field 'net_quantity_full_text' not found in extracted data.",
+      "selected_value": null,
+      "rationale": "Since no net quantity declaration was detected in the extracted data, the requirement for it to be placed on the Principal Display Panel (PDP) is not met.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-3",
       "question": "is it in metric units?",
       "result": "fail",
-      "rationale": "Field 'net_quantity_unit_words_en' not found.",
+      "selected_value": null,
+      "rationale": "No metric units (g, kg, mL, L) were found in the net_quantity_unit_words_en or net_quantity_unit_words_fr lists.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-4",
+      "question": "is the appropriate manner (volume, weight, count) for the product used?",
+      "result": "fail",
+      "selected_value": null,
+      "rationale": "Compliance cannot be determined because no net quantity value or unit was provided for the ready-to-eat food type.",
+      "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "NQ-5",
+      "question": "is it rounded to 3 figures, unless below 100?",
+      "result": "fail",
+      "selected_value": null,
+      "rationale": "No numeric values were found in the net_quantity_value list to evaluate rounding compliance.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-6",
       "question": "are the correct bilingual symbols used?",
-      "result": "needs_review",
-      "rationale": "Requires physical inspection or visual verification.",
+      "result": "fail",
+      "selected_value": null,
+      "rationale": "No bilingual symbols or unit words were detected in the extracted data.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-7",
       "question": "does the size of the numerical portion meet the minimum type height requirements?",
       "result": "needs_review",
-      "rationale": "Requires physical inspection or visual verification.",
-      "section": "Net Quantity Declaration"
-    },
-    {
-      "question_id": "NQ-4",
-      "question": "Is the appropriate manner (volume, weight, count) for the product used?",
-      "result": "fail",
       "selected_value": null,
-      "rationale": "There are no net quantity declarations provided in the input data. Since the product is classified as 'ready-to-eat', it typically requires a net quantity declaration in weight (grams or kilograms) or count (e.g., number of servings). The absence of any net quantity information means that the requirement for appropriate manner is not met.",
-      "section": "Net Quantity Declaration"
-    },
-    {
-      "question_id": "NQ-5",
-      "question": "Is it rounded to 3 figures, unless below 100?",
-      "result": "fail",
-      "selected_value": null,
-      "rationale": "There are no net quantity values provided in the input data. Without any numeric values to evaluate, it is impossible to determine if they are rounded to 3 significant figures or if they meet the requirement for values below 100. Therefore, this requirement is not met.",
+      "rationale": "Minimum type height is based on the area of the Principal Display Surface (PDS). Without a detected numeric value or the physical dimensions of the label, this cannot be verified.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-8",
-      "question": "If optional Canadian units are also present, are they declared properly?",
-      "result": "fail",
+      "question": "if optional Canadian units are also present, are they declared properly?",
+      "result": "needs_review",
       "selected_value": null,
-      "rationale": "There are no net quantity unit words provided in the input data. Since there are no Canadian units present, the requirement for proper declaration of optional Canadian units is not met.",
+      "rationale": "No optional Canadian units were detected in the provided data to evaluate for compliance.",
       "section": "Net Quantity Declaration"
     },
     {
       "question_id": "NQ-9",
-      "question": "If optional U.S. gallons and quarts are also present, are they identified properly?",
-      "result": "fail",
+      "question": "if optional U.S. gallons and quarts are also present, are they identified properly?",
+      "result": "needs_review",
       "selected_value": null,
-      "rationale": "There are no net quantity unit words provided in the input data. Since there are no U.S. units present, the requirement for proper identification of optional U.S. gallons and quarts is not met.",
+      "rationale": "No optional U.S. units were detected in the provided data to evaluate for compliance.",
       "section": "Net Quantity Declaration"
+    },
+    {
+      "question_id": "LI-1",
+      "question": "is a list of ingredients present?",
+      "result": "pass",
+      "selected_value": "ingredients_list_en and ingredients_list_fr provided",
+      "rationale": "Both English and French ingredient lists are present in the provided data.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-2",
+      "question": "are ingredients in descending order of proportion by weight?",
+      "result": "pass",
+      "selected_value": "Granola, Sugar, Oils...",
+      "rationale": "The list appears to follow a standard descending order starting with the main component (Granola), though exact weights are not provided for verification.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-3",
+      "question": "have the ingredients been declared using an appropriate common name?",
+      "result": "fail",
+      "selected_value": "Partially Hydrogenated Palm Kernel And Palm Oil",
+      "rationale": "The list includes 'Partially Hydrogenated Palm Kernel And Palm Oil' and 'Partially Hydrogenated Soybean Oil'. As of September 17, 2018, Partially Hydrogenated Oils (PHOs) are prohibited in food sold in Canada.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-4",
+      "question": "have components been properly declared where required?",
+      "result": "pass",
+      "selected_value": "Granola, Crisp Rice, Coconut Flakes",
+      "rationale": "Multi-component ingredients such as Granola, Crisp Rice, and Coconut Flakes have their sub-ingredients correctly listed in parentheses.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-5",
+      "question": "have sugars-based ingredients that are required to be grouped after the term 'Sugars' been properly declared?",
+      "result": "fail",
+      "selected_value": "Sugar, High Fructose Corn Syrup, Molasses, Honey, Corn Syrup, Brown Sugar, Corn Syrup Solids, Lactose",
+      "rationale": "Under CFIA's updated labelling requirements, all sugars-based ingredients (Sugar, HFCS, Molasses, Honey, Corn Syrup, Brown Sugar, Corn Syrup Solids, Lactose) must be grouped together in parentheses following the common name 'Sugars'.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-6",
+      "question": "are priority allergens, gluten and added sulphites declared using the prescribed source name or common names, as required?",
+      "result": "pass",
+      "selected_value": "Wheat, Barley, Milk, Soy",
+      "rationale": "Priority allergens are identified within the ingredient list: Wheat (in Granola), Barley (in Crisp Rice), Milk (Whey, Lactose, Milkfat), and Soy (Soy Lecithin, Soybean Oil).",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-7",
+      "question": "are priority allergens present due to unintended cross-contamination and listed in a cross-contamination statement?",
+      "result": "needs_review",
+      "selected_value": "None provided",
+      "rationale": "No 'May Contain' statement was provided. A review of the manufacturing facility's cross-contamination risks is required to determine if a statement is necessary.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-8",
+      "question": "is the 'contains' statement and/or cross contamination statement, if present, at the end of the list of ingredients?",
+      "result": "pass",
+      "selected_value": "No statement present",
+      "rationale": "There is no 'Contains' or cross-contamination statement provided; therefore, there is no placement violation.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-9",
+      "question": "if the product contains aspartame, is the phenylalanine statement present?",
+      "result": "pass",
+      "selected_value": "Aspartame not present",
+      "rationale": "The product does not list aspartame as an ingredient, so no phenylalanine statement is required.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-10",
+      "question": "if the statements are present, are they in the proper order of the phenylalanine statement, followed by the 'contains' statement, followed by the cross-contamination statement?",
+      "result": "pass",
+      "selected_value": "No statements present",
+      "rationale": "No such statements are present in the data provided.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "LI-11",
+      "question": "are the English and French lists of ingredients, phenylalanine statement and allergen declarations the same?",
+      "result": "pass",
+      "selected_value": "EN and FR lists match",
+      "rationale": "The English and French ingredient lists are consistent in content and translation.",
+      "section": "List of Ingredients and Allergen Labelling"
+    },
+    {
+      "question_id": "NA-1",
+      "question": "is a name and principal place of business present, to the level of detail required?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No dealer name or address was detected in the extracted data. Ready-to-eat food products are not exempt from the requirement to declare the name and principal place of business of the responsible party.",
+      "section": "Name and Principal Place of Business"
+    },
+    {
+      "question_id": "NA-2",
+      "question": "Canadian name and principal place of business, grouped with the geographic origin, or preceded by the expressions 'Imported by / importé par' or 'Imported for / importé pour'? Or, foreign name and principal place of business is identified?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "Because no name or address was provided, it is impossible to determine if the product is domestic or imported, or if the required qualifying phrases are present.",
+      "section": "Name and Principal Place of Business"
+    },
+    {
+      "question_id": "NA-3",
+      "question": "is the information on any label panel except solely on the bottom (except ornamental containers)?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No name or address information was found on any part of the label data provided.",
+      "section": "Name and Principal Place of Business"
+    },
+    {
+      "question_id": "NA-4",
+      "question": "are type height requirements of 1.6 mm (1/16 inch) or greater are met? Or, if the area of the principal display surface (PDS) is 10 cm2 (1.55 inches2) or less, is the minimum type height 0.8 mm (1/32 inch)?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "Compliance with type height requirements cannot be verified as no text for the name or address was detected.",
+      "section": "Name and Principal Place of Business"
+    },
+    {
+      "question_id": "NA-5",
+      "question": "is it in English or French?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No name or address information was detected in either English or French.",
+      "section": "Name and Principal Place of Business"
+    },
+    {
+      "question_id": "DM-1",
+      "question": "is a 'best before' date required? - if so, is it present?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "Ready-to-eat foods typically have a durable life of 90 days or less and require a 'best before' date under FDR B.01.007. No best before date was detected in the provided data.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-2",
+      "question": "is the correct wording 'best before' / 'meilleur avant' used in English and French?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No bilingual wording ('best before' / 'meilleur avant') was detected on the label.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-3",
+      "question": "is the wording grouped with the date or does it clearly explain the date if located elsewhere on the label?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "Since no date or wording was detected, the requirement for grouping or clear explanation cannot be met.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-4",
+      "question": "is the presentation of the date acceptable?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No date was detected to evaluate against the required YY-MM-DD format and bilingual month symbols.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-5",
+      "question": "is the location of the date acceptable?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No date was detected on the label.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-6",
+      "question": "is a 'packaged on' date required? - if so, is it present?",
+      "result": "needs_review",
+      "selected_value": "null",
+      "rationale": "A 'packaged on' date is required for certain retail-packed products with a durable life of more than 90 days. While not typically required for standard RTE foods with short shelf lives, the absence of any date marking makes this a point of concern.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-7",
+      "question": "is the correct wording 'packaged on' / 'empaqueté le' used?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No 'packaged on' wording was detected.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-8",
+      "question": "is the wording grouped with the date or does it clearly explain the date if located elsewhere on the label?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No date or wording detected to evaluate grouping.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-9",
+      "question": "is the presentation correct as described above?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No date detected to evaluate presentation.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-10",
+      "question": "is location of the date acceptable as described above?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No date detected.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-11",
+      "question": "are storage instructions required? - if so, are they present and complete?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "Ready-to-eat foods often require specific storage conditions (e.g., 'Keep Refrigerated') to maintain their durable life and safety. No storage instructions were detected.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-12",
+      "question": "is an 'expiration date' required? - if so, is it present?",
+      "result": "pass",
+      "selected_value": "null",
+      "rationale": "Expiration dates are only required for specific foods like formulated liquid diets, meal replacements, and infant formula. Ready-to-eat food does not typically fall into these categories.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-13",
+      "question": "is the location of the date acceptable?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "No date was detected to evaluate location.",
+      "section": "Date Markings"
+    },
+    {
+      "question_id": "DM-14",
+      "question": "is all of the above information readily discernible?",
+      "result": "fail",
+      "selected_value": "null",
+      "rationale": "Required date marking and storage information is missing from the label data, therefore it is not discernible.",
+      "section": "Date Markings"
     },
     {
       "question_id": "NF-1",
       "question": "is an NFt present?",
       "result": "pass",
-      "selected_value": "Nutrition Facts Per Bar (31 g) Calories 150\n%Daily Value* Fat / Lipides 8 g\n10%\nSaturated / Saturés 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Protéines 1 g\nCholesterol / Cholestérol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
-      "rationale": "Field 'nft_table_en' found in extracted data.",
+      "selected_value": "Nutrition Facts / Valeur Nutritive",
+      "rationale": "An NFt is present as evidenced by the extracted titles and nutrient data in the English table.",
       "section": "Nutrition Facts Table (NFt)"
     },
     {
       "question_id": "NF-2",
       "question": "is the NFt on the outer package?",
       "result": "needs_review",
-      "rationale": "Requires physical inspection or visual verification.",
+      "selected_value": null,
+      "rationale": "The provided text data does not specify the physical location of the NFt on the packaging or the dimensions of the package.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-3",
+      "question": "is the appropriate format family used?",
+      "result": "pass",
+      "selected_value": "Standard/Bilingual",
+      "rationale": "The data indicates a standard format attempting to list core nutrients and daily values, which is appropriate for a ready-to-eat bar.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-4",
+      "question": "is the serving size aligned with the regulated reference amount?",
+      "result": "pass",
+      "selected_value": "Per Bar (31 g)",
+      "rationale": "The serving size is expressed as a single unit (Per Bar) with the metric weight (31 g), which is consistent with the reference amount for snack bars. Note: The French translation contains a typo ('Berre' instead of 'Barre').",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-5",
+      "question": "are energy and the 12 core nutrients declared?",
+      "result": "fail",
+      "selected_value": "Incomplete French Table",
+      "rationale": "While the English table contains Calories and the core nutrients (Fat, Saturated, Trans, Carbohydrate, Fibre, Sugars, Protein, Cholesterol, Sodium, Potassium, Calcium, Iron), the French table (nft_table_fr) is missing all nutrient values and names, failing bilingual requirements.",
+      "section": "Nutrition Facts Table (NFt)"
+    },
+    {
+      "question_id": "NF-6",
+      "question": "is the % Daily Value interpretative statement included in the NFt?",
+      "result": "fail",
+      "selected_value": "Missing footnote",
+      "rationale": "The mandatory interpretative statement ('* 5% or less is a little, 15% or more is a lot' / '* 5% ou moins c'est peu, 15% ou plus c'est beaucoup') is not present in the extracted text.",
       "section": "Nutrition Facts Table (NFt)"
     },
     {
       "question_id": "NF-7",
       "question": "is the table background and print in the appropriate colours?",
       "result": "needs_review",
-      "rationale": "Requires physical inspection or visual verification.",
+      "selected_value": null,
+      "rationale": "The provided text data does not contain information regarding the visual presentation, such as font color, background color, or line thickness.",
       "section": "Nutrition Facts Table (NFt)"
     },
     {
-      "question_id": "NF-3",
-      "question": "Is the appropriate format family used?",
-      "result": "fail",
-      "selected_value": "Standard format",
-      "rationale": "The NFt provided appears to be in a standard format, but it is not clear if it meets the requirements for a ready-to-eat food product. The format should be verified against the specific requirements for this food type.",
-      "section": "Nutrition Facts Table (NFt)"
+      "question_id": "FOP-1",
+      "question": "is an FOP nutrition symbol present?",
+      "result": "needs_review",
+      "selected_value": "None",
+      "rationale": "The provided data 'fop_symbol_present' is empty, indicating no symbol was detected. A determination of whether the product is exempt or prohibited cannot be made without nutrient data (saturated fat, sugars, sodium) and specific product category details to compare against CFIA thresholds.",
+      "section": "Front-of-Package (FOP) Nutrition Symbol"
     },
     {
-      "question_id": "NF-4",
-      "question": "Is the serving size aligned with the regulated reference amount?",
+      "question_id": "FOP-2",
+      "question": "is the nutrition symbol located on the PDP of the product?",
+      "result": "needs_review",
+      "selected_value": "None",
+      "rationale": "Compliance cannot be evaluated because no FOP nutrition symbol was provided in the extracted data.",
+      "section": "Front-of-Package (FOP) Nutrition Symbol"
+    },
+    {
+      "question_id": "FOP-3",
+      "question": "does the nutrition symbol meet the requirements for legibility, language and orientation?",
+      "result": "needs_review",
+      "selected_value": "None",
+      "rationale": "Compliance cannot be evaluated because no FOP nutrition symbol was provided in the extracted data.",
+      "section": "Front-of-Package (FOP) Nutrition Symbol"
+    },
+    {
+      "question_id": "FOP-4",
+      "question": "does the nutrition symbol meet the required technical specifications?",
+      "result": "needs_review",
+      "selected_value": "None",
+      "rationale": "Compliance cannot be evaluated because no FOP nutrition symbol was provided in the extracted data.",
+      "section": "Front-of-Package (FOP) Nutrition Symbol"
+    },
+    {
+      "question_id": "FOP-5",
+      "question": "is the nutrition symbol proportional to the PDS?",
+      "result": "needs_review",
+      "selected_value": "None",
+      "rationale": "Compliance cannot be evaluated because no FOP nutrition symbol or Principal Display Surface (PDS) measurements were provided.",
+      "section": "Front-of-Package (FOP) Nutrition Symbol"
+    },
+    {
+      "question_id": "BR-1",
+      "question": "is all mandatory information referred to in this checklist in English and French?",
       "result": "pass",
-      "selected_value": "Per Bar (31 g)",
-      "rationale": "The serving size of 'Per Bar (31 g)' is aligned with the regulated reference amount for this type of product.",
-      "section": "Nutrition Facts Table (NFt)"
+      "selected_value": "Common Name and Ingredients List",
+      "rationale": "The mandatory information provided in the extracted data, specifically the common name and the ingredients list, is present in both English and French. The common name 'Bars' is translated as 'BARRES PLONGÉES', and the ingredients list is provided in both languages. No bilingual exemptions are necessary as the product meets the bilingual requirements for the fields provided.",
+      "section": "Bilingual Requirements"
     },
     {
-      "question_id": "NF-5",
-      "question": "Are energy and the 12 core nutrients declared?",
+      "question_id": "IR-1",
+      "question": "is the food permitted to be irradiated? - If so, is there a written statement such as 'irradiated' or 'treated with radiation' or 'treated by irradiation' and the international symbol?",
       "result": "fail",
-      "selected_value": "Energy and some core nutrients are declared",
-      "rationale": "While energy (calories) and several core nutrients are declared, not all 12 core nutrients are included in the NFt. Specifically, vitamins and minerals should be fully listed.",
-      "section": "Nutrition Facts Table (NFt)"
+      "selected_value": "None",
+      "rationale": "The extracted data contains no irradiation statement or international symbol. While certain ready-to-eat foods (like ground beef) are permitted to be irradiated in Canada, the mandatory labeling requirements (statement and symbol) are not met based on the provided information.",
+      "section": "Irradiation"
     },
     {
-      "question_id": "NF-6",
-      "question": "Is the % Daily Value interpretative statement included in the NFt?",
+      "question_id": "IR-2",
+      "question": "is the statement readily discernible?",
       "result": "fail",
-      "selected_value": "No interpretative statement present",
-      "rationale": "The NFt does not include a clear % Daily Value interpretative statement for the nutrients listed, which is required for compliance.",
-      "section": "Nutrition Facts Table (NFt)"
+      "selected_value": "None",
+      "rationale": "No irradiation statement was found in the extracted data; therefore, it cannot be evaluated for discernibility.",
+      "section": "Irradiation"
+    },
+    {
+      "question_id": "IR-3",
+      "question": "is the international symbol on the principal display panel?",
+      "result": "fail",
+      "selected_value": "None",
+      "rationale": "The international irradiation symbol (Radura) is missing from the provided product data.",
+      "section": "Irradiation"
+    },
+    {
+      "question_id": "IR-4",
+      "question": "does the international symbol meet the minimum size requirements for the outer diameter?",
+      "result": "fail",
+      "selected_value": "None",
+      "rationale": "Compliance cannot be verified as no symbol is present in the provided data.",
+      "section": "Irradiation"
+    },
+    {
+      "question_id": "IR-5",
+      "question": "are irradiated ingredients that constitute more than 10% of the final food identified in the list of ingredients as 'irradiated'?",
+      "result": "needs_review",
+      "selected_value": "None",
+      "rationale": "An ingredient list was not provided in the extracted data. Further review is required to determine if the product contains irradiated ingredients exceeding 10% of the total composition.",
+      "section": "Irradiation"
+    },
+    {
+      "question_id": "SW-1",
+      "question": "is aspartame added to the prepackaged food? - if so, is a phenylalanine statement present? - does the statement appear at the end of the list of ingredients? - is the statement in bold type?",
+      "result": "pass",
+      "selected_value": "No aspartame detected",
+      "rationale": "The ingredients list was reviewed and aspartame is not present. As aspartame is not an ingredient, the requirement for a phenylalanine statement is not triggered.",
+      "section": "Sweeteners"
+    },
+    {
+      "question_id": "SW-2",
+      "question": "is the product a table-top sweetener? - if so and aspartame, sucralose, acesulfame-potassium or neotame are present, is a statement of the sweetness per serving expressed in terms of the amount of sugar required to produce an equivalent degree of sweetness declared on the label, grouped with the list of ingredients?",
+      "result": "pass",
+      "selected_value": "ready-to-eat",
+      "rationale": "The product is categorized as a ready-to-eat food (granola-based), not a table-top sweetener. Furthermore, none of the specific sweeteners (aspartame, sucralose, acesulfame-potassium, or neotame) that require a sweetness equivalency statement are present in the ingredients list.",
+      "section": "Sweeteners"
+    },
+    {
+      "question_id": "CO-1",
+      "question": "is the product one of the following? - wine and brandy - dairy products - honey - fish and fish products - fresh fruits or vegetables - shell egg and processed egg products - meat and poultry products - maple products - processed fruit or vegetable products",
+      "result": "needs_review",
+      "selected_value": "ready-to-eat",
+      "rationale": "The food type 'ready-to-eat' is a broad category. While it may contain ingredients like meat or processed vegetables that require country of origin labelling, it is not explicitly one of the listed commodities. Further ingredient information is required to determine if the product falls under the mandatory CFIA commodity-specific labelling requirements.",
+      "section": "Country of Origin"
+    },
+    {
+      "question_id": "CO-2",
+      "question": "If so, check the food-specific labelling requirements, as for some imported prepackaged products it is mandatory to state the country of origin.",
+      "result": "needs_review",
+      "selected_value": null,
+      "rationale": "The 'country_of_origin' field in the extracted data is empty. If the product is determined to be a regulated commodity (e.g., a meat-based ready-to-eat meal) and is imported, it must include a 'Product of [Country]' statement. Without label data, compliance cannot be confirmed.",
+      "section": "Country of Origin"
     }
   ]
 }

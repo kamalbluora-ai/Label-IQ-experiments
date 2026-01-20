@@ -9,7 +9,8 @@ import json
 from abc import ABC, abstractmethod
 from typing import Dict, List, Any
 from pathlib import Path
-from openai import OpenAI
+# from openai import OpenAI  # COMMENTED OUT - Using Gemini instead
+from google import genai
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -28,7 +29,8 @@ class BaseComplianceAgent(ABC):
     
     def __init__(self, section_name: str):
         self.section_name = section_name
-        self.client = OpenAI()
+        # self.client = OpenAI()  # COMMENTED OUT - Using Gemini instead
+        self.client = genai.Client()
         self.system_prompt = self.load_system_prompt()
     
     @abstractmethod
@@ -148,18 +150,27 @@ For each question, respond with:
             user_prompt = self.build_user_prompt(data, questions)
             
             # Call LLM
-            response = self.client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[
-                    {"role": "system", "content": self.system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                response_format={"type": "json_object"},
-                temperature=0.2  # Low for consistency
+            # COMMENTED OUT - OpenAI call
+            # response = self.client.chat.completions.create(
+            #     model="gpt-4o-mini",
+            #     messages=[
+            #         {"role": "system", "content": self.system_prompt},
+            #         {"role": "user", "content": user_prompt}
+            #     ],
+            #     response_format={"type": "json_object"},
+            #     temperature=0.2  # Low for consistency
+            # )
+            # result = json.loads(response.choices[0].message.content)
+            
+            # NEW - Gemini call
+            response = self.client.models.generate_content(
+                model="gemini-3-flash-preview",
+                contents=f"{self.system_prompt}\n\n{user_prompt}",
+                config={"response_mime_type": "application/json", "temperature": 0.2}
             )
             
             # Parse response
-            result = json.loads(response.choices[0].message.content)
+            result = json.loads(response.text)
             
             return {
                 "section": self.section_name,

@@ -21,7 +21,7 @@ from compliance.agents.bilingual import BilingualAgent
 from compliance.agents.irradiation import IrradiationAgent
 from compliance.agents.sweeteners import SweetenersAgent
 from compliance.agents.country_origin import CountryOriginAgent
-from compliance.deterministic_checker import DeterministicChecker
+# from compliance.deterministic_checker import DeterministicChecker  # DEPRECATED - using pure LLM
 
 
 class ComplianceOrchestrator:
@@ -40,23 +40,21 @@ class ComplianceOrchestrator:
         self.questions = self._load_questions()
         
         # Initialize deterministic checker
-        self.deterministic = DeterministicChecker()
+        # self.deterministic = DeterministicChecker()  # DEPRECATED - using pure LLM
         
         # Initialize all 11 agents
         self.agents = {
             "common_name": CommonNameAgent(),
             "net_quantity": NetQuantityAgent(),
-
-            # Other agents commented out - needs improvement
-            # "list_of_ingredients": IngredientsAgent(),
-            # "name_and_address": NameAddressAgent(),
-            # "date_markings": DateMarkingAgent(),
-            "nutrition_facts_table": NutritionFactsAgent()
-            # "fop_nutrition_symbol": FOPSymbolAgent(),
-            # "bilingual_requirements": BilingualAgent(),
-            # "irradiation": IrradiationAgent(),
-            # "sweeteners": SweetenersAgent(),
-            # "country_of_origin": CountryOriginAgent()
+            "list_of_ingredients": IngredientsAgent(),
+            "name_and_address": NameAddressAgent(),
+            "date_markings": DateMarkingAgent(),
+            "nutrition_facts_table": NutritionFactsAgent(),
+            "fop_nutrition_symbol": FOPSymbolAgent(),
+            "bilingual_requirements": BilingualAgent(),
+            "irradiation": IrradiationAgent(),
+            "sweeteners": SweetenersAgent(),
+            "country_of_origin": CountryOriginAgent()
         }
     
     def _load_questions(self) -> Dict[str, Any]:
@@ -97,7 +95,7 @@ class ComplianceOrchestrator:
                 ]
             }
         """
-        # Run hybrid evaluation: deterministic + LLM
+        # Run pure LLM evaluation for all questions
         all_results = []
         
         for section_key, agent in self.agents.items():
@@ -105,24 +103,13 @@ class ComplianceOrchestrator:
             if not section_questions:
                 continue
             
-            # Split questions by check_type
-            deterministic_qs = [q for q in section_questions if q.get("check_type") == "deterministic"]
-            llm_qs = [q for q in section_questions if q.get("check_type") != "deterministic"]
-            
-            # Run deterministic checks (free, instant)
-            for q in deterministic_qs:
-                result = self.deterministic.check(q, label_facts)
-                if result:
-                    result["section"] = self.questions.get(section_key, {}).get("title", section_key)
-                    all_results.append({"section": result["section"], "results": [result]})
-            
-            # Run LLM only for complex questions
-            if llm_qs:
-                try:
-                    result = await agent.evaluate(label_facts, llm_qs, user_context)
-                    all_results.append(result)
-                except Exception as e:
-                    all_results.append(e)
+            # Pass ALL questions to agent (pure LLM evaluation)
+            try:
+                result = await agent.evaluate(label_facts, section_questions, user_context)
+                all_results.append(result)
+            except Exception as e:
+                # Log error but continue with other agents
+                all_results.append(e)
         
         # Aggregate
         return self._aggregate_results(all_results)

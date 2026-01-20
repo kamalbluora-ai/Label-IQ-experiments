@@ -12,3 +12,4 @@ opencv-python-headless==4.10.0.84
 openai>=1.0.0,<2.0.0
 python-dotenv
 crawl4ai
+google-genai
