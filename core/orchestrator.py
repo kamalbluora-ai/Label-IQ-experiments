@@ -27,7 +27,7 @@ if str(core_dir) not in sys.path:
 
 from processor import preprocess_image_bytes, run_docai_custom_extractor
 from vertex_search import cfia_retrieve_snippets
-from checks import run_checks
+# from checks import run_checks  # DEPRECATED - using agents_orchestrator instead
 from translate_fields import translate_foreign_fields
 from chatgpt_search import cfia_search_chatgpt_agent
 from compliance.agents_orchestrator import ComplianceOrchestrator

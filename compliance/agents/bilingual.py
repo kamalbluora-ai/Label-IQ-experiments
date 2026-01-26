@@ -1,5 +1,3 @@
-"""Bilingual Requirements Agent"""
-from pathlib import Path
 from typing import Dict, Any
 from compliance.base_agent import BaseComplianceAgent
 
@@ -7,10 +5,9 @@ class BilingualAgent(BaseComplianceAgent):
     def __init__(self):
         super().__init__(section_name="Bilingual Requirements")
     
-    def load_system_prompt(self) -> str:
-        prompt_path = Path(__file__).parent.parent / "prompts" / "bilingual.txt"
-        with open(prompt_path, "r", encoding="utf-8") as f:
-            return f.read()
+    def get_section_context(self) -> str:
+        """Get section-specific context."""
+        return "Verify all mandatory information is present in both English and French, unless a bilingual exemption applies."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
         fields_all = label_facts.get("fields_all", {})

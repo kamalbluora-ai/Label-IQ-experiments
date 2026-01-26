@@ -47,9 +47,21 @@ async def main():
     
     # Load sample images
     print("\n[2] Loading sample images...")
+    
+    # ex1 - granola bar
     sample_dir = Path(__file__).parent / "sample_files" / "ex1"
     front_img = sample_dir / "front.png"
     back_img = sample_dir / "back.png"
+
+    # ex2 - chocolate
+    # sample_dir = Path(__file__).parent / "sample_files" / "ex2"
+    # front_img = sample_dir / "front.jpg"
+    # back_img = sample_dir / "back.jpg"
+
+    # ex3 - milk
+    # sample_dir = Path(__file__).parent / "sample_files" / "ex3"
+    # front_img = sample_dir / "front.jpg"
+    # back_img = sample_dir / "back.jpg"
     
     if not front_img.exists():
         print(f"  ERROR: front.png not found at {front_img}")
@@ -108,7 +120,6 @@ async def main():
     
     # Run evaluation
     print("\n[8] Running multi-agent evaluation...")
-    print("    (Agents running in parallel...)")
     result = await orchestrator.evaluate(merged_facts, user_context=USER_CONTEXT)
     
     # Display results

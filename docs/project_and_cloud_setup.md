@@ -172,6 +172,10 @@ VS_PROJECT=${PROJECT_ID},VS_LOCATION=global,VS_DATASTORE_ID=YOUR_DATASTORE_ID,VS
 TRANSLATE_PROJECT=${PROJECT_ID},TRANSLATE_LOCATION=global,TRANSLATE_GLOSSARY_ID=cfia-glossary-enfr
 ```
 
+# if redeploy with existing config
+gcloud run deploy label-compliance --source . --region us-central1
+
+
 After deploy, note the service URL:
 ```bash
 gcloud run services describe label-compliance --region us-central1 --format='value(status.url)'

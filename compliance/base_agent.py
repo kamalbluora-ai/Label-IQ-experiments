@@ -1,17 +1,9 @@
-"""
-Base Compliance Agent
-
-Abstract base class for all compliance agents.
-Each agent evaluates one CFIA checklist section.
-"""
-
 import json
 from abc import ABC, abstractmethod
 from typing import Dict, List, Any
-from pathlib import Path
-# from openai import OpenAI  # COMMENTED OUT - Using Gemini instead
 from google import genai
 from dotenv import load_dotenv
+from compliance.prompt import format_prompt
 
 load_dotenv()
 
@@ -29,15 +21,16 @@ class BaseComplianceAgent(ABC):
     
     def __init__(self, section_name: str):
         self.section_name = section_name
-        # self.client = OpenAI()  # COMMENTED OUT - Using Gemini instead
         self.client = genai.Client()
-        self.system_prompt = self.load_system_prompt()
     
     @abstractmethod
-    def load_system_prompt(self) -> str:
+    def get_section_context(self) -> str:
         """
-        Load the system prompt for this agent.
+        Get the section-specific context/instruction for this agent.
         Should be implemented by each specific agent.
+        
+        Returns:
+            Short description of what this agent evaluates (e.g., "Evaluate common name compliance")
         """
         pass
     
@@ -55,60 +48,28 @@ class BaseComplianceAgent(ABC):
         """
         pass
     
-    def build_user_prompt(self, data: Dict[str, Any], questions: List[Dict[str, Any]]) -> str:
+    def build_system_prompt(self, data: Dict[str, Any], questions: List[Dict[str, Any]]) -> str:
         """
-        Build the user prompt for LLM evaluation.
+        Build the complete system prompt using the dynamic prompt builder.
         
         Args:
             data: Prepared input data (from prepare_input_data)
             questions: List of questions for this section
         
         Returns:
-            Formatted user prompt
+            Complete system prompt
         """
-        questions_text = self._format_questions(questions)
+        # Add user context to fields if present
+        fields = data.copy()
+        if "user_context" in fields:
+            # Keep user_context in the fields for the LLM to see
+            pass
         
-        # Add user context instructions if present
-        context_instructions = ""
-        if "user_context" in data:
-            context_instructions = """
-USER CONTEXT:
-The user has provided additional context about this product. Use this information
-when evaluating compliance questions (e.g., food_type may affect storage requirements,
-is_imported may affect country of origin requirements).
-"""
-        
-        return f"""SECTION: {self.section_name}
-{context_instructions}
-EXTRACTED DATA:
-{json.dumps(data, indent=2, ensure_ascii=False)}
-
-QUESTIONS TO ANSWER:
-{questions_text}
-
-For each question, respond with:
-{{
-  "results": [
-    {{
-      "question_id": "...",
-      "question": "...",
-      "result": "pass" | "fail" | "needs_review",
-      "selected_value": "the value you evaluated (if applicable)",
-      "rationale": "detailed explanation of your decision"
-    }}
-  ]
-}}
-"""
-    
-    def _format_questions(self, questions: List[Dict[str, Any]]) -> str:
-        """Format questions for the prompt."""
-        formatted = []
-        for q in questions:
-            formatted.append(f"[{q['id']}] {q['text']}")
-            if q.get('sub_questions'):
-                for sub_q in q['sub_questions']:
-                    formatted.append(f"    - {sub_q}")
-        return "\n".join(formatted)
+        return format_prompt(
+            section_context=self.get_section_context(),
+            questions=questions,
+            fields=fields
+        )
     
     async def evaluate(
         self, 
@@ -146,27 +107,17 @@ For each question, respond with:
             if user_context:
                 data["user_context"] = user_context
             
-            # Build prompt
-            user_prompt = self.build_user_prompt(data, questions)
+            # Build complete system prompt
+            system_prompt = self.build_system_prompt(data, questions)
             
-            # Call LLM
-            # COMMENTED OUT - OpenAI call
-            # response = self.client.chat.completions.create(
-            #     model="gpt-4o-mini",
-            #     messages=[
-            #         {"role": "system", "content": self.system_prompt},
-            #         {"role": "user", "content": user_prompt}
-            #     ],
-            #     response_format={"type": "json_object"},
-            #     temperature=0.2  # Low for consistency
-            # )
-            # result = json.loads(response.choices[0].message.content)
-            
-            # NEW - Gemini call
+            # Call LLM with Gemini
             response = self.client.models.generate_content(
                 model="gemini-3-flash-preview",
-                contents=f"{self.system_prompt}\n\n{user_prompt}",
-                config={"response_mime_type": "application/json", "temperature": 0.2}
+                contents=system_prompt,
+                config={
+                    "response_mime_type": "application/json",
+                    "thinking_config": {"thinking_level": "high"}
+                }
             )
             
             # Parse response

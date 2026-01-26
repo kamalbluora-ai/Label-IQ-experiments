@@ -4,10 +4,15 @@ Compliance Orchestrator
 Coordinates all compliance agents and aggregates results.
 """
 
-import json
 import asyncio
+import json
 from typing import Dict, List, Any
 from pathlib import Path
+
+# Load questions directly from JSON file
+_questions_file = Path(__file__).parent / "questions" / "questions.json"
+with open(_questions_file, encoding="utf-8") as f:
+    QUESTIONS = json.load(f).get("sections", {})
 
 # Import all agents
 from compliance.agents.common_name import CommonNameAgent
@@ -21,8 +26,6 @@ from compliance.agents.bilingual import BilingualAgent
 from compliance.agents.irradiation import IrradiationAgent
 from compliance.agents.sweeteners import SweetenersAgent
 from compliance.agents.country_origin import CountryOriginAgent
-# from compliance.deterministic_checker import DeterministicChecker  # DEPRECATED - using pure LLM
-
 
 class ComplianceOrchestrator:
     """
@@ -35,40 +38,25 @@ class ComplianceOrchestrator:
     4. Aggregate results and calculate compliance score
     """
     
-    def __init__(self, questions_path: str = "questions/questions.json"):
-        self.questions_path = Path(questions_path)
-        self.questions = self._load_questions()
-        
-        # Initialize deterministic checker
-        # self.deterministic = DeterministicChecker()  # DEPRECATED - using pure LLM
-        
+    def __init__(self):
+        self.questions = QUESTIONS
+                
         # Initialize all 11 agents
         self.agents = {
-            "common_name": CommonNameAgent(),
-            "net_quantity": NetQuantityAgent(),
-            "list_of_ingredients": IngredientsAgent(),
-            "name_and_address": NameAddressAgent(),
-            "date_markings": DateMarkingAgent(),
-            "nutrition_facts_table": NutritionFactsAgent(),
-            "fop_nutrition_symbol": FOPSymbolAgent(),
-            "bilingual_requirements": BilingualAgent(),
-            "irradiation": IrradiationAgent(),
-            "sweeteners": SweetenersAgent(),
-            "country_of_origin": CountryOriginAgent()
+            "common_name": CommonNameAgent()
+            # "net_quantity": NetQuantityAgent(),
+            # "list_of_ingredients": IngredientsAgent(),
+            # "name_and_address": NameAddressAgent(),
+            # "date_markings": DateMarkingAgent(),
+            # "nutrition_facts_table": NutritionFactsAgent(),
+            # "fop_nutrition_symbol": FOPSymbolAgent(),
+            # "bilingual_requirements": BilingualAgent(),
+            # "irradiation": IrradiationAgent(),
+            # "sweeteners": SweetenersAgent(),
+            # "country_of_origin": CountryOriginAgent()
         }
     
-    def _load_questions(self) -> Dict[str, Any]:
-        """Load questions from JSON file."""
-        if not self.questions_path.exists():
-            raise FileNotFoundError(
-                f"Questions file not found: {self.questions_path}\n"
-                f"Please run questions/cfia_crawler.py and questions/question_extractor.py first."
-            )
-        
-        with open(self.questions_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        
-        return data.get("sections", {})
+    # Questions are now imported directly from compliance.questions
     
     async def evaluate(self, label_facts: Dict[str, Any], user_context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
@@ -95,21 +83,23 @@ class ComplianceOrchestrator:
                 ]
             }
         """
-        # Run pure LLM evaluation for all questions
-        all_results = []
+        # Semaphore to limit concurrent API calls (max 3 at a time)
+        semaphore = asyncio.Semaphore(3)
         
-        for section_key, agent in self.agents.items():
-            section_questions = self.questions.get(section_key, {}).get("questions", [])
-            if not section_questions:
-                continue
-            
-            # Pass ALL questions to agent (pure LLM evaluation)
-            try:
-                result = await agent.evaluate(label_facts, section_questions, user_context)
-                all_results.append(result)
-            except Exception as e:
-                # Log error but continue with other agents
-                all_results.append(e)
+        async def run_agent_with_limit(section_key, agent):
+            async with semaphore:
+                section_questions = self.questions.get(section_key, {}).get("questions", [])
+                if not section_questions:
+                    return None
+                try:
+                    return await agent.evaluate(label_facts, section_questions, user_context)
+                except Exception as e:
+                    return e
+        
+        # Run all agents with semaphore limiting
+        tasks = [run_agent_with_limit(key, agent) for key, agent in self.agents.items()]
+        results = await asyncio.gather(*tasks)
+        all_results = [r for r in results if r is not None]
         
         # Aggregate
         return self._aggregate_results(all_results)

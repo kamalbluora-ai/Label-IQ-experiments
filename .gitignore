@@ -80,3 +80,8 @@ package-lock.json
 *.tmp
 *.temp
 *~
+
+# Test results
+extracted_facts.json
+facts-front.json
+multi_agent_compliance_result.json

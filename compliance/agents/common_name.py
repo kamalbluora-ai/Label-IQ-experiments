@@ -1,11 +1,3 @@
-"""
-Common Name Compliance Agent
-
-Evaluates common name compliance against CFIA requirements.
-Uses all DocAI candidates (text only) for evaluation.
-"""
-
-from pathlib import Path
 from typing import Dict, Any
 from compliance.base_agent import BaseComplianceAgent
 
@@ -21,11 +13,9 @@ class CommonNameAgent(BaseComplianceAgent):
     def __init__(self):
         super().__init__(section_name="Common Name")
     
-    def load_system_prompt(self) -> str:
-        """Load system prompt from file."""
-        prompt_path = Path(__file__).parent.parent / "prompts" / "common_name.txt"
-        with open(prompt_path, "r", encoding="utf-8") as f:
-            return f.read()
+    def get_section_context(self) -> str:
+        """Get section-specific context."""
+        return "Evaluate if the product's common name is present, on the Principal Display Panel (PDP), and appropriate per CFIA requirements."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
         """

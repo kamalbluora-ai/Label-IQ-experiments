@@ -175,9 +175,9 @@ def run_multi_agent_checks(
     Returns:
         Compliance results with scores and check details
     """
-    # Load questions
-    questions_path = _project_dir / "questions" / "questions.json"
-    with open(questions_path, "r", encoding="utf-8") as f:
+    # Load questions from JSON file
+    questions_path = _project_dir / "compliance" / "questions" / "questions.json"
+    with open(questions_path, encoding="utf-8") as f:
         questions = json.load(f).get("sections", {})
     
     # Initialize agents

@@ -1,11 +1,3 @@
-"""
-Net Quantity Declaration Compliance Agent
-
-Evaluates net quantity compliance against CFIA requirements.
-Uses all DocAI candidates (text only) for evaluation.
-"""
-
-from pathlib import Path
 from typing import Dict, Any
 from compliance.base_agent import BaseComplianceAgent
 
@@ -21,11 +13,9 @@ class NetQuantityAgent(BaseComplianceAgent):
     def __init__(self):
         super().__init__(section_name="Net Quantity Declaration")
     
-    def load_system_prompt(self) -> str:
-        """Load system prompt from file."""
-        prompt_path = Path(__file__).parent.parent / "prompts" / "net_quantity.txt"
-        with open(prompt_path, "r", encoding="utf-8") as f:
-            return f.read()
+    def get_section_context(self) -> str:
+        """Get section-specific context."""
+        return "Verify net quantity declaration: metric units, proper rounding, correct bilingual symbols, and appropriate measurement type."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
         """
