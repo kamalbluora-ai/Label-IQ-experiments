@@ -1,14 +1,14 @@
 {
-  "compliance_score": 25.0,
-  "checks_passed": 1,
+  "compliance_score": 50.0,
+  "checks_passed": 2,
   "checks_total": 4,
   "check_results": [
     {
       "question_id": "CN-1",
       "question": "is a common name present?",
       "result": "pass",
-      "selected_value": "Bars, Rolled Oats, BARRES PLONGÉES",
-      "rationale": "The extracted data contains common names in both English and French. The product is not exempt.",
+      "selected_value": "GRANOLA BARS / BARRES TENDRES",
+      "rationale": "The extracted data contains both English ('GRANOLA BARS') and French ('BARRES TENDRES') common names for the product.",
       "section": "Common Name"
     },
     {
@@ -16,7 +16,7 @@
       "question": "is the common name on the principal display panel (PDP)?",
       "result": "needs_review",
       "selected_value": null,
-      "rationale": "The provided data includes the definition of a Principal Display Panel (PDP) but does not provide visual confirmation or layout data to verify if the common names are positioned on the PDP of the packaging.",
+      "rationale": "The available data provides the definition of a PDP and the text of the common name, but it does not specify the physical location of the text on the packaging.",
       "section": "Common Name"
     },
     {
@@ -24,15 +24,15 @@
       "question": "is the common name in letters of 1.6 mm or greater?",
       "result": "needs_review",
       "selected_value": null,
-      "rationale": "The extracted data does not provide specific font size measurements for the common name text.",
+      "rationale": "The extracted data does not include font size measurements or a visual scale to determine if the minimum height requirement of 1.6 mm is met.",
       "section": "Common Name"
     },
     {
       "question_id": "CN-4",
       "question": "is it an appropriate common name?",
-      "result": "needs_review",
-      "selected_value": "Bars, Rolled Oats",
-      "rationale": "While 'Rolled Oats' is a standard name, 'Bars' is highly generic for a ready-to-eat product. Without further context on the product's identity or standard of identity, it's unclear if 'Bars' is a sufficiently descriptive common name under CFIA guidelines.",
+      "result": "pass",
+      "selected_value": "GRANOLA BARS / BARRES TENDRES",
+      "rationale": "'Granola Bars' and 'Barres tendres' are the standard and commonly accepted names for this product category in Canada and are not misleading for a ready-to-eat snack of this type.",
       "section": "Common Name"
     }
   ]

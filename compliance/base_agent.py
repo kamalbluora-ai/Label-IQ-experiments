@@ -123,9 +123,18 @@ class BaseComplianceAgent(ABC):
             # Parse response
             result = json.loads(response.text)
             
+            # Handle different response shapes from LLM
+            if isinstance(result, list):
+                # LLM returned a list directly instead of {"results": [...]}
+                results = result
+            elif isinstance(result, dict):
+                results = result.get("results", [])
+            else:
+                results = []
+            
             return {
                 "section": self.section_name,
-                "results": result.get("results", [])
+                "results": results
             }
             
         except Exception as e:
