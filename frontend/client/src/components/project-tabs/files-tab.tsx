@@ -1,59 +1,45 @@
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { api, Project, ProjectFile } from "@/api";
+import { api, Project } from "@/api";
 import FileUpload from "@/components/file-upload";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Loader2, Trash2, FileImage, Tag as TagIcon } from "lucide-react";
+import { Loader2, Trash2, FileImage } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface FilesTabProps {
   project: Project;
 }
 
-const STANDARD_TAGS = ["front", "back", "top", "bottom", "side"];
-
 export default function FilesTab({ project }: FilesTabProps) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
-  const [uploadQueue, setUploadQueue] = useState<File[]>([]);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [customTag, setCustomTag] = useState("");
-  const [foodType, setFoodType] = useState<string>("ready-to-eat");
-  const [isUploadDialogOpen, setIsUploadDialogOpen] = useState(false);
 
+  // Query for listing files
   const { data: files, isLoading } = useQuery({
     queryKey: ["files", project.id],
     queryFn: () => api.files.list(project.id),
   });
 
+  // Mutation for uploading
   const uploadMutation = useMutation({
-    mutationFn: async () => {
-      const tags = [...selectedTags];
-      if (customTag) tags.push(customTag);
-
-      // Upload all files as a single batch (one job)
-      if (uploadQueue.length > 0) {
-        // Pass food_type in metadata to backend
-        const metadata = { food_type: foodType };
-        await api.files.upload(project.id, uploadQueue, tags, metadata);
-      }
+    mutationFn: async ({ files, metadata, tags }: { files: File[], metadata: Record<string, unknown>, tags: string[] }) => {
+      await api.files.upload(project.id, files, tags, metadata);
     },
-    onSuccess: () => {
+    onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ["files", project.id] });
-      toast({ title: "Uploaded", description: `${uploadQueue.length} files uploaded successfully.` });
-      setUploadQueue([]);
-      setSelectedTags([]);
-      setCustomTag("");
-      setFoodType("ready-to-eat");
-      setIsUploadDialogOpen(false);
+      toast({
+        title: "Uploaded",
+        description: `${variables.files.length} files uploaded successfully.`
+      });
     },
+    onError: (error) => {
+      toast({
+        title: "Upload Failed",
+        description: error instanceof Error ? error.message : "Unknown error",
+        variant: "destructive"
+      });
+    }
   });
 
   const deleteMutation = useMutation({
@@ -64,15 +50,16 @@ export default function FilesTab({ project }: FilesTabProps) {
     },
   });
 
-  const handleDrop = (acceptedFiles: File[]) => {
-    setUploadQueue(acceptedFiles);
-    setIsUploadDialogOpen(true);
-  };
+  // Handle the drop event from FileUpload component
+  // Now receives metadata and tags directly from the FileUpload's internal dialog
+  const handleDrop = (files: File[], metadata?: Record<string, unknown>, tags?: string[]) => {
+    if (files.length === 0) return;
 
-  const toggleTag = (tag: string) => {
-    setSelectedTags(prev =>
-      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
-    );
+    uploadMutation.mutate({
+      files,
+      metadata: metadata || {},
+      tags: tags || []
+    });
   };
 
   return (
@@ -81,6 +68,12 @@ export default function FilesTab({ project }: FilesTabProps) {
         <Card>
           <CardContent className="pt-6">
             <FileUpload onDrop={handleDrop} />
+            {uploadMutation.isPending && (
+              <div className="mt-4 flex items-center justify-center text-sm text-muted-foreground">
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                Uploading and analyzing...
+              </div>
+            )}
           </CardContent>
         </Card>
 
@@ -131,78 +124,6 @@ export default function FilesTab({ project }: FilesTabProps) {
           </div>
         )}
       </div>
-
-      <Dialog open={isUploadDialogOpen} onOpenChange={(open) => !uploadMutation.isPending && setIsUploadDialogOpen(open)}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Upload {uploadQueue.length} Files</DialogTitle>
-          </DialogHeader>
-
-          <div className="space-y-4 py-4">
-            <div className="space-y-2">
-              <Label>Standard Tags</Label>
-              <div className="flex flex-wrap gap-2">
-                {STANDARD_TAGS.map(tag => (
-                  <div key={tag} className="flex items-center space-x-2">
-                    <Checkbox
-                      id={`tag-${tag}`}
-                      checked={selectedTags.includes(tag)}
-                      onCheckedChange={() => toggleTag(tag)}
-                    />
-                    <label
-                      htmlFor={`tag-${tag}`}
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      {tag}
-                    </label>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label>Custom Tag</Label>
-              <div className="flex gap-2">
-                <Input
-                  placeholder="e.g. crack-detection"
-                  value={customTag}
-                  onChange={(e) => setCustomTag(e.target.value)}
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label>Food Type</Label>
-              <Select value={foodType} onValueChange={setFoodType}>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select food type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="ready-to-eat">Ready to Eat</SelectItem>
-                  <SelectItem value="to-be-cooked">To Be Cooked</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-
-          <DialogFooter>
-            <Button
-              variant="outline"
-              onClick={() => setIsUploadDialogOpen(false)}
-              disabled={uploadMutation.isPending}
-            >
-              Cancel
-            </Button>
-            <Button
-              onClick={() => uploadMutation.mutate()}
-              disabled={uploadMutation.isPending}
-            >
-              {uploadMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              Confirm Upload
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }

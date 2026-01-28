@@ -1,13 +1,4 @@
-"""
-CFIA Label Compliance Orchestrator
 
-Pure business logic for processing label compliance jobs.
-This module coordinates:
-- DocAI extraction
-- Evidence retrieval (Vertex Search / ChatGPT)
-- Translation (for RELABEL mode)
-- Compliance checks
-"""
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -19,6 +10,9 @@ from typing import Any, Dict, Optional
 
 from google.cloud import storage
 
+import io
+from PIL import Image
+
 import sys
 from pathlib import Path
 core_dir = Path(__file__).parent
@@ -27,7 +21,6 @@ if str(core_dir) not in sys.path:
 
 from processor import preprocess_image_bytes, run_docai_custom_extractor
 from vertex_search import cfia_retrieve_snippets
-# from checks import run_checks  # DEPRECATED - using agents_orchestrator instead
 from translate_fields import translate_foreign_fields
 from chatgpt_search import cfia_search_chatgpt_agent
 from compliance.agents_orchestrator import ComplianceOrchestrator
@@ -104,7 +97,6 @@ def get_evidence(
             product_metadata=product_metadata,
         )
 
-
 def detect_mode(label_facts: Dict[str, Any]) -> str:
     """Auto-detect mode based on presence of foreign language fields."""
     fields = label_facts.get("fields", {}) or {}
@@ -116,6 +108,36 @@ def detect_mode(label_facts: Dict[str, Any]) -> str:
     ]
     has_foreign = any(fields.get(k) for k in foreign_keys)
     return "RELABEL" if has_foreign else "AS_IS"
+
+
+def split_image_bytes(image_bytes: bytes) -> list[tuple[str, bytes]]:
+    """
+    Splits the image width-wise (x-axis) into two halves (Left and Right panels).
+    Returns a list of tuples: [(panel_name, bytes), ...]
+    """
+    try:
+        img = Image.open(io.BytesIO(image_bytes))
+        width, height = img.size
+        
+        # Split width-wise (vertical split line)
+        mid_point = width // 2
+        
+        # Left half
+        left_half = img.crop((0, 0, mid_point, height))
+        left_buffer = io.BytesIO()
+        left_half.save(left_buffer, format=img.format or "JPEG")
+        left_bytes = left_buffer.getvalue()
+        
+        # Right half
+        right_half = img.crop((mid_point, 0, width, height))
+        right_buffer = io.BytesIO()
+        right_half.save(right_buffer, format=img.format or "JPEG")
+        right_bytes = right_buffer.getvalue()
+        
+        return [("left_panel", left_bytes), ("right_panel", right_bytes)]
+    except Exception as e:
+        print(f"Error splitting image: {e}")
+        return []
 
 
 def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
@@ -152,23 +174,53 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
 
     # Extract each image and merge
     all_facts = []
-    for obj_name in images:
+    for i, obj_name in enumerate(images):
         img_bytes = storage_client.bucket(bucket).blob(obj_name).download_as_bytes()
-       # pre_bytes = preprocess_image_bytes(img_bytes)
-        # with open("temp_img.jpg", "wb") as f:
-        #    f.write(pre_bytes)
-
-        facts = run_docai_custom_extractor(
-            project_id=DOCAI_PROJECT,
-            location=DOCAI_LOCATION,
-            processor_id=DOCAI_PROCESSOR_ID,
-            file_bytes=img_bytes,
-            mime_type=guess_mime(obj_name),
-        )
-        data = {"key": "value", "number": 42}
-        with open("facts-front.json", "w") as f:
-            json.dump(facts, f, indent=2)
-        all_facts.append(facts)
+        
+        # Check tag for this image
+        current_tag = tags[i].lower() if i < len(tags) and tags[i] else ""
+        
+        if current_tag == "front":
+            # Split image into Left and Right panels
+            print(f"Splitting image {obj_name} (tag: front) into two halves...")
+            split_success = False
+            try:
+                panels = split_image_bytes(img_bytes)
+                if panels:
+                    for panel_name, panel_bytes in panels:
+                        print(f"Processing split panel: {panel_name}")
+                        facts = run_docai_custom_extractor(
+                            project_id=DOCAI_PROJECT,
+                            location=DOCAI_LOCATION,
+                            processor_id=DOCAI_PROCESSOR_ID,
+                            file_bytes=panel_bytes,
+                            mime_type=guess_mime(obj_name), # Assume same mime or just JPEG
+                        )
+                        all_facts.append(facts)
+                    split_success = True
+            except Exception as e:
+                print(f"Error splitting image: {e}")
+            
+            if not split_success:
+                # Fallback to normal processing
+                facts = run_docai_custom_extractor(
+                    project_id=DOCAI_PROJECT,
+                    location=DOCAI_LOCATION,
+                    processor_id=DOCAI_PROCESSOR_ID,
+                    file_bytes=img_bytes,
+                    mime_type=guess_mime(obj_name),
+                )
+                all_facts.append(facts)
+        else:
+            # Normal processing
+            facts = run_docai_custom_extractor(
+                project_id=DOCAI_PROJECT,
+                location=DOCAI_LOCATION,
+                processor_id=DOCAI_PROCESSOR_ID,
+                file_bytes=img_bytes,
+                mime_type=guess_mime(obj_name),
+            )
+            all_facts.append(facts)
 
     merged_facts = merge_label_facts(all_facts)
 

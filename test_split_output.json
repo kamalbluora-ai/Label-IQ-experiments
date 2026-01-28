@@ -1,0 +1,196 @@
+{
+  "text": "Rolled Oats\nLino\nBars\nDIPP\nBARRES PLONG\u00c9ES\nCOCONUT FLAVOR\nSAVEUR DE NOIX DE COCO\n10g Og\nWHOLE TRANSFAT\nGRAIN OATS\nNATURALLY FLAVORED\nThe Product is Enlarged to Show Texture\n\nED\n5\nGRANOLA BARS\nBARRES TENDRES\n150\nCALORIES\nPER SERVING\nPAR PORTION\n\nIngredients:\nRolled Oats\nLind\nGranola (Whole Grain Rolled Oats, Whole Grain Rolled Wheat, Sugar, Sun-\nflower Oil, High Fructose Corn Syrup, Molasses, Dried Coconut, Honey, Sodium\nBicarbonate, Natural Flavor, Whey Protein Concentrate), Sugar, Partially Hy-\ndrogenated Palm Kernel And Palm Oil, Crisp Rice (Rice Flour, Sugar, Barley\nMalt, Salt), Corn Syrup, Coconut Flakes, (Sugar, Chocolate Liquor, Cocoa\nButter, Soy Lecithin, Vanilla Extract), High Fructose Corn Syrup, Whey, Brown\nSugar, Corn Syrup Solids, Glycerin, Lactose, Partially Hydrogenated Soybean\nOil, Cocoa, Cocoa Processed With Alkali, Sorbitol, Milkfat, Salt, Soy Lecithin,\nGlyceryl Lacto Esters Of Fatty Acids, Natural And Artificial Flavor, Bht (Pre-\nservative), Citric Acid.\nIngr\u00e9dients:\nGranola (Flocons D'avoine \u00c0 Grains Entiers, Flocons De Bl\u00e9 \u00c0 Grains Entiers,\nSucre, Huile De Tournesol, Sirop De Ma\u00efs \u00c0 Haute Teneur En Fructose,\nM\u00e9lasse, Noix De Coco S\u00e9ch\u00e9e, Miel, Bicarbonate De Sodium, Ar\u00f4me Na-\nturel, Concentr\u00e9 De Prot\u00e9ines De Lactos\u00e9rum), Sucre, Palmiste Et Huile De\nPalme Partiellement Hydrog\u00e9n\u00e9s, Riz Croustillant (Farine De Riz, Sucre, Malt\nD'orge, Sel), Sirop De Ma\u00efs, Flocons De Noix De Coco, (Sucre, Liqueur De\nChocolat, Beurre De Cacao, L\u00e9cithine De Soja, Extrait De Vanille), Sirop De\nMa\u00efs Riche En Fructose, Lactos\u00e9rum, Cassonade, Extraits Secs De Sirop De\nMa\u00efs, Glyc\u00e9rine, Lactose, Huile De Soja Partiellement Hydrog\u00e9n\u00e9e, Cacao,\nCacao Trait\u00e9 Avec Des Alcalis, Sorbitol, Mati\u00e8re Grasse Laiti\u00e8re, Sel, L\u00e9ci-\nthine De Soja, Lactoesters Glyc\u00e9riques D'acides Gras, Ar\u00f4me Naturel Et Arti-\nficiel, Bht (Conservateur), Acide Citrique.\nCOCONUT FLAVOR\nSAVEUR DE NOIX DE COCO\nNATURALLY FLAVORED\nNutrition Facts\nValeur Nutritive\nPer Bar (31 g)\nPer Berre (31 g)\nCalories 150\n%Daily Value*\n%Valeur Quotidienne*\nFat / Lipides 8 g\n10%\nSaturated / Satur\u00e9s 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7%\n4%\nFibre / Fibres 1 g\nSugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Prot\u00e9ines 1 g\nCholesterol / Cholest\u00e9rol 0 mg\n2%\nSodium 40 mg\nPotassium 70 mg\n0%\n2%\nCalcium\nIron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%\n\n",
+  "fields": {
+    "common_name_en": {
+      "text": "Bars",
+      "confidence": 0.9959893226623535,
+      "bbox": null
+    },
+    "common_name_fr": {
+      "text": "BARRES TENDRES",
+      "confidence": 0.9998424053192139,
+      "bbox": null
+    },
+    "panel_pds": {
+      "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. \u201cReadily discernible\u201d means label information must be easy to see and read by an ordinary person under normal conditions",
+      "confidence": 0.9992448687553406,
+      "bbox": null
+    },
+    "ingredients_list_en": {
+      "text": "Granola (Whole Grain Rolled Oats, Whole Grain Rolled Wheat, Sugar, Sun-\nflower Oil, High Fructose Corn Syrup, Molasses, Dried Coconut, Honey, Sodium\nBicarbonate, Natural Flavor, Whey Protein Concentrate), Sugar, Partially Hy-\ndrogenated Palm Kernel And Palm Oil, Crisp Rice (Rice Flour, Sugar, Barley\nMalt, Salt), Corn Syrup, Coconut Flakes, (Sugar, Chocolate Liquor, Cocoa\nButter, Soy Lecithin, Vanilla Extract), High Fructose Corn Syrup, Whey, Brown\nSugar, Corn Syrup Solids, Glycerin, Lactose, Partially Hydrogenated Soybean\nOil, Cocoa, Cocoa Processed With Alkali, Sorbitol, Milkfat, Salt, Soy Lecithin,\nGlyceryl Lacto Esters Of Fatty Acids, Natural And Artificial Flavor, Bht (Pre-\nservative), Citric Acid.",
+      "confidence": 0.8125537037849426,
+      "bbox": null
+    },
+    "ingredients_list_fr": {
+      "text": "Granola (Flocons D'avoine \u00c0 Grains Entiers, Flocons De Bl\u00e9 \u00c0 Grains Entiers,\nSucre, Huile De Tournesol, Sirop De Ma\u00efs \u00c0 Haute Teneur En Fructose,\nM\u00e9lasse, Noix De Coco S\u00e9ch\u00e9e, Miel, Bicarbonate De Sodium, Ar\u00f4me Na-\nturel, Concentr\u00e9 De Prot\u00e9ines De Lactos\u00e9rum), Sucre, Palmiste Et Huile De\nPalme Partiellement Hydrog\u00e9n\u00e9s, Riz Croustillant (Farine De Riz, Sucre, Malt\nD'orge, Sel), Sirop De Ma\u00efs, Flocons De Noix De Coco, (Sucre, Liqueur De\nChocolat, Beurre De Cacao, L\u00e9cithine De Soja, Extrait De Vanille), Sirop De\nMa\u00efs Riche En Fructose, Lactos\u00e9rum, Cassonade, Extraits Secs De Sirop De\nMa\u00efs, Glyc\u00e9rine, Lactose, Huile De Soja Partiellement Hydrog\u00e9n\u00e9e, Cacao,\nCacao Trait\u00e9 Avec Des Alcalis, Sorbitol, Mati\u00e8re Grasse Laiti\u00e8re, Sel, L\u00e9ci-\nthine De Soja, Lactoesters Glyc\u00e9riques D'acides Gras, Ar\u00f4me Naturel Et Arti-\nficiel, Bht (Conservateur), Acide Citrique.",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_calories_en": {
+      "text": "150",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_serving_size_en": {
+      "text": "Per Bar (31 g)",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_serving_size_fr": {
+      "text": "Per Berre (31 g)",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_table_en": {
+      "text": "Nutrition Facts Per Bar (31 g) Calories 150\n%Daily Value* Fat / Lipides 8 g\n10%\nSaturated / Satur\u00e9s 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Prot\u00e9ines 1 g\nCholesterol / Cholest\u00e9rol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_table_fr": {
+      "text": "Valeur Nutritive Per Berre (31 g) %Valeur Quotidienne*\nFat / Lipides 8 g\n10%\nSaturated / Satur\u00e9s 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Prot\u00e9ines 1 g\nCholesterol / Cholest\u00e9rol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_text_block_en": {
+      "text": "NATURALLY FLAVORED",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_title_en": {
+      "text": "Nutrition Facts",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_title_fr": {
+      "text": "Valeur Nutritive",
+      "confidence": 1.0,
+      "bbox": null
+    }
+  },
+  "fields_all": {
+    "common_name_en": [
+      {
+        "text": "Bars",
+        "confidence": 0.9959893226623535,
+        "bbox": null
+      },
+      {
+        "text": "GRANOLA BARS",
+        "confidence": 0.9872620105743408,
+        "bbox": null
+      }
+    ],
+    "common_name_fr": [
+      {
+        "text": "BARRES PLONG\u00c9ES",
+        "confidence": 0.9996313452720642,
+        "bbox": null
+      },
+      {
+        "text": "BARRES TENDRES",
+        "confidence": 0.9998424053192139,
+        "bbox": null
+      }
+    ],
+    "panel_pds": [
+      {
+        "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. \u201cReadily discernible\u201d means label information must be easy to see and read by an ordinary person under normal conditions",
+        "confidence": 0.9992448687553406,
+        "bbox": null
+      },
+      {
+        "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. \u201cReadily discernible\u201d means label information must be easy to see and read by an ordinary person under normal conditions",
+        "confidence": 0.9977257251739502,
+        "bbox": null
+      }
+    ],
+    "ingredients_list_en": [
+      {
+        "text": "Granola (Whole Grain Rolled Oats, Whole Grain Rolled Wheat, Sugar, Sun-\nflower Oil, High Fructose Corn Syrup, Molasses, Dried Coconut, Honey, Sodium\nBicarbonate, Natural Flavor, Whey Protein Concentrate), Sugar, Partially Hy-\ndrogenated Palm Kernel And Palm Oil, Crisp Rice (Rice Flour, Sugar, Barley\nMalt, Salt), Corn Syrup, Coconut Flakes, (Sugar, Chocolate Liquor, Cocoa\nButter, Soy Lecithin, Vanilla Extract), High Fructose Corn Syrup, Whey, Brown\nSugar, Corn Syrup Solids, Glycerin, Lactose, Partially Hydrogenated Soybean\nOil, Cocoa, Cocoa Processed With Alkali, Sorbitol, Milkfat, Salt, Soy Lecithin,\nGlyceryl Lacto Esters Of Fatty Acids, Natural And Artificial Flavor, Bht (Pre-\nservative), Citric Acid.",
+        "confidence": 0.8125537037849426,
+        "bbox": null
+      }
+    ],
+    "ingredients_list_fr": [
+      {
+        "text": "Granola (Flocons D'avoine \u00c0 Grains Entiers, Flocons De Bl\u00e9 \u00c0 Grains Entiers,\nSucre, Huile De Tournesol, Sirop De Ma\u00efs \u00c0 Haute Teneur En Fructose,\nM\u00e9lasse, Noix De Coco S\u00e9ch\u00e9e, Miel, Bicarbonate De Sodium, Ar\u00f4me Na-\nturel, Concentr\u00e9 De Prot\u00e9ines De Lactos\u00e9rum), Sucre, Palmiste Et Huile De\nPalme Partiellement Hydrog\u00e9n\u00e9s, Riz Croustillant (Farine De Riz, Sucre, Malt\nD'orge, Sel), Sirop De Ma\u00efs, Flocons De Noix De Coco, (Sucre, Liqueur De\nChocolat, Beurre De Cacao, L\u00e9cithine De Soja, Extrait De Vanille), Sirop De\nMa\u00efs Riche En Fructose, Lactos\u00e9rum, Cassonade, Extraits Secs De Sirop De\nMa\u00efs, Glyc\u00e9rine, Lactose, Huile De Soja Partiellement Hydrog\u00e9n\u00e9e, Cacao,\nCacao Trait\u00e9 Avec Des Alcalis, Sorbitol, Mati\u00e8re Grasse Laiti\u00e8re, Sel, L\u00e9ci-\nthine De Soja, Lactoesters Glyc\u00e9riques D'acides Gras, Ar\u00f4me Naturel Et Arti-\nficiel, Bht (Conservateur), Acide Citrique.",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_calories_en": [
+      {
+        "text": "150",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_en": [
+      {
+        "text": "Per Bar (31 g)",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_fr": [
+      {
+        "text": "Per Berre (31 g)",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_table_en": [
+      {
+        "text": "Nutrition Facts Per Bar (31 g) Calories 150\n%Daily Value* Fat / Lipides 8 g\n10%\nSaturated / Satur\u00e9s 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Prot\u00e9ines 1 g\nCholesterol / Cholest\u00e9rol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_table_fr": [
+      {
+        "text": "Valeur Nutritive Per Berre (31 g) %Valeur Quotidienne*\nFat / Lipides 8 g\n10%\nSaturated / Satur\u00e9s 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Prot\u00e9ines 1 g\nCholesterol / Cholest\u00e9rol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_text_block_en": [
+      {
+        "text": "NATURALLY FLAVORED",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_title_en": [
+      {
+        "text": "Nutrition Facts",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_title_fr": [
+      {
+        "text": "Valeur Nutritive",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ]
+  },
+  "panels": {
+    "panel_pdp": {
+      "text": "The principal display panel (PDP) is the part of a food label most visible under normal sale or use. Under the SFCR, it is generally the label on the main visible surface of the container, with specific rules for display cards, ornamental containers, non-consumer prepackaged foods, and unpackaged foods. Under the FDR, consumer prepackaged foods follow the SFCR definition, while other prepackaged or unpackaged foods use the visible container or food surface (excluding the bottom).",
+      "confidence": 0.8871621489524841,
+      "bbox": null
+    },
+    "panel_ingredients": {
+      "text": "Ingredients: Granola (Whole Grain Rolled Oats, Whole Grain Rolled Wheat, Sugar, Sun-\nflower Oil, High Fructose Corn Syrup, Molasses, Dried Coconut, Honey, Sodium\nBicarbonate, Natural Flavor, Whey Protein Concentrate), Sugar, Partially Hy-\ndrogenated Palm Kernel And Palm Oil, Crisp Rice (Rice Flour, Sugar, Barley\nMalt, Salt), Corn Syrup, Coconut Flakes, (Sugar, Chocolate Liquor, Cocoa\nButter, Soy Lecithin, Vanilla Extract), High Fructose Corn Syrup, Whey, Brown\nSugar, Corn Syrup Solids, Glycerin, Lactose, Partially Hydrogenated Soybean\nOil, Cocoa, Cocoa Processed With Alkali, Sorbitol, Milkfat, Salt, Soy Lecithin,\nGlyceryl Lacto Esters Of Fatty Acids, Natural And Artificial Flavor, Bht (Pre-\nservative), Citric Acid.\nIngr\u00e9dients:\nGranola (Flocons D'avoine \u00c0 Grains Entiers, Flocons De Bl\u00e9 \u00c0 Grains Entiers,\nSucre, Huile De Tournesol, Sirop De Ma\u00efs \u00c0 Haute Teneur En Fructose,\nM\u00e9lasse, Noix De Coco S\u00e9ch\u00e9e, Miel, Bicarbonate De Sodium, Ar\u00f4me Na-\nturel, Concentr\u00e9 De Prot\u00e9ines De Lactos\u00e9rum), Sucre, Palmiste Et Huile De\nPalme Partiellement Hydrog\u00e9n\u00e9s, Riz Croustillant (Farine De Riz, Sucre, Malt\nD'orge, Sel), Sirop De Ma\u00efs, Flocons De Noix De Coco, (Sucre, Liqueur De\nChocolat, Beurre De Cacao, L\u00e9cithine De Soja, Extrait De Vanille), Sirop De\nMa\u00efs Riche En Fructose, Lactos\u00e9rum, Cassonade, Extraits Secs De Sirop De\nMa\u00efs, Glyc\u00e9rine, Lactose, Huile De Soja Partiellement Hydrog\u00e9n\u00e9e, Cacao,\nCacao Trait\u00e9 Avec Des Alcalis, Sorbitol, Mati\u00e8re Grasse Laiti\u00e8re, Sel, L\u00e9ci-\nthine De Soja, Lactoesters Glyc\u00e9riques D'acides Gras, Ar\u00f4me Naturel Et Arti-\nficiel, Bht (Conservateur), Acide Citrique.",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "panel_nutrition": {
+      "text": "Nutrition Facts\nValeur Nutritive\nPer Bar (31 g)\nPer Berre (31 g)\nCalories 150\n%Daily Value*\n%Valeur Quotidienne*\nFat / Lipides 8 g\n10%\nSaturated / Satur\u00e9s 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Prot\u00e9ines 1 g\nCholesterol / Cholest\u00e9rol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+      "confidence": 0.8711393475532532,
+      "bbox": null
+    }
+  },
+  "translated": {}
+}
