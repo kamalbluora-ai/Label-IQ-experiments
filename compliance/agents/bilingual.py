@@ -10,10 +10,15 @@ class BilingualAgent(BaseComplianceAgent):
         return "Verify all mandatory information is present in both English and French, unless a bilingual exemption applies."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
+        
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
+
         return {
-            "common_name_en": [c.get("text", "") for c in fields_all.get("common_name_en", [])],
-            "common_name_fr": [c.get("text", "") for c in fields_all.get("common_name_fr", [])],
-            "ingredients_list_en": [c.get("text", "") for c in fields_all.get("ingredients_list_en", [])],
-            "ingredients_list_fr": [c.get("text", "") for c in fields_all.get("ingredients_list_fr", [])],
+            "common_name_en": get_text("common_name_en"),
+            "common_name_fr": get_text("common_name_fr"),
+            "ingredients_list_en": get_text("ingredients_list_en"),
+            "ingredients_list_fr": get_text("ingredients_list_fr"),
         }

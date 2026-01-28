@@ -23,13 +23,18 @@ class NetQuantityAgent(BaseComplianceAgent):
         
         Uses fields_all (all candidates) and extracts text only.
         """
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
         panels = label_facts.get("panels", {})
         
+        # Helper to extract text from fields
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
+
         return {
-            "net_quantity_full_text": [c.get("text", "") for c in fields_all.get("net_quantity_full_text", [])],
-            "net_quantity_value": [c.get("text", "") for c in fields_all.get("net_quantity_value", [])],
-            "net_quantity_unit_words_en": [c.get("text", "") for c in fields_all.get("net_quantity_unit_words_en", [])],
-            "net_quantity_unit_words_fr": [c.get("text", "") for c in fields_all.get("net_quantity_unit_words_fr", [])],
+            "net_quantity_full_text": get_text("net_quantity_full_text"),
+            "net_quantity_value": get_text("net_quantity_value"),
+            "net_quantity_unit_words_en": get_text("net_quantity_unit_words_en"),
+            "net_quantity_unit_words_fr": get_text("net_quantity_unit_words_fr"),
             "panel_pdp": panels.get("panel_pdp", {}).get("text", ""),
         }

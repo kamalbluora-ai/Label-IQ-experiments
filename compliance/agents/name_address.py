@@ -12,9 +12,13 @@ class NameAddressAgent(BaseComplianceAgent):
         return "Confirm dealer name and principal place of business: presence, proper identification (imported by/for), and placement on label."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
         
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
+
         return {
-            "dealer_name": [c.get("text", "") for c in fields_all.get("dealer_name", [])],
-            "dealer_address": [c.get("text", "") for c in fields_all.get("dealer_address", [])],
+            "dealer_name": get_text("dealer_name"),
+            "dealer_address": get_text("dealer_address"),
         }

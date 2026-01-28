@@ -10,7 +10,12 @@ class IrradiationAgent(BaseComplianceAgent):
         return "Check irradiation labeling if applicable: statement presence, international symbol on PDP, and ingredient declarations."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
+        
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
+
         return {
-            "irradiation_statement": [c.get("text", "") for c in fields_all.get("irradiation_statement", [])],
+            "irradiation_statement": get_text("irradiation_statement"),
         }

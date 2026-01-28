@@ -10,9 +10,14 @@ class FOPSymbolAgent(BaseComplianceAgent):
         return "Check Front-of-Package nutrition symbol: presence, location on PDP, legibility, and technical specifications."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
         panels = label_facts.get("panels", {})
+        
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
+
         return {
-            "fop_symbol_present": [c.get("text", "") for c in fields_all.get("fop_symbol", [])],
+            "fop_symbol_present": get_text("fop_symbol"),
             "panel_pdp": panels.get("panel_pdp", {}).get("text", ""),
         }

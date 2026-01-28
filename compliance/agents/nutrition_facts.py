@@ -10,16 +10,21 @@ class NutritionFactsAgent(BaseComplianceAgent):
         return "Assess Nutrition Facts Table: format family, serving size alignment, core nutrients declaration, and % Daily Value statement."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
+        
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
+
         return {
-            "nft_title_en": [c.get("text", "") for c in fields_all.get("nft_title_en", [])],
-            "nft_title_fr": [c.get("text", "") for c in fields_all.get("nft_title_fr", [])],
-            "nft_serving_size_en": [c.get("text", "") for c in fields_all.get("nft_serving_size_en", [])],
-            "nft_serving_size_fr": [c.get("text", "") for c in fields_all.get("nft_serving_size_fr", [])],
-            "nft_calories_en": [c.get("text", "") for c in fields_all.get("nft_calories_en", [])],
-            "nft_calories_fr": [c.get("text", "") for c in fields_all.get("nft_calories_fr", [])],
-            "nft_table_en": [c.get("text", "") for c in fields_all.get("nft_table_en", [])],
-            "nft_table_fr": [c.get("text", "") for c in fields_all.get("nft_table_fr", [])],
-            "nft_text_block_en": [c.get("text", "") for c in fields_all.get("nft_text_block_en", [])],
-            "nft_text_block_fr": [c.get("text", "") for c in fields_all.get("nft_text_block_fr", [])],
+            "nft_title_en": get_text("nft_title_en"),
+            "nft_title_fr": get_text("nft_title_fr"),
+            "nft_serving_size_en": get_text("nft_serving_size_en"),
+            "nft_serving_size_fr": get_text("nft_serving_size_fr"),
+            "nft_calories_en": get_text("nft_calories_en"),
+            "nft_calories_fr": get_text("nft_calories_fr"),
+            "nft_table_en": get_text("nft_table_en"),
+            "nft_table_fr": get_text("nft_table_fr"),
+            "nft_text_block_en": get_text("nft_text_block_en"),
+            "nft_text_block_fr": get_text("nft_text_block_fr"),
         }

@@ -12,11 +12,15 @@ class DateMarkingAgent(BaseComplianceAgent):
         return "Evaluate date markings: best before, packaged on, expiration dates, storage instructions, and proper wording/placement."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
         
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
+
         return {
-            "best_before_date": [c.get("text", "") for c in fields_all.get("best_before_date", [])],
-            "packaged_on_date": [c.get("text", "") for c in fields_all.get("packaged_on_date", [])],
-            "expiration_date": [c.get("text", "") for c in fields_all.get("expiration_date", [])],
-            "storage_instructions": [c.get("text", "") for c in fields_all.get("storage_instructions", [])],
+            "best_before_date": get_text("best_before_date"),
+            "packaged_on_date": get_text("packaged_on_date"),
+            "expiration_date": get_text("expiration_date"),
+            "storage_instructions": get_text("storage_instructions"),
         }

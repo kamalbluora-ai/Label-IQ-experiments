@@ -16,7 +16,7 @@ DOCAI_LOCATION = os.environ.get("DOCAI_LOCATION")
 DOCAI_PROCESSOR_ID = os.environ.get("DOCAI_PROCESSOR_ID")
 
 def process_local_images():
-    base_path = Path("sample_files/ex1")
+    base_path = Path("sample_files/ex3")
     images = [
         {"name": "front.jpg", "tag": "front"},
         {"name": "back.jpg", "tag": "back"}
@@ -76,7 +76,6 @@ def process_local_images():
         json.dump(merged, f, indent=2)
         
     print(f"Done. Output saved to {output_file}")
-    print("Merged Fields:", list(merged.get("fields", {}).keys()))
 
 if __name__ == "__main__":
     process_local_images()

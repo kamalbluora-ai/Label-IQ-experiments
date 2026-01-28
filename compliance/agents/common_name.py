@@ -23,15 +23,15 @@ class CommonNameAgent(BaseComplianceAgent):
         
         Uses fields_all (all candidates) and extracts text only.
         """
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
         panels = label_facts.get("panels", {})
         
-        # Extract text only from all candidates
-        common_name_en = [c.get("text", "") for c in fields_all.get("common_name_en", [])]
-        common_name_fr = [c.get("text", "") for c in fields_all.get("common_name_fr", [])]
+        # Extract text only from best candidate
+        common_name_en = fields.get("common_name_en", {}).get("text", "")
+        common_name_fr = fields.get("common_name_fr", {}).get("text", "")
         
         return {
-            "common_name_en": common_name_en,
-            "common_name_fr": common_name_fr,
+            "common_name_en": [common_name_en] if common_name_en else [],
+            "common_name_fr": [common_name_fr] if common_name_fr else [],
             "panel_pdp": panels.get("panel_pdp", {}).get("text", ""),
         }

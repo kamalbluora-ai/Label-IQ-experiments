@@ -10,9 +10,14 @@ class CountryOriginAgent(BaseComplianceAgent):
         return "Evaluate country of origin requirements for applicable products (wine, dairy, honey, fish, fruits, vegetables, eggs, meat, maple, processed)."
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
+
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
+
         return {
-            "country_of_origin": [c.get("text", "") for c in fields_all.get("country_of_origin", [])],
-            "dealer_name": [c.get("text", "") for c in fields_all.get("dealer_name", [])],
-            "dealer_address": [c.get("text", "") for c in fields_all.get("dealer_address", [])],
+            "country_of_origin": get_text("country_of_origin"),
+            "dealer_name": get_text("dealer_name"),
+            "dealer_address": get_text("dealer_address"),
         }

@@ -16,13 +16,17 @@ class IngredientsAgent(BaseComplianceAgent):
     
     def prepare_input_data(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
         """Extract ingredients and allergen fields from DocAI output."""
-        fields_all = label_facts.get("fields_all", {})
+        fields = label_facts.get("fields", {})
+        
+        def get_text(key):
+            val = fields.get(key, {}).get("text", "")
+            return [val] if val else []
         
         return {
-            "common_name_en": [c.get("text", "") for c in fields_all.get("common_name_en", [])],
-            "common_name_fr": [c.get("text", "") for c in fields_all.get("common_name_fr", [])],
-            "ingredients_list_en": [c.get("text", "") for c in fields_all.get("ingredients_list_en", [])],
-            "ingredients_list_fr": [c.get("text", "") for c in fields_all.get("ingredients_list_fr", [])],
-            "allergen_statement_en": [c.get("text", "") for c in fields_all.get("allergen_statement_en", [])],
-            "allergen_statement_fr": [c.get("text", "") for c in fields_all.get("allergen_statement_fr", [])],
+            "common_name_en": get_text("common_name_en"),
+            "common_name_fr": get_text("common_name_fr"),
+            "ingredients_list_en": get_text("ingredients_list_en"),
+            "ingredients_list_fr": get_text("ingredients_list_fr"),
+            "allergen_statement_en": get_text("allergen_statement_en"),
+            "allergen_statement_fr": get_text("allergen_statement_fr"),
         }
