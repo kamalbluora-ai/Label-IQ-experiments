@@ -1,0 +1,475 @@
+{
+  "text": "Rolled Oats\nLino\nBars\nDIPP\nBARRES PLONGÉES\nCOCONUT FLAVOR\nSAVEUR DE NOIX DE COCO\n10g Og\nWHOLE TRANSFAT\nGRAIN OATS\nNATURALLY FLAVORED\nThe Product is Enlarged to Show Texture\n\nED\n5\nGRANOLA BARS\nBARRES TENDRES\n150\nCALORIES\nPER SERVING\nPAR PORTION\n\nIngredients:\nRolled Oats\nLind\nGranola (Whole Grain Rolled Oats, Whole Grain Rolled Wheat, Sugar, Sun-\nflower Oil, High Fructose Corn Syrup, Molasses, Dried Coconut, Honey, Sodium\nBicarbonate, Natural Flavor, Whey Protein Concentrate), Sugar, Partially Hy-\ndrogenated Palm Kernel And Palm Oil, Crisp Rice (Rice Flour, Sugar, Barley\nMalt, Salt), Corn Syrup, Coconut Flakes, (Sugar, Chocolate Liquor, Cocoa\nButter, Soy Lecithin, Vanilla Extract), High Fructose Corn Syrup, Whey, Brown\nSugar, Corn Syrup Solids, Glycerin, Lactose, Partially Hydrogenated Soybean\nOil, Cocoa, Cocoa Processed With Alkali, Sorbitol, Milkfat, Salt, Soy Lecithin,\nGlyceryl Lacto Esters Of Fatty Acids, Natural And Artificial Flavor, Bht (Pre-\nservative), Citric Acid.\nIngrédients:\nGranola (Flocons D'avoine À Grains Entiers, Flocons De Blé À Grains Entiers,\nSucre, Huile De Tournesol, Sirop De Maïs À Haute Teneur En Fructose,\nMélasse, Noix De Coco Séchée, Miel, Bicarbonate De Sodium, Arôme Na-\nturel, Concentré De Protéines De Lactosérum), Sucre, Palmiste Et Huile De\nPalme Partiellement Hydrogénés, Riz Croustillant (Farine De Riz, Sucre, Malt\nD'orge, Sel), Sirop De Maïs, Flocons De Noix De Coco, (Sucre, Liqueur De\nChocolat, Beurre De Cacao, Lécithine De Soja, Extrait De Vanille), Sirop De\nMaïs Riche En Fructose, Lactosérum, Cassonade, Extraits Secs De Sirop De\nMaïs, Glycérine, Lactose, Huile De Soja Partiellement Hydrogénée, Cacao,\nCacao Traité Avec Des Alcalis, Sorbitol, Matière Grasse Laitière, Sel, Léci-\nthine De Soja, Lactoesters Glycériques D'acides Gras, Arôme Naturel Et Arti-\nficiel, Bht (Conservateur), Acide Citrique.\nCOCONUT FLAVOR\nSAVEUR DE NOIX DE COCO\nNATURALLY FLAVORED\nNutrition Facts\nValeur Nutritive\nPer Bar (31 g)\nPer Berre (31 g)\nCalories 150\n%Daily Value*\n%Valeur Quotidienne*\nFat / Lipides 8 g\n10%\nSaturated / Saturés 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7%\n4%\nFibre / Fibres 1 g\nSugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Protéines 1 g\nCholesterol / Cholestérol 0 mg\n2%\nSodium 40 mg\nPotassium 70 mg\n0%\n2%\nCalcium\nIron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%\n\n",
+  "fields": {
+    "common_name_en": {
+      "text": "Bars",
+      "confidence": 0.9958416819572449,
+      "bbox": null
+    },
+    "common_name_fr": {
+      "text": "BARRES TENDRES",
+      "confidence": 0.9998635053634644,
+      "bbox": null
+    },
+    "net_quantity_full_text": {
+      "text": "5",
+      "confidence": 0.9871635437011719,
+      "bbox": null
+    },
+    "net_quantity_value": {
+      "text": "5",
+      "confidence": 0.9871635437011719,
+      "bbox": null
+    },
+    "nft_calories_en": {
+      "text": "150",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_serving_size_en": {
+      "text": "Per Bar (31 g)",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_serving_size_fr": {
+      "text": "Per Berre (31 g)",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "ingredients_list_en": {
+      "text": "Granola (Whole Grain Rolled Oats, Whole Grain Rolled Wheat, Sugar, Sun-\nflower Oil, High Fructose Corn Syrup, Molasses, Dried Coconut, Honey, Sodium\nBicarbonate, Natural Flavor, Whey Protein Concentrate), Sugar, Partially Hy-\ndrogenated Palm Kernel And Palm Oil, Crisp Rice (Rice Flour, Sugar, Barley\nMalt, Salt), Corn Syrup, Coconut Flakes, (Sugar, Chocolate Liquor, Cocoa\nButter, Soy Lecithin, Vanilla Extract), High Fructose Corn Syrup, Whey, Brown\nSugar, Corn Syrup Solids, Glycerin, Lactose, Partially Hydrogenated Soybean\nOil, Cocoa, Cocoa Processed With Alkali, Sorbitol, Milkfat, Salt, Soy Lecithin,\nGlyceryl Lacto Esters Of Fatty Acids, Natural And Artificial Flavor, Bht (Pre-\nservative), Citric Acid.",
+      "confidence": 0.9756324887275696,
+      "bbox": null
+    },
+    "ingredients_list_fr": {
+      "text": "Granola (Flocons D'avoine À Grains Entiers, Flocons De Blé À Grains Entiers,\nSucre, Huile De Tournesol, Sirop De Maïs À Haute Teneur En Fructose,\nMélasse, Noix De Coco Séchée, Miel, Bicarbonate De Sodium, Arôme Na-\nturel, Concentré De Protéines De Lactosérum), Sucre, Palmiste Et Huile De\nPalme Partiellement Hydrogénés, Riz Croustillant (Farine De Riz, Sucre, Malt\nD'orge, Sel), Sirop De Maïs, Flocons De Noix De Coco, (Sucre, Liqueur De\nChocolat, Beurre De Cacao, Lécithine De Soja, Extrait De Vanille), Sirop De\nMaïs Riche En Fructose, Lactosérum, Cassonade, Extraits Secs De Sirop De\nMaïs, Glycérine, Lactose, Huile De Soja Partiellement Hydrogénée, Cacao,\nCacao Traité Avec Des Alcalis, Sorbitol, Matière Grasse Laitière, Sel, Léci-\nthine De Soja, Lactoesters Glycériques D'acides Gras, Arôme Naturel Et Arti-\nficiel, Bht (Conservateur), Acide Citrique.",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_calories_fr": {
+      "text": "150",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_carbohydrate_en": {
+      "text": "18",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_carbohydrate_fr": {
+      "text": "18",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_cholesterol_en": {
+      "text": "0",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_cholesterol_fr": {
+      "text": "0",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fat_en": {
+      "text": "8",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fat_fr": {
+      "text": "8",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fibre_en": {
+      "text": "1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fibre_fr": {
+      "text": "1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_potassium_en": {
+      "text": "70",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_potassium_fr": {
+      "text": "70",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_protein_en": {
+      "text": "1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_protein_fr": {
+      "text": "1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_saturated_fat_en": {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_saturated_fat_fr": {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sodium_en": {
+      "text": "40",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sodium_fr": {
+      "text": "40",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sugar_en": {
+      "text": "9",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sugar_fr": {
+      "text": "9",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_table_en": {
+      "text": "Nutrition Facts Per Bar (31 g) Calories 150\n%Daily Value* Fat / Lipides 8 g\n10%\nSaturated / Saturés 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Protéines 1 g\nCholesterol / Cholestérol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_table_fr": {
+      "text": "Valeur Nutritive Per Berre (31 g)\nCalories 150 %Valeur Quotidienne*\nFat / Lipides 8 g\n10%\nSaturated / Saturés 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Protéines 1 g\nCholesterol / Cholestérol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_text_block_en": {
+      "text": "NATURALLY FLAVORED",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_title_en": {
+      "text": "Nutrition Facts",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_title_fr": {
+      "text": "Valeur Nutritive",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_trans_fat_en": {
+      "text": "0",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_trans_fat_fr": {
+      "text": "0",
+      "confidence": 1.0,
+      "bbox": null
+    }
+  },
+  "fields_all": {
+    "common_name_en": [
+      {
+        "text": "Bars",
+        "confidence": 0.9958416819572449,
+        "bbox": null
+      },
+      {
+        "text": "GRANOLA BARS",
+        "confidence": 0.41290056705474854,
+        "bbox": null
+      },
+      {
+        "text": "Rolled Oats",
+        "confidence": 0.8839626312255859,
+        "bbox": null
+      }
+    ],
+    "common_name_fr": [
+      {
+        "text": "BARRES PLONGÉES",
+        "confidence": 0.9997897744178772,
+        "bbox": null
+      },
+      {
+        "text": "BARRES TENDRES",
+        "confidence": 0.9998635053634644,
+        "bbox": null
+      }
+    ],
+    "net_quantity_full_text": [
+      {
+        "text": "5",
+        "confidence": 0.9871635437011719,
+        "bbox": null
+      }
+    ],
+    "net_quantity_value": [
+      {
+        "text": "5",
+        "confidence": 0.9871635437011719,
+        "bbox": null
+      }
+    ],
+    "nft_calories_en": [
+      {
+        "text": "150",
+        "confidence": 0.999992847442627,
+        "bbox": null
+      },
+      {
+        "text": "150",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_en": [
+      {
+        "text": "PER SERVING",
+        "confidence": 0.9997714161872864,
+        "bbox": null
+      },
+      {
+        "text": "Per Bar (31 g)",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_fr": [
+      {
+        "text": "PAR PORTION",
+        "confidence": 0.9999945163726807,
+        "bbox": null
+      },
+      {
+        "text": "Per Berre (31 g)",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "ingredients_list_en": [
+      {
+        "text": "Granola (Whole Grain Rolled Oats, Whole Grain Rolled Wheat, Sugar, Sun-\nflower Oil, High Fructose Corn Syrup, Molasses, Dried Coconut, Honey, Sodium\nBicarbonate, Natural Flavor, Whey Protein Concentrate), Sugar, Partially Hy-\ndrogenated Palm Kernel And Palm Oil, Crisp Rice (Rice Flour, Sugar, Barley\nMalt, Salt), Corn Syrup, Coconut Flakes, (Sugar, Chocolate Liquor, Cocoa\nButter, Soy Lecithin, Vanilla Extract), High Fructose Corn Syrup, Whey, Brown\nSugar, Corn Syrup Solids, Glycerin, Lactose, Partially Hydrogenated Soybean\nOil, Cocoa, Cocoa Processed With Alkali, Sorbitol, Milkfat, Salt, Soy Lecithin,\nGlyceryl Lacto Esters Of Fatty Acids, Natural And Artificial Flavor, Bht (Pre-\nservative), Citric Acid.",
+        "confidence": 0.9756324887275696,
+        "bbox": null
+      }
+    ],
+    "ingredients_list_fr": [
+      {
+        "text": "Granola (Flocons D'avoine À Grains Entiers, Flocons De Blé À Grains Entiers,\nSucre, Huile De Tournesol, Sirop De Maïs À Haute Teneur En Fructose,\nMélasse, Noix De Coco Séchée, Miel, Bicarbonate De Sodium, Arôme Na-\nturel, Concentré De Protéines De Lactosérum), Sucre, Palmiste Et Huile De\nPalme Partiellement Hydrogénés, Riz Croustillant (Farine De Riz, Sucre, Malt\nD'orge, Sel), Sirop De Maïs, Flocons De Noix De Coco, (Sucre, Liqueur De\nChocolat, Beurre De Cacao, Lécithine De Soja, Extrait De Vanille), Sirop De\nMaïs Riche En Fructose, Lactosérum, Cassonade, Extraits Secs De Sirop De\nMaïs, Glycérine, Lactose, Huile De Soja Partiellement Hydrogénée, Cacao,\nCacao Traité Avec Des Alcalis, Sorbitol, Matière Grasse Laitière, Sel, Léci-\nthine De Soja, Lactoesters Glycériques D'acides Gras, Arôme Naturel Et Arti-\nficiel, Bht (Conservateur), Acide Citrique.",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_calories_fr": [
+      {
+        "text": "150",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_en": [
+      {
+        "text": "18",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_fr": [
+      {
+        "text": "18",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_cholesterol_en": [
+      {
+        "text": "0",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_cholesterol_fr": [
+      {
+        "text": "0",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fat_en": [
+      {
+        "text": "8",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fat_fr": [
+      {
+        "text": "8",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_en": [
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_fr": [
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_en": [
+      {
+        "text": "70",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_fr": [
+      {
+        "text": "70",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_protein_en": [
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_protein_fr": [
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_saturated_fat_en": [
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_saturated_fat_fr": [
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_en": [
+      {
+        "text": "40",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_fr": [
+      {
+        "text": "40",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sugar_en": [
+      {
+        "text": "9",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sugar_fr": [
+      {
+        "text": "9",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_table_en": [
+      {
+        "text": "Nutrition Facts Per Bar (31 g) Calories 150\n%Daily Value* Fat / Lipides 8 g\n10%\nSaturated / Saturés 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Protéines 1 g\nCholesterol / Cholestérol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_table_fr": [
+      {
+        "text": "Valeur Nutritive Per Berre (31 g)\nCalories 150 %Valeur Quotidienne*\nFat / Lipides 8 g\n10%\nSaturated / Saturés 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Protéines 1 g\nCholesterol / Cholestérol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_text_block_en": [
+      {
+        "text": "NATURALLY FLAVORED",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_title_en": [
+      {
+        "text": "Nutrition Facts",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_title_fr": [
+      {
+        "text": "Valeur Nutritive",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_trans_fat_en": [
+      {
+        "text": "0",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_trans_fat_fr": [
+      {
+        "text": "0",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ]
+  },
+  "panels": {
+    "panel_pdp": {
+      "text": "ED 5 GRANOLA BARS BARRES TENDRES 150 CALORIES PER SERVING PAR PORTION",
+      "confidence": 0.5437276363372803,
+      "bbox": null
+    },
+    "panel_ingredients": {
+      "text": "Ingredients: Granola (Whole Grain Rolled Oats, Whole Grain Rolled Wheat, Sugar, Sun-\nflower Oil, High Fructose Corn Syrup, Molasses, Dried Coconut, Honey, Sodium\nBicarbonate, Natural Flavor, Whey Protein Concentrate), Sugar, Partially Hy-\ndrogenated Palm Kernel And Palm Oil, Crisp Rice (Rice Flour, Sugar, Barley\nMalt, Salt), Corn Syrup, Coconut Flakes, (Sugar, Chocolate Liquor, Cocoa\nButter, Soy Lecithin, Vanilla Extract), High Fructose Corn Syrup, Whey, Brown\nSugar, Corn Syrup Solids, Glycerin, Lactose, Partially Hydrogenated Soybean\nOil, Cocoa, Cocoa Processed With Alkali, Sorbitol, Milkfat, Salt, Soy Lecithin,\nGlyceryl Lacto Esters Of Fatty Acids, Natural And Artificial Flavor, Bht (Pre-\nservative), Citric Acid.\nIngrédients:\nGranola (Flocons D'avoine À Grains Entiers, Flocons De Blé À Grains Entiers,\nSucre, Huile De Tournesol, Sirop De Maïs À Haute Teneur En Fructose,\nMélasse, Noix De Coco Séchée, Miel, Bicarbonate De Sodium, Arôme Na-\nturel, Concentré De Protéines De Lactosérum), Sucre, Palmiste Et Huile De\nPalme Partiellement Hydrogénés, Riz Croustillant (Farine De Riz, Sucre, Malt\nD'orge, Sel), Sirop De Maïs, Flocons De Noix De Coco, (Sucre, Liqueur De\nChocolat, Beurre De Cacao, Lécithine De Soja, Extrait De Vanille), Sirop De\nMaïs Riche En Fructose, Lactosérum, Cassonade, Extraits Secs De Sirop De\nMaïs, Glycérine, Lactose, Huile De Soja Partiellement Hydrogénée, Cacao,\nCacao Traité Avec Des Alcalis, Sorbitol, Matière Grasse Laitière, Sel, Léci-\nthine De Soja, Lactoesters Glycériques D'acides Gras, Arôme Naturel Et Arti-\nficiel, Bht (Conservateur), Acide Citrique.",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "panel_nutrition": {
+      "text": "Nutrition Facts\nValeur Nutritive\nPer Bar (31 g)\nPer Berre (31 g)\nCalories 150\n%Daily Value*\n%Valeur Quotidienne*\nFat / Lipides 8 g\n10%\nSaturated / Saturés 6 g\n30%\n+Trans / Trans 0 g\nCarbohydrate / Glucides 18 g\n7% Fibre / Fibres 1 g 4% Sugars / Sucres 9 g\nSugar Alcohols / Polyacools 0 g\nProtein / Protéines 1 g\nCholesterol / Cholestérol 0 mg Sodium 40 mg 2% Potassium 70 mg\n0% Calcium 2% Iron/Fer\n2%\nVitamin A\n0%\nVitamin C\n0%",
+      "confidence": 0.7689043879508972,
+      "bbox": null
+    }
+  },
+  "translated": {}
+}

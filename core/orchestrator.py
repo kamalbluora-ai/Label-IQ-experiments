@@ -24,6 +24,7 @@ from vertex_search import cfia_retrieve_snippets
 from translate_fields import translate_foreign_fields
 from chatgpt_search import cfia_search_chatgpt_agent
 from compliance.agents_orchestrator import ComplianceOrchestrator
+from cache_fetcher import get_cached_label_facts, is_cache_valid
 
 # Environment configuration (use .get() to allow import without full config)
 IN_BUCKET = os.environ.get("IN_BUCKET", "")
@@ -172,37 +173,55 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
         "tags": tags,
     })
 
-    # Extract each image and merge
-    all_facts = []
-    for i, obj_name in enumerate(images):
-        img_bytes = storage_client.bucket(bucket).blob(obj_name).download_as_bytes()
-        
-        # Check tag for this image
-        current_tag = tags[i].lower() if i < len(tags) and tags[i] else ""
-        
-        if current_tag == "front":
-            # Split image into Left and Right panels
-            print(f"Splitting image {obj_name} (tag: front) into two halves...")
-            split_success = False
-            try:
-                panels = split_image_bytes(img_bytes)
-                if panels:
-                    for panel_name, panel_bytes in panels:
-                        print(f"Processing split panel: {panel_name}")
-                        facts = run_docai_custom_extractor(
-                            project_id=DOCAI_PROJECT,
-                            location=DOCAI_LOCATION,
-                            processor_id=DOCAI_PROCESSOR_ID,
-                            file_bytes=panel_bytes,
-                            mime_type=guess_mime(obj_name), # Assume same mime or just JPEG
-                        )
-                        all_facts.append(facts)
-                    split_success = True
-            except Exception as e:
-                print(f"Error splitting image: {e}")
+    # Check cache first
+    cached_facts = get_cached_label_facts(job_id, OUT_BUCKET, storage_client)
+    
+    if cached_facts and is_cache_valid(cached_facts):
+        print(f"Using cached label_facts for job {job_id}")
+        merged_facts = cached_facts
+    else:
+        print(f"Cache miss or invalid for job {job_id}, running DocAI pipeline")
+        # Extract each image and merge
+        all_facts = []
+        for i, obj_name in enumerate(images):
+            img_bytes = storage_client.bucket(bucket).blob(obj_name).download_as_bytes()
             
-            if not split_success:
-                # Fallback to normal processing
+            # Check tag for this image
+            current_tag = tags[i].lower() if i < len(tags) and tags[i] else ""
+            
+            if current_tag == "front":
+                # Split image into Left and Right panels
+                print(f"Splitting image {obj_name} (tag: front) into two halves...")
+                split_success = False
+                try:
+                    panels = split_image_bytes(img_bytes)
+                    if panels:
+                        for panel_name, panel_bytes in panels:
+                            print(f"Processing split panel: {panel_name}")
+                            facts = run_docai_custom_extractor(
+                                project_id=DOCAI_PROJECT,
+                                location=DOCAI_LOCATION,
+                                processor_id=DOCAI_PROCESSOR_ID,
+                                file_bytes=panel_bytes,
+                                mime_type=guess_mime(obj_name), # Assume same mime or just JPEG
+                            )
+                            all_facts.append(facts)
+                        split_success = True
+                except Exception as e:
+                    print(f"Error splitting image: {e}")
+                
+                if not split_success:
+                    # Fallback to normal processing
+                    facts = run_docai_custom_extractor(
+                        project_id=DOCAI_PROJECT,
+                        location=DOCAI_LOCATION,
+                        processor_id=DOCAI_PROCESSOR_ID,
+                        file_bytes=img_bytes,
+                        mime_type=guess_mime(obj_name),
+                    )
+                    all_facts.append(facts)
+            else:
+                # Normal processing
                 facts = run_docai_custom_extractor(
                     project_id=DOCAI_PROJECT,
                     location=DOCAI_LOCATION,
@@ -211,18 +230,8 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
                     mime_type=guess_mime(obj_name),
                 )
                 all_facts.append(facts)
-        else:
-            # Normal processing
-            facts = run_docai_custom_extractor(
-                project_id=DOCAI_PROJECT,
-                location=DOCAI_LOCATION,
-                processor_id=DOCAI_PROCESSOR_ID,
-                file_bytes=img_bytes,
-                mime_type=guess_mime(obj_name),
-            )
-            all_facts.append(facts)
 
-    merged_facts = merge_label_facts(all_facts)
+        merged_facts = merge_label_facts(all_facts)
 
     # Auto-detect mode if not specified in manifest
     mode = manifest_mode.upper() if manifest_mode else detect_mode(merged_facts)
