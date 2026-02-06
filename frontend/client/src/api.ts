@@ -38,6 +38,24 @@ export interface ComplianceReport {
             rationale: string;
             section: string;
         }>;
+        audit_details: {
+            nutrient_audits: {
+                nutrient_name: string;
+                original_value: number;
+                expected_value: number | null;
+                unit: string;
+                is_dv: boolean;
+                status: string;
+                message: string;
+                rule_applied: string | null;
+            }[];
+            cross_field_audits: {
+                check_name: string;
+                status: string;
+                message: string;
+                tolerance: string | null;
+            }[];
+        } | null;
     };
     cfia_evidence: Record<string, unknown>;
 }

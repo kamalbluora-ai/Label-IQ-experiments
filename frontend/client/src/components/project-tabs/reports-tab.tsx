@@ -8,6 +8,7 @@ import { FileText, Printer, Download, AlertTriangle, CheckCircle, XCircle } from
 import { useState } from "react";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
+import NutritionAuditTable from "@/components/NutritionAuditTable";
 
 interface ReportsTabProps {
   project: Project;
@@ -411,8 +412,8 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                         .filter(check => check.result !== "pass")
                         .map((check, idx) => (
                           <div key={idx} className={`p-4 rounded-lg border flex gap-4 ${check.result === "fail"
-                              ? "bg-red-50 border-red-200"
-                              : "bg-yellow-50 border-yellow-200"
+                            ? "bg-red-50 border-red-200"
+                            : "bg-yellow-50 border-yellow-200"
                             }`}>
                             {check.result === "fail" ? (
                               <XCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
@@ -436,6 +437,14 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                     </div>
                   )}
                 </div>
+
+                {/* NFT Audit Details Section */}
+                {reportData.results.audit_details && (
+                  <div className="space-y-4">
+                    <h2 className="text-xl font-bold text-slate-900">Nutrition Facts Audit Details</h2>
+                    <NutritionAuditTable auditDetails={reportData.results.audit_details} />
+                  </div>
+                )}
 
                 {/* Disclaimer */}
                 <div className="pt-12 border-t mt-12">

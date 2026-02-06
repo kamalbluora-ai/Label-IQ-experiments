@@ -42,7 +42,7 @@ def upload_local_images(bucket_name: str, local_paths: list, gcs_prefix: str = "
 
 def main():
     # Local image paths
-    sample_dir = Path(__file__).parent / "sample_files" / "ex1"
+    sample_dir = Path(__file__).parent / "sample_files" / "ex4"
     local_images = [
         sample_dir / "front.jpg",
         sample_dir / "back.jpg",
@@ -50,11 +50,11 @@ def main():
     
     # 1. Upload to GCP IN_BUCKET
     print("Uploading images to GCP...")
-    gcs_paths = upload_local_images(IN_BUCKET, local_images, "incoming/test-ex1")
+    gcs_paths = upload_local_images(IN_BUCKET, local_images, "incoming/test-ex4")
     
     # 2. Create manifest
     manifest = {
-        "job_id": "test-ex1",
+        "job_id": "test-ex4",
         "mode": "AS_IS",
         "product_metadata": {"food_type": "test"},
         "images": gcs_paths,

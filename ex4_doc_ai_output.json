@@ -1,0 +1,467 @@
+{
+  "text": "#1\nMOST\nTRUSTED\nby Canadians\n2025\nBrandSpark Most Trusted Awards\nCANNED SEAFOOD.\nUPARVE\nNET 170 g\nDRAINED 120 g\nCLO\nLEA\nCHUNK LIC\nSKIPJACK in\nVoted most trusted Canned Seafood by Canadian sho\n\nVER\n®\nMSC\nwww.msc.org\nGHT TUNA\nn WATER\noppers in the 2025 BrandSpark Canadian Trust Study.\n\nNutrition Facts\n% DV* / % VQ*\n% DV*/% VQ*\nValeur nutritive\nPer 1/2 can drained (55 g)\npour 1/2 boîte égouttée (55 g)\nCalories 60\n* DV = Daily Value\n*VQ = valeur quotidienne\nFat/Lipides 0.5 g\nSaturated / saturés 0.2 g\n+ Trans / trans 0 g\nPolyunsaturated /\nOmega-6/oméga-6 0 g\nOmega-3/oméga-3 0.1\nMonounsaturated /\nCarbohydrate / Glucides 0 g\npolyinsaturés 0.2 g\ng\nmonoinsaturés 0.1 g\n1%\n1%\nProtein / Protéines 13 g\nCholesterol / Cholestérol 30 mg\nSodium 130 mg\n6%\nPotassium 100 mg\n2%\nIron / Fer 0.4 mg\n2%\n3%\nVitamin D / Vitamine D 0.6 µg\nSelenium / Sélénium 26 µg\n47%\nNot a significant source of fibre, sugars, or calcium / Source négligeable de fibres, sucres et calcium.\n\n",
+  "fields": {
+    "common_name_en": {
+      "text": "LIGHT TUNA in WATER",
+      "confidence": 0.7366635799407959,
+      "bbox": null
+    },
+    "net_quantity_full_text": {
+      "text": "DRAINED 120 g",
+      "confidence": 0.9998642206192017,
+      "bbox": null
+    },
+    "net_quantity_unit_symbol": {
+      "text": "g",
+      "confidence": 0.9999639987945557,
+      "bbox": null
+    },
+    "net_quantity_value": {
+      "text": "120",
+      "confidence": 0.9999932050704956,
+      "bbox": null
+    },
+    "dealer_name": {
+      "text": "VER",
+      "confidence": 0.9945524334907532,
+      "bbox": null
+    },
+    "panel_pds": {
+      "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. “Readily discernible” means label information must be easy to see and read by an ordinary person under normal conditions",
+      "confidence": 0.999299168586731,
+      "bbox": null
+    },
+    "nft_calories_en": {
+      "text": "60",
+      "confidence": 0.8538404107093811,
+      "bbox": null
+    },
+    "nft_carbohydrate_en": {
+      "text": "0",
+      "confidence": 0.998151421546936,
+      "bbox": null
+    },
+    "nft_carbohydrate_fr": {
+      "text": "0",
+      "confidence": 0.998151421546936,
+      "bbox": null
+    },
+    "nft_cholesterol_en": {
+      "text": "30",
+      "confidence": 0.9998843669891357,
+      "bbox": null
+    },
+    "nft_cholesterol_fr": {
+      "text": "30",
+      "confidence": 0.9998843669891357,
+      "bbox": null
+    },
+    "nft_fat_dv_en": {
+      "text": "1",
+      "confidence": 0.9932817220687866,
+      "bbox": null
+    },
+    "nft_fat_dv_fr": {
+      "text": "1",
+      "confidence": 0.9932817220687866,
+      "bbox": null
+    },
+    "nft_fat_en": {
+      "text": "0.5",
+      "confidence": 0.9999699592590332,
+      "bbox": null
+    },
+    "nft_fat_fr": {
+      "text": "0.5",
+      "confidence": 0.9999699592590332,
+      "bbox": null
+    },
+    "nft_iron_dv_en": {
+      "text": "2",
+      "confidence": 0.999934196472168,
+      "bbox": null
+    },
+    "nft_iron_dv_fr": {
+      "text": "2",
+      "confidence": 0.999934196472168,
+      "bbox": null
+    },
+    "nft_iron_en": {
+      "text": "0.4",
+      "confidence": 0.9999657869338989,
+      "bbox": null
+    },
+    "nft_iron_fr": {
+      "text": "0.4",
+      "confidence": 0.9999657869338989,
+      "bbox": null
+    },
+    "nft_potassium_dv_en": {
+      "text": "2",
+      "confidence": 0.9999926090240479,
+      "bbox": null
+    },
+    "nft_potassium_dv_fr": {
+      "text": "2",
+      "confidence": 0.9999926090240479,
+      "bbox": null
+    },
+    "nft_potassium_en": {
+      "text": "100",
+      "confidence": 0.999998927116394,
+      "bbox": null
+    },
+    "nft_protein_en": {
+      "text": "13",
+      "confidence": 0.9999759197235107,
+      "bbox": null
+    },
+    "nft_protein_fr": {
+      "text": "13",
+      "confidence": 0.9999759197235107,
+      "bbox": null
+    },
+    "nft_saturated_fat_en": {
+      "text": "0.2",
+      "confidence": 0.9999880790710449,
+      "bbox": null
+    },
+    "nft_saturated_fat_fr": {
+      "text": "0.2",
+      "confidence": 0.9999880790710449,
+      "bbox": null
+    },
+    "nft_serving_size_en": {
+      "text": "Per 1/2 can drained (55 g)",
+      "confidence": 0.99983149766922,
+      "bbox": null
+    },
+    "nft_serving_size_fr": {
+      "text": "pour 1/2 boîte égouttée (55 g)",
+      "confidence": 0.9999901056289673,
+      "bbox": null
+    },
+    "nft_sodium_dv_en": {
+      "text": "6",
+      "confidence": 0.9999821186065674,
+      "bbox": null
+    },
+    "nft_sodium_dv_fr": {
+      "text": "6",
+      "confidence": 0.9999821186065674,
+      "bbox": null
+    },
+    "nft_sodium_en": {
+      "text": "130",
+      "confidence": 0.9999966621398926,
+      "bbox": null
+    },
+    "nft_text_block_en": {
+      "text": "Not a significant source of fibre, sugars, or calcium",
+      "confidence": 0.4731192886829376,
+      "bbox": null
+    },
+    "nft_text_block_fr": {
+      "text": "Source négligeable de fibres, sucres et calcium.",
+      "confidence": 0.9992236495018005,
+      "bbox": null
+    },
+    "nft_title_fr": {
+      "text": "Valeur nutritive",
+      "confidence": 0.611392080783844,
+      "bbox": null
+    },
+    "nft_trans_fat_en": {
+      "text": "0",
+      "confidence": 0.9999644756317139,
+      "bbox": null
+    },
+    "nft_trans_fat_fr": {
+      "text": "0",
+      "confidence": 0.9999644756317139,
+      "bbox": null
+    }
+  },
+  "fields_all": {
+    "common_name_en": [
+      {
+        "text": "CHUNK LIC\nSKIPJACK in",
+        "confidence": 0.2817935049533844,
+        "bbox": null
+      },
+      {
+        "text": "LIGHT TUNA in WATER",
+        "confidence": 0.7366635799407959,
+        "bbox": null
+      }
+    ],
+    "net_quantity_full_text": [
+      {
+        "text": "NET 170 g",
+        "confidence": 0.9824705123901367,
+        "bbox": null
+      },
+      {
+        "text": "DRAINED 120 g",
+        "confidence": 0.9998642206192017,
+        "bbox": null
+      }
+    ],
+    "net_quantity_unit_symbol": [
+      {
+        "text": "g",
+        "confidence": 0.9854086637496948,
+        "bbox": null
+      },
+      {
+        "text": "g",
+        "confidence": 0.9999639987945557,
+        "bbox": null
+      }
+    ],
+    "net_quantity_value": [
+      {
+        "text": "170",
+        "confidence": 0.9991733431816101,
+        "bbox": null
+      },
+      {
+        "text": "120",
+        "confidence": 0.9999932050704956,
+        "bbox": null
+      }
+    ],
+    "dealer_name": [
+      {
+        "text": "VER",
+        "confidence": 0.9945524334907532,
+        "bbox": null
+      }
+    ],
+    "panel_pds": [
+      {
+        "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. “Readily discernible” means label information must be easy to see and read by an ordinary person under normal conditions",
+        "confidence": 0.999299168586731,
+        "bbox": null
+      }
+    ],
+    "nft_calories_en": [
+      {
+        "text": "60",
+        "confidence": 0.8538404107093811,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_en": [
+      {
+        "text": "0",
+        "confidence": 0.998151421546936,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_fr": [
+      {
+        "text": "0",
+        "confidence": 0.998151421546936,
+        "bbox": null
+      }
+    ],
+    "nft_cholesterol_en": [
+      {
+        "text": "30",
+        "confidence": 0.9998843669891357,
+        "bbox": null
+      }
+    ],
+    "nft_cholesterol_fr": [
+      {
+        "text": "30",
+        "confidence": 0.9998843669891357,
+        "bbox": null
+      }
+    ],
+    "nft_fat_dv_en": [
+      {
+        "text": "1",
+        "confidence": 0.9932817220687866,
+        "bbox": null
+      }
+    ],
+    "nft_fat_dv_fr": [
+      {
+        "text": "1",
+        "confidence": 0.9932817220687866,
+        "bbox": null
+      }
+    ],
+    "nft_fat_en": [
+      {
+        "text": "0.5",
+        "confidence": 0.9999699592590332,
+        "bbox": null
+      }
+    ],
+    "nft_fat_fr": [
+      {
+        "text": "0.5",
+        "confidence": 0.9999699592590332,
+        "bbox": null
+      }
+    ],
+    "nft_iron_dv_en": [
+      {
+        "text": "2",
+        "confidence": 0.999934196472168,
+        "bbox": null
+      }
+    ],
+    "nft_iron_dv_fr": [
+      {
+        "text": "2",
+        "confidence": 0.999934196472168,
+        "bbox": null
+      }
+    ],
+    "nft_iron_en": [
+      {
+        "text": "0.4",
+        "confidence": 0.9999657869338989,
+        "bbox": null
+      }
+    ],
+    "nft_iron_fr": [
+      {
+        "text": "0.4",
+        "confidence": 0.9999657869338989,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_dv_en": [
+      {
+        "text": "2",
+        "confidence": 0.9999926090240479,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_dv_fr": [
+      {
+        "text": "2",
+        "confidence": 0.9999926090240479,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_en": [
+      {
+        "text": "100",
+        "confidence": 0.999998927116394,
+        "bbox": null
+      }
+    ],
+    "nft_protein_en": [
+      {
+        "text": "13",
+        "confidence": 0.9999759197235107,
+        "bbox": null
+      }
+    ],
+    "nft_protein_fr": [
+      {
+        "text": "13",
+        "confidence": 0.9999759197235107,
+        "bbox": null
+      }
+    ],
+    "nft_saturated_fat_en": [
+      {
+        "text": "0.2",
+        "confidence": 0.9999880790710449,
+        "bbox": null
+      }
+    ],
+    "nft_saturated_fat_fr": [
+      {
+        "text": "0.2",
+        "confidence": 0.9999880790710449,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_en": [
+      {
+        "text": "Per 1/2 can drained (55 g)",
+        "confidence": 0.99983149766922,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_fr": [
+      {
+        "text": "pour 1/2 boîte égouttée (55 g)",
+        "confidence": 0.9999901056289673,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_dv_en": [
+      {
+        "text": "6",
+        "confidence": 0.9999821186065674,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_dv_fr": [
+      {
+        "text": "6",
+        "confidence": 0.9999821186065674,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_en": [
+      {
+        "text": "130",
+        "confidence": 0.9999966621398926,
+        "bbox": null
+      }
+    ],
+    "nft_text_block_en": [
+      {
+        "text": "Not a significant source of fibre, sugars, or calcium",
+        "confidence": 0.4731192886829376,
+        "bbox": null
+      }
+    ],
+    "nft_text_block_fr": [
+      {
+        "text": "Source négligeable de fibres, sucres et calcium.",
+        "confidence": 0.9992236495018005,
+        "bbox": null
+      }
+    ],
+    "nft_title_fr": [
+      {
+        "text": "Valeur nutritive",
+        "confidence": 0.611392080783844,
+        "bbox": null
+      }
+    ],
+    "nft_trans_fat_en": [
+      {
+        "text": "0",
+        "confidence": 0.9999644756317139,
+        "bbox": null
+      }
+    ],
+    "nft_trans_fat_fr": [
+      {
+        "text": "0",
+        "confidence": 0.9999644756317139,
+        "bbox": null
+      }
+    ]
+  },
+  "panels": {
+    "panel_pdp": {
+      "text": "The principal display panel (PDP) is the part of a food label most visible under normal sale or use. Under the SFCR, it is generally the label on the main visible surface of the container, with specific rules for display cards, ornamental containers, non-consumer prepackaged foods, and unpackaged foods. Under the FDR, consumer prepackaged foods follow the SFCR definition, while other prepackaged or unpackaged foods use the visible container or food surface (excluding the bottom).",
+      "confidence": 0.7830888628959656,
+      "bbox": null
+    }
+  },
+  "translated": {}
+}

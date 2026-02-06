@@ -26,6 +26,8 @@ from compliance.agents.bilingual import BilingualAgent
 from compliance.agents.irradiation import IrradiationAgent
 from compliance.agents.sweeteners import SweetenersAgent
 from compliance.agents.country_origin import CountryOriginAgent
+from compliance.nft_audit_table.integration import map_docai_to_inputs
+from compliance.nft_audit_table.audit_orchestrator import NFTAuditor
 
 class ComplianceOrchestrator:
     """
@@ -40,15 +42,16 @@ class ComplianceOrchestrator:
     
     def __init__(self):
         self.questions = QUESTIONS
+        
+        self.nft_auditor = NFTAuditor()
                 
         # Initialize all 11 agents
         self.agents = {
-            "common_name": CommonNameAgent()
+            "common_name": CommonNameAgent(),
             # "net_quantity": NetQuantityAgent(),
             # "list_of_ingredients": IngredientsAgent(),
             # "name_and_address": NameAddressAgent(),
             # "date_markings": DateMarkingAgent(),
-            # "nutrition_facts_table": NutritionFactsAgent(),
             # "fop_nutrition_symbol": FOPSymbolAgent(),
             # "bilingual_requirements": BilingualAgent(),
             # "irradiation": IrradiationAgent(),
@@ -57,6 +60,100 @@ class ComplianceOrchestrator:
         }
     
     # Questions are now imported directly from compliance.questions
+    
+    def run_nft_audit(self, label_facts: Dict[str, Any], section_questions: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Run NFT auditor and convert results to orchestrator format.
+        
+        Returns results with full calculation details for frontend display.
+        """
+        try:
+            # Extract fields from DocAI output
+            fields = label_facts.get("fields", {})
+            
+            # Convert to simple key:value format for integration
+            simple_fields = {}
+            for key, val in fields.items():
+                if isinstance(val, dict) and "text" in val:
+                    simple_fields[key] = val["text"]
+                else:
+                    simple_fields[key] = val
+            
+            # Map to NutrientData objects
+            nutrient_inputs = map_docai_to_inputs(simple_fields)
+            
+            # Audit each nutrient
+            nutrient_audits = []
+            for nutrient in nutrient_inputs:
+                audit_result = self.nft_auditor.audit_nutrient(nutrient)
+                nutrient_audits.append({
+                    "nutrient_name": audit_result.nutrient_name,
+                    "original_value": audit_result.original_value,
+                    "expected_value": audit_result.expected_value,
+                    "unit": audit_result.unit,
+                    "is_dv": audit_result.is_dv,
+                    "status": audit_result.status.value,
+                    "message": audit_result.message,
+                    "rule_applied": audit_result.rule_applied
+                })
+            
+            # Run cross-field validations
+            nutrients_dict = {n.name: n.value for n in nutrient_inputs}
+            cross_field_audits = []
+            for cross_result in self.nft_auditor.audit_cross_fields(nutrients_dict):
+                cross_field_audits.append({
+                    "check_name": cross_result.check_name,
+                    "status": cross_result.status.value,
+                    "message": cross_result.message,
+                    "tolerance": cross_result.tolerance
+                })
+            
+            # Convert to orchestrator format
+            check_results = []
+            for q in section_questions:
+                # Determine result based on audit status
+                # If any nutrient failed, mark as fail
+                has_fail = any(a["status"] == "fail" for a in nutrient_audits)
+                has_cross_fail = any(a["status"] == "fail" for a in cross_field_audits)
+                
+                if has_fail or has_cross_fail:
+                    result = "fail"
+                    rationale = "NFT audit detected compliance issues. See audit details below."
+                else:
+                    result = "pass"
+                    rationale = "All nutrient values comply with CFIA rounding rules."
+                
+                check_results.append({
+                    "question_id": q["id"],
+                    "question": q["text"],
+                    "result": result,
+                    "rationale": rationale
+                })
+            
+            return {
+                "section": "Nutrition Facts Table",
+                "results": check_results,
+                "audit_details": {  # Full calculation details for frontend
+                    "nutrient_audits": nutrient_audits,
+                    "cross_field_audits": cross_field_audits
+                }
+            }
+            
+        except Exception as e:
+            # Return error result
+            return {
+                "section": "Nutrition Facts Table",
+                "results": [
+                    {
+                        "question_id": q["id"],
+                        "question": q["text"],
+                        "result": "needs_review",
+                        "rationale": f"NFT Auditor error: {str(e)}"
+                    }
+                    for q in section_questions
+                ],
+                "audit_details": None
+            }
     
     async def evaluate(self, label_facts: Dict[str, Any], user_context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
@@ -92,7 +189,11 @@ class ComplianceOrchestrator:
                 if not section_questions:
                     return None
                 try:
-                    return await agent.evaluate(label_facts, section_questions, user_context)
+                    # Check if this is the NFT auditor
+                    if agent == "NFT_AUDITOR":
+                        return self.run_nft_audit(label_facts, section_questions)
+                    else:
+                        return await agent.evaluate(label_facts, section_questions, user_context)
                 except Exception as e:
                     return e
         

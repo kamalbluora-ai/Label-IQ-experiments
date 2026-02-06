@@ -1,0 +1,715 @@
+{
+  "text": "Lin\nSWISS C\nMILK LA\nLindt\nSWISS MILK CHOCC\nCHOCOLAT SUISSE\n100 g\n\ndt\nCLASSIC\nIT\nLindt\nOLATE\nAU LAIT\nINDT & SPRONGI\nMAITRE CHOCOLATER SUISSE DE\n\nLINDT & SPRÜNGLI\nMAÎTRE CHOCOLATIER SUISSE\nDEPUIS 1845\nNutrition Facts\nValeur nutritive\nPer 9 squares (30 g)\npour 9 carrés (30 g)\nINGREDIENTS: SUGAR,\nCOCOA BUTTER, MILK\nINGREDIENTS, COCOA\nMASS, LACTOSE, SOYA\nLECITHIN, BARLEY\nMALT EXTRACT,\nARTIFICIAL FLAVOUR.\nAmount\n% Daily Value\nMAY CONTAIN\nTeneur\n% valeur quotidienne\nPEANUTS AND TREE\nNUTS.\nCalories / Calories 160\nINGREDIENTS: SUCRE,\nFat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g\nBEURRE DE CACAO,\nSUBSTANCES\nCholesterol / Cholestérol 5 mg\nLAITIÈRES, PÂTE DE\nCACAO, LACTOSE,\nLECITHINE DE SOJA,\nEXTRAIT DE MALT\nSodium / Sodium 25 mg\n1%\nD'ORGE, AROME\nARTIFICIEL.\nCarbohydrate / Glucides 18 g 6%\nPEUT CONTENIR DES\nARACHIDES ET DES\nFibre / Fibres 1 g\n4%\nΝΟΙΧ.\nSugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%\nQUALITY GUARANTEE\nGARANTIE DE QUALITE\nCHOCOLADEFABRIKEN LINDT & SPRONGLI AG\nKILCHBERG/SWITZERLAND\nSWISS MADE/FABRIQUE EN SUISSE\nMANUFACTURED IN SWITZERLAND BY/\nFABRIQUÉ EN SUISSE PAR:\nLIND\nONGU\nCACAO\nOGRA\n0\n37466 01986\n4\nTORONTO, ON M5H 3M7\nLINDT & SPRÜNGLI (CANADA), INC.\nIMPORTED BY/IMPORTÉ PAR:\nKEEN\n\n",
+  "fields": {
+    "common_name_en": {
+      "text": "CHOCOLATE",
+      "confidence": 0.8610844016075134,
+      "bbox": null
+    },
+    "common_name_fr": {
+      "text": "CHOCOLAT SUISSE",
+      "confidence": 0.999866247177124,
+      "bbox": null
+    },
+    "dealer_name": {
+      "text": "LINDT & SPRÜNGLI (CANADA), INC.",
+      "confidence": 0.9101681113243103,
+      "bbox": null
+    },
+    "net_quantity_full_text": {
+      "text": "100 g",
+      "confidence": 0.9999668598175049,
+      "bbox": null
+    },
+    "net_quantity_unit_symbol": {
+      "text": "g",
+      "confidence": 0.9977986812591553,
+      "bbox": null
+    },
+    "net_quantity_value": {
+      "text": "100",
+      "confidence": 0.9999126195907593,
+      "bbox": null
+    },
+    "panel_pds": {
+      "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. “Readily discernible” means label information must be easy to see and read by an ordinary person under normal conditions",
+      "confidence": 0.9992090463638306,
+      "bbox": null
+    },
+    "contains_statement_en": {
+      "text": "MAY CONTAIN PEANUTS AND TREE\nNUTS.",
+      "confidence": 0.9705044627189636,
+      "bbox": null
+    },
+    "contains_statement_fr": {
+      "text": "PEUT CONTENIR DES\nARACHIDES ET DES ΝΟΙΧ.",
+      "confidence": 0.9997765421867371,
+      "bbox": null
+    },
+    "country_of_origin_statement_en": {
+      "text": "MANUFACTURED IN SWITZERLAND BY/",
+      "confidence": 0.8101819753646851,
+      "bbox": null
+    },
+    "dealer_address": {
+      "text": "TORONTO, ON M5H 3M7",
+      "confidence": 0.5567733645439148,
+      "bbox": null
+    },
+    "importer_statement_en": {
+      "text": "IMPORTED BY/",
+      "confidence": 0.8826596736907959,
+      "bbox": null
+    },
+    "importer_statement_fr": {
+      "text": "IMPORTÉ PAR:",
+      "confidence": 0.9998646974563599,
+      "bbox": null
+    },
+    "ingredients_list_en": {
+      "text": "INGREDIENTS: SUGAR,\nCOCOA BUTTER, MILK\nINGREDIENTS, COCOA\nMASS, LACTOSE, SOYA\nLECITHIN, BARLEY\nMALT EXTRACT,\nARTIFICIAL FLAVOUR.",
+      "confidence": 0.9934459328651428,
+      "bbox": null
+    },
+    "ingredients_list_fr": {
+      "text": "INGREDIENTS: SUCRE, BEURRE DE CACAO,\nSUBSTANCES LAITIÈRES, PÂTE DE\nCACAO, LACTOSE,\nLECITHINE DE SOJA,\nEXTRAIT DE MALT D'ORGE, AROME\nARTIFICIEL.",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_calcium_dv_en": {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_calcium_dv_fr": {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_calories_en": {
+      "text": "160",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_calories_fr": {
+      "text": "160",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_carbohydrate_dv_en": {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_carbohydrate_dv_fr": {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_carbohydrate_en": {
+      "text": "18",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_carbohydrate_fr": {
+      "text": "18",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_cholesterol_en": {
+      "text": "5",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_cholesterol_fr": {
+      "text": "5",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fat_dv_en": {
+      "text": "14",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fat_dv_fr": {
+      "text": "14",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fat_en": {
+      "text": "9",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fat_fr": {
+      "text": "9",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fibre_dv_en": {
+      "text": "4",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fibre_dv_fr": {
+      "text": "4",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fibre_en": {
+      "text": "1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_fibre_fr": {
+      "text": "1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_iron_dv_en": {
+      "text": "4",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_iron_dv_fr": {
+      "text": "4",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_protein_en": {
+      "text": "2",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_protein_fr": {
+      "text": "2",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_saturated_fat_en": {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_saturated_fat_fr": {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_serving_size_en": {
+      "text": "Per 9 squares (30 g)",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_serving_size_fr": {
+      "text": "pour 9 carrés (30 g)",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sodium_dv_en": {
+      "text": "1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sodium_dv_fr": {
+      "text": "1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sodium_en": {
+      "text": "25",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sodium_fr": {
+      "text": "25",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sugar_en": {
+      "text": "17",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_sugar_fr": {
+      "text": "17",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_table_en": {
+      "text": "Nutrition Facts Per 9 squares (30 g) Amount\n% Daily Value Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_table_fr": {
+      "text": "Valeur nutritive pour 9 carrés (30 g) Teneur\n% valeur quotidienne Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_text_block_en": {
+      "text": "Nutrition Facts Per 9 squares (30 g) Amount\n% Daily Value Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_text_block_fr": {
+      "text": "Valeur nutritive pour 9 carrés (30 g) Teneur\n% valeur quotidienne Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_title_en": {
+      "text": "Nutrition Facts",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_title_fr": {
+      "text": "Valeur nutritive",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_trans_fat_en": {
+      "text": "0.1",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "nft_trans_fat_fr": {
+      "text": "0.1",
+      "confidence": 1.0,
+      "bbox": null
+    }
+  },
+  "fields_all": {
+    "common_name_en": [
+      {
+        "text": "SWISS MILK CHOCC",
+        "confidence": 0.5963257551193237,
+        "bbox": null
+      },
+      {
+        "text": "CHOCOLATE",
+        "confidence": 0.8610844016075134,
+        "bbox": null
+      }
+    ],
+    "common_name_fr": [
+      {
+        "text": "CHOCOLAT SUISSE",
+        "confidence": 0.999866247177124,
+        "bbox": null
+      },
+      {
+        "text": "CHOCOLAT AU LAIT",
+        "confidence": 0.7159571051597595,
+        "bbox": null
+      }
+    ],
+    "dealer_name": [
+      {
+        "text": "Lindt",
+        "confidence": 0.8275341987609863,
+        "bbox": null
+      },
+      {
+        "text": "LINDT & SPRÜNGLI (CANADA), INC.",
+        "confidence": 0.9101681113243103,
+        "bbox": null
+      }
+    ],
+    "net_quantity_full_text": [
+      {
+        "text": "100 g",
+        "confidence": 0.9999668598175049,
+        "bbox": null
+      }
+    ],
+    "net_quantity_unit_symbol": [
+      {
+        "text": "g",
+        "confidence": 0.9977986812591553,
+        "bbox": null
+      }
+    ],
+    "net_quantity_value": [
+      {
+        "text": "100",
+        "confidence": 0.9999126195907593,
+        "bbox": null
+      }
+    ],
+    "panel_pds": [
+      {
+        "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. “Readily discernible” means label information must be easy to see and read by an ordinary person under normal conditions",
+        "confidence": 0.9992090463638306,
+        "bbox": null
+      },
+      {
+        "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. “Readily discernible” means label information must be easy to see and read by an ordinary person under normal conditions",
+        "confidence": 0.9977683424949646,
+        "bbox": null
+      }
+    ],
+    "contains_statement_en": [
+      {
+        "text": "MAY CONTAIN PEANUTS AND TREE\nNUTS.",
+        "confidence": 0.9705044627189636,
+        "bbox": null
+      }
+    ],
+    "contains_statement_fr": [
+      {
+        "text": "PEUT CONTENIR DES\nARACHIDES ET DES ΝΟΙΧ.",
+        "confidence": 0.9997765421867371,
+        "bbox": null
+      }
+    ],
+    "country_of_origin_statement_en": [
+      {
+        "text": "SWISS MADE",
+        "confidence": 0.703377366065979,
+        "bbox": null
+      },
+      {
+        "text": "MANUFACTURED IN SWITZERLAND BY/",
+        "confidence": 0.8101819753646851,
+        "bbox": null
+      }
+    ],
+    "dealer_address": [
+      {
+        "text": "TORONTO, ON M5H 3M7",
+        "confidence": 0.5567733645439148,
+        "bbox": null
+      }
+    ],
+    "importer_statement_en": [
+      {
+        "text": "IMPORTED BY/",
+        "confidence": 0.8826596736907959,
+        "bbox": null
+      }
+    ],
+    "importer_statement_fr": [
+      {
+        "text": "IMPORTÉ PAR:",
+        "confidence": 0.9998646974563599,
+        "bbox": null
+      }
+    ],
+    "ingredients_list_en": [
+      {
+        "text": "INGREDIENTS: SUGAR,\nCOCOA BUTTER, MILK\nINGREDIENTS, COCOA\nMASS, LACTOSE, SOYA\nLECITHIN, BARLEY\nMALT EXTRACT,\nARTIFICIAL FLAVOUR.",
+        "confidence": 0.9934459328651428,
+        "bbox": null
+      }
+    ],
+    "ingredients_list_fr": [
+      {
+        "text": "INGREDIENTS: SUCRE, BEURRE DE CACAO,\nSUBSTANCES LAITIÈRES, PÂTE DE\nCACAO, LACTOSE,\nLECITHINE DE SOJA,\nEXTRAIT DE MALT D'ORGE, AROME\nARTIFICIEL.",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_calcium_dv_en": [
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_calcium_dv_fr": [
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_calories_en": [
+      {
+        "text": "160",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_calories_fr": [
+      {
+        "text": "160",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_dv_en": [
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_dv_fr": [
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_en": [
+      {
+        "text": "18",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_fr": [
+      {
+        "text": "18",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_cholesterol_en": [
+      {
+        "text": "5",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_cholesterol_fr": [
+      {
+        "text": "5",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fat_dv_en": [
+      {
+        "text": "14",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fat_dv_fr": [
+      {
+        "text": "14",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fat_en": [
+      {
+        "text": "9",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fat_fr": [
+      {
+        "text": "9",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_dv_en": [
+      {
+        "text": "4",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_dv_fr": [
+      {
+        "text": "4",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_en": [
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_fr": [
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_iron_dv_en": [
+      {
+        "text": "4",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_iron_dv_fr": [
+      {
+        "text": "4",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_protein_en": [
+      {
+        "text": "2",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_protein_fr": [
+      {
+        "text": "2",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_saturated_fat_en": [
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_saturated_fat_fr": [
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_en": [
+      {
+        "text": "Per 9 squares (30 g)",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_fr": [
+      {
+        "text": "pour 9 carrés (30 g)",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_dv_en": [
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_dv_fr": [
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_en": [
+      {
+        "text": "25",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_fr": [
+      {
+        "text": "25",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sugar_en": [
+      {
+        "text": "17",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_sugar_fr": [
+      {
+        "text": "17",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_table_en": [
+      {
+        "text": "Nutrition Facts Per 9 squares (30 g) Amount\n% Daily Value Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_table_fr": [
+      {
+        "text": "Valeur nutritive pour 9 carrés (30 g) Teneur\n% valeur quotidienne Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_text_block_en": [
+      {
+        "text": "Nutrition Facts Per 9 squares (30 g) Amount\n% Daily Value Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_text_block_fr": [
+      {
+        "text": "Valeur nutritive pour 9 carrés (30 g) Teneur\n% valeur quotidienne Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_title_en": [
+      {
+        "text": "Nutrition Facts",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_title_fr": [
+      {
+        "text": "Valeur nutritive",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_trans_fat_en": [
+      {
+        "text": "0.1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ],
+    "nft_trans_fat_fr": [
+      {
+        "text": "0.1",
+        "confidence": 1.0,
+        "bbox": null
+      }
+    ]
+  },
+  "panels": {
+    "panel_pdp": {
+      "text": "The principal display panel (PDP) is the part of a food label most visible under normal sale or use. Under the SFCR, it is generally the label on the main visible surface of the container, with specific rules for display cards, ornamental containers, non-consumer prepackaged foods, and unpackaged foods. Under the FDR, consumer prepackaged foods follow the SFCR definition, while other prepackaged or unpackaged foods use the visible container or food surface (excluding the bottom).",
+      "confidence": 0.8874951004981995,
+      "bbox": null
+    },
+    "panel_address": {
+      "text": "TORONTO, ON M5H 3M7\nLINDT & SPRÜNGLI (CANADA), INC.\nIMPORTED BY/IMPORTÉ PAR:",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "panel_ingredients": {
+      "text": "INGREDIENTS: SUGAR,\nCOCOA BUTTER, MILK\nINGREDIENTS, COCOA\nMASS, LACTOSE, SOYA\nLECITHIN, BARLEY\nMALT EXTRACT,\nARTIFICIAL FLAVOUR. MAY CONTAIN PEANUTS AND TREE\nNUTS. INGREDIENTS: SUCRE, BEURRE DE CACAO,\nSUBSTANCES LAITIÈRES, PÂTE DE\nCACAO, LACTOSE,\nLECITHINE DE SOJA,\nEXTRAIT DE MALT D'ORGE, AROME\nARTIFICIEL. PEUT CONTENIR DES\nARACHIDES ET DES ΝΟΙΧ.",
+      "confidence": 1.0,
+      "bbox": null
+    },
+    "panel_nutrition": {
+      "text": "Nutrition Facts\nValeur nutritive\nPer 9 squares (30 g)\npour 9 carrés (30 g) Amount\n% Daily Value Teneur\n% valeur quotidienne Calories / Calories 160 Fat/Lipides 9 g\n14%\nSaturated / saturés 6 g\n31%\n+ Trans / trans 0.1 g Cholesterol / Cholestérol 5 mg Sodium / Sodium 25 mg\n1% Carbohydrate / Glucides 18 g 6% Fibre / Fibres 1 g\n4% Sugars / Sucres 17 g\nProtein / Protéines 2 g\nVitamin A / Vitamine A\n2%\nVitamin C / Vitamine C\n2%\nCalcium / Calcium\n6%\nIron / Fer\n4%",
+      "confidence": 0.8974002599716187,
+      "bbox": null
+    }
+  },
+  "translated": {}
+}

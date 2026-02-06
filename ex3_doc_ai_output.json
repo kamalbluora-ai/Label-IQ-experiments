@@ -1,0 +1,647 @@
+{
+  "text": "FINEMENT FILTRE. FINE-F\n22\nNat\nFINE-FILTERED. F\nPARTLY SK\nLAIT PASTIELL\nNatrel 2\nPARTLY\nSKIMM\nLAIT PA\nECREME\n\nILTERED FINEMENT FILTRE\n2\ntrel\nINEMENT FILTRÉ\n%\nEMINTECHCl\nD MILA\nATIELLEMENT\nLONG LASTING FRESHNESS NATURALLY\nRESTE FRAIS LONGTEMPS NATURELLEMENT\nVITAMINS A AND DADDED\nADDITIONNE DE VITAMINES ALTO\n4L\n\nNutrition Facts\nValeur nutritive\nPer 1 cup (250 mL) / pour 1 tasse (250 mL)\nAmount\nTeneur\n% Daily Value\n% valeur quotidienne\nCalories / Calories 130\n8%\nFat/Lipides 5 g\nSaturated / saturés 3 g\n+ Trans/trans 0.2 g\n16%\nCholesterol / Cholestérol 20 mg\nSodium / Sodium 100 mg\n4%\nPotassium / Potassium 410 mg\n12%\n4%\nCarbohydrate / Glucides 12 g\n0%\nFibre / Fibres 0 g\nSugars / Sucres 12 g\nProtein / Protéines 9 g\nVitamin A/Vitamine A\n15%\nVitamin C/Vitamine C\n0%\nCalcium/Calcium\n30%\nIron / Fer\n2%\nVitamin D/Vitamine D\n45%\n8%\nThiamine / Thiamine\nRiboflavin / Riboflavine\n30%\nNiacin / Niacine\n8%\nVitamin B6 / Vitamine B6\n2%\nFolate / Folate\n4%\nVitamin B12/Vitamine B12\n45%\nPantothenate / Pantothenate\n15%\nPhosphorus / Phosphore\n20%\nMagnesium / Magnésium\n10%\nZinc / Zinc\n15%\n\n",
+  "fields": {
+    "common_name_en": {
+      "text": "PARTLY SKIMMED MILK",
+      "confidence": 0.7577594518661499,
+      "bbox": null
+    },
+    "common_name_fr": {
+      "text": "LAIT PARTIELLEMENT ÉCRÉMÉ",
+      "confidence": 0.9777016043663025,
+      "bbox": null
+    },
+    "dealer_name": {
+      "text": "Natrel",
+      "confidence": 0.5712495446205139,
+      "bbox": null
+    },
+    "nft_text_block_en": {
+      "text": "FINE-FILTERED.",
+      "confidence": 0.53326416015625,
+      "bbox": null
+    },
+    "nft_text_block_fr": {
+      "text": "FINEMENT FILTRE.",
+      "confidence": 0.5533806085586548,
+      "bbox": null
+    },
+    "panel_pds": {
+      "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. “Readily discernible” means label information must be easy to see and read by an ordinary person under normal conditions",
+      "confidence": 0.9991964101791382,
+      "bbox": null
+    },
+    "net_quantity_full_text": {
+      "text": "4L",
+      "confidence": 0.9755834937095642,
+      "bbox": null
+    },
+    "net_quantity_unit_symbol": {
+      "text": "L",
+      "confidence": 0.9816111922264099,
+      "bbox": null
+    },
+    "net_quantity_value": {
+      "text": "4",
+      "confidence": 0.9963417053222656,
+      "bbox": null
+    },
+    "nft_calcium_dv_en": {
+      "text": "30",
+      "confidence": 0.9930235743522644,
+      "bbox": null
+    },
+    "nft_calcium_dv_fr": {
+      "text": "30",
+      "confidence": 0.9930235743522644,
+      "bbox": null
+    },
+    "nft_calories_en": {
+      "text": "130",
+      "confidence": 0.9999136924743652,
+      "bbox": null
+    },
+    "nft_calories_fr": {
+      "text": "130",
+      "confidence": 0.9999136924743652,
+      "bbox": null
+    },
+    "nft_carbohydrate_dv_en": {
+      "text": "4",
+      "confidence": 0.999967098236084,
+      "bbox": null
+    },
+    "nft_carbohydrate_dv_fr": {
+      "text": "4",
+      "confidence": 0.999967098236084,
+      "bbox": null
+    },
+    "nft_carbohydrate_en": {
+      "text": "12",
+      "confidence": 0.9985536336898804,
+      "bbox": null
+    },
+    "nft_carbohydrate_fr": {
+      "text": "12",
+      "confidence": 0.9985536336898804,
+      "bbox": null
+    },
+    "nft_cholesterol_en": {
+      "text": "20",
+      "confidence": 0.9999343156814575,
+      "bbox": null
+    },
+    "nft_cholesterol_fr": {
+      "text": "20",
+      "confidence": 0.9999343156814575,
+      "bbox": null
+    },
+    "nft_fat_dv_en": {
+      "text": "8",
+      "confidence": 0.9999750852584839,
+      "bbox": null
+    },
+    "nft_fat_dv_fr": {
+      "text": "8",
+      "confidence": 0.9999750852584839,
+      "bbox": null
+    },
+    "nft_fat_en": {
+      "text": "5",
+      "confidence": 0.9999715089797974,
+      "bbox": null
+    },
+    "nft_fat_fr": {
+      "text": "5",
+      "confidence": 0.9999715089797974,
+      "bbox": null
+    },
+    "nft_fibre_dv_en": {
+      "text": "0",
+      "confidence": 0.9999935626983643,
+      "bbox": null
+    },
+    "nft_fibre_dv_fr": {
+      "text": "0",
+      "confidence": 0.9999935626983643,
+      "bbox": null
+    },
+    "nft_fibre_en": {
+      "text": "0",
+      "confidence": 0.999980092048645,
+      "bbox": null
+    },
+    "nft_fibre_fr": {
+      "text": "0",
+      "confidence": 0.999980092048645,
+      "bbox": null
+    },
+    "nft_iron_dv_en": {
+      "text": "2",
+      "confidence": 0.9999966621398926,
+      "bbox": null
+    },
+    "nft_iron_dv_fr": {
+      "text": "2",
+      "confidence": 0.9999966621398926,
+      "bbox": null
+    },
+    "nft_potassium_dv_en": {
+      "text": "12",
+      "confidence": 0.9995065331459045,
+      "bbox": null
+    },
+    "nft_potassium_dv_fr": {
+      "text": "12",
+      "confidence": 0.9995065331459045,
+      "bbox": null
+    },
+    "nft_potassium_en": {
+      "text": "410",
+      "confidence": 0.9999896287918091,
+      "bbox": null
+    },
+    "nft_potassium_fr": {
+      "text": "410",
+      "confidence": 0.9999896287918091,
+      "bbox": null
+    },
+    "nft_protein_en": {
+      "text": "9",
+      "confidence": 0.9999984502792358,
+      "bbox": null
+    },
+    "nft_protein_fr": {
+      "text": "9",
+      "confidence": 0.9999984502792358,
+      "bbox": null
+    },
+    "nft_saturated_fat_en": {
+      "text": "3",
+      "confidence": 0.9999856948852539,
+      "bbox": null
+    },
+    "nft_saturated_fat_fr": {
+      "text": "3",
+      "confidence": 0.9999856948852539,
+      "bbox": null
+    },
+    "nft_serving_size_en": {
+      "text": "Per 1 cup (250 mL)",
+      "confidence": 0.9800004959106445,
+      "bbox": null
+    },
+    "nft_serving_size_fr": {
+      "text": "pour 1 tasse (250 mL)",
+      "confidence": 0.9973326325416565,
+      "bbox": null
+    },
+    "nft_sodium_dv_en": {
+      "text": "4",
+      "confidence": 0.9999970197677612,
+      "bbox": null
+    },
+    "nft_sodium_dv_fr": {
+      "text": "4",
+      "confidence": 0.9999970197677612,
+      "bbox": null
+    },
+    "nft_sodium_en": {
+      "text": "100",
+      "confidence": 0.9999948740005493,
+      "bbox": null
+    },
+    "nft_sodium_fr": {
+      "text": "100",
+      "confidence": 0.9999948740005493,
+      "bbox": null
+    },
+    "nft_sugar_en": {
+      "text": "12",
+      "confidence": 0.9999983310699463,
+      "bbox": null
+    },
+    "nft_sugar_fr": {
+      "text": "12",
+      "confidence": 0.9999983310699463,
+      "bbox": null
+    },
+    "nft_table_en": {
+      "text": "Amount % Daily Value Calories / Calories 130 Fat/Lipides 5 g 8% Saturated / saturés 3 g\n+ Trans/trans 0.2 g\n16%\nCholesterol / Cholestérol 20 mg\nSodium / Sodium 100 mg\n4%\nPotassium / Potassium 410 mg\n12% Carbohydrate / Glucides 12 g 4% Fibre / Fibres 0 g 0% Sugars / Sucres 12 g\nProtein / Protéines 9 g\nVitamin A/Vitamine A\n15%\nVitamin C/Vitamine C\n0%\nCalcium/Calcium\n30%\nIron / Fer\n2%\nVitamin D/Vitamine D\n45% Thiamine / Thiamine 8% Riboflavin / Riboflavine\n30%\nNiacin / Niacine\n8%\nVitamin B6 / Vitamine B6\n2%\nFolate / Folate\n4%\nVitamin B12/Vitamine B12\n45%\nPantothenate / Pantothenate\n15%\nPhosphorus / Phosphore\n20%\nMagnesium / Magnésium\n10%\nZinc / Zinc\n15%",
+      "confidence": 0.5486683249473572,
+      "bbox": null
+    },
+    "nft_table_fr": {
+      "text": "Teneur % valeur quotidienne\nCalories / Calories 130 Fat/Lipides 5 g 8% Saturated / saturés 3 g\n+ Trans/trans 0.2 g\n16%\nCholesterol / Cholestérol 20 mg\nSodium / Sodium 100 mg\n4%\nPotassium / Potassium 410 mg\n12% Carbohydrate / Glucides 12 g 4% Fibre / Fibres 0 g 0% Sugars / Sucres 12 g\nProtein / Protéines 9 g\nVitamin A/Vitamine A\n15%\nVitamin C/Vitamine C\n0%\nCalcium/Calcium\n30%\nIron / Fer\n2%\nVitamin D/Vitamine D\n45% Thiamine / Thiamine 8% Riboflavin / Riboflavine\n30%\nNiacin / Niacine\n8%\nVitamin B6 / Vitamine B6\n2%\nFolate / Folate\n4%\nVitamin B12/Vitamine B12\n45%\nPantothenate / Pantothenate\n15%\nPhosphorus / Phosphore\n20%\nMagnesium / Magnésium\n10%\nZinc / Zinc\n15%",
+      "confidence": 0.8550618290901184,
+      "bbox": null
+    },
+    "nft_title_en": {
+      "text": "Nutrition Facts",
+      "confidence": 0.9984877109527588,
+      "bbox": null
+    },
+    "nft_title_fr": {
+      "text": "Valeur nutritive",
+      "confidence": 0.9999788999557495,
+      "bbox": null
+    },
+    "nft_trans_fat_en": {
+      "text": "0.2",
+      "confidence": 0.9999853372573853,
+      "bbox": null
+    },
+    "nft_trans_fat_fr": {
+      "text": "0.2",
+      "confidence": 0.9999853372573853,
+      "bbox": null
+    }
+  },
+  "fields_all": {
+    "common_name_en": [
+      {
+        "text": "PARTLY SKIMMED MILK",
+        "confidence": 0.7577594518661499,
+        "bbox": null
+      },
+      {
+        "text": "PARTIALLY SKIMMED MILK",
+        "confidence": 0.20331019163131714,
+        "bbox": null
+      }
+    ],
+    "common_name_fr": [
+      {
+        "text": "LAIT PARTIELLEMENT ÉCRÉMÉ",
+        "confidence": 0.9369685649871826,
+        "bbox": null
+      },
+      {
+        "text": "LAIT PARTIELLEMENT ÉCRÉMÉ",
+        "confidence": 0.9777016043663025,
+        "bbox": null
+      }
+    ],
+    "dealer_name": [
+      {
+        "text": "Natrel",
+        "confidence": 0.5712495446205139,
+        "bbox": null
+      }
+    ],
+    "nft_text_block_en": [
+      {
+        "text": "FINE-FILTERED.",
+        "confidence": 0.53326416015625,
+        "bbox": null
+      }
+    ],
+    "nft_text_block_fr": [
+      {
+        "text": "FINEMENT FILTRE.",
+        "confidence": 0.5533806085586548,
+        "bbox": null
+      }
+    ],
+    "panel_pds": [
+      {
+        "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. “Readily discernible” means label information must be easy to see and read by an ordinary person under normal conditions",
+        "confidence": 0.9991964101791382,
+        "bbox": null
+      },
+      {
+        "text": "The principal display surface is the main area of a food container or package visible under normal sale or use. Under both the SFCR and FDR, it is usually the visible surface (excluding the top), the lid if that is most visible, or 40% of the container if no single surface is visible. Special rules apply for bags, wine containers, wrappers, or when labels must be on tags. “Readily discernible” means label information must be easy to see and read by an ordinary person under normal conditions",
+        "confidence": 0.9979583024978638,
+        "bbox": null
+      }
+    ],
+    "net_quantity_full_text": [
+      {
+        "text": "4L",
+        "confidence": 0.9755834937095642,
+        "bbox": null
+      }
+    ],
+    "net_quantity_unit_symbol": [
+      {
+        "text": "L",
+        "confidence": 0.9816111922264099,
+        "bbox": null
+      }
+    ],
+    "net_quantity_value": [
+      {
+        "text": "4",
+        "confidence": 0.9963417053222656,
+        "bbox": null
+      }
+    ],
+    "nft_calcium_dv_en": [
+      {
+        "text": "30",
+        "confidence": 0.9930235743522644,
+        "bbox": null
+      }
+    ],
+    "nft_calcium_dv_fr": [
+      {
+        "text": "30",
+        "confidence": 0.9930235743522644,
+        "bbox": null
+      }
+    ],
+    "nft_calories_en": [
+      {
+        "text": "130",
+        "confidence": 0.9999136924743652,
+        "bbox": null
+      }
+    ],
+    "nft_calories_fr": [
+      {
+        "text": "130",
+        "confidence": 0.9999136924743652,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_dv_en": [
+      {
+        "text": "4",
+        "confidence": 0.999967098236084,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_dv_fr": [
+      {
+        "text": "4",
+        "confidence": 0.999967098236084,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_en": [
+      {
+        "text": "12",
+        "confidence": 0.9985536336898804,
+        "bbox": null
+      }
+    ],
+    "nft_carbohydrate_fr": [
+      {
+        "text": "12",
+        "confidence": 0.9985536336898804,
+        "bbox": null
+      }
+    ],
+    "nft_cholesterol_en": [
+      {
+        "text": "20",
+        "confidence": 0.9999343156814575,
+        "bbox": null
+      }
+    ],
+    "nft_cholesterol_fr": [
+      {
+        "text": "20",
+        "confidence": 0.9999343156814575,
+        "bbox": null
+      }
+    ],
+    "nft_fat_dv_en": [
+      {
+        "text": "8",
+        "confidence": 0.9999750852584839,
+        "bbox": null
+      }
+    ],
+    "nft_fat_dv_fr": [
+      {
+        "text": "8",
+        "confidence": 0.9999750852584839,
+        "bbox": null
+      }
+    ],
+    "nft_fat_en": [
+      {
+        "text": "5",
+        "confidence": 0.9999715089797974,
+        "bbox": null
+      }
+    ],
+    "nft_fat_fr": [
+      {
+        "text": "5",
+        "confidence": 0.9999715089797974,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_dv_en": [
+      {
+        "text": "0",
+        "confidence": 0.9999935626983643,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_dv_fr": [
+      {
+        "text": "0",
+        "confidence": 0.9999935626983643,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_en": [
+      {
+        "text": "0",
+        "confidence": 0.999980092048645,
+        "bbox": null
+      }
+    ],
+    "nft_fibre_fr": [
+      {
+        "text": "0",
+        "confidence": 0.999980092048645,
+        "bbox": null
+      }
+    ],
+    "nft_iron_dv_en": [
+      {
+        "text": "2",
+        "confidence": 0.9999966621398926,
+        "bbox": null
+      }
+    ],
+    "nft_iron_dv_fr": [
+      {
+        "text": "2",
+        "confidence": 0.9999966621398926,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_dv_en": [
+      {
+        "text": "12",
+        "confidence": 0.9995065331459045,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_dv_fr": [
+      {
+        "text": "12",
+        "confidence": 0.9995065331459045,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_en": [
+      {
+        "text": "410",
+        "confidence": 0.9999896287918091,
+        "bbox": null
+      }
+    ],
+    "nft_potassium_fr": [
+      {
+        "text": "410",
+        "confidence": 0.9999896287918091,
+        "bbox": null
+      }
+    ],
+    "nft_protein_en": [
+      {
+        "text": "9",
+        "confidence": 0.9999984502792358,
+        "bbox": null
+      }
+    ],
+    "nft_protein_fr": [
+      {
+        "text": "9",
+        "confidence": 0.9999984502792358,
+        "bbox": null
+      }
+    ],
+    "nft_saturated_fat_en": [
+      {
+        "text": "3",
+        "confidence": 0.9999856948852539,
+        "bbox": null
+      }
+    ],
+    "nft_saturated_fat_fr": [
+      {
+        "text": "3",
+        "confidence": 0.9999856948852539,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_en": [
+      {
+        "text": "Per 1 cup (250 mL)",
+        "confidence": 0.9800004959106445,
+        "bbox": null
+      }
+    ],
+    "nft_serving_size_fr": [
+      {
+        "text": "pour 1 tasse (250 mL)",
+        "confidence": 0.9973326325416565,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_dv_en": [
+      {
+        "text": "4",
+        "confidence": 0.9999970197677612,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_dv_fr": [
+      {
+        "text": "4",
+        "confidence": 0.9999970197677612,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_en": [
+      {
+        "text": "100",
+        "confidence": 0.9999948740005493,
+        "bbox": null
+      }
+    ],
+    "nft_sodium_fr": [
+      {
+        "text": "100",
+        "confidence": 0.9999948740005493,
+        "bbox": null
+      }
+    ],
+    "nft_sugar_en": [
+      {
+        "text": "12",
+        "confidence": 0.9999983310699463,
+        "bbox": null
+      }
+    ],
+    "nft_sugar_fr": [
+      {
+        "text": "12",
+        "confidence": 0.9999983310699463,
+        "bbox": null
+      }
+    ],
+    "nft_table_en": [
+      {
+        "text": "Amount % Daily Value Calories / Calories 130 Fat/Lipides 5 g 8% Saturated / saturés 3 g\n+ Trans/trans 0.2 g\n16%\nCholesterol / Cholestérol 20 mg\nSodium / Sodium 100 mg\n4%\nPotassium / Potassium 410 mg\n12% Carbohydrate / Glucides 12 g 4% Fibre / Fibres 0 g 0% Sugars / Sucres 12 g\nProtein / Protéines 9 g\nVitamin A/Vitamine A\n15%\nVitamin C/Vitamine C\n0%\nCalcium/Calcium\n30%\nIron / Fer\n2%\nVitamin D/Vitamine D\n45% Thiamine / Thiamine 8% Riboflavin / Riboflavine\n30%\nNiacin / Niacine\n8%\nVitamin B6 / Vitamine B6\n2%\nFolate / Folate\n4%\nVitamin B12/Vitamine B12\n45%\nPantothenate / Pantothenate\n15%\nPhosphorus / Phosphore\n20%\nMagnesium / Magnésium\n10%\nZinc / Zinc\n15%",
+        "confidence": 0.5486683249473572,
+        "bbox": null
+      }
+    ],
+    "nft_table_fr": [
+      {
+        "text": "Teneur % valeur quotidienne\nCalories / Calories 130 Fat/Lipides 5 g 8% Saturated / saturés 3 g\n+ Trans/trans 0.2 g\n16%\nCholesterol / Cholestérol 20 mg\nSodium / Sodium 100 mg\n4%\nPotassium / Potassium 410 mg\n12% Carbohydrate / Glucides 12 g 4% Fibre / Fibres 0 g 0% Sugars / Sucres 12 g\nProtein / Protéines 9 g\nVitamin A/Vitamine A\n15%\nVitamin C/Vitamine C\n0%\nCalcium/Calcium\n30%\nIron / Fer\n2%\nVitamin D/Vitamine D\n45% Thiamine / Thiamine 8% Riboflavin / Riboflavine\n30%\nNiacin / Niacine\n8%\nVitamin B6 / Vitamine B6\n2%\nFolate / Folate\n4%\nVitamin B12/Vitamine B12\n45%\nPantothenate / Pantothenate\n15%\nPhosphorus / Phosphore\n20%\nMagnesium / Magnésium\n10%\nZinc / Zinc\n15%",
+        "confidence": 0.8550618290901184,
+        "bbox": null
+      }
+    ],
+    "nft_title_en": [
+      {
+        "text": "Nutrition Facts",
+        "confidence": 0.9984877109527588,
+        "bbox": null
+      }
+    ],
+    "nft_title_fr": [
+      {
+        "text": "Valeur nutritive",
+        "confidence": 0.9999788999557495,
+        "bbox": null
+      }
+    ],
+    "nft_trans_fat_en": [
+      {
+        "text": "0.2",
+        "confidence": 0.9999853372573853,
+        "bbox": null
+      }
+    ],
+    "nft_trans_fat_fr": [
+      {
+        "text": "0.2",
+        "confidence": 0.9999853372573853,
+        "bbox": null
+      }
+    ]
+  },
+  "panels": {
+    "panel_pdp": {
+      "text": "The principal display panel (PDP) is the part of a food label most visible under normal sale or use. Under the SFCR, it is generally the label on the main visible surface of the container, with specific rules for display cards, ornamental containers, non-consumer prepackaged foods, and unpackaged foods. Under the FDR, consumer prepackaged foods follow the SFCR definition, while other prepackaged or unpackaged foods use the visible container or food surface (excluding the bottom).",
+      "confidence": 0.6894934177398682,
+      "bbox": null
+    },
+    "panel_nutrition": {
+      "text": "Nutrition Facts\nValeur nutritive\nPer 1 cup (250 mL) / pour 1 tasse (250 mL)\nAmount\nTeneur\n% Daily Value\n% valeur quotidienne\nCalories / Calories 130 Fat/Lipides 5 g 8% Saturated / saturés 3 g\n+ Trans/trans 0.2 g\n16%\nCholesterol / Cholestérol 20 mg\nSodium / Sodium 100 mg\n4%\nPotassium / Potassium 410 mg\n12% Carbohydrate / Glucides 12 g 4% Fibre / Fibres 0 g 0% Sugars / Sucres 12 g\nProtein / Protéines 9 g\nVitamin A/Vitamine A\n15%\nVitamin C/Vitamine C\n0%\nCalcium/Calcium\n30%\nIron / Fer\n2%\nVitamin D/Vitamine D\n45% Thiamine / Thiamine 8% Riboflavin / Riboflavine\n30%\nNiacin / Niacine\n8%\nVitamin B6 / Vitamine B6\n2%\nFolate / Folate\n4%\nVitamin B12/Vitamine B12\n45%\nPantothenate / Pantothenate\n15%\nPhosphorus / Phosphore\n20%\nMagnesium / Magnésium\n10%\nZinc / Zinc\n15%",
+      "confidence": 0.48455747961997986,
+      "bbox": null
+    }
+  },
+  "translated": {}
+}
