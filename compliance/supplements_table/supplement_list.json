@@ -1,0 +1,53 @@
+{
+    "supplements": {
+        "amino_acids": [
+            "L-arginine",
+            "L-citrulline",
+            "L-glutamine",
+            "L-leucine",
+            "L-isoleucine",
+            "L-valine",
+            "Taurine"
+        ],
+        "bioactives": [
+            "Caffeine",
+            "Green tea extract",
+            "Inositol",
+            "Panax ginseng extract",
+            "Coenzyme Q10",
+            "Glucosamine",
+            "Chondroitin sulfate"
+        ],
+        "vitamins": [
+            "Vitamin A",
+            "Vitamin B1 (Thiamine)",
+            "Vitamin B2 (Riboflavin)",
+            "Vitamin B3 (Niacin)",
+            "Vitamin B5 (Pantothenic acid)",
+            "Vitamin B6",
+            "Vitamin B7 (Biotin)",
+            "Vitamin B9 (Folate)",
+            "Vitamin B12",
+            "Vitamin C",
+            "Vitamin D",
+            "Vitamin E"
+        ],
+        "minerals": [
+            "Calcium",
+            "Iron",
+            "Magnesium",
+            "Potassium",
+            "Zinc",
+            "Selenium",
+            "Copper",
+            "Manganese",
+            "Chromium",
+            "Molybdenum"
+        ],
+        "other_nutrients": [
+            "Choline",
+            "Lutein",
+            "Lycopene"
+        ]
+    }
+}

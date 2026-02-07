@@ -6,6 +6,7 @@ from compliance.agents.common_name import CommonNameAgent
 from compliance.nutrition_facts.auditor import NFTAuditor
 from compliance.nutrition_facts.integration import map_docai_to_inputs
 from compliance.sweeteners.detector import detect_sweeteners
+from compliance.supplements_table.detector import detect_supplements
 
 # from compliance.agents.net_quantity import NetQuantityAgent
 # from compliance.agents.ingredients import IngredientsAgent
@@ -23,15 +24,17 @@ class AttributeOrchestrator:
     
     async def evaluate(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
         """Run all compliance checks in parallel."""
-        common_name, nft, sweeteners = await asyncio.gather(
+        common_name, nft, sweeteners, supplements = await asyncio.gather(
             self._run_common_name(label_facts),
             asyncio.to_thread(self._run_nft_audit, label_facts),
             asyncio.to_thread(self._run_sweetener_detection, label_facts),
+            asyncio.to_thread(self._run_supplement_detection, label_facts),
         )
         return {
             "common_name": common_name,
             "nutrition_facts": nft,
             "sweeteners": sweeteners,
+            "supplements": supplements,
         }
     
     async def _run_common_name(self, label_facts):
@@ -61,6 +64,14 @@ class AttributeOrchestrator:
         nft_text = fields.get("nft_table_en", {}).get("text", "")
         
         result = detect_sweeteners(ingredients, nft_text)
+        return result.model_dump()
+    
+    def _run_supplement_detection(self, label_facts):
+        fields = label_facts.get("fields", {})
+        nft_text = fields.get("nft_table_en", {}).get("text", "")
+        ingredients = fields.get("ingredients_list_en", {}).get("text", "")
+        
+        result = detect_supplements(nft_text, ingredients)
         return result.model_dump()
     
     def evaluate_sync(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:

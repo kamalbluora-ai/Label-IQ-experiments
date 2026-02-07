@@ -10,7 +10,7 @@ def load_docai_output(file_path: str) -> dict:
 
 
 async def main():
-    json_path = Path(__file__).parent / "ex6_doc_ai_output.json"
+    json_path = Path(__file__).parent / "ex1_doc_ai_output.json"
     print(f"Loading: {json_path}")
     
     label_facts = load_docai_output(json_path)
