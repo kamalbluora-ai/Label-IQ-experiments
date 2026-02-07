@@ -1,10 +1,6 @@
-"""
-Cross-field validation rules for NFT audit.
-Checks relationships between multiple nutrient values.
-"""
 from typing import Dict, Optional
-from compliance.nft_audit_table.models import CrossFieldResult, ComplianceStatus
-from compliance.nft_audit_table.integration import DAILY_VALUES
+from compliance.nutrition_facts.models import CrossFieldResult, ComplianceStatus
+from compliance.nutrition_facts.integration import DAILY_VALUES
 
 
 def check_calorie_calculation(

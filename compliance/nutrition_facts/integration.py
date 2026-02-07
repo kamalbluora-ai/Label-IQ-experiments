@@ -1,5 +1,5 @@
 from typing import List, Dict, Any, Tuple
-from compliance.nft_audit_table.models import NutrientData
+from compliance.nutrition_facts.models import NutrientData
 import re
 
 DAILY_VALUES = {

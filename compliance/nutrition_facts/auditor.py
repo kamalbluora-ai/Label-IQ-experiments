@@ -1,8 +1,8 @@
 import math
 from typing import List, Dict, Optional
-from compliance.nft_audit_table.models import NutrientData, AuditResult, ComplianceStatus
-from compliance.nft_audit_table.rounding_rules import NFT_RULES_QUANTITY, NFT_RULES_DV
-from compliance.nft_audit_table.cross_check_rules import (
+from compliance.nutrition_facts.models import NutrientData, AuditResult, ComplianceStatus
+from compliance.nutrition_facts.rounding_rules import NFT_RULES_QUANTITY, NFT_RULES_DV
+from compliance.nutrition_facts.cross_check_rules import (
     check_calorie_calculation,
     check_sat_trans_combined_dv,
     check_fat_components,

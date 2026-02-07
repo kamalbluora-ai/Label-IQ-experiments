@@ -1,0 +1,514 @@
+{
+  "timestamp": "2026-02-06T15:50:02.057335",
+  "input_file": "C:\\Users\\subsc\\Bluorai\\Label-IQ-experiments\\ex3_doc_ai_output.json",
+  "tests": [
+    {
+      "test_name": "Common Name Agent",
+      "en_candidates_count": 2,
+      "fr_candidates_count": 2,
+      "guardrail_should_trigger": false,
+      "guardrail_triggered": false,
+      "guardrail_logic_correct": true,
+      "results": [
+        {
+          "question_id": "CN-1",
+          "question": "is a common name present?",
+          "result": "pass",
+          "selected_value": "PARTLY SKIMMED MILK / LAIT PARTIELLEMENT ÉCRÉMÉ",
+          "rationale": "The extracted data identifies common names in both English ('PARTLY SKIMMED MILK') and French ('LAIT PARTIELLEMENT ÉCRÉMÉ')."
+        },
+        {
+          "question_id": "CN-2",
+          "question": "is the common name on the principal display panel (PDP)?",
+          "result": "needs_review",
+          "selected_value": null,
+          "rationale": "While the common names are extracted, the provided data does not explicitly state the spatial placement of these names on the packaging to confirm they are located on the PDP as defined by CFIA/SFCR."
+        },
+        {
+          "question_id": "CN-3",
+          "question": "is the common name in letters of 1.6 mm or greater?",
+          "result": "needs_review",
+          "selected_value": null,
+          "rationale": "The extracted data does not provide physical measurements or font size dimensions for the text on the label."
+        },
+        {
+          "question_id": "CN-4",
+          "question": "is it an appropriate common name?",
+          "result": "pass",
+          "selected_value": "PARTLY SKIMMED MILK / LAIT PARTIELLEMENT ÉCRÉMÉ",
+          "rationale": "'Partly Skimmed Milk' and 'Lait partiellement écrémé' are prescribed common names for dairy products in Canada and accurately describe the product."
+        }
+      ],
+      "summary": {
+        "pass_count": 2,
+        "fail_count": 0,
+        "needs_review_count": 2,
+        "total": 4
+      }
+    },
+    {
+      "test_name": "NFT Auditor",
+      "section": "Nutrition Facts Table",
+      "audit_details": {
+        "nutrient_audits": [
+          {
+            "nutrient_name": "Serving Size",
+            "original_value": 1.0,
+            "expected_value": 1.0,
+            "unit": "mL",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 0.1 (if < 10)"
+          },
+          {
+            "nutrient_name": "Serving Size",
+            "original_value": 1.0,
+            "expected_value": 1.0,
+            "unit": "mL",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 0.1 (if < 10)"
+          },
+          {
+            "nutrient_name": "Calories",
+            "original_value": 130.0,
+            "expected_value": 130.0,
+            "unit": "Cal",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 10 (> 50 Cal)"
+          },
+          {
+            "nutrient_name": "Calories",
+            "original_value": 130.0,
+            "expected_value": 130.0,
+            "unit": "Cal",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 10 (> 50 Cal)"
+          },
+          {
+            "nutrient_name": "Fat",
+            "original_value": 5.0,
+            "expected_value": 5.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 0.5 (0.5-5 g)"
+          },
+          {
+            "nutrient_name": "Fat",
+            "original_value": 5.0,
+            "expected_value": 5.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 0.5 (0.5-5 g)"
+          },
+          {
+            "nutrient_name": "Saturated Fat",
+            "original_value": 3.0,
+            "expected_value": 3.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 0.5 (0.5-5 g)"
+          },
+          {
+            "nutrient_name": "Saturated Fat",
+            "original_value": 3.0,
+            "expected_value": 3.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 0.5 (0.5-5 g)"
+          },
+          {
+            "nutrient_name": "Trans Fat",
+            "original_value": 0.2,
+            "expected_value": 0.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "fail",
+            "message": "Value 0.2 should be rounded to 0.0",
+            "rule_applied": "Round to 0 (if < 0.5)"
+          },
+          {
+            "nutrient_name": "Trans Fat",
+            "original_value": 0.2,
+            "expected_value": 0.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "fail",
+            "message": "Value 0.2 should be rounded to 0.0",
+            "rule_applied": "Round to 0 (if < 0.5)"
+          },
+          {
+            "nutrient_name": "Cholesterol",
+            "original_value": 20.0,
+            "expected_value": 20.0,
+            "unit": "mg",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 5 mg (>= 2 mg)"
+          },
+          {
+            "nutrient_name": "Cholesterol",
+            "original_value": 20.0,
+            "expected_value": 20.0,
+            "unit": "mg",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 5 mg (>= 2 mg)"
+          },
+          {
+            "nutrient_name": "Sodium",
+            "original_value": 100.0,
+            "expected_value": 100.0,
+            "unit": "mg",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 5 mg (5-140 mg)"
+          },
+          {
+            "nutrient_name": "Sodium",
+            "original_value": 100.0,
+            "expected_value": 100.0,
+            "unit": "mg",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 5 mg (5-140 mg)"
+          },
+          {
+            "nutrient_name": "Carbohydrate",
+            "original_value": 12.0,
+            "expected_value": 12.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1 g (>= 0.5)"
+          },
+          {
+            "nutrient_name": "Carbohydrate",
+            "original_value": 12.0,
+            "expected_value": 12.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1 g (>= 0.5)"
+          },
+          {
+            "nutrient_name": "Fibre",
+            "original_value": 0.0,
+            "expected_value": 0.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to 0 g (< 0.5)"
+          },
+          {
+            "nutrient_name": "Fibre",
+            "original_value": 0.0,
+            "expected_value": 0.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to 0 g (< 0.5)"
+          },
+          {
+            "nutrient_name": "Sugars",
+            "original_value": 12.0,
+            "expected_value": 12.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1 g (>= 0.5)"
+          },
+          {
+            "nutrient_name": "Sugars",
+            "original_value": 12.0,
+            "expected_value": 12.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1 g (>= 0.5)"
+          },
+          {
+            "nutrient_name": "Protein",
+            "original_value": 9.0,
+            "expected_value": 9.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1 g (>= 0.5)"
+          },
+          {
+            "nutrient_name": "Protein",
+            "original_value": 9.0,
+            "expected_value": 9.0,
+            "unit": "g",
+            "is_dv": false,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1 g (>= 0.5)"
+          },
+          {
+            "nutrient_name": "Potassium",
+            "original_value": 410.0,
+            "expected_value": 400.0,
+            "unit": "mg",
+            "is_dv": false,
+            "status": "fail",
+            "message": "Value 410.0 should be rounded to 400",
+            "rule_applied": "Round to nearest 50 mg (>= 250)"
+          },
+          {
+            "nutrient_name": "Potassium",
+            "original_value": 410.0,
+            "expected_value": 400.0,
+            "unit": "mg",
+            "is_dv": false,
+            "status": "fail",
+            "message": "Value 410.0 should be rounded to 400",
+            "rule_applied": "Round to nearest 50 mg (>= 250)"
+          },
+          {
+            "nutrient_name": "Fat",
+            "original_value": 8.0,
+            "expected_value": 8.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1% (if > 0%)"
+          },
+          {
+            "nutrient_name": "Fat",
+            "original_value": 8.0,
+            "expected_value": 8.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1% (if > 0%)"
+          },
+          {
+            "nutrient_name": "Sodium",
+            "original_value": 4.0,
+            "expected_value": 4.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Sodium",
+            "original_value": 4.0,
+            "expected_value": 4.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Carbohydrate",
+            "original_value": 4.0,
+            "expected_value": 4.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Carbohydrate",
+            "original_value": 4.0,
+            "expected_value": 4.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Fibre",
+            "original_value": 0.0,
+            "expected_value": 0.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Fibre",
+            "original_value": 0.0,
+            "expected_value": 0.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Potassium",
+            "original_value": 12.0,
+            "expected_value": 12.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Potassium",
+            "original_value": 12.0,
+            "expected_value": 12.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Calcium",
+            "original_value": 30.0,
+            "expected_value": 30.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Calcium",
+            "original_value": 30.0,
+            "expected_value": 30.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Iron",
+            "original_value": 2.0,
+            "expected_value": 2.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          },
+          {
+            "nutrient_name": "Iron",
+            "original_value": 2.0,
+            "expected_value": 2.0,
+            "unit": "%",
+            "is_dv": true,
+            "status": "pass",
+            "message": "compliant",
+            "rule_applied": "Round to nearest 1%"
+          }
+        ],
+        "cross_field_audits": [
+          {
+            "check_name": "Calorie Calculation",
+            "status": "pass",
+            "message": "Declared: 130.0 Cal, Calculated: 124.0 Cal, Difference: 6.0 Cal (tolerance: ±24.8 Cal)",
+            "tolerance": "±24.8 Cal"
+          },
+          {
+            "check_name": "Saturated + Trans %DV",
+            "status": "warning",
+            "message": "Saturated + Trans combined %DV not declared (expected: 16%)",
+            "tolerance": null
+          },
+          {
+            "check_name": "Fat Component Consistency",
+            "status": "pass",
+            "message": "Total Fat: 8.0g, Saturated: 3.0g, Trans: 0.2g, Combined: 3.2g",
+            "tolerance": null
+          },
+          {
+            "check_name": "Carbohydrate Component Consistency",
+            "status": "fail",
+            "message": "Total Carbohydrate: 4.0g, Fibre: 0.0g, Sugars: 12.0g, Combined: 12.0g",
+            "tolerance": null
+          }
+        ]
+      },
+      "results": [
+        {
+          "question_id": "NF-1",
+          "question": "is an NFt present?",
+          "result": "fail",
+          "rationale": "NFT audit detected compliance issues. See audit details below."
+        },
+        {
+          "question_id": "NF-2",
+          "question": "is the NFt on the outer package?",
+          "result": "fail",
+          "rationale": "NFT audit detected compliance issues. See audit details below."
+        },
+        {
+          "question_id": "NF-3",
+          "question": "is the appropriate format family used?",
+          "result": "fail",
+          "rationale": "NFT audit detected compliance issues. See audit details below."
+        },
+        {
+          "question_id": "NF-4",
+          "question": "is the serving size aligned with the regulated reference amount?",
+          "result": "fail",
+          "rationale": "NFT audit detected compliance issues. See audit details below."
+        },
+        {
+          "question_id": "NF-5",
+          "question": "are energy and the 12 core nutrients declared?",
+          "result": "fail",
+          "rationale": "NFT audit detected compliance issues. See audit details below."
+        },
+        {
+          "question_id": "NF-6",
+          "question": "is the % Daily Value interpretative statement included in the NFt?",
+          "result": "fail",
+          "rationale": "NFT audit detected compliance issues. See audit details below."
+        },
+        {
+          "question_id": "NF-7",
+          "question": "is the table background and print in the appropriate colours?",
+          "result": "fail",
+          "rationale": "NFT audit detected compliance issues. See audit details below."
+        }
+      ],
+      "summary": {
+        "pass_count": 0,
+        "fail_count": 7,
+        "needs_review_count": 0,
+        "total": 7
+      }
+    }
+  ]
+}

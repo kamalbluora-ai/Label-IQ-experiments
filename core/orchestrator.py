@@ -23,7 +23,7 @@ from processor import preprocess_image_bytes, run_docai_custom_extractor
 from vertex_search import cfia_retrieve_snippets
 from translate_fields import translate_foreign_fields
 from chatgpt_search import cfia_search_chatgpt_agent
-from compliance.agents_orchestrator import ComplianceOrchestrator
+from compliance.attributes_orchestrator import AttributeOrchestrator
 from cache_fetcher import get_cached_label_facts, is_cache_valid
 
 # Environment configuration (use .get() to allow import without full config)
@@ -261,8 +261,8 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     #     tags=tags
     # )
 
-    # NEW PIPELINE - Multi-agent compliance evaluation
-    orchestrator = ComplianceOrchestrator()
+    # NEW PIPELINE - Multi-attribute compliance evaluation
+    orchestrator = AttributeOrchestrator()
     user_context = {"food_type": product_metadata.get("food_type", "unknown")}
     compliance = orchestrator.evaluate_sync(merged_facts)
 
