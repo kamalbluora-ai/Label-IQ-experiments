@@ -9,6 +9,8 @@ import { useState } from "react";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import NutritionAuditTable from "@/components/NutritionAuditTable";
+import ComplianceResultsTable from "@/components/ComplianceResultsTable";
+import DetectionResultsTable from "@/components/DetectionResultsTable";
 
 interface ReportsTabProps {
   project: Project;
@@ -16,11 +18,37 @@ interface ReportsTabProps {
 
 // Helper to compute verdict from check_results
 const computeVerdict = (results: ComplianceReport["results"]) => {
-  const hasFail = results.check_results.some(r => r.result === "fail");
-  const hasReview = results.check_results.some(r => r.result === "needs_review");
+  const allCheckResults = [
+    ...(results.common_name?.check_results || []),
+    ...(results.ingredients?.check_results || []),
+    ...(results.date_marking?.check_results || []),
+    ...(results.fop_symbol?.check_results || []),
+    ...(results.bilingual?.check_results || []),
+    ...(results.irradiation?.check_results || []),
+    ...(results.country_origin?.check_results || []),
+  ];
+  if (allCheckResults.length === 0) return "NEEDS_REVIEW";
+  const hasFail = allCheckResults.some(r => r.result === "fail");
+  const hasReview = allCheckResults.some(r => r.result === "needs_review");
   if (hasFail) return "FAIL";
   if (hasReview) return "NEEDS_REVIEW";
   return "PASS";
+};
+
+// Helper to compute compliance score
+const computeScore = (results: ComplianceReport["results"]) => {
+  const allCheckResults = [
+    ...(results.common_name?.check_results || []),
+    ...(results.ingredients?.check_results || []),
+    ...(results.date_marking?.check_results || []),
+    ...(results.fop_symbol?.check_results || []),
+    ...(results.bilingual?.check_results || []),
+    ...(results.irradiation?.check_results || []),
+    ...(results.country_origin?.check_results || []),
+  ];
+  if (allCheckResults.length === 0) return 0;
+  const passed = allCheckResults.filter(r => r.result === "pass").length;
+  return Math.round((passed / allCheckResults.length) * 100);
 };
 
 export default function ReportsTab({ project }: ReportsTabProps) {
@@ -71,8 +99,8 @@ export default function ReportsTab({ project }: ReportsTabProps) {
     doc.text(`Date: ${new Date().toLocaleDateString()}`, 14, 35);
     doc.text(`Analysis ID: ${reportData.job_id}`, 14, 40);
 
-    // Score Visualization (Donut Chart) - Uses backend-calculated score
-    const score = reportData.results.compliance_score;
+    // Score is now calculated from check_results
+    const score = computeScore(reportData.results);
     const compliantColor = [74, 222, 128]; // Green
     const nonCompliantColor = [248, 113, 113]; // Red
 
@@ -174,7 +202,8 @@ export default function ReportsTab({ project }: ReportsTabProps) {
     doc.text("Non-Compliant / Review", chartX + radius + 22, chartY + 8);
 
     // Check Results Table
-    const tableBody = reportData.results.check_results.map(check => [
+    const checkResults = reportData.results.common_name?.check_results || [];
+    const tableBody = checkResults.map(check => [
       check.question_id,
       check.result.toUpperCase(),
       check.question,
@@ -372,16 +401,17 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                 <div className="space-y-4">
                   <h2 className="text-xl font-bold text-slate-900">Compliance Score</h2>
                   <div className="flex items-center gap-6">
+                    {/* Simple CSS-conic gradient for pie chart visual */}
                     <div className="relative w-32 h-32 flex items-center justify-center">
                       {/* Simple CSS-conic gradient for pie chart visual */}
                       <div
                         className="absolute inset-0 rounded-full"
                         style={{
-                          background: `conic-gradient(#4ade80 ${reportData.results.compliance_score}%, #f87171 0)`
+                          background: `conic-gradient(#4ade80 ${computeScore(reportData.results)}%, #f87171 0)`
                         }}
                       />
                       <div className="absolute inset-4 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-2xl font-bold">{reportData.results.compliance_score}%</span>
+                        <span className="text-2xl font-bold">{computeScore(reportData.results)}%</span>
                       </div>
                     </div>
                     <div className="space-y-2 text-sm">
@@ -399,50 +429,48 @@ export default function ReportsTab({ project }: ReportsTabProps) {
 
                 {/* Detailed Findings */}
                 <div className="space-y-6">
-                  <h2 className="text-xl font-bold text-slate-900">Detailed Findings</h2>
-
-                  {reportData.results.check_results.filter(c => c.result !== "pass").length === 0 ? (
-                    <div className="p-4 bg-green-50 border border-green-200 rounded-lg flex gap-3 text-green-800">
-                      <CheckCircle className="w-5 h-5 shrink-0" />
-                      <p>All compliance checks passed!</p>
-                    </div>
-                  ) : (
-                    <div className="grid gap-4">
-                      {reportData.results.check_results
-                        .filter(check => check.result !== "pass")
-                        .map((check, idx) => (
-                          <div key={idx} className={`p-4 rounded-lg border flex gap-4 ${check.result === "fail"
-                            ? "bg-red-50 border-red-200"
-                            : "bg-yellow-50 border-yellow-200"
-                            }`}>
-                            {check.result === "fail" ? (
-                              <XCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
-                            ) : (
-                              <AlertTriangle className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
-                            )}
-
-                            <div className="space-y-1">
-                              <h3 className={`font-semibold ${check.result === "fail" ? "text-red-900" : "text-yellow-900"
-                                }`}>
-                                [{check.section}] {check.question_id}
-                              </h3>
-                              <p className="text-slate-700 text-sm font-medium">Q: {check.question}</p>
-                              {check.selected_value && (
-                                <p className="text-slate-600 text-xs">Value: {check.selected_value}</p>
-                              )}
-                              <p className="text-slate-700 text-sm mt-2">{check.rationale}</p>
-                            </div>
-                          </div>
-                        ))}
-                    </div>
-                  )}
+                  <h2 className="text-xl font-bold text-slate-900">AI Agent Results</h2>
+                  <ComplianceResultsTable report={reportData} jobId={reportData.job_id} />
                 </div>
 
                 {/* NFT Audit Details Section */}
-                {reportData.results.audit_details && (
+                {reportData.results.nutrition_facts && (
                   <div className="space-y-4">
                     <h2 className="text-xl font-bold text-slate-900">Nutrition Facts Audit Details</h2>
-                    <NutritionAuditTable auditDetails={reportData.results.audit_details} />
+                    <NutritionAuditTable auditDetails={reportData.results.nutrition_facts} />
+                  </div>
+                )}
+
+                {/* Detection Results - Sweeteners */}
+                {reportData.results.sweeteners && (
+                  <div className="space-y-4">
+                    <DetectionResultsTable
+                      title="Sweetener Detection"
+                      data={reportData.results.sweeteners}
+                      requiresQuantity={true}
+                    />
+                  </div>
+                )}
+
+                {/* Detection Results - Supplements */}
+                {reportData.results.supplements && (
+                  <div className="space-y-4">
+                    <DetectionResultsTable
+                      title="Supplement Detection"
+                      data={reportData.results.supplements}
+                      requiresQuantity={false}
+                    />
+                  </div>
+                )}
+
+                {/* Detection Results - Additives */}
+                {reportData.results.additives && (
+                  <div className="space-y-4">
+                    <DetectionResultsTable
+                      title="Food Additive Detection"
+                      data={reportData.results.additives}
+                      requiresQuantity={false}
+                    />
                   </div>
                 )}
 

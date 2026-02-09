@@ -14,11 +14,15 @@ export default function AnalysisTab({ project }: AnalysisTabProps) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
-  // Poll every 2 seconds to update progress
   const { data: analyses, isLoading } = useQuery({
     queryKey: ["analyses", project.id],
     queryFn: () => api.analysis.list(project.id),
-    refetchInterval: 2000,
+    refetchInterval: (query) => {
+      const data = query.state.data as Analysis[] | undefined;
+      if (!data || data.length === 0) return 2000; // Keep polling if no data yet
+      const allDone = data.every(a => a.status === "completed" || a.status === "failed");
+      return allDone ? false : 2000;
+    },
   });
 
   const runMutation = useMutation({

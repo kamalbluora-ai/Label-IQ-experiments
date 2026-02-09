@@ -1,2 +1,0 @@
-First Prompt:
-Read this file (food_labelling_requirements_checklist/Common_name/Common_name.json) and create a python file under folder common_name_solution_1 and have method defined per rule and keep incrementing rule number, in the method first line put a comment with rule.text and keep dummy implementation for now

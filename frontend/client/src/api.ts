@@ -27,19 +27,80 @@ export interface ComplianceReport {
     source_images: string[];
     label_facts: Record<string, unknown>;
     results: {
-        compliance_score: number;
-        checks_passed: number;
-        checks_total: number;
-        check_results: Array<{
-            question_id: string;
-            question: string;
-            result: "pass" | "fail" | "needs_review";
-            selected_value?: string;
-            rationale: string;
-            section: string;
-        }>;
-        audit_details: {
-            nutrient_audits: {
+        // AI Agent results - nested under agent name
+        common_name?: {
+            check_results: Array<{
+                question_id: string;
+                question: string;
+                result: "pass" | "fail" | "needs_review";
+                selected_value?: string;
+                rationale: string;
+                section: string;
+            }>;
+        };
+        ingredients?: {
+            check_results: Array<{
+                question_id: string;
+                question: string;
+                result: "pass" | "fail" | "needs_review";
+                selected_value?: string;
+                rationale: string;
+                section: string;
+            }>;
+        };
+        date_marking?: {
+            check_results: Array<{
+                question_id: string;
+                question: string;
+                result: "pass" | "fail" | "needs_review";
+                selected_value?: string;
+                rationale: string;
+                section: string;
+            }>;
+        };
+        fop_symbol?: {
+            check_results: Array<{
+                question_id: string;
+                question: string;
+                result: "pass" | "fail" | "needs_review";
+                selected_value?: string;
+                rationale: string;
+                section: string;
+            }>;
+        };
+        bilingual?: {
+            check_results: Array<{
+                question_id: string;
+                question: string;
+                result: "pass" | "fail" | "needs_review";
+                selected_value?: string;
+                rationale: string;
+                section: string;
+            }>;
+        };
+        irradiation?: {
+            check_results: Array<{
+                question_id: string;
+                question: string;
+                result: "pass" | "fail" | "needs_review";
+                selected_value?: string;
+                rationale: string;
+                section: string;
+            }>;
+        };
+        country_origin?: {
+            check_results: Array<{
+                question_id: string;
+                question: string;
+                result: "pass" | "fail" | "needs_review";
+                selected_value?: string;
+                rationale: string;
+                section: string;
+            }>;
+        };
+        // NFT Audit results
+        nutrition_facts?: {
+            nutrient_audits: Array<{
                 nutrient_name: string;
                 original_value: number;
                 expected_value: number | null;
@@ -48,14 +109,41 @@ export interface ComplianceReport {
                 status: string;
                 message: string;
                 rule_applied: string | null;
-            }[];
-            cross_field_audits: {
+            }>;
+            cross_field_audits: Array<{
                 check_name: string;
                 status: string;
                 message: string;
                 tolerance: string | null;
-            }[];
-        } | null;
+            }>;
+        };
+        // Detection results
+        sweeteners?: {
+            detected: Array<{
+                name: string;
+                category?: string;
+                source: string;
+                quantity?: string | null;
+            }>;
+            has_quantity_sweeteners?: boolean;
+            has_no_quantity_sweeteners?: boolean;
+        };
+        supplements?: {
+            detected: Array<{
+                name: string;
+                category?: string;
+                source: string;
+            }>;
+            has_supplements?: boolean;
+        };
+        additives?: {
+            detected: Array<{
+                name: string;
+                category?: string;
+                source: string;
+            }>;
+            has_additives?: boolean;
+        };
     };
     cfia_evidence: Record<string, unknown>;
 }
@@ -110,6 +198,18 @@ export const api = {
     health: async (): Promise<{ ok: boolean }> => {
         const res = await fetch(`${API_BASE}/healthz`);
         return res.json();
+    },
+
+    // Generic POST method
+    post: async (endpoint: string, body: unknown): Promise<{ data: any }> => {
+        const res = await fetch(`${API_BASE}${endpoint}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+        });
+        if (!res.ok) throw new Error(`POST ${endpoint} failed`);
+        const data = await res.json();
+        return { data };
     },
 
     // Files API - Now derived from Analyses/Jobs
@@ -325,15 +425,22 @@ export const api = {
                     if (job.status === "DONE") {
                         // Get report details
                         const report = await api.jobs.getReport(analysis.jobId);
+
+                        // Compute score from check_results
+                        const checkResults = report.results?.common_name?.check_results || [];
+                        const checksTotal = checkResults.length;
+                        const checksPassed = checkResults.filter(r => r.result === "pass").length;
+                        const complianceScore = checksTotal > 0 ? Math.round((checksPassed / checksTotal) * 100) : 0;
+
                         return {
                             ...analysis,
                             status: "completed",
                             progress: 100,
-                            resultSummary: `Score: ${report.results.compliance_score}%. Passed ${report.results.checks_passed}/${report.results.checks_total} checks.`,
+                            resultSummary: `Score: ${complianceScore}%. Passed ${checksPassed}/${checksTotal} checks.`,
                             details: {
-                                compliance_score: report.results.compliance_score,
-                                checks_passed: report.results.checks_passed,
-                                checks_total: report.results.checks_total,
+                                compliance_score: complianceScore,
+                                checks_passed: checksPassed,
+                                checks_total: checksTotal,
                                 mode: report.mode,
                                 created_at: report.created_at
                             }

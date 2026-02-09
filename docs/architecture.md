@@ -24,15 +24,26 @@ Label-IQ is a **CFIA (Canadian Food Inspection Agency) Food Label Compliance Che
                               └─────────────────────────────┘
                                                │
                                                ▼
-                    ┌──────────────────────────────────────────────┐
-                    │           AttributeOrchestrator              │
-                    │          (parallel via asyncio.gather)       │
-                    ├──────────────────────────────────────────────┤
-                    │  ┌────────────┐ ┌────────────┐ ┌───────────┐ │
-                    │  │CommonName  │ │ NFTAuditor │ │ Sweetener │ │
-                    │  │  Agent     │ │            │ │ Detector  │ │
-                    │  └────────────┘ └────────────┘ └───────────┘ │
-                    └──────────────────────────────────────────────┘
+         ┌──────────────────────────────────────────────────────────────────┐
+         │                    AttributeOrchestrator                          │
+         │                 (parallel via asyncio.gather)                     │
+         ├──────────────────────────────────────────────────────────────────┤
+         │  LLM Agents (async):                                             │
+         │  ┌──────────┐ ┌───────────┐ ┌──────────┐ ┌──────────┐           │
+         │  │CommonName│ │Ingredients│ │  Date    │ │   FOP    │           │
+         │  │  Agent   │ │  Agent    │ │ Marking  │ │  Symbol  │           │
+         │  └──────────┘ └───────────┘ └──────────┘ └──────────┘           │
+         │  ┌──────────┐ ┌───────────┐ ┌──────────┐ ┌──────────┐           │
+         │  │Bilingual │ │Irradiation│ │ Country  │ │ Claim Tag│           │
+         │  │  Agent   │ │  Agent    │ │  Origin  │ │  Agent   │           │
+         │  └──────────┘ └───────────┘ └──────────┘ └──────────┘           │
+         │                                                                  │
+         │  Sync Detectors (via asyncio.to_thread):                         │
+         │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐           │
+         │  │   NFT    │ │Sweetener │ │Supplement│ │ Additive │           │
+         │  │ Auditor  │ │ Detector │ │ Detector │ │ Detector │           │
+         │  └──────────┘ └──────────┘ └──────────┘ └──────────┘           │
+         └──────────────────────────────────────────────────────────────────┘
                                                │
                                                ▼
                               ┌─────────────────────────────┐
@@ -86,12 +97,17 @@ Label-IQ is a **CFIA (Canadian Food Inspection Agency) Food Label Compliance Che
 | Component | Location | Type | Function |
 |-----------|----------|------|----------|
 | `CommonNameAgent` | `compliance/agents/common_name.py` | async | Validates common name EN/FR |
+| `IngredientsAgent` | `compliance/agents/ingredients.py` | async | Validates ingredient list compliance |
+| `DateMarkingAgent` | `compliance/agents/date_marking.py` | async | Validates date marking (best before, expiry) |
+| `FOPSymbolAgent` | `compliance/agents/fop_symbol.py` | async | Validates Front-of-Pack nutrition symbol |
+| `BilingualAgent` | `compliance/agents/bilingual.py` | async | Validates bilingual labeling requirements |
+| `IrradiationAgent` | `compliance/agents/irradiation.py` | async | Validates irradiation labeling |
+| `CountryOriginAgent` | `compliance/agents/country_origin.py` | async | Validates country of origin declarations |
+| `ClaimTagAgent` | `compliance/claim_tags/claim_tag_agent.py` | async | Evaluates claim tags (Natural, Kosher, Halal, Homemade/Artisan, Organic). **Guardrail:** only triggers if `claim_tag_type` field is not empty |
 | `NFTAuditor` | `compliance/nutrition_facts/auditor.py` | sync | Audits nutrient values against CFIA rounding rules |
 | `detect_sweeteners` | `compliance/sweeteners/detector.py` | sync | Detects sweeteners, classifies by category |
-
-**Sweetener Detection Features:**
-- Categorizes by type (Polyol, Non-Nutritive, Saccharin, Steviol Glycoside, Monk Fruit)
-- Flags `needs_review` if `with_quantity` sweetener has no quantity declared
+| `detect_supplements` | `compliance/supplements_table/detector.py` | sync | Detects vitamins, minerals, amino acids in NFT |
+| `detect_additives` | `compliance/additive/detector.py` | sync | Detects 661 CFIA-permitted additives (14 categories) |
 
 ---
 
@@ -165,6 +181,67 @@ Label-IQ is a **CFIA (Canadian Food Inspection Agency) Food Label Compliance Che
 
 ---
 
+### 7. Supplement Detection Module
+
+**Location:** `compliance/supplements_table/`
+
+**Categories:** Amino Acid, Bioactive, Vitamin, Mineral, Other
+
+**Output:**
+```json
+{"detected": [{"name": "iron", "category": "Mineral", "source": "nft"}], "has_supplements": true}
+```
+
+---
+
+### 8. Additive Detection Module
+
+**Location:** `compliance/additive/`
+
+**Categories (14):** Anticaking, Bleaching, Colouring, Emulsifier, Enzyme, Firming, Glazing, pH Adjusting, Preservative, Sequestering, Starch Modifier, Yeast Food, Carrier Solvent
+
+**Source:** CFIA Lists of Permitted Food Additives (661 total)
+
+**Output:**
+```json
+{"detected": [{"name": "lecithin", "category": "Preservative", "source": "ingredients"}], "has_additives": true}
+```
+
+---
+
+### 9. Claim Tag Module
+
+**Location:** `compliance/claim_tags/`
+
+**Files:**
+| File | Purpose |
+|------|---------|
+| `claim_tag_rules.json` | Rules for 5 claim types (Nature/Natural, Kosher, Halal, Homemade/Artisan, Organic) |
+| `claim_tag_agent.py` | LLM agent that evaluates claims against rules using 3 DocAI fields |
+| `claim_tag_models.py` | Pydantic models (`ClaimTagResult`, `ClaimTagEvaluation`) |
+
+**Input Fields:** `claim_tag_type`, `ingredients_list_en`, `nft_table_en`
+
+**Guardrail:** Only triggered when `claim_tag_type` is not empty.
+
+**Output:** All results return `NEEDS_REVIEW` status with AI reasoning.
+```json
+{
+  "claims_detected": [{
+    "claim_type": "Nature / Natural",
+    "claim_text_found": "NATURALLY FLAVORED",
+    "certification_body": null,
+    "status": "NEEDS_REVIEW",
+    "ai_reason": "Contains BHT (Preservative) and Artificial Flavor...",
+    "rule_violations": ["Contains artificial additives"],
+    "supporting_evidence": ["BHT (Preservative)", "Natural And Artificial Flavor"]
+  }],
+  "summary": "Natural claim detected with violations"
+}
+```
+
+---
+
 ## GCS Storage Structure
 
 ### IN_BUCKET
@@ -215,14 +292,17 @@ product_metadata: {"food_type": "snack"}
   "job_id": "abc-123",
   "results": {
     "common_name": {...},
-    "nutrition_facts": {
-      "nutrient_audits": [...],
-      "cross_field_audits": [...]
-    },
-    "sweeteners": {
-      "detected": [...],
-      "has_quantity_sweeteners": false
-    }
+    "ingredients": {...},
+    "date_marking": {...},
+    "fop_symbol": {...},
+    "bilingual": {...},
+    "irradiation": {...},
+    "country_origin": {...},
+    "claim_tag": {...},
+    "nutrition_facts": {"nutrient_audits": [...], "cross_field_audits": [...]},
+    "sweeteners": {"detected": [...], "has_quantity_sweeteners": false},
+    "supplements": {"detected": [...], "has_supplements": true},
+    "additives": {"detected": [...], "has_additives": true}
   }
 }
 ```

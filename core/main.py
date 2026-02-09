@@ -1,9 +1,3 @@
-"""
-CFIA Label Compliance API - FastAPI Application Entry Point
-
-This module contains only the API endpoints and request handling.
-Business logic is delegated to orchestrator.py.
-"""
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -16,6 +10,7 @@ from typing import Any, Dict, List, Optional
 from fastapi import FastAPI, HTTPException, Request, UploadFile, File, Form, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+from core.reevaluation import reevaluate_question
 
 import sys
 from pathlib import Path
@@ -60,6 +55,13 @@ class JobManifest(BaseModel):
     product_metadata: Dict[str, Any] = Field(default_factory=dict)
     images: list[str] = Field(default_factory=list, description="GCS object paths relative to IN_BUCKET")
 
+class ReevaluationRequest(BaseModel):
+    question_id: str
+    question: str
+    original_answer: str
+    original_tag: str
+    original_rationale: str
+    user_comment: str
 
 @app.get("/healthz")
 def healthz():
@@ -176,6 +178,22 @@ def get_job_report(job_id: str):
     if not blob.exists():
         raise HTTPException(404, "Report not found yet")
     return json.loads(blob.download_as_text())
+
+@app.post("/v1/jobs/{job_id}/reevaluate")
+async def reevaluate_question_endpoint(job_id: str, request: ReevaluationRequest):
+    """
+    Re-evaluate a single compliance question with user feedback.
+    """
+    result = await reevaluate_question(
+        question_id=request.question_id,
+        question=request.question,
+        original_answer=request.original_answer,
+        original_tag=request.original_tag,
+        original_rationale=request.original_rationale,
+        user_comment=request.user_comment
+    )
+    
+    return result
 
 
 @app.post("/")

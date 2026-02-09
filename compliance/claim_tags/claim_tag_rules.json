@@ -1,0 +1,100 @@
+{
+    "food_labeling_standards": [
+        {
+            "claim_type": "Nature / Natural",
+            "rules": {
+                "core_criteria": [
+                    "Does not contain added vitamins, minerals, artificial flavoring agents, or food additives.",
+                    "Has not had any constituent removed or significantly changed (except for the removal of water).",
+                    "Has not been submitted to 'maximum processes' that significantly alter its original physical, chemical, or biological state (e.g., bleaching, chemical extraction)."
+                ],
+                "allowed_processes": [
+                    "Minimum processes (e.g., chopping, grinding, pasteurizing, freezing, smoking without chemicals)"
+                ],
+                "flavoring": "Natural flavors derived from plant or animal sources are permitted."
+            }
+        },
+        {
+            "claim_type": "Kosher",
+            "rules": {
+                "core_criteria": "The food must meet the requirements of Kashruth (Jewish dietary laws).",
+                "restricted_terms": [
+                    "Kosher",
+                    "Hebrew letters",
+                    "Any symbol implying the food is kosher (if requirements not met)"
+                ],
+                "style_claims": "Terms like 'Kosher style' or 'Kind of Kosher' legally imply the food is kosher and must meet Kashruth requirements."
+            },
+            "proof_requirements": {
+                "mention_on_label": true,
+                "what_proof": "Certification by a Rabbi or Rabbinical organization.",
+                "location": "Typically displayed as a symbol or mark of the certifying Rabbinical organization on the Principal Display Panel (PDP) or near the product name."
+            }
+        },
+        {
+            "claim_type": "Halal",
+            "rules": {
+                "core_criteria": "The food must be certified as Halal by a certifying person or body.",
+                "restricted_terms": [
+                    "Halal",
+                    "Arabic letters",
+                    "Any symbol implying the food is Halal (unless certifying body is indicated)"
+                ]
+            },
+            "proof_requirements": {
+                "mention_on_label": true,
+                "what_proof": "The name of the person or body that certified the food must be written on the label. Using only a logo or acronym is insufficient if not easily recognizable.",
+                "location": "Can appear on the label, package, or in advertisements. Must be present to validate the claim."
+            }
+        },
+        {
+            "claim_type": "Homemade / Artisan Made",
+            "sub_categories": [
+                {
+                    "name": "Homemade",
+                    "rules": "Describes a food that is not commercially prepared. Cannot be used for foods prepared in a commercial establishment.",
+                    "proof_restrictions": "Commercial products must use qualified terms like 'Homemade style' or 'Home-style'. Using 'Homemade' for commercial products is likely misleading."
+                },
+                {
+                    "name": "Artisan Made",
+                    "rules": {
+                        "batch_size": "Manufactured in small batches.",
+                        "method": "Traditional and rudimentary methods involving significant manual labor and limited automation.",
+                        "ingredients": "Additives/preservatives limited to those found in a common household kitchen (e.g., vinegar, salt, sugar)."
+                    },
+                    "proof_requirements": "No specific proof statement required on label, but manufacturing method must be substantiatable if challenged."
+                }
+            ]
+        },
+        {
+            "claim_type": "Organic",
+            "rules": {
+                "content_levels": [
+                    {
+                        "range": "> 95%",
+                        "permissions": "May be labelled as 'Organic' and use the Canada Organic Logo."
+                    },
+                    {
+                        "range": "70% to < 95%",
+                        "permissions": "May state 'Contains X% organic ingredients' on the label. Cannot use the 'Organic' claim for product name or logo."
+                    },
+                    {
+                        "range": "< 70%",
+                        "permissions": "May only identify organic ingredients within the list of ingredients. Cannot make any organic claims on the main panel."
+                    }
+                ]
+            },
+            "proof_requirements": {
+                "mention_on_label": true,
+                "what_proof": {
+                    "certification_body": "Name of the certification body is required for any product claiming >70% organic.",
+                    "logo": "Canada Organic Logo is voluntary but permitted only for >95% organic content."
+                },
+                "location": {
+                    "certification_body_name": "Usually placed near the organic claim or logo.",
+                    "imported_products": "Must have 'Product of [Country]' or 'Imported' in close proximity to the Canada Organic Logo."
+                }
+            }
+        }
+    ]
+}
