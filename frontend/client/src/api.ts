@@ -98,6 +98,24 @@ export interface ComplianceReport {
                 section: string;
             }>;
         };
+        claim_tag?: {
+            section: string;
+            summary?: string;
+            results: Array<{
+                question_id: string;
+                question: string;
+                result: "needs_review";
+                selected_value?: string;
+                rationale: string;
+                section: string; // Added to match other agents
+                metadata?: {
+                    claim_type: string;
+                    certification_body: string | null;
+                    rule_violations: string[];
+                    supporting_evidence: string[];
+                };
+            }>;
+        };
         // NFT Audit results
         nutrition_facts?: {
             nutrient_audits: Array<{
@@ -423,32 +441,38 @@ export const api = {
                 try {
                     const job = await api.jobs.getStatus(analysis.jobId);
                     if (job.status === "DONE") {
-                        // Get report details
-                        const report = await api.jobs.getReport(analysis.jobId);
+                        let resultSummary = "Analysis complete.";
+                        let details: Record<string, unknown> = {};
 
-                        // Compute score from check_results
-                        const checkResults = report.results?.common_name?.check_results || [];
-                        const checksTotal = checkResults.length;
-                        const checksPassed = checkResults.filter(r => r.result === "pass").length;
-                        const complianceScore = checksTotal > 0 ? Math.round((checksPassed / checksTotal) * 100) : 0;
+                        try {
+                            // Get report details
+                            const report = await api.jobs.getReport(analysis.jobId);
+
+                            resultSummary = "Analysis complete.";
+                            details = {
+                                mode: report.mode,
+                                created_at: report.created_at
+                            };
+                        } catch (e) {
+                            console.warn("Could not fetch report for completed job:", e);
+                        }
 
                         return {
                             ...analysis,
-                            status: "completed",
+                            status: "completed" as const,
                             progress: 100,
-                            resultSummary: `Score: ${complianceScore}%. Passed ${checksPassed}/${checksTotal} checks.`,
-                            details: {
-                                compliance_score: complianceScore,
-                                checks_passed: checksPassed,
-                                checks_total: checksTotal,
-                                mode: report.mode,
-                                created_at: report.created_at
-                            }
+                            resultSummary,
+                            details,
                         };
                     } else if (job.status === "FAILED") {
-                        return { ...analysis, status: "failed", progress: 0 };
+                        return { ...analysis, status: "failed" as const, progress: 0 };
                     } else if (job.status === "PROCESSING") {
-                        return { ...analysis, status: "running", progress: 50 };
+                        // Smooth progress: calculate based on elapsed time
+                        const createdAt = new Date(analysis.createdAt).getTime();
+                        const elapsed = (Date.now() - createdAt) / 1000; // seconds
+                        // Logarithmic curve: fast at start, slows approaching 90%
+                        const estimatedProgress = Math.min(90, Math.round(30 * Math.log10(elapsed + 1)));
+                        return { ...analysis, status: "running" as const, progress: estimatedProgress };
                     }
                     return analysis;
                 } catch (e) {

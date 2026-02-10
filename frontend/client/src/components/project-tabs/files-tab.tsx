@@ -9,9 +9,10 @@ import { useToast } from "@/hooks/use-toast";
 
 interface FilesTabProps {
   project: Project;
+  onTabSwitch: (tab: string) => void;
 }
 
-export default function FilesTab({ project }: FilesTabProps) {
+export default function FilesTab({ project, onTabSwitch }: FilesTabProps) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
@@ -28,6 +29,8 @@ export default function FilesTab({ project }: FilesTabProps) {
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ["files", project.id] });
+      queryClient.invalidateQueries({ queryKey: ["analyses", project.id] });
+      onTabSwitch("analysis");
       toast({
         title: "Uploaded",
         description: `${variables.files.length} files uploaded successfully.`

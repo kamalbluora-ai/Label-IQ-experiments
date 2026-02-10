@@ -171,11 +171,10 @@ export default function FileUpload({ onDrop, className }: FileUploadProps) {
               <Label htmlFor="desc">Product Description <span className="text-destructive">*</span></Label>
               <Input
                 id="desc"
-                placeholder="information on the product"
+                placeholder="Describe about the food type or anything extra you want the AI know..."
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
-              <p className="text-xs text-muted-foreground">This helps AI understand the product context.</p>
             </div>
 
             <div className="space-y-3">
