@@ -1,6 +1,17 @@
 // API client that connects to the FastAPI backend
-// API base URL - FastAPI runs on port 8001
-const API_BASE = "http://localhost:8001/api";
+// API base URL - set at build time via VITE_API_BASE (Cloud Run)
+// const API_BASE = import.meta.env.VITE_API_BASE || "https://localhost:8000/api";
+declare global {
+    interface Window {
+        __CONFIG__?: { API_BASE?: string };
+    }
+}
+
+export const API_BASE =
+    window.__CONFIG__?.API_BASE ??
+    import.meta.env.VITE_API_BASE ??
+    "http://localhost:8000/api";
+
 
 // Types matching the backend models
 export interface User {

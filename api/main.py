@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import auth, projects, files, analysis
+from .routers import auth, projects, files, analysis
 
 app = FastAPI(
     title="LabelIQ API",
