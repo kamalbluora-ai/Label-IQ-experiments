@@ -1,10 +1,5 @@
 import { useState, useCallback } from "react";
 
-export interface SectionComment {
-    sectionKey: string;  // e.g., "bilingual", "common_name"
-    comment: string;
-}
-
 export interface TableRowEdit {
     sectionKey: string;
     rowIndex: number;
@@ -12,18 +7,68 @@ export interface TableRowEdit {
     editedData?: Record<string, any>;
 }
 
+export interface QuestionOverride {
+    question_id: string;
+    new_tag: string;
+    new_rationale: string;
+}
+
 export function useReportEdits() {
-    const [sectionComments, setSectionComments] = useState<Map<string, string>>(new Map());
+    // Map<question_id, comment>
+    const [questionComments, setQuestionComments] = useState<Map<string, string>>(new Map());
+
+    // Map<question_id, OverrideResult> - stores the result from re-evaluation
+    const [questionOverrides, setQuestionOverrides] = useState<Map<string, QuestionOverride>>(new Map());
+
+    // Set<question_id> - tracks which questions are currently updating
+    const [pendingQuestions, setPendingQuestions] = useState<Set<string>>(new Set());
+
     const [tableEdits, setTableEdits] = useState<TableRowEdit[]>([]);
     const [isReevaluating, setIsReevaluating] = useState(false);
 
-    const setComment = useCallback((sectionKey: string, comment: string) => {
-        setSectionComments(prev => {
+    /**
+     * Add or update a comment for a specific question.
+     */
+    const setQuestionComment = useCallback((questionId: string, comment: string) => {
+        setQuestionComments(prev => {
             const next = new Map(prev);
             if (comment.trim()) {
-                next.set(sectionKey, comment);
+                next.set(questionId, comment);
             } else {
-                next.delete(sectionKey);
+                next.delete(questionId);
+            }
+            return next;
+        });
+    }, []);
+
+    /**
+     * Merge a re-evaluation result into the local state overrides.
+     */
+    const addQuestionOverride = useCallback((override: QuestionOverride) => {
+        setQuestionOverrides(prev => {
+            const next = new Map(prev);
+            next.set(override.question_id, override);
+            return next;
+        });
+
+        // Also clear the comment since it's now applied
+        setQuestionComments(prev => {
+            const next = new Map(prev);
+            next.delete(override.question_id);
+            return next;
+        });
+    }, []);
+
+    /**
+     * Mark a question as pending update.
+     */
+    const setQuestionPending = useCallback((questionId: string, isPending: boolean) => {
+        setPendingQuestions(prev => {
+            const next = new Set(prev);
+            if (isPending) {
+                next.add(questionId);
+            } else {
+                next.delete(questionId);
             }
             return next;
         });
@@ -40,19 +85,27 @@ export function useReportEdits() {
     }, []);
 
     const clearAll = useCallback(() => {
-        setSectionComments(new Map());
+        setQuestionComments(new Map());
         setTableEdits([]);
+        setQuestionOverrides(new Map());
+        setPendingQuestions(new Set());
     }, []);
 
-    const hasPendingChanges = sectionComments.size > 0 || tableEdits.length > 0;
-    const pendingCount = sectionComments.size + tableEdits.length;
+    const hasPendingChanges = questionComments.size > 0 || tableEdits.length > 0;
+    const pendingCount = questionComments.size + tableEdits.length;
 
     return {
-        sectionComments,
+        questionComments,
+        questionOverrides,
+        pendingQuestions,
         tableEdits,
-        setComment,
+
+        setQuestionComment,
+        addQuestionOverride,
+        setQuestionPending,
         addTableEdit,
         clearAll,
+
         hasPendingChanges,
         pendingCount,
         isReevaluating,

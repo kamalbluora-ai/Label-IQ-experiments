@@ -347,6 +347,27 @@ export const api = {
         },
 
         /**
+         * Trigger re-evaluation for a single question.
+         * Matches backend ReevaluationRequest schema.
+         */
+        reevaluateQuestion: async (jobId: string, payload: {
+            question_id: string;
+            question: string;
+            original_answer: string;
+            original_tag: string;
+            original_rationale: string;
+            user_comment: string;
+        }): Promise<{ question_id: string; new_tag: string; new_rationale: string }> => {
+            const res = await fetch(`${API_BASE}/v1/jobs/${jobId}/reevaluate`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            });
+            if (!res.ok) throw new Error("Re-evaluation failed");
+            return res.json();
+        },
+
+        /**
          * Poll job status until complete.
          * Returns the final report when done.
          */

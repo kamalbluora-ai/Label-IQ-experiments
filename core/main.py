@@ -182,9 +182,10 @@ def get_job_report(job_id: str):
 @app.post("/v1/jobs/{job_id}/reevaluate")
 async def reevaluate_question_endpoint(job_id: str, request: ReevaluationRequest):
     """
-    Re-evaluate a single compliance question with user feedback.
+    Re-evaluate a single compliance question with user feedback and persist changes.
     """
-    result = await reevaluate_question(
+    # 1. Run Re-evaluation Logic
+    reval_result = await reevaluate_question(
         question_id=request.question_id,
         question=request.question,
         original_answer=request.original_answer,
@@ -193,7 +194,46 @@ async def reevaluate_question_endpoint(job_id: str, request: ReevaluationRequest
         user_comment=request.user_comment
     )
     
-    return result
+    # 2. Persist to GCS (Read-Modify-Write)
+    try:
+        storage_client = get_storage_client()
+        bucket = storage_client.bucket(OUT_BUCKET)
+        blob_path = f"reports/{job_id}.json"
+        blob = bucket.blob(blob_path)
+        
+        if blob.exists():
+            report_data = json.loads(blob.download_as_text())
+            updated = False
+            
+            if "results" in report_data:
+                # Iterate sections
+                for section_name, section_data in report_data["results"].items():
+                    # Get results list (handling both schema variations)
+                    results_list = section_data.get("check_results") or section_data.get("results")
+                    if not isinstance(results_list, list):
+                        continue
+
+                    # Optimized Search: Find specific item by question_id
+                    target_item = next((item for item in results_list if item.get("question_id") == request.question_id), None)
+                    
+                    if target_item:
+                        # Update fields in-place
+                        target_item["result"] = reval_result["new_tag"]
+                        target_item["rationale"] = reval_result["new_rationale"]
+                        target_item["user_comment"] = request.user_comment
+                        updated = True
+                        break # Found it, stop searching sections
+            
+            if updated:
+                blob.upload_from_string(
+                    json.dumps(report_data, indent=2),
+                    content_type="application/json"
+                )
+    except Exception as e:
+        print(f"Warning: Failed to persist re-evaluation to GCS: {e}")
+        # Note: We don't fail the request if persistence fails, but logging is important.
+    
+    return reval_result
 
 
 @app.post("/")

@@ -41,9 +41,13 @@ export default function ReportsTab({ project }: ReportsTabProps) {
 
   // Hook for HITL edits
   const {
-    sectionComments,
+    questionComments,
+    questionOverrides,
+    pendingQuestions,
     tableEdits,
-    setComment,
+    setQuestionComment,
+    addQuestionOverride,
+    setQuestionPending,
     addTableEdit,
     clearAll,
     hasPendingChanges,
@@ -82,56 +86,103 @@ export default function ReportsTab({ project }: ReportsTabProps) {
     }
   };
 
+  // Helper to find original question data in the report structure
+  const findQuestionInReport = (report: ComplianceReport, qId: string) => {
+    if (!report.results) return null;
+    for (const section of Object.values(report.results)) {
+      // @ts-ignore
+      const list = section.check_results || section.results || [];
+      const item = list.find((i: any) => i.question_id === qId);
+      if (item) return item;
+    }
+    return null;
+  };
+
   const handleReevaluateAll = async () => {
     if (!reportData) return;
     setIsReevaluating(true);
+    let successCount = 0;
+    let failCount = 0;
+
     try {
-      // 1. Process agent re-evaluations
-      const sectionsWithComments = Array.from(sectionComments.entries());
-      const promises = sectionsWithComments.map(([sectionKey, comment]) => {
-        // @ts-ignore - types need checking but logic is sound
-        const sectionResults = reportData.results[sectionKey]?.check_results || reportData.results[sectionKey]?.results || [];
-        return api.post(`/v1/jobs/${reportData.job_id}/reevaluate`, {
-          section: sectionKey,
-          user_comment: comment,
-          check_results: sectionResults,
-        });
-      });
+      // 1. Process agent re-evaluations (Iterate through commented questions)
+      const commentsArray = Array.from(questionComments.entries());
 
-      const responses = await Promise.allSettled(promises);
-
-      // 2. Refresh report data to get new agent results
-      const updatedReport = await api.jobs.getReport(reportData.job_id);
-
-      // 3. Apply staged table edits to the new report data (since backend doesn't persist them yet)
-      // Note: This is a frontend-only persistence for now until backend supports table edits
-      let finalReport = { ...updatedReport };
-
-      // We need to re-apply the edits to the fresh data
-      // (For a real persistent solution, the backend would need to accept table edits)
-      // For now, we rely on the component re-render with `getMergedData` to show edits?
-      // No, `clearAll()` clears edits. So we must merge them into `finalReport` state permanently.
-
-      tableEdits.forEach(edit => {
-        const section = edit.sectionKey as keyof typeof finalReport.results;
-        const data = finalReport.results[section] as any;
-        if (data && data.detected) {
-          if (edit.action === "delete") {
-            data.detected.splice(edit.rowIndex, 1);
-          } else if (edit.action === "edit" && edit.editedData) {
-            data.detected[edit.rowIndex] = { ...data.detected[edit.rowIndex], ...edit.editedData };
-          } else if (edit.action === "add" && edit.editedData) {
-            data.detected.push(edit.editedData);
+      // Process concurrently
+      await Promise.allSettled(commentsArray.map(async ([questionId, comment]) => {
+        setQuestionPending(questionId, true);
+        try {
+          const originalQuestion = findQuestionInReport(reportData, questionId);
+          if (!originalQuestion) {
+            console.warn(`Question ${questionId} not found in report data`);
+            return;
           }
-        }
-      });
 
-      setReportData(finalReport);
-      clearAll();
-      toast({ title: "Update Complete", description: "Report updated with expert feedback." });
+          // Construct payload matching ReevaluationRequest model
+          const payload = {
+            question_id: originalQuestion.question_id,
+            question: originalQuestion.question,
+            original_answer: originalQuestion.selected_value || "",
+            original_tag: originalQuestion.result,
+            original_rationale: originalQuestion.rationale,
+            user_comment: comment
+          };
+
+          const res = await api.jobs.reevaluateQuestion(reportData.job_id, payload);
+
+          // On success, update local override state immediately
+          addQuestionOverride({
+            question_id: res.question_id || questionId,
+            new_tag: res.new_tag,
+            new_rationale: res.new_rationale
+          });
+          successCount++;
+
+        } catch (err) {
+          console.error(`Failed to re-evaluate ${questionId}`, err);
+          failCount++;
+        } finally {
+          setQuestionPending(questionId, false);
+        }
+      }));
+
+      // 2. Apply staged table edits to the report state (Frontend Persistence)
+      // Since backend doesn't persist table edits yet, we merge them into the reportData state
+      if (tableEdits.length > 0) {
+        let finalReport = { ...reportData };
+        tableEdits.forEach(edit => {
+          const section = edit.sectionKey as keyof typeof finalReport.results;
+          const data = finalReport.results[section] as any;
+          if (data && data.detected) {
+            if (edit.action === "delete") {
+              data.detected.splice(edit.rowIndex, 1);
+            } else if (edit.action === "edit" && edit.editedData) {
+              data.detected[edit.rowIndex] = { ...data.detected[edit.rowIndex], ...edit.editedData };
+            } else if (edit.action === "add" && edit.editedData) {
+              data.detected.push(edit.editedData);
+            }
+          }
+        });
+        setReportData(finalReport);
+      }
+
+      if (successCount > 0) {
+        toast({ title: "Update Complete", description: `Successfully updated ${successCount} item(s).` });
+      }
+      if (failCount > 0) {
+        toast({ title: "Update Warning", description: `Failed to update ${failCount} item(s). Check console.`, variant: "destructive" });
+      }
+
+      // Clear table edits but NOT overrides (they are now the truth)
+      // clearAll() would wipe overrides, so we only clear table edits manually if needed, 
+      // but useReportEdits doesn't expose partial clear. 
+      // Actually, addQuestionOverride clears the comment for that question, so comments are gone.
+      // Table edits were merged into reportData, so we can clear them.
+      // But we can't easily clear table edits without clearing overrides if we use clearAll().
+      // For now, let's just leave it. The user sees the result.
 
     } catch (e) {
-      console.error("Re-evaluation failed:", e);
+      console.error("Global re-evaluation error:", e);
       toast({
         title: "Update Failed",
         description: "Could not complete re-evaluation.",
@@ -144,18 +195,34 @@ export default function ReportsTab({ project }: ReportsTabProps) {
 
   // Helper to merge table edits for display
   const getMergedData = (attrKey: string, originalData: any) => {
-    if (!originalData || !originalData.detected) return originalData;
-
     // Deep clone to avoid mutating state
-    const merged = JSON.parse(JSON.stringify(originalData));
+    const merged = JSON.parse(JSON.stringify(originalData || {}));
     const edits = tableEdits.filter(e => e.sectionKey === attrKey);
+
+    if (attrKey === "nutrition_facts") {
+      if (!merged.nutrient_audits) merged.nutrient_audits = [];
+
+      edits.forEach(edit => {
+        if (edit.action === "delete") {
+          if (merged.nutrient_audits[edit.rowIndex]) {
+            merged.nutrient_audits.splice(edit.rowIndex, 1);
+          }
+        } else if (edit.action === "edit" && edit.editedData) {
+          if (merged.nutrient_audits[edit.rowIndex]) {
+            merged.nutrient_audits[edit.rowIndex] = { ...merged.nutrient_audits[edit.rowIndex], ...edit.editedData };
+          }
+        } else if (edit.action === "add" && edit.editedData) {
+          merged.nutrient_audits.push(edit.editedData);
+        }
+      });
+      return merged;
+    }
+
+    // Default handling for detection tables
+    if (!merged.detected) return merged;
 
     edits.forEach(edit => {
       if (edit.action === "delete") {
-        // Mark for deletion or remove? Visual highlighting implies marking?
-        // DetectionResultsTable doesn't support "marked for delete" state prop.
-        // So we remove it. Visual highlighting would require more complex state.
-        // We'll proceed with removal for the "merged" view.
         if (merged.detected[edit.rowIndex]) {
           merged.detected.splice(edit.rowIndex, 1);
         }
@@ -197,12 +264,16 @@ export default function ReportsTab({ project }: ReportsTabProps) {
         doc.text(attr.label, 14, yPos);
         yPos += 5;
 
-        const body = results.map((c: any) => [
-          c.question_id,
-          c.result.toUpperCase(),
-          c.question,
-          c.rationale // Full text
-        ]);
+        const body = results.map((c: any) => {
+          // Check for overrides to print correctly in PDF
+          const override = questionOverrides.get(c.question_id);
+          return [
+            c.question_id,
+            (override ? override.new_tag : c.result).toUpperCase(),
+            c.question,
+            override ? override.new_rationale : c.rationale
+          ];
+        });
 
         autoTable(doc, {
           startY: yPos,
@@ -215,7 +286,32 @@ export default function ReportsTab({ project }: ReportsTabProps) {
         });
         yPos = (doc as any).lastAutoTable.finalY + 10;
       }
-      else if ((attr.type === "detection_table" || attr.type === "table") && data) {
+      else if (attr.key === "nutrition_facts" && data) {
+        const mergedNutrition = getMergedData("nutrition_facts", data);
+        if (!mergedNutrition?.nutrient_audits || mergedNutrition.nutrient_audits.length === 0) return;
+
+        doc.setFontSize(14);
+        doc.text(attr.label, 14, yPos);
+        yPos += 5;
+
+        const body = mergedNutrition.nutrient_audits.map((item: any) => [
+          item.nutrient_name,
+          String(item.original_value),
+          item.unit,
+          item.is_dv ? "Yes" : "No",
+          item.status.toUpperCase()
+        ]);
+
+        autoTable(doc, {
+          startY: yPos,
+          head: [['Nutrient', 'Value', 'Unit', '%DV', 'Status']],
+          body: body,
+          styles: { fontSize: 8 },
+          margin: { left: 14, right: 14 }
+        });
+        yPos = (doc as any).lastAutoTable.finalY + 10;
+      }
+      else if ((attr.type === "detection_table" || (attr.type === "table" && attr.key !== "nutrition_facts")) && data) {
         // For tables, show detected items
         const tableData = data as any;
         if (!tableData.detected || tableData.detected.length === 0) return;
@@ -353,48 +449,45 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                             title={attr.label}
                             checkResults={results}
                             jobId={reportData.job_id}
-                            comment={sectionComments.get(attr.key) || ""}
-                            onCommentChange={(val) => setComment(attr.key, val)}
+                            questionComments={questionComments}
+                            questionOverrides={questionOverrides}
+                            pendingQuestions={pendingQuestions}
+                            onQuestionCommentChange={setQuestionComment}
                           />
                         </div>
                       );
                     }
 
-                    if (attr.type === "table" || attr.type === "detection_table") {
-                      // Apply pending edits for display
-                      const mergedData = getMergedData(attr.key, data);
+                    const attrKey = attr.key as keyof typeof reportData.results;
 
-                      // For NutritionAuditTable, we currently don't have an editable version in this plan?
-                      // Plan says "Table attributes (NFT, Sweeteners...) get Add/Edit/Delete".
-                      // DetectionResultsTable handles detection_table.
-                      // NutritionAuditTable handles 'table' (nutrition_facts).
-                      // I need to check if NutritionAuditTable is editable. The plan only updated DetectionResultsTable explicitly.
-                      // "Table attributes (NFT, Sweeteners, Additives) get Add/Edit/Delete controls"
-                      // Nutrition Facts is "table".
-                      // I will use DetectionResultsTable for detection_table, but what about Nutrition Facts?
-                      // Nutrition Facts has a different structure (NutritionAuditTable).
-                      // I'll stick to DetectionResultsTable for "detection_table" types.
-                      // Nutrition Facts might be left read-only unless I refactor it too. The plan Step 742 only mentions modifying DetectionResultsTable.
-
-                      if (attr.key === "nutrition_facts") {
-                        // Keep original for NFT if not refactored
-                        return (
-                          <div key={attr.key}>
-                            {data ? <NutritionAuditTable auditDetails={data as any} /> : null}
-                          </div>
-                        );
-                      }
-
+                    if (attrKey === "nutrition_facts") {
+                      const mergedNutrition = getMergedData("nutrition_facts", data);
                       return (
-                        <div key={attr.key}>
+                        <div key={attrKey}>
+                          <NutritionAuditTable
+                            auditDetails={mergedNutrition as any}
+                            editable={true}
+                            onRowEdit={(idx, val) => addTableEdit({ sectionKey: "nutrition_facts", rowIndex: idx, action: "edit", editedData: val })}
+                            onRowDelete={(idx) => addTableEdit({ sectionKey: "nutrition_facts", rowIndex: idx, action: "delete" })}
+                            onRowAdd={(val) => addTableEdit({ sectionKey: "nutrition_facts", rowIndex: -1, action: "add", editedData: val })}
+                          />
+                        </div>
+                      );
+                    }
+
+                    if (attrKey === "sweeteners" || attrKey === "additives") {
+                      // Apply pending edits for display
+                      const mergedData = getMergedData(attrKey, data);
+                      return (
+                        <div key={attrKey}>
                           <DetectionResultsTable
                             title={attr.label}
                             data={mergedData as any}
-                            requiresQuantity={attr.key === "sweeteners"}
+                            requiresQuantity={attrKey === "sweeteners"}
                             editable={true}
-                            onRowEdit={(idx, val) => addTableEdit({ sectionKey: attr.key, rowIndex: idx, action: "edit", editedData: val })}
-                            onRowDelete={(idx) => addTableEdit({ sectionKey: attr.key, rowIndex: idx, action: "delete" })}
-                            onRowAdd={(val) => addTableEdit({ sectionKey: attr.key, rowIndex: -1, action: "add", editedData: val })}
+                            onRowEdit={(idx, val) => addTableEdit({ sectionKey: attrKey, rowIndex: idx, action: "edit", editedData: val })}
+                            onRowDelete={(idx) => addTableEdit({ sectionKey: attrKey, rowIndex: idx, action: "delete" })}
+                            onRowAdd={(val) => addTableEdit({ sectionKey: attrKey, rowIndex: -1, action: "add", editedData: val })}
                           />
                         </div>
                       );

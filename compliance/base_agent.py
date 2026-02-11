@@ -144,8 +144,8 @@ class BaseComplianceAgent(ABC):
                 "error": str(e),
                 "results": [
                     {
-                        "question_id": q["id"],
-                        "question": q["text"],
+                        "question_id": q.get("id", q.get("question_id")),
+                        "question": q.get("text", q.get("question")),
                         "result": "needs_review",
                         "rationale": f"Agent error: {str(e)}"
                     }

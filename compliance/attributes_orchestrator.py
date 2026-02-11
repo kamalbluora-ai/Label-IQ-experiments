@@ -1,5 +1,7 @@
 import asyncio
-from typing import Dict, Any
+from typing import Dict, Any, List
+import json
+from pathlib import Path
 
 # Active components
 from compliance.agents.common_name import CommonNameAgent
@@ -28,17 +30,40 @@ class AttributeOrchestrator:
         self.irradiation_agent = IrradiationAgent()
         self.country_origin_agent = CountryOriginAgent()
         self.claim_tag_agent = ClaimTagAgent()
+        
+        # Load questions from JSON
+        self.questions = self._load_questions()
+
+    def _load_questions(self) -> Dict[str, Any]:
+        """Load the CFIA checklist questions from JSON."""
+        try:
+            # Path relative to this file
+            path = Path(__file__).parent / "cfia_checklist_questions/questions.json"
+            if not path.exists():
+                print(f"WARNING: questions.json not found at {path}")
+                return {}
+                
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return data.get("sections", {})
+        except Exception as e:
+            print(f"Error loading questions.json: {e}")
+            return {}
     
     async def evaluate(self, label_facts: Dict[str, Any]) -> Dict[str, Any]:
         """Run all compliance checks in parallel, streaming results as completed."""
+        # Helper to get questions safely
+        def get_q(key):
+            return self.questions.get(key, {}).get("questions", [])
+
         tasks = {
-            "common_name": asyncio.create_task(self._run_agent_with_retry(self.common_name_agent, label_facts)),
-            "ingredients": asyncio.create_task(self._run_agent_with_retry(self.ingredients_agent, label_facts)),
-            "date_marking": asyncio.create_task(self._run_agent_with_retry(self.date_marking_agent, label_facts)),
-            "fop_symbol": asyncio.create_task(self._run_agent_with_retry(self.fop_symbol_agent, label_facts)),
-            "bilingual": asyncio.create_task(self._run_agent_with_retry(self.bilingual_agent, label_facts)),
-            "irradiation": asyncio.create_task(self._run_agent_with_retry(self.irradiation_agent, label_facts)),
-            "country_origin": asyncio.create_task(self._run_agent_with_retry(self.country_origin_agent, label_facts)),
+            "common_name": asyncio.create_task(self._run_agent_with_retry(self.common_name_agent, label_facts, questions=get_q("common_name"))),
+            "ingredients": asyncio.create_task(self._run_agent_with_retry(self.ingredients_agent, label_facts, questions=get_q("list_of_ingredients"))),
+            "date_marking": asyncio.create_task(self._run_agent_with_retry(self.date_marking_agent, label_facts, questions=get_q("date_markings"))),
+            "fop_symbol": asyncio.create_task(self._run_agent_with_retry(self.fop_symbol_agent, label_facts, questions=get_q("fop_nutrition_symbol"))),
+            "bilingual": asyncio.create_task(self._run_agent_with_retry(self.bilingual_agent, label_facts, questions=get_q("bilingual_requirements"))),
+            "irradiation": asyncio.create_task(self._run_agent_with_retry(self.irradiation_agent, label_facts, questions=get_q("irradiation"))),
+            "country_origin": asyncio.create_task(self._run_agent_with_retry(self.country_origin_agent, label_facts, questions=get_q("country_of_origin"))),
 
             "nutrition_facts": asyncio.create_task(asyncio.to_thread(self._run_nft_audit, label_facts)),
             "sweeteners": asyncio.create_task(asyncio.to_thread(self._run_sweetener_detection, label_facts)),
@@ -49,7 +74,7 @@ class AttributeOrchestrator:
         # GUARDRAIL: Only trigger claim_tag agent if claim_tag_type field is not empty
         claim_tag_type = label_facts.get("fields", {}).get("claim_tag_type", {}).get("text")
         if claim_tag_type:
-            tasks["claim_tag"] = asyncio.create_task(self._run_agent_with_retry(self.claim_tag_agent, label_facts))
+            tasks["claim_tag"] = asyncio.create_task(self._run_agent_with_retry(self.claim_tag_agent, label_facts, questions=[]))
         
         # Map task objects back to their names
         task_to_name = {task: name for name, task in tasks.items()}
@@ -67,11 +92,11 @@ class AttributeOrchestrator:
         
         return results
     
-    async def _run_agent_with_retry(self, agent, label_facts, max_retries=2):
+    async def _run_agent_with_retry(self, agent, label_facts, questions, max_retries=2):
         """Run agent with automatic retry on failure."""
         for attempt in range(max_retries + 1):
             try:
-                result = await agent.evaluate(label_facts, [])
+                result = await agent.evaluate(label_facts, questions)
                 # Transform to match frontend expected structure
                 return {
                     "check_results": [
