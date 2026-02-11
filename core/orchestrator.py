@@ -1,6 +1,6 @@
-
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
 
 import json
@@ -15,16 +15,18 @@ from PIL import Image
 
 import sys
 from pathlib import Path
-core_dir = Path(__file__).parent
-if str(core_dir) not in sys.path:
-    sys.path.insert(0, str(core_dir))
 
-from processor import preprocess_image_bytes, run_docai_custom_extractor
-from vertex_search import cfia_retrieve_snippets
-from translate_fields import translate_foreign_fields
-from chatgpt_search import cfia_search_chatgpt_agent
+# Add project root to path for imports
+project_root = Path(__file__).parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from core.processor import preprocess_image_bytes, run_docai_custom_extractor
+from core.vertex_search import cfia_retrieve_snippets
+from core.translate_fields import translate_foreign_fields
+from core.chatgpt_search import cfia_search_chatgpt_agent
 from compliance.attributes_orchestrator import AttributeOrchestrator
-from cache_fetcher import get_cached_label_facts, is_cache_valid
+from core.cache_fetcher import get_cached_label_facts, is_cache_valid
 
 # Environment configuration (use .get() to allow import without full config)
 IN_BUCKET = os.environ.get("IN_BUCKET", "")
@@ -43,7 +45,9 @@ TRANSLATE_PROJECT = os.environ.get("TRANSLATE_PROJECT", "")
 TRANSLATE_LOCATION = os.environ.get("TRANSLATE_LOCATION", "global")
 TRANSLATE_GLOSSARY_ID = os.environ.get("TRANSLATE_GLOSSARY_ID")
 
-GCP_PROJECT = os.environ.get("GOOGLE_CLOUD_PROJECT") or os.environ.get("DOCAI_PROJECT", "")
+GCP_PROJECT = os.environ.get("GOOGLE_CLOUD_PROJECT") or os.environ.get(
+    "DOCAI_PROJECT", ""
+)
 
 # Lazy-initialized storage client
 _storage_client = None
@@ -64,20 +68,20 @@ def get_evidence(
     """
     Factory method to retrieve CFIA evidence based on configured provider.
     Supports swapping between vertex_search and chatgpt_search implementations.
-    
+
     Configure via CFIA_EVIDENCE_PROVIDER env var:
     - 'vertex_search': Use Google Vertex AI Search (default)
     - 'chatgpt_search': Use ChatGPT web search agent
-    
+
     Args:
         label_facts: Extracted label facts from document
         product_metadata: Product metadata
-    
+
     Returns:
         Evidence dictionary from chosen provider
     """
     provider = os.environ.get("CFIA_EVIDENCE_PROVIDER", "chatgpt_search")
-    
+
     if provider == "chatgpt_search":
         return cfia_search_chatgpt_agent(
             project_id=VS_PROJECT,
@@ -97,6 +101,7 @@ def get_evidence(
             label_facts=label_facts,
             product_metadata=product_metadata,
         )
+
 
 def detect_mode(label_facts: Dict[str, Any]) -> str:
     """Auto-detect mode based on presence of foreign language fields."""
@@ -119,22 +124,22 @@ def split_image_bytes(image_bytes: bytes) -> list[tuple[str, bytes]]:
     try:
         img = Image.open(io.BytesIO(image_bytes))
         width, height = img.size
-        
+
         # Split width-wise (vertical split line)
         mid_point = width // 2
-        
+
         # Left half
         left_half = img.crop((0, 0, mid_point, height))
         left_buffer = io.BytesIO()
         left_half.save(left_buffer, format=img.format or "JPEG")
         left_bytes = left_buffer.getvalue()
-        
+
         # Right half
         right_half = img.crop((mid_point, 0, width, height))
         right_buffer = io.BytesIO()
         right_half.save(right_buffer, format=img.format or "JPEG")
         right_bytes = right_buffer.getvalue()
-        
+
         return [("left_panel", left_bytes), ("right_panel", right_bytes)]
     except Exception as e:
         print(f"Error splitting image: {e}")
@@ -144,16 +149,16 @@ def split_image_bytes(image_bytes: bytes) -> list[tuple[str, bytes]]:
 def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     """
     Process a job manifest and run the full compliance pipeline.
-    
+
     Args:
         bucket: GCS bucket name containing the images
         manifest: Job manifest with job_id, mode, product_metadata, images
-    
+
     Returns:
         Complete report dictionary with job_id, results, evidence, etc.
     """
     storage_client = get_storage_client()
-    
+
     # Validate basic shape
     job_id = manifest.get("job_id") or str(uuid.uuid4())
     manifest_mode = manifest.get("mode")  # May be None for auto-detection
@@ -164,18 +169,21 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     if not images:
         raise RuntimeError("Manifest has no images[]")
 
-    update_job(job_id, {
-        "status": "PROCESSING",
-        "mode": manifest_mode, 
-        "product_metadata": product_metadata,
-        "manifest_path": f"gs://{bucket}/incoming/{job_id}/job.json",
-        "images": images,
-        "tags": tags,
-    })
+    update_job(
+        job_id,
+        {
+            "status": "PROCESSING",
+            "mode": manifest_mode,
+            "product_metadata": product_metadata,
+            "manifest_path": f"gs://{bucket}/incoming/{job_id}/job.json",
+            "images": images,
+            "tags": tags,
+        },
+    )
 
     # Check cache first
     cached_facts = get_cached_label_facts(job_id, OUT_BUCKET, storage_client)
-    
+
     if cached_facts and is_cache_valid(cached_facts):
         print(f"Using cached label_facts for job {job_id}")
         merged_facts = cached_facts
@@ -185,10 +193,10 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
         all_facts = []
         for i, obj_name in enumerate(images):
             img_bytes = storage_client.bucket(bucket).blob(obj_name).download_as_bytes()
-            
+
             # Check tag for this image
             current_tag = tags[i].lower() if i < len(tags) and tags[i] else ""
-            
+
             if current_tag == "front":
                 # Split image into Left and Right panels
                 print(f"Splitting image {obj_name} (tag: front) into two halves...")
@@ -203,13 +211,15 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
                                 location=DOCAI_LOCATION,
                                 processor_id=DOCAI_PROCESSOR_ID,
                                 file_bytes=panel_bytes,
-                                mime_type=guess_mime(obj_name), # Assume same mime or just JPEG
+                                mime_type=guess_mime(
+                                    obj_name
+                                ),  # Assume same mime or just JPEG
                             )
                             all_facts.append(facts)
                         split_success = True
                 except Exception as e:
                     print(f"Error splitting image: {e}")
-                
+
                 if not split_success:
                     # Fallback to normal processing
                     facts = run_docai_custom_extractor(
@@ -240,7 +250,9 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     # Translation for RELABEL mode (before evidence retrieval)
     if mode == "RELABEL":
         if not TRANSLATE_PROJECT:
-            raise RuntimeError("RELABEL mode requires TRANSLATE_PROJECT env var and Translation API enabled.")
+            raise RuntimeError(
+                "RELABEL mode requires TRANSLATE_PROJECT env var and Translation API enabled."
+            )
         merged_facts = translate_foreign_fields(
             label_facts=merged_facts,
             project_id=TRANSLATE_PROJECT,
@@ -254,10 +266,10 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     #     product_metadata=product_metadata,
     # )
     # compliance = run_checks(
-    #     label_facts=merged_facts, 
-    #     cfia_evidence=evidence, 
+    #     label_facts=merged_facts,
+    #     cfia_evidence=evidence,
     #     product_metadata=product_metadata,
-    #     use_gpt=True, 
+    #     use_gpt=True,
     #     tags=tags
     # )
 
@@ -278,7 +290,9 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
 
     report_path = f"reports/{job_id}.json"
     write_json(report_path, report)
-    update_job(job_id, {"status": "DONE", "report_path": f"gs://{OUT_BUCKET}/{report_path}"})
+    update_job(
+        job_id, {"status": "DONE", "report_path": f"gs://{OUT_BUCKET}/{report_path}"}
+    )
     report["report_path"] = f"gs://{OUT_BUCKET}/{report_path}"
     return report
 
@@ -297,14 +311,16 @@ def merge_label_facts(all_facts: list[Dict[str, Any]]) -> Dict[str, Any]:
         # concatenate small capped text (optional)
         t = facts.get("text", "")
         if t:
-            merged["text"] += (t[:5000] + "\n")
+            merged["text"] += t[:5000] + "\n"
 
         # best-confidence winner for each field
         for k, v in (facts.get("fields", {}) or {}).items():
             if k not in merged["fields"]:
                 merged["fields"][k] = v
             else:
-                if (v.get("confidence", 0) or 0) > (merged["fields"][k].get("confidence", 0) or 0):
+                if (v.get("confidence", 0) or 0) > (
+                    merged["fields"][k].get("confidence", 0) or 0
+                ):
                     merged["fields"][k] = v
 
         # collect all candidates
@@ -321,6 +337,7 @@ def merge_label_facts(all_facts: list[Dict[str, Any]]) -> Dict[str, Any]:
 
 
 # --- GCS Helper Functions ---
+
 
 def job_id_from_object(name: str) -> Optional[str]:
     """Extract job_id from GCS object path (incoming/{job_id}/filename.jpg)."""
@@ -346,7 +363,9 @@ def write_json(path: str, obj: Dict[str, Any]):
     """Write a JSON object to GCS."""
     storage_client = get_storage_client()
     blob = storage_client.bucket(OUT_BUCKET).blob(path)
-    blob.upload_from_string(json.dumps(obj, ensure_ascii=False, indent=2), content_type="application/json")
+    blob.upload_from_string(
+        json.dumps(obj, ensure_ascii=False, indent=2), content_type="application/json"
+    )
 
 
 def read_job(job_id: str) -> Optional[Dict[str, Any]]:

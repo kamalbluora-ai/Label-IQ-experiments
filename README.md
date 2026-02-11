@@ -89,15 +89,25 @@ Ensure your `core/.env` file has the following:
 
 
 # Testing commands
-# Redeployment of docker file to gcloud 
-gcloud run deploy label-compliance --source . --region us-central1 --project foodlabel-477006
 
-# In case you see the traffic route not to 100% with the above command, use the following: 
-gcloud run deploy label-compliance --source . --region us-central1 --project foodlabel-477006 --clear-base-image
+## Deploy Backend (from project root)
+```bash
+gcloud run deploy "backend" --region "us-central1" --source . --allow-unauthenticated
+```
 
-# Run the backend
-uvicorn core.main:app --reload
+## Deploy Frontend (from frontend folder)
+```bash
+cd frontend
+gcloud run deploy "web" --region "us-central1" --source . --allow-unauthenticated --set-env-vars API_BASE="https://YOUR_BACKEND_URL"
+```
 
-# Run the frontend
+## Run Backend Locally (from project root)
+```bash
+uvicorn api.main:app --reload --port 8000
+```
+
+## Run Frontend Locally (from frontend folder)
+```bash
 cd frontend
 npm run dev:client
+```

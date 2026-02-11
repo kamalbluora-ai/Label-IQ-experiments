@@ -10,7 +10,7 @@ declare global {
 export const API_BASE =
     window.__CONFIG__?.API_BASE ??
     import.meta.env.VITE_API_BASE ??
-    "http://localhost:8000/api";
+    "http://localhost:8000";
 
 
 // Types matching the new GCS-based backend
