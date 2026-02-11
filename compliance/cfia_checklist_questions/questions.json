@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "source": "CFIA Requirements Checklist",
+    "extracted_at": "2026-01-16T07:22:07.739204",
+    "total_sections": 11,
+    "total_questions": 78
+  },
+  "sections": {
+    "common_name": {
+      "title": "Common Name",
+      "questions": [
+        {
+          "id": "CN-1",
+          "text": "is a common name present?",
+          "sub_questions": [
+            "if not, is the product exempt from common name?"
+          ],
+          "check_type": "deterministic",
+          "field": "common_name_en",
+          "logic": "field_exists"
+        },
+        {
+          "id": "CN-2",
+          "text": "is the common name on the principal display panel (PDP)?",
+          "check_type": "deterministic",
+          "field": "common_name_en",
+          "panel": "panel_pdp",
+          "logic": "in_panel"
+        },
+        {
+          "id": "CN-3",
+          "text": "is the common name in letters of 1.6 mm or greater?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "CN-4",
+          "text": "is it an appropriate common name?",
+          "check_type": "llm"
+        }
+      ]
+    },
+    "net_quantity": {
+      "title": "Net Quantity Declaration",
+      "questions": [
+        {
+          "id": "NQ-1",
+          "text": "is a net quantity declaration present?",
+          "sub_questions": [
+            "if not, is the product exempt from net quantity?"
+          ],
+          "check_type": "deterministic",
+          "field": "net_quantity_full_text",
+          "logic": "field_exists"
+        },
+        {
+          "id": "NQ-2",
+          "text": "is the net quantity declared on the PDP?",
+          "check_type": "deterministic",
+          "field": "net_quantity_full_text",
+          "panel": "panel_pdp",
+          "logic": "in_panel"
+        },
+        {
+          "id": "NQ-3",
+          "text": "is it in metric units?",
+          "check_type": "deterministic",
+          "field": "net_quantity_unit_words_en",
+          "logic": "regex",
+          "pattern": "ml|mL|g|kg"
+        },
+        {
+          "id": "NQ-4",
+          "text": "is the appropriate manner (volume, weight, count) for the product used?",
+          "check_type": "llm"
+        },
+        {
+          "id": "NQ-5",
+          "text": "is it rounded to 3 figures, unless below 100?",
+          "check_type": "llm"
+        },
+        {
+          "id": "NQ-6",
+          "text": "are the correct bilingual symbols used?",
+          "sub_questions": [
+            "if not, and the units are written out, are the units declared in both languages?"
+          ],
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "NQ-7",
+          "text": "does the size of the numerical portion meet the minimum type height requirements?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "NQ-8",
+          "text": "if optional Canadian units are also present, are they declared properly?",
+          "check_type": "llm"
+        },
+        {
+          "id": "NQ-9",
+          "text": "if optional U.S. gallons and quarts are also present, are they identified properly?",
+          "check_type": "llm"
+        }
+      ]
+    },
+    "list_of_ingredients": {
+      "title": "List of Ingredients and Allergen Labelling",
+      "questions": [
+        {
+          "id": "LI-1",
+          "text": "is a list of ingredients present?",
+          "sub_questions": [
+            "if not, is the product exempt from declaring a list of ingredients or is the product a single ingredient food?"
+          ],
+          "check_type": "deterministic",
+          "field": "ingredients_en",
+          "logic": "field_exists"
+        },
+        {
+          "id": "LI-2",
+          "text": "are ingredients in descending order of proportion by weight?",
+          "check_type": "llm"
+        },
+        {
+          "id": "LI-3",
+          "text": "have the ingredients been declared using an appropriate common name?",
+          "check_type": "llm"
+        },
+        {
+          "id": "LI-4",
+          "text": "have components been properly declared where required?",
+          "check_type": "llm"
+        },
+        {
+          "id": "LI-5",
+          "text": "have sugars-based ingredients that are required to be grouped after the term 'Sugars' been properly declared?",
+          "check_type": "llm"
+        },
+        {
+          "id": "LI-6",
+          "text": "are priority allergens, gluten and added sulphites declared using the prescribed source name or common names, as required?",
+          "sub_questions": [
+            "in the list of ingredients, or",
+            "in a 'contains' statement?"
+          ],
+          "check_type": "llm"
+        },
+        {
+          "id": "LI-7",
+          "text": "are priority allergens present due to unintended cross-contamination and listed in a cross-contamination statement?",
+          "check_type": "llm"
+        },
+        {
+          "id": "LI-8",
+          "text": "is the 'contains' statement and/or cross contamination statement, if present, at the end of the list of ingredients?",
+          "check_type": "llm"
+        },
+        {
+          "id": "LI-9",
+          "text": "if the product contains aspartame, is the phenylalanine statement present?",
+          "sub_questions": [
+            "is it located at the end of the list of ingredients?"
+          ],
+          "check_type": "deterministic",
+          "logic": "field_exists"
+        },
+        {
+          "id": "LI-10",
+          "text": "if the statements are present, are they in the proper order of the phenylalanine statement, followed by the 'contains' statement, followed by the cross-contamination statement?",
+          "check_type": "llm"
+        },
+        {
+          "id": "LI-11",
+          "text": "are the English and French lists of ingredients, phenylalanine statement and allergen declarations the same?",
+          "check_type": "llm"
+        }
+      ]
+    },
+    "name_and_address": {
+      "title": "Name and Principal Place of Business",
+      "questions": [
+        {
+          "id": "NA-1",
+          "text": "is a name and principal place of business present, to the level of detail required?",
+          "sub_questions": [
+            "if not, is the product exempt from declaring name and principal place of business?"
+          ],
+          "check_type": "deterministic",
+          "field": "name_and_address",
+          "logic": "field_exists"
+        },
+        {
+          "id": "NA-2",
+          "text": "Canadian name and principal place of business, grouped with the geographic origin, or preceded by the expressions 'Imported by / importé par' or 'Imported for / importé pour'?",
+          "sub_questions": [
+            "or, foreign name and principal place of business is identified?"
+          ],
+          "check_type": "llm"
+        },
+        {
+          "id": "NA-3",
+          "text": "is the information on any label panel except solely on the bottom (except ornamental containers)?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "NA-4",
+          "text": "are type height requirements of 1.6 mm (1/16 inch) or greater are met?",
+          "sub_questions": [
+            "or, if the area of the principal display surface (PDS) is 10 cm2 (1.55 inches2) or less, is the minimum type height 0.8 mm (1/32 inch)?"
+          ],
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "NA-5",
+          "text": "is it in English or French?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        }
+      ]
+    },
+    "date_markings": {
+      "title": "Date Markings",
+      "questions": [
+        {
+          "id": "DM-1",
+          "text": "is a 'best before' date required?",
+          "sub_questions": [
+            "if so, is it present?"
+          ],
+          "check_type": "deterministic",
+          "field": "best_before_date",
+          "logic": "field_exists"
+        },
+        {
+          "id": "DM-2",
+          "text": "is the correct wording 'best before' / 'meilleur avant' used in English and French?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "DM-3",
+          "text": "is the wording grouped with the date or does it clearly explain the date if located elsewhere on the label?",
+          "check_type": "llm"
+        },
+        {
+          "id": "DM-4",
+          "text": "is the presentation of the date acceptable?",
+          "check_type": "llm"
+        },
+        {
+          "id": "DM-5",
+          "text": "is the location of the date acceptable?",
+          "check_type": "llm"
+        },
+        {
+          "id": "DM-6",
+          "text": "is a 'packaged on' date required?",
+          "sub_questions": [
+            "if so, is it present?"
+          ],
+          "check_type": "deterministic",
+          "field": "packaged_on_date",
+          "logic": "field_exists"
+        },
+        {
+          "id": "DM-7",
+          "text": "is the correct wording 'packaged on' / 'empaqueté le' used?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "DM-8",
+          "text": "is the wording grouped with the date or does it clearly explain the date if located elsewhere on the label?",
+          "check_type": "llm"
+        },
+        {
+          "id": "DM-9",
+          "text": "is the presentation correct as described above?",
+          "check_type": "llm"
+        },
+        {
+          "id": "DM-10",
+          "text": "is location of the date acceptable as described above?",
+          "check_type": "llm"
+        },
+        {
+          "id": "DM-11",
+          "text": "are storage instructions required?",
+          "sub_questions": [
+            "if so, are they present and complete?"
+          ],
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "DM-12",
+          "text": "is an 'expiration date' required?",
+          "sub_questions": [
+            "if so, is it present?"
+          ],
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "DM-13",
+          "text": "is the location of the date acceptable?",
+          "check_type": "llm"
+        },
+        {
+          "id": "DM-14",
+          "text": "is all of the above information readily discernible?",
+          "check_type": "llm"
+        }
+      ]
+    },
+    "nutrition_facts_table": {
+      "title": "Nutrition Facts Table (NFt)",
+      "questions": [
+        {
+          "id": "NF-1",
+          "text": "is an NFt present?",
+          "sub_questions": [
+            "if not, is the product prohibited from using a NFt or exempt from NFt?"
+          ],
+          "check_type": "deterministic",
+          "field": "nft_table_en",
+          "logic": "field_exists"
+        },
+        {
+          "id": "NF-2",
+          "text": "is the NFt on the outer package?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "NF-3",
+          "text": "is the appropriate format family used?",
+          "check_type": "llm"
+        },
+        {
+          "id": "NF-4",
+          "text": "is the serving size aligned with the regulated reference amount?",
+          "check_type": "llm"
+        },
+        {
+          "id": "NF-5",
+          "text": "are energy and the 12 core nutrients declared?",
+          "check_type": "llm"
+        },
+        {
+          "id": "NF-6",
+          "text": "is the % Daily Value interpretative statement included in the NFt?",
+          "check_type": "llm"
+        },
+        {
+          "id": "NF-7",
+          "text": "is the table background and print in the appropriate colours?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        }
+      ]
+    },
+    "fop_nutrition_symbol": {
+      "title": "Front-of-Package (FOP) Nutrition Symbol",
+      "questions": [
+        {
+          "id": "FOP-1",
+          "text": "is an FOP nutrition symbol present?",
+          "sub_questions": [
+            "if not, is the product prohibited or exempt from displaying a nutrition symbol?"
+          ],
+          "check_type": "deterministic",
+          "logic": "field_exists"
+        },
+        {
+          "id": "FOP-2",
+          "text": "is the nutrition symbol located on the PDP of the product?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "FOP-3",
+          "text": "does the nutrition symbol meet the requirements for legibility, language and orientation?",
+          "check_type": "llm"
+        },
+        {
+          "id": "FOP-4",
+          "text": "does the nutrition symbol meet the required technical specifications?",
+          "check_type": "llm"
+        },
+        {
+          "id": "FOP-5",
+          "text": "is the nutrition symbol proportional to the PDS?",
+          "check_type": "llm"
+        }
+      ]
+    },
+    "bilingual_requirements": {
+      "title": "Bilingual Requirements",
+      "questions": [
+        {
+          "id": "BR-1",
+          "text": "is all mandatory information referred to in this checklist in English and French?",
+          "sub_questions": [
+            "If not, does a bilingual exemption apply?"
+          ],
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        }
+      ]
+    },
+    "irradiation": {
+      "title": "Irradiation",
+      "questions": [
+        {
+          "id": "IR-1",
+          "text": "is the food permitted to be irradiated?",
+          "sub_questions": [
+            "If so, is there a written statement such as 'irradiated' or 'treated with radiation' or 'treated by irradiation' and the international symbol?"
+          ],
+          "check_type": "deterministic",
+          "logic": "field_exists"
+        },
+        {
+          "id": "IR-2",
+          "text": "is the statement readily discernible?",
+          "check_type": "llm"
+        },
+        {
+          "id": "IR-3",
+          "text": "is the international symbol on the principal display panel?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "IR-4",
+          "text": "does the international symbol meet the minimum size requirements for the outer diameter?",
+          "check_type": "deterministic",
+          "logic": "always_needs_review"
+        },
+        {
+          "id": "IR-5",
+          "text": "are irradiated ingredients that constitute more than 10% of the final food identified in the list of ingredients as 'irradiated'?",
+          "check_type": "llm"
+        }
+      ]
+    },
+    "sweeteners": {
+      "title": "Sweeteners",
+      "questions": [
+        {
+          "id": "SW-1",
+          "text": "is aspartame added to the prepackaged food?",
+          "sub_questions": [
+            "if so, is a phenylalanine statement present?",
+            "does the statement appear at the end of the list of ingredients?",
+            "is the statement in bold type?"
+          ],
+          "check_type": "deterministic",
+          "logic": "field_exists"
+        },
+        {
+          "id": "SW-2",
+          "text": "is the product a table-top sweetener?",
+          "sub_questions": [
+            "if so and aspartame, sucralose, acesulfame-potassium or neotame are present, is a statement of the sweetness per serving expressed in terms of the amount of sugar required to produce an equivalent degree of sweetness declared on the label, grouped with the list of ingredients?"
+          ],
+          "check_type": "llm"
+        }
+      ]
+    },
+    "country_of_origin": {
+      "title": "Country of Origin",
+      "questions": [
+        {
+          "id": "CO-1",
+          "text": "is the product one of the following?",
+          "sub_questions": [
+            "wine and brandy",
+            "dairy products",
+            "honey",
+            "fish and fish products",
+            "fresh fruits or vegetables",
+            "shell egg and processed egg products",
+            "meat and poultry products",
+            "maple products",
+            "processed fruit or vegetable products"
+          ],
+          "check_type": "llm"
+        },
+        {
+          "id": "CO-2",
+          "text": "If so, check the food-specific labelling requirements, as for some imported prepackaged products it is mandatory to state the country of origin.",
+          "check_type": "llm"
+        }
+      ]
+    }
+  }
+}
