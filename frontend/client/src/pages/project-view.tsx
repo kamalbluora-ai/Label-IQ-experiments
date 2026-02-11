@@ -12,6 +12,7 @@ import { Loader2, ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 import NotFound from "./not-found";
 
 export default function ProjectView() {
@@ -19,6 +20,7 @@ export default function ProjectView() {
   const id = params?.id;
   const queryClient = useQueryClient();
   const { toast } = useToast();
+  const [activeTab, setActiveTab] = useState("files");
 
   const { data: project, isLoading } = useQuery({
     queryKey: ["project", id],
@@ -80,7 +82,7 @@ export default function ProjectView() {
         </div>
 
         {/* Tabs */}
-        <Tabs defaultValue="files" className="space-y-6">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="w-full justify-start h-12 p-1 bg-muted/50">
             <TabsTrigger value="files" className="px-6">Files & Uploads</TabsTrigger>
             <TabsTrigger value="analysis" className="px-6">Analysis</TabsTrigger>
@@ -88,11 +90,11 @@ export default function ProjectView() {
           </TabsList>
 
           <TabsContent value="files">
-            <FilesTab project={project} />
+            <FilesTab project={project} onTabSwitch={setActiveTab} />
           </TabsContent>
 
           <TabsContent value="analysis">
-            <AnalysisTab project={project} />
+            <AnalysisTab project={project} onTabSwitch={setActiveTab} />
           </TabsContent>
 
           <TabsContent value="reports">

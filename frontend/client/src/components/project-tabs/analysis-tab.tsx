@@ -5,21 +5,36 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress";
 import { Play, Loader2, CheckCircle2, AlertCircle, BarChart3, RefreshCw } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useEffect } from "react";
 
 interface AnalysisTabProps {
   project: Project;
+  onTabSwitch: (tab: string) => void;
 }
 
-export default function AnalysisTab({ project }: AnalysisTabProps) {
+export default function AnalysisTab({ project, onTabSwitch }: AnalysisTabProps) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
-  // Poll every 2 seconds to update progress
   const { data: analyses, isLoading } = useQuery({
     queryKey: ["analyses", project.id],
     queryFn: () => api.analysis.list(project.id),
-    refetchInterval: 2000,
+    refetchInterval: (query) => {
+      const data = query.state.data as Analysis[] | undefined;
+      if (!data || data.length === 0) return 2000; // Keep polling if no data yet
+      const allDone = data.every(a => a.status === "completed" || a.status === "failed");
+      return allDone ? false : 2000;
+    },
   });
+
+  // Auto-switch to reports when all analyses are complete
+  useEffect(() => {
+    if (!analyses || analyses.length === 0) return;
+    const allDone = analyses.every(a => a.status === "completed" || a.status === "failed");
+    if (allDone) {
+      onTabSwitch("reports");
+    }
+  }, [analyses, onTabSwitch]);
 
   const runMutation = useMutation({
     mutationFn: () => {
