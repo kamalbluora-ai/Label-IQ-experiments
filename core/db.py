@@ -1,19 +1,46 @@
-import sqlite3
+import psycopg2
+from psycopg2.extras import RealDictCursor
 import json
 import os
 from datetime import datetime, timezone
 from typing import Dict, Any, Optional
 
-DB_PATH = os.environ.get("SQLITE_DB_PATH", "label_iq.db")
+# Cloud SQL connection via environment variables
+DB_HOST = os.environ.get("DB_HOST")
+DB_PORT = os.environ.get("DB_PORT")
+DB_NAME = os.environ.get("DB_NAME")
+DB_USER = os.environ.get("DB_USER")
+DB_PASSWORD = os.environ.get("DB_PASSWORD")
+
+# Cloud SQL connection via Unix socket (when using Cloud SQL Proxy)
+CLOUD_SQL_CONNECTION_NAME = os.environ.get("CLOUD_SQL_CONNECTION_NAME")
 
 class DatabaseManager:
-    def __init__(self, db_path: str = DB_PATH):
-        self.db_path = db_path
+    def __init__(self):
         self._init_db()
 
-    def _get_connection(self) -> sqlite3.Connection:
-        conn = sqlite3.connect(self.db_path)
-        conn.row_factory = sqlite3.Row
+    def _get_connection(self):
+        """Get a PostgreSQL connection."""
+        if CLOUD_SQL_CONNECTION_NAME:
+            # Cloud Run with Cloud SQL Connector
+            unix_socket = f"/cloudsql/{CLOUD_SQL_CONNECTION_NAME}"
+            conn = psycopg2.connect(
+                host=unix_socket,
+                database=DB_NAME,
+                user=DB_USER,
+                password=DB_PASSWORD,
+                cursor_factory=RealDictCursor
+            )
+        else:
+            # Direct IP connection (dev/testing)
+            conn = psycopg2.connect(
+                host=DB_HOST,
+                port=DB_PORT,
+                database=DB_NAME,
+                user=DB_USER,
+                password=DB_PASSWORD,
+                cursor_factory=RealDictCursor
+            )
         return conn
 
     def _sanitize_row(self, row: dict) -> dict:
@@ -35,12 +62,12 @@ class DatabaseManager:
         conn = self._get_connection()
         try:
             cur = conn.cursor()
-            
+
             # Jobs table
             cur.execute("""
             CREATE TABLE IF NOT EXISTS jobs (
                 job_id TEXT PRIMARY KEY,
-                status TEXT, -- PENDING, PROCESSING, COMPLETED, FAILED
+                status TEXT,
                 mode TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -50,9 +77,9 @@ class DatabaseManager:
             # DocAI Extractions table
             cur.execute("""
             CREATE TABLE IF NOT EXISTS docai_extractions (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id SERIAL PRIMARY KEY,
                 job_id TEXT,
-                image_tag TEXT, -- "front", "back", "left_panel", etc.
+                image_tag TEXT,
                 raw_json TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY(job_id) REFERENCES jobs(job_id)
@@ -73,10 +100,10 @@ class DatabaseManager:
             # Compliance Results table
             cur.execute("""
             CREATE TABLE IF NOT EXISTS compliance_results (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id SERIAL PRIMARY KEY,
                 job_id TEXT,
                 agent_name TEXT,
-                status TEXT, -- RUNNING, DONE, ERROR
+                status TEXT,
                 result_json TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY(job_id) REFERENCES jobs(job_id),
@@ -122,7 +149,14 @@ class DatabaseManager:
         try:
             cur = conn.cursor()
             cur.execute(
-                "INSERT OR REPLACE INTO jobs (job_id, status, mode, updated_at) VALUES (?, ?, ?, ?)",
+                """
+                INSERT INTO jobs (job_id, status, mode, updated_at)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT (job_id) DO UPDATE SET
+                    status = EXCLUDED.status,
+                    mode = EXCLUDED.mode,
+                    updated_at = EXCLUDED.updated_at
+                """,
                 (job_id, status, mode, datetime.now(timezone.utc))
             )
             conn.commit()
@@ -136,12 +170,12 @@ class DatabaseManager:
             cur = conn.cursor()
             if mode:
                 cur.execute(
-                    "UPDATE jobs SET status = ?, mode = ?, updated_at = ? WHERE job_id = ?",
+                    "UPDATE jobs SET status = %s, mode = %s, updated_at = %s WHERE job_id = %s",
                     (status, mode, datetime.now(timezone.utc), job_id)
                 )
             else:
                 cur.execute(
-                    "UPDATE jobs SET status = ?, updated_at = ? WHERE job_id = ?",
+                    "UPDATE jobs SET status = %s, updated_at = %s WHERE job_id = %s",
                     (status, datetime.now(timezone.utc), job_id)
                 )
             conn.commit()
@@ -154,7 +188,7 @@ class DatabaseManager:
         try:
             cur = conn.cursor()
             cur.execute(
-                "INSERT INTO docai_extractions (job_id, image_tag, raw_json) VALUES (?, ?, ?)",
+                "INSERT INTO docai_extractions (job_id, image_tag, raw_json) VALUES (%s, %s, %s)",
                 (job_id, image_tag, json.dumps(raw_json))
             )
             conn.commit()
@@ -168,13 +202,17 @@ class DatabaseManager:
             cur = conn.cursor()
             cur.execute(
                 """
-                INSERT OR REPLACE INTO label_facts (job_id, merged_facts_json, translated_facts_json, updated_at)
-                VALUES (?, ?, ?, ?)
+                INSERT INTO label_facts (job_id, merged_facts_json, translated_facts_json, updated_at)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT (job_id) DO UPDATE SET
+                    merged_facts_json = EXCLUDED.merged_facts_json,
+                    translated_facts_json = EXCLUDED.translated_facts_json,
+                    updated_at = EXCLUDED.updated_at
                 """,
                 (
-                    job_id, 
-                    json.dumps(merged_facts), 
-                    json.dumps(translated_facts) if translated_facts else None, 
+                    job_id,
+                    json.dumps(merged_facts),
+                    json.dumps(translated_facts) if translated_facts else None,
                     datetime.now(timezone.utc)
                 )
             )
@@ -190,16 +228,16 @@ class DatabaseManager:
             cur.execute(
                 """
                 INSERT INTO compliance_results (job_id, agent_name, status, result_json, created_at)
-                VALUES (?, ?, ?, ?, ?)
+                VALUES (%s, %s, %s, %s, %s)
                 ON CONFLICT(job_id, agent_name) DO UPDATE SET
                     status=excluded.status,
                     result_json=excluded.result_json,
                     created_at=excluded.created_at
                 """,
                 (
-                    job_id, 
-                    agent_name, 
-                    status, 
+                    job_id,
+                    agent_name,
+                    status,
                     json.dumps(result) if result else None,
                     datetime.now(timezone.utc)
                 )
@@ -213,7 +251,7 @@ class DatabaseManager:
         conn = self._get_connection()
         try:
             cur = conn.cursor()
-            cur.execute("SELECT * FROM jobs WHERE job_id = ?", (job_id,))
+            cur.execute("SELECT * FROM jobs WHERE job_id = %s", (job_id,))
             row = cur.fetchone()
             if row:
                 return self._sanitize_row(dict(row))
@@ -233,7 +271,7 @@ class DatabaseManager:
             cur.execute(
                 """
                 INSERT INTO projects (id, name, description, tags, created_at, updated_at)
-                VALUES (?, ?, ?, ?, ?, ?)
+                VALUES (%s, %s, %s, %s, %s, %s)
                 """,
                 (id, name, description, tags_json, now, now)
             )
@@ -276,7 +314,7 @@ class DatabaseManager:
         conn = self._get_connection()
         try:
             cur = conn.cursor()
-            cur.execute("SELECT * FROM projects WHERE id = ?", (id,))
+            cur.execute("SELECT * FROM projects WHERE id = %s", (id,))
             row = cur.fetchone()
             if not row:
                 return None
@@ -301,8 +339,8 @@ class DatabaseManager:
             now = datetime.now(timezone.utc)
             cur.execute(
                 """
-                UPDATE projects SET name = ?, description = ?, tags = ?, updated_at = ?
-                WHERE id = ?
+                UPDATE projects SET name = %s, description = %s, tags = %s, updated_at = %s
+                WHERE id = %s
                 """,
                 (name, description, tags_json, now, id)
             )
@@ -317,8 +355,8 @@ class DatabaseManager:
         try:
             cur = conn.cursor()
             # Delete analyses first (foreign key constraint)
-            cur.execute("DELETE FROM analyses WHERE project_id = ?", (id,))
-            cur.execute("DELETE FROM projects WHERE id = ?", (id,))
+            cur.execute("DELETE FROM analyses WHERE project_id = %s", (id,))
+            cur.execute("DELETE FROM projects WHERE id = %s", (id,))
             conn.commit()
         finally:
             conn.close()
@@ -335,7 +373,7 @@ class DatabaseManager:
             cur.execute(
                 """
                 INSERT INTO analyses (id, project_id, name, status, progress, job_id, image_names, created_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 """,
                 (id, project_id, name, "running", 0, job_id, image_names_json, now)
             )
@@ -357,7 +395,7 @@ class DatabaseManager:
         conn = self._get_connection()
         try:
             cur = conn.cursor()
-            cur.execute("SELECT * FROM analyses WHERE project_id = ? ORDER BY created_at DESC", (project_id,))
+            cur.execute("SELECT * FROM analyses WHERE project_id = %s ORDER BY created_at DESC", (project_id,))
             rows = cur.fetchall()
             analyses = []
             for row in rows:
@@ -382,12 +420,12 @@ class DatabaseManager:
             cur = conn.cursor()
             if progress is not None:
                 cur.execute(
-                    "UPDATE analyses SET status = ?, progress = ? WHERE id = ?",
+                    "UPDATE analyses SET status = %s, progress = %s WHERE id = %s",
                     (status, progress, id)
                 )
             else:
                 cur.execute(
-                    "UPDATE analyses SET status = ? WHERE id = ?",
+                    "UPDATE analyses SET status = %s WHERE id = %s",
                     (status, id)
                 )
             conn.commit()

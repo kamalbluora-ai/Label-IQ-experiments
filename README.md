@@ -103,3 +103,16 @@ uvicorn core.main:app --reload
 # Run the frontend
 cd frontend
 npm run dev:client
+
+# Deployment commands
+cd frontend
+gcloud run deploy "web" --region "us-central1"  --source . --allow-unauthenticated --set-env-vars API_BASE="https://backend-262932924895.us-central1.run.app/api"
+
+cd api
+gcloud run services update backend `
+  --region us-central1 `
+  --update-env-vars "CORS_ORIGINS=https://web-262932924895.us-central1.run.app"
+
+gcloud run services update backend `
+  --region us-central1 `
+  --update-env-vars "CORS_ORIGINS=https://web-262932924895.us-central1.run.app
