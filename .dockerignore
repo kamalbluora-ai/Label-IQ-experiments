@@ -1,11 +1,46 @@
+# Frontend (deployed separately)
+frontend/
+
+# Version control
+.git/
+.gitignore
+
+# Python artifacts
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.env
+*.egg-info/
 .venv/
 venv/
 dist/
 build/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Database (recreated at runtime)
+*.db
+
+# IDE
+.vscode/
+.idea/
+
+# Non-essential directories
+docs/
+test_files/
+sample_files/
+experiments/
+scripts/
+
+# Misc
 *.zip
+*.md
 .DS_Store
+Thumbs.db
+
+# Redundant Dockerfiles
+api/Dockerfile
+frontend/DockerFile
