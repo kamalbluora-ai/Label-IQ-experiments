@@ -59,7 +59,7 @@ class ProjectUpdate(BaseModel):
     description: str = ""
     tags: List[str] = []
 
-@app.get("/healthz")
+@app.get("/api/healthz")
 def healthz():
     """Health check endpoint."""
     return {"ok": True}
@@ -67,20 +67,20 @@ def healthz():
 
 # ===== PROJECT ENDPOINTS =====
 
-@app.get("/v1/projects")
+@app.get("/api/v1/projects")
 def list_projects():
     """List all projects."""
     db = DatabaseManager()
     return db.list_projects()
 
-@app.post("/v1/projects")
+@app.post("/api/v1/projects")
 def create_project(data: ProjectCreate):
     """Create a new project."""
     db = DatabaseManager()
     project_id = f"project-{uuid.uuid4()}"
     return db.create_project(project_id, data.name, data.description, data.tags)
 
-@app.get("/v1/projects/{project_id}")
+@app.get("/api/v1/projects/{project_id}")
 def get_project(project_id: str):
     """Get a single project."""
     db = DatabaseManager()
@@ -89,7 +89,7 @@ def get_project(project_id: str):
         raise HTTPException(404, "Project not found")
     return project
 
-@app.put("/v1/projects/{project_id}")
+@app.put("/api/v1/projects/{project_id}")
 def update_project(project_id: str, data: ProjectUpdate):
     """Update a project."""
     db = DatabaseManager()
@@ -97,7 +97,7 @@ def update_project(project_id: str, data: ProjectUpdate):
         raise HTTPException(404, "Project not found")
     return db.update_project(project_id, data.name, data.description, data.tags)
 
-@app.delete("/v1/projects/{project_id}")
+@app.delete("/api/v1/projects/{project_id}")
 def delete_project(project_id: str):
     """Delete a project and its analyses."""
     db = DatabaseManager()
@@ -106,7 +106,7 @@ def delete_project(project_id: str):
     db.delete_project(project_id)
     return {"success": True}
 
-@app.get("/v1/projects/{project_id}/analyses")
+@app.get("/api/v1/projects/{project_id}/analyses")
 def list_analyses(project_id: str):
     """List all analyses for a project."""
     db = DatabaseManager()
@@ -115,7 +115,7 @@ def list_analyses(project_id: str):
     return db.list_analyses(project_id)
 
 
-@app.post("/v1/jobs")
+@app.post("/api/v1/jobs")
 async def upload_and_create_job(
     files: List[UploadFile] = File(...),
     product_metadata: Optional[str] = Form(default=None),
@@ -218,7 +218,7 @@ async def upload_and_create_job(
     return {"job_id": job_id, "status": "QUEUED", "images": len(image_paths)}
 
 
-@app.get("/v1/jobs/{job_id}")
+@app.get("/api/v1/jobs/{job_id}")
 def get_job_status(job_id: str):
     """Get job status."""
     # Try DB first
@@ -245,7 +245,7 @@ def get_job_status(job_id: str):
     return json.loads(blob.download_as_text())
 
 
-@app.get("/v1/jobs/{job_id}/report")
+@app.get("/api/v1/jobs/{job_id}/report")
 def get_job_report(job_id: str):
     """Retrieve a completed compliance report."""
     storage_client = get_storage_client()
@@ -255,7 +255,7 @@ def get_job_report(job_id: str):
         raise HTTPException(404, "Report not found yet")
     return json.loads(blob.download_as_text())
 
-@app.post("/v1/jobs/{job_id}/save-edits")
+@app.post("/api/v1/jobs/{job_id}/save-edits")
 async def save_report_edits(job_id: str, request: SaveReportEditsRequest):
     """
     Save manual edits (tags and comments) to the report in GCS.
@@ -320,7 +320,7 @@ async def save_report_edits(job_id: str, request: SaveReportEditsRequest):
 from fastapi.responses import StreamingResponse, Response
 from core.report_generator_docx import ReportGeneratorDocx
 
-@app.get("/v1/jobs/{job_id}/download-docx")
+@app.get("/api/v1/jobs/{job_id}/download-docx")
 def download_report_docx_endpoint(job_id: str):
     """Generate and download DOCX report."""
     storage_client = get_storage_client()
@@ -340,7 +340,7 @@ def download_report_docx_endpoint(job_id: str):
         headers={"Content-Disposition": f"attachment; filename=Compliance_Report_{job_id}.docx"}
     )
 
-@app.get("/v1/jobs/{job_id}/images")
+@app.get("/api/v1/jobs/{job_id}/images")
 def get_job_images(job_id: str):
     """Return list of images for a job."""
     storage_client = get_storage_client()
@@ -360,7 +360,7 @@ def get_job_images(job_id: str):
         ]
     }
 
-@app.get("/v1/jobs/{job_id}/images/{image_index}")
+@app.get("/api/v1/jobs/{job_id}/images/{image_index}")
 def get_job_image(job_id: str, image_index: int):
     """Proxy an image from GCS."""
     storage_client = get_storage_client()
@@ -379,7 +379,7 @@ def get_job_image(job_id: str, image_index: int):
     return Response(content=content, media_type=content_type)
 
 
-@app.post("/")
+@app.post("/api/eventarc")
 async def eventarc_entry(request: Request):
     """Eventarc webhook entry point for GCS triggers."""
     body = await request.body()
