@@ -12,12 +12,12 @@ export const API_BASE =
     import.meta.env.VITE_API_BASE ??
     "http://localhost:8000";
 
-// export const API_BASE = "http://localhost:8000";
+// export const API_BASE = "http://localhost:8000/api";
 
 // Types matching the new GCS-based backend
 export interface Job {
     job_id: string;
-    status: "QUEUED" | "PROCESSING" | "DONE" | "FAILED";
+    status: "QUEUED" | "EXTRACTING" | "EXTRACTED" | "COMPLIANCE_STARTED" | "PROCESSING" | "DONE" | "FAILED";
     mode?: string;
     created_at?: string;
     report_path?: string;
@@ -477,10 +477,14 @@ export const api = {
                         };
                     } else if (job.status === "FAILED") {
                         return { ...analysis, status: "failed" as const, progress: 0 };
+                    } else if (job.status === "EXTRACTING") {
+                        return { ...analysis, status: "running" as const, progress: 20 };
+                    } else if (job.status === "EXTRACTED" || job.status === "COMPLIANCE_STARTED") {
+                        return { ...analysis, status: "running" as const, progress: 50 };
                     } else if (job.status === "PROCESSING") {
                         const createdAt = new Date(analysis.createdAt).getTime();
                         const elapsed = (Date.now() - createdAt) / 1000;
-                        const estimatedProgress = Math.min(90, Math.round(30 * Math.log10(elapsed + 1)));
+                        const estimatedProgress = Math.min(90, 50 + Math.round(20 * Math.log10(elapsed + 1)));
                         return { ...analysis, status: "running" as const, progress: estimatedProgress };
                     }
                     return analysis;

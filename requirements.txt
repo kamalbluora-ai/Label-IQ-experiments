@@ -13,4 +13,5 @@ openai>=1.0.0,<2.0.0
 python-dotenv
 google-genai
 python-docx
-psycopg2-binary==2.9.9
+psycopg2-binary
+google-cloud-pubsub>=2.18.0,<3.0.0

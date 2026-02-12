@@ -8,6 +8,7 @@ from compliance.nutrition_facts.integration import map_docai_to_inputs
 from compliance.sweeteners.detector import detect_sweeteners
 from compliance.supplements_table.detector import detect_supplements
 from compliance.additive.detector import detect_additives
+from compliance.health_claims.detector import detect_health_claims
 from compliance.agents.ingredients import IngredientsAgent
 from compliance.agents.date_marking import DateMarkingAgent
 from compliance.agents.fop_symbol import FOPSymbolAgent
@@ -69,6 +70,7 @@ class AttributeOrchestrator:
             "sweeteners": asyncio.create_task(asyncio.to_thread(self._run_sweetener_detection_wrapper, label_facts, job_id)),
             "supplements": asyncio.create_task(asyncio.to_thread(self._run_supplement_detection_wrapper, label_facts, job_id)),
             "additives": asyncio.create_task(asyncio.to_thread(self._run_additive_detection_wrapper, label_facts, job_id)),
+            "health_claims": asyncio.create_task(asyncio.to_thread(self._run_health_claims_detection_wrapper, label_facts, job_id)),
         }
         
         # GUARDRAIL: Only trigger claim_tag agent if claim_tag_type field is not empty
@@ -92,10 +94,12 @@ class AttributeOrchestrator:
         
         return results
     
-    async def _run_agent_with_retry(self, agent, label_facts, questions, max_retries=2, job_id=None):
+    async def _run_agent_with_retry(self, agent, label_facts, questions, max_retries=2, job_id=None, agent_name=None):
         """Run agent with automatic retry on failure."""
+        target_name = agent_name or agent.section_name
+        
         if job_id:
-            self.db.update_compliance_result(job_id, agent.section_name, "RUNNING")
+            self.db.update_compliance_result(job_id, target_name, "RUNNING")
 
         for attempt in range(max_retries + 1):
             try:
@@ -115,13 +119,13 @@ class AttributeOrchestrator:
                     ]
                 }
                 if job_id:
-                    self.db.update_compliance_result(job_id, agent.section_name, "DONE", final_result)
+                    self.db.update_compliance_result(job_id, target_name, "DONE", final_result)
                 return final_result
             except Exception as e:
                 if attempt == max_retries:
                     error_result = {
                         "check_results": [{
-                            "question_id": f"{agent.section_name}-ERROR",
+                            "question_id": f"{target_name}-ERROR",
                             "question": "Agent execution failed",
                             "result": "needs_review",
                             "rationale": f"Error after {max_retries + 1} attempts: {str(e)}",
@@ -129,7 +133,7 @@ class AttributeOrchestrator:
                         }]
                     }
                     if job_id:
-                        self.db.update_compliance_result(job_id, agent.section_name, "ERROR", error_result)
+                        self.db.update_compliance_result(job_id, target_name, "ERROR", error_result)
                     return error_result
                 await asyncio.sleep(1)
     
@@ -215,6 +219,31 @@ class AttributeOrchestrator:
             return res
         except Exception as e:
             if job_id: self.db.update_compliance_result(job_id, "additives", "ERROR", {"error": str(e)})
+            return {"error": str(e)}
+
+    def _run_health_claims_detection(self, label_facts):
+        fields = label_facts.get("fields", {})
+        health_claims_text = fields.get("health_claims_text", {}).get("text", "")
+        nutrient_content_text = fields.get("nutrient_content_claims_text", {}).get("text", "")
+        nutrient_function_text = fields.get("nutrient_function_claims_text", {}).get("text", "")
+        label_text = label_facts.get("text", "")
+
+        result = detect_health_claims(
+            health_claims_text=health_claims_text,
+            nutrient_content_text=nutrient_content_text,
+            nutrient_function_text=nutrient_function_text,
+            label_text=label_text,
+        )
+        return result.model_dump()
+
+    def _run_health_claims_detection_wrapper(self, label_facts, job_id=None):
+        if job_id: self.db.update_compliance_result(job_id, "health_claims", "RUNNING")
+        try:
+            res = self._run_health_claims_detection(label_facts)
+            if job_id: self.db.update_compliance_result(job_id, "health_claims", "DONE", res)
+            return res
+        except Exception as e:
+            if job_id: self.db.update_compliance_result(job_id, "health_claims", "ERROR", {"error": str(e)})
             return {"error": str(e)}
 
     def evaluate_sync(self, label_facts: Dict[str, Any], job_id: str = None) -> Dict[str, Any]:

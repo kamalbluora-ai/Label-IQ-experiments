@@ -36,6 +36,9 @@ TRANSLATE_GLOSSARY_ID = os.environ.get("TRANSLATE_GLOSSARY_ID")
 
 GCP_PROJECT = os.environ.get("GOOGLE_CLOUD_PROJECT") or os.environ.get("DOCAI_PROJECT", "")
 
+# Determine environment
+IS_CLOUD_RUN = os.environ.get("K_SERVICE") is not None
+
 # Lazy-initialized storage client
 _storage_client = None
 
@@ -91,7 +94,8 @@ def split_image_bytes(image_bytes: bytes) -> list[tuple[str, bytes]]:
 
 def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Process a job manifest and run the full compliance pipeline.
+    Process a job manifest: DocAI extraction + compliance evaluation + report.
+    Phase 2 Eventarc fan-out is commented out for local testing.
     """
     storage_client = get_storage_client()
     
@@ -104,16 +108,21 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     # Create initial job record
     db.create_job(job_id, status="PENDING", mode=manifest.get("mode"))
     
-    manifest_mode = manifest.get("mode")  # May be None for auto-detection
-    product_metadata = (manifest.get("product_metadata") or {}) or {}
-    tags = manifest.get("tags") or []  # Tags from frontend (e.g., ["front", "back"])
+def execute_extraction_phase(job_id: str, bucket: str, manifest: Dict[str, Any]) -> tuple[Dict[str, Any], str, str]:
+    storage_client = get_storage_client()
+    db = DatabaseManager()
 
+    manifest_mode = manifest.get("mode")
+    product_metadata = (manifest.get("product_metadata") or {}) or {}
+    tags = manifest.get("tags") or []
     images = manifest.get("images") or []
+
     if not images:
         raise RuntimeError("Manifest has no images[]")
-
+    
+    # Update GCS job record with extraction status
     update_job(job_id, {
-        "status": "PROCESSING",
+        "status": "EXTRACTING",
         "mode": manifest_mode, 
         "product_metadata": product_metadata,
         "manifest_path": f"gs://{bucket}/incoming/{job_id}/job.json",
@@ -122,7 +131,7 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     })
     
     # Update DB status
-    db.update_job_status(job_id, "PROCESSING")
+    db.update_job_status(job_id, "EXTRACTING")
 
     # Always run DocAI pipeline
     print(f"Running DocAI pipeline for job {job_id}")
@@ -206,29 +215,193 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
         # Update DB with translated facts
         db.save_merged_facts(job_id, merged_facts, translated_facts=merged_facts)
 
-    # NEW PIPELINE - Multi-attribute compliance evaluation
-    orchestrator = AttributeOrchestrator()
-    user_context = {"food_type": product_metadata.get("food_type", "unknown")}
-    
-    # Pass job_id to evaluate_sync for granular status usage
-    compliance = orchestrator.evaluate_sync(merged_facts, job_id=job_id)
+    facts_path = f"facts/{job_id}.json"
+    facts_payload = {
+        "job_id": job_id,
+        "mode": mode,
+        "merged_facts": merged_facts,
+        "product_metadata": product_metadata,
+        "source_images": [f"gs://{bucket}/{p}" for p in images],
+    }
+    write_json(facts_path, facts_payload)
 
+    # Update status
+    db.update_job_status(job_id, "EXTRACTED", mode=mode)
+    update_job(job_id, {"status": "EXTRACTED", "mode": mode, "facts_path": facts_path})
+
+    return merged_facts, mode, facts_path
+
+def execute_compliance_phase(job_id: str, group: str, facts_path: str) -> Dict[str, Any]:
+    print(f"[COMPLIANCE] Executing group '{group}' for job {job_id}")
+    
+    db = DatabaseManager()
+    db.update_job_status(job_id, "COMPLIANCE_STARTED")
+
+    # Load facts from GCS
+    storage_client = get_storage_client()
+    facts_blob = storage_client.bucket(OUT_BUCKET).blob(facts_path)
+
+    if not facts_blob.exists():
+        print(f"[ERROR] Facts not found at {facts_path}")
+        return {"error": True, "reason": f"Facts not found: {facts_path}"}
+
+    facts_payload = json.loads(facts_blob.download_as_text())
+    label_facts = facts_payload["merged_facts"]
+
+    # Execute the agent group
+    from compliance.group_executor import GroupExecutor
+    executor = GroupExecutor()
+    results = executor.execute_group_sync(group, label_facts, job_id)
+
+    agents_completed = list(results.keys())
+    print(f"[COMPLIANCE] Group '{group}' completed for job {job_id}: {agents_completed}")
+
+    if IS_CLOUD_RUN:
+        # ── Cloud Run: Publish Group Done Event ──
+        # from core.pubsub import publish_group_done
+        # publish_group_done(job_id=job_id, group=group, agents_completed=agents_completed)
+        pass
+
+    return {
+        "processed": True,
+        "job_id": job_id,
+        "group": group,
+        "agents_completed": agents_completed,
+    }
+
+
+def execute_report_assembly_phase(job_id: str) -> Dict[str, Any]:
+    print(f"[FINALIZE] Assembling report for job {job_id}...")
+
+    db = DatabaseManager()
+    storage_client = get_storage_client()
+    
+    # Load facts from GCS
+    facts_path = f"facts/{job_id}.json"
+    facts_blob = storage_client.bucket(OUT_BUCKET).blob(facts_path)
+    
+    if not facts_blob.exists():
+        # Fallback if facts missing (should not happen if flow works)
+        print(f"[ERROR] Facts not found at {facts_path} during report assembly")
+        facts_payload = {}
+        merged_facts = {}
+    else:
+        facts_payload = json.loads(facts_blob.download_as_text())
+        merged_facts = facts_payload.get("merged_facts", {})
+
+    # Load all compliance results from database
+    compliance_results = db.get_all_compliance_results(job_id)
+
+    # Build report
     report = {
         "job_id": job_id,
         "created_at": datetime.now(timezone.utc).isoformat(),
-        "mode": mode,
-        "source_images": [f"gs://{bucket}/{p}" for p in images],
+        "mode": facts_payload.get("mode", "AS_IS"),
+        "source_images": facts_payload.get("source_images", []),
         "label_facts": merged_facts,
-        "results": compliance,
-        "cfia_evidence": {},  # Placeholder for frontend compatibility
+        "results": compliance_results,
+        "cfia_evidence": {},
     }
 
+    # Write report to GCS
     report_path = f"reports/{job_id}.json"
     write_json(report_path, report)
+
+    # Update job status to DONE
     update_job(job_id, {"status": "DONE", "report_path": f"gs://{OUT_BUCKET}/{report_path}"})
-    db.update_job_status(job_id, "DONE", mode=mode)
-    report["report_path"] = f"gs://{OUT_BUCKET}/{report_path}"
-    return report
+    db.update_job_status(job_id, "DONE", mode=facts_payload.get("mode"))
+
+    # Update analysis status if exists
+    try:
+        db.update_analysis_status(job_id, "completed", progress=100)
+    except Exception:
+        pass
+
+    print(f"[FINALIZE] Report assembled for job {job_id}: {report_path}")
+
+    return {
+        "assembled": True,
+        "job_id": job_id,
+        "report_path": f"gs://{OUT_BUCKET}/{report_path}",
+    }
+
+
+def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
+    storage_client = get_storage_client()
+    
+    # Initialize DB
+    db = DatabaseManager()
+    
+    # Validate basic shape
+    job_id = manifest.get("job_id") or str(uuid.uuid4())
+    
+    # Create initial job record
+    db.create_job(job_id, status="PENDING", mode=manifest.get("mode"))
+    
+    # ── Execute Phase 1: Extraction ──
+    merged_facts, mode, facts_path = execute_extraction_phase(job_id, bucket, manifest)
+
+    if IS_CLOUD_RUN:
+        # ── Cloud Run: Fan-out via Pub/Sub ──
+        # Uncomment when deploying to Cloud Run with Eventarc + Pub/Sub fan-out.
+        print(f"[ORCHESTRATOR] Cloud Run detected. Fanning out via Pub/Sub for job {job_id}")
+        
+        # from core.pubsub import publish_fan_out
+        # groups = ["identity", "content", "tables"]
+        # for group in groups:
+        #     publish_fan_out(job_id=job_id, group=group, facts_path=facts_path)
+            
+        return {"job_id": job_id, "status": "EXTRACTED", "facts_path": facts_path}
+    else:
+        print(f"[ORCHESTRATOR] Local environment detected. Running compliance groups inline for job {job_id}")
+        
+        update_job(job_id, {"status": "COMPLIANCE_STARTED"}) 
+        db.update_job_status(job_id, "COMPLIANCE_STARTED")
+
+        from compliance.group_executor import GroupExecutor
+        executor = GroupExecutor()
+        
+        # Execute all 3 groups sequentially
+        print(f"[ORCHESTRATOR] Running group: identity")
+        results_identity = executor.execute_group_sync("identity", merged_facts, job_id)
+        
+        print(f"[ORCHESTRATOR] Running group: content")
+        results_content = executor.execute_group_sync("content", merged_facts, job_id)
+        
+        print(f"[ORCHESTRATOR] Running group: tables")
+        results_tables = executor.execute_group_sync("tables", merged_facts, job_id)
+
+        print(f"[ORCHESTRATOR] All groups done. Assembling report...")
+        
+        # Load all compliance results from database (which were written by execute_group_sync helpers)
+        compliance_results = db.get_all_compliance_results(job_id)
+        
+        # Determine source images again for report payload
+        images = manifest.get("images") or []
+
+        report = {
+            "job_id": job_id,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "mode": mode,
+            "source_images": [f"gs://{bucket}/{p}" for p in images],
+            "label_facts": merged_facts,
+            "results": compliance_results,
+            "cfia_evidence": {},
+        }
+
+        report_path = f"reports/{job_id}.json"
+        write_json(report_path, report)
+        update_job(job_id, {"status": "DONE", "report_path": f"gs://{OUT_BUCKET}/{report_path}"})
+        db.update_job_status(job_id, "DONE", mode=mode)
+        
+        # Update analysis status if exists
+        try:
+            db.update_analysis_status(job_id, "completed", progress=100)
+        except Exception:
+            pass
+
+        report["report_path"] = f"gs://{OUT_BUCKET}/{report_path}"
+        return report
 
 def merge_label_facts(all_facts: list[Dict[str, Any]]) -> Dict[str, Any]:
     """Merge label facts from multiple images into a single consolidated result."""

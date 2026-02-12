@@ -1,4 +1,5 @@
 import json
+import asyncio
 from abc import ABC, abstractmethod
 from typing import Dict, List, Any
 from google import genai
@@ -110,15 +111,8 @@ class BaseComplianceAgent(ABC):
             # Build complete system prompt
             system_prompt = self.build_system_prompt(data, questions)
             
-            # Call LLM with Gemini
-            response = await self.client.aio.models.generate_content(
-                model="gemini-3-flash-preview",
-                contents=system_prompt,
-                config={
-                    "response_mime_type": "application/json",
-                    "thinking_config": {"thinking_level": "high"}
-                }
-            )
+            # Call LLM with Gemini (Synchronous call wrapped in thread)
+            response = await asyncio.to_thread(self._generate_content_sync, system_prompt)
             
             # Parse response
             result = json.loads(response.text)
@@ -152,5 +146,15 @@ class BaseComplianceAgent(ABC):
                     for q in questions
                 ]
             }
+
+    def _generate_content_sync(self, prompt: str):
+        """Helper to run synchronous Gemini call."""
+        return self.client.models.generate_content(
+            model="gemini-3-pro-preview",
+            contents=prompt,
+            config={
+                "response_mime_type": "application/json",
+            }
+        )
 
 

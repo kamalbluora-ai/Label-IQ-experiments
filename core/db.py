@@ -69,9 +69,31 @@ class DatabaseManager:
                 job_id TEXT PRIMARY KEY,
                 status TEXT,
                 mode TEXT,
+                total_groups INTEGER DEFAULT 3,
+                completed_groups INTEGER DEFAULT 0,
+                facts_path TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
+            """)
+
+            # Add columns if they don't exist (for existing tables)
+            cur.execute("""
+            DO $$
+            BEGIN
+                IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                            WHERE table_name='jobs' AND column_name='total_groups') THEN
+                    ALTER TABLE jobs ADD COLUMN total_groups INTEGER DEFAULT 3;
+                END IF;
+                IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                            WHERE table_name='jobs' AND column_name='completed_groups') THEN
+                    ALTER TABLE jobs ADD COLUMN completed_groups INTEGER DEFAULT 0;
+                END IF;
+                IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                            WHERE table_name='jobs' AND column_name='facts_path') THEN
+                    ALTER TABLE jobs ADD COLUMN facts_path TEXT;
+                END IF;
+            END $$;
             """)
 
             # DocAI Extractions table
@@ -256,6 +278,51 @@ class DatabaseManager:
             if row:
                 return self._sanitize_row(dict(row))
             return None
+        finally:
+            conn.close()
+
+    def increment_completed_groups(self, job_id: str) -> tuple[int, int]:
+        """Atomically increment completed_groups. Returns (completed, total)."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            cur.execute(
+                """
+                UPDATE jobs
+                SET completed_groups = completed_groups + 1,
+                    updated_at = %s
+                WHERE job_id = %s
+                RETURNING completed_groups, total_groups
+                """,
+                (datetime.now(timezone.utc), job_id)
+            )
+            row = cur.fetchone()
+            conn.commit()
+            if row:
+                r = dict(row)
+                return r["completed_groups"], r["total_groups"]
+            return 0, 3
+        finally:
+            conn.close()
+
+    def get_all_compliance_results(self, job_id: str) -> Dict[str, Any]:
+        """Get all compliance results for a job, keyed by agent_name."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            cur.execute(
+                "SELECT agent_name, result_json FROM compliance_results WHERE job_id = %s AND status = 'DONE'",
+                (job_id,)
+            )
+            rows = cur.fetchall()
+            results = {}
+            for row in rows:
+                r = dict(row)
+                agent_name = r["agent_name"]
+                result_json = r["result_json"]
+                if result_json:
+                    results[agent_name] = json.loads(result_json)
+            return results
         finally:
             conn.close()
 

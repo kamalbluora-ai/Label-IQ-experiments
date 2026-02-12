@@ -12,6 +12,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from core.orchestrator import process_manifest, get_storage_client, write_json, IN_BUCKET, OUT_BUCKET
 from core.db import DatabaseManager
+from core.orchestrator import execute_compliance_phase
+from core.orchestrator import execute_report_assembly_phase
 
 # Cloud Run detection - for local testing vs production
 IS_CLOUD_RUN = os.environ.get("K_SERVICE") is not None
@@ -196,6 +198,9 @@ async def upload_and_create_job(
     # Create analysis record if project_id provided
     if project_id:
         db = DatabaseManager()
+        # Ensure job exists first to satisfy FK constraint
+        db.create_job(job_id, status="QUEUED")
+        
         filenames = [f.filename for f in files]
         analysis_name = f"Analysis of {filenames[0]}" if len(filenames) == 1 else f"Analysis of {len(filenames)} files"
         db.create_analysis(
@@ -406,5 +411,97 @@ async def eventarc_entry(request: Request):
     manifest = json.loads(manifest_blob.download_as_text())
     report = process_manifest(bucket=bucket, manifest=manifest)
 
-    return {"processed": True, "job_id": report["job_id"], "report_path": report["report_path"]}
+    return {"processed": True, "job_id": report["job_id"], "report_path": report.get("report_path")}
+
+
+# ===== PHASE 2: Compliance Group Execution (Pub/Sub Push) =====
+
+@app.post("/api/compliance/execute")
+async def compliance_execute(request: Request):
+    """
+    Pub/Sub push endpoint: Executes a single compliance agent group.
+    Triggered by compliance-fan-out subscription.
+
+    Expected Pub/Sub push body:
+    {
+        "message": {
+            "data": "<base64-encoded JSON>",
+            "attributes": {"job_id": "...", "group": "..."}
+        }
+    }
+    """
+    import base64
+
+    body = await request.json()
+
+    # Parse Pub/Sub push message
+    pubsub_message = body.get("message", {})
+    data_b64 = pubsub_message.get("data", "")
+
+    try:
+        data = json.loads(base64.b64decode(data_b64).decode("utf-8"))
+    except Exception:
+        data = pubsub_message.get("attributes", {})
+
+    job_id = data.get("job_id")
+    group = data.get("group")
+    facts_path = data.get("facts_path")
+
+    if not job_id or not group:
+        return {"ignored": True, "reason": "Missing job_id or group"}
+
+    if not job_id or not group:
+        return {"ignored": True, "reason": "Missing job_id or group"}
+    
+    # Execute Phase 2 (Compliance)
+    result = execute_compliance_phase(job_id, group, facts_path)
+
+    return result
+
+
+# ===== PHASE 3: Report Assembly (Pub/Sub Fan-In) =====
+
+@app.post("/api/compliance/finalize")
+async def compliance_finalize(request: Request):
+    """
+    Pub/Sub push endpoint: Checks if all groups are done and assembles the report.
+    Triggered by compliance-group-done subscription.
+
+    Uses atomic increment to handle race conditions — only the LAST group
+    to complete triggers report assembly.
+    """
+    import base64
+    from core.orchestrator import update_job
+
+    body = await request.json()
+
+    pubsub_message = body.get("message", {})
+    data_b64 = pubsub_message.get("data", "")
+
+    try:
+        data = json.loads(base64.b64decode(data_b64).decode("utf-8"))
+    except Exception:
+        data = pubsub_message.get("attributes", {})
+
+    job_id = data.get("job_id")
+    group = data.get("group")
+
+    if not job_id:
+        return {"ignored": True, "reason": "Missing job_id"}
+
+    print(f"[FINALIZE] Group '{group}' done for job {job_id}")
+
+    db = DatabaseManager()
+
+    # Atomically increment completed_groups
+    completed, total = db.increment_completed_groups(job_id)
+
+    print(f"[FINALIZE] Job {job_id}: {completed}/{total} groups complete")
+
+    if completed < total:
+        # Not all groups done yet — another invocation will handle it
+        return {"waiting": True, "completed": completed, "total": total}
+
+    # ═══ ALL GROUPS DONE — ASSEMBLE REPORT ═══
+    return execute_report_assembly_phase(job_id)
 
