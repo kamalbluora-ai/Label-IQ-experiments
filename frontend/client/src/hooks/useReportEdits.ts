@@ -1,114 +1,112 @@
+
 import { useState, useCallback } from "react";
 
-export interface TableRowEdit {
+export interface TagOverride {
+    question_id: string;
+    new_tag: "pass" | "fail" | "needs_review";
+}
+
+export interface UserComment {
+    question_id: string;
+    comment: string;
+}
+
+export interface TableEdit {
     sectionKey: string;
     rowIndex: number;
     action: "edit" | "delete" | "add";
-    editedData?: Record<string, any>;
-}
-
-export interface QuestionOverride {
-    question_id: string;
-    new_tag: string;
-    new_rationale: string;
+    editedData?: any;
 }
 
 export function useReportEdits() {
-    // Map<question_id, comment>
-    const [questionComments, setQuestionComments] = useState<Map<string, string>>(new Map());
+    // Phase 1: New State for Manual Edits
+    const [tagOverrides, setTagOverrides] = useState<Map<string, TagOverride>>(new Map());
+    const [userComments, setUserComments] = useState<Map<string, UserComment>>(new Map());
+    const [modifiedQuestions, setModifiedQuestions] = useState<Set<string>>(new Set());
 
-    // Map<question_id, OverrideResult> - stores the result from re-evaluation
-    const [questionOverrides, setQuestionOverrides] = useState<Map<string, QuestionOverride>>(new Map());
+    // Legacy support for Table Edits (from previous implementation, kept for compatibility if needed)
+    const [tableEdits, setTableEdits] = useState<TableEdit[]>([]);
 
-    // Set<question_id> - tracks which questions are currently updating
-    const [pendingQuestions, setPendingQuestions] = useState<Set<string>>(new Set());
+    // --- Actions ---
 
-    const [tableEdits, setTableEdits] = useState<TableRowEdit[]>([]);
-    const [isReevaluating, setIsReevaluating] = useState(false);
+    const setTagOverride = useCallback((questionId: string, tag: string) => {
+        if (tag !== "pass" && tag !== "fail" && tag !== "needs_review") return;
 
-    /**
-     * Add or update a comment for a specific question.
-     */
-    const setQuestionComment = useCallback((questionId: string, comment: string) => {
-        setQuestionComments(prev => {
+        setTagOverrides(prev => {
             const next = new Map(prev);
-            if (comment.trim()) {
-                next.set(questionId, comment);
-            } else {
-                next.delete(questionId);
-            }
-            return next;
-        });
-    }, []);
-
-    /**
-     * Merge a re-evaluation result into the local state overrides.
-     */
-    const addQuestionOverride = useCallback((override: QuestionOverride) => {
-        setQuestionOverrides(prev => {
-            const next = new Map(prev);
-            next.set(override.question_id, override);
+            next.set(questionId, { question_id: questionId, new_tag: tag as any });
             return next;
         });
 
-        // Also clear the comment since it's now applied
-        setQuestionComments(prev => {
-            const next = new Map(prev);
-            next.delete(override.question_id);
-            return next;
-        });
-    }, []);
-
-    /**
-     * Mark a question as pending update.
-     */
-    const setQuestionPending = useCallback((questionId: string, isPending: boolean) => {
-        setPendingQuestions(prev => {
+        setModifiedQuestions(prev => {
             const next = new Set(prev);
-            if (isPending) {
-                next.add(questionId);
-            } else {
-                next.delete(questionId);
-            }
+            next.add(questionId);
             return next;
         });
     }, []);
 
-    const addTableEdit = useCallback((edit: TableRowEdit) => {
-        setTableEdits(prev => {
-            // Remove existing edit for same row if any
-            const filtered = prev.filter(
-                e => !(e.sectionKey === edit.sectionKey && e.rowIndex === edit.rowIndex)
-            );
-            return [...filtered, edit];
+    const setUserComment = useCallback((questionId: string, comment: string) => {
+        setUserComments(prev => {
+            const next = new Map(prev);
+            if (comment.trim() === "") {
+                next.delete(questionId);
+            } else {
+                next.set(questionId, { question_id: questionId, comment });
+            }
+            return next;
         });
+
+        setModifiedQuestions(prev => {
+            const next = new Set(prev);
+            next.add(questionId);
+            return next;
+        });
+    }, []);
+
+    // Table edit logic (kept from previous refactor)
+    const addTableEdit = useCallback((edit: TableEdit) => {
+        setTableEdits(prev => [...prev, edit]);
     }, []);
 
     const clearAll = useCallback(() => {
-        setQuestionComments(new Map());
+        setTagOverrides(new Map());
+        setUserComments(new Map());
+        setModifiedQuestions(new Set());
         setTableEdits([]);
-        setQuestionOverrides(new Map());
-        setPendingQuestions(new Set());
     }, []);
 
-    const hasPendingChanges = questionComments.size > 0 || tableEdits.length > 0;
-    const pendingCount = questionComments.size + tableEdits.length;
+    // --- Derived State ---
+
+    const isQuestionModified = useCallback((questionId: string) => {
+        return modifiedQuestions.has(questionId);
+    }, [modifiedQuestions]);
+
+    const getModifiedQuestions = useCallback(() => {
+        return Array.from(modifiedQuestions);
+    }, [modifiedQuestions]);
+
+    const hasPendingChanges = modifiedQuestions.size > 0 || tableEdits.length > 0;
+    const pendingCount = modifiedQuestions.size + tableEdits.length;
 
     return {
-        questionComments,
-        questionOverrides,
-        pendingQuestions,
+        // State
+        tagOverrides,
+        userComments,
+        modifiedQuestions,
         tableEdits,
 
-        setQuestionComment,
-        addQuestionOverride,
-        setQuestionPending,
+        // Actions
+        setTagOverride,
+        setUserComment,
         addTableEdit,
         clearAll,
 
+        // Helpers
+        isQuestionModified,
+        getModifiedQuestions,
+
+        // Status
         hasPendingChanges,
-        pendingCount,
-        isReevaluating,
-        setIsReevaluating,
+        pendingCount
     };
 }

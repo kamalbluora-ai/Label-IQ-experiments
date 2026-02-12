@@ -2,20 +2,25 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle, XCircle, AlertTriangle, MessageSquare, Loader2 } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CheckCircle, XCircle, AlertTriangle, MessageSquare, Info } from "lucide-react";
 import { useState } from "react";
-import { QuestionOverride } from "@/hooks/useReportEdits";
+import { TagOverride, UserComment } from "@/hooks/useReportEdits";
 
 interface ComplianceResultsSectionProps {
     title: string;
     checkResults: CheckResult[];
-    jobId: string;
 
-    // per-question state matches global hook
-    questionComments: Map<string, string>;
-    questionOverrides: Map<string, QuestionOverride>;
-    pendingQuestions: Set<string>;
-    onQuestionCommentChange: (questionId: string, comment: string) => void;
+    // Tag overrides
+    tagOverrides: Map<string, TagOverride>;
+    onTagChange: (questionId: string, tag: string) => void;
+
+    // User comments (no re-evaluation)
+    userComments: Map<string, UserComment>;
+    onUserCommentChange: (questionId: string, comment: string) => void;
+
+    // Modification tracking
+    modifiedQuestions: Set<string>;
 }
 
 interface CheckResult {
@@ -25,29 +30,27 @@ interface CheckResult {
     result: string;
     selected_value?: string;
     rationale: string;
+    user_comment?: string;
 }
 
 export default function ComplianceResultsSection({
     title,
     checkResults,
-    jobId,
-    questionComments,
-    questionOverrides,
-    pendingQuestions,
-    onQuestionCommentChange
+    tagOverrides,
+    onTagChange,
+    userComments,
+    onUserCommentChange,
+    modifiedQuestions
 }: ComplianceResultsSectionProps) {
     const [isExpanded, setIsExpanded] = useState(false);
-    // Track which question comment boxes are open
+    // Track open comment boxes locally
     const [openCommentBoxIds, setOpenCommentBoxIds] = useState<Set<string>>(new Set());
 
     const toggleCommentBox = (qId: string, e: React.MouseEvent) => {
         e.stopPropagation();
         setOpenCommentBoxIds(prev => {
             const next = new Set(prev);
-            if (next.has(qId) && !questionComments.has(qId)) {
-                // Only allow closing if no comment exists? 
-                // Or user can close, and it will remove from 'open' set.
-                // If comment exists, we force it open below anyway.
+            if (next.has(qId)) {
                 next.delete(qId);
             } else {
                 next.add(qId);
@@ -56,30 +59,18 @@ export default function ComplianceResultsSection({
         });
     };
 
-    const failCount = checkResults.filter(c => {
-        const override = questionOverrides.get(c.question_id);
-        const effectiveResult = override ? override.new_tag : c.result;
-        return effectiveResult === "fail";
-    }).length;
-
-    const reviewCount = checkResults.filter(c => {
-        const override = questionOverrides.get(c.question_id);
-        const effectiveResult = override ? override.new_tag : c.result;
-        return effectiveResult === "needs_review";
-    }).length;
-
-    const getResultIcon = (result: string) => {
-        if (result === "pass") return <CheckCircle className="w-4 h-4 text-green-600" />;
-        if (result === "fail") return <XCircle className="w-4 h-4 text-red-600" />;
-        return <AlertTriangle className="w-4 h-4 text-yellow-600" />;
+    const getEffectiveResult = (check: CheckResult) => {
+        const override = tagOverrides.get(check.question_id);
+        return override ? override.new_tag : check.result;
     };
 
-    const getResultBadge = (result: string) => {
-        return (
-            <Badge variant="outline">
-                {result.replace("_", " ").toUpperCase()}
-            </Badge>
-        );
+    const failCount = checkResults.filter(c => getEffectiveResult(c) === "fail").length;
+    const reviewCount = checkResults.filter(c => getEffectiveResult(c) === "needs_review").length;
+
+    const getResultColor = (result: string) => {
+        if (result === "pass") return "text-green-600 border-green-200 bg-green-50";
+        if (result === "fail") return "text-red-600 border-red-200 bg-red-50";
+        return "text-yellow-600 border-yellow-200 bg-yellow-50";
     };
 
     return (
@@ -111,36 +102,57 @@ export default function ComplianceResultsSection({
             {isExpanded && (
                 <CardContent className="space-y-3">
                     {checkResults.map((check, idx) => {
-                        const override = questionOverrides.get(check.question_id);
-                        const isPending = pendingQuestions.has(check.question_id);
-                        const hasComment = questionComments.has(check.question_id);
-                        // Open if explicitly opened OR if comment exists
-                        const isCommentOpen = openCommentBoxIds.has(check.question_id) || hasComment;
+                        // Determine if question has user comment or existing comment
+                        const userCommentObj = userComments.get(check.question_id);
+                        const userCommentText = userCommentObj ? userCommentObj.comment : (check.user_comment || "");
+                        const hasUserComment = !!userCommentText;
 
-                        // Use override values if present
-                        const displayResult = override ? override.new_tag : check.result;
-                        const displayRationale = override ? override.new_rationale : check.rationale;
+                        // Check if modified
+                        const isModified = modifiedQuestions.has(check.question_id);
+                        const isTagModified = tagOverrides.has(check.question_id);
+
+                        const isCommentOpen = openCommentBoxIds.has(check.question_id) || hasUserComment;
+                        const effectiveResult = getEffectiveResult(check);
 
                         return (
                             <div
                                 key={idx}
-                                className={`p-4 rounded-lg border ${override ? "border-blue-300 bg-blue-50/30" : "bg-muted/30"}`}
+                                className={`p-4 rounded-lg border ${isModified ? "border-blue-300 bg-blue-50/20" : "bg-muted/30"}`}
                             >
                                 {/* Header Row */}
                                 <div className="flex items-center justify-between mb-2">
                                     <div className="flex items-center gap-2">
-                                        {isPending ? <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" /> : getResultIcon(displayResult)}
                                         <span className="font-mono text-sm text-muted-foreground">{check.question_id}</span>
-                                        {getResultBadge(displayResult)}
-                                        {override && <Badge className="bg-blue-100 text-blue-800 border-blue-200">UPDATED</Badge>}
+
+                                        {/* Dropdown for Result */}
+                                        <div onClick={(e) => e.stopPropagation()}>
+                                            <Select
+                                                value={effectiveResult}
+                                                onValueChange={(val) => onTagChange(check.question_id, val as any)}
+                                            >
+                                                <SelectTrigger className={`w-[140px] h-8 ${getResultColor(effectiveResult)}`}>
+                                                    <SelectValue placeholder="Result" />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="pass">PASS</SelectItem>
+                                                    <SelectItem value="fail">FAIL</SelectItem>
+                                                    <SelectItem value="needs_review">NEEDS REVIEW</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                        </div>
+
+                                        {isTagModified && (
+                                            <Badge variant="outline" className="text-blue-600 border-blue-200 bg-blue-50 text-[10px] h-5 px-1">
+                                                MODIFIED
+                                            </Badge>
+                                        )}
                                     </div>
 
                                     <Button
                                         variant="ghost"
                                         size="sm"
-                                        className={`h-8 w-8 p-0 ${hasComment ? "text-blue-600 bg-blue-50" : "text-muted-foreground"}`}
+                                        className={`h-8 w-8 p-0 ${hasUserComment ? "text-blue-600 bg-blue-50" : "text-muted-foreground"}`}
                                         onClick={(e) => toggleCommentBox(check.question_id, e)}
-                                        disabled={isPending}
                                     >
                                         <MessageSquare className="w-4 h-4" />
                                     </Button>
@@ -154,23 +166,26 @@ export default function ComplianceResultsSection({
                                     </p>
                                 )}
                                 <p className="text-sm text-muted-foreground">
-                                    <span className="font-semibold">Reasoning:</span> {displayRationale}
+                                    <span className="font-semibold">Reasoning:</span> {check.rationale}
                                 </p>
 
                                 {/* Comment Box (Expandable) */}
                                 {isCommentOpen && (
                                     <div className="mt-3 pt-3 border-t animate-in slide-in-from-top-2 duration-200">
-                                        <Textarea
-                                            placeholder="Add specific feedback for this question..."
-                                            value={questionComments.get(check.question_id) || ""}
-                                            onChange={(e) => onQuestionCommentChange(check.question_id, e.target.value)}
-                                            className="min-h-[60px] text-sm"
-                                        />
-                                        <p className="text-xs text-muted-foreground mt-1">
-                                            {questionComments.get(check.question_id)
-                                                ? "Changes staged. Press 'Update' at bottom to apply."
-                                                : "Type a comment to stage changes."}
-                                        </p>
+                                        <div className="flex items-start gap-2">
+                                            <Info className="w-4 h-4 text-muted-foreground mt-2" />
+                                            <div className="flex-1">
+                                                <label className="text-xs font-medium text-muted-foreground mb-1 block">
+                                                    User Comment (Saved to Report)
+                                                </label>
+                                                <Textarea
+                                                    placeholder="Add specific feedback or comments for this question..."
+                                                    value={userCommentText}
+                                                    onChange={(e) => onUserCommentChange(check.question_id, e.target.value)}
+                                                    className="min-h-[60px] text-sm resize-y"
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
                                 )}
                             </div>

@@ -1,12 +1,13 @@
+
 import { useQuery } from "@tanstack/react-query";
 import { api, Project, ComplianceReport } from "@/api";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { FileText, Printer, Download, Loader2, RefreshCw } from "lucide-react";
+import { FileText, Printer, Download, Loader2, RefreshCw, Save } from "lucide-react";
 import { useState } from "react";
-import jsPDF from "jspdf";
-import autoTable from "jspdf-autotable";
+import { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle } from "docx";
+import { saveAs } from "file-saver";
 import NutritionAuditTable from "@/components/NutritionAuditTable";
 import ComplianceResultsSection from "@/components/ComplianceResultsSection";
 import DetectionResultsTable, { DetectedItem } from "@/components/DetectionResultsTable";
@@ -37,23 +38,21 @@ export default function ReportsTab({ project }: ReportsTabProps) {
   const { toast } = useToast();
   const [selectedAnalysisId, setSelectedAnalysisId] = useState<string | null>(null);
   const [generatedReport, setGeneratedReport] = useState<boolean>(false);
-  const [reportData, setReportData] = useState<ComplianceReport | null>(null);
 
-  // Hook for HITL edits
+  // Local mutable copy of the report for editing
+  const [reportData, setReportData] = useState<ComplianceReport | null>(null);
+  const [isUpdating, setIsUpdating] = useState(false);
+
+  // New Hook for Layout Edits
   const {
-    questionComments,
-    questionOverrides,
-    pendingQuestions,
-    tableEdits,
-    setQuestionComment,
-    addQuestionOverride,
-    setQuestionPending,
-    addTableEdit,
+    tagOverrides,
+    userComments,
+    modifiedQuestions,
+    setTagOverride,
+    setUserComment,
     clearAll,
     hasPendingChanges,
-    pendingCount,
-    isReevaluating,
-    setIsReevaluating
+    pendingCount
   } = useReportEdits();
 
   const { data: analyses } = useQuery({
@@ -63,18 +62,23 @@ export default function ReportsTab({ project }: ReportsTabProps) {
 
   const completedAnalyses = analyses?.filter(a => a.status === "completed") || [];
 
+  // Fetch job images when reportData is available
+  const { data: jobImages } = useQuery({
+    queryKey: ["job-images", reportData?.job_id],
+    queryFn: () => api.jobs.getImages(reportData!.job_id),
+    enabled: !!reportData,
+  });
+
   const handleGenerateReport = async () => {
     if (selectedAnalysisId) {
       try {
         const selectedAnalysis = completedAnalyses.find(a => a.id === selectedAnalysisId);
-        if (!selectedAnalysis) {
-          console.error("Selected analysis not found");
-          return;
-        }
+        if (!selectedAnalysis) return;
+
         const report = await api.jobs.getReport(selectedAnalysis.jobId);
         setReportData(report);
         setGeneratedReport(true);
-        clearAll(); // Clear any edits from previous report
+        clearAll(); // Clear previous edits
       } catch (e) {
         console.error("Failed to fetch report details", e);
         toast({
@@ -86,284 +90,192 @@ export default function ReportsTab({ project }: ReportsTabProps) {
     }
   };
 
-  // Helper to find original question data in the report structure
-  const findQuestionInReport = (report: ComplianceReport, qId: string) => {
-    if (!report.results) return null;
-    for (const section of Object.values(report.results)) {
+  // --- Handlers ---
+
+  const handleTableUpdate = (sectionKey: string, newData: any) => {
+    if (!reportData) return;
+    setReportData(prev => {
+      if (!prev) return null;
+      const newReport = { ...prev };
       // @ts-ignore
-      const list = section.check_results || section.results || [];
-      const item = list.find((i: any) => i.question_id === qId);
-      if (item) return item;
-    }
-    return null;
+      newReport.results[sectionKey] = newData;
+      return newReport;
+    });
   };
 
-  const handleReevaluateAll = async () => {
+  const handleSave = () => {
     if (!reportData) return;
-    setIsReevaluating(true);
-    let successCount = 0;
-    let failCount = 0;
 
-    try {
-      // 1. Process agent re-evaluations (Iterate through commented questions)
-      const commentsArray = Array.from(questionComments.entries());
+    // Guard: no-op if no pending changes
+    if (!hasPendingChanges) {
+      toast({ title: "Info", description: "No changes to save." });
+      return;
+    }
 
-      // Process concurrently
-      await Promise.allSettled(commentsArray.map(async ([questionId, comment]) => {
-        setQuestionPending(questionId, true);
-        try {
-          const originalQuestion = findQuestionInReport(reportData, questionId);
-          if (!originalQuestion) {
-            console.warn(`Question ${questionId} not found in report data`);
-            return;
-          }
+    const newReport = JSON.parse(JSON.stringify(reportData));
 
-          // Construct payload matching ReevaluationRequest model
-          const payload = {
-            question_id: originalQuestion.question_id,
-            question: originalQuestion.question,
-            original_answer: originalQuestion.selected_value || "",
-            original_tag: originalQuestion.result,
-            original_rationale: originalQuestion.rationale,
-            user_comment: comment
-          };
-
-          const res = await api.jobs.reevaluateQuestion(reportData.job_id, payload);
-
-          // On success, update local override state immediately
-          addQuestionOverride({
-            question_id: res.question_id || questionId,
-            new_tag: res.new_tag,
-            new_rationale: res.new_rationale
-          });
-          successCount++;
-
-        } catch (err) {
-          console.error(`Failed to re-evaluate ${questionId}`, err);
-          failCount++;
-        } finally {
-          setQuestionPending(questionId, false);
+    // Merge tag overrides
+    tagOverrides.forEach((override, qId) => {
+      Object.values(newReport.results).forEach((section: any) => {
+        const list = section.check_results || section.results;
+        if (Array.isArray(list)) {
+          const item = list.find((i: any) => i.question_id === qId);
+          if (item) item.result = override.new_tag;
         }
-      }));
+      });
+    });
 
-      // 2. Apply staged table edits to the report state (Frontend Persistence)
-      // Since backend doesn't persist table edits yet, we merge them into the reportData state
-      if (tableEdits.length > 0) {
-        let finalReport = { ...reportData };
-        tableEdits.forEach(edit => {
-          const section = edit.sectionKey as keyof typeof finalReport.results;
-          const data = finalReport.results[section] as any;
-          if (data && data.detected) {
-            if (edit.action === "delete") {
-              data.detected.splice(edit.rowIndex, 1);
-            } else if (edit.action === "edit" && edit.editedData) {
-              data.detected[edit.rowIndex] = { ...data.detected[edit.rowIndex], ...edit.editedData };
-            } else if (edit.action === "add" && edit.editedData) {
-              data.detected.push(edit.editedData);
-            }
-          }
-        });
-        setReportData(finalReport);
-      }
+    // Merge user comments
+    userComments.forEach((comment, qId) => {
+      Object.values(newReport.results).forEach((section: any) => {
+        const list = section.check_results || section.results;
+        if (Array.isArray(list)) {
+          const item = list.find((i: any) => i.question_id === qId);
+          if (item) item.user_comment = comment.comment;
+        }
+      });
+    });
 
-      if (successCount > 0) {
-        toast({ title: "Update Complete", description: `Successfully updated ${successCount} item(s).` });
-      }
-      if (failCount > 0) {
-        toast({ title: "Update Warning", description: `Failed to update ${failCount} item(s). Check console.`, variant: "destructive" });
-      }
+    setReportData(newReport);
+    clearAll();
+    toast({ title: "Success", description: "Changes saved." });
+  };
 
-      // Clear table edits but NOT overrides (they are now the truth)
-      // clearAll() would wipe overrides, so we only clear table edits manually if needed, 
-      // but useReportEdits doesn't expose partial clear. 
-      // Actually, addQuestionOverride clears the comment for that question, so comments are gone.
-      // Table edits were merged into reportData, so we can clear them.
-      // But we can't easily clear table edits without clearing overrides if we use clearAll().
-      // For now, let's just leave it. The user sees the result.
+  const handleUpdate = async () => {
+    if (!reportData || !hasPendingChanges) return;
+
+    setIsUpdating(true);
+    try {
+      // 1. Build payload from current pending changes BEFORE clearing
+      const payload: any[] = [];
+      modifiedQuestions.forEach(qId => {
+        const tag = tagOverrides.get(qId);
+        const comment = userComments.get(qId);
+
+        if (tag || comment) {
+          payload.push({
+            question_id: qId,
+            new_tag: tag?.new_tag,
+            user_comment: comment?.comment
+          });
+        }
+      });
+
+      // 2. Apply local changes (merges into reportData, clears maps)
+      handleSave();
+
+      // 3. Send to backend
+      if (payload.length > 0) {
+        await api.jobs.saveReportEdits(reportData.job_id, payload);
+        toast({ title: "Success", description: "Report updated and synced to cloud." });
+      }
 
     } catch (e) {
-      console.error("Global re-evaluation error:", e);
-      toast({
-        title: "Update Failed",
-        description: "Could not complete re-evaluation.",
-        variant: "destructive"
-      });
+      console.error(e);
+      toast({ title: "Error", description: "Failed to sync report.", variant: "destructive" });
     } finally {
-      setIsReevaluating(false);
+      setIsUpdating(false);
     }
   };
 
-  // Helper to merge table edits for display
-  const getMergedData = (attrKey: string, originalData: any) => {
-    // Deep clone to avoid mutating state
-    const merged = JSON.parse(JSON.stringify(originalData || {}));
-    const edits = tableEdits.filter(e => e.sectionKey === attrKey);
 
-    if (attrKey === "nutrition_facts") {
-      if (!merged.nutrient_audits) merged.nutrient_audits = [];
-
-      edits.forEach(edit => {
-        if (edit.action === "delete") {
-          if (merged.nutrient_audits[edit.rowIndex]) {
-            merged.nutrient_audits.splice(edit.rowIndex, 1);
-          }
-        } else if (edit.action === "edit" && edit.editedData) {
-          if (merged.nutrient_audits[edit.rowIndex]) {
-            merged.nutrient_audits[edit.rowIndex] = { ...merged.nutrient_audits[edit.rowIndex], ...edit.editedData };
-          }
-        } else if (edit.action === "add" && edit.editedData) {
-          merged.nutrient_audits.push(edit.editedData);
-        }
-      });
-      return merged;
-    }
-
-    // Default handling for detection tables
-    if (!merged.detected) return merged;
-
-    edits.forEach(edit => {
-      if (edit.action === "delete") {
-        if (merged.detected[edit.rowIndex]) {
-          merged.detected.splice(edit.rowIndex, 1);
-        }
-      } else if (edit.action === "edit" && edit.editedData) {
-        if (merged.detected[edit.rowIndex]) {
-          merged.detected[edit.rowIndex] = { ...merged.detected[edit.rowIndex], ...edit.editedData };
-        }
-      } else if (edit.action === "add" && edit.editedData) {
-        merged.detected.push(edit.editedData);
-      }
-    });
-    return merged;
-  };
-
-  const downloadPDF = () => {
+  const downloadDOCX = async () => {
     if (!reportData) return;
-    const doc = new jsPDF();
 
-    // Header
-    doc.setFontSize(20);
-    doc.text("Food Label Compliance Report", 14, 20);
-    doc.setFontSize(10);
-    doc.text(`Project: ${project.name}`, 14, 30);
-    doc.text(`Date: ${new Date().toLocaleDateString()}`, 14, 35);
-    doc.text(`Analysis ID: ${reportData.job_id}`, 14, 40);
+    try {
+      const sections = [];
 
-    let yPos = 50;
+      // Header
+      sections.push(
+        new Paragraph({
+          children: [
+            new TextRun({ text: "Food Label Compliance Report", bold: true, size: 28 })
+          ],
+          spacing: { after: 400 }
+        }),
+        new Paragraph({ text: `Project: ${project.name}` }),
+        new Paragraph({ text: `Date: ${new Date().toLocaleDateString()}` }),
+        new Paragraph({ text: `Analysis ID: ${reportData.job_id}`, spacing: { after: 400 } })
+      );
 
-    // Ordered Sections matching UI
-    ATTRIBUTE_ORDER.forEach(attr => {
-      const data = reportData.results[attr.key as keyof typeof reportData.results];
+      // Compliance Sections
+      ATTRIBUTE_ORDER.forEach(attr => {
+        const data = reportData.results[attr.key as keyof typeof reportData.results];
+        if (attr.type === "agent") {
+          const agentData = data as any;
+          const results = agentData?.check_results || agentData?.results;
+          if (results && results.length > 0) {
+            sections.push(
+              new Paragraph({
+                text: attr.label,
+                heading: "Heading2",
+                spacing: { before: 400, after: 200 }
+              })
+            );
 
-      if (attr.type === "agent" && data) {
-        const agentData = data as any;
-        const results = agentData.check_results || agentData.results || [];
-        if (results.length === 0) return;
+            results.forEach((check: any) => {
+              // Apply local overrides if they exist (though handleSave should have merged them)
+              const override = tagOverrides.get(check.question_id);
+              const result = override ? override.new_tag : check.result;
+              const comment = userComments.get(check.question_id)?.comment || check.user_comment;
 
-        doc.setFontSize(14);
-        doc.text(attr.label, 14, yPos);
-        yPos += 5;
+              sections.push(
+                new Paragraph({
+                  children: [
+                    new TextRun({ text: "Question: ", bold: true }),
+                    new TextRun({ text: check.question })
+                  ]
+                }),
+                new Paragraph({
+                  children: [
+                    new TextRun({ text: "Result: ", bold: true }),
+                    new TextRun({
+                      text: result.toUpperCase(),
+                      color: result === "pass" ? "008000" : result === "fail" ? "FF0000" : "FFA500"
+                    })
+                  ]
+                }),
+                new Paragraph({
+                  children: [
+                    new TextRun({ text: "Rationale: ", bold: true }),
+                    new TextRun({ text: check.rationale })
+                  ]
+                })
+              );
 
-        const body = results.map((c: any) => {
-          // Check for overrides to print correctly in PDF
-          const override = questionOverrides.get(c.question_id);
-          return [
-            c.question_id,
-            (override ? override.new_tag : c.result).toUpperCase(),
-            c.question,
-            override ? override.new_rationale : c.rationale
-          ];
-        });
+              if (comment) {
+                sections.push(
+                  new Paragraph({
+                    children: [
+                      new TextRun({ text: "User Comment: ", bold: true, color: "0000FF" }),
+                      new TextRun({ text: comment, italics: true })
+                    ],
+                    spacing: { before: 100 }
+                  })
+                );
+              }
 
-        autoTable(doc, {
-          startY: yPos,
-          head: [['ID', 'Result', 'Question', 'Rationale']],
-          body: body,
-          styles: { fontSize: 8 },
-          headStyles: { fillColor: [41, 37, 36] },
-          columnStyles: { 3: { cellWidth: 'auto' } },
-          margin: { left: 14, right: 14 }
-        });
-        yPos = (doc as any).lastAutoTable.finalY + 10;
-      }
-      else if (attr.key === "nutrition_facts" && data) {
-        const mergedNutrition = getMergedData("nutrition_facts", data);
-        if (!mergedNutrition?.nutrient_audits || mergedNutrition.nutrient_audits.length === 0) return;
-
-        doc.setFontSize(14);
-        doc.text(attr.label, 14, yPos);
-        yPos += 5;
-
-        const body = mergedNutrition.nutrient_audits.map((item: any) => [
-          item.nutrient_name,
-          String(item.original_value),
-          item.unit,
-          item.is_dv ? "Yes" : "No",
-          item.status.toUpperCase()
-        ]);
-
-        autoTable(doc, {
-          startY: yPos,
-          head: [['Nutrient', 'Value', 'Unit', '%DV', 'Status']],
-          body: body,
-          styles: { fontSize: 8 },
-          margin: { left: 14, right: 14 }
-        });
-        yPos = (doc as any).lastAutoTable.finalY + 10;
-      }
-      else if ((attr.type === "detection_table" || (attr.type === "table" && attr.key !== "nutrition_facts")) && data) {
-        // For tables, show detected items
-        const tableData = data as any;
-        if (!tableData.detected || tableData.detected.length === 0) return;
-
-        doc.setFontSize(14);
-        doc.text(attr.label, 14, yPos);
-        yPos += 5;
-
-        const body = tableData.detected.map((item: any) => [
-          item.name,
-          item.quantity || "—",
-          item.category || "—",
-          item.source
-        ]);
-
-        autoTable(doc, {
-          startY: yPos,
-          head: [['Item', 'Quantity', 'Category', 'Source']],
-          body: body,
-          styles: { fontSize: 8 },
-          margin: { left: 14, right: 14 }
-        });
-        yPos = (doc as any).lastAutoTable.finalY + 10;
-      }
-    });
-
-    // Extracted Data Section
-    const dataY = yPos; // continue from last
-    doc.setFontSize(14);
-    doc.text("Extracted Label Data", 14, dataY);
-
-    const fieldsFn = reportData.label_facts?.fields as Record<string, any> || {};
-    const extractedBody: string[][] = [];
-    const formatValue = (val: any) => {
-      if (typeof val === 'object' && val !== null) return val.text || JSON.stringify(val);
-      return String(val);
-    };
-    Object.entries(fieldsFn).forEach(([key, val]) => {
-      if (val) extractedBody.push([key.replace(/_/g, " ").toUpperCase(), formatValue(val)]);
-    });
-
-    if (extractedBody.length > 0) {
-      autoTable(doc, {
-        startY: dataY + 5,
-        head: [['Field', 'Extracted Content']],
-        body: extractedBody,
-        styles: { fontSize: 8 },
-        columnStyles: { 1: { cellWidth: 'auto' } },
+              sections.push(new Paragraph({ text: "", spacing: { after: 200 } })); // Spacer
+            });
+          }
+        }
       });
-    }
 
-    doc.save(`CFIA_Report_${project.name}.pdf`);
+      const doc = new Document({
+        sections: [{
+          properties: {},
+          children: sections,
+        }],
+      });
+
+      const blob = await Packer.toBlob(doc);
+      saveAs(blob, `Compliance_Report_${reportData.job_id}.docx`);
+      toast({ title: "Success", description: "Report downloaded as DOCX" });
+
+    } catch (e) {
+      console.error(e);
+      toast({ title: "Error", description: "Failed to generate DOCX.", variant: "destructive" });
+    }
   };
 
   return (
@@ -396,6 +308,29 @@ export default function ReportsTab({ project }: ReportsTabProps) {
               </Button>
             </CardContent>
           </Card>
+
+          {/* Label Images Card */}
+          {reportData && jobImages && jobImages.images.length > 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-sm">Label Images</CardTitle>
+                <CardDescription>{jobImages.images.length} image(s)</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-2">
+                  {jobImages.images.map((img, idx) => (
+                    <div key={idx} className="relative aspect-square rounded border overflow-hidden bg-muted">
+                      <img
+                        src={`${import.meta.env.VITE_API_BASE || "http://127.0.0.1:8000"}/v1/jobs/${reportData.job_id}/images/${idx}`}
+                        alt={img.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </div>
 
         {/* Right Panel */}
@@ -406,8 +341,8 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                 <Button variant="outline" size="sm" onClick={() => window.print()}>
                   <Printer className="w-4 h-4 mr-2" /> Print
                 </Button>
-                <Button variant="default" size="sm" onClick={downloadPDF}>
-                  <Download className="w-4 h-4 mr-2" /> Download PDF
+                <Button variant="default" size="sm" onClick={downloadDOCX}>
+                  <Download className="w-4 h-4 mr-2" /> Download DOCX
                 </Button>
               </div>
 
@@ -422,25 +357,13 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                   {ATTRIBUTE_ORDER.map(attr => {
                     const data = reportData.results[attr.key as keyof typeof reportData.results];
 
-                    if (attr.type === "placeholder") {
-                      return (
-                        <Card key={attr.key}>
-                          <CardHeader><CardTitle>{attr.label}</CardTitle></CardHeader>
-                          <CardContent><p className="text-sm text-muted-foreground italic">Coming soon</p></CardContent>
-                        </Card>
-                      );
-                    }
+                    if (attr.type === "placeholder") return null;
 
                     if (attr.type === "agent") {
                       const agentData = data as any;
                       const results = agentData?.check_results || agentData?.results;
                       if (!results || results.length === 0) {
-                        return (
-                          <Card key={attr.key}>
-                            <CardHeader><CardTitle>{attr.label}</CardTitle></CardHeader>
-                            <CardContent><p className="text-sm text-muted-foreground italic">No data found</p></CardContent>
-                          </Card>
-                        );
+                        return null;
                       }
 
                       return (
@@ -448,11 +371,11 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                           <ComplianceResultsSection
                             title={attr.label}
                             checkResults={results}
-                            jobId={reportData.job_id}
-                            questionComments={questionComments}
-                            questionOverrides={questionOverrides}
-                            pendingQuestions={pendingQuestions}
-                            onQuestionCommentChange={setQuestionComment}
+                            tagOverrides={tagOverrides}
+                            onTagChange={setTagOverride}
+                            userComments={userComments}
+                            onUserCommentChange={setUserComment}
+                            modifiedQuestions={modifiedQuestions}
                           />
                         </div>
                       );
@@ -461,33 +384,26 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                     const attrKey = attr.key as keyof typeof reportData.results;
 
                     if (attrKey === "nutrition_facts") {
-                      const mergedNutrition = getMergedData("nutrition_facts", data);
                       return (
                         <div key={attrKey}>
                           <NutritionAuditTable
-                            auditDetails={mergedNutrition as any}
+                            auditDetails={data as any}
                             editable={true}
-                            onRowEdit={(idx, val) => addTableEdit({ sectionKey: "nutrition_facts", rowIndex: idx, action: "edit", editedData: val })}
-                            onRowDelete={(idx) => addTableEdit({ sectionKey: "nutrition_facts", rowIndex: idx, action: "delete" })}
-                            onRowAdd={(val) => addTableEdit({ sectionKey: "nutrition_facts", rowIndex: -1, action: "add", editedData: val })}
+                            onUpdate={(newData) => handleTableUpdate("nutrition_facts", newData)}
                           />
                         </div>
                       );
                     }
 
                     if (attrKey === "sweeteners" || attrKey === "additives") {
-                      // Apply pending edits for display
-                      const mergedData = getMergedData(attrKey, data);
                       return (
                         <div key={attrKey}>
                           <DetectionResultsTable
                             title={attr.label}
-                            data={mergedData as any}
+                            data={data as any}
                             requiresQuantity={attrKey === "sweeteners"}
                             editable={true}
-                            onRowEdit={(idx, val) => addTableEdit({ sectionKey: attrKey, rowIndex: idx, action: "edit", editedData: val })}
-                            onRowDelete={(idx) => addTableEdit({ sectionKey: attrKey, rowIndex: idx, action: "delete" })}
-                            onRowAdd={(val) => addTableEdit({ sectionKey: attrKey, rowIndex: -1, action: "add", editedData: val })}
+                            onUpdate={(newData) => handleTableUpdate(attrKey, newData)}
                           />
                         </div>
                       );
@@ -496,31 +412,37 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                   })}
                 </div>
 
-                {/* Update Button */}
+                {/* Save & Update Buttons */}
                 <div className="pt-8 border-t mt-8 flex flex-col items-center gap-4">
                   <p className="text-sm text-muted-foreground">
                     {hasPendingChanges
-                      ? `${pendingCount} pending change(s). Press below to update.`
-                      : "No pending changes."}
+                      ? `${pendingCount} pending change(s). Press 'Update' to sync changes.`
+                      : "All changes saved."}
                   </p>
-                  <Button
-                    size="lg"
-                    disabled={!hasPendingChanges || isReevaluating}
-                    onClick={handleReevaluateAll}
-                    className="px-8"
-                  >
-                    {isReevaluating ? (
-                      <>
+                  <div className="flex gap-4">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      onClick={handleSave}
+                      className="px-8"
+                    >
+                      <Save className="w-4 h-4 mr-2" />
+                      Save
+                    </Button>
+                    <Button
+                      size="lg"
+                      disabled={!hasPendingChanges || isUpdating}
+                      onClick={handleUpdate}
+                      className="px-8"
+                    >
+                      {isUpdating ? (
                         <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                        Updating...
-                      </>
-                    ) : (
-                      <>
+                      ) : (
                         <RefreshCw className="w-4 h-4 mr-2" />
-                        Update
-                      </>
-                    )}
-                  </Button>
+                      )}
+                      Update
+                    </Button>
+                  </div>
                 </div>
 
                 <div className="pt-12 border-t mt-12">

@@ -230,69 +230,61 @@ export const api = {
         return { data };
     },
 
-    // Files API - Now derived from Analyses/Jobs
+    // Files API - Derived from analyses
     files: {
         list: async (projectId: string): Promise<ProjectFile[]> => {
-            const stored = localStorage.getItem("mock_analyses");
-            const analyses: Analysis[] = stored ? JSON.parse(stored) : [];
-            const projectAnalyses = analyses.filter(a => a.projectId === projectId);
+            const analyses = await api.analysis.list(projectId);
 
-            // Extract files from analyses
             const files: ProjectFile[] = [];
-            projectAnalyses.forEach(analysis => {
-                const imgs = analysis.images || [];
-                imgs.forEach((imgUrl, idx) => {
-                    files.push({
-                        id: `${analysis.id}-img-${idx}`,
-                        projectId: analysis.projectId,
-                        name: imgUrl.split('/').pop() || `Image ${idx + 1}`,
-                        type: "image",
-                        url: imgUrl, // In a real app this would be a GCS signed URL
-                        tags: ["analyzed"],
-                        createdAt: analysis.createdAt,
+            for (const analysis of analyses) {
+                try {
+                    const imagesData = await api.jobs.getImages(analysis.jobId);
+                    imagesData.images.forEach((img, idx) => {
+                        files.push({
+                            id: `${analysis.id}-img-${idx}`,
+                            projectId: analysis.projectId,
+                            name: img.name,
+                            type: "image",
+                            url: `${API_BASE}${img.url}`,
+                            tags: ["analyzed"],
+                            createdAt: analysis.createdAt,
+                        });
                     });
-                });
-            });
+                } catch (e) {
+                    console.warn(`Could not fetch images for analysis ${analysis.id}`, e);
+                }
+            }
             return files;
         },
         upload: async (projectId: string, files: File[], tags: string[], metadata?: Record<string, unknown>): Promise<ProjectFile[]> => {
-            // "Upload" now implies starting a job/analysis immediately
-            // because the backend combines upload and processing.
+            // Create Job (Uploads to GCS) - backend will create analysis record
+            const formData = new FormData();
+            files.forEach((file) => {
+                formData.append("files", file);
+            });
+            if (metadata) {
+                formData.append("product_metadata", JSON.stringify(metadata));
+            }
+            if (tags && tags.length > 0) {
+                formData.append("tags", JSON.stringify(tags));
+            }
+            formData.append("project_id", projectId);
 
-            // 1. Create Job (Uploads to GCS) - pass tags and metadata to backend
-            const jobResponse = await api.jobs.create(files, metadata, tags);
-
-            // 2. Create Analysis record linked to Job
-            const objectUrls = files.map(f => URL.createObjectURL(f)); // For local preview only
-
-            const analysisName = files.length === 1
-                ? `Analysis of ${files[0].name}`
-                : `Analysis of ${files.length} files`;
-
-            const newAnalysis: Analysis = {
-                id: jobResponse.job_id,
-                projectId,
-                name: analysisName,
-                status: "running",
-                progress: 0,
-                createdAt: new Date().toISOString(),
-                jobId: jobResponse.job_id,
-                images: objectUrls, // Store local preview URLs
-            };
-
-            const stored = localStorage.getItem("mock_analyses");
-            const analyses: Analysis[] = stored ? JSON.parse(stored) : [];
-            analyses.push(newAnalysis);
-            localStorage.setItem("mock_analyses", JSON.stringify(analyses));
+            const res = await fetch(`${API_BASE}/v1/jobs`, {
+                method: "POST",
+                body: formData,
+            });
+            if (!res.ok) throw new Error("Failed to create job");
+            const jobResponse: JobCreateResponse = await res.json();
 
             return files.map((file, idx) => ({
-                id: `${newAnalysis.id}-img-${idx}`,
+                id: `${jobResponse.job_id}-img-${idx}`,
                 projectId,
                 name: file.name,
                 type: "image",
-                url: objectUrls[idx],
+                url: `${API_BASE}/v1/jobs/${jobResponse.job_id}/images/${idx}`,
                 tags,
-                createdAt: newAnalysis.createdAt
+                createdAt: new Date().toISOString()
             }));
         },
         delete: async (fileId: string): Promise<void> => {
@@ -347,27 +339,6 @@ export const api = {
         },
 
         /**
-         * Trigger re-evaluation for a single question.
-         * Matches backend ReevaluationRequest schema.
-         */
-        reevaluateQuestion: async (jobId: string, payload: {
-            question_id: string;
-            question: string;
-            original_answer: string;
-            original_tag: string;
-            original_rationale: string;
-            user_comment: string;
-        }): Promise<{ question_id: string; new_tag: string; new_rationale: string }> => {
-            const res = await fetch(`${API_BASE}/v1/jobs/${jobId}/reevaluate`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload),
-            });
-            if (!res.ok) throw new Error("Re-evaluation failed");
-            return res.json();
-        },
-
-        /**
          * Poll job status until complete.
          * Returns the final report when done.
          */
@@ -390,70 +361,81 @@ export const api = {
                 await new Promise((resolve) => setTimeout(resolve, pollIntervalMs));
             }
         },
+
+        /**
+         * Save manual report edits (tags and comments) to backend.
+         */
+        saveReportEdits: async (jobId: string, edits: {
+            question_id: string;
+            new_tag?: string;
+            user_comment?: string;
+        }[]): Promise<void> => {
+            const res = await fetch(`${API_BASE}/v1/jobs/${jobId}/save-edits`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ edits }),
+            });
+            if (!res.ok) throw new Error("Failed to save report edits");
+        },
+
+        /**
+         * Get images for a job.
+         */
+        getImages: async (jobId: string): Promise<{ images: { name: string; url: string }[] }> => {
+            const res = await fetch(`${API_BASE}/v1/jobs/${jobId}/images`);
+            if (!res.ok) throw new Error("Failed to fetch images");
+            return res.json();
+        },
     },
 
-    // Mock projects API (stored in localStorage)
+    // Projects API (backend-persisted)
     projects: {
         list: async (): Promise<Project[]> => {
-            const stored = localStorage.getItem("mock_projects");
-            return stored ? JSON.parse(stored) : [];
+            const res = await fetch(`${API_BASE}/v1/projects`);
+            if (!res.ok) throw new Error("Failed to list projects");
+            return res.json();
         },
         create: async (data: { name: string; description?: string; tags?: string[] }): Promise<Project> => {
-            const stored = localStorage.getItem("mock_projects");
-            const projects: Project[] = stored ? JSON.parse(stored) : [];
-            const newProject: Project = {
-                id: `project-${Date.now()}`,
-                name: data.name,
-                description: data.description || "",
-                tags: data.tags || [],
-                createdAt: new Date().toISOString(),
-                updatedAt: new Date().toISOString(),
-            };
-            projects.push(newProject);
-            localStorage.setItem("mock_projects", JSON.stringify(projects));
-            return newProject;
+            const res = await fetch(`${API_BASE}/v1/projects`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+            if (!res.ok) throw new Error("Failed to create project");
+            return res.json();
         },
         delete: async (id: string): Promise<void> => {
-            const stored = localStorage.getItem("mock_projects");
-            const projects: Project[] = stored ? JSON.parse(stored) : [];
-            const filtered = projects.filter(p => p.id !== id);
-            localStorage.setItem("mock_projects", JSON.stringify(filtered));
+            const res = await fetch(`${API_BASE}/v1/projects/${id}`, {
+                method: "DELETE",
+            });
+            if (!res.ok) throw new Error("Failed to delete project");
         },
         get: async (id: string): Promise<Project | null> => {
-            const stored = localStorage.getItem("mock_projects");
-            const projects: Project[] = stored ? JSON.parse(stored) : [];
-            return projects.find(p => p.id === id) || null;
+            const res = await fetch(`${API_BASE}/v1/projects/${id}`);
+            if (!res.ok) return null;
+            return res.json();
         },
         update: async (id: string, data: { name: string; description?: string; tags: string[] }): Promise<Project> => {
-            const stored = localStorage.getItem("mock_projects");
-            const projects: Project[] = stored ? JSON.parse(stored) : [];
-            const index = projects.findIndex(p => p.id === id);
-            if (index === -1) throw new Error("Project not found");
-            projects[index] = {
-                ...projects[index],
-                name: data.name,
-                description: data.description || projects[index].description,
-                tags: data.tags,
-                updatedAt: new Date().toISOString(),
-            };
-            localStorage.setItem("mock_projects", JSON.stringify(projects));
-            return projects[index];
+            const res = await fetch(`${API_BASE}/v1/projects/${id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+            if (!res.ok) throw new Error("Failed to update project");
+            return res.json();
         },
     },
 
-    // Analysis API (bridging Projects and Jobs)
+    // Analysis API (backend-persisted)
     analysis: {
         run: async (projectId: string, name: string): Promise<Analysis> => {
-            // This function is now somewhat redundant since "upload" starts the analysis.
-            // But if we wanted to support "re-run", we'd need files again.
-            // Since we deleted in-memory storage, we can't strictly re-run without re-upload.
-            // For now, we'll throw to inform the user.
             throw new Error("Please upload a new file in the Files tab to start a new analysis.");
         },
         list: async (projectId: string): Promise<Analysis[]> => {
-            const stored = localStorage.getItem("mock_analyses");
-            let analyses: Analysis[] = stored ? JSON.parse(stored) : [];
-            analyses = analyses.filter(a => a.projectId === projectId);
+            // Fetch from backend
+            const res = await fetch(`${API_BASE}/v1/projects/${projectId}/analyses`);
+            if (!res.ok) throw new Error("Failed to list analyses");
+            let analyses: Analysis[] = await res.json();
 
             // Poll status for running analyses
             const updatedAnalyses = await Promise.all(analyses.map(async (analysis) => {
@@ -466,9 +448,7 @@ export const api = {
                         let details: Record<string, unknown> = {};
 
                         try {
-                            // Get report details
                             const report = await api.jobs.getReport(analysis.jobId);
-
                             resultSummary = "Analysis complete.";
                             details = {
                                 mode: report.mode,
@@ -488,10 +468,8 @@ export const api = {
                     } else if (job.status === "FAILED") {
                         return { ...analysis, status: "failed" as const, progress: 0 };
                     } else if (job.status === "PROCESSING") {
-                        // Smooth progress: calculate based on elapsed time
                         const createdAt = new Date(analysis.createdAt).getTime();
-                        const elapsed = (Date.now() - createdAt) / 1000; // seconds
-                        // Logarithmic curve: fast at start, slows approaching 90%
+                        const elapsed = (Date.now() - createdAt) / 1000;
                         const estimatedProgress = Math.min(90, Math.round(30 * Math.log10(elapsed + 1)));
                         return { ...analysis, status: "running" as const, progress: estimatedProgress };
                     }
@@ -500,14 +478,6 @@ export const api = {
                     return analysis;
                 }
             }));
-
-            // Sync updates back to storage
-            const allStored = stored ? JSON.parse(stored) : [];
-            const merged = allStored.map((a: Analysis) => {
-                const updated = updatedAnalyses.find(u => u.id === a.id);
-                return updated || a;
-            });
-            localStorage.setItem("mock_analyses", JSON.stringify(merged));
 
             return updatedAnalyses as Analysis[];
         },
