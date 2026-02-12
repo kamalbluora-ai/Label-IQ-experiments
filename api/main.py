@@ -18,10 +18,13 @@ IS_CLOUD_RUN = os.environ.get("K_SERVICE") is not None
 
 app = FastAPI(title="CFIA Label Compliance API", version="0.1.0")
 
-# CORS for frontend
+# CORS for frontend (configurable via CORS_ORIGINS env var)
+_raw = os.environ.get("CORS_ORIGINS", "*")
+_origins = [o.strip() for o in _raw.split(",")] if _raw != "*" else ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=_origins,
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],

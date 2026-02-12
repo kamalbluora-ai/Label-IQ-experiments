@@ -2,7 +2,7 @@
 set -eu
 
 # Default for local/dev if not set
-: "${API_BASE:=http://localhost:8000/api}"
+: "${API_BASE:=http://localhost:8000}"
 
 # dist/public is what your server serves as static
 cat > /app/dist/public/config.js <<EOF

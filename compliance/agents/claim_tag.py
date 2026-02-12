@@ -97,7 +97,7 @@ Return JSON:
             prompt = self.build_prompt(data)
             
             # Call LLM
-            response = self.client.models.generate_content(
+            response = await self.client.aio.models.generate_content(
                 model="gemini-3-flash-preview",
                 contents=prompt,
                 config={

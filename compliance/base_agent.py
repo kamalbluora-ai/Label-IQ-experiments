@@ -111,7 +111,7 @@ class BaseComplianceAgent(ABC):
             system_prompt = self.build_system_prompt(data, questions)
             
             # Call LLM with Gemini
-            response = self.client.models.generate_content(
+            response = await self.client.aio.models.generate_content(
                 model="gemini-3-flash-preview",
                 contents=system_prompt,
                 config={

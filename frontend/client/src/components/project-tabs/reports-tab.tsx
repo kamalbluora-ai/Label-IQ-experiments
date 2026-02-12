@@ -1,6 +1,6 @@
 
 import { useQuery } from "@tanstack/react-query";
-import { api, Project, ComplianceReport } from "@/api";
+import { api, Project, ComplianceReport, API_BASE } from "@/api";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -469,7 +469,7 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                   {jobImages.images.map((img, idx) => (
                     <div key={idx} className="relative aspect-auto min-h-[400px] max-h-[600px] rounded border overflow-hidden bg-slate-50">
                       <img
-                        src={`${import.meta.env.VITE_API_BASE || "http://127.0.0.1:8000"}/v1/jobs/${reportData.job_id}/images/${idx}`}
+                        src={`${API_BASE}/v1/jobs/${reportData.job_id}/images/${idx}`}
                         alt={img.name}
                         className="w-full h-full object-contain"
                       />

@@ -40,7 +40,3 @@ scripts/
 *.md
 .DS_Store
 Thumbs.db
-
-# Redundant Dockerfiles
-api/Dockerfile
-frontend/DockerFile
