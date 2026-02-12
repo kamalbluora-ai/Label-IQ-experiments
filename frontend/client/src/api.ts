@@ -1,8 +1,16 @@
-// API connects to cloud run instance
-// const API_BASE = "https://label-compliance-262932924895.us-central1.run.app";
+// API client that connects to the FastAPI backend
+// API base URL - set at build time via VITE_API_BASE (Cloud Run)
+// const API_BASE = import.meta.env.VITE_API_BASE || "https://localhost:8000/api";
+declare global {
+    interface Window {
+        __CONFIG__?: { API_BASE?: string };
+    }
+}
 
-// LOCAL TESTING - uncomment for local development:
-const API_BASE = "http://127.0.0.1:8000";
+export const API_BASE =
+    window.__CONFIG__?.API_BASE ??
+    import.meta.env.VITE_API_BASE ??
+    "http://localhost:8000/api";
 
 // Types matching the new GCS-based backend
 export interface Job {

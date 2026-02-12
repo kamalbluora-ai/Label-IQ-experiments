@@ -4,7 +4,7 @@ import { api, User } from "@/api";
 interface AuthContextType {
     user: User | null;
     isLoading: boolean;
-    login: () => void;
+    login: (username?: string, password?: string) => Promise<boolean>;
     logout: () => void;
 }
 
@@ -14,13 +14,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<User | null>(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const login = () => {
+    const login = async (username?: string, password?: string) => {
         setIsLoading(true);
-        // Simulate a brief loading state, then set mock user
-        setTimeout(() => {
+
+        // Mock check
+        if (username === "admin" && password === "admin") {
+            // Simulate a brief loading state
+            await new Promise(resolve => setTimeout(resolve, 500));
             setUser(api.auth.getMockUser());
             setIsLoading(false);
-        }, 500);
+            return true;
+        } else {
+            // Simulate a brief loading state
+            await new Promise(resolve => setTimeout(resolve, 500));
+            setIsLoading(false);
+            return false;
+        }
     };
 
     const logout = () => {

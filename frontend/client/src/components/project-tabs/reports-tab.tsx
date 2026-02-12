@@ -259,6 +259,154 @@ export default function ReportsTab({ project }: ReportsTabProps) {
             });
           }
         }
+
+        // Handle Nutrition Facts Table
+        else if (attr.type === "table" && attr.key === "nutrition_facts") {
+          const nftData = data as any;
+          if (nftData.nutrient_audits && nftData.nutrient_audits.length > 0) {
+            sections.push(
+              new Paragraph({
+                text: "Nutrition Facts Audit",
+                heading: "Heading2",
+                spacing: { before: 400, after: 200 }
+              })
+            );
+
+            // 1. Nutrient Audits
+            sections.push(new Paragraph({ text: "Nutrient Rounding Rules", heading: "Heading3", spacing: { after: 100 } }));
+
+            const tableRows = [
+              new TableRow({
+                children: ["Nutrient", "Original", "Expected", "Status", "Message"].map(h =>
+                  new TableCell({
+                    children: [new Paragraph({ text: h, bold: true })],
+                    width: { size: 20, type: WidthType.PERCENTAGE },
+                    shading: { fill: "f5f5f5" }
+                  })
+                )
+              })
+            ];
+
+            nftData.nutrient_audits.forEach((audit: any) => {
+              tableRows.push(
+                new TableRow({
+                  children: [
+                    new TableCell({ children: [new Paragraph(audit.nutrient_name || "")] }),
+                    new TableCell({ children: [new Paragraph(`${audit.original_value} ${audit.unit || ""}`)] }),
+                    new TableCell({ children: [new Paragraph(audit.expected_value !== null ? `${audit.expected_value} ${audit.unit || ""}` : "N/A")] }),
+                    new TableCell({
+                      children: [new Paragraph({
+                        text: audit.status || "",
+                        color: audit.status === "PASS" ? "008000" : "FF0000"
+                      })]
+                    }),
+                    new TableCell({ children: [new Paragraph(audit.message || "")] })
+                  ]
+                })
+              );
+            });
+
+            sections.push(new Table({
+              rows: tableRows,
+              width: { size: 100, type: WidthType.PERCENTAGE }
+            }));
+            sections.push(new Paragraph({ text: "", spacing: { after: 200 } }));
+
+            // 2. Cross Checks
+            if (nftData.cross_field_audits && nftData.cross_field_audits.length > 0) {
+              sections.push(new Paragraph({ text: "Cross-Field Validations", heading: "Heading3", spacing: { before: 200, after: 100 } }));
+
+              const crossRows = [
+                new TableRow({
+                  children: ["Check Name", "Status", "Message"].map(h =>
+                    new TableCell({
+                      children: [new Paragraph({ text: h, bold: true })],
+                      shading: { fill: "f5f5f5" }
+                    })
+                  )
+                })
+              ];
+
+              nftData.cross_field_audits.forEach((audit: any) => {
+                crossRows.push(
+                  new TableRow({
+                    children: [
+                      new TableCell({ children: [new Paragraph(audit.check_name || "")] }),
+                      new TableCell({
+                        children: [new Paragraph({
+                          text: audit.status || "",
+                          color: audit.status === "PASS" ? "008000" : "FF0000"
+                        })]
+                      }),
+                      new TableCell({ children: [new Paragraph(audit.message || "")] })
+                    ]
+                  })
+                );
+              });
+
+              sections.push(new Table({
+                rows: crossRows,
+                width: { size: 100, type: WidthType.PERCENTAGE }
+              }));
+            }
+          }
+        }
+
+        // Handle Detection Tables (Sweeteners, Additives)
+        else if (attr.type === "detection_table") {
+          const detData = data as any;
+          if (detData.detected && detData.detected.length > 0) {
+            sections.push(
+              new Paragraph({
+                text: attr.label,
+                heading: "Heading2",
+                spacing: { before: 400, after: 200 }
+              })
+            );
+
+            const hasQuantity = detData.detected.some((d: any) => d.quantity);
+            const headers = ["Name", "Category", "Source"];
+            if (hasQuantity) headers.push("Quantity");
+
+            const tableRows = [
+              new TableRow({
+                children: headers.map(h =>
+                  new TableCell({
+                    children: [new Paragraph({ text: h, bold: true })],
+                    shading: { fill: "f5f5f5" }
+                  })
+                )
+              })
+            ];
+
+            detData.detected.forEach((item: any) => {
+              const cells = [
+                new TableCell({ children: [new Paragraph(item.name || "")] }),
+                new TableCell({ children: [new Paragraph(item.category || "")] }),
+                new TableCell({ children: [new Paragraph(item.source || "")] })
+              ];
+              if (hasQuantity) {
+                cells.push(new TableCell({ children: [new Paragraph(item.quantity || "")] }));
+              }
+
+              tableRows.push(new TableRow({ children: cells }));
+            });
+
+            sections.push(new Table({
+              rows: tableRows,
+              width: { size: 100, type: WidthType.PERCENTAGE }
+            }));
+          } else {
+            sections.push(
+              new Paragraph({
+                text: attr.label,
+                heading: "Heading2",
+                spacing: { before: 400, after: 200 }
+              }),
+              new Paragraph({ text: "No items detected.", italics: true })
+            );
+          }
+        }
       });
 
       const doc = new Document({
@@ -317,13 +465,13 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                 <CardDescription>{jobImages.images.length} image(s)</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 gap-3">
                   {jobImages.images.map((img, idx) => (
-                    <div key={idx} className="relative aspect-square rounded border overflow-hidden bg-muted">
+                    <div key={idx} className="relative aspect-auto min-h-[400px] max-h-[600px] rounded border overflow-hidden bg-slate-50">
                       <img
                         src={`${import.meta.env.VITE_API_BASE || "http://127.0.0.1:8000"}/v1/jobs/${reportData.job_id}/images/${idx}`}
                         alt={img.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   ))}
