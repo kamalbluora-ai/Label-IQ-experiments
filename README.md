@@ -112,7 +112,3 @@ cd api
 gcloud run services update backend `
   --region us-central1 `
   --update-env-vars "CORS_ORIGINS=https://web-262932924895.us-central1.run.app"
-
-gcloud run services update backend `
-  --region us-central1 `
-  --update-env-vars "CORS_ORIGINS=https://web-262932924895.us-central1.run.app

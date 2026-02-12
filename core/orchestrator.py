@@ -16,6 +16,7 @@ from core.processor import preprocess_image_bytes, run_docai_custom_extractor
 from core.translate_fields import translate_foreign_fields
 from compliance.attributes_orchestrator import AttributeOrchestrator
 from core.db import DatabaseManager
+from core.pubsub import publish_group_done, publish_fan_out
 
 # Environment configuration
 IN_BUCKET = os.environ.get("IN_BUCKET", "")
@@ -258,8 +259,7 @@ def execute_compliance_phase(job_id: str, group: str, facts_path: str) -> Dict[s
 
     if IS_CLOUD_RUN:
         # ── Cloud Run: Publish Group Done Event ──
-        # from core.pubsub import publish_group_done
-        # publish_group_done(job_id=job_id, group=group, agents_completed=agents_completed)
+        publish_group_done(job_id=job_id, group=group, agents_completed=agents_completed)
         pass
 
     return {
@@ -346,10 +346,9 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
         # Uncomment when deploying to Cloud Run with Eventarc + Pub/Sub fan-out.
         print(f"[ORCHESTRATOR] Cloud Run detected. Fanning out via Pub/Sub for job {job_id}")
         
-        # from core.pubsub import publish_fan_out
-        # groups = ["identity", "content", "tables"]
-        # for group in groups:
-        #     publish_fan_out(job_id=job_id, group=group, facts_path=facts_path)
+        groups = ["identity", "content", "tables"]
+        for group in groups:
+            publish_fan_out(job_id=job_id, group=group, facts_path=facts_path)
             
         return {"job_id": job_id, "status": "EXTRACTED", "facts_path": facts_path}
     else:
