@@ -14,6 +14,12 @@ from core.orchestrator import process_manifest, get_storage_client, write_json, 
 from core.db import DatabaseManager
 from core.orchestrator import execute_compliance_phase
 from core.orchestrator import execute_report_assembly_phase
+import base64
+from core.orchestrator import update_job
+from fastapi.responses import StreamingResponse, Response
+from core.report_generator_docx import ReportGeneratorDocx
+import asyncio
+import base64
 
 # Cloud Run detection - for local testing vs production
 IS_CLOUD_RUN = os.environ.get("K_SERVICE") is not None
@@ -322,9 +328,6 @@ async def save_report_edits(job_id: str, request: SaveReportEditsRequest):
         raise HTTPException(500, f"Failed to save edits: {str(e)}")
 
 
-from fastapi.responses import StreamingResponse, Response
-from core.report_generator_docx import ReportGeneratorDocx
-
 @app.get("/api/v1/jobs/{job_id}/download-docx")
 def download_report_docx_endpoint(job_id: str):
     """Generate and download DOCX report."""
@@ -409,9 +412,11 @@ async def eventarc_entry(request: Request):
     storage_client = get_storage_client()
     manifest_blob = storage_client.bucket(bucket).blob(name)
     manifest = json.loads(manifest_blob.download_as_text())
-    report = process_manifest(bucket=bucket, manifest=manifest)
 
-    return {"processed": True, "job_id": report["job_id"], "report_path": report.get("report_path")}
+    report = await asyncio.to_thread(
+        process_manifest, bucket=bucket, manifest=manifest
+    )
+    return {"processed": True, "job_id": report["job_id"]}
 
 
 # ===== PHASE 2: Compliance Group Execution (Pub/Sub Push) =====
@@ -449,14 +454,16 @@ async def compliance_execute(request: Request):
 
     if not job_id or not group:
         return {"ignored": True, "reason": "Missing job_id or group"}
-
-    if not job_id or not group:
-        return {"ignored": True, "reason": "Missing job_id or group"}
     
     # Execute Phase 2 (Compliance)
-    result = execute_compliance_phase(job_id, group, facts_path)
-
-    return result
+    try:
+        # Now calling the async function directly (no more asyncio.to_thread)
+        result = await execute_compliance_phase(job_id, group, facts_path)
+        return result
+    except Exception as e:
+        print(f"Error in compliance_execute for job {job_id}, group {group}: {e}")
+        # Return 500 to trigger Pub/Sub retry
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # ===== PHASE 3: Report Assembly (Pub/Sub Fan-In) =====
@@ -470,9 +477,7 @@ async def compliance_finalize(request: Request):
     Uses atomic increment to handle race conditions — only the LAST group
     to complete triggers report assembly.
     """
-    import base64
-    from core.orchestrator import update_job
-
+    
     body = await request.json()
 
     pubsub_message = body.get("message", {})
@@ -491,10 +496,12 @@ async def compliance_finalize(request: Request):
 
     print(f"[FINALIZE] Group '{group}' done for job {job_id}")
 
-    db = DatabaseManager()
+    # Use asyncio.to_thread for blocking DB call to avoid blocking event loop
+    def _increment_and_check(jid):
+        db = DatabaseManager()
+        return db.increment_completed_groups(jid)
 
-    # Atomically increment completed_groups
-    completed, total = db.increment_completed_groups(job_id)
+    completed, total = await asyncio.to_thread(_increment_and_check, job_id)
 
     print(f"[FINALIZE] Job {job_id}: {completed}/{total} groups complete")
 
@@ -503,5 +510,7 @@ async def compliance_finalize(request: Request):
         return {"waiting": True, "completed": completed, "total": total}
 
     # ═══ ALL GROUPS DONE — ASSEMBLE REPORT ═══
-    return execute_report_assembly_phase(job_id)
+    # execute_report_assembly_phase is also sync/blocking
+    return await asyncio.to_thread(execute_report_assembly_phase, job_id)
+
 

@@ -10,7 +10,7 @@ declare global {
 export const API_BASE =
     window.__CONFIG__?.API_BASE ??
     import.meta.env.VITE_API_BASE ??
-    "http://localhost:8000";
+    "http://localhost:8000/api";
 
 // export const API_BASE = "http://localhost:8000/api";
 
@@ -171,6 +171,14 @@ export interface ComplianceReport {
                 source: string;
             }>;
             has_additives?: boolean;
+        };
+        health_claims?: {
+            detected: Array<{
+                claim_text: string;
+                claim_type: string;
+                status: string;
+                regulation_reference?: string;
+            }>;
         };
     };
     cfia_evidence: Record<string, unknown>;

@@ -16,6 +16,7 @@ from compliance.agents.bilingual import BilingualAgent
 from compliance.agents.irradiation import IrradiationAgent
 from compliance.agents.country_origin import CountryOriginAgent
 from compliance.agents.claim_tag import ClaimTagAgent
+from compliance.agents.health_nutrient_claims import HealthNutrientClaimsAgent
 from core.db import DatabaseManager
 
 
@@ -30,6 +31,7 @@ class AttributeOrchestrator:
         self.irradiation_agent = IrradiationAgent()
         self.country_origin_agent = CountryOriginAgent()
         self.claim_tag_agent = ClaimTagAgent()
+        self.health_claims_agent = HealthNutrientClaimsAgent("health_claims")
         
         # Load questions from JSON
         self.questions = self._load_questions()

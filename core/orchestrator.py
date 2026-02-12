@@ -93,21 +93,7 @@ def split_image_bytes(image_bytes: bytes) -> list[tuple[str, bytes]]:
         return []
 
 
-def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Process a job manifest: DocAI extraction + compliance evaluation + report.
-    Phase 2 Eventarc fan-out is commented out for local testing.
-    """
-    storage_client = get_storage_client()
-    
-    # Initialize DB
-    db = DatabaseManager()
-    
-    # Validate basic shape
-    job_id = manifest.get("job_id") or str(uuid.uuid4())
-    
-    # Create initial job record
-    db.create_job(job_id, status="PENDING", mode=manifest.get("mode"))
+
     
 def execute_extraction_phase(job_id: str, bucket: str, manifest: Dict[str, Any]) -> tuple[Dict[str, Any], str, str]:
     storage_client = get_storage_client()
@@ -227,16 +213,17 @@ def execute_extraction_phase(job_id: str, bucket: str, manifest: Dict[str, Any])
     write_json(facts_path, facts_payload)
 
     # Update status
-    db.update_job_status(job_id, "EXTRACTED", mode=mode)
+    db.update_job_status(job_id, "EXTRACTED", mode=mode, facts_path=facts_path)
     update_job(job_id, {"status": "EXTRACTED", "mode": mode, "facts_path": facts_path})
 
     return merged_facts, mode, facts_path
 
-def execute_compliance_phase(job_id: str, group: str, facts_path: str) -> Dict[str, Any]:
+async def execute_compliance_phase(job_id: str, group: str, facts_path: str) -> Dict[str, Any]:
     print(f"[COMPLIANCE] Executing group '{group}' for job {job_id}")
     
     db = DatabaseManager()
     db.update_job_status(job_id, "COMPLIANCE_STARTED")
+    db.update_job_status(job_id, "PROCESSING")
 
     # Load facts from GCS
     storage_client = get_storage_client()
@@ -252,7 +239,7 @@ def execute_compliance_phase(job_id: str, group: str, facts_path: str) -> Dict[s
     # Execute the agent group
     from compliance.group_executor import GroupExecutor
     executor = GroupExecutor()
-    results = executor.execute_group_sync(group, label_facts, job_id)
+    results = await executor.execute_group(group, label_facts, job_id)
 
     agents_completed = list(results.keys())
     print(f"[COMPLIANCE] Group '{group}' completed for job {job_id}: {agents_completed}")
@@ -353,22 +340,25 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
         return {"job_id": job_id, "status": "EXTRACTED", "facts_path": facts_path}
     else:
         print(f"[ORCHESTRATOR] Local environment detected. Running compliance groups inline for job {job_id}")
+        import asyncio
         
         update_job(job_id, {"status": "COMPLIANCE_STARTED"}) 
         db.update_job_status(job_id, "COMPLIANCE_STARTED")
+        db.update_job_status(job_id, "PROCESSING")
 
         from compliance.group_executor import GroupExecutor
         executor = GroupExecutor()
         
-        # Execute all 3 groups sequentially
+        # Execute all 3 groups sequentially using asyncio.run since process_manifest is sync
         print(f"[ORCHESTRATOR] Running group: identity")
-        results_identity = executor.execute_group_sync("identity", merged_facts, job_id)
+        results_identity = asyncio.run(executor.execute_group("identity", merged_facts, job_id))
         
         print(f"[ORCHESTRATOR] Running group: content")
-        results_content = executor.execute_group_sync("content", merged_facts, job_id)
+        results_content = asyncio.run(executor.execute_group("content", merged_facts, job_id))
         
         print(f"[ORCHESTRATOR] Running group: tables")
-        results_tables = executor.execute_group_sync("tables", merged_facts, job_id)
+        results_tables = asyncio.run(executor.execute_group("tables", merged_facts, job_id))
+
 
         print(f"[ORCHESTRATOR] All groups done. Assembling report...")
         

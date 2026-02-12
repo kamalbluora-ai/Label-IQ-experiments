@@ -15,16 +15,20 @@ DB_PASSWORD = os.environ.get("DB_PASSWORD")
 # Cloud SQL connection via Unix socket (when using Cloud SQL Proxy)
 CLOUD_SQL_CONNECTION_NAME = os.environ.get("CLOUD_SQL_CONNECTION_NAME")
 
-class DatabaseManager:
-    def __init__(self):
-        self._init_db()
+from psycopg2 import pool
 
-    def _get_connection(self):
-        """Get a PostgreSQL connection."""
+_pool = None
+_db_initialized = False
+
+def _setup_pool():
+    global _pool
+    if _pool is None:
         if CLOUD_SQL_CONNECTION_NAME:
-            # Cloud Run with Cloud SQL Connector
+             # Cloud Run with Cloud SQL Connector
             unix_socket = f"/cloudsql/{CLOUD_SQL_CONNECTION_NAME}"
-            conn = psycopg2.connect(
+            _pool = pool.ThreadedConnectionPool(
+                minconn=1,
+                maxconn=10,
                 host=unix_socket,
                 database=DB_NAME,
                 user=DB_USER,
@@ -32,8 +36,10 @@ class DatabaseManager:
                 cursor_factory=RealDictCursor
             )
         else:
-            # Direct IP connection (dev/testing)
-            conn = psycopg2.connect(
+             # Direct IP connection (dev/testing)
+            _pool = pool.ThreadedConnectionPool(
+                minconn=1,
+                maxconn=10,
                 host=DB_HOST,
                 port=DB_PORT,
                 database=DB_NAME,
@@ -41,7 +47,28 @@ class DatabaseManager:
                 password=DB_PASSWORD,
                 cursor_factory=RealDictCursor
             )
-        return conn
+
+
+class DatabaseManager:
+    def __init__(self):
+        global _db_initialized
+        _setup_pool()
+        if not _db_initialized:
+            self._init_db()
+            _db_initialized = True
+
+    def _get_connection(self):
+        """Get a PostgreSQL connection from the pool."""
+        global _pool
+        if _pool is None:
+            _setup_pool()
+        return _pool.getconn()
+
+    def _release_connection(self, conn):
+        """Return a connection to the pool."""
+        global _pool
+        if _pool and conn:
+            _pool.putconn(conn)
 
     def _sanitize_row(self, row: dict) -> dict:
         """Recursively convert datetime objects to ISO strings."""
@@ -163,7 +190,7 @@ class DatabaseManager:
 
             conn.commit()
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def create_job(self, job_id: str, status: str = "PENDING", mode: Optional[str] = None):
         """Create a new job record."""
@@ -183,26 +210,27 @@ class DatabaseManager:
             )
             conn.commit()
         finally:
-            conn.close()
+            self._release_connection(conn)
 
-    def update_job_status(self, job_id: str, status: str, mode: Optional[str] = None):
-        """Update job status and optionally mode."""
+    def update_job_status(self, job_id: str, status: str, mode: Optional[str] = None, facts_path: Optional[str] = None):
+        """Update job status and optionally mode and facts_path."""
         conn = self._get_connection()
         try:
             cur = conn.cursor()
-            if mode:
-                cur.execute(
-                    "UPDATE jobs SET status = %s, mode = %s, updated_at = %s WHERE job_id = %s",
-                    (status, mode, datetime.now(timezone.utc), job_id)
-                )
-            else:
-                cur.execute(
-                    "UPDATE jobs SET status = %s, updated_at = %s WHERE job_id = %s",
-                    (status, datetime.now(timezone.utc), job_id)
-                )
+            cur.execute(
+                """
+                UPDATE jobs 
+                SET status = %s, 
+                    mode = COALESCE(%s, mode), 
+                    facts_path = COALESCE(%s, facts_path),
+                    updated_at = %s
+                WHERE job_id = %s
+                """,
+                (status, mode, facts_path, datetime.now(timezone.utc), job_id)
+            )
             conn.commit()
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def add_docai_extraction(self, job_id: str, image_tag: str, raw_json: Dict[str, Any]):
         """Save a raw DocAI extraction result."""
@@ -215,7 +243,7 @@ class DatabaseManager:
             )
             conn.commit()
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def save_merged_facts(self, job_id: str, merged_facts: Dict[str, Any], translated_facts: Optional[Dict[str, Any]] = None):
         """Save the merged (and optionally translated) label facts."""
@@ -240,7 +268,7 @@ class DatabaseManager:
             )
             conn.commit()
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def update_compliance_result(self, job_id: str, agent_name: str, status: str, result: Optional[Dict[str, Any]] = None):
         """Update the status and result of a specific compliance agent."""
@@ -266,7 +294,7 @@ class DatabaseManager:
             )
             conn.commit()
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def get_job(self, job_id: str) -> Optional[Dict[str, Any]]:
         """Retrieve job details."""
@@ -279,7 +307,7 @@ class DatabaseManager:
                 return self._sanitize_row(dict(row))
             return None
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def increment_completed_groups(self, job_id: str) -> tuple[int, int]:
         """Atomically increment completed_groups. Returns (completed, total)."""
@@ -303,7 +331,7 @@ class DatabaseManager:
                 return r["completed_groups"], r["total_groups"]
             return 0, 3
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def get_all_compliance_results(self, job_id: str) -> Dict[str, Any]:
         """Get all compliance results for a job, keyed by agent_name."""
@@ -324,7 +352,7 @@ class DatabaseManager:
                     results[agent_name] = json.loads(result_json)
             return results
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     # ===== PROJECT METHODS =====
 
@@ -352,7 +380,7 @@ class DatabaseManager:
                 "updatedAt": now.isoformat()
             }
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def list_projects(self) -> list[Dict[str, Any]]:
         """List all projects."""
@@ -374,7 +402,7 @@ class DatabaseManager:
                 })
             return projects
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def get_project(self, id: str) -> Optional[Dict[str, Any]]:
         """Get a single project."""
@@ -395,7 +423,7 @@ class DatabaseManager:
                 "updatedAt": row_dict["updated_at"]
             }
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def update_project(self, id: str, name: str, description: str, tags: list) -> Dict[str, Any]:
         """Update a project."""
@@ -414,7 +442,7 @@ class DatabaseManager:
             conn.commit()
             return self.get_project(id)
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def delete_project(self, id: str):
         """Delete a project and its analyses."""
@@ -426,7 +454,7 @@ class DatabaseManager:
             cur.execute("DELETE FROM projects WHERE id = %s", (id,))
             conn.commit()
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     # ===== ANALYSIS METHODS =====
 
@@ -455,7 +483,7 @@ class DatabaseManager:
                 "createdAt": now.isoformat()
             }
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def list_analyses(self, project_id: str) -> list[Dict[str, Any]]:
         """List all analyses for a project."""
@@ -478,7 +506,7 @@ class DatabaseManager:
                 })
             return analyses
         finally:
-            conn.close()
+            self._release_connection(conn)
 
     def update_analysis_status(self, id: str, status: str, progress: int = None):
         """Update analysis status and progress."""
@@ -497,4 +525,4 @@ class DatabaseManager:
                 )
             conn.commit()
         finally:
-            conn.close()
+            self._release_connection(conn)

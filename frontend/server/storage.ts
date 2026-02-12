@@ -1,4 +1,11 @@
-import { type User, type InsertUser } from "@shared/schema";
+export type InsertUser = {
+  username: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+};
+
+export type User = InsertUser & { id: string };
+
 import { randomUUID } from "crypto";
 
 // modify the interface with any CRUD methods

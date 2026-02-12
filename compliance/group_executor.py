@@ -22,7 +22,7 @@ from core.db import DatabaseManager
 AGENT_GROUPS = {
     "identity": ["common_name", "bilingual", "country_origin", "irradiation"],
     "content": ["ingredients", "date_marking", "fop_symbol", "claim_tag"],
-    "tables": ["nutrition_facts", "sweeteners", "supplements", "additives"],
+    "tables": ["nutrition_facts", "sweeteners", "supplements", "additives", "health_claims"],
 }
 
 
@@ -151,6 +151,9 @@ class GroupExecutor:
             "additives": asyncio.create_task(
                 asyncio.to_thread(self.orchestrator._run_additive_detection_wrapper, label_facts, job_id)
             ),
+            "health_claims": asyncio.create_task(
+                asyncio.to_thread(self.orchestrator._run_health_claims_detection_wrapper, label_facts, job_id)
+            ),
         }
 
         results = {}
@@ -159,6 +162,4 @@ class GroupExecutor:
 
         return results
 
-    def execute_group_sync(self, group: str, label_facts: Dict, job_id: str) -> Dict:
-        """Synchronous wrapper."""
-        return asyncio.run(self.execute_group(group, label_facts, job_id))
+
