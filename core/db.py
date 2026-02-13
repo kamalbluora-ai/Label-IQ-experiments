@@ -545,9 +545,9 @@ class DatabaseManager:
                                 FROM compliance_results
                                 WHERE job_id = %s
                                     AND status = 'DONE'
-                                    AND agent_name NOT LIKE '\\_\\_group\\_%' ESCAPE '\\'
+                                    AND agent_name NOT LIKE %s
                                 """,
-                (job_id,)
+                                (job_id, "__group_%")
             )
             rows = cur.fetchall()
             results = {}
