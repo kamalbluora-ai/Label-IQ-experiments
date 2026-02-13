@@ -322,20 +322,13 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     # Validate basic shape
     job_id = manifest.get("job_id") or str(uuid.uuid4())
 
-    # Defense-in-depth idempotency check for duplicate trigger deliveries
-    existing = db.get_job(job_id)
-    if existing and existing.get("status") in {
-        "EXTRACTING",
-        "EXTRACTED",
-        "COMPLIANCE_STARTED",
-        "PROCESSING",
-        "DONE",
-    }:
-        print(f"[ORCHESTRATOR] Duplicate trigger ignored for job {job_id} (status={existing.get('status')})")
-        return {"job_id": job_id, "status": existing.get("status"), "deduped": True}
-    
-    # Create initial job record
-    db.create_job(job_id, status="PENDING", mode=manifest.get("mode"))
+    # Atomic claim gate for duplicate trigger deliveries
+    claimed = db.claim_job_processing(job_id, mode=manifest.get("mode"))
+    if not claimed:
+        existing = db.get_job(job_id) or {}
+        status = existing.get("status", "UNKNOWN")
+        print(f"[ORCHESTRATOR] Duplicate trigger ignored for job {job_id} (status={status})")
+        return {"job_id": job_id, "status": status, "deduped": True}
     
     # ── Execute Phase 1: Extraction ──
     merged_facts, mode, facts_path = execute_extraction_phase(job_id, bucket, manifest)

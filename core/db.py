@@ -212,6 +212,41 @@ class DatabaseManager:
         finally:
             self._release_connection(conn)
 
+    def claim_job_processing(self, job_id: str, mode: Optional[str] = None) -> bool:
+        """Atomically claim a job for processing. Returns True only for the winner."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            now = datetime.now(timezone.utc)
+
+            cur.execute(
+                """
+                INSERT INTO jobs (job_id, status, mode, updated_at)
+                VALUES (%s, 'PENDING', %s, %s)
+                ON CONFLICT (job_id) DO NOTHING
+                """,
+                (job_id, mode, now)
+            )
+
+            cur.execute(
+                """
+                UPDATE jobs
+                SET status = 'EXTRACTING',
+                    mode = COALESCE(%s, mode),
+                    updated_at = %s
+                WHERE job_id = %s
+                  AND status IN ('PENDING', 'QUEUED')
+                RETURNING job_id
+                """,
+                (mode, now, job_id)
+            )
+
+            claimed = cur.fetchone() is not None
+            conn.commit()
+            return claimed
+        finally:
+            self._release_connection(conn)
+
     def update_job_status(self, job_id: str, status: str, mode: Optional[str] = None, facts_path: Optional[str] = None):
         """Update job status and optionally mode and facts_path."""
         conn = self._get_connection()
@@ -333,13 +368,185 @@ class DatabaseManager:
         finally:
             self._release_connection(conn)
 
+    def get_job_status(self, job_id: str) -> Optional[str]:
+        """Get current status for a job."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            cur.execute("SELECT status FROM jobs WHERE job_id = %s", (job_id,))
+            row = cur.fetchone()
+            if not row:
+                return None
+            return dict(row).get("status")
+        finally:
+            self._release_connection(conn)
+
+    def has_group_done_marker(self, job_id: str, group: str) -> bool:
+        """Check whether a group-done marker already exists for a job/group."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            marker = f"__group_done__:{group}"
+            cur.execute(
+                """
+                SELECT 1
+                FROM compliance_results
+                WHERE job_id = %s AND agent_name = %s
+                LIMIT 1
+                """,
+                (job_id, marker)
+            )
+            return cur.fetchone() is not None
+        finally:
+            self._release_connection(conn)
+
+    def claim_group_execution(self, job_id: str, group: str) -> bool:
+        """Atomically claim execution for a job/group. Returns True only once."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            marker = f"__group_exec__:{group}"
+            now = datetime.now(timezone.utc)
+            cur.execute(
+                """
+                INSERT INTO compliance_results (job_id, agent_name, status, result_json, created_at)
+                VALUES (%s, %s, 'RUNNING', %s, %s)
+                ON CONFLICT(job_id, agent_name) DO NOTHING
+                """,
+                (job_id, marker, json.dumps({"group": group, "dedupe_marker": True}), now)
+            )
+            claimed = cur.rowcount > 0
+            conn.commit()
+            return claimed
+        finally:
+            self._release_connection(conn)
+
+    def release_group_execution_claim(self, job_id: str, group: str):
+        """Release execution claim for a job/group (used when execution fails)."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            marker = f"__group_exec__:{group}"
+            cur.execute(
+                """
+                DELETE FROM compliance_results
+                WHERE job_id = %s AND agent_name = %s AND status = 'RUNNING'
+                """,
+                (job_id, marker)
+            )
+            conn.commit()
+        finally:
+            self._release_connection(conn)
+
+    def increment_completed_groups_if_pending(self, job_id: str, group: str) -> tuple[int, int, bool]:
+        """
+        Increment completed_groups only once per group.
+        Returns (completed, total, incremented).
+        """
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            marker = f"__group_done__:{group}"
+            now = datetime.now(timezone.utc)
+
+            cur.execute(
+                """
+                INSERT INTO compliance_results (job_id, agent_name, status, result_json, created_at)
+                VALUES (%s, %s, 'DONE', %s, %s)
+                ON CONFLICT(job_id, agent_name) DO NOTHING
+                """,
+                (job_id, marker, json.dumps({"group": group, "dedupe_marker": True}), now)
+            )
+            inserted = cur.rowcount > 0
+
+            if inserted:
+                cur.execute(
+                    """
+                    UPDATE jobs
+                    SET completed_groups = completed_groups + 1,
+                        updated_at = %s
+                    WHERE job_id = %s
+                    RETURNING completed_groups, total_groups
+                    """,
+                    (now, job_id)
+                )
+                row = cur.fetchone()
+                conn.commit()
+                if row:
+                    r = dict(row)
+                    return r["completed_groups"], r["total_groups"], True
+                return 0, 3, True
+
+            cur.execute(
+                "SELECT completed_groups, total_groups FROM jobs WHERE job_id = %s",
+                (job_id,)
+            )
+            row = cur.fetchone()
+            conn.commit()
+            if row:
+                r = dict(row)
+                return r["completed_groups"], r["total_groups"], False
+            return 0, 3, False
+        finally:
+            self._release_connection(conn)
+
+    def claim_report_finalize(self, job_id: str) -> bool:
+        """Atomically claim final report assembly for a job. Returns True only once."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            now = datetime.now(timezone.utc)
+            cur.execute(
+                """
+                UPDATE jobs
+                SET status = 'FINALIZING',
+                    updated_at = %s
+                WHERE job_id = %s
+                  AND status <> 'DONE'
+                  AND status <> 'FINALIZING'
+                RETURNING job_id
+                """,
+                (now, job_id)
+            )
+            claimed = cur.fetchone() is not None
+            conn.commit()
+            return claimed
+        finally:
+            self._release_connection(conn)
+
+    def release_report_finalize_claim(self, job_id: str):
+        """Release FINALIZING status back to PROCESSING if report assembly fails."""
+        conn = self._get_connection()
+        try:
+            cur = conn.cursor()
+            now = datetime.now(timezone.utc)
+            cur.execute(
+                """
+                UPDATE jobs
+                SET status = 'PROCESSING',
+                    updated_at = %s
+                WHERE job_id = %s
+                  AND status = 'FINALIZING'
+                """,
+                (now, job_id)
+            )
+            conn.commit()
+        finally:
+            self._release_connection(conn)
+
     def get_all_compliance_results(self, job_id: str) -> Dict[str, Any]:
         """Get all compliance results for a job, keyed by agent_name."""
         conn = self._get_connection()
         try:
             cur = conn.cursor()
             cur.execute(
-                "SELECT agent_name, result_json FROM compliance_results WHERE job_id = %s AND status = 'DONE'",
+                                """
+                                SELECT agent_name, result_json
+                                FROM compliance_results
+                                WHERE job_id = %s
+                                    AND status = 'DONE'
+                                    AND agent_name NOT LIKE '\\_\\_group\\_%' ESCAPE '\\'
+                                """,
                 (job_id,)
             )
             rows = cur.fetchall()

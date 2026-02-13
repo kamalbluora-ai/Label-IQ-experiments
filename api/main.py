@@ -473,6 +473,23 @@ async def compliance_execute(request: Request):
 
     if not job_id or not group:
         return {"ignored": True, "reason": "Missing job_id or group"}
+
+    db = DatabaseManager()
+    if db.has_group_done_marker(job_id, group):
+        return {
+            "ignored": True,
+            "reason": f"Group already completed: {group}",
+            "job_id": job_id,
+            "group": group,
+        }
+
+    if not db.claim_group_execution(job_id, group):
+        return {
+            "ignored": True,
+            "reason": f"Group execution already claimed: {group}",
+            "job_id": job_id,
+            "group": group,
+        }
     
     # Execute Phase 2 (Compliance)
     try:
@@ -480,6 +497,7 @@ async def compliance_execute(request: Request):
         result = await execute_compliance_phase(job_id, group, facts_path)
         return result
     except Exception as e:
+        db.release_group_execution_claim(job_id, group)
         print(f"Error in compliance_execute for job {job_id}, group {group}: {e}")
         # Return 500 to trigger Pub/Sub retry
         raise HTTPException(status_code=500, detail=str(e))
@@ -510,26 +528,40 @@ async def compliance_finalize(request: Request):
     job_id = data.get("job_id")
     group = data.get("group")
 
-    if not job_id:
-        return {"ignored": True, "reason": "Missing job_id"}
+    if not job_id or not group:
+        return {"ignored": True, "reason": "Missing job_id or group"}
 
     print(f"[FINALIZE] Group '{group}' done for job {job_id}")
 
+    # One-shot guard: if already DONE, ignore duplicate finalize deliveries
+    db = DatabaseManager()
+    status = await asyncio.to_thread(db.get_job_status, job_id)
+    if status == "DONE":
+        return {"ignored": True, "reason": "Job already finalized", "job_id": job_id}
+
     # Use asyncio.to_thread for blocking DB call to avoid blocking event loop
-    def _increment_and_check(jid):
+    def _increment_and_check(jid, grp):
         db = DatabaseManager()
-        return db.increment_completed_groups(jid)
+        return db.increment_completed_groups_if_pending(jid, grp)
 
-    completed, total = await asyncio.to_thread(_increment_and_check, job_id)
+    completed, total, incremented = await asyncio.to_thread(_increment_and_check, job_id, group)
 
-    print(f"[FINALIZE] Job {job_id}: {completed}/{total} groups complete")
+    print(f"[FINALIZE] Job {job_id}: {completed}/{total} groups complete (incremented={incremented})")
 
     if completed < total:
         # Not all groups done yet — another invocation will handle it
         return {"waiting": True, "completed": completed, "total": total}
 
     # ═══ ALL GROUPS DONE — ASSEMBLE REPORT ═══
-    # execute_report_assembly_phase is also sync/blocking
-    return await asyncio.to_thread(execute_report_assembly_phase, job_id)
+    claimed = await asyncio.to_thread(db.claim_report_finalize, job_id)
+    if not claimed:
+        return {"ignored": True, "reason": "Finalize already in progress or complete", "job_id": job_id}
+
+    try:
+        # execute_report_assembly_phase is sync/blocking
+        return await asyncio.to_thread(execute_report_assembly_phase, job_id)
+    except Exception:
+        await asyncio.to_thread(db.release_report_finalize_claim, job_id)
+        raise
 
 
