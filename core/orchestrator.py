@@ -321,6 +321,18 @@ def process_manifest(bucket: str, manifest: Dict[str, Any]) -> Dict[str, Any]:
     
     # Validate basic shape
     job_id = manifest.get("job_id") or str(uuid.uuid4())
+
+    # Defense-in-depth idempotency check for duplicate trigger deliveries
+    existing = db.get_job(job_id)
+    if existing and existing.get("status") in {
+        "EXTRACTING",
+        "EXTRACTED",
+        "COMPLIANCE_STARTED",
+        "PROCESSING",
+        "DONE",
+    }:
+        print(f"[ORCHESTRATOR] Duplicate trigger ignored for job {job_id} (status={existing.get('status')})")
+        return {"job_id": job_id, "status": existing.get("status"), "deduped": True}
     
     # Create initial job record
     db.create_job(job_id, status="PENDING", mode=manifest.get("mode"))

@@ -388,7 +388,7 @@ def get_job_image(job_id: str, image_index: int):
 
 
 @app.post("/api/eventarc")
-async def eventarc_entry(request: Request):
+async def eventarc_entry(request: Request, background_tasks: BackgroundTasks):
     """Eventarc webhook entry point for GCS triggers."""
     body = await request.body()
     try:
@@ -412,11 +412,30 @@ async def eventarc_entry(request: Request):
     storage_client = get_storage_client()
     manifest_blob = storage_client.bucket(bucket).blob(name)
     manifest = json.loads(manifest_blob.download_as_text())
+    job_id = manifest.get("job_id")
 
-    report = await asyncio.to_thread(
-        process_manifest, bucket=bucket, manifest=manifest
-    )
-    return {"processed": True, "job_id": report["job_id"]}
+    if not job_id:
+        return {"ignored": True, "reason": "Missing job_id in manifest"}
+
+    # Idempotency gate: ignore duplicate Eventarc deliveries once processing has started
+    db = DatabaseManager()
+    existing = db.get_job(job_id)
+    if existing and existing.get("status") in {
+        "EXTRACTING",
+        "EXTRACTED",
+        "COMPLIANCE_STARTED",
+        "PROCESSING",
+        "DONE",
+    }:
+        return {
+            "ignored": True,
+            "reason": f"Already processing or done: {existing.get('status')}",
+            "job_id": job_id,
+        }
+
+    # Acknowledge quickly to avoid Eventarc redelivery due to long processing time
+    background_tasks.add_task(process_manifest, bucket=bucket, manifest=manifest)
+    return {"accepted": True, "job_id": job_id}
 
 
 # ===== PHASE 2: Compliance Group Execution (Pub/Sub Push) =====
