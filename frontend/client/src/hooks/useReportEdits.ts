@@ -11,6 +11,11 @@ export interface UserComment {
     comment: string;
 }
 
+export interface AnswerOverride {
+    question_id: string;
+    new_answer: string;
+}
+
 export interface TableEdit {
     sectionKey: string;
     rowIndex: number;
@@ -22,6 +27,7 @@ export function useReportEdits() {
     // Phase 1: New State for Manual Edits
     const [tagOverrides, setTagOverrides] = useState<Map<string, TagOverride>>(new Map());
     const [userComments, setUserComments] = useState<Map<string, UserComment>>(new Map());
+    const [answerOverrides, setAnswerOverrides] = useState<Map<string, AnswerOverride>>(new Map());
     const [modifiedQuestions, setModifiedQuestions] = useState<Set<string>>(new Set());
 
     // Legacy support for Table Edits (from previous implementation, kept for compatibility if needed)
@@ -63,6 +69,20 @@ export function useReportEdits() {
         });
     }, []);
 
+    const setAnswerOverride = useCallback((questionId: string, answer: string) => {
+        setAnswerOverrides(prev => {
+            const next = new Map(prev);
+            next.set(questionId, { question_id: questionId, new_answer: answer });
+            return next;
+        });
+
+        setModifiedQuestions(prev => {
+            const next = new Set(prev);
+            next.add(questionId);
+            return next;
+        });
+    }, []);
+
     // Table edit logic (kept from previous refactor)
     const addTableEdit = useCallback((edit: TableEdit) => {
         setTableEdits(prev => [...prev, edit]);
@@ -71,6 +91,7 @@ export function useReportEdits() {
     const clearAll = useCallback(() => {
         setTagOverrides(new Map());
         setUserComments(new Map());
+        setAnswerOverrides(new Map());
         setModifiedQuestions(new Set());
         setTableEdits([]);
     }, []);
@@ -92,12 +113,14 @@ export function useReportEdits() {
         // State
         tagOverrides,
         userComments,
+        answerOverrides,
         modifiedQuestions,
         tableEdits,
 
         // Actions
         setTagOverride,
         setUserComment,
+        setAnswerOverride,
         addTableEdit,
         clearAll,
 

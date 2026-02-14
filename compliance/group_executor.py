@@ -21,7 +21,7 @@ from core.db import DatabaseManager
 # Agent group definitions
 AGENT_GROUPS = {
     "identity": ["common_name", "bilingual", "country_origin", "irradiation"],
-    "content": ["ingredients", "date_marking", "fop_symbol", "claim_tag"],
+    "content": ["ingredients", "date_marking", "fop_symbol", "claim_tag", "allergens_gluten"],
     "tables": ["nutrition_facts", "sweeteners", "supplements", "additives", "health_claims"],
 }
 
@@ -129,6 +129,11 @@ class GroupExecutor:
                     agent_name="claim_tag"
                 )
             )
+
+        # Allergens and Gluten detection (always runs)
+        tasks["allergens_gluten"] = asyncio.create_task(
+            asyncio.to_thread(self.orchestrator._run_allergen_gluten_detection_wrapper, label_facts, job_id)
+        )
 
         results = {}
         for name, task in tasks.items():

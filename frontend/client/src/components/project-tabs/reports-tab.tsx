@@ -11,6 +11,7 @@ import { saveAs } from "file-saver";
 import NutritionAuditTable from "@/components/NutritionAuditTable";
 import ComplianceResultsSection from "@/components/ComplianceResultsSection";
 import DetectionResultsTable, { DetectedItem } from "@/components/DetectionResultsTable";
+import BilingualFieldsTable from "@/components/BilingualFieldsTable";
 import { useReportEdits } from "@/hooks/useReportEdits";
 import { useToast } from "@/hooks/use-toast";
 
@@ -25,7 +26,7 @@ const ATTRIBUTE_ORDER = [
   { key: "nutrition_facts", label: "Net quantity, Nutrient labelling", type: "table" },
   { key: "sweeteners", label: "Sweeteners", type: "detection_table" },
   { key: "additives", label: "Food additives", type: "detection_table" },
-  { key: "allergens_glutens", label: "Allergens and glutens", type: "placeholder" },
+  { key: "allergens_gluten", label: "Allergens and Gluten", type: "detection_table" },
   { key: "health_claim", label: "Health claims, nutrient claims", type: "placeholder" },
   { key: "claim_tag", label: "Method of production, Organic", type: "agent" },
 ] as const;
@@ -47,9 +48,11 @@ export default function ReportsTab({ project }: ReportsTabProps) {
   const {
     tagOverrides,
     userComments,
+    answerOverrides,
     modifiedQuestions,
     setTagOverride,
     setUserComment,
+    setAnswerOverride,
     clearAll,
     hasPendingChanges,
     pendingCount
@@ -103,6 +106,22 @@ export default function ReportsTab({ project }: ReportsTabProps) {
     });
   };
 
+  const handleBilingualFieldChange = (fieldKey: string, value: string) => {
+    if (!reportData) return;
+    setReportData(prev => {
+      if (!prev) return null;
+      const newReport = JSON.parse(JSON.stringify(prev));
+      if (!newReport.label_facts.fields) {
+        newReport.label_facts.fields = {};
+      }
+      if (!newReport.label_facts.fields[fieldKey]) {
+        newReport.label_facts.fields[fieldKey] = {};
+      }
+      newReport.label_facts.fields[fieldKey].text = value;
+      return newReport;
+    });
+  };
+
   const handleSave = () => {
     if (!reportData) return;
 
@@ -136,6 +155,17 @@ export default function ReportsTab({ project }: ReportsTabProps) {
       });
     });
 
+    // Merge answer overrides
+    answerOverrides.forEach((override, qId) => {
+      Object.values(newReport.results).forEach((section: any) => {
+        const list = section.check_results || section.results;
+        if (Array.isArray(list)) {
+          const item = list.find((i: any) => i.question_id === qId);
+          if (item) item.selected_value = override.new_answer;
+        }
+      });
+    });
+
     setReportData(newReport);
     clearAll();
     toast({ title: "Success", description: "Changes saved." });
@@ -151,12 +181,14 @@ export default function ReportsTab({ project }: ReportsTabProps) {
       modifiedQuestions.forEach(qId => {
         const tag = tagOverrides.get(qId);
         const comment = userComments.get(qId);
+        const answer = answerOverrides.get(qId);
 
-        if (tag || comment) {
+        if (tag || comment || answer) {
           payload.push({
             question_id: qId,
             new_tag: tag?.new_tag,
-            user_comment: comment?.comment
+            user_comment: comment?.comment,
+            new_answer: answer?.new_answer
           });
         }
       });
@@ -213,11 +245,74 @@ export default function ReportsTab({ project }: ReportsTabProps) {
               })
             );
 
+            // Add bilingual fields table for bilingual section
+            if (attr.key === "bilingual" && reportData.label_facts?.fields) {
+              sections.push(
+                new Paragraph({
+                  text: "Extracted Bilingual Fields",
+                  heading: "Heading3",
+                  spacing: { before: 200, after: 100 }
+                })
+              );
+
+              const bilingualPairs = [
+                { field: "Common Name", enKey: "common_name_en", frKey: "common_name_fr" },
+                { field: "Ingredients List", enKey: "ingredients_list_en", frKey: "ingredients_list_fr" },
+                { field: "NFT Table", enKey: "nft_table_en", frKey: "nft_table_fr" },
+              ];
+
+              const bilingualTableRows = [
+                new TableRow({
+                  children: ["Field", "English", "French"].map(h =>
+                    new TableCell({
+                      children: [new Paragraph({ children: [new TextRun({ text: h, bold: true })] })],
+                      width: { size: 33, type: WidthType.PERCENTAGE },
+                      shading: { fill: "f5f5f5" }
+                    })
+                  )
+                })
+              ];
+
+              bilingualPairs.forEach(pair => {
+                const enValue = reportData.label_facts?.fields?.[pair.enKey]?.text || "No value extracted";
+                const frValue = reportData.label_facts?.fields?.[pair.frKey]?.text || "No value extracted";
+
+                bilingualTableRows.push(
+                  new TableRow({
+                    children: [
+                      new TableCell({ children: [new Paragraph({ children: [new TextRun({ text: pair.field, bold: true })] })] }),
+                      new TableCell({ children: [new Paragraph(enValue)] }),
+                      new TableCell({ children: [new Paragraph(frValue)] })
+                    ]
+                  })
+                );
+              });
+
+              sections.push(
+                new Table({
+                  rows: bilingualTableRows,
+                  width: { size: 100, type: WidthType.PERCENTAGE }
+                })
+              );
+
+              sections.push(new Paragraph({ text: "", spacing: { after: 200 } })); // Spacer
+
+              // Add Q&A heading
+              sections.push(
+                new Paragraph({
+                  text: "Compliance Check Results",
+                  heading: "Heading3",
+                  spacing: { before: 200, after: 100 }
+                })
+              );
+            }
+
             results.forEach((check: any) => {
-              // Apply local overrides if they exist (though handleSave should have merged them)
               const override = tagOverrides.get(check.question_id);
               const result = override ? override.new_tag : check.result;
               const comment = userComments.get(check.question_id)?.comment || check.user_comment;
+              const answerOvr = answerOverrides.get(check.question_id);
+              const answer = answerOvr ? answerOvr.new_answer : check.selected_value;
 
               sections.push(
                 new Paragraph({
@@ -234,7 +329,21 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                       color: result === "pass" ? "008000" : result === "fail" ? "FF0000" : "FFA500"
                     })
                   ]
-                }),
+                })
+              );
+
+              if (answer) {
+                sections.push(
+                  new Paragraph({
+                    children: [
+                      new TextRun({ text: "Answer: ", bold: true }),
+                      new TextRun({ text: answer })
+                    ]
+                  })
+                );
+              }
+
+              sections.push(
                 new Paragraph({
                   children: [
                     new TextRun({ text: "Rationale: ", bold: true }),
@@ -516,6 +625,13 @@ export default function ReportsTab({ project }: ReportsTabProps) {
 
                       return (
                         <div key={attr.key}>
+                          {attr.key === "bilingual" && reportData.label_facts?.fields && (
+                            <BilingualFieldsTable
+                              fields={reportData.label_facts.fields}
+                              editable={true}
+                              onFieldChange={handleBilingualFieldChange}
+                            />
+                          )}
                           <ComplianceResultsSection
                             title={attr.label}
                             checkResults={results}
@@ -523,6 +639,8 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                             onTagChange={setTagOverride}
                             userComments={userComments}
                             onUserCommentChange={setUserComment}
+                            answerOverrides={answerOverrides}
+                            onAnswerChange={setAnswerOverride}
                             modifiedQuestions={modifiedQuestions}
                           />
                         </div>
@@ -543,7 +661,7 @@ export default function ReportsTab({ project }: ReportsTabProps) {
                       );
                     }
 
-                    if (attrKey === "sweeteners" || attrKey === "additives") {
+                    if (attrKey === "sweeteners" || attrKey === "additives" || attrKey === "allergens_gluten") {
                       return (
                         <div key={attrKey}>
                           <DetectionResultsTable

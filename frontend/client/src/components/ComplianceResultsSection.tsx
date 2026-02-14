@@ -2,10 +2,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CheckCircle, XCircle, AlertTriangle, MessageSquare, Info } from "lucide-react";
+import { CheckCircle, XCircle, AlertTriangle, MessageSquare, Info, Pencil } from "lucide-react";
 import { useState } from "react";
-import { TagOverride, UserComment } from "@/hooks/useReportEdits";
+import { TagOverride, UserComment, AnswerOverride } from "@/hooks/useReportEdits";
 
 interface ComplianceResultsSectionProps {
     title: string;
@@ -18,6 +19,10 @@ interface ComplianceResultsSectionProps {
     // User comments (no re-evaluation)
     userComments: Map<string, UserComment>;
     onUserCommentChange: (questionId: string, comment: string) => void;
+
+    // Answer overrides
+    answerOverrides: Map<string, AnswerOverride>;
+    onAnswerChange: (questionId: string, answer: string) => void;
 
     // Modification tracking
     modifiedQuestions: Set<string>;
@@ -40,11 +45,28 @@ export default function ComplianceResultsSection({
     onTagChange,
     userComments,
     onUserCommentChange,
+    answerOverrides,
+    onAnswerChange,
     modifiedQuestions
 }: ComplianceResultsSectionProps) {
     const [isExpanded, setIsExpanded] = useState(false);
     // Track open comment boxes locally
     const [openCommentBoxIds, setOpenCommentBoxIds] = useState<Set<string>>(new Set());
+    // Track which questions are in edit mode
+    const [editingIds, setEditingIds] = useState<Set<string>>(new Set());
+
+    const toggleEdit = (qId: string, e: React.MouseEvent) => {
+        e.stopPropagation();
+        setEditingIds(prev => {
+            const next = new Set(prev);
+            if (next.has(qId)) {
+                next.delete(qId);
+            } else {
+                next.add(qId);
+            }
+            return next;
+        });
+    };
 
     const toggleCommentBox = (qId: string, e: React.MouseEvent) => {
         e.stopPropagation();
@@ -148,23 +170,51 @@ export default function ComplianceResultsSection({
                                         )}
                                     </div>
 
-                                    <Button
-                                        variant="ghost"
-                                        size="sm"
-                                        className={`h-8 w-8 p-0 ${hasUserComment ? "text-blue-600 bg-blue-50" : "text-muted-foreground"}`}
-                                        onClick={(e) => toggleCommentBox(check.question_id, e)}
-                                    >
-                                        <MessageSquare className="w-4 h-4" />
-                                    </Button>
+                                    {/* Edit + Comment Buttons */}
+                                    <div className="flex items-center gap-1">
+                                        <Button
+                                            variant="ghost"
+                                            size="sm"
+                                            className={`h-8 w-8 p-0 ${editingIds.has(check.question_id) ? "text-orange-600 bg-orange-50" : "text-muted-foreground"}`}
+                                            onClick={(e) => toggleEdit(check.question_id, e)}
+                                        >
+                                            <Pencil className="w-4 h-4" />
+                                        </Button>
+                                        <Button
+                                            variant="ghost"
+                                            size="sm"
+                                            className={`h-8 w-8 p-0 ${hasUserComment ? "text-blue-600 bg-blue-50" : "text-muted-foreground"}`}
+                                            onClick={(e) => toggleCommentBox(check.question_id, e)}
+                                        >
+                                            <MessageSquare className="w-4 h-4" />
+                                        </Button>
+                                    </div>
                                 </div>
 
                                 {/* Content */}
                                 <p className="text-sm font-medium mb-2">{check.question}</p>
-                                {check.selected_value && (
-                                    <p className="text-sm text-muted-foreground mb-1">
-                                        <span className="font-semibold">Answer:</span> {check.selected_value}
-                                    </p>
-                                )}
+                                {(() => {
+                                    const answerOverride = answerOverrides.get(check.question_id);
+                                    const effectiveAnswer = answerOverride ? answerOverride.new_answer : (check.selected_value || "");
+                                    const isEditing = editingIds.has(check.question_id);
+
+                                    return check.selected_value !== undefined && (
+                                        isEditing ? (
+                                            <div className="mb-1" onClick={(e) => e.stopPropagation()}>
+                                                <label className="text-xs font-semibold text-muted-foreground mb-1 block">Answer</label>
+                                                <Input
+                                                    value={effectiveAnswer}
+                                                    onChange={(e) => onAnswerChange(check.question_id, e.target.value)}
+                                                    className="text-sm"
+                                                />
+                                            </div>
+                                        ) : (
+                                            <p className="text-sm text-muted-foreground mb-1">
+                                                <span className="font-semibold">Answer:</span> {effectiveAnswer}
+                                            </p>
+                                        )
+                                    );
+                                })()}
                                 <p className="text-sm text-muted-foreground">
                                     <span className="font-semibold">Reasoning:</span> {check.rationale}
                                 </p>

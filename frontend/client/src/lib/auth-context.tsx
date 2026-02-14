@@ -18,7 +18,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setIsLoading(true);
 
         // Mock check
-        if (username === "admin" && password === "admin") {
+        if (username === "admin" && password === "CFIATesting2026!") {
             // Simulate a brief loading state
             await new Promise(resolve => setTimeout(resolve, 500));
             setUser(api.auth.getMockUser());

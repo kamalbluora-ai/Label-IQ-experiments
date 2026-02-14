@@ -35,7 +35,10 @@ export interface ComplianceReport {
     created_at: string;
     mode: string;
     source_images: string[];
-    label_facts: Record<string, unknown>;
+    label_facts: {
+        fields?: Record<string, { text?: string }>;
+        [key: string]: unknown;
+    };
     results: {
         // AI Agent results - nested under agent name
         common_name?: {
@@ -179,6 +182,15 @@ export interface ComplianceReport {
                 status: string;
                 regulation_reference?: string;
             }>;
+        };
+        allergens_gluten?: {
+            detected: Array<{
+                name: string;
+                category: string;
+                type: "allergen" | "gluten";
+            }>;
+            has_allergens?: boolean;
+            has_gluten?: boolean;
         };
     };
     cfia_evidence: Record<string, unknown>;

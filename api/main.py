@@ -53,6 +53,7 @@ class ReportEditItem(BaseModel):
     question_id: str
     new_tag: Optional[str] = None
     user_comment: Optional[str] = None
+    new_answer: Optional[str] = None
 
 class SaveReportEditsRequest(BaseModel):
     edits: List[ReportEditItem]
@@ -300,6 +301,8 @@ async def save_report_edits(job_id: str, request: SaveReportEditsRequest):
                                     item["result"] = edit.new_tag
                                 if edit.user_comment is not None: # Allow empty string to clear
                                     item["user_comment"] = edit.user_comment
+                                if edit.new_answer is not None:
+                                    item["selected_value"] = edit.new_answer
                                 updated = True
         
         if updated:

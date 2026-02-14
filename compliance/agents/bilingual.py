@@ -21,4 +21,6 @@ class BilingualAgent(BaseComplianceAgent):
             "common_name_fr": get_text("common_name_fr"),
             "ingredients_list_en": get_text("ingredients_list_en"),
             "ingredients_list_fr": get_text("ingredients_list_fr"),
+            "nft_table_en": get_text("nft_table_en"),
+            "nft_table_fr": get_text("nft_table_fr")
         }

@@ -9,6 +9,7 @@ from compliance.sweeteners.detector import detect_sweeteners
 from compliance.supplements_table.detector import detect_supplements
 from compliance.additive.detector import detect_additives
 from compliance.health_claims.detector import detect_health_claims
+from compliance.allergens_gluten.detector import detect_allergens_gluten
 from compliance.agents.ingredients import IngredientsAgent
 from compliance.agents.date_marking import DateMarkingAgent
 from compliance.agents.fop_symbol import FOPSymbolAgent
@@ -246,6 +247,23 @@ class AttributeOrchestrator:
             return res
         except Exception as e:
             if job_id: self.db.update_compliance_result(job_id, "health_claims", "ERROR", {"error": str(e)})
+            return {"error": str(e)}
+
+    def _run_allergen_gluten_detection(self, label_facts):
+        fields = label_facts.get("fields", {})
+        ingredients = fields.get("ingredients_list_en", {}).get("text", "")
+        
+        result = detect_allergens_gluten(ingredients)
+        return result.model_dump()
+
+    def _run_allergen_gluten_detection_wrapper(self, label_facts, job_id=None):
+        if job_id: self.db.update_compliance_result(job_id, "allergens_gluten", "RUNNING")
+        try:
+            res = self._run_allergen_gluten_detection(label_facts)
+            if job_id: self.db.update_compliance_result(job_id, "allergens_gluten", "DONE", res)
+            return res
+        except Exception as e:
+            if job_id: self.db.update_compliance_result(job_id, "allergens_gluten", "ERROR", {"error": str(e)})
             return {"error": str(e)}
 
     def evaluate_sync(self, label_facts: Dict[str, Any], job_id: str = None) -> Dict[str, Any]:
