@@ -600,5 +600,3 @@ The system supports two execution modes:
 | **Frontend proxy** | Vite dev server proxies API calls to `:8000` | Express serves static files, `API_BASE` env var points to backend URL |
 
 ---
-
-*Generated from architecture audit and codebase analysis — 2026-02-13*
