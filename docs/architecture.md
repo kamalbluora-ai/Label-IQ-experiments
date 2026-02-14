@@ -43,12 +43,11 @@ The system follows a **3-phase, event-driven pipeline**:
 
 ### 1.2 Infrastructure
 
-The system is deployed on **Google Cloud Run** as 3 containers:
+The system is deployed on **Google Cloud Run** as 2 containers:
 
 | Container | Tech Stack | Purpose |
 |-----------|-----------|---------|
-| **label-compliance** | Python 3.12, FastAPI, Uvicorn | Document AI extraction + Compliance orchestration |
-| **backend** | Python 3.12, FastAPI | Same codebase as label-compliance (shared Dockerfile) |
+| **backend** | Python 3.12, FastAPI, Uvicorn | Document AI extraction + Compliance orchestration |
 | **web** | Node 20, React 19, Express | Frontend UI |
 
 **Supporting GCP services:**
@@ -81,7 +80,7 @@ The system is deployed on **Google Cloud Run** as 3 containers:
                                    │ (polling for status)
                                    v
                     ┌───────────────────────────────────────────────┐
-                    │          BACKEND (label-compliance)            │
+                    │          BACKEND (backend)                     │
                     │        FastAPI + Uvicorn :8080                 │
                     │              Cloud Run                         │
                     │                                               │
